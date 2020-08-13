@@ -285,23 +285,6 @@ is_not_kitsune_bf = {
 }
 
 
-# Sexual triggers
-
-is_futa = {
-	OR = {
-		trait = lf_futa
-		trait = futa
-	}
-}
-
-is_not_futa = {
-	NOR = { 
-		trait = lf_futa
-		trait = futa
-	}
-}
-
-
 # Magic related
 
 is_mage = {
@@ -421,22 +404,6 @@ lf_has_slaves = {
 				has_building = lf_slave_market_city # City
 				has_building = lf_slave_market_tribal # Tribal
 				has_building = lf_slave_market_nomad # Nomad
-			}
-		}
-	}
-}
-
-lf_has_curios = {
-	OR = {
-		family_palace = {
-			has_building = lf_curio_shop_fp
-		}
-		capital_holding = {
-			OR = {
-				has_building = lf_curio_shop_castle # Castle
-				has_building = lf_curio_shop_city # City
-				has_building = lf_curio_shop_nomad # Nomad
-				has_building = lf_curio_shop_tribal # tribal
 			}
 		}
 	}

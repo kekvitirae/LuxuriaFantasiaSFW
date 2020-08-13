@@ -1,21 +1,3 @@
-dwse_dragonslut = {
-	random = no
-	#random = yes
-	#potential = {
-	#	is_female = yes
-	#	is_adult = yes
-	#	NOR = { 
-	#		trait = dwse_dragon_adult
-	#		trait = dwse_shapeshifted
-	#	}
-	#	trait = lustful
-	#}
-	customizer = no
-	opinion_of_dwse_dragon_adult = 50 # Breed me, daddy!
-	opinion_of_dwse_dragon_child = 10 # How cute!
-	opinion_of_dwse_lizard = 5 # Eh, I guess they are kinda dragons.
-}
-
 dragon_pregnancy = {
 	random = no
 	customizer = no

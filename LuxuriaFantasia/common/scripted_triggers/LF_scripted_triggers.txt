@@ -2,31 +2,6 @@ lf_is_silly = {
 	has_global_flag = lf_silly_mode
 }
 
-has_dark_world_started = { # Keeping this in in case old mods haven't updated yet
-	OR = {
-		has_global_flag = Dark_World_Fantasy_Present
-		has_global_flag = Dark_World_Reborn_Present
-	}
-}
-
-lf_has_dwr = {
-	has_global_flag = Dark_World_Reborn_Present
-}
-
-lf_has_dwr_replacer = {
-	lf_has_dwr = yes
-	has_global_flag = LFDWRReplaceOn
-}
-
-lf_has_dwr_no_replacer = {
-	lf_has_dwr = yes
-	has_global_flag = LFDWRReplaceOff
-}
-
-lf_has_nsfw = {
-	has_global_flag = LFNSFWOn
-}
-
 lf_started = {
 	has_global_flag = luxuria_fantasia_started
 }
@@ -46,23 +21,6 @@ has_fae_content = {
 has_far_east_content = {
 	has_global_flag = LFFarEastOn
 }
-has_gender_bender_content = {
-	has_global_flag = LFGenderBendOn
-}
-has_bestiality_content = {
-	has_global_flag = LFBestialityOn
-}
-
-lf_has_cock = {
-	OR = {
-		is_futa = yes
-		AND = {
-			is_female = no
-			NOT = { trait = eunuch }
-		}
-	}
-}
-
 
 lf_can_have_sex = {
 	prisoner = no

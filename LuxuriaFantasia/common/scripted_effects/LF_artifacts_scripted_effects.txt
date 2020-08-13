@@ -185,16 +185,6 @@ lf_check_artifact_booty = {
 			}
 		}
 		10 = {
-			set_character_flag = lf_obtained_lf_pirate_booty
-			trigger = {
-				is_female = yes
-				
-				NOT = {
-					has_artifact = lf_pirate_booty
-				}
-			}
-		}
-		10 = {
 			set_character_flag = lf_obtained_lf_ring_protection
 			trigger = {
 				NOT = {
@@ -323,10 +313,6 @@ lf_claim_artifact_booty = {
 		lf_obtained_lf_amulet_nondetection = {
 			clr_character_flag = lf_obtained_lf_amulet_nondetection
 			add_artifact = lf_amulet_nondetection
-		}
-		lf_obtained_lf_pirate_booty = {
-			clr_character_flag = lf_obtained_lf_pirate_booty
-			add_artifact = lf_pirate_booty
 		}
 		lf_obtained_lf_ring_protection = {
 			clr_character_flag = lf_obtained_lf_ring_protection
