@@ -1,0 +1,19 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "lf_potion_seller"
+		texturefile = "gfx/event_pictures/lf_potion_seller.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_lf_pirate_booty"
+		texturefile = "gfx\\interface\\artifacts\\lf_pirate_booty.dds"
+	}
+	spriteType = {
+		name = "GFX_lf_pirate_booty_small"
+		texturefile = "gfx\\interface\\artifacts\\lf_pirate_booty_small.dds"
+	}	
+	
+}

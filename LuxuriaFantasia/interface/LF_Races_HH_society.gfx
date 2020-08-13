@@ -1,0 +1,127 @@
+spriteTypes = {
+	spriteType = {
+		name = "lf_succubus_seduction_start"
+		texturefile = "gfx/event_pictures/lf_seduction_start.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lf_generic_seduction_start"
+		texturefile = "gfx/event_pictures/lf_generic_seduction_start.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lf_generic_seduction_start_sfw"
+		texturefile = "gfx/event_pictures/lf_generic_seduction_start_sfw.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lilith_society_approach1"
+		texturefile = "gfx/event_pictures/lilith_society_approach1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lilith_society_approach2"
+		texturefile = "gfx/event_pictures/lilith_society_approach2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lilith_society_approach3"
+		texturefile = "gfx/event_pictures/lilith_society_approach3.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lilith_society_approach4"
+		texturefile = "gfx/event_pictures/lilith_society_approach4.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lilith_society_approach5"
+		texturefile = "gfx/event_pictures/lilith_society_approach5.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lilith_society_approach6"
+		texturefile = "gfx/event_pictures/lilith_society_approach6.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lilith_society_approach7"
+		texturefile = "gfx/event_pictures/lilith_society_approach7.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+	spriteType = {
+		name = "GFX_society_main_background_lf_society_seduction"
+		texturefile = "gfx\\interface\\societies\\society_bg_lf_society_seduction.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_expansion_background_lf_society_seduction"
+		texturefile = "gfx\\interface\\societies\\society_exp_bg_lf_society_seduction.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_lf_society_seduction"
+		texturefile = "gfx\\interface\\societies\\symbol_small_lf_society_seduction.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_society_portrait_ring_lf_society_seduction"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_lf_society_seduction.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_portrait_ring_small_lf_society_seduction"
+		texturefile = "gfx\\interface\\societies\\portrait_ring_small_lf_society_seduction.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_influence_lf_society_seduction"
+		texturefile = "gfx\\interface\\societies\\society_influence_lf_society_seduction.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_society_currency_lf_society_seduction"
+		texturefile = "gfx\\interface\\societies\\society_currency_lf_society_seduction.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_lf_society_seduction_ranks"
+		texturefile = "gfx\\interface\\societies\\rank_icons_lf_society_seduction.dds"
+		noOfFrames = 4
+	}
+	
+	spriteType = {
+		name = "GFX_lf_society_seduction_ranks_highlight"
+		texturefile = "gfx\\interface\\societies\\rank_icons_lf_society_seduction_highlight.dds"
+		noOfFrames = 4
+	}
+	
+	spriteType = {
+		name = "GFX_lf_society_seduction_ranks_locked"
+		texturefile = "gfx\\interface\\societies\\rank_icons_lf_society_seduction_locked.dds"
+		noOfFrames = 4
+	}
+	
+}

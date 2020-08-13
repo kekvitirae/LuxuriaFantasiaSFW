@@ -1,0 +1,154 @@
+lf_wizards_summon_familiar;§YSpell:§! Summon Familiar;;;;;;;;;;;;;x
+lf_wizards_summon_familiar_desc;As a practitioner of magic, §Y[From.GetTitledFirstName]§! can summon a familiar of [From.GetHerHis] choice. This supernatural guardian will grant §Y[From.GetTitledFirstName]§! its powers by increasing [From.GetHerHis] attributes.;;;;;;;;;;;;;x
+
+lf_spell_of_fairy_fire;§YSpell:§! Fairy Fire;;;;;;;;;;;;;x
+lf_spell_of_fairy_fire_desc;As a practitioner of magic, §Y[From.GetTitledFirstName]§! can cast a spell on any courtier in [From.GetHerHis] own realm. This will make them sparkle with an unnatural- yet warm- glow. Its effects are enhanced on vampires for some reason.\nMana required to cast this spell: 10\nCurrent Mana: [From.current_mana.GetValue]/[From.max_mana.GetValue];;;;;;;;;;;;;x
+
+lf_wizards_spell_of_body_enslavement;§YSpell:§! Enslavement;;;;;;;;;;;;;x
+lf_wizards_spell_of_body_enslavement_desc;As a practitioner of magic, §Y[From.GetTitledFirstName]§! can cast a spell to enslave any courtier in [From.GetHerHis] own realm who has negative opinion of [From.GetHerHim]. This will make them a branded slave.\nMana required to cast this spell: 10\nCurrent Mana: [From.current_mana.GetValue]/[From.max_mana.GetValue];;;;;;;;;;;;;x
+
+lf_wizards_spell_of_heart_enslavement;§YSpell:§! [From.GetLilithName]'s Lust;;;;;;;;;;;;;x
+lf_wizards_spell_of_heart_enslavement_desc;As a practitioner of magic, §Y[From.GetTitledFirstName]§! can cast a spell to enslave the mind of any courtier or vassal in [From.GetHerHis] own realm who has positive opinion of [From.GetHerHim]. This will make them a lover... and potentially a parent.\nMana required to cast this spell: 10\nCurrent Mana: [From.current_mana.GetValue]/[From.max_mana.GetValue];;;;;;;;;;;;;x
+
+lf_wizards_spell_of_fireball;§YSpell:§! Fireball;;;;;;;;;;;;;x
+lf_wizards_spell_of_fireball_desc;As a practitioner of magic, §Y[From.GetTitledFirstName]§! can cast a spell to incinerate any courtier in [From.GetHerHis] own realm who has negative opinion of [From.GetHerHim] or is a rival. This will fry them to a crisp, but the aiming is a bit off.\nMana required to cast this spell: 25\nCurrent Mana: [From.current_mana.GetValue]/[From.max_mana.GetValue];;;;;;;;;;;;;x
+
+lf_wizards_spell_of_flamestrike;§YSpell:§! Flamestrike;;;;;;;;;;;;;x
+lf_wizards_spell_of_flamestrike_desc;As a practitioner of magic, §Y[From.GetTitledFirstName]§! can cast a spell to incinerate any independent ruler's holder. This will destroy a random building in their demesne, but the aiming is a bit off.\nMana required to cast this spell: 50\nCurrent Mana: [From.current_mana.GetValue]/[From.max_mana.GetValue];;;;;;;;;;;;;x
+
+lf_a_wizards_buy_spellbook;Buy a Spellbook;;;;;;;;;;;;;x
+lf_a_wizards_buy_spellbook_desc;Every good magic user needs a book of spells. Without a spellbook, you will be unable to cast any spells. Thankfully, your court has a wide variety of them to sell. The fancier the book, the better spells it can hold.;;;;;;;;;;;;;x
+
+LFSpells2T;LF - Spell of Enslavement;;;;;;;;;;;;;x
+LFSpells2;You add the ingredients to the cauldron and focus on your target while chanting the magic words...;;;;;;;;;;;;;x
+LFSpells2TT;Let the chains bind!;;;;;;;;;;;;;x
+LFSpells2TTSuccess;The spell succeeds!;;;;;;;;;;;;;x
+LFSpells2TTFail;The spell backfires!;;;;;;;;;;;;;x
+
+LFSpells3T;LF - Spell of [GetLilithName]'s Lust;;;;;;;;;;;;;x
+LFSpells3;You add the ingredients to the cauldron and focus on your target while chanting the magic words...;;;;;;;;;;;;;x
+LFSpells3TT;Let [spell_target.GetHerHis] heart be mine!;;;;;;;;;;;;;x
+LFSpells3TTSuccess;The spell succeeds!;;;;;;;;;;;;;x
+LFSpells3TTFail;The spell works only for tonight.;;;;;;;;;;;;;x
+
+LFSpells4T;LF - Spell of Fireball;;;;;;;;;;;;;x
+LFSpells4;You add the ingredients to the cauldron and focus on your target while chanting the magic words...;;;;;;;;;;;;;x
+LFSpells4TT;Let [spell_target.GetHerHis] body burn!;;;;;;;;;;;;;x
+LFSpells4TTMissed;The spell misses the target.;;;;;;;;;;;;;x
+LFSpells4TTFail;The spell misses the target, but hits someone else...;;;;;;;;;;;;;x
+LFSpells4TTKilled;The spell hits the target!;;;;;;;;;;;;;x
+
+LFSpells5T;LF - Spell of Flamestrike;;;;;;;;;;;;;x
+LFSpells5;You add the ingredients to the cauldron and focus on your target while chanting the magic words...;;;;;;;;;;;;;x
+LFSpells5TT;Let [spell_target.GetHerHis] domain burn!;;;;;;;;;;;;;x
+LFSpells5TTFail;The spell misses the target.;;;;;;;;;;;;;x
+LFSpells5TTDestroyed;The spell burns down a building!;;;;;;;;;;;;;x
+
+LFSpells6T;LF - Shopping;;;;;;;;;;;;;x
+LFSpells6;The local library has quite a few blank spellbooks for sale. However, one such as yourself is not content with just any ordinary spellbook. You want one that can hold a full compliment of magic inside.;;;;;;;;;;;;;x
+LFSpells6TTBest;Let me buy your best spellbook!;;;;;;;;;;;;;x
+LFSpells6TTBestTT;Buy an opulent spellbook. This will hold any spell you desire. Also comes with a free spell.;;;;;;;;;;;;;x
+LFSpells6TTNevermind;Nevermind;;;;;;;;;;;;;x
+
+lf_basic_spellbook;Basic Spellbook;;;;;;;;;;;;;x
+lf_basic_spellbook_desc;Owner of a small book of spells.;;;;;;;;;;;;;x
+lf_good_spellbook;Ornate Spellbook;;;;;;;;;;;;;x
+lf_good_spellbook_desc;Owner of a large book of spells.;;;;;;;;;;;;;x
+lf_best_spellbook;Opulent Spellbook;;;;;;;;;;;;;x
+lf_best_spellbook_desc;Owner of an enchanted book of spells.;;;;;;;;;;;;;x
+
+LFSpells7T;LF - Spell of Cuckolding;;;;;;;;;;;;;x
+LFSpells7;You add the ingredients to the cauldron and focus on your target while chanting the magic words...;;;;;;;;;;;;;x
+LFSpells7TT;Let [spell_target.GetHerHim] falsely trust me!;;;;;;;;;;;;;x
+LFSpells7TTFail;The spell fails.;;;;;;;;;;;;;x
+LFSpells7TTSuccess;The spell succeeds!;;;;;;;;;;;;;x
+
+lf_wizards_spell_of_trusting;§YSpell:§! Cuckolding;;;;;;;;;;;;;x
+lf_wizards_spell_of_trusting_desc;As a practitioner of magic, §Y[From.GetTitledFirstName]§! can cast a spell to make a spouse falsely trust them.;;;;;;;;;;;;;x
+
+lf_curse_of_the_snail;§YSpell:§! Curse of the Snail;;;;;;;;;;;;;x
+lf_curse_of_the_snail_desc;[Silly_Snail_D];;;;;;;;;;;;;x
+lf_silly_snail_d;By vigorously rubbing your wand in the general direction of someone, you can turn them into a horror beyond imagining: a Frenchman.;;;;;;;;;;;;;x
+lf_no_silly_snail_d;As a practitioner of magic, you can cast a spell to make any courtier in your own realm have the mind of a snail.;;;;;;;;;;;;;x
+lf_curse_snail_tt;Target must not already be [Silly_Snail_TT];;;;;;;;;;;;;x
+lf_silly_snail_tt;French;;;;;;;;;;;;;x
+lf_no_silly_snail_tt;Slow;;;;;;;;;;;;;x
+
+lf_blessing_of_the_womb;§YSpell:§! Blessing of the Womb;;;;;;;;;;;;;x
+lf_blessing_of_the_womb_desc;As a practitioner of magic, you can cast a spell on any pregnant courtier in your own realm (or yourself, if pregnant) to give a little magical aid to the child's abilities once born.;;;;;;;;;;;;;x
+
+
+lf_a_yer_a_wizard_harry;Become a Mage;;;;;;;;;;;;;x
+lf_a_yer_a_wizard_harry_desc;It is said there is a woman living inside your Wizards' Tower who can grant you greater power over the arcane. Go visit her and see if the rumors are true. She will only grant an audience if the tower is to her liking, or if you are already well-versed in the occult.;;;;;;;;;;;;;x
+
+LFMagic3T;LF - Yer A Wizard, [Root.GetFirstName];;;;;;;;;;;;;x
+LFMagic3;The tower houses a few practitioners of the arcane arts, as well as their apprentices. The first and second floors are home to studies and libraries, and the top of the tower is home to a local astrologian. However, you are a little shocked when you are escorted by an apprentice to a previously-unknown basement level. Don't these mages live above ground?\n  You arrive at what looks to be a small cavern, lit only by floating fairy fire and fungi. The apprentice soon departs, leaving you alone with a stunningly-beautiful woman, dressed in all black with a cleavage to rival the gods. Magically-enhanced, no doubt. "Welcome to my domain, my [Root.GetLordLady]," she speaks, looking up from a book. "Word has reached me that you would like a greater understanding of the arcane arts. I do so enjoy it when someone takes an interest."\n  She gets up from where she was sitting and moves toward you. "All I ask is a little bit of your lifeforce," the woman speaks with a sinister grin on her face. Her free hand opens and a ball of blue flame appears from the palm, though it exerts no heat. "A small pittance for the power I can provide...";;;;;;;;;;;;;x
+LFMagic3Elf;The tower houses a few practitioners of the arcane arts, as well as their apprentices. The first and second floors are home to studies and libraries, and the top of the tower is home to a local astrologian. However, you are a little shocked when you are escorted by an apprentice to a previously-unknown basement level. Don't these mages live above ground?\n  You arrive at what looks to be a small cavern, lit only by floating fairy fire and fungi. The apprentice soon departs, leaving you alone with a stunningly-beautiful woman, dressed in all black with a cleavage to rival the gods. Magically-enhanced, no doubt. "Welcome to my domain, my [Root.GetLordLady]," she speaks, looking up from a book. "Word has reached me that you would like a greater understanding of the arcane arts. I do so enjoy it when someone takes an interest."\n  She gets up from where she was sitting and moves toward you. "Oh, but it seems that you already have a little understanding yourself..." she quips, gently stroking your long elven ears. "I would normally ask a little of your lifeforce as payment, but I will make an exception.";;;;;;;;;;;;;x
+LFMagic3Kitsune;The tower houses a few practitioners of the arcane arts, as well as their apprentices. The first and second floors are home to studies and libraries, and the top of the tower is home to a local astrologian. However, you are a little shocked when you are escorted by an apprentice to a previously-unknown basement level. Don't these mages live above ground?\n  You arrive at what looks to be a small cavern, lit only by floating fairy fire and fungi. The apprentice soon departs, leaving you alone with a stunningly-beautiful woman, dressed in all black with a cleavage to rival the gods. Magically-enhanced, no doubt. "Welcome to my domain, my [Root.GetLordLady]," she speaks, looking up from a book. "Word has reached me that you would like a greater understanding of the arcane arts. I do so enjoy it when someone takes an interest."\n  She gets up from where she was sitting and moves toward you. "Oh, but it seems that you already have a little understanding yourself..." she quips, gently stroking your fluffy fox tail. "I would normally ask a little of your lifeforce as payment, but I will make an exception.";;;;;;;;;;;;;x
+LFMagic3Fairy;The tower houses a few practitioners of the arcane arts, as well as their apprentices. The first and second floors are home to studies and libraries, and the top of the tower is home to a local astrologian. However, you are a little shocked when you are escorted by an apprentice to a previously-unknown basement level. Don't these mages live above ground?\n  You arrive at what looks to be a small cavern, lit only by floating fairy fire and fungi. The apprentice soon departs, leaving you alone with a stunningly-beautiful woman, dressed in all black with a cleavage to rival the gods. Magically-enhanced, no doubt. "Welcome to my domain, my [Root.GetLordLady]," she speaks, looking up from a book. "Word has reached me that you would like a greater understanding of the arcane arts. I do so enjoy it when someone takes an interest."\n  She gets up from where she was sitting and moves toward you. "Oh, but it seems that you already have a little understanding yourself..." she quips, gently stroking your delicate fae wings. "I would normally ask a little of your lifeforce as payment, but I will make an exception.";;;;;;;;;;;;;x
+LFMagic3TTA;I accept and join the ranks of the mages.;;;;;;;;;;;;;x
+LFMagic3TTB;Erm... can I think about this a little longer?;;;;;;;;;;;;;x
+
+
+
+current_mana;current mana;;;;;;;;;;;;;x
+max_mana;maximum mana;;;;;;;;;;;;;x
+tt_has_enough_mana_minor;Has 10 mana.;;;;;;;;;;;;;x
+tt_has_enough_mana_moderate;Has 25 mana.;;;;;;;;;;;;;x
+tt_has_enough_mana_major;Has 50 mana.;;;;;;;;;;;;;x
+tt_has_enough_mana_minor_kitsune;Has 8 mana if kitsune, 12 if not.;;;;;;;;;;;;;x
+tt_has_enough_mana_moderate_kitsune;Has 20 mana if kitsune, 30 if not.;;;;;;;;;;;;;x
+tt_has_enough_mana_major_kitsune;Has 40 mana if kitsune, 60 if not.;;;;;;;;;;;;;x
+tt_has_enough_mana_minor_neko;Has 8 mana if neko, 12 if not.;;;;;;;;;;;;;x
+tt_has_enough_mana_moderate_neko;Has 20 mana if neko, 30 if not.;;;;;;;;;;;;;x
+tt_has_enough_mana_major_neko;Has 40 mana if neko, 60 if not.;;;;;;;;;;;;;x
+tt_has_enough_mana_minor_elf;Has 8 mana if elf or half-elf, 12 if not.;;;;;;;;;;;;;x
+tt_has_enough_mana_moderate_elf;HHas 20 mana if elf or half-elf, 30 if not.;;;;;;;;;;;;;x
+tt_has_enough_mana_major_elf;Has 40 mana if elf or half-elf, 60 if not.;;;;;;;;;;;;;x
+tt_has_enough_mana_minor_drow;Has 8 mana if drow, 12 if not.;;;;;;;;;;;;;x
+tt_has_enough_mana_moderate_drow;Has 20 mana if drow, 30 if not.;;;;;;;;;;;;;x
+tt_has_enough_mana_major_drow;Has 40 mana if drow, 60 if not.;;;;;;;;;;;;;x
+tt_has_enough_mana_minor_fairy;Has 8 mana if fairy, 12 if not.;;;;;;;;;;;;;x
+tt_has_enough_mana_moderate_fairy;Has 20 mana if fairy, 30 if not.;;;;;;;;;;;;;x
+tt_has_enough_mana_major_fairy;Has 40 mana if fairy, 60 if not.;;;;;;;;;;;;;x
+
+lf_sparkling;This character sparkles with an unnatural glow, brightening the mood of any who gaze upon them.;;;;;;;;;;;;;x
+lf_sparkling_vampire;This character sparkles in the sunlight. They would do well to avoid uninteresting school girls.;;;;;;;;;;;;;x
+lf_sparkling_tt;Is not currently sparkling;;;;;;;;;;;;;x
+increased_mana_tt;Your maximum mana stores will be increased by 50. Don't forget to buy a spellbook.;;;;;;;;;;;;;x
+lf_mana_stores;LF Mana Stores;;;;;;;;;;;;;x
+lf_mana_stores_desc;Current mana: [current_mana.GetValue]/[max_mana.GetValue];;;;;;;;;;;;;x
+
+LFSpellsSuccessful;The spell was cast successfully!;;;;;;;;;;;;;x
+LFSpellsFailed;The spell failed!;;;;;;;;;;;;;x
+LFSpellsMissed;The spell was cast successfully, but there were... complications.;;;;;;;;;;;;;x
+
+LFSpells12;You open the spellbook and begin flipping through the pages. The spells are listed in the form of:\nSpell Name - Valid Targets - Mana Cost - Harmful or Harmless - Races who get this for free\n\n Your current known spells are:\n\n[Spell1]\n[Spell2]\n[Spell3]\n[Spell4]\n[Spell5]\n[Spell6]\n[Spell7]\n[Spell8]\n[Spell9]\n[SillySpells];;;;;;;;;;;;;x
+LFSpells12T;Spellbook;;;;;;;;;;;;;x
+lf_blank_page;A blank page;;;;;;;;;;;;;x
+lf_spell_fireball;Fireball - Target: Courtier - Mana Cost: 25 - Harmful;;;;;;;;;;;;;x
+lf_spell_flamestrike;Flamestrike - Target: Ruler - Mana Cost: 50 - Harmful;;;;;;;;;;;;;x
+lf_spell_womb;Blessing of the Womb - Target: Pregnant Courtier - Mana Cost: 50 - Harmless;;;;;;;;;;;;;x
+lf_spell_familiar;Summon Familiar - Target: Self - Mana Cost: 0 - Harmless;;;;;;;;;;;;;x
+lf_spell_snail;Curse of the Snail - Target: Courtier - Mana Cost: 50 - Harmful;;;;;;;;;;;;;x
+lf_spell_cuckold;Cuckolding - Target: Courtier - Mana Cost: 25 - Harmless - Elves;;;;;;;;;;;;;x
+lf_spell_lust;[GetLilithName]'s Lust - Target: Non-Lover Courtier - Mana Cost: 25 - Harmless - Kitsune;;;;;;;;;;;;;x
+lf_spell_fairy;Fairy Fire - Target: Courtier - Mana Cost: 10 - Harmless - Fairies;;;;;;;;;;;;;x
+lf_spell_enslave;Enslavement - Target: Non-Slave Courtier - Mana Cost: 10 - Harmful - Drow (House Irae);;;;;;;;;;;;;x
+lf_spell_silly1;Blessing of Pepe - Target: Virgin - Mana Cost: 69 - Harmless - Incels;;;;;;;;;;;;;x
+lf_spell_silly2;Murder - Target: Jeffrey Epstein - Mana Cost: 0 - Harmful;;;;;;;;;;;;;x
+lf_spell_silly3;Lost The Game - Target: You - Mana Cost: Your Sanity - Harmful;;;;;;;;;;;;;x
+lf_spell_silly4;Sexual Awakening - Target: Child - Mana Cost: 25 - Harmful - Catholics;;;;;;;;;;;;;x
+lf_spell_silly5;Refill Food Bowl - Target: Slave - Mana Cost: Meow - Harmless - Nekos;;;;;;;;;;;;;x
+
+LFSpells13;The clerk running the Hall of Wizardry magic shop greets you. "Looking to buy a magical scroll to fill up your spellbook?";;;;;;;;;;;;;x
+LFSpells13TTA;Let me have a scroll.;;;;;;;;;;;;;x
+LFSpells13Random;The scroll you receive is random.;;;;;;;;;;;;;x
+LFSpells13TTB;Just browsing today, thanks.;;;;;;;;;;;;;x
+
+lf_open_spellbook;§YLuxuria:§! Open Spellbook;;;;;;;;;;;;;x
+lf_open_spellbook_desc;Open up your spellbook to examine the spells you currently own.;;;;;;;;;;;;;x
+
+lf_b_buy_magic_spell;Buy Magic Spell;;;;;;;;;;;;;x
+lf_b_buy_magic_spell_desc;Take a trip to the Hall of Wizardry to buy yourself a spell to fill up your spellbook.;;;;;;;;;;;;;x
+lf_b_buy_magic_spell_tooltip;Your spellbook must not be full already.;;;;;;;;;;;;;x

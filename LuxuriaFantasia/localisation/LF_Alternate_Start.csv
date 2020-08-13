@@ -1,0 +1,27 @@
+setting_lf_racial_seeding;§YLuxuria:§! Racial Seeding;;;;;;;;;;;;;x
+setting_lf_racial_seeding_tooltip;Determines if the Luxuria Fantasia races will be seeded into a new world.;;;;;;;;;;;;;x
+setting_lf_racial_seeding_none;None;;;;;;;;;;;;;x
+setting_lf_racial_seeding_none_tooltip;The world will not be seeded with Luxuria Fantasia races.;;;;;;;;;;;;;x
+setting_lf_racial_seeding_partial;Partial;;;;;;;;;;;;;x
+setting_lf_racial_seeding_partial_tooltip;There's a chance an independent ruler and their realm will be a fantasy race.;;;;;;;;;;;;;x
+setting_lf_racial_seeding_full;Luxuria Fantasia;;;;;;;;;;;;;x
+setting_lf_racial_seeding_full_tooltip;Humans are just a distant memory now.;;;;;;;;;;;;;x
+
+setting_lf_seed_elf;Seed Elves;;;;;;;;;;;;;x
+setting_lf_seed_elf_tooltip;If checked, elves will appear during seeding.;;;;;;;;;;;;;x
+setting_lf_seed_orc;Seed Orcs;;;;;;;;;;;;;x
+setting_lf_seed_orc_tooltip;If checked, orcs will appear during seeding.;;;;;;;;;;;;;x
+setting_lf_seed_fairy;Seed Fairies;;;;;;;;;;;;;x
+setting_lf_seed_fairy_tooltip;If checked, fae will appear during seeding.;;;;;;;;;;;;;x
+setting_lf_seed_neko;Seed Nekos;;;;;;;;;;;;;x
+setting_lf_seed_neko_tooltip;If checked, nekos (cats) will appear during seeding.;;;;;;;;;;;;;x
+setting_lf_seed_kitsune;Seed Kitsune;;;;;;;;;;;;;x
+setting_lf_seed_kitsune_tooltip;If checked, kitsune (foxes) will appear during seeding.;;;;;;;;;;;;;x
+setting_lf_seed_divine;Seed Divines;;;;;;;;;;;;;x
+setting_lf_seed_divine_tooltip;If checked, divines (angels) will appear during seeding.;;;;;;;;;;;;;x
+setting_lf_seed_demon;Seed Demons;;;;;;;;;;;;;x
+setting_lf_seed_demon_tooltip;If checked, demons will appear during seeding.;;;;;;;;;;;;;x
+setting_lf_seed_dragon;Seed Draconics;;;;;;;;;;;;;x
+setting_lf_seed_dragon_tooltip;If checked, dragons and half-dragons will appear during seeding.;;;;;;;;;;;;;x
+setting_lf_seed_houseirae;[House Irae] Seed Dark/Half Elves;;;;;;;;;;;;;x
+setting_lf_seed_houseirae_tooltip;If checked, some rulers will be set aside for House Irae's own racial generation. Required if using full seeding. Do not use this option if you don't play House Irae.;;;;;;;;;;;;;x

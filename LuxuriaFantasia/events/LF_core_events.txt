@@ -1,0 +1,74 @@
+namespace = LFCore
+
+# .1 Sets a global flag for those who build mods that want to check for the presence of this mod
+character_event = {
+	id = LFCore.1
+	is_triggered_only = yes # triggered via on_action
+	hide_window = yes # nothing to see here
+	trigger = {
+		NOR = { 
+			has_global_flag = luxuria_fantasia_started
+		}
+	}
+	immediate = {
+		set_global_flag = luxuria_fantasia_started
+	}
+}
+
+character_event = {
+	id = LFCore.2
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		OR = {
+			is_elf = yes
+			is_orc = yes
+			is_kitsune = yes
+			is_neko = yes
+			is_angel = yes
+			is_demon = yes
+		}
+		has_game_rule = { name = lf_blood_feud value = lf_bf_on }
+	}
+	immediate = {
+		trigger_switch = {
+			on_trigger = trait
+			lf_elf = {
+				add_character_modifier = {
+					name = lf_elf_bf
+					duration = -1
+				}
+			}
+			lf_orc = {
+				add_character_modifier = {
+					name = lf_orc_bf
+					duration = -1
+				}
+			}
+			lf_kitsune = {
+				add_character_modifier = {
+					name = lf_kitsune_bf
+					duration = -1
+				}
+			}
+			lf_neko = {
+				add_character_modifier = {
+					name = lf_neko_bf
+					duration = -1
+				}
+			}
+			lf_angel = {
+				add_character_modifier = {
+					name = lf_angel_bf
+					duration = -1
+				}
+			}
+			lf_demon = {
+				add_character_modifier = {
+					name = lf_demon_bf
+					duration = -1
+				}
+			}
+		}
+	}
+}

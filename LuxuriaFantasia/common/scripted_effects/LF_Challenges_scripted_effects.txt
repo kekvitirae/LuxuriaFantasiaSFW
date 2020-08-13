@@ -1,0 +1,481 @@
+lf_opposite_day = {
+
+	if = {
+		limit = {
+			trait = lustful
+			NOT = { has_character_flag = chaste }
+		}
+		set_character_flag = lustful
+		add_trait = chaste
+	}
+
+	if = {
+		limit = {
+			trait = chaste
+			NOT = { has_character_flag = lustful }
+		}
+		set_character_flag = chaste
+		add_trait = lustful
+	}
+		
+	if = {
+		limit = {
+			trait = proud
+			NOT = { has_character_flag = humble }
+		}
+		set_character_flag = proud
+		add_trait = humble
+	}
+		
+	if = {
+		limit = {
+			trait = humble
+			NOT = { has_character_flag = proud }
+		}
+		set_character_flag = humble
+		add_trait = proud
+	}
+		
+	if = {
+		limit = {
+			trait = wroth
+			NOT = { has_character_flag = patient }
+		}
+		set_character_flag = wroth
+		add_trait = patient
+	}
+		
+	if = {
+		limit = {
+			trait = patient
+			NOT = { has_character_flag = wroth }
+		}
+		set_character_flag = patient
+		add_trait = wroth
+	}
+		
+	if = {
+		limit = {
+			trait = envious
+			NOT = { has_character_flag = kind }
+		}
+		set_character_flag = envious
+		add_trait = kind
+	}
+		
+	if = {
+		limit = {
+			trait = kind
+			NOT = { has_character_flag = envious }
+		}
+		set_character_flag = kind
+		add_trait = envious
+	}
+		
+	if = {
+		limit = {
+			trait = greedy
+			NOT = { has_character_flag = charitable }
+		}
+		set_character_flag = greedy
+		add_trait = charitable
+	}
+		
+	if = {
+		limit = {
+			trait = charitable
+			NOT = { has_character_flag = greedy }
+		}
+		set_character_flag = charitable
+		add_trait = greedy
+	}
+		
+	if = {
+		limit = {
+			trait = slothful
+			NOT = { has_character_flag = diligent }
+		}
+		set_character_flag = slothful
+		add_trait = diligent
+	}
+		
+	if = {
+		limit = {
+			trait = diligent
+			NOT = { has_character_flag = slothful }
+		}
+		set_character_flag = diligent
+		add_trait = slothful
+	}
+		
+	if = {
+		limit = {
+			trait = gluttonous
+			NOT = { has_character_flag = temperate }
+		}
+		set_character_flag = gluttonous
+		add_trait = temperate
+	}
+		
+	if = {
+		limit = {
+			trait = temperate
+			NOT = { has_character_flag = gluttonous }
+		}
+		set_character_flag = temperate
+		add_trait = gluttonous
+	}
+
+
+	if = {
+		limit = {
+			trait = ambitious
+			NOT = { has_character_flag = content }
+		}
+		set_character_flag = ambitious
+		add_trait = content
+	}
+		
+	if = {
+		limit = {
+			trait = content
+			NOT = { has_character_flag = ambitious }
+		}
+		set_character_flag = content
+		add_trait = ambitious
+	}
+		
+
+	if = {
+		limit = {
+			trait = brave
+			NOT = { has_character_flag = craven }
+		}
+		set_character_flag = brave
+		add_trait = craven
+	}
+		
+	if = {
+		limit = {
+			trait = craven
+			NOT = { has_character_flag = brave }
+		}
+		set_character_flag = craven
+		add_trait = brave
+	}
+		
+
+	if = {
+		limit = {
+			trait = arbitrary
+			NOT = { has_character_flag = just }
+		}
+		set_character_flag = arbitrary
+		add_trait = just
+	}
+		
+	if = {
+		limit = {
+			trait = just
+			NOT = { has_character_flag = arbitrary }
+		}
+		set_character_flag = just
+		add_trait = arbitrary
+	}
+		
+
+	if = {
+		limit = {
+			trait = cynical
+			NOT = { has_character_flag = zealous }
+		}
+		set_character_flag = cynical
+		add_trait = zealous
+	}
+		
+	if = {
+		limit = {
+			trait = zealous
+			NOT = { has_character_flag = cynical }
+		}
+		set_character_flag = zealous
+		add_trait = cynical
+	}
+		
+
+	if = {
+		limit = {
+			trait = deceitful
+			NOT = { has_character_flag = honest }
+		}
+		set_character_flag = deceitful
+		add_trait = honest
+	}
+		
+	if = {
+		limit = {
+			trait = honest
+			NOT = { has_character_flag = deceitful }
+		}
+		set_character_flag = honest
+		add_trait = deceitful
+	}
+		
+
+	if = {
+		limit = {
+			trait = gregarious
+			NOT = { has_character_flag = shy }
+		}
+		set_character_flag = gregarious
+		add_trait = shy
+	}
+		
+	if = {
+		limit = {
+			trait = shy
+			NOT = { has_character_flag = gregarious }
+		}
+		set_character_flag = shy
+		add_trait = gregarious
+	}
+		
+
+	if = {
+		limit = {
+			trait = paranoid
+			NOT = { has_character_flag = trusting }
+		}
+		set_character_flag = paranoid
+		add_trait = trusting
+	}
+		
+	if = {
+		limit = {
+			trait = trusting
+			NOT = { has_character_flag = paranoid }
+		}
+		set_character_flag = trusting
+		add_trait = paranoid
+	}
+		
+
+	if = {
+		limit = {
+			trait = is_fat
+			NOT = { has_character_flag = is_malnourished }
+		}
+		set_character_flag = is_fat
+		add_trait = is_malnourished
+	}
+		
+	if = {
+		limit = {
+			trait = is_malnourished
+			NOT = { has_character_flag = is_fat }
+		}
+		set_character_flag = is_malnourished
+		add_trait = is_fat
+	}
+		
+
+	if = {
+		limit = {
+			trait = fair
+			NOT = { has_character_flag = ugly }
+		}
+		set_character_flag = fair
+		add_trait = ugly
+	}
+		
+	if = {
+		limit = {
+			trait = ugly
+			NOT = { has_character_flag = fair }
+		}
+		set_character_flag = ugly
+		add_trait = fair
+	}
+		
+
+	if = {
+		limit = {
+			trait = genius
+			NOT = { has_character_flag = imbecile }
+		}
+		set_character_flag = genius
+		add_trait = imbecile
+	}
+		
+	if = {
+		limit = {
+			trait = imbecile
+			NOT = { has_character_flag = genius }
+		}
+		set_character_flag = imbecile
+		add_trait = genius
+	}
+		
+
+	if = {
+		limit = {
+			trait = quick
+			NOT = { has_character_flag = slow }
+		}
+		set_character_flag = quick
+		add_trait = slow
+	}
+		
+	if = {
+		limit = {
+			trait = slow
+			NOT = { has_character_flag = quick }
+		}
+		set_character_flag = slow
+		add_trait = quick
+	}
+		
+
+	if = {
+		limit = {
+			trait = strong
+			NOT = { has_character_flag = weak }
+		}
+		set_character_flag = strong
+		add_trait = weak
+	}
+		
+	if = {
+		limit = {
+			trait = weak
+			NOT = { has_character_flag = strong }
+		}
+		set_character_flag = weak
+		add_trait = strong
+	}
+		
+
+	if = {
+		limit = {
+			trait = feeble
+			NOT = { has_character_flag = sturdy }
+			NOT = { has_character_flag = robust }
+		}
+		random_list = {
+			75 = {
+				set_character_flag = feeble
+				add_trait = sturdy
+			}
+			25 = {
+				set_character_flag = feeble
+				add_trait = robust
+			}
+		}
+	}
+		
+	if = {
+		limit = {
+			trait = robust
+			NOT = { has_character_flag = sturdy }
+			NOT = { has_character_flag = feeble }
+		}
+		set_character_flag = robust
+		add_trait = feeble
+	}
+		
+	if = {
+		limit = {
+			trait = sturdy
+			NOT = { has_character_flag = robust }
+			NOT = { has_character_flag = feeble }
+		}
+		set_character_flag = sturdy
+		add_trait = feeble
+	}
+		
+
+	if = {
+		limit = {
+			trait = dull
+			NOT = { has_character_flag = shrewd }
+		}
+		set_character_flag = dull
+		add_trait = shrewd
+	}
+		
+	if = {
+		limit = {
+			trait = shrewd
+			NOT = { has_character_flag = dull }
+		}
+		set_character_flag = shrewd
+		add_trait = dull
+	}
+		
+
+	if = {
+		limit = {
+			trait = groomed
+			NOT = { has_character_flag = uncouth }
+		}
+		set_character_flag = groomed
+		add_trait = uncouth
+	}
+
+	if = {
+		limit = {
+			trait = uncouth
+			NOT = { has_character_flag = groomed }
+		}
+		set_character_flag = uncouth
+		add_trait = groomed
+	}
+}
+
+lf_clear_opposite_flags = {
+	clr_character_flag = lustful
+	clr_character_flag = proud
+	clr_character_flag = wroth
+	clr_character_flag = envious
+	clr_character_flag = greedy
+	clr_character_flag = slothful
+	clr_character_flag = gluttonous
+	clr_character_flag = chaste
+	clr_character_flag = humble
+	clr_character_flag = patient
+	clr_character_flag = kind
+	clr_character_flag = charitable
+	clr_character_flag = diligent
+	clr_character_flag = temperate
+	clr_character_flag = ambitious
+	clr_character_flag = content
+	clr_character_flag = brave
+	clr_character_flag = craven
+	clr_character_flag = arbitrary
+	clr_character_flag = just
+	clr_character_flag = cynical
+	clr_character_flag = zealous
+	clr_character_flag = deceitful
+	clr_character_flag = honest
+	clr_character_flag = gregarious
+	clr_character_flag = shy
+	clr_character_flag = paranoid
+	clr_character_flag = trusting
+	clr_character_flag = is_fat
+	clr_character_flag = is_malnourished
+	clr_character_flag = fair
+	clr_character_flag = ugly
+	clr_character_flag = genius
+	clr_character_flag = imbecile
+	clr_character_flag = quick
+	clr_character_flag = slow
+	clr_character_flag = strong
+	clr_character_flag = weak
+	clr_character_flag = feeble
+	clr_character_flag = robust
+	clr_character_flag = sturdy
+	clr_character_flag = dull
+	clr_character_flag = shrewd
+	clr_character_flag = groomed
+	clr_character_flag = uncouth
+}

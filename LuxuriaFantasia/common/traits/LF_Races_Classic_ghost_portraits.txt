@@ -1,0 +1,11 @@
+ghost_male = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+
+ghost_female = {
+	hidden = yes
+	random = no
+	customizer = no
+}

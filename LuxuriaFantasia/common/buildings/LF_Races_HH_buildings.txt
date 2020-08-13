@@ -1,0 +1,255 @@
+castle = {
+	lf_demonic_shrine_castle = {
+		potential = {
+			lf_has_demons = yes
+			OR = {
+				FROM = {
+					capital_holding = {
+						title = FROMFROM
+					}
+					is_any_demon = yes
+				}
+				FROMFROM = { has_building = lf_demonic_shrine_castle }
+			}
+		}
+		is_active_trigger = {
+			lf_has_demons = yes
+			FROM = {
+				capital_holding = {
+					title = FROMFROM
+				}
+				is_any_demon = yes
+			}
+		}
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		desc = lf_demonic_shrine_desc
+		add_number_to_name = no
+		prestige_cost = 100
+		build_time = 365
+		ai_creation_factor = 50
+		extra_tech_building_start = 10
+		liege_prestige = 0.5
+	}
+	lf_divine_chapel_castle = {
+		potential = {
+			lf_has_divines = yes
+			OR = {
+				FROM = {
+					capital_holding = {
+						title = FROMFROM
+					}
+					is_angel = yes
+				}
+				FROMFROM = { has_building = lf_divine_chapel_castle }
+			}
+		}
+		is_active_trigger = {
+			lf_has_divines = yes
+			FROM = {
+				capital_holding = {
+					title = FROMFROM
+				}
+				is_angel = yes
+			}
+		}
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		desc = lf_divine_chapel_desc
+		add_number_to_name = no
+		piety_cost = 100
+		build_time = 365
+		ai_creation_factor = 50
+		extra_tech_building_start = 10
+		liege_piety = 0.5
+	}
+}
+tribal = {
+	lf_demonic_shrine_tribal = {
+		potential = {
+			lf_has_demons = yes
+			OR = {
+				FROM = {
+					capital_holding = {
+						title = FROMFROM
+					}
+					is_any_demon = yes
+				}
+				FROMFROM = { has_building = lf_demonic_shrine_tribal }
+			}
+		}
+		is_active_trigger = {
+			lf_has_demons = yes
+			FROM = {
+				capital_holding = {
+					title = FROMFROM
+				}
+				is_any_demon = yes
+			}
+		}
+		desc = lf_demonic_shrine_desc
+		add_number_to_name = no # Not necessary with only one version
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		prestige_cost = 100
+		build_time = 365
+		ai_creation_factor = 50
+		ai_feudal_modifier = -10
+		ai_republic_modifier = -25
+		extra_tech_building_start = 10
+		convert_to_castle = lf_demonic_shrine_castle
+		#modifiers provided by the building:
+		liege_prestige = 0.5
+	}
+	lf_divine_chapel_tribal = {
+		potential = {
+			lf_has_divines = yes
+			OR = {
+				FROM = {
+					capital_holding = {
+						title = FROMFROM
+					}
+					is_angel = yes
+				}
+				FROMFROM = { has_building = lf_divine_chapel_tribal }
+			}
+		}
+		is_active_trigger = {
+			lf_has_divines = yes
+			FROM = {
+				capital_holding = {
+					title = FROMFROM
+				}
+				is_angel = yes
+			}
+		}
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		desc = lf_divine_chapel_desc
+		add_number_to_name = no
+		piety_cost = 100
+		build_time = 365
+		ai_creation_factor = 50
+		ai_feudal_modifier = -10
+		ai_republic_modifier = -25
+		extra_tech_building_start = 10
+		convert_to_castle = lf_divine_chapel_castle
+		liege_piety = 0.5
+	}
+}
+
+family_palace = {
+	lf_demonic_shrine_fp = {
+		potential = {
+			lf_has_demons = yes
+			OR = {
+				FROM = {
+					is_any_demon = yes
+				}
+				FROMFROM = { has_building = lf_demonic_shrine_fp }
+			}
+		}
+		is_active_trigger = {
+			lf_has_demons = yes
+			FROM = {
+				is_any_demon = yes
+			}
+		}
+		desc = lf_demonic_shrine_desc
+		add_number_to_name = no # Not necessary with only one version
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		prestige_cost = 400
+		build_time = 760
+		ai_creation_factor = 50
+		ai_feudal_modifier = -10
+		ai_republic_modifier = -25
+		extra_tech_building_start = 10
+		convert_to_castle = lf_demonic_shrine_castle
+		#modifiers provided by the building:
+		liege_prestige = 2
+	}
+	lf_divine_chapel_fp = {
+		potential = {
+			lf_has_divines = yes
+			OR = {
+				FROM = {
+					is_angel = yes
+				}
+				FROMFROM = { has_building = lf_divine_chapel_fp }
+			}
+		}
+		is_active_trigger = {
+			lf_has_divines = yes
+			FROM = {
+				is_angel = yes
+			}
+		}
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		desc = lf_divine_chapel_desc
+		add_number_to_name = no
+		piety_cost = 400
+		build_time = 760
+		ai_creation_factor = 50
+		ai_feudal_modifier = -10
+		ai_republic_modifier = -25
+		extra_tech_building_start = 10
+		convert_to_castle = lf_divine_chapel_castle
+		liege_piety = 2
+	}
+}
+
+nomad = {
+	lf_demonic_shrine_nomad = {
+		potential = {
+			lf_has_demons = yes
+			OR = {
+				FROM = {
+					is_any_demon = yes
+				}
+				FROMFROM = { has_building = lf_demonic_shrine_nomad }
+			}
+		}
+		is_active_trigger = {
+			lf_has_demons = yes
+			FROM = {
+				is_any_demon = yes
+			}
+		}
+		desc = lf_demonic_shrine_desc
+		add_number_to_name = no # Not necessary with only one version
+		trigger = { FROM = { TECH_CITY_CONSTRUCTION = 0 } }
+		prestige_cost = 100
+		build_time = 365
+		ai_creation_factor = 50
+		ai_feudal_modifier = -10
+		ai_republic_modifier = -25
+		extra_tech_building_start = 10
+		convert_to_castle = lf_demonic_shrine_castle
+		#modifiers provided by the building:
+		liege_prestige = 0.5
+	}
+	lf_divine_chapel_nomad = {
+		potential = {
+			lf_has_divines = yes
+			OR = {
+				FROM = {
+					is_angel = yes
+				}
+				FROMFROM = { has_building = lf_divine_chapel_nomad }
+			}
+		}
+		is_active_trigger = {
+			lf_has_divines = yes
+			FROM = {
+				is_angel = yes
+			}
+		}
+		trigger = { FROM = { TECH_CITY_CONSTRUCTION = 0 } }
+		desc = lf_divine_chapel_desc
+		add_number_to_name = no
+		piety_cost = 100
+		build_time = 365
+		ai_creation_factor = 50
+		ai_feudal_modifier = -10
+		ai_republic_modifier = -25
+		extra_tech_building_start = 10
+		convert_to_castle = lf_divine_chapel_castle
+		liege_piety = 0.5
+	}
+}

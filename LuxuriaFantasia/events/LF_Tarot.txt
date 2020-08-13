@@ -1,0 +1,417 @@
+namespace = LFTarot
+
+narrative_event = { # Meeting with the astrologian
+	id = LFTarot.1
+	is_triggered_only = yes
+	picture = lf_astrologian
+	title = LFTarot1T
+	desc = LFTarot1
+	
+	option = {
+		name = LFTarot1TTA
+		trigger = {
+			wealth = 50
+		}
+		wealth = -50
+		character_event = { id = LFTarot.11 }
+	}
+	
+	option = {
+		name = LFTarot1TTB
+	}
+}
+
+character_event = { # Card chosen
+	id = LFTarot.11
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		random_list = {
+			10 = {
+				set_character_flag = MoonU
+			}
+			10 = {
+				set_character_flag = MoonR
+			}
+			10 = {
+				set_character_flag = SunU
+			}
+			10 = {
+				set_character_flag = SunR
+			}
+			10 = {
+				set_character_flag = StarU
+			}
+			10 = {
+				set_character_flag = StarR
+			}
+			10 = {
+				set_character_flag = TowerU
+			}
+			10 = {
+				set_character_flag = TowerR
+			}
+			10 = {
+				set_character_flag = DevilU
+			}
+			10 = {
+				set_character_flag = DevilR
+			}
+			10 = {
+				set_character_flag = TemperanceU
+			}
+			10 = {
+				set_character_flag = TemperanceR
+			}
+			10 = {
+				set_character_flag = DeathU
+			}
+			10 = {
+				set_character_flag = DeathR
+			}
+			10 = {
+				set_character_flag = HangedU
+			}
+			10 = {
+				set_character_flag = HangedR
+			}
+			10 = {
+				set_character_flag = FortuneU
+			}
+			10 = {
+				set_character_flag = FortuneR
+			}
+		}
+		add_character_modifier = {
+			name = lf_tarot_read
+			hidden = yes
+			days = 365
+		}
+		narrative_event = { id = LFTarot.2 }
+	}
+}
+
+narrative_event = { # Luck of the draw
+	id = LFTarot.2
+	is_triggered_only = yes
+	picture = lf_a_placeholder
+	title = LFTarot2T
+	desc = { # Moon Upright
+		trigger = {
+			has_character_flag = MoonU
+		}
+		text = LFTarotMoonU
+		picture = lf_tarot_upturned
+	}
+	desc = { # Moon Reversed
+		trigger = {
+			has_character_flag = MoonR
+		}
+		text = LFTarotMoonR
+		picture = lf_tarot_reversed
+	}
+	desc = { # Sun Upright
+		trigger = {
+			has_character_flag = SunU
+		}
+		text = LFTarotSunU
+		picture = lf_tarot_upturned
+	}
+	desc = { # Sun Reversed
+		trigger = {
+			has_character_flag = SunR
+		}
+		text = LFTarotSunR
+		picture = lf_tarot_reversed
+	}
+	desc = { # Star Upright
+		trigger = {
+			has_character_flag = StarU
+		}
+		text = LFTarotStarU
+		picture = lf_tarot_upturned
+	}
+	desc = { # Star Reversed
+		trigger = {
+			has_character_flag = StarR
+		}
+		text = LFTarotStarR
+		picture = lf_tarot_reversed
+	}
+	desc = { # Tower Upright
+		trigger = {
+			has_character_flag = TowerU
+		}
+		text = LFTarotTowerU
+		picture = lf_tarot_upturned
+	}
+	desc = { # Tower Reversed
+		trigger = {
+			has_character_flag = TowerR
+		}
+		text = LFTarotTowerR
+		picture = lf_tarot_reversed
+	}
+	desc = { # Devil Upright
+		trigger = {
+			has_character_flag = DevilU
+		}
+		text = LFTarotDevilU
+		picture = lf_tarot_upturned
+	}
+	desc = { # Devil Reversed
+		trigger = {
+			has_character_flag = DevilR
+		}
+		text = LFTarotDevilR
+		picture = lf_tarot_reversed
+	}
+	desc = { # Temperance Upright
+		trigger = {
+			has_character_flag = TemperanceU
+		}
+		text = LFTarotTemperanceU
+		picture = lf_tarot_upturned
+	}
+	desc = { # Temperance Reversed
+		trigger = {
+			has_character_flag = TemperanceR
+		}
+		text = LFTarotTemperanceR
+		picture = lf_tarot_reversed
+	}
+	desc = { # Death Upright
+		trigger = {
+			has_character_flag = DeathU
+		}
+		text = LFTarotDeathU
+		picture = lf_tarot_upturned
+	}
+	desc = { # Death Reversed
+		trigger = {
+			has_character_flag = DeathR
+		}
+		text = LFTarotDeathR
+		picture = lf_tarot_reversed
+	}
+	desc = { # Hanged Man Upright
+		trigger = {
+			has_character_flag = HangedU
+		}
+		text = LFTarotHangedU
+		picture = lf_tarot_upturned
+	}
+	desc = { # Hanged Man Reversed
+		trigger = {
+			has_character_flag = HangedR
+		}
+		text = LFTarotHangedR
+		picture = lf_tarot_reversed
+	}
+	desc = { # Fortune Upright
+		trigger = {
+			has_character_flag = FortuneU
+		}
+		text = LFTarotFortuneU
+		picture = lf_tarot_upturned
+	}
+	desc = { # Fortune Reversed
+		trigger = {
+			has_character_flag = FortuneR
+		}
+		text = LFTarotFortuneR
+		picture = lf_tarot_reversed
+	}
+
+	option = {
+		name = LFTarotGood
+		trigger = {
+			has_character_flag = MoonU
+		}
+		add_character_modifier = {
+			name = lf_moon_upright
+		}
+	}
+	option = {
+		name = LFTarotBad
+		trigger = {
+			has_character_flag = MoonR
+		}
+		add_character_modifier = {
+			name = lf_moon_reversed
+		}
+	}		
+	option = {
+		name = LFTarotGood
+		trigger = {
+			has_character_flag = SunU
+		}
+		remove_trait = depressed
+		remove_trait = stressed
+	}
+	option = {
+		name = LFTarotBad
+		trigger = {
+			has_character_flag = SunR
+		}
+		add_trait = depressed
+		add_trait = stressed
+	}		
+	option = {
+		name = LFTarotGood
+		trigger = {
+			has_character_flag = StarU
+		}
+		add_character_modifier = {
+			name = lf_star_upright
+		}
+	}
+	option = {
+		name = LFTarotBad
+		trigger = {
+			has_character_flag = StarR
+		}
+		add_character_modifier = {
+			name = lf_star_reversed
+		}
+	}		
+	option = {
+		name = LFTarotBad
+		trigger = {
+			has_character_flag = TowerU
+		}
+		capital_scope = {
+			random_list = {
+				10 = {
+					spawn_disease = tuberculosis
+				}
+				10 = {
+					spawn_disease = typhoid_fever
+				}
+				10 = {
+					spawn_disease = typhus
+				}
+				10 = {
+					spawn_disease = measles
+				}
+			}
+		}
+	}
+	option = {
+		name = LFTarotGood
+		trigger = {
+			has_character_flag = TowerR
+		}
+		capital_scope = {
+			add_province_modifier = {
+				name = lf_tower_reversed
+			}
+		}
+	}		
+	option = {
+		name = LFTarotBad
+		trigger = {
+			has_character_flag = DevilU
+		}
+		add_trait = drunkard
+		add_trait = greedy
+	}
+	option = {
+		name = LFTarotGood
+		trigger = {
+			has_character_flag = DevilR
+		}
+		remove_trait = greedy
+		remove_trait = drunkard
+	}		
+	option = {
+		name = LFTarotGood
+		trigger = {
+			has_character_flag = TemperanceU
+		}
+		add_trait = patient
+	}
+	option = {
+		name = LFTarotBad
+		trigger = {
+			has_character_flag = TemperanceR
+		}
+		add_trait = wroth
+	}		
+	option = {
+		name = LFTarotGood
+		trigger = {
+			has_character_flag = DeathU
+		}
+		health = 0.5
+	}
+	option = {
+		name = LFTarotBad
+		trigger = {
+			has_character_flag = DeathR
+		}
+		random_courtier = {
+			set_character_flag = lf_never_turn_spoopy
+			death = { death_reason = death_accident }
+		}
+	}		
+	option = {
+		name = LFTarotNeutral
+		trigger = {
+			has_character_flag = HangedU
+		}
+		add_character_modifier = {
+			name = lf_hanged_upright
+		}
+	}
+	option = {
+		name = LFTarotNeutral
+		trigger = {
+			has_character_flag = HangedR
+		}
+		add_character_modifier = {
+			name = lf_hanged_reversed
+		}
+	}		
+	option = {
+		name = LFTarotGood
+		trigger = {
+			has_character_flag = FortuneU
+		}
+		add_character_modifier = {
+			name = lf_fortune_upright
+		}
+	}
+	option = {
+		name = LFTarotBad
+		trigger = {
+			has_character_flag = FortuneR
+		}
+		add_character_modifier = {
+			name = lf_fortune_reversed
+		}
+	}		
+	
+	after = {
+		clr_character_flag = MoonU
+		clr_character_flag = MoonR
+		clr_character_flag = SunU
+		clr_character_flag = SunR
+		clr_character_flag = StarU
+		clr_character_flag = StarR
+		clr_character_flag = TowerU
+		clr_character_flag = TowerR
+		clr_character_flag = DevilU
+		clr_character_flag = DevilR
+		clr_character_flag = TemperanceU
+		clr_character_flag = TemperanceR
+		clr_character_flag = DeathU
+		clr_character_flag = DeathR
+		clr_character_flag = HangedU
+		clr_character_flag = HangedR
+		clr_character_flag = FortuneU
+		clr_character_flag = FortuneR
+	}
+}
+		

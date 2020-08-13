@@ -1,0 +1,272 @@
+namespace = LFSpoopy
+
+character_event = {
+	id = LFSpoopy.1
+	desc = LFSpoopy1
+	picture = GFX_evt_died_old_age
+	is_triggered_only = yes
+	trigger = {
+		has_ghosts_content = yes
+		NOR = { 
+			trait = lf_ghost
+			has_character_flag = lf_never_turn_spoopy
+			AND = {
+				ai = no
+				OR = {
+					has_game_rule = { name = lf_challenges value = lf_challenges_random }
+					has_game_rule = { name = lf_challenges value = lf_challenges_lucy }
+				}
+			}
+		}
+		is_landed = yes
+	}
+	option = {
+		name = LFSpoopy1TTA
+		trigger = {
+			is_female = yes
+		}
+		custom_tooltip = {
+			text = LFSpoopy1TTAtooltip
+		}
+		hidden_tooltip = {
+			create_character = {
+				random_traits = no
+				female = yes
+				attributes = {
+					martial = 6
+					intrigue = 6
+					diplomacy = 6
+					learning = 6
+					stewardship = 6
+				}
+				age = 16
+				fertility = 0
+				culture = ROOT
+				religion = ROOT
+				dynasty = ROOT
+				race = ROOT
+				trait = lf_ghost
+				trait = ghost_female
+			}
+			new_character = {
+				save_event_target_as = spoopy_ghost
+				if = {
+					limit = {
+						ROOT = {
+							is_futa = yes
+						}
+					}
+					lf_add_futa = yes
+				}
+				copy_name = ROOT
+				ROOT = {
+					any_artifact = {
+						transfer_artifact = {
+							from = ROOT
+							to = event_target:spoopy_ghost
+						}
+					}
+					father_even_if_dead = {
+						event_target:spoopy_ghost = {
+							set_father = PREV
+						}
+					}
+					mother_even_if_dead = {
+						event_target:spoopy_ghost = {
+							set_mother = PREV
+						}
+					}
+					any_owned_bloodline = {
+						event_target:spoopy_ghost = {
+							add_to_bloodline = PREV
+						}
+					}
+					abdicate_to = event_target:spoopy_ghost
+					set_player_character = event_target:spoopy_ghost
+					any_spouse = {
+						if = {
+							limit = {
+								is_married_matrilineally = yes
+							}
+							remove_spouse = PREV
+							add_spouse_matrilineal = event_target:spoopy_ghost
+						}
+						else = {
+							remove_spouse = PREV
+							add_spouse = event_target:spoopy_ghost
+						}
+					}
+					any_lover = {
+						remove_lover = PREV
+						add_lover = event_target:spoopy_ghost
+					}
+					any_friend = {
+						remove_friend = PREV
+						add_friend = event_target:spoopy_ghost
+					}
+					any_rival = {
+						remove_rival = PREV
+						add_rival = event_target:spoopy_ghost
+					}
+					any_consort = {
+						remove_consort = PREV
+						add_consort = event_target:spoopy_ghost
+					}
+					any_child_even_if_dead = {
+						father_even_if_dead = {
+							PREV = {
+								set_father = PREV
+							}
+						}
+						set_mother = event_target:spoopy_ghost
+					}
+				}
+				recalc_succession = yes
+				character_event = { id = LFSpoopy.2 days = 9125 random = 18250 }
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					controls_religion = yes
+					higher_tier_than = DUKE
+					trait = content
+				}
+			}
+		}
+	}
+	option = {
+		name = LFSpoopy1TTA
+		trigger = {
+			is_female = no
+		}
+		custom_tooltip = {
+			text = LFSpoopy1TTAtooltip
+		}
+		hidden_tooltip = {
+			create_character = {
+				random_traits = no
+				female = no
+				attributes = {
+					martial = 6
+					intrigue = 6
+					diplomacy = 6
+					learning = 6
+					stewardship = 6
+				}
+				age = 16
+				fertility = 0
+				culture = ROOT
+				religion = ROOT
+				dynasty = ROOT
+				race = ROOT
+				trait = lf_ghost
+				trait = ghost_male
+			}
+			new_character = {
+				save_event_target_as = spoopy_ghost
+				copy_name = ROOT
+				ROOT = {
+					any_artifact = {
+						transfer_artifact = {
+							from = ROOT
+							to = event_target:spoopy_ghost
+						}
+					}
+					father_even_if_dead = {
+						event_target:spoopy_ghost = {
+							set_father = PREV
+						}
+					}
+					mother_even_if_dead = {
+						event_target:spoopy_ghost = {
+							set_mother = PREV
+						}
+					}
+					any_owned_bloodline = {
+						event_target:spoopy_ghost = {
+							add_to_bloodline = PREV
+						}
+					}
+					abdicate_to = event_target:spoopy_ghost
+					set_player_character = event_target:spoopy_ghost
+					any_spouse = {
+						if = {
+							limit = {
+								is_married_matrilineally = yes
+							}
+							remove_spouse = PREV
+							add_spouse_matrilineal = event_target:spoopy_ghost
+						}
+						else = {
+							remove_spouse = PREV
+							add_spouse = event_target:spoopy_ghost
+						}
+					}
+					any_lover = {
+						remove_lover = PREV
+						add_lover = event_target:spoopy_ghost
+					}
+					any_friend = {
+						remove_friend = PREV
+						add_friend = event_target:spoopy_ghost
+					}
+					any_rival = {
+						remove_rival = PREV
+						add_rival = event_target:spoopy_ghost
+					}
+					any_consort = {
+						remove_consort = PREV
+						add_consort = event_target:spoopy_ghost
+					}
+					any_child_even_if_dead = {
+						mother_even_if_dead = {
+							PREV = {
+								set_mother = event_target:spoopy_ghost
+							}
+						}
+						set_father = event_target:spoopy_ghost
+					}
+				}
+				recalc_succession = yes
+				character_event = { id = LFSpoopy.2 days = 9125 random = 18250 }
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					controls_religion = yes
+					higher_tier_than = DUKE
+					trait = content
+				}
+			}
+		}
+	}	
+	option = {
+		name = LFSpoopy1TTB
+		custom_tooltip = {
+			text = LFSpoopy1TTBtooltip
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+character_event = {
+	id = LFSpoopy.2
+	desc = LFSpoopy2
+	picture = GFX_evt_died_old_age
+	is_triggered_only = yes
+	option = {
+		name = LFSpoopy2TTA
+		death = {
+			death_reason = death_natural
+		}
+	}
+}
+	

@@ -1,0 +1,131 @@
+lf_neko_portrait17 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_neko_portrait18 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_neko_portrait19 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_neko_portrait20 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_neko_portrait21 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_neko_portrait22 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_neko_portrait23 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_neko_portrait24 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_neko_portrait25 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_neko_portrait26 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+
+lf_neko_portrait1_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_neko_portrait2_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_neko_portrait3_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_neko_portrait4_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_neko_portrait5_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_neko_portrait6_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_neko_portrait7_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_neko_portrait8_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_neko_portrait9_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_neko_portrait10_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_neko_portrait11_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_neko_portrait12_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_neko_portrait13_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_neko_portrait14_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_neko_portrait15_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_neko_portrait16_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}

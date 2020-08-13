@@ -1,0 +1,120 @@
+9051515 = {
+	name="Phurfu"
+	culture="neko_culture"
+}
+9051516 = {
+	name="Zusnhu"
+	culture="neko_culture"
+}
+9051517 = {
+	name="Dolfopo"
+	culture="neko_culture"
+}
+9051518 = {
+	name="Kiprhuja"
+	culture="neko_culture"
+}
+9051519 = {
+	name="Xaiaqhaxu"
+	culture="neko_culture"
+}
+9051520 = {
+	name="Kamfei"
+	culture="neko_culture"
+}
+9051521 = {
+	name="Bagnho"
+	culture="neko_culture"
+}
+9051522 = {
+	name="Khulnaawi"
+	culture="neko_culture"
+}
+9051523 = {
+	name="Choflu"
+	culture="neko_culture"
+}
+9051524 = {
+	name="Xhunsigo"
+	culture="neko_culture"
+}
+9051525 = {
+	name="Nhetle"
+	culture="neko_culture"
+}
+9051526 = {
+	name="Chonaia"
+	culture="neko_culture"
+}
+9051527 = {
+	name="Khautmi"
+	culture="neko_culture"
+}
+9051528 = {
+	name="Luluna"
+	culture="neko_culture"
+}
+9051529 = {
+	name="Cugyaki"
+	culture="neko_culture"
+}
+9051530 = {
+	name="Tobhaia"
+	culture="neko_culture"
+}
+9051531 = {
+	name="Dodnu"
+	culture="neko_culture"
+}
+9051532 = {
+	name="Yinkho"
+	culture="neko_culture"
+}
+9051533 = {
+	name="Xheecsi"
+	culture="neko_culture"
+}
+9051534 = {
+	name="Raactha"
+	culture="neko_culture"
+}
+9051535 = {
+	name="Dhaacyeku"
+	culture="neko_culture"
+}
+9051536 = {
+	name="Mhookufe"
+	culture="neko_culture"
+}
+9051537 = {
+	name="Mookto"
+	culture="neko_culture"
+}
+9051538 = {
+	name="Ghednoro"
+	culture="neko_culture"
+}
+9051539 = {
+	name="Cistha"
+	culture="neko_culture"
+}
+9051540 = {
+	name="Jhaiandaco"
+	culture="neko_culture"
+}
+9051541 = {
+	name="Pemmhi"
+	culture="neko_culture"
+}
+9051542 = {
+	name="Vhafneiva"
+	culture="neko_culture"
+}
+9051543 = {
+	name="Zheexe"
+	culture="neko_culture"
+}
+9051544 = {
+	name="Whetriga"
+	culture="neko_culture"
+}

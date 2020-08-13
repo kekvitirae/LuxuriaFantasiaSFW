@@ -1,0 +1,292 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait1"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait2"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait3"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait4"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait5"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait6"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait7"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait8"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait9"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait10"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait11"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait12"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait13"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait14"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait15"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait16"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait17"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait18"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait19"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait20"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait21"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait22"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait23"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait24"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait25"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait26"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+	spriteType = {
+		name = "GFX_trait_kitsune_child1"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_kitsune_child2"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait1_cheri"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait2_cheri"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait3_cheri"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait4_cheri"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait5_cheri"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait6_cheri"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait7_cheri"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait8_cheri"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait9_cheri"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait10_cheri"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait11_cheri"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait12_cheri"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_portrait13_cheri"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+}

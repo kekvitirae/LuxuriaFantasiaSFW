@@ -1,0 +1,210 @@
+namespace = LF_Core_Genetics
+
+character_event = {
+	id = LF_Core_Genetics.1
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			is_neko = yes
+			is_kitsune = yes
+			is_orc = yes
+			is_fairy = yes
+			mother = {
+				OR = {
+					trait = houseirae_drow
+					trait = houseirae_halfelf
+					is_elf = yes
+					trait = dwse_dragon_adult
+					trait = dwse_lizard
+					trait = dwse_lizard_pregnancy
+					is_any_demon = yes
+				}
+			}
+			true_father_even_if_dead = {
+				OR = {
+					trait = houseirae_drow
+					trait = houseirae_halfelf
+					is_elf = yes
+					trait = dwse_dragon_adult
+					trait = dwse_lizard
+					trait = dwse_lizard_pregnancy
+					is_any_demon = yes
+				}
+			}
+		}
+	}
+	
+	immediate = {
+	
+		#
+		# Rule content check
+		#
+	
+		if = {
+			limit = {
+				NOT = { lf_has_elves = yes }
+				is_elf = yes
+			}
+			lf_remove_elf = yes
+			break = yes
+		}
+		if = {
+			limit = {
+				NOT = { lf_has_orcs = yes }
+				is_orc = yes
+			}
+			lf_remove_orc = yes
+			break = yes
+		}
+		if = {
+			limit = {
+				NOT = { lf_has_fairies = yes }
+				is_fairy = yes
+			}
+			lf_remove_fairy = yes
+			break = yes
+		}
+		if = {
+			limit = {
+				NOT = { lf_has_demons = yes }
+				is_any_demon = yes
+			}
+			lf_remove_demon = yes
+			remove_trait = lf_halfdemon
+			remove_trait = lf_fallen_angel
+			break = yes
+		}
+		if = {
+			limit = {
+				NOT = { lf_has_divines = yes }
+				is_angel = yes
+			}
+			lf_remove_angel = yes
+			break = yes
+		}
+		if = {
+			limit = {
+				NOT = { lf_has_kitsune = yes }
+				is_kitsune = yes
+			}
+			lf_remove_kitsune = yes
+			break = yes
+		}
+		if = {
+			limit = {
+				NOT = { lf_has_nekos = yes }
+				is_neko = yes
+			}
+			lf_remove_neko = yes
+			break = yes
+		}
+		
+		
+		if = {
+			limit = {
+				mother = {
+					trait = dwse_lizard_pregnancy
+				}
+			}
+			character_event = { id = dwseliz.3 }
+			# break = yes
+		}
+		else_if = {
+			limit = {
+				OR = {
+					mother = {
+						OR = {
+							trait = houseirae_drow
+							trait = houseirae_halfelf
+							is_elf = yes
+						}
+					}
+					true_father_even_if_dead = {
+						OR = {
+							trait = houseirae_drow
+							trait = houseirae_halfelf
+							is_elf = yes
+						}
+					}
+				}
+			}
+			character_event = { id = LF_Fae_Genetics.1 }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					mother = {
+						is_any_demon = yes
+					}
+					true_father_even_if_dead = {
+						is_any_demon = yes
+					}
+				}
+			}
+			character_event = { id = LF_HH_Genetics.1 }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					mother = {
+						OR = {
+							trait = dwse_dragon_adult
+							AND = {
+								trait = dwse_lizard
+								NOT = { trait = dwse_lizard_pregnancy }
+							}
+						}
+					}
+					true_father_even_if_dead = {
+						OR = {
+							trait = dwse_dragon_adult
+							trait = dwse_lizard
+						}
+					}
+				}
+			}
+			character_event = { id = LF_DWSE_Genetics.1 }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_orc = yes
+					is_fairy = yes
+				}
+			}
+			character_event = { id = LF_Core_Genetics.2 }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_neko = yes
+					is_kitsune = yes
+				}
+			}
+			character_event = { id = LF_FarEast_Genetics.1 }
+		}
+	}
+}
+
+character_event = {
+	id = LF_Core_Genetics.2
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		trigger_switch = {
+			on_trigger = trait
+			houseirae_drow = {
+				add_trait = houseirae_drow_child
+				remove_trait = inbred
+			}
+			houseirae_halfelf = {
+				add_trait = houseirae_halfelf_child
+				random = {
+					chance = 50
+					remove_trait = inbred
+				}
+			}
+		}
+	}
+}

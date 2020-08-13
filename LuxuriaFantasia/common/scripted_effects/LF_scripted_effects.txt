@@ -1,0 +1,1817 @@
+lf_masculine_feminine_portrait_change = {
+	hidden_tooltip = {
+		lf_remove_all_portraits = yes
+		trigger_switch = {
+			on_trigger = has_character_flag
+			lf_divine_genderbend = {
+				lf_add_random_angel_portrait = yes
+				clr_character_flag = lf_divine_genderbend
+			}
+			lf_demon_genderbend = {
+				lf_add_random_demon_portrait = yes
+				clr_character_flag = lf_demon_genderbend
+			}
+			lf_elf_genderbend = {
+				lf_add_random_elf_portrait = yes
+				clr_character_flag = lf_elf_genderbend
+			}
+			lf_orc_genderbend = {
+				lf_add_random_orc_portrait = yes
+				clr_character_flag = lf_orc_genderbend
+			}
+			lf_fairy_genderbend = {
+				lf_add_random_fairy_portrait = yes
+				clr_character_flag = lf_fairy_genderbend
+			}
+			lf_kitsune_genderbend = {
+				lf_add_random_kitsune_portrait = yes
+				clr_character_flag = lf_kitsune_genderbend
+			}
+			lf_neko_genderbend = {
+				lf_add_random_neko_portrait = yes
+				clr_character_flag = lf_neko_genderbend
+			}
+			lf_aura_genderbend = {
+				add_random_dwse_lizard_portrait = yes
+				clr_character_flag = lf_aura_genderbend
+			}
+		}
+	}
+}
+
+lf_portrait_change = {
+	hidden_tooltip = {
+		lf_remove_all_portraits = yes
+		#
+		# Will prioritize normal racial traits first
+		#
+		if = {
+			limit = {
+				is_kitsune = yes
+			}
+			lf_add_random_kitsune_portrait = yes
+		}
+		else_if = {
+			limit = {
+				is_neko = yes
+			}
+			lf_add_random_neko_portrait = yes
+		}
+		else_if = {
+			limit = {
+				is_elf = yes
+			}
+			lf_add_random_elf_portrait = yes
+		}
+		else_if = {
+			limit = {
+				is_orc = yes
+			}
+			lf_add_random_orc_portrait = yes
+		}
+		else_if = {
+			limit = {
+				is_fairy = yes
+			}
+			lf_add_random_fairy_portrait = yes
+		}
+		else_if = {
+			limit = {
+				trait = dwse_lizard
+			}
+			add_random_dwse_lizard_portrait = yes
+		}
+		#
+		# Will prioritize mixed breed portraits last
+		#
+		else_if = {
+			limit = {
+				is_demon = yes
+			}
+			lf_add_random_demon_portrait = yes
+		}
+		else_if = {
+			limit = {
+				is_angel = yes
+			}
+			lf_add_random_angel_portrait = yes
+		}
+	}
+}
+			
+			
+			
+
+lf_beauty_potion_effect = {
+	trigger_switch = {
+		on_trigger = trait
+		ugly = { remove_trait = ugly }
+		hunchback = { remove_trait = hunchback }
+		harelip = { remove_trait = harelip }
+		clubfooted = { remove_trait = clubfooted }
+		disfigured = { remove_trait = disfigured }
+		mangled = { remove_trait = mangled }
+		dwarf = { remove_trait = dwarf }
+		giant = { remove_trait = giant }
+		uncouth = { remove_trait = uncouth }
+		is_fat = { remove_trait = is_fat }
+		is_malnourished = { remove_trait = is_malnourished }
+		scarred_high = { remove_trait = scarred_high }
+		scarred_mid = { remove_trait = scarred_mid }
+		scarred = { remove_trait = scarred }
+	}
+	add_character_modifier = {
+		name = lf_beauty_potion
+		years = 2
+	}
+}
+
+lf_check_disease_immunity = {
+	if = {
+		limit = {
+			has_character_flag = immune_tuberculosis
+		}
+		set_character_flag = lf_previous_tuberculosis
+	}
+	else = {
+		set_character_flag = immune_tuberculosis
+	}
+	if = {
+		limit = {
+			has_character_flag = immune_typhoid_fever
+		}
+		set_character_flag = lf_previous_typhoid_fever
+	}
+	else = {
+		set_character_flag = immune_typhoid_fever
+	}
+	if = {
+		limit = {
+			has_character_flag = immune_typhus
+		}
+		set_character_flag = lf_previous_typhus
+	}
+	else = {
+		set_character_flag = immune_typhus
+	}
+	if = {
+		limit = {
+			has_character_flag = immune_bubonic_plague
+		}
+		set_character_flag = lf_previous_bubonic_plague
+	}
+	else = {
+		set_character_flag = immune_bubonic_plague
+	}
+	if = {
+		limit = {
+			has_character_flag = immune_measles
+		}
+		set_character_flag = lf_previous_measles
+	}
+	else = {
+		set_character_flag = immune_measles
+	}
+	if = {
+		limit = {
+			has_character_flag = immune_smallpox
+		}
+		set_character_flag = lf_previous_smallpox
+	}
+	else = {
+		set_character_flag = immune_smallpox
+	}
+	if = {
+		limit = {
+			has_character_flag = immune_aztec_disease
+		}
+		set_character_flag = lf_previous_aztec_disease
+	}
+	else = {
+		set_character_flag = immune_aztec_disease
+	}
+	if = {
+		limit = {
+			has_character_flag = immune_dancing_plague
+		}
+		set_character_flag = lf_previous_dancing_plague
+	}
+	else = {
+		set_character_flag = immune_dancing_plague
+	}
+}
+
+lf_remove_disease_flags = {
+	if = {
+		limit = {
+			has_character_flag = lf_previous_tuberculosis
+		}
+		clr_character_flag = lf_previous_tuberculosis
+	}
+	else = {
+		clr_character_flag = immune_tuberculosis
+	}
+	if = {
+		limit = {
+			has_character_flag = lf_previous_typhoid_fever
+		}
+		clr_character_flag = lf_previous_typhoid_fever
+	}
+	else = {
+		clr_character_flag = immune_typhoid_fever
+	}
+	if = {
+		limit = {
+			has_character_flag = lf_previous_typhus
+		}
+		clr_character_flag = lf_previous_typhus
+	}
+	else = {
+		clr_character_flag = immune_typhus
+	}
+	if = {
+		limit = {
+			has_character_flag = lf_previous_bubonic_plague
+		}
+		clr_character_flag = lf_previous_bubonic_plague
+	}
+	else = {
+		clr_character_flag = immune_bubonic_plague
+	}
+	if = {
+		limit = {
+			has_character_flag = lf_previous_measles
+		}
+		clr_character_flag = lf_previous_measles
+	}
+	else = {
+		clr_character_flag = immune_measles
+	}
+	if = {
+		limit = {
+			has_character_flag = lf_previous_smallpox
+		}
+		clr_character_flag = lf_previous_smallpox
+	}
+	else = {
+		clr_character_flag = immune_smallpox
+	}
+	if = {
+		limit = {
+			has_character_flag = lf_previous_aztec_disease
+		}
+		clr_character_flag = lf_previous_aztec_disease
+	}
+	else = {
+		clr_character_flag = immune_aztec_disease
+	}
+	if = {
+		limit = {
+			has_character_flag = lf_previous_dancing_plague
+		}
+		clr_character_flag = lf_previous_dancing_plague
+	}
+	else = {
+		clr_character_flag = immune_dancing_plague
+	}
+}
+
+lf_impregnate_check = { # Must have a ROOT and a FROM, but it doesn't matter which is which.
+	#
+	# Checking if either lovers are sterile
+	#
+
+	if = {
+		limit = {
+			OR = {
+				event_target:lf_sex_partner = { fertility <= 0 }
+				event_target:lf_sex_player = { fertility <= 0 }
+			}
+		}
+		break = yes
+	}
+	
+	#
+	# Impregnated player, Impregnating partner
+	#
+	
+	else_if = {
+		limit = {
+			event_target:lf_sex_player = { 
+				has_character_flag = lf_possible_pregnancy
+			}
+		}
+		
+		event_target:lf_sex_player = {
+			clr_character_flag = lf_possible_pregnancy
+			set_variable = { 
+				which = lf_fertility 
+				value = 0 
+			}
+			export_to_variable = { 
+				which = lf_fertility 
+				value = fertility 
+			}
+			export_to_variable = { 
+				which = lf_fertility_from 
+				value = fertility 
+				who = event_target:lf_sex_partner 
+			}
+			multiply_variable = {
+				which = lf_fertility
+				value = 100
+			}
+			multiply_variable = {
+				which = lf_fertility_from
+				value = 100
+			}
+			change_variable = { 
+				which = lf_fertility
+				which = lf_fertility_from
+			}
+			divide_variable = { 
+				which = lf_fertility 
+				value = 2 
+			}
+		}
+	
+		if = {
+			limit = {
+				event_target:lf_sex_player = {
+					OR = {
+						AND = {
+							is_married = no
+							is_consort = no
+						}
+						is_consort = event_target:lf_sex_partner
+						is_married = event_target:lf_sex_partner
+					}
+				}
+			}
+			
+			# Checking fertility for randomness
+			event_target:lf_sex_player = {
+				if = {
+					limit = {
+						check_variable = { which = lf_fertility value >= 0 }
+						NOT = { check_variable = { which = lf_fertility value = 25 } }
+					}
+					event_target:lf_sex_player = {
+						random = {
+							chance = 25
+							impregnate = event_target:lf_sex_partner
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = { which = lf_fertility value >= 25 }
+						NOT = { check_variable = { which = lf_fertility value = 50 } }
+					}
+					event_target:lf_sex_player = {
+						random = {
+							chance = 50
+							impregnate = event_target:lf_sex_partner
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = { which = lf_fertility value >= 50 }
+						NOT = { check_variable = { which = lf_fertility value = 75 } }
+					}
+					event_target:lf_sex_player = {
+						random = {
+							chance = 75
+							impregnate = event_target:lf_sex_partner
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = { which = lf_fertility value >= 75 }
+					}
+					event_target:lf_sex_player = {
+						impregnate = event_target:lf_sex_partner
+					}
+				}
+			}
+		}
+
+		if = {
+			limit = { 
+				event_target:lf_sex_player = {
+					OR = {
+						AND = {
+							is_married = yes
+							NOT = { is_married = event_target:lf_sex_partner }
+						}
+						AND = {
+							is_consort = yes
+							NOT = { is_consort = event_target:lf_sex_partner }
+						}
+					}
+				}
+			}
+			# Checking fertility for randomness
+			event_target:lf_sex_player = {
+				if = {
+					limit = {
+						check_variable = { which = lf_fertility value >= 0 }
+						NOT = { check_variable = { which = lf_fertility value = 25 } }
+					}
+					random = {
+						chance = 25
+						impregnate_cuckoo = event_target:lf_sex_partner
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = { which = lf_fertility value >= 25 }
+						NOT = { check_variable = { which = lf_fertility value = 50 } }
+					}
+					random = {
+						chance = 50
+						impregnate_cuckoo = event_target:lf_sex_partner
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = { which = lf_fertility value >= 50 }
+						NOT = { check_variable = { which = lf_fertility value = 75 } }
+					}
+					random = {
+						chance = 75
+						impregnate_cuckoo = event_target:lf_sex_partner
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = { which = lf_fertility value >= 75 }
+					}
+					impregnate_cuckoo = event_target:lf_sex_partner
+				}
+			}
+		}
+		event_target:lf_sex_player = {
+			set_variable = { which = lf_fertility value = 0 }
+			set_variable = { which = lf_fertility_from value = 0 }
+		}
+	}
+
+
+	#
+	# Impregnated partner, Impregnating player
+	#
+	
+	else_if = {
+		limit = {
+			event_target:lf_sex_partner = { 
+				has_character_flag = lf_possible_pregnancy
+			}
+		}
+		
+		event_target:lf_sex_partner = {
+			clr_character_flag = lf_possible_pregnancy
+			set_variable = { 
+				which = lf_fertility 
+				value = 0 
+			}
+			export_to_variable = { 
+				which = lf_fertility 
+				value = fertility 
+			}
+			export_to_variable = { 
+				which = lf_fertility_from 
+				value = fertility 
+				who = event_target:lf_sex_player 
+			}
+			multiply_variable = {
+				which = lf_fertility
+				value = 100
+			}
+			multiply_variable = {
+				which = lf_fertility_from
+				value = 100
+			}
+			change_variable = { 
+				which = lf_fertility
+				which = lf_fertility_from
+			}
+			divide_variable = { 
+				which = lf_fertility 
+				value = 2 
+			}
+		}
+		
+		if = {
+			limit = {
+				event_target:lf_sex_partner = {
+					OR = {
+						AND = {
+							is_married = no
+							is_consort = no
+						}
+						is_consort = event_target:lf_sex_player
+						is_married = event_target:lf_sex_player
+					}
+				}
+			}
+			
+			# Checking fertility for randomness
+			event_target:lf_sex_partner = {
+				if = {
+					limit = {
+						check_variable = { which = lf_fertility value >= 0 }
+						NOT = { check_variable = { which = lf_fertility value = 25 } }
+					}
+					event_target:lf_sex_partner = {
+						random = {
+							chance = 25
+							impregnate = event_target:lf_sex_player
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = { which = lf_fertility value >= 25 }
+						NOT = { check_variable = { which = lf_fertility value = 50 } }
+					}
+					event_target:lf_sex_partner = {
+						random = {
+							chance = 50
+							impregnate = event_target:lf_sex_player
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = { which = lf_fertility value >= 50 }
+						NOT = { check_variable = { which = lf_fertility value = 75 } }
+					}
+					event_target:lf_sex_partner = {
+						random = {
+							chance = 75
+							impregnate = event_target:lf_sex_player
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = { which = lf_fertility value >= 75 }
+					}
+					event_target:lf_sex_partner = {
+						impregnate = event_target:lf_sex_player
+					}
+				}
+			}
+		}
+
+		if = {
+			limit = { 
+				event_target:lf_sex_partner = {
+					OR = {
+						AND = {
+							is_married = yes
+							NOT = { is_married = event_target:lf_sex_player }
+						}
+						AND = {
+							is_consort = yes
+							NOT = { is_consort = event_target:lf_sex_player }
+						}
+					}
+				}
+			}
+			# Checking fertility for randomness
+			event_target:lf_sex_partner = {
+				if = {
+					limit = {
+						check_variable = { which = lf_fertility value >= 0 }
+						NOT = { check_variable = { which = lf_fertility value = 25 } }
+					}
+					random = {
+						chance = 25
+						impregnate_cuckoo = event_target:lf_sex_player
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = { which = lf_fertility value >= 25 }
+						NOT = { check_variable = { which = lf_fertility value = 50 } }
+					}
+					random = {
+						chance = 50
+						impregnate_cuckoo = event_target:lf_sex_player
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = { which = lf_fertility value >= 50 }
+						NOT = { check_variable = { which = lf_fertility value = 75 } }
+					}
+					random = {
+						chance = 75
+						impregnate_cuckoo = event_target:lf_sex_player
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = { which = lf_fertility value >= 75 }
+					}
+					impregnate_cuckoo = event_target:lf_sex_player
+				}
+			}
+		}
+		event_target:lf_sex_partner = {
+			set_variable = { which = lf_fertility value = 0 }
+			set_variable = { which = lf_fertility_from value = 0 }
+		}
+	}
+}
+
+lf_remove_all_portraits = {
+	trigger_switch = {
+		on_trigger = trait
+		lf_neko = { lf_remove_neko_portrait = yes }
+		lf_kitsune = { lf_remove_kitsune_portrait = yes }
+		lf_demon = { lf_remove_demon_portrait = yes }
+		lf_angel = { lf_remove_angel_portrait = yes }
+		lf_fallen_angel = { lf_remove_demon_portrait = yes }
+		lf_elf = { lf_remove_elf_portrait = yes }
+		lf_orc = { lf_remove_orc_portrait = yes }
+		lf_fairy = { lf_remove_fairy_portrait = yes }
+		dwse_lizard = { remove_dwse_lizard_portrait = yes }
+	}
+}
+
+
+
+#
+# Slavery Related
+#
+
+lf_slave_value = {
+	event_target:lf_slave_being_sold = {
+	
+		# Sets the initial value
+		set_variable = { which = lf_slave_sell_price value = 5 }
+	
+		# Increases or decreases the value based on traits
+		if = {
+			limit = {
+				OR = {
+					trait = administrator
+					trait = architect
+					trait = duelist
+					trait = gamer
+					trait = gardener
+					trait = hedonist
+					trait = hunter
+					trait = impaler
+					trait = schemer
+					trait = seducer
+					trait = seductress
+					trait = mystic
+					trait = scholar
+					trait = socializer
+					trait = strategist
+					trait = theologian
+				}
+			}
+			change_variable = { which = lf_slave_sell_price value = 2.5 }
+		}
+		if = {
+			limit = {
+				OR = {
+					is_kitsune = yes
+					is_neko = yes
+					is_demon = yes
+					is_angel = yes
+					is_elf = yes
+					is_orc = yes
+					is_fairy = yes
+					trait = dwse_lizard
+				}
+			}
+			change_variable = { which = lf_slave_sell_price value = 2.5 }
+		}
+		if = {
+			limit = {
+				is_mage = yes
+			}
+			change_variable = { which = lf_slave_sell_price value = 2.5 }
+		}
+		if = {
+			limit = {
+				is_futa = yes
+			}
+			change_variable = { which = lf_slave_sell_price value = 2.5 }
+		}
+		if = {
+			limit = {
+				OR = {
+					trait = lf_breeder
+					trait = lf_insatiable
+				}
+			}
+			change_variable = { which = lf_slave_sell_price value = 2.5 }
+		}
+		if = {
+			limit = {
+				trait = lf_asexual
+			}
+			subtract_variable = { which = lf_slave_sell_price value = 2.5 }
+		}
+		if = {
+			limit = {
+				OR = {
+					trait = temperate
+					trait = lustful
+					trait = diligent
+					trait = patient
+					trait = kind
+					trait = humble
+					trait = content
+					trait = craven
+					trait = trusting
+				}
+			}
+			change_variable = { which = lf_slave_sell_price value = 2.5 }
+		}
+		if = {
+			limit = {
+				OR = {
+					trait = celibate
+					trait = monk
+					trait = nun
+					trait = chaste
+					trait = slothful
+					trait = proud
+					trait = gluttonous
+					trait = is_fat
+					trait = is_malnourished
+					trait = feeble
+					trait = dull
+					trait = uncouth
+				}
+			}
+			subtract_variable = { which = lf_slave_sell_price value = 2.5 }
+		}
+		
+		if = {
+			limit = {
+				OR = {
+					trait = strong
+					trait = robust
+					trait = sturdy
+				}
+			}
+			multiply_variable = { which = lf_slave_sell_price value = 2.5 }
+		}
+		if = {
+			limit = {
+				OR = {
+					trait = fair
+					trait = groomed
+				}
+			}
+			multiply_variable = { which = lf_slave_sell_price value = 2.5 }
+		}
+		if = {
+			limit = {
+				OR = {
+					trait = quick
+					trait = genius
+					trait = shrewd
+				}
+			}
+			multiply_variable = { which = lf_slave_sell_price value = 2.5 }
+		}
+		if = {
+			limit = {
+				trait = immortal
+			}
+			change_variable = { which = lf_slave_sell_price value = 50 }
+		}
+		if = {
+			limit = {
+				OR = {
+					trait = disfigured
+					trait = one_eyed
+					trait = one_handed
+					trait = one_legged
+				}
+			}
+			divide_variable = { which = lf_slave_sell_price value = 2 }
+		}
+		if = {
+			limit = {
+				OR = {
+					trait = clubfooted
+					trait = dwarf
+					trait = harelip
+					trait = hunchback
+					trait = lisp
+					trait = stutter
+					trait = ugly
+					trait = weak
+					trait = giant
+				}
+			}
+			divide_variable = { which = lf_slave_sell_price value = 2.5 }
+		}
+		if = {
+			limit = {
+				OR = {
+					trait = imbecile
+					trait = inbred
+					trait = slow
+					trait = eunuch
+				}
+			}
+			divide_variable = { which = lf_slave_sell_price value = 4 }
+		}
+		
+		# Now we check to see if slave price is lower than the minimum. If so, we set the price to 5.
+		if = {
+			limit = {
+				check_variable = { which = lf_slave_sell_price value < 5 }
+			}
+			set_variable = { which = lf_slave_sell_price value = 5 }
+		}
+	}
+}
+
+lf_female_sub_results = {
+	random_list = {
+		
+		5 = { # Fem Oral FROM
+			modifier = {
+				factor = 0
+				event_target:lf_sex_partner = {
+					OR = {
+						is_female = no
+						is_futa = yes
+					}
+				}
+			}
+			set_character_flag = lf_subfemoral
+			narrative_event = { id = LFSexytimesFemale.4 }
+		}
+		
+		5 = { # Futa Oral FROM
+			modifier = {
+				factor = 0
+				event_target:lf_sex_partner = {
+					is_not_futa = yes
+				}
+			}
+			set_character_flag = lf_subfutaoral
+			narrative_event = { id = LFSexytimesFemale.4 }
+		}
+		
+		5 = { # Male Oral FROM
+			modifier = {
+				factor = 0
+				event_target:lf_sex_partner = {
+					is_female = yes
+				}
+			}
+			set_character_flag = lf_submaleoral
+			narrative_event = { id = LFSexytimesFemale.4 }
+		}
+		
+		5 = { # Futa Anal
+			modifier = {
+				factor = 0
+				event_target:lf_sex_partner = {
+					is_not_futa = yes
+				}
+			}
+			set_character_flag = lf_subfutaanal
+			narrative_event = { id = LFSexytimesFemale.4 }
+		}
+		
+		5 = { # Male Anal
+			modifier = {
+				factor = 0
+				event_target:lf_sex_partner = {
+					is_female = yes
+				}
+			}
+			set_character_flag = lf_submaleanal
+			narrative_event = { id = LFSexytimesFemale.4 }
+		}
+
+		5 = { # Futa Vaginal Missionary
+			modifier = {
+				factor = 0
+				event_target:lf_sex_partner = {
+					is_not_futa = yes
+				}
+			}
+			modifier = {
+				factor = 4 # 20 if Dom has Breeder
+				event_target:lf_sex_partner = {
+					trait = lf_breeder
+				}
+			}
+			set_character_flag = lf_subfutamiss
+			narrative_event = { id = LFSexytimesFemale.4 }
+		}
+		
+		5 = { # Male Vaginal Missionary
+			modifier = {
+				factor = 0
+				event_target:lf_sex_partner = {
+					is_female = yes
+				}
+			}
+			modifier = {
+				factor = 4 # 20 if Dom has Breeder
+				event_target:lf_sex_partner = {
+					trait = lf_breeder
+				}
+			}
+			set_character_flag = lf_submalemiss
+			narrative_event = { id = LFSexytimesFemale.4 }
+		}
+
+		5 = { # Futa Vaginal Doggy
+			modifier = {
+				factor = 0
+				event_target:lf_sex_partner = {
+					is_not_futa = yes
+				}
+			}
+			modifier = {
+				factor = 4 # 20 if Dom has Breeder
+				event_target:lf_sex_partner = {
+					trait = lf_breeder
+				}
+			}
+			set_character_flag = lf_subfutadog
+			narrative_event = { id = LFSexytimesFemale.4 }
+		}
+		
+		5 = { # Male Vaginal Doggy
+			modifier = {
+				factor = 0
+				event_target:lf_sex_partner = {
+					is_female = yes
+				}
+			}
+			modifier = {
+				factor = 4 # 20 if Dom has Breeder
+				event_target:lf_sex_partner = {
+					trait = lf_breeder
+				}
+			}
+			set_character_flag = lf_submaledog
+			narrative_event = { id = LFSexytimesFemale.4 }
+		}
+	}
+}
+
+lf_futa_sub_results = {
+	random_list = {
+		
+		5 = { # Fem Oral FROM
+			modifier = {
+				factor = 0
+				event_target:lf_sex_partner = {
+					OR = {
+						is_female = no
+						is_futa = yes
+					}
+				}
+			}
+			set_character_flag = lf_subfemoral
+			narrative_event = { id = LFSexytimesFuta.4 }
+		}
+		
+		5 = { # Futa Oral FROM
+			modifier = {
+				factor = 0
+				event_target:lf_sex_partner = {
+					is_not_futa = yes
+				}
+			}
+			set_character_flag = lf_subfutaoral
+			narrative_event = { id = LFSexytimesFuta.4 }
+		}
+		
+		5 = { # Male Oral FROM
+			modifier = {
+				factor = 0
+				event_target:lf_sex_partner = {
+					is_female = yes
+				}
+			}
+			set_character_flag = lf_submaleoral
+			narrative_event = { id = LFSexytimesFuta.4 }
+		}
+		
+		5 = { # Futa Anal
+			modifier = {
+				factor = 0
+				event_target:lf_sex_partner = {
+					is_not_futa = yes
+				}
+			}
+			set_character_flag = lf_subfutaanal
+			narrative_event = { id = LFSexytimesFuta.4 }
+		}
+		
+		5 = { # Male Anal
+			modifier = {
+				factor = 0
+				event_target:lf_sex_partner = {
+					is_female = yes
+				}
+			}
+			set_character_flag = lf_submaleanal
+			narrative_event = { id = LFSexytimesFuta.4 }
+		}
+
+		5 = { # Futa Vaginal Missionary
+			modifier = {
+				factor = 0
+				event_target:lf_sex_partner = {
+					is_not_futa = yes
+				}
+			}
+			modifier = {
+				factor = 4 # 20 if Dom has Breeder
+				event_target:lf_sex_partner = {
+					trait = lf_breeder
+				}
+			}
+			set_character_flag = lf_subfutamiss
+			narrative_event = { id = LFSexytimesFuta.4 }
+		}
+		
+		5 = { # Male Vaginal Missionary
+			modifier = {
+				factor = 0
+				event_target:lf_sex_partner = {
+					is_female = yes
+				}
+			}
+			modifier = {
+				factor = 4 # 20 if Dom has Breeder
+				event_target:lf_sex_partner = {
+					trait = lf_breeder
+				}
+			}
+			set_character_flag = lf_submalemiss
+			narrative_event = { id = LFSexytimesFuta.4 }
+		}
+
+		5 = { # Futa Vaginal Doggy
+			modifier = {
+				factor = 0
+				event_target:lf_sex_partner = {
+					is_not_futa = yes
+				}
+			}
+			modifier = {
+				factor = 4 # 20 if Dom has Breeder
+				event_target:lf_sex_partner = {
+					trait = lf_breeder
+				}
+			}
+			set_character_flag = lf_subfutadog
+			narrative_event = { id = LFSexytimesFuta.4 }
+		}
+		
+		5 = { # Male Vaginal Doggy
+			modifier = {
+				factor = 0
+				event_target:lf_sex_partner = {
+					is_female = yes
+				}
+			}
+			modifier = {
+				factor = 4 # 20 if Dom has Breeder
+				event_target:lf_sex_partner = {
+					trait = lf_breeder
+				}
+			}
+			set_character_flag = lf_submaledog
+			narrative_event = { id = LFSexytimesFuta.4 }
+		}
+	}
+}
+
+lf_male_sub_results = {
+	random_list = {
+		
+		5 = { # Fem Oral
+			modifier = {
+				factor = 0
+				event_target:lf_sex_partner = {
+					OR = {
+						is_female = no
+						is_futa = yes
+					}
+				}
+			}
+			set_character_flag = lf_subfemoral
+			narrative_event = { id = LFSexytimesMale.4 }
+		}
+		
+		5 = { # Futa Oral
+			modifier = {
+				factor = 0
+				event_target:lf_sex_partner = {
+					OR = {
+						is_female = no
+						AND = {
+							is_female = yes
+							is_not_futa = yes
+						}
+					}
+				}
+			}
+			set_character_flag = lf_subfutaoral
+			narrative_event = { id = LFSexytimesMale.4 }
+		}
+		
+		5 = { # Male Oral
+			modifier = {
+				factor = 0
+				event_target:lf_sex_partner = {
+					is_female = yes
+				}
+			}
+			set_character_flag = lf_submaleoral
+			narrative_event = { id = LFSexytimesMale.4 }
+		}
+		
+		5 = { # Futa Anal
+			modifier = {
+				factor = 0
+				event_target:lf_sex_partner = {
+					OR = {
+						is_female = no
+						AND = {
+							is_female = yes
+							is_not_futa = yes
+						}
+					}
+				}
+			}
+			set_character_flag = lf_subfutaanal
+			narrative_event = { id = LFSexytimesMale.4 }
+		}
+		
+		5 = { # Male Anal
+			modifier = {
+				factor = 0
+				event_target:lf_sex_partner = {
+					is_female = yes
+				}
+			}
+			set_character_flag = lf_submaleanal
+			narrative_event = { id = LFSexytimesMale.4 }
+		}
+		5 = { # Fem/Futa Missionary (R0nin78)
+			modifier = {
+				factor = 0
+				event_target:lf_sex_partner = {
+					is_female = no
+				}
+			}
+			set_character_flag = lf_subfemfutamiss
+			narrative_event = { id = LFSexytimesMale.4 }
+		}
+		
+	}
+}
+
+lf_create_new_racial_character = {
+	ROOT = {
+		trigger_switch = {
+			on_trigger = trait
+			lf_elf = { 
+				PREV = { 
+					lf_add_elf = yes
+					lf_add_random_elf_portrait = yes
+				}
+			}
+			lf_orc = { 
+				PREV = { 
+					lf_add_orc = yes
+					lf_add_random_orc_portrait = yes
+				}
+			}
+			lf_fairy = { 
+				PREV = { 
+					lf_add_fairy = yes
+					lf_add_random_fairy_portrait = yes
+				}
+			}
+			dwse_shapeshifted = { 
+				PREV = { 
+					add_trait = dwse_dragon_adult
+					add_random_dwse_dragon_portrait = yes
+				}
+			}
+			dwse_lizard = { 
+				PREV = { 
+					add_trait = dwse_lizard
+					add_random_dwse_lizard_portrait = yes
+				}
+			}
+			dwse_dragon_child = { 
+				PREV = { 
+					add_trait = dwse_dragon_adult
+					add_random_dwse_dragon_portrait = yes
+				}
+			}
+			dwse_dragon_adult = { 
+				PREV = { 
+					add_trait = dwse_dragon_adult
+					add_random_dwse_dragon_portrait = yes
+				}
+			}
+			lf_kitsune = { 
+				PREV = { 
+					lf_add_kitsune = yes
+					lf_add_random_kitsune_portrait = yes
+				}
+			}
+			lf_neko = { 
+				PREV = { 
+					lf_add_neko = yes
+					lf_add_random_neko_portrait = yes
+				}
+			}
+			lf_angel = { 
+				PREV = { 
+					lf_add_angel = yes
+					lf_add_random_angel_portrait = yes
+				}
+			}
+			lf_demon = { 
+				PREV = { 
+					lf_add_demon = yes
+					lf_add_random_demon_portrait = yes
+				}
+			}
+			lf_fallen_angel = { 
+				PREV = { 
+					lf_add_demon = yes
+					lf_add_random_demon_portrait = yes
+				}
+			}
+		}
+	}
+}
+
+lf_change_race = {
+	hidden_tooltip = {
+		lf_remove_race = yes
+		lf_remove_all_portraits = yes
+	}
+	trigger_switch = {
+		on_trigger = has_character_flag
+		lf_elf = {
+			if = {
+				limit = {
+					is_adult = yes
+				}
+				lf_add_elf = yes
+				hidden_tooltip = {
+					lf_add_random_elf_portrait = yes
+					if = {
+						limit = {
+							NOT = { has_game_rule = { name = lf_challenges value = lf_challenges_random } }
+						}
+						add_trait = lf_elf_immortality
+					}
+					set_max_mana = yes
+					check_elven_fertility = yes
+				}
+			}
+			else = {
+				lf_add_elf = yes
+			}
+			if = {
+				limit = {
+					has_game_rule = { name = lf_blood_feud value = lf_bf_on }
+				}
+				lf_add_blood_feud = yes
+			}
+			clr_character_flag = lf_elf
+		}
+			
+		lf_fairy = {
+			if = {
+				limit = {
+					is_adult = yes
+				}
+				lf_add_fairy = yes
+				hidden_tooltip = {
+					lf_add_random_fairy_portrait = yes
+					set_max_mana = yes
+				}
+			}
+			else = {
+				lf_add_fairy = yes
+			}
+			clr_character_flag = lf_fairy
+		}
+		lf_orc = {
+			if = {
+				limit = {
+					is_adult = yes
+				}
+				lf_add_orc = yes
+				hidden_tooltip = {
+					lf_add_random_orc_portrait = yes
+				}
+			}
+			else = {
+				lf_add_orc = yes
+			}
+			if = {
+				limit = {
+					has_game_rule = { name = lf_blood_feud value = lf_bf_on }
+				}
+				lf_add_blood_feud = yes
+			}
+			clr_character_flag = lf_orc
+		}
+		lf_kitsune = {
+			if = {
+				limit = {
+					is_adult = yes
+				}
+				lf_add_kitsune = yes
+				hidden_tooltip = {
+					lf_add_random_kitsune_portrait = yes
+				}
+				if = {
+					limit = {
+						ai = yes # AI will get a tail
+						has_global_flag = tont_is_started
+					}
+					add_trait = one_tail
+				}
+				else_if = {
+					limit = {
+						ai = no # Player will get the event
+						has_global_flag = tont_is_started
+					}
+					narrative_event = { id = tont_kitsune_temple.10 days = 5 random = 5 }
+				}
+				if = {
+					limit = {
+						NOT = { has_global_flag = tont_is_started }
+					}
+					set_max_mana = yes
+				}
+			}
+			else = {
+				lf_add_kitsune = yes
+			}
+			if = {
+				limit = {
+					has_game_rule = { name = lf_blood_feud value = lf_bf_on }
+				}
+				lf_add_blood_feud = yes
+			}
+			clr_character_flag = lf_kitsune
+		}
+		lf_neko = {
+			if = {
+				limit = {
+					is_adult = yes
+				}
+				lf_add_neko = yes
+				hidden_tooltip = {
+					lf_add_random_neko_portrait = yes
+				}
+			}
+			else = {
+				lf_add_neko = yes
+			}
+			if = {
+				limit = {
+					has_game_rule = { name = lf_blood_feud value = lf_bf_on }
+				}
+				lf_add_blood_feud = yes
+			}
+			clr_character_flag = lf_neko
+		}
+	}
+}
+
+lf_add_blood_feud = {
+	lf_remove_blood_feud = yes
+	trigger_switch = {
+		on_trigger = trait
+		lf_elf = {
+			add_character_modifier = {
+				name = lf_elf_bf
+				duration = -1
+			}
+		}
+		lf_orc = {
+			add_character_modifier = {
+				name = lf_orc_bf
+				duration = -1
+			}
+		}
+		lf_kitsune = {
+			add_character_modifier = {
+				name = lf_kitsune_bf
+				duration = -1
+			}
+		}
+		lf_neko = {
+			add_character_modifier = {
+				name = lf_neko_bf
+				duration = -1
+			}
+		}
+		lf_angel = {
+			add_character_modifier = {
+				name = lf_angel_bf
+				duration = -1
+			}
+		}
+		lf_demon = {
+			add_character_modifier = {
+				name = lf_demon_bf
+				duration = -1
+			}
+		}
+	}
+}
+
+lf_remove_blood_feud = {
+	remove_character_modifier = lf_elf_bf
+	remove_character_modifier = lf_orc_bf
+	remove_character_modifier = lf_kitsune_bf
+	remove_character_modifier = lf_neko_bf
+	remove_character_modifier = lf_angel_bf
+	remove_character_modifier = lf_demon_bf
+}
+
+lf_remove_race = {
+	remove_trait = lf_elf
+	remove_trait = lf_orc
+	remove_trait = lf_fairy
+	remove_trait = lf_angel
+	remove_trait = lf_demon
+	remove_trait = lf_fallen_angel
+	remove_trait = lf_halfdemon
+	remove_trait = lf_neko
+	remove_trait = lf_kitsune
+	remove_trait = dwse_lizard
+	remove_trait = dwse_dragon_adult
+	remove_trait = dwse_dragon_child
+}	
+
+lf_change_culture_self = {
+	trigger_switch = {
+		on_trigger = trait
+		lf_elf = {
+			culture = elven
+		}
+		lf_fairy = {
+			culture = fae
+		}
+		lf_orc = {
+			culture = orcish
+		}
+		lf_kitsune = {
+			culture = kitsune_culture
+		}
+		lf_neko = {
+			culture = neko_culture
+		}
+	}
+}
+lf_change_culture_province = {
+	ROOT = {
+		trigger_switch = {
+			on_trigger = trait
+			lf_elf = {
+				PREV = {
+					culture = elven
+				}
+			}
+			lf_fairy = {
+				PREV = {
+					culture = fae
+				}
+			}
+			lf_orc = {
+				PREV = {
+					culture = orcish
+				}
+			}
+			lf_kitsune = {
+				PREV = {
+					culture = kitsune_culture
+				}
+			}
+			lf_neko = {
+				PREV = {
+					culture = neko_culture
+				}
+			}
+		}
+	}
+}
+
+#
+# DWR compatibility
+#
+
+lf_add_futa = {
+	if = {
+		limit = {
+			lf_has_dwr_no_replacer = yes
+		}
+		add_trait = futa
+	}
+	else = {
+		add_trait = lf_futa
+	}
+}
+
+lf_add_mage = {
+	if = {
+		limit = {
+			lf_has_dwr_no_replacer = yes
+		}
+		add_trait = mage
+	}
+	else = {
+		add_trait = lf_mage
+	}
+}
+
+lf_add_slave = {
+	if = {
+		limit = {
+			lf_has_dwr_no_replacer = yes
+		}
+		add_trait = branded_slave
+	}
+	else = {
+		add_trait = lf_enslaved
+	}
+}
+
+lf_add_elf = {
+	if = {
+		limit = {
+			lf_has_dwr_no_replacer = yes
+		}
+		add_trait = elf
+	}
+	else = {
+		if = {
+			limit = {
+				has_game_rule = { name = lf_blood_feud value = lf_bf_on }
+			}
+			add_character_modifier = {
+				name = lf_elf_bf
+				duration = -1
+			}
+		}
+		add_trait = lf_elf
+	}
+}
+
+lf_add_orc = {
+	if = {
+		limit = {
+			lf_has_dwr_no_replacer = yes
+		}
+		add_trait = orc
+	}
+	else = {
+		if = {
+			limit = {
+				has_game_rule = { name = lf_blood_feud value = lf_bf_on }
+			}
+			add_character_modifier = {
+				name = lf_orc_bf
+				duration = -1
+			}
+		}
+		add_trait = lf_orc
+	}
+}
+
+lf_add_fairy = {
+	if = {
+		limit = {
+			lf_has_dwr_no_replacer = yes
+		}
+		add_trait = fae_kin
+	}
+	else = {
+		add_trait = lf_fairy
+	}
+}
+
+lf_add_kitsune = {
+	if = {
+		limit = {
+			lf_has_dwr_no_replacer = yes
+			NOT = { has_global_flag = tont_is_started }
+		}
+		add_trait = fox_kin
+	}
+	else = {
+		if = {
+			limit = {
+				has_game_rule = { name = lf_blood_feud value = lf_bf_on }
+			}
+			add_character_modifier = {
+				name = lf_kitsune_bf
+				duration = -1
+			}
+		}
+		add_trait = lf_kitsune
+	}
+}
+
+lf_add_neko = {
+	if = {
+		limit = {
+			lf_has_dwr_no_replacer = yes
+		}
+		add_trait = cat_kin
+	}
+	else = {
+		if = {
+			limit = {
+				has_game_rule = { name = lf_blood_feud value = lf_bf_on }
+			}
+			add_character_modifier = {
+				name = lf_neko_bf
+				duration = -1
+			}
+		}
+		add_trait = lf_neko
+	}
+}
+
+lf_add_demon = {
+	if = {
+		limit = {
+			lf_has_dwr_no_replacer = yes
+		}
+		add_trait = demon_kin
+	}
+	else = {
+		if = {
+			limit = {
+				has_game_rule = { name = lf_blood_feud value = lf_bf_on }
+			}
+			add_character_modifier = {
+				name = lf_demon_bf
+				duration = -1
+			}
+		}
+		add_trait = lf_demon
+	}
+}
+
+lf_add_angel = {
+	if = {
+		limit = {
+			lf_has_dwr_no_replacer = yes
+		}
+		add_trait = angel_kin
+	}
+	else = {
+		if = {
+			limit = {
+				has_game_rule = { name = lf_blood_feud value = lf_bf_on }
+			}
+			add_character_modifier = {
+				name = lf_angel_bf
+				duration = -1
+			}
+		}
+		add_trait = lf_angel
+	}
+}
+
+lf_remove_futa = {
+	remove_trait = lf_futa
+	remove_trait = futa
+}
+
+lf_remove_mage = {
+	remove_trait = lf_mage
+	remove_trait = mage
+}
+
+lf_remove_slave = {
+	remove_trait = lf_enslaved
+	remove_trait = branded_slave
+}
+
+lf_remove_elf = {
+	remove_trait = lf_elf
+	remove_trait = elf
+	remove_character_modifier = lf_elf_bf
+}
+
+lf_remove_orc = {
+	remove_trait = lf_orc
+	remove_trait = orc
+	remove_character_modifier = lf_orc_bf
+}
+
+lf_remove_fairy = {
+	remove_trait = lf_fairy
+	remove_trait = fae_kin
+}
+
+lf_remove_kitsune = {
+	remove_trait = lf_kitsune
+	remove_trait = fox_kin
+	remove_character_modifier = lf_kitsune_bf
+}
+
+lf_remove_neko = {
+	remove_trait = lf_neko
+	remove_trait = cat_kin
+	remove_character_modifier = lf_neko_bf
+}
+
+lf_remove_demon = {
+	remove_trait = lf_demon
+	remove_trait = demon_kin
+	remove_character_modifier = lf_demon_bf
+}
+
+lf_remove_angel = {
+	remove_trait = lf_angel
+	remove_trait = angel_kin
+	remove_character_modifier = lf_angel_bf
+}
+
+lf_remove_sinful_traits = {
+	remove_trait = lustful
+	remove_trait = greedy
+	remove_trait = wroth
+	remove_trait = proud
+	remove_trait = envious
+	remove_trait = slothful
+	remove_trait = gluttonous
+	remove_trait = hedonist
+	remove_trait = seducer
+	remove_trait = seductress
+	remove_trait = impaler
+	remove_trait = schemer
+}
+
+lf_remove_pious_traits = {
+	remove_trait = chaste
+	remove_trait = charitable
+	remove_trait = patient
+	remove_trait = humble
+	remove_trait = kind
+	remove_trait = diligent
+	remove_trait = temperate
+	remove_trait = theologian
+	remove_trait = gardener
+	remove_trait = scholar
+	remove_trait = socializer
+}
+
+lf_add_sinful_traits = {
+	add_trait = lustful
+	add_trait = greedy
+	add_trait = wroth
+	add_trait = proud
+	add_trait = envious
+	add_trait = slothful
+	add_trait = gluttonous
+}
+
+lf_add_pious_traits = {
+	add_trait = chaste
+	add_trait = charitable
+	add_trait = patient
+	add_trait = humble
+	add_trait = kind
+	add_trait = diligent
+	add_trait = temperate
+}
+	
+
+

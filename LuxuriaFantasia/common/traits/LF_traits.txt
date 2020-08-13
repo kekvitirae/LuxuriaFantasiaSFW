@@ -1,0 +1,170 @@
+lf_bad_genetics = {
+	general_opinion = -10
+	sex_appeal_opinion = -10
+	
+	diplomacy = -10
+	intrigue = -10
+	stewardship = -10
+	martial = -10
+	learning = -10
+	
+	combat_rating = -30
+	
+	male_insult = INSULT_ABOMINATION
+	female_insult = INSULT_FREAK
+	child_insult = INSULT_TROLL
+	male_insult_adj = INSULT_MONSTROUS
+	female_insult_adj = INSULT_HIDEOUS
+	child_insult_adj = INSULT_UGLY
+}
+
+lf_breeder = {
+	random = no
+	customizer = no
+	potential = {
+		lf_has_nsfw = yes
+		is_adult = yes
+		NOR = { 
+			trait = eunuch
+			trait = celibate
+		}
+	}
+	opposites = {
+		eunuch
+		celibate
+	}
+	fertility = 0.25
+}
+
+lf_switch = {
+	random = yes
+	customizer = no
+	potential = {
+		is_adult = yes
+	}
+	opposites = {
+		lf_submissive
+		lf_dominant
+	}
+}
+lf_submissive = {
+	random = yes
+	customizer = no
+	potential = {
+		is_adult = yes
+	}
+	opposites = {
+		lf_switch
+		lf_dominant
+	}
+}
+lf_dominant = {
+	random = yes
+	customizer = no
+	potential = {
+		is_adult = yes
+	}
+	opposites = {
+		lf_submissive
+		lf_switch
+	}
+}
+
+lf_insatiable = {
+	random = yes
+	customizer = no
+	potential = {
+		lf_has_nsfw = yes
+		is_adult = yes
+		trait = lustful
+	}
+	opposites = {
+		chaste
+		celibate
+	}
+}
+
+
+lf_immortal_npc = {
+	random = no
+	customizer = no
+	hidden = yes
+	immortal = yes
+	health = 10
+}
+
+lf_futa = {
+	random = no
+	customizer = no
+	ruler_designer_cost = 0
+	inherit_chance = 25
+	both_parent_has_trait_inherit_chance = 50
+	potential = {
+		is_female = yes
+	}
+}
+
+feminine = { # A man who is extremely feminine looking
+	random = no
+	customizer = no
+	ruler_designer_cost = 0
+	potential = {
+		is_female = no
+	}
+	opposites = {
+		masculine
+	}
+	male_opinion = 5
+}
+masculine = { # A woman who is extremely masculine looking
+	random = no
+	customizer = no
+	ruler_designer_cost = 0
+	potential = {
+		is_female = yes
+	}
+	opposites = {
+		feminine
+	}
+	female_opinion = 5
+}
+
+lf_mage = {
+	customizer = no
+	random = no
+	same_opinion = 15
+	intrigue = 1
+	learning = 1
+}
+
+lf_secret_slut = {
+	random = no
+	customizer = no
+	opposites = {
+		chaste
+		celibate
+		eunuch
+	}
+	hidden = yes
+}
+
+lf_enslaved = {
+	random = no
+	customizer = no
+	opposites = {
+		lf_former_slave
+	}
+	cannot_marry = yes
+	cannot_inherit = yes
+	general_opinion = -10
+	liege_opinion = 10
+}
+
+lf_former_slave = {
+	random = no
+	customizer = no
+	opposites = {
+		lf_enslaved
+	}
+	general_opinion = -5
+}

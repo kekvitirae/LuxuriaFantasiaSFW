@@ -1,0 +1,192 @@
+spriteTypes = {
+
+#
+# Orc female child
+#
+
+	spriteType = {
+		name = "GFX_orc_child_female"
+		texturefile = "gfx/static_portraits/orc_child_female.dds"
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_orc_child_female"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = lf_orc
+				portrait_age <= child
+				portrait_is_female = yes
+			}
+		}
+		
+		layer = { 
+			"GFX_orc_child_female:p0"
+			"GFX_player_overlay:p11"
+		}
+	}
+
+#
+# Orc male child
+#
+
+	spriteType = {
+		name = "GFX_orc_child_male"
+		texturefile = "gfx/static_portraits/orc_child_male.dds"
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_orc_child_male"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = lf_orc
+				portrait_age <= child
+				portrait_is_female = no
+			}
+		}
+		
+		layer = { 
+			"GFX_orc_child_male:p0"
+			"GFX_player_overlay:p11"
+		}
+	}
+	
+#
+# Elf female child
+#
+
+	spriteType = {
+		name = "GFX_elf_child_female"
+		texturefile = "gfx/static_portraits/elf_child_female.dds"
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_elf_child_female"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = lf_elf
+				portrait_age <= child
+				portrait_is_female = yes
+			}
+		}
+		
+		layer = { 
+			"GFX_elf_child_female:p0"
+			"GFX_player_overlay:p11"
+		}
+	}
+
+#
+# Elf male child
+#
+
+	spriteType = {
+		name = "GFX_elf_child_male"
+		texturefile = "gfx/static_portraits/elf_child_male.dds"
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_elf_child_male"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = lf_elf
+				portrait_age <= child
+				portrait_is_female = no
+			}
+		}
+		
+		layer = { 
+			"GFX_elf_child_male:p0"
+			"GFX_player_overlay:p11"
+		}
+	}
+
+
+
+#
+# Fairy female child
+#
+
+	spriteType = {
+		name = "GFX_fairy_child_female"
+		texturefile = "gfx/static_portraits/fairy_child_female.dds"
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_fairy_child_female"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = lf_fairy
+				portrait_age <= child
+				portrait_is_female = yes
+			}
+		}
+		
+		layer = { 
+			"GFX_fairy_child_female:p0"
+			"GFX_player_overlay:p11"
+		}
+	}
+
+#
+# Fairy male child
+#
+
+	spriteType = {
+		name = "GFX_fairy_child_male"
+		texturefile = "gfx/static_portraits/fairy_child_male.dds"
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	portraitType = {
+		name = "PORTRAIT_fairy_child_male"
+		effectFile = "gfx/FX/portrait.lua"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_has_trait = lf_fairy
+				portrait_age <= child
+				portrait_is_female = no
+			}
+		}
+		
+		layer = { 
+			"GFX_fairy_child_male:p0"
+			"GFX_player_overlay:p11"
+		}
+	}
+
+	
+}	

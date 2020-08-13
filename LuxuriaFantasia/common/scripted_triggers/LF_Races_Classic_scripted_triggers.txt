@@ -1,0 +1,18 @@
+lf_races_classic_active = {
+	has_global_flag = LFClassicOn
+}
+
+lf_worst_vampire_combat_trigger = {
+	combat_rating_diff = { who = event_target:lf_vampire_attacker value < -30 }	
+}
+lf_ok_vampire_combat_trigger = {
+	combat_rating_diff = { who = event_target:lf_vampire_attacker value >= -30 }
+	combat_rating_diff = { who = event_target:lf_vampire_attacker value < 50 }
+}
+lf_best_vampire_combat_trigger = {
+	combat_rating_diff = { who = event_target:lf_vampire_attacker value >= 50 }
+}
+
+lf_random_vampire_attacks = {
+	has_global_flag = LFClassicOn
+}

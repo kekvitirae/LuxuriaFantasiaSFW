@@ -1,0 +1,27 @@
+#CODE;ENGLISH;;;;;;;;;;;;;x
+#Custom Tooltips
+lf_whore_recovery_loc;Unless Insatiable, the body and mind is too weak to continue whoring this month.;;;;;;;;;;;;;x
+lf_random_image;A random image will be assigned based on your gender.;;;;;;;;;;;;;x
+lf_add_random_npc_notice;This selection will add a random person to your court.;;;;;;;;;;;;;x
+lf_random_whore_notice;A new character with a whore trait will be added to your court.;;;;;;;;;;;;;x
+lf_add_npc_court;This will add an NPC to your court.;;;;;;;;;;;;;x
+lf_bribery_attempt;Trying to sway someone with money can damage their view of you if they don't accept it.;;;;;;;;;;;;;x
+lf_mage_trait_choice_tooltip;Is allowed to choose a whether or not they shall become a mage at this time\n;;;;;;;;;;;;;x
+lf_chosen_recruit_block_tooltip;Attempt to recruit into the Chosen of Lilith hasn't happened before.;;;;;;;;;;;;;x
+lf_abort_action_tooltip;Aborts your current action.;;;;;;;;;;;;;x
+lf_werewolf_blood_potion_tooltip;Target a werekin to give them the potion and make them a pureblood.;;;;;;;;;;;;;x
+lf_80_percent_tooltip;Your chosen action has an 80% chance for success.;;;;;;;;;;;;;x
+lf_50_percent_tooltip;Your chosen action has an 50% chance for success.;;;;;;;;;;;;;x
+lf_pregnancy_check_tooltip;Causes a pregnancy check;;;;;;;;;;;;;x
+lf_may_repeat_in_the_future;Choosing this will pass on the event, although it may happen again in the future.;;;;;;;;;;;;;x
+LFAllRealmCharacters;All characters of this realm (or sub-realm, if playing a vassal) will be this race.;;;;;;;;;;;;;x
+
+LFHasElves;Has Elven content turned on;;;;;;;;;;;;;x
+LFHasOrcs;Has Orcish content turned on;;;;;;;;;;;;;x
+LFHasFairies;Has Fairy content turned on;;;;;;;;;;;;;x
+LFHasKitsune;Has Kitsune content turned on;;;;;;;;;;;;;x
+LFHasNekos;Has Neko content turned on;;;;;;;;;;;;;x
+LFHasDemons;Has Demonic content turned on;;;;;;;;;;;;;x
+LFHasDivines;Has Divine content turned on;;;;;;;;;;;;;x
+LFDoesNotHaveDragons;Has Dragon content turned off;;;;;;;;;;;;;x
+LFDoesNotHaveLizards;Has Half-dragon content turned off;;;;;;;;;;;;;x

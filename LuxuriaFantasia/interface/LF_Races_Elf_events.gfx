@@ -1,0 +1,23 @@
+spriteTypes = {
+	spriteType = {
+		name = "lf_elf_start_female"
+		texturefile = "gfx/event_pictures/lf_elf_start_female.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lf_elf_start_male"
+		texturefile = "gfx/event_pictures/lf_elf_start_male.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_unicorn"
+		texturefile = "gfx/event_pictures/lf_unicorn.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+}

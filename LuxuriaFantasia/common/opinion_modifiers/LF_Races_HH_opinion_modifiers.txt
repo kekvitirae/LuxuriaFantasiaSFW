@@ -1,0 +1,24 @@
+lf_demon_charmed = {
+	opinion = 25
+	months = 25
+	decay = yes
+}
+
+lf_mind_slave = {
+	opinion = 100
+	months = 25
+	obedient = yes
+}
+
+lf_opinion_recently_seduced = {
+	opinion = 10
+	months = 60
+}
+lf_futa_mistress = {
+	opinion = 50
+	months = 60
+}
+lf_changed_sexuality = {
+	opinion = -25
+	months = 60
+}

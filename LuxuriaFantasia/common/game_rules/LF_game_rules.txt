@@ -1,0 +1,104 @@
+lf_secret_sluts = {
+	name = "lf_secret_sluts_rule"
+	group = "RULE_GROUP_LF"
+	option = {
+		name = lf_secret_sluts_on
+		text = "lf_secret_sluts_on"
+		desc = "lf_secret_sluts_on_desc"
+	}
+	option = {
+		name = lf_secret_sluts_off
+		text = "lf_secret_sluts_off"
+		desc = "lf_secret_sluts_off_desc"
+	}
+}
+
+lf_custom_portraits = {
+	name = "lf_custom_portraits" 
+	group = "RULE_GROUP_LF"
+	option = {
+		name = lf_cheri
+		text = "lf_cheri"
+		desc = "lf_cheri_desc"
+	}
+	option = {
+		name = lf_custom_off
+		text = "lf_custom_off"
+		desc = "lf_custom_off_desc"
+	}
+}
+
+lf_new_courtiers = {
+	name = "lf_new_courtiers"
+	group = "RULE_GROUP_LF"
+	option = {
+		name = lf_courtiers_on
+		text = "lf_courtiers_on"
+		desc = "lf_courtiers_on_desc"
+	}
+	option = {
+		name = lf_courtiers_off
+		text = "lf_courtiers_off"
+		desc = "lf_courtiers_off_desc"
+	}
+}
+
+lf_blood_feud = {
+	name = "lf_blood_feud"
+	group = "RULE_GROUP_LF"
+	option = {
+		name = lf_bf_on
+		text = "lf_bf_on"
+		desc = "lf_bf_on_desc"
+	}
+	option = {
+		name = lf_bf_off
+		text = "lf_bf_off"
+		desc = "lf_bf_off_desc"
+	}
+}
+
+lf_racial_seeding_lol_no = {
+	name = "lf_racial_seeding_go_fuck_yourself"
+	group = "RULE_GROUP_LF"
+	option = {
+		name = lf_racial_seeding_off
+		text = "lf_there_was_never_any_choice"
+		desc = "lf_there_was_never_any_choice_desc"
+	}
+}
+
+lf_challenges = {
+	name = "lf_challenges_name"
+	group = "RULE_GROUP_LF"
+	option = {
+		name = lf_challenges_off
+		text = "lf_challenges_off"
+		desc = "lf_challenges_off_desc"
+	}
+	option = {
+		name = lf_challenges_random
+		text = "lf_challenges_random"
+		desc = "lf_challenges_random_desc"
+	}
+	option = {
+		name = lf_challenges_gender
+		text = "lf_challenges_gender"
+		desc = "lf_challenges_gender_desc"
+	}
+	option = {
+		name = lf_challenges_lucy
+		text = "lf_challenges_lucy"
+		desc = "lf_challenges_lucy_desc"
+	}
+	option = {
+		name = lf_challenges_opposite
+		text = "lf_challenges_opposite"
+		desc = "lf_challenges_opposite_desc"
+	}
+	option = {
+		name = lf_challenges_genes
+		text = "lf_challenges_genes"
+		desc = "lf_challenges_genes_desc"
+	}
+}

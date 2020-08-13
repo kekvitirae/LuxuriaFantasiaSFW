@@ -1,0 +1,21 @@
+defined_text = {
+	name = GetKitKitten
+	
+	text = {
+		localisation_key = lf_kit
+		trigger = {
+			trait = lf_kitsune
+			has_global_flag = lf_silly_mode
+		}
+	}
+	text = {
+		localisation_key = lf_kitten
+		trigger = {
+			trait = lf_neko
+			has_global_flag = lf_silly_mode
+		}
+	}
+	fallback_text = {
+		localisation_key = lf_kid
+	}
+}

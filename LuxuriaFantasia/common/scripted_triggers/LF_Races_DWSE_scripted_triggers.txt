@@ -1,0 +1,72 @@
+lf_races_dwse_active = {
+	has_global_flag = LFDWSEDragonOn
+}
+
+has_dwse_no_empire = {
+	custom_tooltip = {
+		text = LFDoesNotHaveDragons
+		has_global_flag = LFDWSEDragonOff
+	}
+}
+
+has_dwse_lizards_yes = {
+	has_global_flag = LFDWSEDragonOn
+}
+
+has_dwse_dragon_on = {
+	has_global_flag = LFDWSEDragonOn
+}
+
+has_dwse_lizards_marriage = {
+	has_global_flag = LFDWSEDragonOn
+}
+
+has_dwse_lizards_off = {
+	custom_tooltip = {
+		text = LFDoesNotHaveDragons
+		has_global_flag = LFDWSEDragonOff
+	}
+}
+
+is_liked_by_dwse_trigger = {
+	liked_by_offmap = {
+        type = offmap_dwse
+    }
+    NOT = {
+        disliked_by_offmap = {
+            type = offmap_dwse
+        }
+    }
+    offmap_dwse = {
+        show_scope_change = no
+        custom_tooltip = { text = emperor_likes_THIS_tt }
+    }
+}
+
+is_disliked_by_dwse_trigger = {
+	disliked_by_offmap = {
+        type = offmap_dwse
+    }
+    NOT = {
+		liked_by_offmap = {
+            type = offmap_dwse
+        }
+    }
+    offmap_dwse = {
+        show_scope_change = no
+        custom_tooltip = { text = emperor_dislikes_THIS_tt }
+    }
+}
+
+is_liked_and_disliked_by_dwse = {
+    disliked_by_offmap = {
+        type = offmap_dwse
+    }
+    liked_by_offmap = {
+        type = offmap_dwse
+    }
+    offmap_dwse = {
+        show_scope_change = no
+        custom_tooltip = { text = emperor_has_ambiguous_feelings_of_THIS_tt }
+    }
+}

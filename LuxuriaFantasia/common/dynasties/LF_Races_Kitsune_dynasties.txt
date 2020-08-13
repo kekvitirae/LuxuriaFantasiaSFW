@@ -1,0 +1,120 @@
+9051485 = {
+	name="Toshiaki"
+	culture="kitsune_culture"
+}
+9051486 = {
+	name="Haru"
+	culture="kitsune_culture"
+}
+9051487 = {
+	name="Ryuu"
+	culture="kitsune_culture"
+}
+9051488 = {
+	name="Osamu"
+	culture="kitsune_culture"
+}
+9051489 = {
+	name="Kenshin"
+	culture="kitsune_culture"
+}
+9051490 = {
+	name="Takako"
+	culture="kitsune_culture"
+}
+9051491 = {
+	name="Kiyomi"
+	culture="kitsune_culture"
+}
+9051492 = {
+	name="Maiko"
+	culture="kitsune_culture"
+}
+9051493 = {
+	name="Ren"
+	culture="kitsune_culture"
+}
+9051494 = {
+	name="Takara"
+	culture="kitsune_culture"
+}
+9051495 = {
+	name="Masako"
+	culture="kitsune_culture"
+}
+9051496 = {
+	name="Asami"
+	culture="kitsune_culture"
+}
+9051497 = {
+	name="Ran"
+	culture="kitsune_culture"
+}
+9051498 = {
+	name="Miyako"
+	culture="kitsune_culture"
+}
+9051499 = {
+	name="Tomoko"
+	culture="kitsune_culture"
+}
+9051500 = {
+	name="Naoko"
+	culture="kitsune_culture"
+}
+9051501 = {
+	name="Hoshi"
+	culture="kitsune_culture"
+}
+9051502 = {
+	name="Miwa"
+	culture="kitsune_culture"
+}
+9051503 = {
+	name="Natsumi"
+	culture="kitsune_culture"
+}
+9051504 = {
+	name="Minako"
+	culture="kitsune_culture"
+}
+9051505 = {
+	name="Rei"
+	culture="kitsune_culture"
+}
+9051506 = {
+	name="Chiharu"
+	culture="kitsune_culture"
+}
+9051507 = {
+	name="Kimiko"
+	culture="kitsune_culture"
+}
+9051508 = {
+	name="Kou"
+	culture="kitsune_culture"
+}
+9051509 = {
+	name="Saki"
+	culture="kitsune_culture"
+}
+9051510 = {
+	name="Hisako"
+	culture="kitsune_culture"
+}
+9051511 = {
+	name="Momo"
+	culture="kitsune_culture"
+}
+9051512 = {
+	name="Masa"
+	culture="kitsune_culture"
+}
+9051513 = {
+	name="Sakura"
+	culture="kitsune_culture"
+}
+9051514 = {
+	name="Aimi"
+	culture="kitsune_culture"
+}

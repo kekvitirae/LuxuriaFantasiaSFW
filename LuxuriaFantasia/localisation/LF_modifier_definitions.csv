@@ -1,0 +1,20 @@
+#
+# Modifier definitions
+#
+virgin_opinion_EXPLANATION; (opinion from virgin);;;;;;;;;;;;;x
+opinion_of_virgin_EXPLANATION; (opinion of virgins);;;;;;;;;;;;;x
+virgin_opinion;Virginity opinion;;;;;;;;;;;;;x
+opinion_of_virgin;Opinion of virgins;;;;;;;;;;;;;x
+cheap_whore_opinion_EXPLANATION; (opinion from cheap whores);;;;;;;;;;;;;x
+chaste_opinion_EXPLANATION; (opinion from chaste);;;;;;;;;;;;;x
+opinion_of_chaste_EXPLANATION; (opinion of chaste);;;;;;;;;;;;;x
+chaste_opinion;Chaste opinion;;;;;;;;;;;;;x
+opinion_of_chaste;Opinion of chaste;;;;;;;;;;;;;x
+# More to come later.
+
+opinion_of_dwse_dragon_adult;Opinion of dragons;;;;;;;;;;;;;x
+opinion_of_dwse_dragon_adult_EXPLANATION; (opinion of dragons);;;;;;;;;;;;;x
+opinion_of_dwse_dragon_child;Opinion of dragon children;;;;;;;;;;;;;x
+opinion_of_dwse_dragon_child_EXPLANATION; (opinion of dragon children);;;;;;;;;;;;;x
+opinion_of_dwse_lizard;Opinion of half-dragons;;;;;;;;;;;;;x
+opinion_of_dwse_lizard_EXPLANATION; (opinion of half-dragons);;;;;;;;;;;;;x

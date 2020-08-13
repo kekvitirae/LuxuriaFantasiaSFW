@@ -1,0 +1,348 @@
+lf_check_artifact_booty = {
+	random_list = {
+		10 = {
+			set_character_flag = lf_obtained_famous_head
+			trigger = {
+				NOT = {
+					has_artifact = famous_head
+				}
+			}
+		}
+		10 = {
+			set_character_flag = lf_obtained_famous_tongue
+			trigger = {
+				NOT = {
+					has_artifact = famous_tongue
+				}
+			}
+		}
+		10 = {
+			set_character_flag = lf_obtained_infamous_tongue
+			trigger = {
+				NOT = {
+					has_artifact = infamous_tongue
+				}
+			}
+		}
+		10 = {
+			set_character_flag = lf_obtained_famous_hand
+			trigger = {
+				NOT = {
+					has_artifact = famous_hand
+				}
+			}
+		}
+		10 = {
+			set_character_flag = lf_obtained_famous_arm
+			trigger = {
+				NOT = {
+					has_artifact = famous_arm
+				}
+			}
+		}
+		10 = {
+			set_character_flag = lf_obtained_famous_foot
+			trigger = {
+				NOT = {
+					has_artifact = famous_foot
+				}
+			}
+		}
+		10 = {
+			set_character_flag = lf_obtained_famous_ancient_weapon
+			trigger = {
+				NOT = {
+					has_artifact = famous_ancient_weapon
+				}
+			}
+		}
+		10 = {
+			set_character_flag = lf_obtained_fingerbone_of_saint
+			trigger = {
+				NOT = {
+					has_artifact = fingerbone_of_saint
+				}
+			}
+		}
+		10 = {
+			set_character_flag = lf_obtained_water_of_blessed_mantle
+			trigger = {
+				NOT = {
+					has_artifact = water_of_blessed_mantle
+				}
+			}
+		}
+		10 = {
+			set_character_flag = lf_obtained_keshmar_cypress_branch
+			trigger = {
+				NOT = {
+					has_artifact = keshmar_cypress_branch
+				}
+			}
+		}
+		10 = {
+			set_character_flag = lf_obtained_the_lily_crown
+			trigger = {
+				NOT = {
+					has_artifact = the_lily_crown
+				}
+			}
+		}
+		10 = {
+			set_character_flag = lf_obtained_noble_scepter
+			trigger = {
+				NOT = {
+					has_artifact = noble_scepter
+				}
+			}
+		}
+		10 = {
+			set_character_flag = lf_obtained_engraved_sword
+			trigger = {
+				NOT = {
+					has_artifact = engraved_sword
+				}
+			}
+		}
+		10 = {
+			set_character_flag = lf_obtained_engraved_dagger
+			trigger = {
+				NOT = {
+					has_artifact = engraved_dagger
+				}
+			}
+		}
+		10 = {
+			set_character_flag = lf_obtained_silver_bracelets
+			trigger = {
+				NOT = {
+					has_artifact = silver_bracelets
+				}
+			}
+		}
+		10 = {
+			set_character_flag = lf_obtained_collar_of_pearls
+			trigger = {
+				NOT = {
+					has_artifact = collar_of_pearls
+				}
+			}
+		}
+		10 = {
+			set_character_flag = lf_obtained_circlet_of_twilight
+			trigger = {
+				NOT = {
+					has_artifact = circlet_of_twilight
+				}
+			}
+		}
+		10 = {
+			set_character_flag = lf_obtained_silver_staff
+			trigger = {
+				NOT = {
+					has_artifact = silver_staff
+				}
+			}
+		}
+		10 = {
+			set_character_flag = lf_obtained_iron_crown
+			trigger = {
+				NOT = {
+					has_artifact = iron_crown
+				}
+			}
+		}
+		10 = {
+			set_character_flag = lf_obtained_engraved_crown
+			trigger = {
+				NOT = {
+					has_artifact = engraved_crown
+				}
+			}
+		}
+		10 = {
+			set_character_flag = lf_obtained_ceremonial_axe
+			trigger = {
+				NOT = {
+					has_artifact = ceremonial_axe
+				}
+			}
+		}
+		10 = {
+			set_character_flag = lf_obtained_lf_kama_sutra
+			trigger = {
+				NOT = {
+					has_artifact = lf_kama_sutra
+				}
+			}
+		}
+		10 = {
+			set_character_flag = lf_obtained_lf_amulet_nondetection
+			trigger = {
+				NOT = {
+					has_artifact = lf_amulet_nondetection
+				}
+			}
+		}
+		10 = {
+			set_character_flag = lf_obtained_lf_pirate_booty
+			trigger = {
+				is_female = yes
+				
+				NOT = {
+					has_artifact = lf_pirate_booty
+				}
+			}
+		}
+		10 = {
+			set_character_flag = lf_obtained_lf_ring_protection
+			trigger = {
+				NOT = {
+					has_artifact = lf_ring_protection
+				}
+			}
+		}
+		10 = {
+			set_character_flag = lf_obtained_lf_elven_quiver
+			trigger = {
+				NOT = {
+					has_artifact = lf_elven_quiver
+				}
+			}
+		}
+		10 = {
+			set_character_flag = lf_obtained_lf_orcish_bracers
+			trigger = {
+				NOT = {
+					has_artifact = lf_orcish_bracers
+				}
+			}
+		}
+		10 = {
+			set_character_flag = lf_obtained_lf_lightsaber
+			trigger = {
+				NOT = {
+					has_artifact = lf_lightsaber
+				}
+			}
+		}
+	}
+}
+
+lf_claim_artifact_booty = {
+	trigger_switch = {
+		on_trigger = has_character_flag
+		lf_obtained_famous_head = {
+			clr_character_flag = lf_obtained_famous_head
+			add_artifact = famous_head
+		}
+		lf_obtained_famous_tongue = {
+			clr_character_flag = lf_obtained_famous_tongue
+			add_artifact = famous_tongue
+		}
+		lf_obtained_infamous_tongue = {
+			clr_character_flag = lf_obtained_infamous_tongue
+			add_artifact = infamous_tongue
+		}
+		lf_obtained_famous_hand = {
+			clr_character_flag = lf_obtained_famous_hand
+			add_artifact = famous_hand
+		}
+		lf_obtained_famous_arm = {
+			clr_character_flag = lf_obtained_famous_arm
+			add_artifact = famous_arm
+		}
+		lf_obtained_famous_foot = {
+			clr_character_flag = lf_obtained_famous_foot
+			add_artifact = famous_foot
+		}
+		lf_obtained_famous_ancient_weapon = {
+			clr_character_flag = lf_obtained_famous_ancient_weapon
+			add_artifact = famous_ancient_weapon
+		}
+		lf_obtained_fingerbone_of_saint = {
+			clr_character_flag = lf_obtained_fingerbone_of_saint
+			add_artifact = fingerbone_of_saint
+		}
+		lf_obtained_water_of_blessed_mantle = {
+			clr_character_flag = lf_obtained_water_of_blessed_mantle
+			add_artifact = water_of_blessed_mantle
+		}
+		lf_obtained_keshmar_cypress_branch = {
+			clr_character_flag = lf_obtained_keshmar_cypress_branch
+			add_artifact = keshmar_cypress_branch
+		}
+		lf_obtained_the_lily_crown = {
+			clr_character_flag = lf_obtained_the_lily_crown
+			add_artifact = the_lily_crown
+		}
+		lf_obtained_noble_scepter = {
+			clr_character_flag = lf_obtained_noble_scepter
+			add_artifact = noble_scepter
+		}
+		lf_obtained_engraved_sword = {
+			clr_character_flag = lf_obtained_engraved_sword
+			add_artifact = engraved_sword
+		}
+		lf_obtained_engraved_dagger = {
+			clr_character_flag = lf_obtained_engraved_dagger
+			add_artifact = engraved_dagger
+		}
+		lf_obtained_silver_bracelets = {
+			clr_character_flag = lf_obtained_silver_bracelets
+			add_artifact = silver_bracelets
+		}
+		lf_obtained_collar_of_pearls = {
+			clr_character_flag = lf_obtained_collar_of_pearls
+			add_artifact = collar_of_pearls
+		}
+		lf_obtained_circlet_of_twilight = {
+			clr_character_flag = lf_obtained_circlet_of_twilight
+			add_artifact = circlet_of_twilight
+		}
+		lf_obtained_silver_staff = {
+			clr_character_flag = lf_obtained_silver_staff
+			add_artifact = silver_staff
+		}
+		lf_obtained_iron_crown = {
+			clr_character_flag = lf_obtained_iron_crown
+			add_artifact = iron_crown
+		}
+		lf_obtained_engraved_crown = {
+			clr_character_flag = lf_obtained_engraved_crown
+			add_artifact = engraved_crown
+		}
+		lf_obtained_ceremonial_axe = {
+			clr_character_flag = lf_obtained_ceremonial_axe
+			add_artifact = ceremonial_axe
+		}
+		lf_obtained_lf_kama_sutra = {
+			clr_character_flag = lf_obtained_lf_kama_sutra
+			add_artifact = lf_kama_sutra
+		}
+		lf_obtained_lf_amulet_nondetection = {
+			clr_character_flag = lf_obtained_lf_amulet_nondetection
+			add_artifact = lf_amulet_nondetection
+		}
+		lf_obtained_lf_pirate_booty = {
+			clr_character_flag = lf_obtained_lf_pirate_booty
+			add_artifact = lf_pirate_booty
+		}
+		lf_obtained_lf_ring_protection = {
+			clr_character_flag = lf_obtained_lf_ring_protection
+			add_artifact = lf_ring_protection
+		}
+		lf_obtained_lf_elven_quiver = {
+			clr_character_flag = lf_obtained_lf_elven_quiver
+			add_artifact = lf_elven_quiver
+		}
+		lf_obtained_lf_orcish_bracers = {
+			clr_character_flag = lf_obtained_lf_orcish_bracers
+			add_artifact = lf_orcish_bracers
+		}
+		lf_obtained_lf_lightsaber = {
+			clr_character_flag = lf_obtained_lf_lightsaber
+			add_artifact = lf_lightsaber
+		}
+	}
+}

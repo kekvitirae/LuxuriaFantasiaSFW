@@ -1,0 +1,47 @@
+defined_text = {
+	name = GetGhostName
+	
+	text = {
+		localisation_key = lf_ghost_irish
+		trigger = {
+			trait = lf_ghost
+			culture = irish
+			is_female = yes
+		}
+	}
+	text = {
+		localisation_key = lf_ghost_scottish
+		trigger = {
+			trait = lf_ghost
+			OR = {
+				culture = scottish
+				culture = pictish
+			}
+			is_female = yes
+		}
+	}
+	text = {
+		localisation_key = lf_ghost_welsh
+		trigger = {
+			trait = lf_ghost
+			culture = welsh
+			is_female = yes
+		}
+	}
+	text = {
+		localisation_key = lf_ghost_other
+		trigger = {
+			trait = lf_ghost
+			NOR = { 
+				culture = irish
+				culture = scottish
+				culture = pictish
+				culture = welsh
+				is_female = yes
+			}
+		}
+	}
+	fallback_text = {
+		localisation_key = lf_ghost_other
+	}
+}

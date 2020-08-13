@@ -1,0 +1,167 @@
+title_lf_owo = { # Offsets the fertility penalty
+	is_high_prio = no
+	realm_in_name = yes
+	dignity = 0.9
+	grant_limit = 1
+	opinion_effect = 10
+	revoke_allowed = yes
+	
+
+	allowed_to_hold = {
+		prisoner = no
+		is_female = yes
+		is_adult = yes
+		NOT = { trait = incapable }
+		is_neko = yes
+		is_futa = yes
+	}
+	
+	allowed_to_grant = {
+		is_neko = yes
+	}
+	revoke_trigger = {
+		
+	}
+
+	gain_effect = {
+		add_character_modifier = {
+			name = modifier_lf_owo
+			duration = -1
+		}
+	}
+
+	lose_effect = {
+		remove_character_modifier = modifier_lf_owo
+	}
+	retire_effect = {
+		remove_character_modifier = modifier_lf_owo
+	}	
+	message = yes
+}
+
+title_lf_mew = {
+	is_high_prio = no
+	realm_in_name = yes
+	dignity = 0.9
+	grant_limit = 1
+	opinion_effect = 10
+	revoke_allowed = yes
+	
+
+	allowed_to_hold = {
+		prisoner = no
+		is_female = yes
+		is_adult = yes
+		NOT = { trait = incapable }
+		is_neko = yes
+		NOT = {
+			is_futa = yes
+		}
+	}
+	
+	allowed_to_grant = {
+		is_neko = yes
+	}
+	revoke_trigger = {
+		
+	}
+
+	gain_effect = {
+		add_character_modifier = {
+			name = modifier_lf_mew
+			duration = -1
+		}
+	}
+
+	lose_effect = {
+		remove_character_modifier = modifier_lf_mew
+	}
+	retire_effect = {
+		remove_character_modifier = modifier_lf_mew
+	}	
+	message = yes
+}
+
+title_lf_hiss = {
+	is_high_prio = no
+	realm_in_name = yes
+	dignity = 0.9
+	grant_limit = 1
+	opinion_effect = 10
+	revoke_allowed = yes
+	
+
+	allowed_to_hold = {
+		prisoner = no
+		is_female = no
+		is_adult = yes
+		NOT = { trait = incapable }
+		is_neko = yes
+	}
+	
+	allowed_to_grant = {
+		is_neko = yes
+	}
+	revoke_trigger = {
+		
+	}
+
+	gain_effect = {
+		add_character_modifier = {
+			name = modifier_lf_hiss
+			duration = -1
+		}
+	}
+
+	lose_effect = {
+		remove_character_modifier = modifier_lf_hiss
+	}
+	retire_effect = {
+		remove_character_modifier = modifier_lf_hiss
+	}	
+	message = yes
+}
+
+title_lf_neko_maid = { 
+	is_high_prio = no
+	realm_in_name = yes
+	dignity = 0.9
+	grant_limit = 1
+	opinion_effect = 10
+	revoke_allowed = yes
+	
+
+	allowed_to_hold = {
+		prisoner = no
+		is_female = yes
+		is_ruler = no
+		is_adult = yes
+		NOT = { trait = incapable }
+		is_neko = yes
+	}
+	
+	allowed_to_grant = {
+		is_female = no
+		any_courtier = {
+			trait = lf_neko
+		}
+	}
+	revoke_trigger = {
+		
+	}
+
+	gain_effect = {
+		add_character_modifier = {
+			name = modifier_lf_neko_maid
+			duration = -1
+		}
+	}
+
+	lose_effect = {
+		remove_character_modifier = modifier_lf_neko_maid
+	}
+	retire_effect = {
+		remove_character_modifier = modifier_lf_neko_maid
+	}	
+	message = yes
+}

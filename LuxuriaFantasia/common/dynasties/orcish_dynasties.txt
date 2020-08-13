@@ -1,0 +1,129 @@
+
+#
+# Orcish dynasties
+#
+
+9051425 = {
+	name="Karfu"
+	culture="orcish"
+}
+9051426 = {
+	name="Yambagorn"
+	culture="orcish"
+}
+9051427 = {
+	name="Umragig"
+	culture="orcish"
+}
+9051428 = {
+	name="Yargol"
+	culture="orcish"
+}
+9051429 = {
+	name="Ymafubag"
+	culture="orcish"
+}
+9051430 = {
+	name="Darfu"
+	culture="orcish"
+}
+9051431 = {
+	name="Ombilge"
+	culture="orcish"
+}
+9051432 = {
+	name="Kukgilug"
+	culture="orcish"
+}
+9051433 = {
+	name="Knodagh"
+	culture="orcish"
+}
+9051434 = {
+	name="Naghat"
+	culture="orcish"
+}
+9051435 = {
+	name="Poogugh"
+	culture="orcish"
+}
+9051436 = {
+	name="Wuglat"
+	culture="orcish"
+}
+9051437 = {
+	name="Dugarod"
+	culture="orcish"
+}
+9051438 = {
+	name="Mudagog"
+	culture="orcish"
+}
+9051439 = {
+	name="Nahgigoth"
+	culture="orcish"
+}
+9051440 = {
+	name="Sogugh"
+	culture="orcish"
+}
+9051441 = {
+	name="Unrugagh"
+	culture="orcish"
+}
+9051442 = {
+	name="Parod"
+	culture="orcish"
+}
+9051443 = {
+	name="Zargulg"
+	culture="orcish"
+}
+9051444 = {
+	name="Xuk"
+	culture="orcish"
+}
+9051445 = {
+	name="Khargol"
+	culture="orcish"
+}
+9051446 = {
+	name="Atulg"
+	culture="orcish"
+}
+9051447 = {
+	name="Vargan"
+	culture="orcish"
+}
+9051448 = {
+	name="Podagog"
+	culture="orcish"
+}
+9051449 = {
+	name="Wrug"
+	culture="orcish"
+}
+9051450 = {
+	name="Fubdagog"
+	culture="orcish"
+}
+9051451 = {
+	name="Nakgu"
+	culture="orcish"
+}
+9051452 = {
+	name="Quordud"
+	culture="orcish"
+}
+9051453 = {
+	name="Karthurg"
+	culture="orcish"
+}
+9051454 = {
+	name="Dugorim"
+	culture="orcish"
+}
+9051545 = { # Unique
+	name="One-Eye"
+	culture="orcish"
+}

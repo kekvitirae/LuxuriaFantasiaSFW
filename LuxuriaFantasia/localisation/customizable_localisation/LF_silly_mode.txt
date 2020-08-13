@@ -1,0 +1,143 @@
+defined_text = {
+	name = Silly_Futa_D
+
+	text = {
+		localisation_key = lf_silly_futa_d
+		trigger = { 
+			has_global_flag = lf_silly_mode
+		}
+	}
+	fallback_text = {
+		localisation_key = lf_no_silly_futa_d
+	}
+}
+defined_text = {
+	name = Silly_Mage_N
+
+	text = {
+		localisation_key = lf_silly_mage_n
+		trigger = { 
+			has_global_flag = lf_silly_mode
+		}
+	}
+	fallback_text = {
+		localisation_key = lf_no_silly_mage_n
+	}
+}
+defined_text = {
+	name = Silly_Mage_D
+
+	text = {
+		localisation_key = lf_silly_mage_d
+		trigger = { 
+			has_global_flag = lf_silly_mode
+		}
+	}
+	fallback_text = {
+		localisation_key = lf_no_silly_mage_d
+	}
+}
+defined_text = {
+	name = Silly_Snail_D
+
+	text = {
+		localisation_key = lf_silly_snail_d
+		trigger = { 
+			has_global_flag = lf_silly_mode
+		}
+	}
+	fallback_text = {
+		localisation_key = lf_no_silly_snail_d
+	}
+}
+defined_text = {
+	name = Silly_Elf_N
+
+	text = {
+		localisation_key = lf_silly_elf_n
+		trigger = { 
+			has_global_flag = lf_silly_mode
+		}
+	}
+	fallback_text = {
+		localisation_key = lf_no_silly_elf_n
+	}
+}
+defined_text = {
+	name = Silly_Elf_D
+
+	text = {
+		localisation_key = lf_silly_elf_d
+		trigger = { 
+			has_global_flag = lf_silly_mode
+		}
+	}
+	fallback_text = {
+		localisation_key = lf_no_silly_elf_d
+	}
+}
+defined_text = {
+	name = GetLFAmuletName
+
+	text = {
+		localisation_key = lf_amulet_silly_n
+		trigger = { 
+			has_global_flag = lf_silly_mode
+		}
+	}
+	fallback_text = {
+		localisation_key = lf_amulet_nosilly_n
+	}
+}
+defined_text = {
+	name = GetLFAmuletDesc
+
+	text = {
+		localisation_key = lf_amulet_silly_d
+		trigger = { 
+			has_global_flag = lf_silly_mode
+		}
+	}
+	fallback_text = {
+		localisation_key = lf_amulet_nosilly_d
+	}
+}
+defined_text = {
+	name = GetLFGeneName
+
+	text = {
+		localisation_key = lf_bad_genes_silly
+		trigger = { 
+			has_global_flag = lf_silly_mode
+		}
+	}
+	fallback_text = {
+		localisation_key = lf_bad_genes_nosilly
+	}
+}
+defined_text = {
+	name = GetLFGeneDesc
+
+	text = {
+		localisation_key = lf_bad_genes_silly_d
+		trigger = { 
+			has_global_flag = lf_silly_mode
+		}
+	}
+	fallback_text = {
+		localisation_key = lf_bad_genes_nosilly_d
+	}
+}
+defined_text = {
+	name = LFGetGeneBL
+
+	text = {
+		localisation_key = lf_genetics_bloodline_silly
+		trigger = { 
+			has_global_flag = lf_silly_mode
+		}
+	}
+	fallback_text = {
+		localisation_key = lf_genetics_bloodline_nosilly
+	}
+}

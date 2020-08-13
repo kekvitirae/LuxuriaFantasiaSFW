@@ -1,0 +1,58 @@
+### spritType = {
+### 	name = "GFX_decision_name"
+### 	texturefile = "gfx/interface/decision_icon.dds
+### }
+spriteTypes = {
+	spriteType = {
+		name = "GFX_lf_a_customize_religion"
+		texturefile = "gfx/interface/lf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_lf_a_customize_religion_historical"
+		texturefile = "gfx/interface/lf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_lf_b_buy_magic_spell"
+		texturefile = "gfx/interface/lf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_lf_a_multiplayer_save_dynasty"
+		texturefile = "gfx/interface/lf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_lf_b_mass_enslave_and_sell"
+		texturefile = "gfx/interface/lf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_lf_b_mass_enslave_and_sell_dwse"
+		texturefile = "gfx/interface/lf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_dw_infuse_with_demon_blood_half"
+		texturefile = "gfx/interface/lf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_dw_infuse_with_demon_blood_full"
+		texturefile = "gfx/interface/lf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_dragon_battle"
+		texturefile = "gfx/interface/dragon_sex_event.dds"
+	}
+	spriteType = {
+		name = "GFX_dwse_hatch_dragon"
+		texturefile = "gfx/interface/dragon_sex_event.dds"
+	}
+	spriteType = {
+		name = "GFX_dragon_sex_event"
+		texturefile = "gfx/interface/dragon_sex_event.dds"
+	}
+	spriteType = {
+		name = "GFX_dwse_starting_trait"
+		texturefile = "gfx/interface/dragon_sex_event.dds"
+	}
+	spriteType = {
+		name = "GFX_lf_core_gypsy_reading"
+		texturefile = "gfx/interface/lf_decisions.dds"
+	}
+}

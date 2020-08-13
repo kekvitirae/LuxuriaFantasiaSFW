@@ -1,0 +1,306 @@
+# ICONS:
+#
+# Good 			<=> 		Bad
+#
+#  1 - Martial 				- 19
+#  2 - Learning 			- 20
+#  3 - Diplomacy 			- 21
+#  4 - Stewardship 			- 22
+#  5 - Intrigue 			- 23
+#  6 - Money 				- 24
+#  7 - Prestige 			- 25
+#  8 - Piety 				- 26
+#  9 - Titles 				- 27
+# 10 - Council 				- 28 
+# 11 - Laws 				- 29
+# 12 - Tech 				- 30 
+# 13 - Military 			- 31
+# 14 - Plots 				- 32
+# 15 - Messages 			- 33
+# 16 - Diplomatic actions 	- 34
+# 17 - Church 				- 35
+# 18 - Characters 			- 36
+# 37 - Prison 				- 38
+# 39 - Love 				- 40
+# 41 - Death 				- 42
+# 43 - Indian religion 		- 44
+# 45 - Dog					- 65
+# 46 - Cat					- 66
+# 47 - Owl					- 67
+# 48 - Pagan religion       - 49
+# 50 - Staff of Asclepius   - 51
+# 52 - Mystic               - 53
+# 54 - Bonesaw              - 55
+# 56 - Horseshoe            - 57
+# 58 - Parrot				- 68
+# 59 - Ham					- 60
+# 61 - Anchor				- 62
+# 63 - Jewish religion		- 64
+# 69 - Bed					- 70
+# 71 - Wolf					- 72
+# 73 - Raven				- 74
+# 75 - Demon horns			- 76
+# 77 - Trident				- 78
+# 79 - Stars				- 80
+# 81 - Eye					- 82
+# 83 - Test-tubes			- 84
+# 85 - Science flask		- 86
+# 87 - Flower				- 88
+# 89 - Rats		 			- 90
+# 91 - Otter				- 92
+# 93 - Hedgehog				- 94
+# 95 - Taoist				- 96
+# 97 - Paper				- 98
+# 99 - Bamboo Book			- 100
+# 101 - Pagoda				- 102
+# 103 - Firework			- 104
+# 105 - Torch				- 106
+# 107 - Panda				- 108
+# 109 - Dragon				- 110
+# 111 - Eagle				- 112
+# 113 - Pregnancy			- 114
+# 115 - Evil Sword			- 116
+# 117 - Combat Skill		- 118
+# 119 - Broken Bone			- 120
+# 121 - Chicken				- 122
+# 123 - Combat Skill (New)	- 124
+# 125 - Bear 				- 126
+# 127 - Lion 				- 128
+# 129 - Rain Good           - 130
+# 131 - Rain Storm          - 132
+# 133 - Sun   	            - 134
+
+#Character modifiers
+
+lf_basic_spellbook = {
+	icon = 2
+}
+lf_good_spellbook = {
+	icon = 2
+	learning = 1
+}
+lf_best_spellbook = {
+	icon = 2
+	learning = 3
+}
+
+lf_moon_upright = {
+	icon = 97
+	plot_power_modifier = 0.25
+
+}
+lf_moon_reversed = {
+	icon = 97
+	plot_power_modifier = -0.25
+
+}
+lf_star_upright = {
+	icon = 97
+	monthly_character_piety = 5
+
+}
+lf_star_reversed = {
+	icon = 97
+	monthly_character_piety = -5
+
+}
+lf_fortune_upright = {
+	icon = 97
+	global_tax_modifier = 0.25
+
+}
+lf_fortune_reversed = {
+	icon = 97
+	global_tax_modifier = -0.25
+
+}
+lf_tower_reversed = {
+	icon = 97
+	disease_defence = 0.25
+
+}
+lf_hanged_upright = {
+	icon = 97
+	health = -1
+	monthly_character_piety = 10
+
+}
+lf_hanged_reversed = {
+	icon = 97
+	health = 1
+	monthly_character_piety = -10
+}
+
+lf_tarot_read = {
+	icon = 97
+
+}
+
+
+#
+# CB related
+#
+
+lf_blood_feud_cd = {
+	icon = 32
+}
+
+#
+#Sex Related
+#
+
+lf_good_sex = {
+	icon = 39
+	health = 0.1 # You feel revitalized after some good sex.
+	general_opinion = 5 # You've the after good sex glow, and you generally get along better with others since you're satisfied.
+}
+lf_great_sex = {
+	icon = 39
+	health = 1
+	sex_appeal_opinion = 5
+	general_opinion = 5
+}
+
+lf_sex_recovery = {
+	icon = 39
+	health = 0.5
+}
+
+lf_always_switch = {
+	icon = 39
+}
+
+lf_always_submissive = {
+	icon = 39
+}
+
+lf_always_dominant = {
+	icon = 39
+}
+#
+# Immortal related
+#
+
+lf_immortal_sterilized = {
+	icon = 114
+	fertility = -10
+}
+
+#
+# Gypsy virtues
+#
+
+lf_compassion = {
+	icon = 133
+}
+
+lf_sacrifice = {
+	icon = 133
+}
+
+lf_valor = {
+	icon = 133
+}
+
+lf_justice = {
+	icon = 133
+}
+
+lf_honesty = {
+	icon = 133
+}
+
+lf_honor = {
+	icon = 133
+}
+
+lf_spirituality = {
+	icon = 133
+}
+
+lf_humility = {
+	icon = 133
+}
+
+#
+# Magic related
+#
+
+lf_mana_stores = {
+	icon = 79
+}
+
+lf_sparkling = {
+	icon = 79
+	general_opinion = 10
+}
+
+lf_sparkling_vampire = {
+	icon = 79
+	general_opinion = 10
+	female_opinion = 10
+}
+
+# Secret Slut related
+
+lf_secret_slut_visit = {
+	icon = 40
+}
+
+#
+# Vampire Attack
+#
+
+lf_vampire_drained_small = {
+	icon = 42
+	health = -1
+}
+
+lf_vampire_drained_big = {
+	icon = 42
+	health = -2
+}
+
+#
+# Challenge related
+#
+
+lf_lucy_good = {
+	icon = 39
+	diplomacy = 3
+	intrigue = 3
+	stewardship = 3
+	martial = 3
+	learning = 3
+	combat_rating = 5
+}
+
+lf_lucy_bad_1 = {
+	icon = 42
+	diplomacy = -2
+	intrigue = -2
+	stewardship = -2
+	martial = -2
+	learning = -2
+	combat_rating = -3
+}
+
+lf_lucy_bad_2 = {
+	icon = 42
+	diplomacy = -4
+	intrigue = -4
+	stewardship = -4
+	martial = -4
+	learning = -4
+	combat_rating = -15
+}
+
+lf_lucy_bad_3 = {
+	icon = 42
+	diplomacy = -8
+	intrigue = -8
+	stewardship = -8
+	martial = -8
+	learning = -8
+	combat_rating = -30
+}

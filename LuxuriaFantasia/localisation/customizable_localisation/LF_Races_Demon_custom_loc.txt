@@ -1,0 +1,126 @@
+defined_text = {
+	name = GetLilithName
+	
+	text = {
+		localisation_key = LilithJudeoChristianIslam
+		trigger = { 
+			OR = {
+				religion_group = christian
+				religion_group = muslim
+				religion_group = jewish_group
+			}
+			NOT = { culture = irish } # Handled below
+		}
+	}
+	text = {
+		localisation_key = LilithIndian
+		trigger = { 
+			religion_group = indian_group
+			NOT = { religion = taoist } # Handled below
+			NOT = { culture = irish } # Handled below
+		}
+	}
+	text = {
+		localisation_key = LilithNorse
+		trigger = { 
+			OR = {
+				religion = norse_pagan
+				religion = norse_pagan_reformed
+			}
+			NOT = { culture = irish } # Handled below
+		}
+	}
+	text = {
+		localisation_key = LilithFarEastern
+		trigger = {
+			OR = {
+				religion = bon
+				religion = bon_reformed
+				religion = taoist
+			}
+			NOT = { culture = irish } # Handled below
+		}
+	}
+	text = {
+		localisation_key = LilithHellenic
+		trigger = { 
+			OR = {
+				religion = hellenic_pagan
+				religion = hellenic_pagan_reformed
+			}
+			NOT = { culture = irish } # Handled below
+		}
+	}
+	text = {
+		localisation_key = LilithSlavic
+		trigger = { 
+			OR = {
+				religion = slavic_pagan
+				religion = slavic_pagan_reformed
+			}
+			NOT = { culture = irish } # Handled below
+		}
+	}
+	text = {
+		localisation_key = LilithAztec
+		trigger = { 
+			OR = {
+				religion = aztec_pagan
+				religion = aztec_pagan_reformed
+			}
+			NOT = { culture = irish } # Handled below
+		}
+	}
+	text = {
+		localisation_key = LilithIrish
+		trigger = { 
+			culture = irish
+		}
+	}
+	fallback_text = {
+		localisation_key = LilithFallback
+	}
+}
+
+defined_text = {
+	name = GetDemonType
+
+	text = {
+		localisation_key = Succubus
+		trigger = { 
+			trait = lf_demon
+			is_female = yes 
+		}
+	}
+	text = {
+		localisation_key = Incubus
+		trigger = { 
+			trait = lf_demon
+			is_female = no 
+		}
+	}
+	fallback_text = {
+		localisation_key = GenericDemon
+	}
+}
+defined_text = {
+	name = GetHalfDemonType
+
+	text = {
+		localisation_key = AluFiend
+		trigger = { 
+			trait = lf_halfdemon
+			is_female = yes 
+		}
+	}
+	text = {
+		localisation_key = Cambion
+		trigger = { 
+			trait = lf_halfdemon
+			is_female = no 
+		}
+	}
+	fallback_text = {
+		localisation_key = GenericHalfDemon
+	}
+}

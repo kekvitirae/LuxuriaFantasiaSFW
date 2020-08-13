@@ -1,0 +1,9 @@
+modifier_lf_spirit_speaker = {
+	icon = 79
+	learning = 3
+}	
+modifier_lf_many_tailed = {
+	icon = 43
+	learning = 2
+	combat_rating = 5
+}

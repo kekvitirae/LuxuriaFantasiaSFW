@@ -1,0 +1,10 @@
+namespace = LFSexytimesFramework
+
+character_event = {
+	id = LFSexytimesFramework.1
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		character_event = { id = LFSexytimesRouting.1 }
+	}
+}

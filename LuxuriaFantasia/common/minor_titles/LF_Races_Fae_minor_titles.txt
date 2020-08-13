@@ -1,0 +1,268 @@
+#
+# Elves
+#
+
+title_lf_eagles_eye = { # Make your commander buff
+	is_high_prio = no
+	realm_in_name = yes
+	dignity = 0.9
+	grant_limit = 1
+	opinion_effect = 10
+	revoke_allowed = yes
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.2
+
+	allowed_to_hold = {
+		prisoner = no
+		NOT = { trait = incapable }
+		is_adult = yes
+		martial = 12
+		is_elf = yes
+		has_minor_title = title_commander
+		liege = { character = FROM }
+	}
+	
+	allowed_to_grant = {
+		is_elf = yes
+	}
+	revoke_trigger = {
+		
+	}
+
+	gain_effect = {
+		add_character_modifier = {
+			name = modifier_lf_eagles_eye
+			duration = -1
+		}
+	}
+
+	lose_effect = {
+		remove_character_modifier = modifier_lf_eagles_eye
+	}
+	retire_effect = {
+		remove_character_modifier = modifier_lf_eagles_eye
+	}	
+	message = yes
+}
+
+title_lf_owls_wisdom = { # Make your chaplain buff
+	is_high_prio = no
+	realm_in_name = yes
+	dignity = 0.9
+	grant_limit = 1
+	opinion_effect = 10
+	revoke_allowed = yes
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.2
+
+	allowed_to_hold = {
+		prisoner = no
+		NOT = { trait = incapable }
+		learning = 12
+		is_adult = yes
+		is_elf = yes
+		has_job_title = job_spiritual
+		liege = { character = FROM }
+	}
+	
+	allowed_to_grant = {
+		is_elf = yes
+	}
+	revoke_trigger = {
+		
+	}
+
+	gain_effect = {
+		add_character_modifier = {
+			name = modifier_lf_owls_wisdom
+			duration = -1
+		}
+	}
+
+	lose_effect = {
+		remove_character_modifier = modifier_lf_owls_wisdom
+	}
+	retire_effect = {
+		remove_character_modifier = modifier_lf_owls_wisdom
+	}	
+	message = yes
+}
+
+title_lf_foxs_cunning = { # Make your spymaster buff
+	is_high_prio = no
+	realm_in_name = yes
+	dignity = 0.9
+	grant_limit = 1
+	opinion_effect = 10
+	revoke_allowed = yes
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.2
+
+	allowed_to_hold = {
+		prisoner = no
+		NOT = { trait = incapable }
+		intrigue = 12
+		is_elf = yes
+		is_adult = yes
+		has_job_title = job_spymaster
+		liege = { character = FROM }
+	}
+	
+	allowed_to_grant = {
+		is_elf = yes
+	}
+	revoke_trigger = {
+		
+	}
+
+	gain_effect = {
+		add_character_modifier = {
+			name = modifier_lf_foxs_cunning
+			duration = -1
+		}
+	}
+
+	lose_effect = {
+		remove_character_modifier = modifier_lf_foxs_cunning
+	}
+	retire_effect = {
+		remove_character_modifier = modifier_lf_foxs_cunning
+	}	
+	message = yes
+}
+
+title_lf_warlock = { # Orcish demonologists
+	is_high_prio = no
+	realm_in_name = yes
+	dignity = 0.9
+	grant_limit = 1
+	opinion_effect = 10
+	revoke_allowed = yes
+	
+	monthly_prestige = 0.2	
+
+	allowed_to_hold = {
+		prisoner = no
+		learning = 10
+		is_adult = yes
+		NOT = { trait = incapable }
+		is_orc = yes
+		NOR = {
+			trait = lf_demon
+			trait = lf_halfdemon
+		}
+	}
+	
+	allowed_to_grant = {
+		is_orc = yes
+	}
+	revoke_trigger = {
+		
+	}
+
+	gain_effect = {
+		add_trait = lf_halfdemon
+		add_character_modifier = {
+			name = modifier_lf_warlock
+			duration = -1
+		}
+	}
+
+	lose_effect = {
+		remove_trait = lf_halfdemon
+		remove_character_modifier = modifier_lf_warlock
+	}
+	retire_effect = {
+		remove_trait = lf_halfdemon
+		remove_character_modifier = modifier_lf_warlock
+	}	
+	message = yes
+}
+
+title_lf_war_captain = { # War Leader
+	is_high_prio = no
+	realm_in_name = yes
+	dignity = 0.9
+	grant_limit = 1
+	opinion_effect = 10
+	revoke_allowed = yes
+	
+	monthly_prestige = 0.2
+	
+	allowed_to_hold = {
+		prisoner = no
+		is_adult = yes
+		NOT = { trait = incapable }
+		is_orc = yes
+		martial = 10
+	}
+	
+	allowed_to_grant = {
+		is_orc = yes
+	}
+	revoke_trigger = {
+		
+	}
+
+	gain_effect = {
+		add_trait = aggressive_leader
+		add_character_modifier = {
+			name = modifier_lf_war_captain
+			duration = -1
+		}
+	}
+
+	lose_effect = {
+		remove_trait = aggressive_leader
+		remove_character_modifier = modifier_lf_war_captain
+	}
+	retire_effect = {
+		remove_trait = aggressive_leader
+		remove_character_modifier = modifier_lf_war_captain
+	}
+	message = yes
+}
+
+title_lf_peon = { # Peon
+	is_high_prio = no
+	realm_in_name = yes
+	dignity = 0.01
+	grant_limit = 1
+	opinion_effect = -10
+	revoke_allowed = no
+	
+	
+	monthly_prestige = -0.2
+	
+	allowed_to_hold = {
+		prisoner = no
+		is_adult = yes
+		NOT = { trait = incapable }
+		is_orc = yes
+	}
+	
+	allowed_to_grant = {
+		is_orc = yes
+	}
+	revoke_trigger = {
+		always = no
+	}
+
+	gain_effect = {
+		add_character_modifier = {
+			name = modifier_lf_peon
+			duration = -1
+		}
+	}
+
+	lose_effect = {
+		remove_character_modifier = modifier_lf_peon
+	}
+	retire_effect = {
+		remove_character_modifier = modifier_lf_peon
+	}	
+	message = yes
+}

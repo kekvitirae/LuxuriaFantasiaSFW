@@ -1,0 +1,138 @@
+nomad = {
+	lf_kitsune_shrine_nomad = {
+		potential = {
+			lf_has_kitsune = yes
+			OR = {
+				FROM = {
+					is_kitsune = yes
+				}
+				FROMFROM = { has_building = lf_kitsune_shrine_nomad }
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				is_kitsune = yes
+			}
+		}
+		desc = lf_kitsune_shrine_desc
+		add_number_to_name = no # Not necessary with only one version
+		trigger = { FROM = { TECH_CASTLE_CONSTRUCTION = 0 } }
+		gold_cost = 50
+		build_time = 365
+		ai_creation_factor = 50
+		ai_feudal_modifier = 10
+		ai_republic_modifier = 10
+		extra_tech_building_start = 10 # Should prevent any from being pre-built at game start
+		convert_to_castle = lf_castle_kitsune_shrine
+		convert_to_tribal = lf_kitsune_shrine
+		#modifiers provided by the building:
+		liege_piety = 0.25
+		fertility = 0.1 # Hidden alcoves
+	}
+}
+
+tribal = {
+	lf_kitsune_shrine = {
+		potential = {
+			lf_has_kitsune = yes
+			OR = {
+				FROM = {
+					capital_holding = {
+						title = FROMFROM
+					}
+					is_kitsune = yes
+				}
+				FROMFROM = { has_building = lf_kitsune_shrine }
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				capital_holding = {
+					title = FROMFROM
+				}
+				is_kitsune = yes
+			}
+		}
+		desc = lf_kitsune_shrine_desc
+		add_number_to_name = no # Not necessary with only one version
+		trigger = { TECH_CITY_CONSTRUCTION = 0 } # No special technology needs for a basic shrine
+		gold_cost = 50
+		build_time = 365
+		ai_creation_factor = 50
+		ai_feudal_modifier = 10
+		ai_republic_modifier = 10
+		extra_tech_building_start = 10 # Should prevent any from being pre-built at game start
+		convert_to_castle = lf_castle_kitsune_shrine
+		#modifiers provided by the building:
+		liege_piety = 0.25
+		fertility = 0.1 # Hidden alcoves
+	}
+}
+
+castle = {
+	lf_castle_kitsune_shrine = {
+		potential = {
+			lf_has_kitsune = yes
+			OR = {
+				FROM = {
+					capital_holding = {
+						title = FROMFROM
+					}
+					is_kitsune = yes
+				}
+				FROMFROM = { has_building = lf_castle_kitsune_shrine }
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				capital_holding = {
+					title = FROMFROM
+				}
+				is_kitsune = yes
+			}
+		}
+		desc = lf_kitsune_shrine_desc
+		add_number_to_name = no # Not necessary with only one version
+		trigger = { TECH_CITY_CONSTRUCTION = 0 } # No special technology needs for a basic shrine
+		gold_cost = 150
+		build_time = 365
+		ai_creation_factor = 50
+		ai_feudal_modifier = 10
+		ai_republic_modifier = 10
+		extra_tech_building_start = 10 # Should prevent any from being pre-built at game start
+		#modifiers provided by the building:
+		liege_piety = 0.25
+		fertility = 0.1 # Hidden alcoves
+	}
+}
+
+family_palace = {
+	lf_palace_kitsune_shrine = {
+		potential = {
+			lf_has_kitsune = yes
+			OR = {
+				FROM = {
+					is_kitsune = yes
+				}
+				FROMFROM = { has_building = lf_palace_kitsune_shrine }
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				is_kitsune = yes
+			}
+		}
+		desc = lf_kitsune_shrine_desc
+		add_number_to_name = no # Not necessary with only one version
+		trigger = { FROM = { TECH_CITY_CONSTRUCTION = 0 } } # No special technology needs for a basic shrine
+		gold_cost = 150
+		build_time = 760
+		ai_creation_factor = 50
+		ai_feudal_modifier = 10
+		ai_republic_modifier = 10
+		extra_tech_building_start = 10 # Should prevent any from being pre-built at game start
+		#modifiers provided by the building:
+		liege_piety = 0.25
+		fertility = 0.1 # Hidden alcoves
+	}
+}

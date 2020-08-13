@@ -1,0 +1,326 @@
+defined_text = {
+	name = DemonOnOff
+	text = {
+		localisation_key = DemonOn
+		trigger = {
+			has_global_flag = LFDemonOn
+		}
+	}
+	text = {
+		localisation_key = DemonOff
+		trigger = {
+			has_global_flag = LFDemonOff
+		}
+	}
+}
+defined_text = {
+	name = DivineOnOff
+	text = {
+		localisation_key = DivineOn
+		trigger = {
+			has_global_flag = LFDivineOn
+		}
+	}
+	text = {
+		localisation_key = DivineOff
+		trigger = {
+			has_global_flag = LFDivineOff
+		}
+	}
+}
+defined_text = {
+	name = ElfOnOff
+	text = {
+		localisation_key = ElfOn
+		trigger = {
+			has_global_flag = LFElfOn
+		}
+	}
+	text = {
+		localisation_key = ElfOff
+		trigger = {
+			has_global_flag = LFElfOff
+		}
+	}
+}
+defined_text = {
+	name = OrcOnOff
+	text = {
+		localisation_key = OrcOn
+		trigger = {
+			has_global_flag = LFOrcOn
+		}
+	}
+	text = {
+		localisation_key = OrcOff
+		trigger = {
+			has_global_flag = LFOrcOff
+		}
+	}
+}
+defined_text = {
+	name = FairyOnOff
+	text = {
+		localisation_key = FairyOn
+		trigger = {
+			has_global_flag = LFFairyOn
+		}
+	}
+	text = {
+		localisation_key = FairyOff
+		trigger = {
+			has_global_flag = LFFairyOff
+		}
+	}
+}
+defined_text = {
+	name = KitsuneOnOff
+	text = {
+		localisation_key = KitsuneOn
+		trigger = {
+			has_global_flag = LFKitsuneOn
+		}
+	}
+	text = {
+		localisation_key = KitsuneOff
+		trigger = {
+			has_global_flag = LFKitsuneOff
+		}
+	}
+}
+defined_text = {
+	name = NekoOnOff
+	text = {
+		localisation_key = NekoOn
+		trigger = {
+			has_global_flag = LFNekoOn
+		}
+	}
+	text = {
+		localisation_key = NekoOff
+		trigger = {
+			has_global_flag = LFNekoOff
+		}
+	}
+}
+defined_text = {
+	name = ClassicOnOff
+	text = {
+		localisation_key = ClassicOn
+		trigger = {
+			has_global_flag = LFClassicOn
+		}
+	}
+	text = {
+		localisation_key = ClassicOff
+		trigger = {
+			has_global_flag = LFClassicOff
+		}
+	}
+}
+defined_text = {
+	name = BFAttacksOnOff
+	text = {
+		localisation_key = ClassicBFOn
+		trigger = {
+			has_global_flag = LFBFAttacksOn
+		}
+	}
+	text = {
+		localisation_key = ClassicBFOff
+		trigger = {
+			has_global_flag = LFBFAttacksOff
+		}
+	}
+	text = {
+		localisation_key = ClassicBFNoFatal
+		trigger = {
+			has_global_flag = LFBFAttacksNoFatal
+		}
+	}
+}
+defined_text = {
+	name = GenderBendOnOff
+	text = {
+		localisation_key = GenderBendOn
+		trigger = {
+			has_global_flag = LFGenderBendOn
+		}
+	}
+	text = {
+		localisation_key = GenderBendOff
+		trigger = {
+			has_global_flag = LFGenderBendOff
+		}
+	}
+}
+defined_text = {
+	name = SpecialNPCsOnOff
+	text = {
+		localisation_key = SpecialNPCsOn
+		trigger = {
+			has_global_flag = LFSpecialNPCOn
+		}
+	}
+	text = {
+		localisation_key = SpecialNPCsOff
+		trigger = {
+			NOT = { has_global_flag = LFSpecialNPCOn }
+		}
+	}
+}
+defined_text = {
+	name = DragonOnOff
+	text = {
+		localisation_key = DragonOn
+		trigger = {
+			has_global_flag = LFDWSEDragonOn
+		}
+	}
+	text = {
+		localisation_key = DragonOff
+		trigger = {
+			has_global_flag = LFDWSEDragonOff
+		}
+	}
+}
+defined_text = {
+	name = DWERapeOnOff
+	text = {
+		localisation_key = DWERapeNotInstalled
+		trigger = {
+			NOT = { has_global_flag = dark_world_extras_started }
+		}
+	}
+	text = {
+		localisation_key = DWERapeOn
+		trigger = {
+			has_global_flag = dark_world_extras_started
+			has_global_flag = rape_content_yes
+			NOT = { dz_has_dw_dz = yes }
+		}
+	}
+	text = {
+		localisation_key = DWERapeHalf
+		trigger = {
+			has_global_flag = dark_world_extras_started
+			dz_has_dw_dz = yes
+			has_global_flag = rape_content_yes
+		}
+	}
+	text = {
+		localisation_key = DWERapeOff
+		trigger = {
+			has_global_flag = dark_world_extras_started
+			has_global_flag = rape_content_no
+		}
+	}
+}
+defined_text = {
+	name = DWEBeastOnOff
+	text = {
+		localisation_key = DWEBestialityNotInstalled
+		trigger = {
+			NOT = { has_global_flag = dark_world_extras_started }
+		}
+	}
+	text = {
+		localisation_key = DWEBestialityOn
+		trigger = {
+			has_global_flag = dark_world_extras_started
+			has_global_flag = LFBestialityOn
+		}
+	}
+	text = {
+		localisation_key = DWEBestialityOff
+		trigger = {
+			has_global_flag = dark_world_extras_started
+			has_global_flag = LFBestialityOff
+		}
+	}
+}
+
+defined_text = {
+	name = GhostsOnOff
+	text = {
+		localisation_key = GhostsOn
+		trigger = {
+			has_global_flag = LFGhostOn
+		}
+	}
+	text = {
+		localisation_key = GhostsOff
+		trigger = {
+			has_global_flag = LFGhostOff
+		}
+	}
+}
+defined_text = {
+	name = SillyOnOff
+	text = {
+		localisation_key = SillyOn
+		trigger = {
+			has_global_flag = lf_silly_mode
+		}
+	}
+	text = {
+		localisation_key = SillyOff
+		trigger = {
+			NOT = { has_global_flag = lf_silly_mode }
+		}
+	}
+}
+defined_text = {
+	name = FutaEmpireOnOff
+	text = {
+		localisation_key = FutaEmpireOn
+		trigger = {
+			has_global_flag = LFFutaEmpireOn
+		}
+	}
+	text = {
+		localisation_key = FutaEmpireOff
+		trigger = {
+			NOT = { has_global_flag = LFFutaEmpireOn }
+		}
+	}
+}		
+
+defined_text = {
+	name = DWRReplacerOnOff
+	use_first_valid = yes
+	text = {
+		localisation_key = DWRNotInstalled
+		trigger = {
+			NOT = { lf_has_dwr = yes }
+		}
+	}
+	text = {
+		localisation_key = DWRReplacerOff
+		trigger = {
+			lf_has_dwr_no_replacer = yes
+		}
+	}
+	text = {
+		localisation_key = DWRReplacerOn
+		trigger = {
+			lf_has_dwr_replacer = yes
+		}
+	}
+}
+
+defined_text = {
+	name = NSFWOnOff
+	text = {
+		localisation_key = NSFWOn
+		trigger = {
+			has_global_flag = LFNSFWOn
+		}
+	}
+	text = {
+		localisation_key = NSFWOff
+		trigger = {
+			has_global_flag = LFNSFWOff
+		}
+	}
+}

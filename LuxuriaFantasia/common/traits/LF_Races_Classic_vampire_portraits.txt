@@ -1,0 +1,29 @@
+lf_vampire_portrait1 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+
+lf_vampire_portrait2 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+
+lf_vampire_portrait3 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+
+lf_vampire_portrait4 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+
+lf_vampire_desmona_portrait = {
+	hidden = yes
+	random = no
+	customizer = no
+}

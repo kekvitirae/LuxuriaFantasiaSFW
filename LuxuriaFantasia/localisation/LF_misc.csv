@@ -1,0 +1,62 @@
+lf_slaves_sold;Slaves Sold;;;;;;;;;;;;;x
+lf_libram;Libram Bookshelf;;;;;;;;;;;;;x
+lf_magic;Magical Item;;;;;;;;;;;;;x
+has_valid_slavery_location;Has a slavery building in their capital holding or family palace;;;;;;;;;;;;;x
+lf_disease_trigger;Has no major diseases (Ill and Lover's Pox excluded);;;;;;;;;;;;;x
+lf_can_have_sex;§YMust be:§! an adult. §YMust not be:§! a prisoner, a ghost, a non-shapeshifted dragon, a monk or nun, depressed (unless a branded slave), a eunuch, celibate, incapable, inaccessable, inflicted with a major disease (excluding Lover's Pox and Ill), or a special character designed to not have sex.;;;;;;;;;;;;;x
+#
+# Elven Expansion fix
+#
+dwd_maid;(Elven Expansion) Maid;;;;;;;;;;;;;x
+dwd_maid_desc;Not a prestigious job, requiring the servent to cook, clean, or do whatever it is the master desires, but it does pay well.;;;;;;;;;;;;;x
+#
+# EU4
+#
+LFCourt500T;Hunting Accident;;;;;;;;;;;;;x
+LFCourt500;[Root.Heir.GetHerHisCap] body has been draped, by whom you do not know, in a white cloth now stained red by [Root.Heir.GetHerHis] lost vitae. They say [Root.Heir.GetSheHe] was found by [Root.Heir.GetHerHis] horse, in a clearing in the woods. You know the place they speak of. [Root.Heir.GetHerHisCap] face is calm, almost serene. You reach out to touch [Root.Heir.GetHerHim]. The terrible reality of the situation dawns on you. The cold you feel is that of death.;;;;;;;;;;;;;x
+LFCourt500TTA;Sorrow overtakes you.;;;;;;;;;;;;;x
+LFCourt500TTASorrow;Lose §R1§! stability;;;;;;;;;;;;;x
+LFCourt500TTB;Oh well...;;;;;;;;;;;;;x
+LFCourt500TTAOhWell;Lose §R10§! prestige;;;;;;;;;;;;;x
+#
+# Cultures
+#
+lf_fareast_group;Kemonomimi;;;;;;;;;;;;;x
+lf_fae_group;Fae;;;;;;;;;;;;;x
+#
+# CBs
+#
+CB_NAME_LF_RACIAL_DEPOSITION;Racial Deposition War;;;;;;;;;;;;;x
+WAR_NAME_LF_RACIAL_DEPOSITION;$ORDER$$FIRST_ADJ$-$SECOND_ADJ$ War to Depose $DEFENDER$;;;;;;;;;;;;;x
+lf_racial_deposition_war;Racial Deposition War;;;;;;;;;;;;;x
+lf_racial_deposition_war_desc;Our borders are threatened by encroaching races. We are well within our rights to remove this stain from the land and seat one of our race upon the throne.;;;;;;;;;;;;;x
+lf_race_deposition_cb_succ_tip;§Y[From.GetTitledFirstName]§! will relinquish [From.GetHerHis] throne in favor of a more capable ruler.;;;;;;;;;;;;;x
+lf_race_deposition_cb_succ_tip_2;The new ruler of §Y[From.PrimaryTitle.GetName]§! will become your §YTributary§!.;;;;;;;;;;;;;x
+#
+# Om Nom Nom
+#
+lf_consume_power;§YLuxuria§!: Consume [Root.GetFirstName];;;;;;;;;;;;;x
+lf_consume_power_desc;Consume [Root.GetFirstName] for the chance to obtain either a good genetic trait or their bloodline.\n§RThis actions is extremely unpopular and will result in tyranny.§!;;;;;;;;;;;;;x
+LFOmNomNom1;A maid has brought out the remains of [omnomnom_target.GetFirstName] on a platter, and all the guests at the table hush as they stare at me, waiting with morbid horror for me to take the first bite.;;;;;;;;;;;;;x
+LFOmNomNom1TTA;Finally, some good fucking food!;;;;;;;;;;;;;x
+LFOmNomNom1TTB;Delicious.;;;;;;;;;;;;;x
+LFOmNomNomTyrant;All realm characters, except those with evil or hedonistic traits, will look upon you as a tyrant.;;;;;;;;;;;;;x
+#
+# Lootboxes
+#
+lf_claim_lootbox;Buy Lootbox;;;;;;;;;;;;;x
+lf_claim_lootbox_desc;Once per character, you can buy yourself a lootbox that has a chance of containing a random artifact, gold, a special NPC, or something legendary!;;;;;;;;;;;;;x
+LFMisc1;The box of loot has been delivered to your feet, and your mouth salvates at the thought of what could be inside...;;;;;;;;;;;;;x
+LFMisc1TTA;Open it!;;;;;;;;;;;;;x
+LFMisc2A;It contains...\n\nNothing! Sorry, better luck next character!;;;;;;;;;;;;;x
+LFMisc2B;It contains...\n\nLEGENDARY: Bloodline Obtained!;;;;;;;;;;;;;x
+LFMisc2TTA;At least I got a sense of pride and accomplishment.;;;;;;;;;;;;;x
+LFMisc2TTB;OH YES!;;;;;;;;;;;;;x
+lf_loot_bloodline;Bloodline of the Entitled Asshole;;;;;;;;;;;;;x
+lf_loot_bloodline_desc;[This.Founder.GetBestName] bought [This.Founder.GetHerHis] way to power and felt pride and accomplishment. Congratulations.;;;;;;;;;;;;;x
+#
+# Some Idiot
+#
+LFCourt600T;Fear started to creep in...;;;;;;;;;;;;;x
+LFCourt600;My lord, some idiot from the Kingdom of Portugal claiming to be the wind has pinned a letter to the front gates!\n\n------------------\nFear because this ragtag developer built a brand on its own and out of nothing, fear because of its networking abilities were enabling it to find and coordinate talents worldwide, fear because Universo Virtual was delivering milestone after milestone at a meagre price, fear because UV was able to raise the interest of the community while having absolutely nothing to show for almost a year, fear for the nearly unmatched popularity of the dev diaries of Magna Mundi, fear because this upstart company was in effect acting like a producer not a developer, fear for UV’s assertive behaviour when calling Paradox on past promises, fear because out of a slight intended to hurt the capabilities of the team this amateur developer was able to force Paradox hand in surrendering a better renderer, fear because in the only instance Magna Mundi was shown to the mainstream strategy press with any kind of popularity rating, it got to second place out of more than 11000 titles for a day, was in sixth place for a few more days and in fourteenth for about a week, marks that surpassed Paradox flagship titles by far (regarding that batch of previews, best result for Sengoku was 113th, best result for Crusader Kings 2 was 42nd). Fear also for the way it seemed to sense danger and tricks and other low blows. Fear for the unpredictability of its actions or way of thinking no matter the tricks employed to monitor it. Fear.;;;;;;;;;;;;;x
+LFCourt600TTA;What?;;;;;;;;;;;;;x

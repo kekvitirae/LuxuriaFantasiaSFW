@@ -1,0 +1,445 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_trait_dwse_portrait1"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait2"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait3"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait4"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait5"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait6"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait7"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait8"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait9"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait10"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait11"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait12"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait13"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait14"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait15"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait16"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait17"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait18"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait19"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait20"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait21"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait22"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait23"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait24"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait25"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait26"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_dragon_portrait1"
+		texturefile = "gfx/traits/dwse_dragon_adult.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_dragon_portrait2"
+		texturefile = "gfx/traits/dwse_dragon_adult.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_dragon_portrait3"
+		texturefile = "gfx/traits/dwse_dragon_adult.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_dragon_portrait4"
+		texturefile = "gfx/traits/dwse_dragon_adult.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_dragon_portrait5"
+		texturefile = "gfx/traits/dwse_dragon_adult.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_dragon_portrait6"
+		texturefile = "gfx/traits/dwse_dragon_adult.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_dragon_portrait7"
+		texturefile = "gfx/traits/dwse_dragon_adult.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_dragon_portrait8"
+		texturefile = "gfx/traits/dwse_dragon_adult.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_dragon_portrait9"
+		texturefile = "gfx/traits/dwse_dragon_adult.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_dragon_portrait10"
+		texturefile = "gfx/traits/dwse_dragon_adult.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_dragon_portrait11"
+		texturefile = "gfx/traits/dwse_dragon_adult.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_dragon_portrait12"
+		texturefile = "gfx/traits/dwse_dragon_adult.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_dragon_portrait13"
+		texturefile = "gfx/traits/dwse_dragon_adult.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_dragon_portrait14"
+		texturefile = "gfx/traits/dwse_dragon_adult.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_lizard_child1"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_lizard_child2"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait1_cheri"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait2_cheri"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait3_cheri"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait4_cheri"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait5_cheri"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait6_cheri"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait7_cheri"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait8_cheri"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait9_cheri"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait10_cheri"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait11_cheri"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait12_cheri"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait13_cheri"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait14_cheri"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait15_cheri"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait16_cheri"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait17_cheri"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait18_cheri"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait19_cheri"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait20_cheri"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_dwse_portrait21_cheri"
+		texturefile = "gfx/traits/dwse_lizard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	
+}

@@ -1,0 +1,558 @@
+namespace = LFMultiplayer
+
+character_event = {
+	id = LFMultiplayer.101
+	hide_window = yes
+	is_triggered_only = yes # on_chronicle_start
+	trigger = {
+		NOR = {
+			is_save_game = yes
+			has_global_flag = lf_multiplayer_race_chosen
+			has_global_flag = lf_singleplayer_setup_done
+		}
+	}
+	immediate = {
+		long_character_event = { id = LFFuta.1 days = 3 }
+		narrative_event = { id = LFMultiplayer.1 days = 2}
+	}
+}
+
+narrative_event = {
+	id = LFMultiplayer.1
+	ai = no
+	desc = LFMultiplayer1
+	picture = lf_lilith_sfw
+	title = LFMultiplayerTitle
+	is_triggered_only = yes
+	trigger = {
+		NOR = {
+			has_global_flag = house_irae_started_halfelf_campaign
+			has_global_flag = house_irae_started_drow_campaign
+		}
+	}
+	option = {
+		name = LFRemainHuman
+		if = {
+			limit = {
+				multiplayer = yes
+			}
+			set_global_flag = lf_multiplayer_race_chosen
+		}
+		else = {
+			set_global_flag = lf_singleplayer_setup_done
+		}
+		custom_tooltip = {
+			text = LFMultiplayerRaceLockOnTooltip
+		}
+	}
+	option = {
+		name = LFHHNotInstalled
+		trigger = {
+			NOR = { 
+				lf_has_demons = yes 
+				lf_has_divines = yes
+			}
+		}
+		narrative_event = { id = LFMultiplayer.1 }
+	}
+	option = { # H&H
+		name = LFHHChoice
+		trigger = {
+			OR = { 
+				lf_has_demons = yes 
+				lf_has_divines = yes
+			}
+		}
+		narrative_event = { id = LFMultiplayer.3 }
+	}
+	option = {
+		name = LFFaeNotInstalled
+		trigger = {
+			NOR = { 
+				lf_has_elves = yes 
+				lf_has_orcs = yes
+				lf_has_fairies = yes
+			}
+		}
+		narrative_event = { id = LFMultiplayer.1 }
+	}
+	option = { # Fae
+		name = LFFaeChoice
+		trigger = {
+			OR = { 
+				lf_has_elves = yes 
+				lf_has_orcs = yes
+				lf_has_fairies = yes
+			}
+		}
+		narrative_event = { id = LFMultiplayer.4 }
+	}
+	option = { # Next page
+		name = LFMultiplayerNextPage
+		narrative_event = { id = LFMultiplayer.2 }
+	}
+}
+	
+narrative_event = {
+	id = LFMultiplayer.2
+	desc = LFMultiplayer1
+	picture = lf_lilith_sfw
+	title = LFMultiplayerTitle
+	is_triggered_only = yes # Triggered by targetted decision
+	option = {
+		name = LFFarEastNotInstalled
+		trigger = {
+			NOR = { 
+				lf_has_kitsune = yes 
+				lf_has_nekos = yes
+			}
+		}
+		narrative_event = { id = LFMultiplayer.1 }
+	}
+	option = { # Far East
+		name = LFFarEastChoice
+		trigger = {
+			OR = { 
+				lf_has_kitsune = yes 
+				lf_has_nekos = yes
+			}
+		}
+		narrative_event = { id = LFMultiplayer.5 }
+	}
+	option = {
+		name = LFDWSENotInstalled
+		trigger = {
+			NOT = { lf_races_dwse_active = yes }
+		}
+		narrative_event = { id = LFMultiplayer.1 }
+	}
+	option = {
+		name = LFDWSEChoice
+		trigger = {
+			lf_races_dwse_active = yes
+		}
+		narrative_event = { id = LFMultiplayer.7 }
+	}
+	option = {
+		name = LFTaurChoice
+		tooltip_info_custom = LFTaurChoiceSilly
+		trigger = {
+			lf_is_silly = yes
+		}
+		if = {
+			limit = {
+				multiplayer = yes
+			}
+			set_global_flag = lf_multiplayer_race_chosen
+		}
+		else = {
+			set_global_flag = lf_singleplayer_setup_done
+		}
+		narrative_event = { id = LFTaurtaur.1 }
+		custom_tooltip = {
+			text = LFMultiplayerRaceLockOnTooltip
+		}
+	}
+	option = { # First page
+		name = LFMultiplayerGoBack
+		narrative_event = { id = LFMultiplayer.1 }
+	}
+}
+
+#
+# Heaven or Hell
+#	
+narrative_event = {
+	id = LFMultiplayer.3
+	title = LFMultiplayer3
+	desc = LFMultiplayer1
+	picture = lf_lilith_sfw
+	is_triggered_only = yes
+
+	option = { # Cambion
+		name = LFMultiplayer1AMale
+		trigger = {
+			lf_has_demons = yes
+			is_female = no
+		}
+		hidden_tooltip = {
+			any_realm_character = {
+				lf_remove_race = yes
+				lf_remove_all_portraits = yes
+				lf_remove_blood_feud = yes
+			}
+		}
+		narrative_event = { id = LFDemons.10 }
+		if = {
+			limit = {
+				multiplayer = yes
+			}
+			set_global_flag = lf_multiplayer_race_chosen
+		}
+		else = {
+			set_global_flag = lf_singleplayer_setup_done
+		}
+		custom_tooltip = {
+			text = LFMultiplayerDemonTooltip
+		}
+		custom_tooltip = {
+			text = LFMultiplayerRaceLockOnTooltip
+		}
+	}
+	option = { # Alu-fiend
+		name = LFMultiplayer1AFemale
+		trigger = {
+			lf_has_demons = yes
+			is_female = yes
+		}
+		hidden_tooltip = {
+			any_realm_character = {
+				lf_remove_race = yes
+				lf_remove_all_portraits = yes
+				lf_remove_blood_feud = yes
+			}
+		}
+		narrative_event = { id = LFDemons.10 }
+		if = {
+			limit = {
+				multiplayer = yes
+			}
+			set_global_flag = lf_multiplayer_race_chosen
+		}
+		else = {
+			set_global_flag = lf_singleplayer_setup_done
+		}
+		custom_tooltip = {
+			text = LFMultiplayerDemonTooltip
+		}
+		custom_tooltip = {
+			text = LFMultiplayerRaceLockOnTooltip
+		}
+	}
+	option = { # Divines
+		name = LFMultiplayer1B
+		trigger = {
+			lf_has_divines = yes
+		}
+		hidden_tooltip = {
+			any_realm_character = {
+				lf_remove_race = yes
+				lf_remove_all_portraits = yes
+				lf_remove_blood_feud = yes
+			}
+		}
+		narrative_event = { id = LF_Divine.10 }
+		if = {
+			limit = {
+				multiplayer = yes
+			}
+			set_global_flag = lf_multiplayer_race_chosen
+		}
+		else = {
+			set_global_flag = lf_singleplayer_setup_done
+		}
+		custom_tooltip = {
+			text = LFMultiplayerLynnessWarningTooltip
+		}
+		custom_tooltip = {
+			text = LFMultiplayerRaceLockOnTooltip
+		}
+	}
+	option = { # First page
+		name = LFMultiplayerGoBack
+		narrative_event = { id = LFMultiplayer.1 }
+	}
+}	
+
+#
+# Fae
+#
+
+narrative_event = {
+	id = LFMultiplayer.4
+	title = LFMultiplayer4
+	desc = LFMultiplayer1
+	picture = fairies_dancing
+	is_triggered_only = yes
+
+	option = { # Elf
+		name = LFMultiplayer2B
+		trigger = {
+			lf_has_elves = yes
+		}
+		hidden_tooltip = {
+			any_realm_character = {
+				lf_remove_race = yes
+				lf_remove_all_portraits = yes
+				lf_remove_blood_feud = yes
+			}
+		}
+		narrative_event = { id = LF_Elf.10 }
+		if = {
+			limit = {
+				multiplayer = yes
+			}
+			set_global_flag = lf_multiplayer_race_chosen
+		}
+		else = {
+			set_global_flag = lf_singleplayer_setup_done
+		}
+		custom_tooltip = {
+			text = LFMultiplayerRaceLockOnTooltip
+		}
+	}
+	option = { # Orc
+		name = LFMultiplayer2C
+		trigger = {
+			lf_has_orcs = yes
+		}
+		hidden_tooltip = {
+			any_realm_character = {
+				lf_remove_race = yes
+				lf_remove_all_portraits = yes
+				lf_remove_blood_feud = yes
+			}
+		}
+		narrative_event = { id = LF_Orc.10 }
+		if = {
+			limit = {
+				multiplayer = yes
+			}
+			set_global_flag = lf_multiplayer_race_chosen
+		}
+		else = {
+			set_global_flag = lf_singleplayer_setup_done
+		}
+		custom_tooltip = {
+			text = LFMultiplayerRaceLockOnTooltip
+		}
+	}
+	option = { # Fairy
+		name = LFMultiplayer3A
+		trigger = {
+			lf_has_fairies = yes
+		}
+		hidden_tooltip = {
+			any_realm_character = {
+				lf_remove_race = yes
+				lf_remove_all_portraits = yes
+				lf_remove_blood_feud = yes
+			}
+		}
+		narrative_event = { id = LF_Fairy.2 }
+		if = {
+			limit = {
+				multiplayer = yes
+			}
+			set_global_flag = lf_multiplayer_race_chosen
+		}
+		else = {
+			set_global_flag = lf_singleplayer_setup_done
+		}
+		custom_tooltip = {
+			text = LFMultiplayerRaceLockOnTooltip
+		}
+	}
+	option = { # First page
+		name = LFMultiplayerGoBack
+		narrative_event = { id = LFMultiplayer.1 }
+	}
+}
+
+#
+# Far East
+#
+
+narrative_event = {
+	id = LFMultiplayer.5
+	title = LFMultiplayer6
+	desc = LFMultiplayer1
+	picture = lf_kitsune_start_female
+	is_triggered_only = yes
+
+	option = { # Kitsune
+		name = LFMultiplayer1C
+		trigger = {
+			lf_has_kitsune = yes
+		}
+		hidden_tooltip = {
+			any_realm_character = {
+				lf_remove_race = yes
+				lf_remove_all_portraits = yes
+				lf_remove_blood_feud = yes
+			}
+		}
+		narrative_event = { id = LFKitsune.10 }
+		if = {
+			limit = {
+				multiplayer = yes
+			}
+			set_global_flag = lf_multiplayer_race_chosen
+		}
+		else = {
+			set_global_flag = lf_singleplayer_setup_done
+		}
+	}
+	option = { # Neko
+		name = LFMultiplayer2A
+		trigger = {
+			lf_has_nekos = yes
+		}
+		hidden_tooltip = {
+			any_realm_character = {
+				lf_remove_race = yes
+				lf_remove_all_portraits = yes
+				lf_remove_blood_feud = yes
+			}
+		}
+		narrative_event = { id = LFNeko.10 }
+		if = {
+			limit = {
+				multiplayer = yes
+			}
+			set_global_flag = lf_multiplayer_race_chosen
+		}
+		else = {
+			set_global_flag = lf_singleplayer_setup_done
+		}
+	}
+	option = { # First page
+		name = LFMultiplayerGoBack
+		narrative_event = { id = LFMultiplayer.1 }
+	}
+}
+
+#
+# DWSE
+#
+
+narrative_event = {
+	id = LFMultiplayer.7
+	desc = LFMultiplayer1
+	title = LFMultiplayer7
+	picture = dragon_flight
+	is_triggered_only = yes
+	option = { # Half-dragon
+		name = LFMultiplayer4BAura
+		trigger = {
+			lf_races_dwse_active = yes
+		}
+		hidden_tooltip = {
+			any_realm_character = {
+				lf_remove_race = yes
+				lf_remove_all_portraits = yes
+				lf_remove_blood_feud = yes
+			}
+		}
+		narrative_event = { id = dwseliz.13 }
+		if = {
+			limit = {
+				multiplayer = yes
+			}
+			set_global_flag = lf_multiplayer_race_chosen
+		}
+		else = {
+			set_global_flag = lf_singleplayer_setup_done
+		}
+		custom_tooltip = {
+			text = LFMultiplayerRaceLockOnTooltip
+		}
+	}
+	option = { # Dragon
+		name = LFMultiplayer4BDragon
+		trigger = {
+			lf_races_dwse_active = yes
+		}
+		hidden_tooltip = {
+			any_realm_character = {
+				lf_remove_race = yes
+				lf_remove_all_portraits = yes
+				lf_remove_blood_feud = yes
+			}
+		}
+		narrative_event = { id = dwseliz.12 }
+		if = {
+			limit = {
+				multiplayer = yes
+			}
+			set_global_flag = lf_multiplayer_race_chosen
+		}
+		else = {
+			set_global_flag = lf_singleplayer_setup_done
+		}
+		custom_tooltip = {
+			text = LFMultiplayerRaceLockOnTooltip
+		}
+	}
+	option = { # First page
+		name = LFMultiplayerGoBack
+		narrative_event = { id = LFMultiplayer.1 }
+	}
+}
+
+#
+# Culture conversion
+#
+
+character_event = {
+	id = LFMultiplayer.1000
+	picture = lf_gypsy_small
+	desc = LF_Race_Convert_Culture
+	is_triggered_only = yes
+	trigger = {
+		NOT = { is_nomadic = yes }
+	}
+	option = { # Only yourself
+		name = LF_Race_Convert_Self
+		lf_change_culture_self = yes
+	}
+	option = { # Yourself and your province(s)
+		name = LF_Race_Convert_Provinces
+		custom_tooltip = {
+			text = LFAllRealmProvincesCulture
+			any_demesne_province = {
+				limit = {
+					culture = ROOT
+				}
+				lf_change_culture_province = yes
+			}
+			lf_change_culture_self = yes
+		}
+	}
+	option = { # Everyone
+		name = LF_Race_Convert_Everything
+		custom_tooltip = {
+			text = LFAllCulture
+			any_demesne_province = {
+				limit = {
+					culture = ROOT
+				}
+				lf_change_culture_province = yes
+			}
+			hidden_tooltip = {
+				any_realm_character = {
+					limit = {
+						culture = ROOT
+					}
+					lf_change_culture_self = yes
+					if = {
+						limit = {
+							is_ruler = yes
+							same_realm = ROOT
+						}
+						any_demesne_province = {
+							limit = {
+								culture = ROOT
+							}
+							lf_change_culture_province = yes
+						}
+					}
+				}
+			}
+			lf_change_culture_self = yes
+		}
+	}
+	option = { # Remain as you are
+		name = LF_Race_Convert_Nothing
+	}
+}

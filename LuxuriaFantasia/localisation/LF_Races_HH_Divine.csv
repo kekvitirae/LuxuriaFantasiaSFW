@@ -1,0 +1,22 @@
+lf_angel_bf;Divine (§RBlood Feud§!);;;;;;;;;;;;;x
+lf_angel_bf_desc;This character's blood pulses with divine energy from the heavens themselves.;;;;;;;;;;;;;x
+lf_fallen_angel_bf;Fallen (§RBlood Feud§!);;;;;;;;;;;;;x
+lf_fallen_angel_bf_desc;Once a noble Divine, this character has fallen from grace and now lives with the stain of sin.\n§GAll actions available to full-blooded Demons are open to the Fallen.§!;;;;;;;;;;;;;x
+lf_angel;Divine;;;;;;;;;;;;;x
+lf_angel_desc;This character's blood pulses with divine energy from the heavens themselves.;;;;;;;;;;;;;x
+lf_fallen_angel;Fallen;;;;;;;;;;;;;x
+lf_fallen_angel_desc;Once a noble Divine, this character has fallen from grace and now lives with the stain of sin.\n§GAll actions available to full-blooded Demons are open to the Fallen.§!;;;;;;;;;;;;;x
+lf_divine_start_title;Divine Inspiration;;;;;;;;;;;;;x
+LF_Divine10;The voice has always been there when I listened. Soothing, caring, guiding. I don't know when it was exactly, but as I grew older I realized it was the Word of [Root.Religion.GetHighGodName] that was coming through to me. \n  There is occasionally periods of friction, as not all believe me at first, yet over time they come to see the light of my convictions. As I grew, I sought not to rule over others, yet circumstance and acceptance seemed to put me in such a place. \n  That's when I realized my becoming a ruler was [Root.Religion.GetHighGodName]'s plan for me all along. For who better to spread the light and fight back the darkness that seeks to spread across the land. \n  I accept the burden of being a ruler, as I'm basked in divine glory and warmth. I shall not falter. I shall be the mortal beacon on this world.;;;;;;;;;;;;;x
+LF_Divine10A;My will is the will of [Root.Religion.GetHighGodName].;;;;;;;;;;;;;x
+LF_Divine10B;Our will is the will of [Root.Religion.GetHighGodName].;;;;;;;;;;;;;x
+LFDivine100;After what feels like a lifetime of indulging in sin, you begin to reflect on if you really are divine or not.;;;;;;;;;;;;;x
+LFDivine100TTA;Sin is too much fun to give us!;;;;;;;;;;;;;x
+LFDivine100TTATooltip;[Root.Religion.GetHighGodName] has looked down on you and judged you unworthy.;;;;;;;;;;;;;x
+LFDivine100TTB;I must redouble my efforts.;;;;;;;;;;;;;x
+LFDivine100TTBTooltip;[Root.Religion.GetHighGodName] has looked down on you and judged you worthy of a second chance.;;;;;;;;;;;;;x
+LFDivine101;After what feels like a lifetime of abstaining from sin, you begin to reflect on if you really want to return to grace.;;;;;;;;;;;;;x
+LFDivine101TTA;I never wanted to consort with demons. ;;;;;;;;;;;;;x
+LFDivine101TTATooltip;[Root.Religion.GetHighGodName] has looked down on you and judged you worthy of a second chance.;;;;;;;;;;;;;x
+LFDivine101TTB;Bah! This is too much fun!;;;;;;;;;;;;;x
+LFDivine101TTBTooltip;[Root.Religion.GetHighGodName] has looked down on you and judged you unworthy.;;;;;;;;;;;;;x

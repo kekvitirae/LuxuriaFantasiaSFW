@@ -1,0 +1,352 @@
+Fort = {
+	dwse_garrison_guard= {
+		desc = "dwse_garrison_guard_desc"
+		add_number_to_name = no
+		trigger = { always = yes }
+		gold_cost = 50
+		build_time = 90
+		ai_creation_factor = 20
+		extra_tech_building_start = 10
+		garrison_size = 3
+		tax_income = -0.5
+	}
+}
+
+nomad = {
+	dwse_dragon_roost_nomad = {
+		desc = "dwse_dragon_roost_desc"
+		potential = {
+			lf_races_dwse_active = yes
+		}
+		add_number_to_name = no
+		trigger = { FROM = { TECH_CASTLE_CONSTRUCTION = 0 } }
+		convert_to_castle = dwse_dragon_roost_castle
+		convert_to_tribal = dwse_dragon_roost_tribal
+		gold_cost = 100
+		build_time = 365
+		ai_creation_factor = 20
+		land_morale = 0.05
+		monthly_character_piety = -0.05
+		extra_tech_building_start = 10
+	}
+	dwse_dragon_weyr_nomad = {
+		desc = "dwse_dragon_weyr_desc"
+		potential = {
+			lf_races_dwse_active = yes
+		}
+		add_number_to_name = no
+		trigger = { FROM = { TECH_CASTLE_CONSTRUCTION = 0 } }
+		convert_to_castle = dwse_dragon_weyr_castle
+		convert_to_tribal = dwse_dragon_weyr_tribal
+		gold_cost = 200
+		build_time = 365
+		ai_creation_factor = 20
+		extra_tech_building_start = 10
+		garrison_size = 0.1
+		nomad_tax_modifier = 0.05
+		monthly_character_prestige = 0.5
+	}
+	dwse_lizard_nest_nomad = {
+		desc = "dwse_lizard_nest_desc"
+		potential = {
+			lf_races_dwse_active = yes
+		}
+		add_number_to_name = no
+		trigger = { FROM = { TECH_CASTLE_CONSTRUCTION = 0 } }
+		convert_to_castle = dwse_lizard_nest_castle
+		convert_to_tribal = dwse_lizard_nest_tribal
+		gold_cost = 150
+		build_time = 90
+		ai_creation_factor = 20
+		extra_tech_building_start = 10
+		population_growth = 0.02
+		fertility = 0.05
+		sex_appeal_opinion = 2
+	}
+}
+
+tribal = {
+	dwse_dragon_roost_tribal = {
+		desc = "dwse_dragon_roost_desc"
+		potential = {
+			lf_races_dwse_active = yes
+			OR = {
+				FROM = {
+					capital_holding = {
+						title = FROMFROM
+					}
+					higher_tier_than = COUNT
+				}
+				FROMFROM = { has_building = dwse_dragon_roost_tribal }
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				capital_holding = {
+					title = FROMFROM
+				}
+				higher_tier_than = COUNT
+			}
+		}
+		add_number_to_name = no
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		convert_to_castle = dwse_dragon_roost_castle
+		gold_cost = 100
+		build_time = 365
+		ai_creation_factor = 20
+		tax_income = 2
+		monthly_character_piety = -0.05
+		extra_tech_building_start = 10
+	}
+	dwse_dragon_weyr_tribal = {
+		desc = "dwse_dragon_weyr_desc"
+		potential = {
+			lf_races_dwse_active = yes
+			OR = {
+				FROM = {
+					capital_holding = {
+						title = FROMFROM
+					}
+					higher_tier_than = COUNT
+				}
+				FROMFROM = { has_building = dwse_dragon_weyr_tribal }
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				capital_holding = {
+					title = FROMFROM
+				}
+				higher_tier_than = COUNT
+			}
+		}
+		add_number_to_name = no
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		convert_to_castle = dwse_dragon_weyr_castle
+		gold_cost = 200
+		build_time = 365
+		ai_creation_factor = 20
+		extra_tech_building_start = 10
+		garrison_size = 0.1
+		local_tax_modifier = 0.05
+		monthly_character_prestige = 0.5
+	}
+	dwse_lizard_nest_tribal = {
+		desc = "dwse_lizard_nest_desc"
+		potential = {
+			lf_races_dwse_active = yes
+			OR = {
+				FROM = {
+					capital_holding = {
+						title = FROMFROM
+					}
+				}
+				FROMFROM = { has_building = dwse_lizard_nest_tribal }
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+		add_number_to_name = no
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		convert_to_castle = dwse_lizard_nest_castle
+		gold_cost = 50
+		build_time = 90
+		ai_creation_factor = 20
+		extra_tech_building_start = 10
+		fertility = 0.05
+		sex_appeal_opinion = 2
+	}
+}
+
+castle = {
+	dwse_dragon_roost_castle = {
+		desc = "dwse_dragon_roost_desc"
+		potential = {
+			lf_races_dwse_active = yes
+			OR = {
+				FROM = {
+					capital_holding = {
+						title = FROMFROM
+					}
+					higher_tier_than = COUNT
+				}
+				FROMFROM = { has_building = dwse_dragon_roost_castle }
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				capital_holding = {
+					title = FROMFROM
+				}
+				higher_tier_than = COUNT
+			}
+		}
+		add_number_to_name = no
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		gold_cost = 100
+		build_time = 365
+		ai_creation_factor = 20
+		tax_income = 2
+		monthly_character_piety = -0.05
+		extra_tech_building_start = 10
+	}
+	dwse_dragon_weyr_castle = {
+		desc = "dwse_dragon_weyr_desc"
+		potential = {
+			lf_races_dwse_active = yes
+			OR = {
+				FROM = {
+					capital_holding = {
+						title = FROMFROM
+					}
+					higher_tier_than = COUNT
+				}
+				FROMFROM = { has_building = dwse_dragon_weyr_castle }
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				capital_holding = {
+					title = FROMFROM
+				}
+				higher_tier_than = COUNT
+			}
+		}
+		add_number_to_name = no
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		gold_cost = 200
+		build_time = 365
+		ai_creation_factor = 20
+		extra_tech_building_start = 10
+		garrison_size = 0.1
+		local_tax_modifier = 0.05
+		monthly_character_prestige = 0.5
+	}
+	dwse_lizard_nest_castle = {
+		desc = "dwse_lizard_nest_desc"
+		potential = {
+			lf_races_dwse_active = yes
+			OR = {
+				FROM = {
+					capital_holding = {
+						title = FROMFROM
+					}
+				}
+				FROMFROM = { has_building = dwse_lizard_nest_castle }
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+		add_number_to_name = no
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		gold_cost = 50
+		build_time = 90
+		ai_creation_factor = 20
+		extra_tech_building_start = 10
+		fertility = 0.05
+		sex_appeal_opinion = 2
+	}
+}
+
+family_palace = {
+	dwse_dragon_roost_palace = {
+		desc = "dwse_dragon_roost_desc"
+		potential = {
+			lf_races_dwse_active = yes
+		}
+		add_number_to_name = no
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		gold_cost = 200
+		build_time = 760
+		ai_creation_factor = 20
+		tax_income = 6
+		monthly_character_piety = -0.1
+		extra_tech_building_start = 10
+	}
+	dwse_dragon_weyr_palace = {
+		desc = "dwse_dragon_weyr_desc"
+		potential = {
+			lf_races_dwse_active = yes
+		}
+		add_number_to_name = no
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		gold_cost = 200
+		build_time = 760
+		ai_creation_factor = 20
+		extra_tech_building_start = 10
+		garrison_size = 0.2
+		local_tax_modifier = 0.1
+		monthly_character_prestige = 1
+	}
+	dwse_lizard_nest_palace = {
+		desc = "dwse_lizard_nest_desc"
+		potential = {
+			lf_races_dwse_active = yes
+		}
+		add_number_to_name = no
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		gold_cost = 200
+		build_time = 760
+		ai_creation_factor = 20
+		extra_tech_building_start = 10
+		fertility = 0.2
+		sex_appeal_opinion = 10
+	}
+}
+
+city = {
+	dwse_dawn_merchant_city = {
+		desc = "dwse_dawn_merchant"
+		potential = {
+			culture = dwse_dawn
+			port = yes
+		}
+		add_number_to_name = yes
+		gold_cost = 100
+		build_time = 365
+		ai_creation_factor = 20
+		local_tax_modifier = 0.1
+		galleys = 10
+		extra_tech_building_start = 10
+	}
+	dwse_dawn_merchant_city2 = {
+		desc = "dwse_dawn_merchant2"
+		potential = {
+			culture = dwse_dawn
+			port = yes
+		}
+		add_number_to_name = yes
+		gold_cost = 100
+		build_time = 730
+		upgrades_from = dwse_dawn_merchant_city
+		ai_creation_factor = 20
+		local_tax_modifier = 0.1
+		galleys = 10
+		extra_tech_building_start = 10
+	}
+	dwse_dawn_merchant_city3 = {
+		desc = "dwse_dawn_merchant3"
+		potential = {
+			culture = dwse_dawn
+			port = yes
+		}
+		add_number_to_name = yes
+		gold_cost = 100
+		build_time = 1095
+		upgrades_from = dwse_dawn_merchant_city2
+		ai_creation_factor = 20
+		local_tax_modifier = 0.1
+		galleys = 10
+		extra_tech_building_start = 10
+	}
+}

@@ -1,0 +1,259 @@
+## Vanilla slots
+slots = {
+	lf_libram = 3
+	lf_virtue = 1
+	lf_magic_item = 1
+}
+
+# Sex books
+lf_kama_sutra = {
+	quality = 1
+	flags = { luxuria book sexytimes }
+	stacking = no
+	picture = "GFX_book"
+	slot = lf_libram
+	active = { 
+		is_adult = yes
+	}
+}
+
+# Spellbooks
+lf_spellbook = {
+	quality = 1
+	flags = { luxuria book magic curse chinese irae spellbook }
+	stacking = no
+	picture = "GFX_book"
+	slot = lf_libram
+	active = { 
+		is_adult = yes
+		trait = lf_mage
+	}
+	allowed_gift = {
+		always = no
+	}	
+}
+
+# Gypsy items
+lf_humility_artifact = {
+	quality = 1
+	flags = { luxuria virtue curse chinese irae }
+	stacking = no
+	picture = "lf_humility_artifact"
+	slot = lf_virtue
+	active = {
+		has_character_modifier = lf_humility
+	}
+	allowed_gift = {
+		always = no
+	}
+}
+
+lf_spirituality_artifact = {
+	quality = 1
+	flags = { luxuria virtue curse chinese irae }
+	stacking = no
+	picture = "lf_spirituality_artifact"
+	slot = lf_virtue
+	active = {
+		has_character_modifier = lf_spirituality
+	}
+	allowed_gift = {
+		always = no
+	}
+}
+
+lf_honesty_artifact = {
+	quality = 1
+	flags = { luxuria virtue curse chinese irae }
+	stacking = no
+	picture = "GFX_prosthetic_hand_gold"
+	slot = lf_virtue
+	active = {
+		has_character_modifier = lf_honesty
+	}
+	allowed_gift = {
+		always = no
+	}
+}
+
+lf_honor_artifact = {
+	quality = 1
+	flags = { luxuria virtue curse chinese irae }
+	stacking = no
+	picture = "GFX_cup_fancy"
+	slot = lf_virtue
+	active = {
+		has_character_modifier = lf_honor
+	}
+	allowed_gift = {
+		always = no
+	}
+}
+
+lf_compassion_artifact = {
+	quality = 1
+	flags = { luxuria virtue curse chinese irae }
+	stacking = no
+	picture = "lf_compassion_artifact"
+	slot = lf_virtue
+	active = {
+		has_character_modifier = lf_compassion
+	}
+	allowed_gift = {
+		always = no
+	}
+}
+
+lf_sacrifice_artifact = {
+	quality = 1
+	flags = { luxuria virtue curse chinese irae }
+	stacking = no
+	picture = "lf_sacrifice_artifact"
+	slot = lf_virtue
+	active = {
+		has_character_modifier = lf_sacrifice
+	}
+	allowed_gift = {
+		always = no
+	}
+}
+
+lf_valor_artifact = {
+	quality = 1
+	flags = { luxuria virtue curse chinese irae }
+	stacking = no
+	picture = "GFX_sword"
+	slot = lf_virtue
+	active = {
+		has_character_modifier = lf_valor
+	}
+	allowed_gift = {
+		always = no
+	}
+}
+
+lf_justice_artifact = {
+	quality = 1
+	flags = { luxuria virtue curse chinese irae }
+	stacking = no
+	picture = "lf_justice_artifact"
+	slot = lf_virtue
+	active = {
+		has_character_modifier = lf_justice
+	}
+	allowed_gift = {
+		always = no
+	}
+}
+
+#
+# Custom Religion
+#
+
+lf_crown_custom = { 
+	monthly_character_prestige = 0.4
+	monthly_character_piety = 0.7
+	stewardship = 2
+	martial = 2
+	tribal_opinion = 10
+	quality = 4
+	active = { 
+		has_landed_title = d_lf_luxuria_custom_reformed
+	}
+	flags = { religious unique crown jewelry crown_jewel }
+	picture = "GFX_crown_fylkir"
+	slot = crown
+	stacking = no
+	indestructible = yes
+	allowed_gift = {
+		always = no
+	}
+}
+
+# Random shit
+
+lf_amulet_nondetection = {
+	quality = 2
+	intrigue = 2
+	defensive_plot_power_modifier = 0.1
+	flags = { luxuria curse chinese irae }
+	stacking = no
+	picture = "GFX_necklace_of_radiance"
+	slot = lf_magic_item
+	allowed_gift = {
+		always = no
+	}
+}
+
+lf_pirate_booty = {
+	quality = 3
+	diplomacy = 4
+	sex_appeal_opinion = 10
+	flags = { luxuria curse chinese irae }
+	stacking = no
+	picture = "GFX_lf_pirate_booty"
+	slot = lf_magic_item
+	allowed_gift = {
+		always = no
+	}
+	active = { 
+		is_female = yes
+	}
+}
+
+lf_ring_protection = {
+	quality = 2
+	martial = 1
+	combat_rating = 5
+	health = 1
+	flags = { luxuria curse chinese irae }
+	stacking = no
+	picture = "GFX_bracelet_jeweled_gold"
+	slot = lf_magic_item
+	allowed_gift = {
+		always = no
+	}
+}
+
+lf_elven_quiver = {
+	quality = 2
+	intrigue = 4
+	siege_defence = 0.1
+	siege_speed = 0.1
+	flags = { luxuria curse chinese irae }
+	stacking = no
+	picture = "GFX_silent_wind"
+	slot = lf_magic_item
+	allowed_gift = {
+		always = no
+	}
+}
+
+lf_orcish_bracers = {
+	quality = 2
+	martial = 4
+	combat_rating = 10
+	flags = { luxuria curse chinese irae }
+	stacking = no
+	picture = "GFX_bracelet_jeweled_gold"
+	slot = lf_magic_item
+	allowed_gift = {
+		always = no
+	}
+}
+
+lf_lightsaber = {
+	quality = 2
+	combat_rating = 10
+	land_morale = 0.1
+	land_organisation = 0.1
+	flags = { luxuria curse chinese irae combat_weapon sword }
+	stacking = no
+	picture = "GFX_sword_T3_glow_red"
+	slot = lf_magic_item
+	allowed_gift = {
+		always = no
+	}
+}
+
+

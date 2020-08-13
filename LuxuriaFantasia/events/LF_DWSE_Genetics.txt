@@ -1,0 +1,187 @@
+namespace = LF_DWSE_Genetics
+
+character_event = { # on_birth event for dragons
+	id = LF_DWSE_Genetics.1
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			mother = {
+				OR = {
+					trait = dwse_dragon_adult
+					AND = {
+						trait = dwse_lizard
+						NOT = { trait = dwse_lizard_pregnancy }
+					}
+				}
+			}
+			true_father_even_if_dead = {
+				OR = {
+					trait = dwse_dragon_adult
+					trait = dwse_lizard
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		if = { # Both parents are dragons
+			limit = {
+				mother = {
+					trait = dwse_dragon_adult
+				}
+				true_father_even_if_dead = {
+					trait = dwse_dragon_adult
+				}
+			}
+			add_trait = dwse_dragon_child
+			character_event = { id = LF_Core_Genetics.2 }
+		}
+		else_if = { # Halfblood/dragon
+			limit = {
+				OR = {
+					AND = {
+						mother = {
+							trait = dwse_lizard
+						}
+						true_father_even_if_dead = {
+							trait = dwse_dragon_adult
+						}
+					}
+					AND = {
+						true_father_even_if_dead = {
+							trait = dwse_lizard
+						}
+						mother = {
+							trait = dwse_dragon_adult
+						}
+					}
+				}						
+			}
+			random_list = {
+				50 = {
+					add_trait = dwse_dragon_child
+					character_event = { id = LF_Core_Genetics.2 }
+				}
+				50 = {
+					add_trait = dwse_lizard
+					if = {
+						limit = {
+							culture = dwse_dawn
+						}
+						add_trait = dwse_raen_child
+					}
+					character_event = { id = LF_Core_Genetics.2 }
+				}
+			}
+		}
+		else_if = { # Halfblood/halfblood
+			limit = {
+				mother = {
+					trait = dwse_lizard
+				}
+				true_father_even_if_dead = {
+					trait = dwse_lizard
+				}
+			}
+			add_trait = dwse_lizard
+			if = {
+				limit = {
+					culture = dwse_dawn
+				}
+				add_trait = dwse_raen_child
+			}
+			character_event = { id = LF_Core_Genetics.2 }
+		}		
+		else_if = { # Dragon/Other
+			limit = {
+				OR = {
+					AND = {
+						mother = {
+							trait = dwse_dragon_adult
+						}
+						true_father_even_if_dead = {
+							NOR = {
+								trait = dwse_dragon_adult
+								trait = dwse_lizard
+							}
+						}
+					}
+					AND = {
+						true_father_even_if_dead = {
+							trait = dwse_dragon_adult
+						}
+						mother = {
+							NOR = {
+								trait = dwse_dragon_adult
+								trait = dwse_lizard
+							}
+						}
+					}
+				}
+			}
+			random_list = {
+				25 = { 
+					character_event = { id = LF_Core_Genetics.2 }
+				}
+				50 = {
+					add_trait = dwse_lizard
+					if = {
+						limit = {
+							culture = dwse_dawn
+						}
+						add_trait = dwse_raen_child
+					}
+					character_event = { id = LF_Core_Genetics.2 }
+				}
+				25 = {
+					add_trait = dwse_dragon_child
+					character_event = { id = LF_Core_Genetics.2 }
+				}
+			}
+		}
+		else_if = { # Halfblood/Other
+			limit = {
+				OR = {
+					AND = {
+						mother = {
+							trait = dwse_lizard
+						}
+						true_father_even_if_dead = {
+							NOR = {
+								trait = dwse_dragon_adult
+								trait = dwse_lizard
+							}
+						}
+					}
+					AND = {
+						true_father_even_if_dead = {
+							trait = dwse_lizard
+						}
+						mother = {
+							NOR = {
+								trait = dwse_dragon_adult
+								trait = dwse_lizard
+							}
+						}
+					}
+				}
+			}
+			random_list = {
+				50 = {
+					add_trait = dwse_lizard
+					if = {
+						limit = {
+							culture = dwse_dawn
+						}
+						add_trait = dwse_raen_child
+					}
+					character_event = { id = LF_Core_Genetics.2 }
+				}
+				50 = { 
+					character_event = { id = LF_Core_Genetics.2 }
+				}
+			}
+		}
+	}
+}

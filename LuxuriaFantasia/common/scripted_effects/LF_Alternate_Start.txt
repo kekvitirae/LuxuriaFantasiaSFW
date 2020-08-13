@@ -1,0 +1,567 @@
+lf_alternate_seed_races = {
+	while = {
+		limit = {
+			any_independent_ruler = {
+				NOR = { # Removes redundancy.
+					is_any_demon = yes
+					is_angel = yes
+					is_orc = yes
+					is_elf = yes
+					is_fairy = yes
+					is_kitsune = yes
+					is_neko = yes
+					trait = dwse_lizard
+					trait = houseirae_drow
+					trait = houseirae_halfelf
+					trait = dwse_dragon_adult
+					trait = dwse_dragon_child
+					trait = tentacle_monster
+					has_character_flag = reserved_for_houseirae
+					has_character_flag = lf_seeded
+					has_character_flag = lf_human_seeded
+					is_offmap_governor = yes # Prevents seeding Elder Forest or House Irae
+					is_offmap_ruler = yes # Prevents seeding Elder Forest or House Irae
+				}
+			}
+		}
+		random_independent_ruler = {
+			limit = {
+				NOR = { # Removes redundancy.
+					is_any_demon = yes
+					is_angel = yes
+					is_orc = yes
+					is_elf = yes
+					is_fairy = yes
+					is_kitsune = yes
+					is_neko = yes
+					trait = dwse_lizard
+					trait = houseirae_drow
+					trait = houseirae_halfelf
+					trait = dwse_dragon_adult
+					trait = dwse_dragon_child
+					trait = tentacle_monster
+					has_character_flag = reserved_for_houseirae
+					has_character_flag = lf_seeded
+					has_character_flag = lf_human_seeded
+					is_offmap_governor = yes # Prevents seeding Elder Forest or House Irae
+					is_offmap_ruler = yes # Prevents seeding Elder Forest or House Irae
+				}
+			}		
+			random_list = {
+				72 = { # Nothing
+					trigger = {
+						NOT = {
+							has_alternate_start_setting = { setting = lf_racial_seeding option = full }
+						}
+					}
+					set_character_flag = lf_seeded
+					set_character_flag = lf_human_seeded
+				}
+				3 = { # Demons
+					trigger = {
+						has_alternate_start_setting = { setting = lf_seed_demon option = checked }
+					}
+					lf_alternate_seed_demon = yes
+					any_realm_character = {
+						lf_alternate_seed_demon = yes
+					}
+				}
+				3 = { # Angels
+					trigger = {
+						has_alternate_start_setting = { setting = lf_seed_divine option = checked }
+					}
+					lf_alternate_seed_divine = yes
+					any_realm_character = {
+						lf_alternate_seed_divine = yes
+					}
+				}
+				3 = { # Orcs
+					trigger = {
+						has_alternate_start_setting = { setting = lf_seed_orc option = checked }
+					}
+					lf_alternate_seed_orc = yes
+					any_realm_character = {
+						lf_alternate_seed_orc = yes
+					}
+				}					
+				3 = { # Elves
+					trigger = {
+						has_alternate_start_setting = { setting = lf_seed_elf option = checked }
+					}
+					lf_alternate_seed_elf = yes
+					any_realm_character = {
+						lf_alternate_seed_elf = yes
+					}
+				}					
+				3 = { # Fairies
+					trigger = {
+						has_alternate_start_setting = { setting = lf_seed_fairy option = checked }
+					}
+					lf_alternate_seed_fairy = yes
+					any_realm_character = {
+						lf_alternate_seed_fairy = yes
+					}
+				}
+				3 = { # Kitsune
+					trigger = {
+						has_alternate_start_setting = { setting = lf_seed_kitsune option = checked }
+					}
+					lf_alternate_seed_kitsune = yes
+					any_realm_character = {
+						lf_alternate_seed_kitsune = yes
+					}
+				}				
+				3 = { # Neko
+					trigger = {
+						has_alternate_start_setting = { setting = lf_seed_neko option = checked }
+					}
+					lf_alternate_seed_neko = yes
+					any_realm_character = {
+						lf_alternate_seed_neko = yes
+					}
+				}					
+				3 = { # DWSE
+					trigger = {
+						has_alternate_start_setting = { setting = lf_seed_dragon option = checked }
+					}
+					random_list = {
+						10 = {
+							lf_alternate_seed_dragon = yes
+							any_realm_character = {
+								lf_alternate_seed_dragon = yes
+							}
+						}
+						50 = {
+							random_list = {
+								50 = { # Raen
+									lf_alternate_seed_raen = yes
+								}
+								50 = { # Xaela
+									lf_alternate_seed_xaela = yes
+								}
+							}
+							lf_alternate_seed_aura = yes
+							any_realm_character = {
+								lf_alternate_seed_aura = yes
+							}
+						}
+					}
+				}
+				3 = { # House Irae
+					trigger = {
+						has_alternate_start_setting = { setting = lf_seed_houseirae option = checked }
+					}
+					set_character_flag = reserved_for_houseirae
+				}
+			}
+		}
+	}
+}
+
+lf_alternate_seed_elf = {
+	if = {
+		limit = {
+			is_ruler = yes
+		}
+		if = {
+			limit = {
+				has_alternate_start_parameter = {
+					key = culture_names
+					value = historical
+				}
+			}
+			culture = elven
+			any_demesne_province = {
+				culture = elven
+			}
+		}
+	}
+	if = {
+		limit = {
+			is_adult = yes
+		}
+		lf_add_elf = yes
+		if = {
+			limit = {
+				has_alternate_start_parameter = {
+					key = culture_names
+					value = historical
+				}
+			}
+			culture = elven
+		}
+		lf_add_random_elf_portrait = yes
+		check_elven_fertility = yes
+		add_trait = lf_elf_immortality
+	}
+	else_if = {
+		limit = {
+			is_adult = no
+		}
+		lf_add_elf = yes
+		if = {
+			limit = {
+				has_alternate_start_parameter = {
+					key = culture_names
+					value = historical
+				}
+			}
+			culture = elven
+		}
+	}
+	set_character_flag = lf_seeded
+}
+
+lf_alternate_seed_orc = {
+	if = {
+		limit = {
+			is_ruler = yes
+		}
+		if = {
+			limit = {
+				has_alternate_start_parameter = {
+					key = culture_names
+					value = historical
+				}
+			}
+			culture = orcish
+			any_demesne_province = {
+				culture = orcish
+			}
+		}
+	}
+	if = {
+		limit = {
+			is_adult = yes
+		}
+		lf_add_orc = yes
+		if = {
+			limit = {
+				has_alternate_start_parameter = {
+					key = culture_names
+					value = historical
+				}
+			}
+			culture = orcish
+		}
+		lf_add_random_orc_portrait = yes
+	}
+	else_if = {
+		limit = {
+			is_adult = no
+		}
+		lf_add_orc = yes
+		if = {
+			limit = {
+				has_alternate_start_parameter = {
+					key = culture_names
+					value = historical
+				}
+			}
+			culture = orcish
+		}
+	}
+	set_character_flag = lf_seeded
+}
+
+lf_alternate_seed_fairy = {
+	if = {
+		limit = {
+			is_ruler = yes
+		}
+		if = {
+			limit = {
+				has_alternate_start_parameter = {
+					key = culture_names
+					value = historical
+				}
+			}
+			culture = fae
+			any_demesne_province = {
+				culture = fae
+			}
+		}
+	}
+	if = {
+		limit = {
+			is_adult = yes
+		}
+		lf_add_fairy = yes
+		if = {
+			limit = {
+				has_alternate_start_parameter = {
+					key = culture_names
+					value = historical
+				}
+			}
+			culture = fae
+		}
+		lf_add_random_fairy_portrait = yes
+	}
+	else = {
+		limit = {
+			is_adult = no
+		}
+		lf_add_fairy = yes
+		if = {
+			limit = {
+				has_alternate_start_parameter = {
+					key = culture_names
+					value = historical
+				}
+			}
+			culture = fae
+		}
+	}
+	set_character_flag = lf_seeded
+}
+
+lf_alternate_seed_neko = {
+	if = {
+		limit = {
+			is_ruler = yes
+		}
+		if = {
+			limit = {
+				has_alternate_start_parameter = {
+					key = culture_names
+					value = historical
+				}
+			}
+			culture = neko_culture
+			any_demesne_province = {
+				culture = neko_culture
+			}
+		}
+	}
+	if = {
+		limit = {
+			is_adult = yes
+		}
+		lf_add_neko = yes
+		if = {
+			limit = {
+				has_alternate_start_parameter = {
+					key = culture_names
+					value = historical
+				}
+			}
+			culture = neko_culture
+		}
+		lf_add_random_neko_portrait = yes
+	}
+	else_if = {
+		limit = {
+			is_adult = no
+		}
+		lf_add_neko = yes
+		if = {
+			limit = {
+				has_alternate_start_parameter = {
+					key = culture_names
+					value = historical
+				}
+			}
+			culture = neko_culture
+		}
+	}
+	set_character_flag = lf_seeded
+}
+
+lf_alternate_seed_kitsune = {
+	if = {
+		limit = {
+			is_ruler = yes
+		}
+		if = {
+			limit = {
+				has_alternate_start_parameter = {
+					key = culture_names
+					value = historical
+				}
+			}
+			culture = kitsune_culture
+			any_demesne_province = {
+				culture = kitsune_culture
+			}
+		}
+	}
+	if = {
+		limit = {
+			is_adult = yes
+		}
+		lf_add_kitsune = yes
+		if = {
+			limit = {
+				has_alternate_start_parameter = {
+					key = culture_names
+					value = historical
+				}
+			}
+			culture = kitsune_culture
+		}
+		lf_add_random_kitsune_portrait = yes
+	}
+	else_if = {
+		limit = {
+			is_adult = no
+		}
+		lf_add_kitsune = yes
+		if = {
+			limit = {
+				has_alternate_start_parameter = {
+					key = culture_names
+					value = historical
+				}
+			}
+			culture = kitsune_culture
+		}
+	}
+	set_character_flag = lf_seeded
+}
+
+lf_alternate_seed_divine = {
+	if = {
+		limit = {
+			is_adult = yes
+		}
+		lf_add_angel = yes
+		lf_add_random_angel_portrait = yes
+	}
+	else_if = {
+		limit = {
+			is_adult = no
+		}
+		lf_add_angel = yes
+	}
+	set_character_flag = lf_seeded
+}
+
+lf_alternate_seed_demon = {
+	if = {
+		limit = {
+			is_adult = yes
+		}
+		lf_add_demon = yes
+		lf_add_random_demon_portrait = yes
+	}
+	else_if = {
+		limit = {
+			is_adult = no
+		}
+		lf_add_demon = yes
+	}
+	set_character_flag = lf_seeded
+}
+
+lf_alternate_seed_dragon = {
+	if = {
+		limit = {
+			is_ruler = yes
+		}
+		if = {
+			limit = {
+				has_alternate_start_parameter = {
+					key = culture_names
+					value = historical
+				}
+			}
+			culture = dwse_dragon
+			any_demesne_province = {
+				culture = dwse_dragon
+			}
+		}
+	}
+	if = {
+		limit = {
+			is_adult = yes
+		}
+		add_trait = dwse_dragon_adult
+		if = {
+			limit = {
+				has_alternate_start_parameter = {
+					key = culture_names
+					value = historical
+				}
+			}
+			culture = dwse_dragon
+		}
+		add_random_dwse_dragon_portrait = yes
+	}
+	else_if = {
+		limit = {
+			is_adult = no
+		}
+		add_trait = dwse_dragon_child
+		if = {
+			limit = {
+				has_alternate_start_parameter = {
+					key = culture_names
+					value = historical
+				}
+			}
+			culture = dwse_dragon
+		}
+	}
+	set_character_flag = lf_seeded
+}
+lf_alternate_seed_aura = {
+	if = {
+		limit = {
+			is_adult = yes
+		}
+		add_trait = dwse_lizard
+		add_random_dwse_lizard_portrait = yes
+	}
+	else_if = {
+		limit = {
+			is_adult = no
+		}
+		add_trait = dwse_lizard
+		if = {
+			limit = {
+				culture = dwse_dawn
+			}
+			add_trait = dwse_raen_child
+		}
+	}
+	set_character_flag = lf_seeded
+}
+
+lf_alternate_seed_raen = {
+	if = {
+		limit = {
+			has_alternate_start_parameter = {
+				key = culture_names
+				value = historical
+			}
+		}
+		culture = dwse_dawn
+		any_realm_province = {
+			culture = dwse_dawn
+		}
+		any_realm_character = {
+			culture = dwse_dawn
+		}
+	}
+}
+
+
+lf_alternate_seed_xaela = {
+	if = {
+		limit = {
+			has_alternate_start_parameter = {
+				key = culture_names
+				value = historical
+			}
+		}
+		culture = dwse_dusk
+		any_realm_province = {
+			culture = dwse_dusk
+		}
+		any_realm_character = {
+			culture = dwse_dusk
+		}
+	}
+}
+

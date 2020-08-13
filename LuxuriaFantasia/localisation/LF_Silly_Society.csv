@@ -1,0 +1,15 @@
+warrior_lodge_taurtaur;The War Stables;;;;;;;;;;;;;x
+warrior_lodge_taurtaur_desc;Eating hay and shitting on the ground by day, leading their troops to victory by night, the members of the War Stables strike fear into their enemies. Originally open to only taurtaurs and mantaurs, the War Stables have recently opened their gates to- reluctantly- the inferior horses and humans.;;;;;;;;;;;;;x
+warrior_lodge_taurtaur_leader_desc;[GetSocietyLeaderDesc];[GetSocietyLeaderDesc];[GetSocietyLeaderDesc];;[GetSocietyLeaderDesc];;;;;;;;;x
+warrior_lodge_taurtaur_rank_1_female;Foal;;;;;;;;;;;;;x
+warrior_lodge_taurtaur_rank_2_female;Mare;;;;;;;;;;;;;x
+warrior_lodge_taurtaur_rank_3_female;Thoroughbred;;;;;;;;;;;;;x
+warrior_lodge_taurtaur_rank_4_female;Wartaur;;;;;;;;;;;;;x
+warrior_lodge_taurtaur_rank_1_male;Foal;;;;;;;;;;;;;x
+warrior_lodge_taurtaur_rank_2_male;Stallion;;;;;;;;;;;;;x
+warrior_lodge_taurtaur_rank_3_male;Thoroughbred;;;;;;;;;;;;;x
+warrior_lodge_taurtaur_rank_4_male;Wartaur;;;;;;;;;;;;;x
+silly_society_sillymode_tooltip;Must be quite Silly;;;;;;;;;;;;;x
+silly_society_taurtaur_tooltip;Must be a Taurtaur or a Horse;;;;;;;;;;;;;x
+silly_society_mantaur_tooltip;Must be a Mantaur or a Human;;;;;;;;;;;;;x
+currency_name_warrior_lodge_taurtaur;Horsepower;;;;;;;;;;;;;x

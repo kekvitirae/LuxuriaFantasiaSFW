@@ -1,0 +1,24 @@
+namespace = LFCheckStats
+
+character_event = {
+	id = LFCheckStats.1
+	is_triggered_only = yes
+	desc = LFCheckStats1
+	picture = GFX_evt_bloodlines
+	
+	immediate = {
+		export_to_variable = { which = lf_health_check value = health }
+		export_to_variable = { which = lf_fertility_check value = fertility }
+	}
+	
+	option = {
+		name = LFCheckStats1T
+	}
+	after = {
+		hidden_tooltip = {
+			set_variable = { which = lf_health_check value = 0 }
+			set_variable = { which = lf_fertility_check value = 0 }
+		}
+	}
+}
+		

@@ -1,0 +1,372 @@
+#
+# Half-dragons
+#
+
+dwse_portrait1 = {
+	hidden = yes
+	random = no
+	customizer = no
+}	
+dwse_portrait2 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait3 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait4 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait5 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait6 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait7 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait8 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait9 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait10 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait11 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait12 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait13 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait14 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait15 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait16 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait17 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait18 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait19 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait20 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait21 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait22 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait23 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait24 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait25 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait26 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+
+dwse_portrait1_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}	
+dwse_portrait2_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait3_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait4_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait5_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait6_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait7_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait8_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait9_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait10_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait11_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait12_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait13_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait14_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait15_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait16_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait17_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait18_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait19_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait20_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_portrait21_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+
+
+#
+# Dragons
+#
+
+dwse_dragon_portrait1 = {
+	hidden = yes
+	random = no
+	customizer = no
+}	
+dwse_dragon_portrait2 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_dragon_portrait3 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_dragon_portrait4 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_dragon_portrait5 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_dragon_portrait6 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_dragon_portrait7 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_dragon_portrait8 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_dragon_portrait9 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_dragon_portrait10 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_dragon_portrait11 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_dragon_portrait12 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_dragon_portrait13 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+dwse_dragon_portrait14 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+
+# Raen
+
+dwse_raen_male1 = { hidden = yes random = no customizer = no }
+dwse_raen_male2 = { hidden = yes random = no customizer = no }
+dwse_raen_male3 = { hidden = yes random = no customizer = no }
+dwse_raen_male4 = { hidden = yes random = no customizer = no }
+dwse_raen_male5 = { hidden = yes random = no customizer = no }
+dwse_raen_male6 = { hidden = yes random = no customizer = no }
+dwse_raen_male7 = { hidden = yes random = no customizer = no }
+dwse_raen_male8 = { hidden = yes random = no customizer = no }
+dwse_raen_male9 = { hidden = yes random = no customizer = no }
+dwse_raen_male10 = { hidden = yes random = no customizer = no }
+dwse_raen_male11 = { hidden = yes random = no customizer = no }
+dwse_raen_male12 = { hidden = yes random = no customizer = no }
+dwse_raen_female1 = { hidden = yes random = no customizer = no }
+dwse_raen_female2 = { hidden = yes random = no customizer = no }
+dwse_raen_female3 = { hidden = yes random = no customizer = no }
+dwse_raen_female4 = { hidden = yes random = no customizer = no }
+dwse_raen_female5 = { hidden = yes random = no customizer = no }
+dwse_raen_female6 = { hidden = yes random = no customizer = no }
+dwse_raen_female7 = { hidden = yes random = no customizer = no }
+dwse_raen_female8 = { hidden = yes random = no customizer = no }
+dwse_raen_female9 = { hidden = yes random = no customizer = no }
+dwse_raen_female10 = { hidden = yes random = no customizer = no }
+dwse_raen_female11 = { hidden = yes random = no customizer = no }
+dwse_raen_female12 = { hidden = yes random = no customizer = no }
+
+dwse_raen_child = { hidden = yes random = no customizer = no }
+
+# Xaela
+
+dwse_xaela_male1 = { hidden = yes random = no customizer = no }
+dwse_xaela_male2 = { hidden = yes random = no customizer = no }
+dwse_xaela_male3 = { hidden = yes random = no customizer = no }
+dwse_xaela_male4 = { hidden = yes random = no customizer = no }
+dwse_xaela_male5 = { hidden = yes random = no customizer = no }
+dwse_xaela_male6 = { hidden = yes random = no customizer = no }
+dwse_xaela_male7 = { hidden = yes random = no customizer = no }
+dwse_xaela_male8 = { hidden = yes random = no customizer = no }
+dwse_xaela_male9 = { hidden = yes random = no customizer = no }
+dwse_xaela_male10 = { hidden = yes random = no customizer = no }
+dwse_xaela_male11 = { hidden = yes random = no customizer = no }
+dwse_xaela_male12 = { hidden = yes random = no customizer = no }
+dwse_xaela_female1 = { hidden = yes random = no customizer = no }
+dwse_xaela_female2 = { hidden = yes random = no customizer = no }
+dwse_xaela_female3 = { hidden = yes random = no customizer = no }
+dwse_xaela_female4 = { hidden = yes random = no customizer = no }
+dwse_xaela_female5 = { hidden = yes random = no customizer = no }
+dwse_xaela_female6 = { hidden = yes random = no customizer = no }
+dwse_xaela_female7 = { hidden = yes random = no customizer = no }
+dwse_xaela_female8 = { hidden = yes random = no customizer = no }
+dwse_xaela_female9 = { hidden = yes random = no customizer = no }
+dwse_xaela_female10 = { hidden = yes random = no customizer = no }
+dwse_xaela_female11 = { hidden = yes random = no customizer = no }
+dwse_xaela_female12 = { hidden = yes random = no customizer = no }

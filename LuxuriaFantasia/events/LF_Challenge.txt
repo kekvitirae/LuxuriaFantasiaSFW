@@ -1,0 +1,635 @@
+namespace = LFChallenge
+
+
+#
+# Random Ruler Challenge
+#
+
+character_event = {
+	id = LFChallenge.1
+	desc = {
+		trigger = {
+			has_character_flag = lf_randomize
+		}
+		text = LFChallenge1Random
+	}
+	desc = {
+		trigger = {
+			has_character_flag = lf_stay
+		}
+		text = LFChallenge1Stay
+	}
+	picture = lf_magic_user_female
+	is_triggered_only = yes
+	trigger = {
+		has_game_rule = { name = lf_challenges value = lf_challenges_random }
+		ai = no
+	}
+	immediate = {
+		random_list = {
+			50 = {
+				set_character_flag = lf_randomize
+			}
+			50 = {
+				set_character_flag = lf_stay
+			}
+		}
+	}
+	option = {
+		name = {
+			trigger = {
+				has_character_flag = lf_stay
+			}
+			text = LFChallenge1TTA
+		}
+		name = {
+			trigger = {
+				has_character_flag = lf_random
+			}
+			text = LFChallenge1TTB
+		}
+		
+		hidden_tooltip = {
+			if = {
+				limit = {
+					has_character_flag = lf_randomize
+				}
+				random_playable_ruler = {
+					limit = {
+						ai = no
+						is_adult = yes
+					}
+					save_event_target_as = random_ruler
+					if = {
+						limit = {
+							is_married = yes
+						}
+						spouse = {
+							save_event_target_as = random_spouse
+						}
+					}
+					create_character = {
+						dynasty = THIS
+						religion = THIS
+						culture = THIS
+						race = THIS
+						age = 0
+					}
+					new_character = {
+						if = {
+							limit = {
+								event_target:random_ruler = {
+									is_female = yes
+								}
+							}
+							set_mother = event_target:random_ruler
+						}
+						else = {
+							set_father = event_target:random_ruler
+						}
+						if = {
+							limit = {
+								event_target:random_ruler = {
+									is_female = yes
+									is_married = yes
+								}
+							}
+							set_father = event_target:random_spouse
+						}
+						else_if = {
+							limit = {
+								event_target:random_ruler = {
+									is_female = no
+									is_married = yes
+								}
+							}
+							set_mother = event_target:random_spouse
+						}
+						ROOT = {
+							set_player_character = PREV
+						}
+					}
+				}
+			}
+			sound_effect = child_born
+		}
+	}
+}
+
+character_event = {
+	id = LFChallenge.101
+	hide_window = yes
+	is_triggered_only = yes
+	only_playable = yes
+	trigger = {
+		NOT = { has_global_flag = lf_random_started }
+		has_game_rule = { name = lf_challenges value = lf_challenges_random } 
+		is_save_game = no
+	}
+	immediate = {
+		set_global_flag = lf_random_started
+	}
+	after = {
+		any_player = {
+			character_event = { id = LFChallenge.102 }
+		}
+	}
+}
+
+character_event = {
+	id = LFChallenge.102
+	hide_window = yes
+	is_triggered_only = yes
+	ai = no
+	trigger = {
+		is_elf = yes
+		has_game_rule = { name = lf_challenges value = lf_challenges_random } 
+	}
+	immediate = {
+		remove_trait = lf_elf_immortality
+		any_realm_character = {
+			remove_trait = lf_elf_immortality
+		}
+	}
+}
+			
+
+#
+# Gender Bender Challenge
+#
+
+character_event = {
+	id = LFChallenge.2
+	desc = LFChallenge2
+	picture = lf_magic_user_female
+	is_triggered_only = yes
+	trigger = {
+		has_game_rule = { name = lf_challenges value = lf_challenges_gender }
+		ai = no
+	}
+	immediate = {
+		if = {
+			limit = {
+				is_pregnant = yes
+			}
+			cancel_pregnancy = yes
+		}
+		set_gender = opposite
+		trigger_switch = {
+			on_trigger = trait
+			lf_elf = {
+				set_character_flag = lf_elf_genderbend
+			}
+			elf = {
+				set_character_flag = lf_elf_genderbend
+			}
+			lf_fairy = {
+				set_character_flag = lf_fairy_genderbend
+			}
+			fae_kin = {
+				set_character_flag = lf_fairy_genderbend
+			}
+			lf_orc = {
+				set_character_flag = lf_orc_genderbend
+			}
+			orc = {
+				set_character_flag = lf_orc_genderbend
+			}
+			lf_kitsune = {
+				set_character_flag = lf_kitsune_genderbend
+			}
+			fox_kin = {
+				set_character_flag = lf_kitsune_genderbend
+			}
+			lf_neko = {
+				set_character_flag = lf_neko_genderbend
+			}
+			cat_kin = {
+				set_character_flag = lf_aura_genderbend
+			}
+			dwse_lizard = {
+				set_character_flag = lf_aura_genderbend
+			}
+			lf_demon = {
+				set_character_flag = lf_demon_genderbend
+			}
+			demon_kin = {
+				set_character_flag = lf_demon_genderbend
+			}
+			lf_angel = {
+				set_character_flag = lf_divine_genderbend
+			}
+			angel_kin = {
+				set_character_flag = lf_divine_genderbend
+			}
+			lf_fallen_angel = {
+				set_character_flag = lf_demon_genderbend
+			}
+		}
+		lf_masculine_feminine_portrait_change = yes
+	}
+	option = {
+		name = LFChallenge2TTA
+	}
+}
+				
+#
+# Lucy Challenge
+#
+
+character_event = {
+	id = LFChallenge.3
+	hide_window = yes
+	is_triggered_only = yes
+	ai = yes
+	trigger = {
+		has_game_rule = { name = lf_challenges value = lf_challenges_lucy }
+		OR = {
+			death_reason = death_execution_eaten
+			death_reason = death_execution_eaten_unknown
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				any_player = {
+					any_kill_list_character = {
+						character = ROOT
+					}
+				}
+			}
+			any_player = {
+				limit = {
+					any_kill_list_character = {
+						character = ROOT
+					}
+				}
+				character_event = { id = LFChallenge.301 }
+			}
+		}
+	}
+}
+
+character_event = {
+	id = LFChallenge.301
+	desc = LFChallenge301
+	picture = lf_magic_user_female
+	is_triggered_only = yes
+	trigger = {
+		has_game_rule = { name = lf_challenges value = lf_challenges_lucy }
+		ai = no
+	}
+	option = {
+		name = LFChallenge303TTA
+		trigger_switch = {
+			on_trigger = has_character_modifier
+			lf_lucy_good = {
+			}
+			lf_lucy_bad_1 = {
+				remove_character_modifier = lf_lucy_bad_1
+				add_character_modifier = {
+					name = lf_lucy_good
+					duration = -1
+				}
+			}
+			lf_lucy_bad_2 = {
+				remove_character_modifier = lf_lucy_bad_2
+				add_character_modifier = {
+					name = lf_lucy_good
+					duration = -1
+				}
+			}
+			lf_lucy_bad_3 = {
+				remove_character_modifier = lf_lucy_bad_3
+				add_character_modifier = {
+					name = lf_lucy_good
+					duration = -1
+				}
+			}
+		}
+		clr_character_flag = lf_taken_lucy
+		set_character_flag = lf_taken_lucy
+	}
+}
+
+character_event = {
+	id = LFChallenge.302
+	desc = LFChallenge302
+	picture = lf_magic_user_female
+	trigger = {
+		has_game_rule = { name = lf_challenges value = lf_challenges_lucy }
+		ai = no
+		is_adult = yes
+		had_character_flag = {
+			flag = lf_taken_lucy
+			days = 365
+		}
+	}
+	mean_time_to_happen = {
+		days = 7
+	}
+	option = {
+		name = LFChallenge302TTA
+		trigger_switch = {
+			on_trigger = has_character_modifier
+			lf_lucy_good = {
+				remove_character_modifier = lf_lucy_good
+				add_character_modifier = {
+					name = lf_lucy_bad_1
+					duration = -1
+				}
+				clr_character_flag = lf_taken_lucy
+				set_character_flag = lf_taken_lucy
+			}
+			lf_lucy_bad_1 = {
+				remove_character_modifier = lf_lucy_bad_1
+				add_character_modifier = {
+					name = lf_lucy_bad_2
+					duration = -1
+				}
+				clr_character_flag = lf_taken_lucy
+				set_character_flag = lf_taken_lucy
+			}
+			lf_lucy_bad_2 = {
+				remove_character_modifier = lf_lucy_bad_2
+				add_character_modifier = {
+					name = lf_lucy_bad_3
+					duration = -1
+				}
+				clr_character_flag = lf_taken_lucy
+				set_character_flag = lf_taken_lucy
+			}
+			lf_lucy_bad_3 = {
+				remove_character_modifier = lf_lucy_bad_3
+				death = {
+					death_reason = death_lf_lucy
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = LFChallenge.303
+	hide_window = yes
+	is_triggered_only = yes
+	only_playable = yes
+	trigger = {
+		has_game_rule = { name = lf_challenges value = lf_challenges_lucy }
+		NOT = { has_global_flag = lf_lucy_started }
+		is_save_game = no
+	}
+	immediate = {
+		set_global_flag = lf_lucy_started
+		create_character = {
+			age = 34
+			name = Perganant
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = yes
+			trait = mystic
+			trait = cruel
+			trait = lf_npc_lynness
+		}
+		new_character = {
+			save_event_target_as = lf_witch
+		}
+	}
+	after = {
+		any_player = {
+			character_event = { id = LFChallenge.3031 }
+		}
+	}
+}
+			
+character_event = {
+	id = LFChallenge.3031
+	desc = LFChallenge303
+	picture = lf_magic_user_female
+	is_triggered_only = yes
+	ai = no
+	portrait = event_target:lf_witch
+	show_root = no
+	hide_from = yes
+	trigger = {
+		has_game_rule = { name = lf_challenges value = lf_challenges_lucy }
+		NOT = { has_character_flag = lf_lucy_temp }
+	}
+	immediate = {
+		set_character_flag = lf_lucy_temp
+	}
+	option = {
+		name = LFChallenge303TTA
+		any_player = {
+			add_trait = cannibal_trait
+			add_character_modifier = {
+				name = lf_lucy_good
+				duration = -1
+			}
+			set_character_flag = lf_taken_lucy
+		}
+	}
+	after = {
+		hidden_tooltip = {
+			event_target:lf_witch = {
+				death = {
+					death_reason = death_vanished
+				}
+			}
+			any_player = {
+				character_event = { id = LFChallenge.502 days = 1 }
+			}
+		}
+	}
+}
+
+character_event = {
+	id = LFChallenge.305
+	hide_window = yes
+	is_triggered_only = yes
+	ai = no
+	trigger = {
+		has_game_rule = { name = lf_challenges value = lf_challenges_lucy }
+	}
+	immediate = {
+		current_heir = {
+			character_event = { id = LFChallenge.306 days = 1 }
+		}
+	}
+}
+
+character_event = {
+	id = LFChallenge.306
+	hide_window = yes
+	is_triggered_only = yes
+	ai = no
+	trigger = {
+		has_game_rule = { name = lf_challenges value = lf_challenges_lucy }
+	}
+	immediate = {
+		add_trait = cannibal_trait
+		add_character_modifier = {
+			name = lf_lucy_good
+			duration = -1
+		}
+		set_character_flag = lf_taken_lucy
+	}
+}
+
+
+#
+# Opposite Day Challenge
+#
+
+character_event = {
+	id = LFChallenge.4
+	desc = LFChallenge4
+	picture = lf_magic_user_female
+	is_triggered_only = yes
+	ai = no
+	trigger = {
+		has_game_rule = { name = lf_challenges value = lf_challenges_opposite }
+	}
+	option = {
+		name = LFChallenge4TTA
+		lf_opposite_day = yes
+	}
+	after = {
+		hidden_tooltip = {
+			lf_clear_opposite_flags = yes
+		}
+	}
+}
+
+#
+# Bad Genetics Challenge
+#
+
+character_event = {
+	id = LFChallenge.5
+	hide_window = yes
+	is_triggered_only = yes
+	only_playable = yes
+	trigger = {
+		has_game_rule = { name = lf_challenges value = lf_challenges_genes }
+		NOT = { has_global_flag = lf_genes_started }
+		is_save_game = no
+	}
+	immediate = {
+		set_global_flag = lf_genes_started
+		create_character = {
+			age = 34
+			name = Perganant
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = yes
+			trait = mystic
+			trait = cruel
+			trait = lf_npc_lynness
+		}
+		new_character = {
+			save_event_target_as = lf_witch
+		}
+	}
+	after = {
+		any_player = {
+			character_event = { id = LFChallenge.501 }
+		}
+	}
+}
+
+character_event = {
+	id = LFChallenge.501
+	desc = LFChallenge501
+	picture = lf_magic_user_female
+	is_triggered_only = yes
+	ai = no
+	portrait = event_target:lf_witch
+	show_root = no
+	hide_from = yes
+	trigger = {
+		has_game_rule = { name = lf_challenges value = lf_challenges_genes }
+		NOT = { has_character_flag = lf_genes_temp }
+	}
+	immediate = {
+		set_character_flag = lf_genes_temp
+	}
+	option = {
+		name = LFChallenge501TTA
+		any_player = {
+			create_bloodline = {
+				type = lf_genetics_bloodline
+			}
+			new_bloodline = {
+				set_description = "lf_genetics_bloodline_desc"
+			}
+			remove_trait = fair
+			remove_trait = genius
+			remove_trait = quick
+			remove_trait = strong
+			add_trait = lf_bad_genetics
+			hidden_tooltip = {
+				any_child = {
+					random = {
+						chance = 75
+						remove_trait = fair
+						remove_trait = genius
+						remove_trait = quick
+						remove_trait = strong
+						add_trait = lf_bad_genetics
+					}
+				}
+			}
+		}
+	}
+	after = {
+		hidden_tooltip = {
+			event_target:lf_witch = {
+				death = {
+					death_reason = death_vanished
+				}
+			}
+			any_player = {
+				character_event = { id = LFChallenge.502 days = 1 }
+			}
+		}
+	}
+}
+
+character_event = {
+	id = LFChallenge.502
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		clr_character_flag = lf_genes_temp
+		clr_character_flag = lf_lucy_temp
+	}
+}
+
+character_event = {
+	id = LFChallenge.503
+	hide_window = yes
+	is_triggered_only = yes # on_post_birth
+	trigger = {
+		has_game_rule = { name = lf_challenges value = lf_challenges_genes }
+		any_owned_bloodline = {
+			has_bloodline_flag = lf_bad_genetics
+		}
+	}
+	immediate = {
+		random_list = {
+			75 = {
+				remove_trait = fair
+				remove_trait = genius
+				remove_trait = quick
+				remove_trait = strong
+				add_trait = lf_bad_genetics
+			}
+			25 = {
+			}
+		}
+	}
+}
+

@@ -1,0 +1,37 @@
+e_offmap_dwse_voice = { 
+	color={ 245 240 10 }
+	color2={ 220 220 0 }
+
+	title_female = "DWSE_VOICE_TITLE_FEMALE"
+	title = "DWSE_VOICE_TITLE_MALE"
+	short_name = yes	
+	# Always exists
+	landless = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	dynasty_title_names = no 	
+	purple_born_heirs = yes
+	religion = pagan
+	can_be_claimed = no
+	can_be_usurped = no
+	name_tier = duke
+	culture = dwse_dragon
+	
+	mercenary = yes
+	mercenary_type = dwse_merc_composition
+	strength_growth_per_century = 0.10
+	allow = {
+		OR = {
+		religion_group = christian
+			religion_group = jewish_group
+			religion_group = pagan_group
+			religion_group = zoroastrian_group
+			religion = yazidi
+		}
+	}
+}

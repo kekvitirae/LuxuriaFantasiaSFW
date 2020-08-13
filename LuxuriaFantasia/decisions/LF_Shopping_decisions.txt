@@ -1,0 +1,37 @@
+decisions = {
+	lf_b_potion_shopping = {
+		ai_check_interval = 48
+		potential = {
+			NOT = { is_incapable = yes }
+			lf_has_potions = yes
+			prisoner = no
+			NOR = {
+				has_character_flag = lf_unimportant_shit_hidden
+				trait = infirm
+				trait = incapable
+				has_character_modifier = lf_potion_temp
+			}
+		}
+		allow = {
+			wealth = 50
+			prisoner = no
+			NOR = { 
+				is_inaccessible_trigger = yes 
+				has_character_modifier = lf_potion_cd
+				in_command = yes
+			}
+		}
+		effect = {
+			add_character_modifier = {
+				modifier = lf_potion_temp
+				hidden = yes
+			}
+			narrative_event = { id = LFPotions.1 }
+		}
+		ai_will_do = {
+			factor = 0.1
+		}
+	}
+}
+				
+			

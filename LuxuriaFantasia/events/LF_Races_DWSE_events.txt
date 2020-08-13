@@ -1,0 +1,1435 @@
+namespace = dwse_startup
+
+character_event = {
+	id = dwse_startup.1
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			has_global_flag = dwse_started
+		}
+	}
+	immediate = {
+		set_global_flag = dwse_started
+	}
+}
+
+namespace = dwse
+
+character_event = {
+	id = dwse.1001
+	desc = "dwse.1001.desc"
+	picture = "GFX_evt_into_the_dungeon"
+	is_triggered_only = yes
+	
+	option = {
+		name = dwse.1001.a
+		character_event = { id = dwse.1002 }
+		wealth = -50
+	}
+	option = {
+		name = dwse.1001.b
+		character_event = { id = dwse.1003}
+		wealth = -100
+	}
+	option = {
+		name = dwse.1001.c
+	}
+}
+character_event = {
+	id = dwse.1002
+	desc = "dwse.1002.desc"
+	picture = "GFX_evt_doge_republic"
+	is_triggered_only = yes
+	
+	option = {
+		name = dwse.1002.a
+		character_event = { id = dwse.2000 days = 30 }
+		add_character_modifier = { name = dwse_slavehunt_cooldown duration = 30 }
+	}
+}
+character_event = {
+	id = dwse.1003
+	desc = "dwse.1003.desc"
+	picture = "GFX_evt_doge_republic"
+	is_triggered_only = yes
+	
+	option = {
+		name = dwse.1002.a
+		character_event = { id = dwse.3000 days = 90 }
+		add_character_modifier = { name = dwse_slavehunt_cooldown duration = 90 }		
+	}
+}
+character_event = {
+	id = dwse.2000
+	desc = "dwse.2000.desc"
+	picture = "GFX_evt_carriage_escorted_by_guards"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = dwse.2000.a
+		hidden_tooltip = {
+			add_character_modifier = {
+				name = dwse_sold_citizens 
+				duration = 365
+			}
+		}
+		capital_scope = {
+			hidden_tooltip = {
+				add_province_modifier = {
+					name = dwse_slavers 
+					duration = 365
+				}
+			}
+		}
+		random_list = {
+			50 = {
+				create_character = {
+					random_traits = yes 
+					dynasty = none
+					female = no
+					age = 16
+				}
+			}
+			50 = {
+				create_character = {
+					random_traits = yes
+					 
+					female = yes
+					dynasty = none
+					age = 16
+				}
+			}
+		}
+		new_character = {
+			
+			imprison = ROOT
+			random_list = {
+				10 = { 
+				add_trait = maimed
+					}
+				10 = { 
+					add_trait = slow
+				}
+				10 = { 
+					add_trait = kinslayer
+				}
+				10 = { 
+					add_trait = imbecile
+				}
+				10 = { 
+					add_trait = inbred
+				}
+				10 = { 
+					add_trait = weak
+				}
+				10 = { 
+					add_trait = blinded
+				}
+				10 = { 
+					add_trait = eunuch
+				}
+			}
+		}	
+		random_list = {
+			50 = {
+				create_character = {
+					random_traits = yes
+					 
+					dynasty = none
+					female = no
+					age = 16
+				}
+			}
+			50 = {
+				create_character = {
+					random_traits = yes
+					 
+					female = yes
+					dynasty = none
+					age = 16
+				}
+			}
+		}		
+		new_character = { 
+			
+			imprison = ROOT
+			random_list = {
+				10 = { 
+				add_trait = maimed
+					}
+				10 = { 
+					add_trait = slow
+				}
+				10 = { 
+					add_trait = kinslayer
+				}
+				10 = { 
+					add_trait = imbecile
+				}
+				10 = { 
+					add_trait = inbred
+				}
+				10 = { 
+					add_trait = weak
+				}
+				10 = { 
+					add_trait = blinded
+				}
+				10 = { 
+					add_trait = eunuch
+				}
+			}
+		}	
+		random_list = {
+			50 = {
+				create_character = {
+					random_traits = yes
+					 
+					dynasty = none
+					female = no
+					age = 16
+				}
+			}
+			50 = {
+				create_character = {
+					random_traits = yes
+					 
+					female = yes
+					dynasty = none
+					age = 16
+				}
+			}
+		}
+		new_character = { 
+			imprison = ROOT
+			random_list = {
+				10 = { 
+				add_trait = maimed
+					}
+				10 = { 
+					add_trait = slow
+				}
+				10 = { 
+					add_trait = kinslayer
+				}
+				10 = { 
+					add_trait = imbecile
+				}
+				10 = { 
+					add_trait = inbred
+				}
+				10 = { 
+					add_trait = weak
+				}
+				10 = { 
+					add_trait = blinded
+				}
+				10 = { 
+					add_trait = eunuch
+				}
+			}
+		}	
+		random_list = {
+			50 = {
+				create_character = {
+					random_traits = yes
+					 
+					dynasty = none
+					female = no
+					age = 16
+				}
+			}
+			50 = {
+				create_character = {
+					random_traits = yes
+					 
+					female = yes
+					dynasty = none
+					age = 16
+				}
+			}
+		}
+		new_character = { 
+			imprison = ROOT
+			random_list = {
+				10 = { 
+				add_trait = maimed
+					}
+				10 = { 
+					add_trait = slow
+				}
+				10 = { 
+					add_trait = kinslayer
+				}
+				10 = { 
+					add_trait = imbecile
+				}
+				10 = { 
+					add_trait = inbred
+				}
+				10 = { 
+					add_trait = weak
+				}
+				10 = { 
+					add_trait = blinded
+				}
+				10 = { 
+					add_trait = eunuch
+				}
+			}
+		}	
+		random_list = {
+			50 = {
+				create_character = {
+					random_traits = yes
+					 
+					dynasty = none
+					female = no
+					age = 16
+				}
+			}
+			50 = {
+				create_character = {
+					random_traits = yes
+					 
+					female = yes
+					dynasty = none
+					age = 16
+				}
+			}
+		}
+		new_character = { 
+			imprison = ROOT
+			random_list = {
+				10 = { 
+				add_trait = maimed
+					}
+				10 = { 
+					add_trait = slow
+				}
+				10 = { 
+					add_trait = kinslayer
+				}
+				10 = { 
+					add_trait = imbecile
+				}
+				10 = { 
+					add_trait = inbred
+				}
+				10 = { 
+					add_trait = weak
+				}
+				10 = { 
+					add_trait = blinded
+				}
+				10 = { 
+					add_trait = eunuch
+				}
+			}
+		}	
+	}
+	option = {
+		name = dwse.2000.b
+		hidden_tooltip = {
+			add_character_modifier = {
+				name = dwse_sold_citizens 
+				duration = 365
+			}
+		}
+		capital_scope = {
+			hidden_tooltip = {
+				add_province_modifier = {
+					name = dwse_slavers 
+					duration = 365
+				}
+			}
+		}
+		random_list = {
+			50 = {
+				create_character = {
+					random_traits = yes
+					 
+					dynasty = none
+					female = no
+					age = 16
+				}
+			}
+			50 = {
+				create_character = {
+					random_traits = yes
+					 
+					female = yes
+					dynasty = none
+					age = 16
+				}
+			}
+		}
+		new_character = { 
+			imprison = ROOT
+			random_list = {
+				10 = { 
+					add_trait = strong
+				}
+				10 = { 
+					add_trait = quick
+				}
+				10 = { 
+					add_trait = kinslayer
+				}
+				10 = { 
+					add_trait = genius
+				}
+				10 = { 
+					add_trait = fair
+				}
+
+			}
+		}
+
+		random_list = {
+			50 = {
+				create_character = {
+					random_traits = yes
+					 
+					dynasty = none
+					female = no
+					age = 16
+				}
+			}
+			50 = {
+				create_character = {
+					random_traits = yes
+					 
+					female = yes
+					dynasty = none
+					age = 16
+				}
+			}
+		}
+		new_character = { 
+			imprison = ROOT
+			random_list = {
+				10 = { 
+					add_trait = strong
+				}
+				10 = { 
+					add_trait = quick
+				}
+				10 = { 
+					add_trait = kinslayer
+				}
+				10 = { 
+					add_trait = genius
+				}
+				10 = { 
+					add_trait = fair
+				}
+
+			}
+		}
+
+		random_list = {
+			50 = {
+				create_character = {
+					random_traits = yes
+					 
+					dynasty = none
+					female = no
+					age = 16
+				}
+			}
+			50 = {
+				create_character = {
+					random_traits = yes
+					 
+					female = yes
+					dynasty = none
+					age = 16
+				}
+			}
+		}
+		new_character = { 
+			imprison = ROOT
+			random_list = {
+				10 = { 
+					add_trait = strong
+				}
+				10 = { 
+					add_trait = quick
+				}
+				10 = { 
+					add_trait = kinslayer
+				}
+				10 = { 
+					add_trait = genius
+				}
+				10 = { 
+					add_trait = fair
+				}
+
+			}
+		}
+	}
+	option = {
+		name = dwse.2000.d
+		hidden_tooltip = {
+			add_character_modifier = {
+				name = dwse_sold_citizens 
+				duration = 365
+			}
+		}
+		capital_scope = {
+			hidden_tooltip = {
+				add_province_modifier = {
+					name = dwse_slavers 
+					duration = 365
+				}
+			}
+		}
+
+		wealth = 100
+	}
+}
+character_event = {
+	id = dwse.3000
+	desc = "dwse.3000.desc"
+	picture = "GFX_evt_trade_post_republic"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = dwse.3000.a
+		hidden_tooltip = {
+			add_character_modifier = {
+				name = dwse_funded_raiding
+				duration = 365
+			}
+		}
+		random_list = {
+			50 = {
+				create_character = {
+					random_traits = yes
+					 
+					culture = random
+					dynasty = none
+					female = no
+					age = 16
+				}
+			}
+
+			50 = {
+				create_character = {
+					random_traits = yes
+					 
+					female = yes
+					culture = random
+					dynasty = none
+					age = 16
+				}
+			}
+		}
+		new_character = { 
+			imprison = ROOT
+			random_list = {
+				10 = { 
+				add_trait = maimed
+					}
+				10 = { 
+					add_trait = slow
+				}
+				10 = { 
+					add_trait = kinslayer
+				}
+				10 = { 
+					add_trait = imbecile
+				}
+				10 = { 
+					add_trait = inbred
+				}
+				10 = { 
+					add_trait = weak
+				}
+				10 = { 
+					add_trait = blinded
+				}
+				10 = { 
+					add_trait = eunuch
+				}
+			}
+		}	
+		random_list = {
+			50 = {
+				create_character = {
+					random_traits = yes
+					 
+					culture = random
+					dynasty = none
+					female = no
+					age = 16
+				}
+			}
+			50 = {
+				create_character = {
+					random_traits = yes
+					 
+					female = yes
+					culture = random
+					dynasty = none
+					age = 16
+				}
+			}
+		}
+		new_character = { 
+			imprison = ROOT
+			random_list = {
+				10 = { 
+				add_trait = maimed
+					}
+				10 = { 
+					add_trait = slow
+				}
+				10 = { 
+					add_trait = kinslayer
+				}
+				10 = { 
+					add_trait = imbecile
+				}
+				10 = { 
+					add_trait = inbred
+				}
+				10 = { 
+					add_trait = weak
+				}
+				10 = { 
+					add_trait = blinded
+				}
+				10 = { 
+					add_trait = eunuch
+				}
+			}
+		}	
+		random_list = {
+			50 = {
+				create_character = {
+					random_traits = yes
+					 
+					culture = random
+					dynasty = none
+					female = no
+					age = 16
+				}
+			}
+			50 = {
+				create_character = {
+					random_traits = yes
+					 
+					female = yes
+					culture = random
+					dynasty = none
+					age = 16
+				}
+			}
+		}
+		new_character = { 
+			imprison = ROOT
+			random_list = {
+				10 = { 
+				add_trait = maimed
+				}
+				10 = { 
+					add_trait = slow
+				}
+				10 = { 
+					add_trait = kinslayer
+				}
+				10 = { 
+					add_trait = imbecile
+				}
+				10 = { 
+					add_trait = inbred
+				}
+				10 = { 
+					add_trait = weak
+				}
+				10 = { 
+					add_trait = blinded
+				}
+				10 = { 
+					add_trait = eunuch
+				}
+			}
+		}	
+		random_list = {
+			50 = {
+				create_character = {
+					random_traits = yes
+					 
+					culture = random
+					dynasty = none
+					female = no
+					age = 16
+				}
+			}
+			50 = {
+				create_character = {
+					random_traits = yes
+					 
+					female = yes
+					culture = random
+					dynasty = none
+					age = 16
+				}
+			}
+		}
+		new_character = { 
+			imprison = ROOT
+			random_list = {
+				10 = { 
+				add_trait = maimed
+					}
+				10 = { 
+					add_trait = slow
+				}
+				10 = { 
+					add_trait = kinslayer
+				}
+				10 = { 
+					add_trait = imbecile
+				}
+				10 = { 
+					add_trait = inbred
+				}
+				10 = { 
+					add_trait = weak
+				}
+				10 = { 
+					add_trait = blinded
+				}
+				10 = { 
+					add_trait = eunuch
+				}
+			}
+		}	
+		random_list = {
+			50 = {
+				create_character = {
+					random_traits = yes
+					 
+					culture = random
+					dynasty = none
+					female = no
+					age = 16
+				}
+			}
+			50 = {
+				create_character = {
+					random_traits = yes
+					 
+					female = yes
+					culture = random
+					dynasty = none
+					age = 16
+				}
+			}
+		}
+		new_character = { 
+			imprison = ROOT
+			random_list = {
+				10 = { 
+				add_trait = maimed
+					}
+				10 = { 
+					add_trait = slow
+				}
+				10 = { 
+					add_trait = kinslayer
+				}
+				10 = { 
+					add_trait = imbecile
+				}
+				10 = { 
+					add_trait = inbred
+				}
+				10 = { 
+					add_trait = weak
+				}
+				10 = { 
+					add_trait = blinded
+				}
+				10 = { 
+					add_trait = eunuch
+				}
+			}
+		}	
+	}
+	option = {
+		name = dwse.3000.b
+		hidden_tooltip = {
+			add_character_modifier = {
+				name = dwse_funded_raiding
+				duration = 365
+			}
+		}
+		random_list = {
+			50 = {
+				create_character = {
+					random_traits = yes
+					 
+					culture = random
+					dynasty = none
+					female = no
+					age = 16
+				}
+			}
+			50 = {
+				create_character = {
+					random_traits = yes
+					 
+					female = yes
+					culture = random
+					dynasty = none
+					age = 16
+				}
+			}
+		}
+		new_character = { 
+			imprison = ROOT
+			random_list = {
+				10 = { 
+					add_trait = strong
+				}
+				10 = { 
+					add_trait = quick
+				}
+				10 = { 
+					add_trait = kinslayer
+				}
+				10 = { 
+					add_trait = genius
+				}
+				10 = { 
+					add_trait = fair
+				}
+
+			}
+		}
+		random_list = {
+			50 = {
+				create_character = {
+					random_traits = yes
+					 
+					culture = random
+					dynasty = none
+					female = no
+					age = 16
+				}
+			}
+			50 = {
+				create_character = {
+					random_traits = yes
+					 
+					female = yes
+					culture = random
+					dynasty = none
+					age = 16
+				}
+			}
+		}
+		new_character = { 
+			imprison = ROOT
+			random_list = {
+				10 = { 
+					add_trait = strong
+				}
+				10 = { 
+					add_trait = quick
+				}
+				10 = { 
+					add_trait = kinslayer
+				}
+				10 = { 
+					add_trait = genius
+				}
+				10 = { 
+					add_trait = fair
+				}
+
+			}
+		}
+		random_list = {
+			50 = {
+				create_character = {
+					random_traits = yes
+					 
+					culture = random
+					dynasty = none
+					female = no
+					age = 16
+				}
+			}
+			50 = {
+				create_character = {
+					random_traits = yes
+					 
+					female = yes
+					culture = random
+					dynasty = none
+					age = 16
+				}
+			}
+		}
+		new_character = { 
+			imprison = ROOT
+			random_list = {
+				10 = { 
+					add_trait = strong
+				}
+				10 = { 
+					add_trait = quick
+				}
+				10 = { 
+					add_trait = kinslayer
+				}
+				10 = { 
+					add_trait = genius
+				}
+				10 = { 
+					add_trait = fair
+				}
+
+			}
+		}
+	}
+
+	option = {
+		name = dwse.3000.d
+		hidden_tooltip = {
+			add_character_modifier = {
+				name = dwse_funded_raiding
+				duration = 365
+			}
+		}
+		wealth = 150
+	}
+}
+character_event = {
+	id = dwse.4000
+	desc = "dwse.4000.desc"
+	picture = "GFX_evt_into_the_dungeon"
+	is_triggered_only = yes
+	
+	option = {
+		name = dwse.4000.a
+		character_event = { id = dwse.4010}
+	}
+	option = {
+		name = dwse.4000.b
+		character_event = { id = dwse.4020}
+	}
+	option = {
+		name = dwse.4000.c
+		character_event = { id = dwse.4030}
+
+	}
+	option = {
+		name = dwse.4000.d
+	}
+}
+character_event = {
+	id = dwse.4010
+	desc = "dwse.4010.desc"
+	picture = "GFX_evt_into_the_dungeon"
+	is_triggered_only = yes
+	
+	option = {
+		name = dwse.4010.a
+		character_event = { id = dwse.4011}
+	}
+	option = {
+		name = dwse.4010.b
+		character_event = { id = dwse.4012}
+	}
+	option = {
+		name = dwse.4010.c
+	}
+}
+character_event = {
+	id = dwse.4011
+	desc = "dwse.4011.desc"
+	picture = slavery_female_cell1
+	is_triggered_only = yes
+	
+	option = {
+		name = dwse.4011.a
+		wealth = -10
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			female = yes
+			culture = ROOT
+			age = 16
+		}
+		new_character = { 
+			imprison = ROOT
+			random_list = {				
+				10 = { 
+					add_trait = maimed
+				}
+				10 = { 
+					add_trait = slow
+				}
+				10 = { 
+					add_trait = kinslayer
+				}
+				10 = { 
+					add_trait = imbecile
+				}
+				10 = { 
+					add_trait = inbred
+				}
+				10 = { 
+					add_trait = weak
+				}
+				10 = { 
+					add_trait = blinded
+				}
+				10 = {
+					add_trait = lunatic
+				}
+				1 = {
+					add_trait = incapable
+				}
+			}
+		}
+	}
+	option = {
+		name = dwse.4011.b
+		wealth = -25
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			female = yes
+			culture = ROOT
+			age = 16
+		}
+		new_character = { 
+				imprison = ROOT
+		}
+	}
+	option = {
+		name = dwse.4011.c
+		wealth = -50
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			culture = ROOT
+			female = yes
+			age = 16
+		}
+		new_character = { 
+				imprison = ROOT
+			random_list = {
+				25 = {
+					add_trait = fair
+					add_trait = lustful
+				}
+				25 = {
+					add_trait = genius
+				}
+				25= {
+					add_trait = quick
+				}
+				25 = {
+					add_trait = strong
+				}
+			}
+		}
+	}
+}
+character_event = {
+		id = dwse.4012
+		desc = "dwse.4012.desc"
+		picture = slavery_male_cell1
+		is_triggered_only = yes
+	
+		option = {
+			name = dwse.4012.a
+			wealth = -10
+			create_character = {
+				random_traits = yes
+				dynasty = none
+				culture = ROOT
+				age = 16
+			}
+			new_character = { 
+				imprison = ROOT
+			random_list = {				
+				10 = { 
+					add_trait = maimed
+				}
+				10 = { 
+					add_trait = slow
+				}
+				10 = { 
+					add_trait = kinslayer
+				}
+				10 = { 
+					add_trait = imbecile
+				}
+				10 = { 
+					add_trait = inbred
+				}
+				10 = { 
+					add_trait = weak
+				}
+				10 = { 
+					add_trait = blinded
+				}
+				10 = {
+					add_trait = lunatic
+				}
+				1 = {
+					add_trait = incapable
+				}
+			}
+		}
+	}
+	option = {
+		name = dwse.4012.b
+		wealth = -25
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			culture = ROOT
+			age = 16
+		}
+		new_character = { 
+				imprison = ROOT
+		}
+	}
+	option = {
+		name = dwse.4012.c
+		wealth = -50
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			culture = ROOT
+			age = 16
+		}
+		new_character = { 
+				imprison = ROOT
+			random_list = {
+				25 = {
+					add_trait = fair
+					add_trait = lustful
+				}
+				25 = {
+					add_trait = genius
+				}
+				25= {
+					add_trait = quick
+				}
+				25 = {
+					add_trait = strong
+				}
+			}
+		}
+	}
+}
+character_event = {
+	id = dwse.4020
+	desc = "dwse.4020.desc"
+	picture = "GFX_evt_into_the_dungeon"
+	is_triggered_only = yes
+	
+	option = {
+		name = dwse.4020.a
+		character_event = { id = dwse.4021}
+	}
+	option = {
+		name = dwse.4020.b
+		character_event = { id = dwse.4022}
+	}
+	option = {
+		name = dwse.4020.c
+	}
+}
+character_event = {
+	id = dwse.4021
+	desc = "dwse.4021.desc"
+	picture = slavery_female_cell1
+	is_triggered_only = yes
+	
+	option = {
+		name = dwse.4021.a
+		wealth = -10
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			female = yes
+			culture = random
+			age = 16
+		}
+		new_character = { 
+			imprison = ROOT
+			random_list = {				
+				10 = { 
+					add_trait = maimed
+				}
+				10 = { 
+					add_trait = slow
+				}
+				10 = { 
+					add_trait = kinslayer
+				}
+				10 = { 
+					add_trait = imbecile
+				}
+				10 = { 
+					add_trait = inbred
+				}
+				10 = { 
+					add_trait = weak
+				}
+				10 = { 
+					add_trait = blinded
+				}
+				10 = {
+					add_trait = lunatic
+				}
+				1 = {
+					add_trait = incapable
+				}
+			}
+		}
+	}
+	option = {
+		name = dwse.4021.b
+		wealth = -25
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			female = yes
+			culture = random
+			age = 16
+		}
+		new_character = { 
+				imprison = ROOT
+		}
+	}
+	option = {
+		name = dwse.4021.c
+		wealth = -50
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			culture = random
+			female = yes
+			age = 16
+		}
+		new_character = { 
+				imprison = ROOT
+			random_list = {
+				25 = {
+					add_trait = fair
+					add_trait = lustful
+				}
+				25 = {
+					add_trait = genius
+				}
+				25= {
+					add_trait = quick
+				}
+				25 = {
+					add_trait = strong
+				}
+			}
+		}
+	}
+}
+character_event = {
+		id = dwse.4022
+		desc = "dwse.4022.desc"
+		picture = slavery_male_cell1
+		is_triggered_only = yes
+	
+		option = {
+			name = dwse.4022.a
+			wealth = -10
+			create_character = {
+				random_traits = yes
+				dynasty = none
+				culture = random
+				age = 16
+			}
+			new_character = { 
+				imprison = ROOT
+			random_list = {				
+				10 = { 
+					add_trait = maimed
+				}
+				10 = { 
+					add_trait = slow
+				}
+				10 = { 
+					add_trait = kinslayer
+				}
+				10 = { 
+					add_trait = imbecile
+				}
+				10 = { 
+					add_trait = inbred
+				}
+				10 = { 
+					add_trait = weak
+				}
+				10 = { 
+					add_trait = blinded
+				}
+				10 = {
+					add_trait = lunatic
+				}
+				1 = {
+					add_trait = incapable
+				}
+			}
+		}
+	}
+	option = {
+		name = dwse.4022.b
+		wealth = -25
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			culture = random
+			age = 16
+		}
+		new_character = { 
+				imprison = ROOT
+		}
+	}
+	option = {
+		name = dwse.4022.c
+		wealth = -50
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			culture = random
+			age = 16
+		}
+		new_character = { 
+				imprison = ROOT
+			random_list = {
+				25 = {
+					add_trait = fair
+					add_trait = lustful
+				}
+				25 = {
+					add_trait = genius
+				}
+				25= {
+					add_trait = quick
+				}
+				25 = {
+					add_trait = strong
+				}
+			}
+		}
+	}
+}
+character_event = {
+	id = dwse.4030
+	desc = "dwse.4030.desc"
+	picture = "GFX_evt_into_the_dungeon"
+	is_triggered_only = yes
+	
+	option = {
+		name = dwse.4030.a
+		character_event = { id = dwse.4031}
+	}
+	option = {
+		name = dwse.4030.b
+		character_event = { id = dwse.4032}
+	}
+	option = {
+		name = dwse.4030.c
+	}
+
+}
+character_event = {
+	id = dwse.4031
+	desc = "dwse.4031.desc"
+	picture = slavery_female_cell1
+	is_triggered_only = yes
+	
+	option = {
+		name = dwse.4031.a
+		wealth = -50
+		create_character = {
+			random_traits = yes
+			trait = dwarf
+			dynasty = none
+			female = yes
+			culture = ROOT
+			age = 16
+		}
+		new_character = { 
+			imprison = ROOT
+		}
+	}
+	option = {
+		name = dwse.4031.b
+		wealth = -50
+		create_character = {
+			random_traits = yes
+			trait = lf_futa
+			dynasty = none
+			female = yes
+			culture = ROOT
+			age = 16
+		}
+		new_character = { 
+			imprison = ROOT
+		}
+	}
+}
+character_event = {
+	id = dwse.4032
+	desc = "dwse.4032.desc"
+	picture = slavery_male_cell1
+	is_triggered_only = yes
+
+	option = {
+		name = dwse.4032.a
+		wealth = -50
+		create_character = {
+			random_traits = yes
+			trait = dwarf
+			dynasty = none
+			culture = ROOT
+			age = 16
+		}
+		new_character = { 
+			imprison = ROOT
+		}
+	}
+	option = {
+		name = dwse.4032.b
+		wealth = -50
+		create_character = {
+			random_traits = yes
+			female = no
+			trait = feminine
+			dynasty = none
+			culture = ROOT
+			age = 16
+		}
+		new_character = { 
+			imprison = ROOT
+		}
+	}
+}
+
+

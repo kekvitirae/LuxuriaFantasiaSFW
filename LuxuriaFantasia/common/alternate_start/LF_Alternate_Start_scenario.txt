@@ -1,0 +1,173 @@
+lf_racial_seeding = {
+	type = selection
+	random_default = none
+    sort_priority = 0
+	priority = 0
+    
+	none = {
+	}
+	partial = {
+		effect = {
+			lf_alternate_seed_races = yes
+		}
+	}
+	full = {
+		effect = {
+			lf_alternate_seed_races = yes
+		}
+	}
+}
+
+lf_seed_elf = {
+	type = checkbox
+	random_default = checked
+	apply_before_generation = yes
+	sort_priority = 0
+    
+	trigger = {
+		NOT = {
+			has_alternate_start_parameter = { key = lf_racial_seeding value = none }
+		}
+	}
+	checked = {
+	}
+	unchecked = {
+	}
+}
+
+lf_seed_orc = {
+	type = checkbox
+	random_default = checked
+	apply_before_generation = yes
+	sort_priority = 0
+    
+	trigger = {
+		NOT = {
+			has_alternate_start_parameter = { key = lf_racial_seeding value = none }
+		}
+	}
+	checked = {
+	}
+	unchecked = {
+	}
+}
+
+lf_seed_fairy = {
+	type = checkbox
+	random_default = checked
+	apply_before_generation = yes
+	sort_priority = 0
+    
+	trigger = {
+		NOT = {
+			has_alternate_start_parameter = { key = lf_racial_seeding value = none }
+		}
+	}
+	checked = {
+	}
+	unchecked = {
+	}
+}
+
+lf_seed_neko = {
+	type = checkbox
+	random_default = checked
+	apply_before_generation = yes
+	sort_priority = 0
+    
+	trigger = {
+		NOT = {
+			has_alternate_start_parameter = { key = lf_racial_seeding value = none }
+		}
+	}
+	checked = {
+	}
+	unchecked = {
+	}
+}
+
+lf_seed_kitsune = {
+	type = checkbox
+	random_default = checked
+	apply_before_generation = yes
+	sort_priority = 0
+    
+	trigger = {
+		NOT = {
+			has_alternate_start_parameter = { key = lf_racial_seeding value = none }
+		}
+	}
+	checked = {
+	}
+	unchecked = {
+	}
+}
+
+lf_seed_divine = {
+	type = checkbox
+	random_default = checked
+	apply_before_generation = yes
+	sort_priority = 0
+    
+	trigger = {
+		NOT = {
+			has_alternate_start_parameter = { key = lf_racial_seeding value = none }
+		}
+	}
+	checked = {
+	}
+	unchecked = {
+	}
+}
+
+lf_seed_demon = {
+	type = checkbox
+	random_default = checked
+	apply_before_generation = yes
+	sort_priority = 0
+    
+	trigger = {
+		NOT = {
+			has_alternate_start_parameter = { key = lf_racial_seeding value = none }
+		}
+	}
+	checked = {
+	}
+	unchecked = {
+	}
+}
+
+lf_seed_dragon = {
+	type = checkbox
+	random_default = checked
+	apply_before_generation = yes
+	sort_priority = 0
+    
+	trigger = {
+		NOT = {
+			has_alternate_start_parameter = { key = lf_racial_seeding value = none }
+		}
+	}
+	checked = {
+	}
+	unchecked = {
+	}
+}
+
+lf_seed_houseirae = {
+	type = checkbox
+	random_default = checked
+	apply_before_generation = yes
+	sort_priority = 0
+	separator = yes
+    
+	trigger = {
+		NOT = {
+			has_alternate_start_parameter = { key = lf_racial_seeding value = none }
+		}
+	}
+	checked = {
+	}
+	unchecked = {
+	}
+}

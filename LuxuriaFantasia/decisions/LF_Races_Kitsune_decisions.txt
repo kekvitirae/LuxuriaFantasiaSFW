@@ -1,0 +1,250 @@
+targetted_decisions = {
+	lf_kitsune_seduction = {
+		diplomacy_icon = GFX_lf_kitsune_decision
+		filter = all
+		ai_target_filter = realm
+		ai_check_interval = 36
+		from_potential = {
+			NOT = { is_incapable = yes }
+			has_global_flag = lf_races_hh_active
+			is_adult = yes
+			NOR = { # Uses Kiss of Seduction instead
+				AND = {
+					society_rank >= 1
+					society_member_of = lf_society_seduction
+				}
+				is_demon = yes
+			}
+			OR = {
+				AND = {
+					has_global_flag = tont_is_started
+					tont_has_five_or_more_tails_trigger = yes
+				}
+				AND = {
+					NOT = { has_global_flag = tont_is_started }
+					is_kitsune = yes
+				}
+			}
+			prisoner = no # Very difficult from behind bars as well
+			NOT = { has_any_opinion_modifier = opinion_seducing } # We're using the opinion modifier that is also used by the normal seducing method, as we don't want to overlap
+		}		
+		potential = {
+			NOT = { trait = lf_ghost }
+			OR = { 
+				AND = {
+					is_close_relative = FROM
+					OR = {
+						religion = messalian
+						religion = lf_adamite
+						religion = zoroastrian
+						AND = {
+							religion = lf_luxuria_custom
+							has_global_flag = lf_custom_incest_on
+						}
+						has_religion_feature = religion_holy_family
+					}
+				}
+				NOT = { is_close_relative = FROM }
+			}					
+			is_within_diplo_range = FROM # They should be in diplomatic traveling distance
+			is_adult = yes
+			NOT = { character = FROM } # No seducing ourselves
+			NOT = { is_incapable = yes }
+			prisoner = no # While tempting, let's leave the captive audience alone
+			NOT = { is_lover = FROM } # No need to seduce someone who we've already landed
+			NOT = { is_consort = FROM } # No need to seduce someone who we already own
+			NOT = { any_spouse = { character = FROM } } # No need to seduce someone who we've already landed
+		}
+		allow = {
+			conditional_tooltip = {
+				trigger = {
+					has_global_flag = tont_is_started
+				}
+				FROM = {
+					custom_tooltip = {
+						text = tont_5_or_more_tails
+						tont_has_five_or_more_tails_trigger = yes
+					}
+				}
+			}
+			conditional_tooltip = {
+				trigger = {
+					NOT = { has_global_flag = tont_is_started }
+				}
+				FROM = {
+					is_kitsune = yes
+				}
+			}			
+			NOR = {
+				has_opinion_modifier = { who = FROM modifier = opinion_seduced_refused }
+				has_character_modifier = dismissed_proposal
+				has_opinion_modifier = { who = FROM modifier = lf_opinion_recently_seduced }
+				trait = incapable 
+				trait = chaste
+				trait = eunuch
+				trait = celibate
+				is_kitsune = yes # You lose your exoticness if the target is also exotic.
+			} 
+			prisoner = no # Very difficult from behind bars as well
+			practical_age >= 16
+		}
+		effect = {
+			hidden_tooltip = {
+				FROM = {
+					opinion = {
+						who = ROOT
+						modifier = opinion_seducing # Placing this keeps us from being able to overlap with the normal seduction, and limits to pursuing only one person at a time
+						years = 1000
+					}
+					if = {
+						limit = {
+							is_close_relative = ROOT
+							NOT = { religion = messalian }
+							NOT = { religion = zoroastrian }
+							NOT = { has_religion_feature = religion_holy_family }
+						}
+						character_event = { id = LFSeduction.102 days = 1 } # Warning - Incest scandal risk
+						break = yes
+					}				
+					if = {
+						limit = {
+							same_sex = ROOT
+						}
+						character_event = { id = LFSeduction.104 days = 1 } # Warning - Homosexual scandal risk
+						break = yes
+					}					
+					if = {
+						limit = {
+							religion_group = christian
+							OR = {
+								is_priest = yes
+								trait = monk
+								trait = nun
+								ROOT = { is_priest = yes }
+								ROOT = { trait = monk }
+								ROOT = { trait = nun }
+							}
+						}
+						character_event = { id = LFSeduction.103 days = 1 } # Warning - Priest scandal risk
+						break = yes
+					}					
+					if = {
+						limit = { 
+							age_diff = {
+								who = ROOT
+								years = 25
+							}
+						}
+						character_event = { id = LFSeduction.105 days = 1 } # Warning - Age scandal risk
+						break = yes
+					}
+					if  = {
+						limit = {
+							is_female = no
+						}
+						narrative_event = { id = LFSeduction.101 days = 1 } # No warning - Incubus start
+						break = yes # we break out of the effect block
+					}					
+					# If we reach here, it's the Succubus default start
+					narrative_event = { id = LFSeduction.100 days = 1 } # No warning - Succubus start
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0.25 # 25% chance
+			modifier = {
+				factor = 0
+				OR = {
+					FROM = { ai_honor = 50 } # If an incubus or succubus somehow becomes very honorable, they'll no longer seek to use this method to sway others
+					FROM = { NOT = { ai_ambition = -40 }} # If there simply isn't the drive to seek a seduction conquest
+					AND = { # No trying to seduce grannies that aren't immortal
+						is_female = yes
+						NOT = { trait = immortal }
+						practical_age = 50
+					}
+					FROM = { num_of_children = 12 } # We're calling it quits if the ai reaches a dozen
+					FROM = { num_of_lovers = 3 } # The ai figures enough is enough at this point
+					trait = ugly # We're setting some basic standards for the ai with the items below
+					trait = dwarf
+					trait = inbred
+					trait = imbecile
+					trait = clubfooted
+					trait = harelip
+					trait = hunchback
+					trait = eunuch
+					is_ill = yes
+					is_pregnant = yes
+				}
+			}
+			modifier = {
+				factor = 0.5
+				FROM = {
+					num_of_children = 2 # Half as likely to do it if they've already a couple of kids
+				}
+			}
+			modifier = {
+				factor = 0.5
+				FROM = {
+					num_of_children = 4 # Half again as likely if they've 4
+				}
+			}
+			modifier = {
+				factor = 0.5
+				FROM = {
+					num_of_children = 8 # And only half again as likely if they've 8 kids (.25 * .5 * .5 * .5 = 3% )
+				}
+			}
+			modifier = { # 4 times as likely to pursue them if they're good looking
+				factor = 4
+				trait = fair
+			}
+			modifier = {
+				factor = 4 # 4 times as likely to do if the incubus/succubus is naturally inclined towards it
+				FROM = {
+					OR = {
+						trait = lustful
+						trait = hedonist
+						trait = seducer
+						trait = seductress
+					}
+				}
+			}
+			modifier = {
+				factor = 4
+				is_quest_target_of = FROM
+			}
+		}
+	}
+	
+	lf_fluff_kitsune = {
+		diplomacy_icon = GFX_lf_kitsune_decision
+		filter = court
+		ai_target_filter = none
+		from_potential = {
+			NOT = { is_incapable = yes }
+			is_adult = yes
+			trait = stressed
+			lf_is_silly = yes
+		}
+		potential = {
+			NOT = { is_incapable = yes }
+			is_adult = yes
+			is_kitsune = yes
+		}
+		allow = {
+			OR = {
+				is_friend = FROM
+				is_lover = FROM
+				is_close_relative = FROM
+			}
+			age = 24 # Need time for the tails to grow extra fluffy
+		}
+		effect = {
+			FROM = { 
+				character_event = { id = LFKitsune.100 } 
+			}
+		}
+	}
+	
+	
+}

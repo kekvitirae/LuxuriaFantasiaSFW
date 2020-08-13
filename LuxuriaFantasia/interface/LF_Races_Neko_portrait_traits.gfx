@@ -1,0 +1,290 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait1"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait2"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait3"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait4"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait5"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait6"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait7"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait8"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait9"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait10"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait11"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait12"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait13"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait14"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait15"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait16"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait17"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait18"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait19"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait20"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait21"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait22"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait23"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait24"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait25"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait26"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+	spriteType = {
+		name = "GFX_trait_neko_child1"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_neko_child2"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait1_cheri"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait2_cheri"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait3_cheri"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait4_cheri"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait5_cheri"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait6_cheri"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait7_cheri"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait8_cheri"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait9_cheri"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait10_cheri"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait11_cheri"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait12_cheri"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_portrait13_cheri"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+}

@@ -1,0 +1,1547 @@
+leave_court_for_forest_effect = { # NOTE: this does not set a "killer", meaning if you want them to be ORDERED to go to China, a killer needs to be set (eg: "killer = ROOT")
+	custom_tooltip = {
+		text = will_leave_for_forest_tt
+	}
+	set_character_flag = ignore_refund
+	set_character_flag = lf_never_turn_spoopy
+	hidden_effect = { death = { death_reason = death_went_to_forest } }
+}
+
+kidnap_dragon = { # Very similar to the basic setting - yet the additional money improves odds
+	random_list ={
+		5 = { # Opposing SpyMaster involved
+			modifier = { # No chance Opposing SpyMaster gets involved if our SpyMaster is 8 points better in intrigue
+				factor = 0
+				FROM = {
+					any_child = {
+							trait = dwse_dragon_adult
+							is_adult = yes
+							is_alive = yes
+							attribute_diff = {
+								character = event_target:dw_kidnap_target_spymaster
+								attribute = intrigue
+								value = 8
+							}
+					}
+				}
+			}
+			modifier = { # 50% less chance Opposing SpyMaster gets involved if our SpyMaster is 4 points better in intrigue
+				factor = 0.5
+				FROM = {
+					any_child = {
+							trait = dwse_dragon_adult
+							is_adult = yes
+							is_alive = yes
+							attribute_diff = {
+								character = event_target:dw_kidnap_target_spymaster
+								attribute = intrigue
+								value = 4
+							}
+					}
+				}
+			}
+			# Random List
+			random_list = { # new potential results list that is more risky and less likely to succeed
+				25 = { # Basic Failure - only loss of money
+					# TODO event regarding the failure and opposing SpyMaster involvement
+				}
+				25 = { # Bad Failure
+					random_list = { # Variations of bad failures.
+						# TODO Add events regarding each failure - perhaps add more failure options
+						45 = { # SpyMaster is wounded, but escapes
+							FROM = {
+								any_child = {
+									limit = {
+										trait = dwse_dragon_adult
+										is_adult = yes
+										is_alive = yes
+									}
+									add_trait = wounded
+								}
+							}
+						}
+						10 = { # SpyMaster 'falls' to their death accidentally
+							FROM = {
+								any_child = {
+									limit = {
+										trait = dwse_dragon_adult
+										is_adult = yes
+										is_alive = yes
+									}
+									set_character_flag = lf_never_turn_spoopy
+									death = { death_reason = death_accident_fall }
+								}
+							}
+						}
+					}
+				}
+				50 = { # Success
+					narrative_event = { id = dwseom.3801 days = 7 }
+				}
+			}
+		}
+		5 = { # Basic Failure - only loss of money
+			modifier = { # 75% less chance of basic failure if our SpyMaster is 8 points better in intrigue
+				factor = 0.25
+				FROM = {
+					any_child = {
+							trait = dwse_dragon_adult
+							is_adult = yes
+							is_alive = yes
+							attribute_diff = {
+								character = event_target:dw_kidnap_target
+								attribute = intrigue
+								value = 8
+							}
+					}
+				}
+			}
+			modifier = { # 50% less chance of basic failure if our SpyMaster is 4 points better in intrigue
+				factor = 0.5
+				FROM = {
+					any_child = {
+							trait = dwse_dragon_adult
+							is_adult = yes
+							is_alive = yes
+							attribute_diff = {
+								character = event_target:dw_kidnap_target
+								attribute = intrigue
+								value = 4
+							}
+					}
+				}
+			}
+			# TODO Add event regarding the failure
+		}
+		5 = { # Bad Failure - SpyMaster injured / imprisoned / or killed			
+			modifier = { # No chance of a bad failure if our SpyMaster is 8 points better in intrigue
+				factor = 0
+				FROM = {
+					any_child = {
+							trait = dwse_dragon_adult
+							is_adult = yes
+							is_alive = yes
+							attribute_diff = {
+								character = event_target:dw_kidnap_target
+								attribute = intrigue
+								value = 8
+							}
+					}
+				}
+			}
+			modifier = { # 50% less chance of a bad failure if our SpyMaster is 4 points better in intrigue
+				factor = 0.5
+				FROM = {
+					any_child = {
+							trait = dwse_dragon_adult
+							is_adult = yes
+							is_alive = yes
+							attribute_diff = {
+								character = event_target:dw_kidnap_target
+								attribute = intrigue
+								value = 4
+							}
+					}
+				}
+			}
+			random_list = { # Variations of bad failures.
+				# TODO Add events regarding each failure - perhaps add more failure options
+				90 = { # SpyMaster is wounded, but escapes
+					FROM = {
+						any_child = {
+							limit = {
+								trait = dwse_dragon_adult
+								is_adult = yes
+								is_alive = yes
+							}
+							add_trait = wounded
+						}
+					}
+				}
+				10 = { # SpyMaster 'falls' to their death accidentally
+					FROM = {
+						any_child = {
+							limit = {
+								trait = dwse_dragon_adult
+								is_adult = yes
+								is_alive = yes
+							}
+							set_character_flag = lf_never_turn_spoopy
+							death = {
+								death_reason = death_accident_fall
+							}
+						}
+					}
+				}
+			}
+		}
+		40 = { # Success
+			narrative_event = { id = dwseom.3801 days = 7 }
+		}
+	}
+}
+
+add_random_dwse_lizard_portrait = {
+	if = {
+		limit = {
+			has_game_rule = { name = lf_custom_portraits value = lf_custom_off }
+		}
+		break = yes
+	}
+	if = {
+		limit = {
+			culture = dwse_dawn
+		}
+		add_random_dwse_raen_portrait = yes
+	}
+	else_if = {
+		limit = {
+			culture = dwse_dusk
+		}
+		add_random_dwse_xaela_portrait = yes
+	}
+	else = {
+		random_list = {
+			5 = {
+				modifier = {
+					factor = 0
+					OR = {
+						AND = {
+							is_female = yes
+							trait = masculine
+						}
+						AND = {
+							is_female = no
+							NOT = { trait = feminine }
+						}
+					}
+				}
+				add_trait = dwse_portrait1_cheri
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					OR = {
+						AND = {
+							is_female = yes
+							trait = masculine
+						}
+						AND = {
+							is_female = no
+							NOT = { trait = feminine }
+						}
+					}
+				}
+				add_trait = dwse_portrait2_cheri 
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					OR = {
+						AND = {
+							is_female = yes
+							trait = masculine
+						}
+						AND = {
+							is_female = no
+							NOT = { trait = feminine }
+						}
+					}
+				}
+				add_trait = dwse_portrait3_cheri 
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					OR = {
+						AND = {
+							is_female = yes
+							trait = masculine
+						}
+						AND = {
+							is_female = no
+							NOT = { trait = feminine }
+						}
+					}
+				}
+				add_trait = dwse_portrait4_cheri
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					OR = {
+						AND = {
+							is_female = yes
+							trait = masculine
+						}
+						AND = {
+							is_female = no
+							NOT = { trait = feminine }
+						}
+					}
+				}
+				add_trait = dwse_portrait5_cheri
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					OR = {
+						AND = {
+							is_female = yes
+							trait = masculine
+						}
+						AND = {
+							is_female = no
+							NOT = { trait = feminine }
+						}
+					}
+				}
+				add_trait = dwse_portrait6_cheri
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					OR = {
+						AND = {
+							is_female = yes
+							trait = masculine
+						}
+						AND = {
+							is_female = no
+							NOT = { trait = feminine }
+						}
+					}
+				}
+				add_trait = dwse_portrait7_cheri
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					OR = {
+						AND = {
+							is_female = yes
+							trait = masculine
+						}
+						AND = {
+							is_female = no
+							NOT = { trait = feminine }
+						}
+					}
+				}
+				add_trait = dwse_portrait8_cheri
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					OR = {
+						AND = {
+							is_female = yes
+							trait = masculine
+						}
+						AND = {
+							is_female = no
+							NOT = { trait = feminine }
+						}
+					}
+				}
+				add_trait = dwse_portrait9_cheri
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					OR = {
+						AND = {
+							is_female = yes
+							trait = masculine
+						}
+						AND = {
+							is_female = no
+							NOT = { trait = feminine }
+						}
+					}
+				}
+				add_trait = dwse_portrait10_cheri
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					OR = {
+						AND = {
+							is_female = yes
+							trait = masculine
+						}
+						AND = {
+							is_female = no
+							NOT = { trait = feminine }
+						}
+					}
+				}
+				add_trait = dwse_portrait11_cheri
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					OR = {
+						AND = {
+							is_female = yes
+							trait = masculine
+						}
+						AND = {
+							is_female = no
+							NOT = { trait = feminine }
+						}
+					}
+				}
+				add_trait = dwse_portrait12_cheri
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					OR = {
+						AND = {
+							is_female = yes
+							trait = masculine
+						}
+						AND = {
+							is_female = no
+							NOT = { trait = feminine }
+						}
+					}
+				}
+				add_trait = dwse_portrait13_cheri
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					OR = {
+						AND = {
+							is_female = yes
+							trait = masculine
+						}
+						AND = {
+							is_female = no
+							NOT = { trait = feminine }
+						}
+					}
+				}
+				add_trait = dwse_portrait14_cheri
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					OR = {
+						AND = {
+							is_female = yes
+							trait = masculine
+						}
+						AND = {
+							is_female = no
+							NOT = { trait = feminine }
+						}
+					}
+				}
+				add_trait = dwse_portrait15_cheri
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					OR = {
+						AND = {
+							is_female = yes
+							trait = masculine
+						}
+						AND = {
+							is_female = no
+							NOT = { trait = feminine }
+						}
+					}
+				}
+				add_trait = dwse_portrait16_cheri
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					OR = {
+						AND = {
+							is_female = yes
+							trait = masculine
+						}
+						AND = {
+							is_female = no
+							NOT = { trait = feminine }
+						}
+					}
+				}
+				add_trait = dwse_portrait17_cheri
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					OR = {
+						AND = {
+							is_female = yes
+							trait = masculine
+						}
+						AND = {
+							is_female = no
+							NOT = { trait = feminine }
+						}
+					}
+				}
+				add_trait = dwse_portrait18_cheri
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					OR = {
+						AND = {
+							is_female = yes
+							trait = masculine
+						}
+						AND = {
+							is_female = no
+							NOT = { trait = feminine }
+						}
+					}
+				}
+				add_trait = dwse_portrait19_cheri
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					OR = {
+						AND = {
+							is_female = yes
+							trait = masculine
+						}
+						AND = {
+							is_female = no
+							NOT = { trait = feminine }
+						}
+					}
+				}
+				add_trait = dwse_portrait20_cheri
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					OR = {
+						AND = {
+							is_female = yes
+							trait = masculine
+						}
+						AND = {
+							is_female = no
+							NOT = { trait = feminine }
+						}
+					}
+				}
+				add_trait = dwse_portrait21_cheri
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					OR = {
+						AND = {
+							is_female = yes
+							NOT = { trait = masculine }
+						}
+						AND = {
+							is_female = no
+							trait = feminine
+						}
+					}
+				}
+				add_trait = dwse_portrait22 
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					OR = {
+						AND = {
+							is_female = yes
+							NOT = { trait = masculine }
+						}
+						AND = {
+							is_female = no
+							trait = feminine
+						}
+					}
+				}
+				add_trait = dwse_portrait23 
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					OR = {
+						AND = {
+							is_female = yes
+							NOT = { trait = masculine }
+						}
+						AND = {
+							is_female = no
+							trait = feminine
+						}
+					}
+				}
+				add_trait = dwse_portrait24 
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					OR = {
+						AND = {
+							is_female = yes
+							NOT = { trait = masculine }
+						}
+						AND = {
+							is_female = no
+							trait = feminine
+						}
+					}
+				}
+				add_trait = dwse_portrait25 
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					OR = {
+						AND = {
+							is_female = yes
+							NOT = { trait = masculine }
+						}
+						AND = {
+							is_female = no
+							trait = feminine
+						}
+					}
+				}
+				add_trait = dwse_portrait26 
+			}
+		}
+	}
+}
+
+remove_dwse_lizard_portrait = {
+	remove_trait = dwse_portrait22
+	remove_trait = dwse_portrait23
+	remove_trait = dwse_portrait24
+	remove_trait = dwse_portrait25
+	remove_trait = dwse_portrait26
+	remove_trait = dwse_portrait1_cheri
+	remove_trait = dwse_portrait2_cheri
+	remove_trait = dwse_portrait3_cheri
+	remove_trait = dwse_portrait4_cheri
+	remove_trait = dwse_portrait5_cheri
+	remove_trait = dwse_portrait6_cheri
+	remove_trait = dwse_portrait7_cheri
+	remove_trait = dwse_portrait8_cheri
+	remove_trait = dwse_portrait9_cheri
+	remove_trait = dwse_portrait10_cheri
+	remove_trait = dwse_portrait11_cheri
+	remove_trait = dwse_portrait12_cheri
+	remove_trait = dwse_portrait13_cheri
+	remove_trait = dwse_portrait14_cheri
+	remove_trait = dwse_portrait15_cheri
+	remove_trait = dwse_portrait16_cheri
+	remove_trait = dwse_portrait17_cheri
+	remove_trait = dwse_portrait18_cheri
+	remove_trait = dwse_portrait19_cheri
+	remove_trait = dwse_portrait20_cheri
+	remove_trait = dwse_portrait21_cheri
+	remove_trait = dwse_raen_male1 
+	remove_trait = dwse_raen_male2 
+	remove_trait = dwse_raen_male3 
+	remove_trait = dwse_raen_male4 
+	remove_trait = dwse_raen_male5 
+	remove_trait = dwse_raen_male6 
+	remove_trait = dwse_raen_male7 
+	remove_trait = dwse_raen_male8 
+	remove_trait = dwse_raen_male9 
+	remove_trait = dwse_raen_male10
+	remove_trait = dwse_raen_male11
+	remove_trait = dwse_raen_male12
+	remove_trait = dwse_raen_female1 
+	remove_trait = dwse_raen_female2 
+	remove_trait = dwse_raen_female3 
+	remove_trait = dwse_raen_female4 
+	remove_trait = dwse_raen_female5 
+	remove_trait = dwse_raen_female6 
+	remove_trait = dwse_raen_female7 
+	remove_trait = dwse_raen_female8 
+	remove_trait = dwse_raen_female9 
+	remove_trait = dwse_raen_female10
+	remove_trait = dwse_raen_female11
+	remove_trait = dwse_raen_female12
+	remove_trait = dwse_xaela_male1 
+	remove_trait = dwse_xaela_male2 
+	remove_trait = dwse_xaela_male3 
+	remove_trait = dwse_xaela_male4 
+	remove_trait = dwse_xaela_male5 
+	remove_trait = dwse_xaela_male6 
+	remove_trait = dwse_xaela_male7 
+	remove_trait = dwse_xaela_male8 
+	remove_trait = dwse_xaela_male9 
+	remove_trait = dwse_xaela_male10
+	remove_trait = dwse_xaela_male11
+	remove_trait = dwse_xaela_male12
+	remove_trait = dwse_xaela_female1 
+	remove_trait = dwse_xaela_female2 
+	remove_trait = dwse_xaela_female3 
+	remove_trait = dwse_xaela_female4 
+	remove_trait = dwse_xaela_female5 
+	remove_trait = dwse_xaela_female6 
+	remove_trait = dwse_xaela_female7 
+	remove_trait = dwse_xaela_female8 
+	remove_trait = dwse_xaela_female9 
+	remove_trait = dwse_xaela_female10
+	remove_trait = dwse_xaela_female11
+	remove_trait = dwse_xaela_female12
+}
+
+add_random_dwse_dragon_portrait = {
+	if = {
+		limit = {
+			has_game_rule = { name = lf_custom_portraits value = lf_custom_off }
+		}
+		break = yes
+	}
+	random_list = {
+		5 = {
+			add_trait = dwse_dragon_portrait1 
+		}
+		5 = {
+			add_trait = dwse_dragon_portrait2 
+		}
+		5 = {
+			add_trait = dwse_dragon_portrait3 
+		}
+		5 = {
+			add_trait = dwse_dragon_portrait4 
+		}
+		5 = {
+			add_trait = dwse_dragon_portrait5 
+		}
+		5 = {
+			add_trait = dwse_dragon_portrait6 
+		}
+		5 = {
+			add_trait = dwse_dragon_portrait7 
+		}
+		5 = {
+			add_trait = dwse_dragon_portrait8 
+		}
+		5 = {
+			add_trait = dwse_dragon_portrait9 
+		}
+		5 = {
+			add_trait = dwse_dragon_portrait10 
+		}
+		5 = {
+			add_trait = dwse_dragon_portrait11 
+		}
+		5 = {
+			add_trait = dwse_dragon_portrait12 
+		}
+		5 = {
+			add_trait = dwse_dragon_portrait13 
+		}
+		5 = {
+			add_trait = dwse_dragon_portrait14
+		}
+	}
+}
+
+remove_dwse_dragon_portrait = {
+	remove_trait = dwse_dragon_portrait1
+	remove_trait = dwse_dragon_portrait2
+	remove_trait = dwse_dragon_portrait3
+	remove_trait = dwse_dragon_portrait4
+	remove_trait = dwse_dragon_portrait5
+	remove_trait = dwse_dragon_portrait6
+	remove_trait = dwse_dragon_portrait7
+	remove_trait = dwse_dragon_portrait8
+	remove_trait = dwse_dragon_portrait9
+	remove_trait = dwse_dragon_portrait10
+	remove_trait = dwse_dragon_portrait11
+	remove_trait = dwse_dragon_portrait12
+	remove_trait = dwse_dragon_portrait13
+	remove_trait = dwse_dragon_portrait14
+}
+
+add_random_dwse_raen_portrait = {
+	random_list = {
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = dwse_raen_male1 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = dwse_raen_male2 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = dwse_raen_male3 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = dwse_raen_male4 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = dwse_raen_male5 
+		}	
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = dwse_raen_male6 
+		}	
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = dwse_raen_male7 
+		}	
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = dwse_raen_male8
+		}	
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = dwse_raen_male9 
+		}	
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = dwse_raen_male10 
+		}	
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = dwse_raen_male11
+		}	
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = dwse_raen_male12
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = dwse_raen_female1
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = dwse_raen_female2
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = dwse_raen_female3
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = dwse_raen_female4
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = dwse_raen_female5
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = dwse_raen_female6
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = dwse_raen_female7
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = dwse_raen_female8
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = dwse_raen_female9
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = dwse_raen_female10
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = dwse_raen_female11
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = dwse_raen_female12
+		}
+	}
+}
+add_random_dwse_xaela_portrait = {
+	random_list = {
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = dwse_xaela_male1 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = dwse_xaela_male2 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = dwse_xaela_male3 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = dwse_xaela_male4 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = dwse_xaela_male5 
+		}	
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = dwse_xaela_male6 
+		}	
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = dwse_xaela_male7 
+		}	
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = dwse_xaela_male8
+		}	
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = dwse_xaela_male9 
+		}	
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = dwse_xaela_male10 
+		}	
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = dwse_xaela_male11
+		}	
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = dwse_xaela_male12
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = dwse_xaela_female1
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = dwse_xaela_female2
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = dwse_xaela_female3
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = dwse_xaela_female4
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = dwse_xaela_female5
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = dwse_xaela_female6
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = dwse_xaela_female7
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = dwse_xaela_female8
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = dwse_xaela_female9
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = dwse_xaela_female10
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = dwse_xaela_female11
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = dwse_xaela_female12
+		}
+	}
+}

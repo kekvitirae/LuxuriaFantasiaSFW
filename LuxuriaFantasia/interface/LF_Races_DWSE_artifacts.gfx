@@ -1,0 +1,107 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_dwse_dragon_egg"
+		texturefile = "gfx/interface/inventory/artifacts/dwse_dragon_egg.dds"
+	}	
+	spriteType = {
+		name = "GFX_dwse_dragon_egg_small"
+		texturefile = "gfx/interface/inventory/artifacts/dwse_dragon_egg_small.dds"
+	}
+	spriteType = {
+		name = "dragon_breeding"
+		texturefile = "gfx/event_pictures/dragon_breeding.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "dwse_regen"
+		texturefile = "gfx/event_pictures/dwse_regen.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+	spriteType = {
+		name = "egg_laying"
+		texturefile = "gfx/event_pictures/egg_laying.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "dwse_dragon_egg_hatch"
+		texturefile = "gfx/event_pictures/dwse_dragon_egg_hatch.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "dragon_hatching"
+		texturefile = "gfx/event_pictures/dragon_hatching.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "dragon_gift"
+		texturefile = "gfx/event_pictures/dragon_gift.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "dragon_kidnap"
+		texturefile = "gfx/event_pictures/dragon_kidnap.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "dragon_flight"
+		texturefile = "gfx/event_pictures/dragon_flight.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "dragon_sex"
+		texturefile = "gfx/event_pictures/dragon_sex.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "dragon_sex2"
+		texturefile = "gfx/event_pictures/dragon_sex2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+	spriteType = {
+		name = "GFX_dragon_sex_event"
+		texturefile = "gfx\\interface\\dragon_sex_event.dds"
+	}
+	spriteType = {
+		name = "dragon_ambassador_return"
+		texturefile = "gfx/event_pictures/dragon_ambassador_return.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "dragon_ambassador_egg"
+		texturefile = "gfx/event_pictures/dragon_ambassador_egg.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "dragon_ambassador_stay"
+		texturefile = "gfx/event_pictures/dragon_ambassador_stay.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+}

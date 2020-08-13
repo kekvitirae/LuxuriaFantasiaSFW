@@ -1,0 +1,28 @@
+death_went_to_forest = {
+	can_nokiller = yes
+	long_desc = "DEATH_WENT_TO_FOREST"
+	icon = 2
+	killer_icon = 1
+	sound = no
+}
+
+death_dwse_starvation = {
+	can_nokiller = yes
+	long_desc = "DEATH_DWSE_STARVATION"
+	sound_list = {
+		female = {
+			"natural_death_female_01"
+			"natural_death_female_02"
+			"natural_death_female_03"
+			"natural_death_female_04"
+			"natural_death_female_05"
+		}
+		male = {
+			"natural_death_male_0"
+			"natural_death_male_01"
+			"natural_death_male_02"
+			"natural_death_male_03"
+			"natural_death_male_04"
+		}
+	}
+}

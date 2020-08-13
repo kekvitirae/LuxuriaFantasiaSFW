@@ -1,0 +1,218 @@
+namespace = LFFuta
+
+long_character_event = {
+	id = LFFuta.1
+	is_triggered_only = yes
+	picture = lf_gypsy_small
+	desc = LFFuta1
+	trigger = {
+		ai = no
+		has_gender_bender_content = yes
+	}
+	option = {
+		trigger = {
+			is_female = yes
+		}
+		name = LFFutaTTA
+		lf_add_futa = yes
+	}
+	option = {
+		trigger = {
+			is_female = yes
+		}
+		name = LFFutaTTB
+		lf_add_futa = yes
+		add_trait = masculine
+		hidden_tooltip = {
+			lf_masculine_feminine_portrait_change = yes
+		}
+	}
+	option = {
+		trigger = {
+			is_female = yes
+		}
+		name = LFFutaTTC
+		add_trait = masculine
+		hidden_tooltip = {
+			lf_masculine_feminine_portrait_change = yes
+		}
+	}
+	option = {
+		trigger = {
+			is_female = no
+		}
+		name = LFFutaTTD
+		add_trait = feminine
+		hidden_tooltip = {
+			lf_masculine_feminine_portrait_change = yes
+		}
+	}
+	option = {
+		name = LFFutaTTE
+	}
+}
+	
+	
+	
+#
+# Removes the futa/trap traits if global flag is turned off
+#
+
+character_event = {
+	id = LFFuta.300
+	hide_window = yes
+	is_triggered_only = yes # on_yearly_pulse
+	trigger = {
+		OR = {
+			is_futa = yes
+			trait = masculine
+			trait = feminine
+		}
+		has_gender_bender_content = no
+	}
+	immediate = {
+		remove_trait = lf_futa
+		remove_trait = futa
+		remove_trait = masculine
+		remove_trait = feminine
+	}
+}
+
+#
+# Children born from a futa's wife (via decision) gets the futa's dynasty
+#
+
+character_event = {
+	id = LFFuta.400
+	hide_window = yes
+	is_triggered_only = yes # on_birth
+	trigger = {
+		mother = {
+			has_character_flag = lf_futa_wife
+			ROOT = {
+				father = {
+					is_married = PREVPREV
+				}
+			}
+		}
+	}
+	immediate = {
+		father = {
+			ROOT = {
+				dynasty = PREV
+				recalc_succession = yes
+			}
+		}
+	}
+}
+
+character_event = {
+	id = LFFuta.401
+	hide_window = yes
+	is_triggered_only = yes # on_divorce
+	trigger = {
+		has_character_flag = lf_futa_wife
+	}
+	immediate = {
+		clr_character_flag = lf_futa_wife
+	}
+}
+
+#
+# Futa Empire option: Female children born from futas will have an increased rate of being futas. 100% if both parents are futas.
+#
+
+character_event = {
+	id = LFFuta.500
+	hide_window = yes
+	is_triggered_only = yes # on_birth
+	trigger = {
+		has_global_flag = LFFutaEmpireOn
+		is_female = yes
+		OR = {
+			mother = {
+				is_futa = yes
+			}
+			true_father_even_if_dead = {
+				is_futa = yes
+			}
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						mother = {
+							is_futa = yes
+						}
+						true_father_even_if_dead = {
+							is_not_futa = yes
+						}
+					}
+					AND = {
+						mother = {
+							is_not_futa = yes
+						}
+						true_father_even_if_dead = {
+							is_futa = yes
+						}
+					}
+				}
+			}
+			random_list = {
+				50 = { # 50% chance of being a futa
+					lf_add_futa = yes
+				}
+				50 = { # 50% chance of no inheritance
+					lf_remove_futa = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				mother = {
+					is_futa = yes
+				}
+				true_father_even_if_dead = {
+					is_futa = yes
+				}
+			}
+			lf_add_futa = yes
+		}
+	}
+}
+
+#
+# Futa Empire option: Female children of non-futa parents will have a 25% chance of being a futa.
+#
+
+character_event = {
+	id = LFFuta.501
+	hide_window = yes
+	is_triggered_only = yes # on_birth
+	trigger = {
+		has_global_flag = LFFutaEmpireOn
+		is_female = yes
+		NOR = {
+			mother = {
+				is_futa = yes
+			}
+			true_father_even_if_dead = {
+				is_futa = yes
+			}
+		}
+	}
+	
+	immediate = {
+		random_list = {
+			25 = {
+				lf_add_futa = yes
+			}
+			75 = {
+			}
+		}
+	}
+}
+					

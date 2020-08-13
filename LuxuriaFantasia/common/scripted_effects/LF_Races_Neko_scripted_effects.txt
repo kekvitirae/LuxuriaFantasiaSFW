@@ -1,0 +1,455 @@
+lf_add_random_neko_portrait = {
+	if = {
+		limit = {
+			has_game_rule = { name = lf_custom_portraits value = lf_custom_off }
+		}
+		break = yes
+	}
+	random_list = {
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_neko_portrait1_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_neko_portrait2_cheri 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_neko_portrait3_cheri 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_neko_portrait4_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_neko_portrait5_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_neko_portrait6_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_neko_portrait7_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_neko_portrait8_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_neko_portrait9_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_neko_portrait10_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_neko_portrait11_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_neko_portrait12_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_neko_portrait13_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_neko_portrait14_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_neko_portrait15_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_neko_portrait16_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_neko_portrait17
+		}
+		5 = { 
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_neko_portrait18
+		}
+		5 = { 
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_neko_portrait19
+		}
+		5 = { 
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_neko_portrait20
+		}
+		5 = { 
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_neko_portrait21
+		}
+		5 = { 
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_neko_portrait22
+		}
+		5 = { 
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_neko_portrait23
+		}
+		5 = { 
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_neko_portrait24
+		}
+		5 = { 
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_neko_portrait25
+		}
+		5 = { 
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_neko_portrait26
+		}
+	}
+}
+
+lf_remove_neko_portrait = {
+	remove_trait = lf_neko_portrait17
+	remove_trait = lf_neko_portrait18
+	remove_trait = lf_neko_portrait19
+	remove_trait = lf_neko_portrait20
+	remove_trait = lf_neko_portrait21
+	remove_trait = lf_neko_portrait22
+	remove_trait = lf_neko_portrait23
+	remove_trait = lf_neko_portrait24
+	remove_trait = lf_neko_portrait25
+	remove_trait = lf_neko_portrait26
+	remove_trait = lf_neko_portrait1_cheri
+	remove_trait = lf_neko_portrait2_cheri
+	remove_trait = lf_neko_portrait3_cheri
+	remove_trait = lf_neko_portrait4_cheri
+	remove_trait = lf_neko_portrait5_cheri
+	remove_trait = lf_neko_portrait6_cheri
+	remove_trait = lf_neko_portrait7_cheri
+	remove_trait = lf_neko_portrait8_cheri
+	remove_trait = lf_neko_portrait9_cheri
+	remove_trait = lf_neko_portrait10_cheri
+	remove_trait = lf_neko_portrait11_cheri
+	remove_trait = lf_neko_portrait12_cheri
+	remove_trait = lf_neko_portrait13_cheri
+	remove_trait = lf_neko_portrait14_cheri
+	remove_trait = lf_neko_portrait15_cheri
+	remove_trait = lf_neko_portrait16_cheri
+}	

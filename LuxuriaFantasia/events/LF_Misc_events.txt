@@ -1,0 +1,82 @@
+namespace = LFMisc
+
+#
+# Lootboxes
+#
+
+character_event = {
+	id = LFMisc.1
+	is_triggered_only = yes
+	desc = LFMisc1
+	picture = GFX_evt_gift
+	option = {
+		name = LFMisc1TTA
+		character_event = { id = LFMisc.2 }
+	}
+}
+
+character_event = {
+	id = LFMisc.2
+	is_triggered_only = yes
+	desc = {
+		trigger = {
+			NOT = { has_character_flag = lf_loot_bloodline }
+		}
+		text = LFMisc2A
+	}
+	desc = {
+		trigger = {
+			has_character_flag = lf_loot_bloodline
+		}
+		text = LFMisc2B
+	}
+	
+	picture = {
+		trigger = {
+			NOT = { has_character_flag = lf_loot_bloodline }
+		}
+		picture = GFX_evt_bad_news
+	}
+	picture = {
+		trigger = {
+			has_character_flag = lf_loot_bloodline
+		}
+		picture = GFX_evt_treasure_chamber
+	}
+	
+	
+	immediate = {
+		random_list = {
+			95 = { }
+			5 = { 
+				trigger = {
+					NOT = { has_global_flag = lf_loot_bloodline }
+				}
+				set_character_flag = lf_loot_bloodline
+				set_global_flag = lf_loot_bloodline
+			}
+		}
+	}
+	
+	option = {
+		trigger = {
+			NOT = { has_character_flag = lf_loot_bloodline }
+		}
+		name = LFMisc2TTA
+	}
+	option = {
+		trigger = {
+			has_character_flag = lf_loot_bloodline
+		}
+		name = LFMisc2TTB
+		clr_character_flag = lf_loot_bloodline
+		create_bloodline = {
+			type = lf_loot_bloodline
+		}
+		hidden_tooltip = {
+			new_bloodline = {
+				set_description = "lf_loot_bloodline_desc"
+			}
+		}
+	}
+}

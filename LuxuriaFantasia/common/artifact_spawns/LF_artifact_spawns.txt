@@ -1,0 +1,113 @@
+lf_magical_items1 = {
+	max_amount = 3
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+	
+	artifacts = {
+		lf_kama_sutra = {
+			value = 1
+		}
+	}
+}
+
+lf_magical_items2 = {
+	max_amount = 3
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+	
+	artifacts = {
+		lf_amulet_nondetection = {
+			value = 1
+		}
+	}
+}
+
+lf_magical_items3 = {
+	max_amount = 3
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+	
+	artifacts = {
+		lf_pirate_booty = {
+			value = 1
+		}
+	}
+}
+
+lf_magical_items4 = {
+	max_amount = 3
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+	
+	artifacts = {
+		lf_ring_protection = {
+			value = 1
+		}
+	}
+}
+
+lf_magical_items5 = {
+	max_amount = 3
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+	
+	artifacts = {
+		lf_elven_quiver = {
+			value = 1
+		}
+	}
+}
+
+lf_magical_items6 = {
+	max_amount = 3
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+	
+	artifacts = {
+		lf_orcish_bracers = {
+			value = 1
+		}
+	}
+}

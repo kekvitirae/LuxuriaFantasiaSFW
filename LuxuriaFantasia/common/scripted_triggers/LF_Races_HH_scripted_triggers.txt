@@ -1,0 +1,48 @@
+lf_races_hh_active = {
+	has_global_flag = LFHHOn
+}
+
+lf_has_demons = {
+	custom_tooltip = {
+		text = LFHasDemons
+		has_global_flag = LFDemonOn
+	}
+}
+
+lf_has_divines = {
+	custom_tooltip = {
+		text = LFHasDivines
+		has_global_flag = LFDivineOn
+	}
+}
+
+lf_has_demonic_buildings = {
+	OR = {
+		family_palace = {
+			has_building = lf_demonic_shrine_fp
+		}
+		capital_holding = {
+			OR = {
+				has_building = lf_demonic_shrine_castle # Castle
+				has_building = lf_demonic_shrine_tribal # Tribal
+				has_building = lf_demonic_shrine_nomad # Nomad
+			}
+		}
+	}
+}
+
+lf_has_divine_buildings = {
+	OR = {
+		family_palace = {
+			has_building = lf_divine_chapel_fp
+		}
+		capital_holding = {
+			OR = {
+				has_building = lf_divine_chapel_castle # Castle
+				has_building = lf_divine_chapel_tribal # Tribal
+				has_building = lf_divine_chapel_nomad # Nomad
+			}
+		}
+	}
+}
+

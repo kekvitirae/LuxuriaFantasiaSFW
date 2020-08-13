@@ -1,0 +1,47 @@
+lf_races_fareast_active = {
+	has_global_flag = LFFarEastOn
+}
+
+lf_has_kitsune = {
+	custom_tooltip = {
+		text = LFHasKitsune
+		has_global_flag = LFKitsuneOn
+	}
+}
+
+lf_has_nekos = {
+	custom_tooltip = {
+		text = LFHasNekos
+		has_global_flag = LFNekoOn
+	}
+}
+
+lf_has_kitsune_buildings = {
+	OR = {
+		family_palace = {
+			has_building = lf_palace_kitsune_shrine
+		}
+		capital_holding = {
+			OR = {
+				has_building = lf_castle_kitsune_shrine # Castle
+				has_building = lf_kitsune_shrine # Tribal
+				has_building = lf_kitsune_shrine_nomad # Nomad
+			}
+		}
+	}
+}
+
+lf_has_neko_buildings = {
+	OR = {
+		family_palace = {
+			has_building = lf_palace_neko_playroom
+		}
+		capital_holding = {
+			OR = {
+				has_building = lf_castle_neko_playroom # Castle
+				has_building = lf_tribal_neko_playroom # Tribal
+				has_building = lf_nomad_neko_playroom # Nomad
+			}
+		}
+	}
+}

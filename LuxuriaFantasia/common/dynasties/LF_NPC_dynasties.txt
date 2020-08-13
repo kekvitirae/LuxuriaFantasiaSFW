@@ -1,0 +1,82 @@
+9100000 = {
+	name="Dragon-Scale"
+	culture="norse"
+}
+
+9100001 = {
+	name="Leviathan"
+	culture="english"
+}
+
+9100002 = {
+	name="L'Crit"
+	culture="elven"
+}
+
+9100003 = {
+	name="Liu"
+	culture="neko_culture"
+}
+
+9100004 = {
+	name="Oda"
+	culture="elven"
+}
+
+9100005 = {
+	name="L'Crit"
+	culture="elven"
+}
+
+9100006 = {
+	name="Taegul"
+	culture="orcish"
+}
+
+9100007 = {
+	name="Moonshadow"
+	culture="fae"
+}
+
+9100008 = {
+	name="Jazren"
+	culture="assyrian"
+}
+
+9100009 = {
+	name="Erathaol"
+	culture="italian"
+}
+
+9100010 = {
+	name = "y Akh"
+	culture = "dwse_dusk"
+}
+
+9100011 = {
+	name = "M'naago"
+	culture = "neko_culture"
+}
+
+9100012 = {
+	name = "Xalyth"
+	culture = "elven"
+}
+
+9100013 = {
+	name = "Bonson"
+	culture = "bodpa"
+    coat_of_arms = {
+		religion = buddhist
+        template = 0
+        layer = {
+           texture = 0
+           texture_internal = 16
+           emblem = 0
+           color = 8
+           color = 7
+			color = 1
+        }
+    }	
+}
+

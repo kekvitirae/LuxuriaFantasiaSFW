@@ -1,0 +1,787 @@
+decisions = {
+
+	# Luxuria Lootboxes
+	lf_claim_lootbox = {
+		ai = no
+		potential = {
+			ai = no
+			is_ruler = yes
+			lf_is_silly = yes
+			#real_month_of_year = 3
+			NOR = { 
+				#real_month_of_year = 4
+				has_character_flag = lf_lootbox_claimed
+			}
+		}
+		allow = {
+			wealth = 50
+		}
+		effect = {
+			character_event = { id = LFMisc.1 }
+			wealth = -50
+			set_character_flag = lf_lootbox_claimed
+		}
+	}
+
+	# Blood Feud Banishment
+	lf_banish_blood_feud = {
+		ai = no
+		potential = {
+			NOT = { is_incapable = yes }
+			ai = no
+			is_ruler = yes
+			has_game_rule = { name = lf_blood_feud value = lf_bf_on }
+			any_character = {
+				liege = { character = ROOT }
+				NOR = {
+					is_ruler = yes
+					prisoner = yes
+					is_married = ROOT
+					is_lover = ROOT
+					is_consort = ROOT
+					is_child_of = ROOT
+					trait = kind
+					dynasty = ROOT
+					has_minor_title = yes
+					has_job_title = yes
+				}
+				lf_blood_feud_exists_banish = yes
+			}
+		}
+		allow = {
+			NOT = { trait = kind }
+		}
+		effect = {
+			custom_tooltip = {
+				text = lf_banish_blood_feud_tt
+				hidden_tooltip = {
+					any_character = {
+						limit = {
+							liege = { character = ROOT }
+							NOR = {
+								is_ruler = yes
+								prisoner = yes
+								is_married = ROOT
+								is_lover = ROOT
+								is_consort = ROOT
+								is_child_of = ROOT
+								trait = kind
+								dynasty = ROOT
+								has_minor_title = yes
+								has_job_title = yes
+							}
+							lf_blood_feud_exists_banish = yes
+						}
+						banish = yes
+					}
+				}
+			}
+		}
+	}
+					
+
+	# Customize Religion
+	lf_a_customize_religion = {
+		is_high_prio = yes
+		ai = no
+		potential = {
+			ai = no
+			OR = {
+				has_global_flag = lf_multiplayer_race_chosen
+				has_global_flag = lf_singleplayer_setup_done
+				is_fantasy_race = yes
+			}
+			OR = {
+				AND = {
+					multiplayer = yes
+					is_multiplayer_host_character = yes
+				}
+				multiplayer = no
+			}
+			religion = lf_luxuria_custom
+			NOR = { 
+				has_global_flag = lf_religion_customized 
+				total_years_played = 1
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			character_event = { id = LFCustomReligion.2 }
+		}
+	}
+
+	# Choose Custom Religion for historical starts
+	lf_a_customize_religion_historical = {
+		is_high_prio = yes
+		ai = no
+		potential = {
+			ai = no
+			OR = {
+				has_global_flag = lf_multiplayer_race_chosen
+				has_global_flag = lf_singleplayer_setup_done
+				is_fantasy_race = yes
+			}
+			OR = {
+				AND = {
+					multiplayer = yes
+					is_multiplayer_host_character = yes
+				}
+				multiplayer = no
+			}
+			NOR = { 
+				religion = lf_luxuria_custom 
+				has_global_flag = lf_religion_customized 
+				total_years_played = 1
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			character_event = { id = LFCustomReligion.1 }
+		}
+	}
+
+	lf_b_check_stats = {
+		ai = no
+		potential = {
+			NOT = {
+				has_character_flag = lf_unimportant_shit_hidden
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			character_event = { id = LFCheckStats.1 }
+		}
+	}
+			
+	lf_a_hide_unimportant_shit = {
+		ai = no
+		potential = {
+			NOT = {
+				has_character_flag = lf_unimportant_shit_hidden
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			set_character_flag = lf_unimportant_shit_hidden
+		}
+	}
+	lf_a_show_unimportant_shit = {
+		ai = no
+		potential = {
+			has_character_flag = lf_unimportant_shit_hidden
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			clr_character_flag = lf_unimportant_shit_hidden
+		}
+	}	
+
+	lf_a_luxuria_fantasia_options = {
+		ai = no
+		potential = {
+			ai = no
+			lf_started = yes
+			OR = {
+				AND = {
+					multiplayer = yes
+					is_multiplayer_host_character = yes
+				}
+				multiplayer = no
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			narrative_event = { id = LFOptions.1 }
+		}
+	}
+	
+	#
+	# Recruit an Exotic Race
+	#
+	
+	lf_b_recruit_exotic = {
+		ai_check_interval = 120 # AI wont recruit except every ten years
+		potential = {
+			NOR = { 
+				is_incapable = yes
+				has_character_flag = lf_unimportant_shit_hidden
+				rtp_is_lower_baron = yes # Rise To Power compatibility
+			}
+			OR = {
+				lf_has_elves = yes
+				lf_has_orcs = yes
+				lf_has_fairies = yes
+				lf_has_kitsune = yes
+				lf_has_nekos = yes
+				lf_has_demons = yes
+				lf_has_divines = yes
+			}
+		}
+		allow = {
+			is_ruler = yes
+			scaled_wealth = { value = 1.0 min = 75 max = 250 }
+			prisoner = no
+			NOT = {
+				has_character_modifier = in_seclusion
+			}
+		}
+		effect = {
+			scaled_wealth = { value = -1.0 min = -75 max = -250 }
+			narrative_event = { id = LFRecruit.1 }
+		}
+		ai_will_do = {
+			factor = 0.05 # Every ten years there is a 5% chance they will take this decision
+		}
+	}
+	
+	#
+	# Tarot Card Reading
+	#	
+	
+	lf_b_tarot_card = {
+		ai = no
+		potential = {
+			NOR = {
+				is_incapable = yes
+				has_character_flag = lf_unimportant_shit_hidden
+			}
+			capital_scope = {
+				has_building = lf_wizard_tower_castle
+			}
+		}
+		allow = {
+			is_ruler = yes
+			prisoner = no
+			NOT = {
+				has_character_modifier = lf_tarot_read
+			}
+		}
+		effect = {
+			narrative_event = { id = LFTarot.1 }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}		
+	
+	#
+	# Remove unimportant children
+	#	
+	
+	lf_b_remove_parentage = {
+		ai = no
+		potential = {
+			NOT = {
+				has_character_flag = lf_unimportant_shit_hidden
+			}
+			any_child_even_if_dead = {
+				is_alive = no
+				has_children = no
+			}
+			ai = no
+		}
+		allow = {
+			ai = no
+		}
+		effect = {
+			hidden_effect = {
+				any_child_even_if_dead = {
+					limit = {
+						is_alive = no
+						has_children = no
+					}
+					set_mother = 0
+					set_father = 0
+					dynasty = none
+				}
+			}
+		}
+	}	
+}
+targetted_decisions = {
+
+#
+# Fix for vanilla CK2's MR republic marriage mechanics for women
+#
+
+	lf_mr_spouse = {
+		filter = spouse
+		ai_target_filter = none
+		ai = no
+		from_potential = {
+			ai = no
+			is_ruler = yes
+			is_republic = yes
+			is_married = yes
+			OR = {
+				has_religion_feature = religion_matriarchal
+				is_female = yes
+			}
+			NOT = { is_married_matrilineally = yes }
+		}
+		potential = {
+			is_married = FROM
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			spouse = {
+				add_spouse_matrilineal = FROM
+			}
+		}
+	}
+
+	lf_mr_child = {
+		filter = home_court
+		ai_target_filter = none
+		ai = no
+		from_potential = {
+			ai = no
+			is_ruler = yes
+			is_republic = yes
+			has_religion_feature = religion_matriarchal
+		}
+		potential = {
+			is_child_of = FROM
+			is_female = yes
+			is_married = yes
+			NOT = { is_married_matrilineally = yes }
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			spouse = {
+				add_spouse_matrilineal = ROOT
+			}
+		}
+	}	
+
+#
+# Consume for power
+#
+
+	lf_consume_power = {
+		filter = home_court
+		ai_target_filter = none
+		ai = no
+		diplomacy_icon = GFX_lf_demon_decisions
+		from_potential = {
+			trait = cannibal_trait
+			is_adult = yes
+		}
+		potential = {
+			is_adult = yes
+			prisoner = yes
+			host = {
+				character = FROM
+			}
+			OR = {
+				lf_has_desirable_trait = yes
+				lf_has_desirable_bloodline = yes
+			}
+		}
+		allow = {
+			NOT = { diplomatic_immunity = yes }
+			FROM = {
+				NOR = { 
+					trait = kind 
+					trait = content
+					trait = temperate
+				}
+			}
+		}
+		effect = {
+			hidden_tooltip = {
+				any_dynasty_member = {
+					limit = {
+						is_offmap_ruler = no
+						is_close_relative = ROOT
+						NOT = { character = FROM }
+					}
+					character_event = { id = RIP.11511 days = 1 }
+				}
+				FROM = {
+					add_blood_splatter_effect = yes
+				}
+			}
+			save_event_target_as = omnomnom_target
+			character_event = { id = LFOmNomNom.1 }
+			death = {
+				death_reason = death_execution_eaten
+				killer = FROM
+			}
+			save_event_target_as = kinslayer_target
+			FROM = {
+				add_kinslayer_trait_effect = yes
+			}
+			custom_tooltip = {
+				text = LFOmNomNomTyrant
+				any_realm_character = {
+					limit = {
+						NOR = { 
+							trait = cannibal_trait
+							trait = impaler
+							trait = hedonist
+							trait = gluttonous
+							trait = cruel
+						}
+					}
+					opinion = {
+						who = FROM
+						modifier = opinion_tyrant
+						months = 60
+					}
+				}
+			}
+		}
+	}
+
+#
+# Luciferium Consume
+#
+
+	lf_consume_lucy_decision = {
+		filter = court
+		ai_target_filter = none
+		ai = no
+		diplomacy_icon = GFX_lf_demon_decisions
+		from_potential = {
+			trait = cannibal_trait
+			is_adult = yes
+			has_game_rule = { name = lf_challenges value = lf_challenges_lucy }
+			ai = no
+		}
+		potential = {
+			is_adult = yes
+			prisoner = yes
+			host = {
+				character = FROM
+			}
+			ai = yes
+		}
+		allow = {
+			NOT = { diplomatic_immunity = yes }
+			is_adult = yes
+		}
+		effect = {
+			hidden_tooltip = {
+				any_dynasty_member = {
+					limit = {
+						is_offmap_ruler = no
+						is_close_relative = ROOT
+						NOT = { character = FROM }
+					}
+					character_event = { id = RIP.11511 days = 1 }
+				}
+				FROM = {
+					add_blood_splatter_effect = yes
+					random_list = {
+						50 = { # Nothing happens
+							modifier = {
+								factor = 0
+								OR = {
+									ROOT = {
+										immortal = yes
+									}
+									AND = {
+										ROOT = {
+											controls_religion = yes
+										}
+										FROM = { NOT = { religion_group = ROOT } }
+									}
+								}
+							}
+						}
+						40 = { # Get sick
+							modifier = {
+								factor = 0
+								OR = {
+									immortal = yes
+									has_character_flag = demon_child
+									ROOT = {
+										immortal = yes
+									}
+									AND = {
+										ROOT = {
+											controls_religion = yes
+										}
+										FROM = { NOT = { religion_group = ROOT } }
+									}
+								}
+							}
+							random_list = {
+								50 = { # Food Poisoning
+									if = {
+										limit = {
+											NOR = {
+												num_of_symptoms = 1
+												is_ill = yes
+												has_character_flag = developing_illness
+												has_character_flag = disease_not_serious
+											}
+										}
+										set_character_flag = got_food_poisoning
+										set_character_flag = developing_illness
+										character_event = { id = RIP.5023 days = 5 }
+									}
+								}
+								25 = { # Diarrhea - Not Serious
+									if = {
+										limit = {
+											NOR = {
+												num_of_symptoms = 1
+												is_ill = yes
+												has_character_flag = developing_illness
+												has_character_flag = disease_not_serious
+											}
+										}
+										set_character_flag = disease_not_serious
+										character_event = { id = RIP.5002 days = 5 }
+										character_event = { id = RIP.11004 days = 10 random = 50 }
+									}
+								}
+								25 = { # Vomiting - Not Serious
+									if = {
+										limit = {
+											NOR = {
+												num_of_symptoms = 1
+												is_ill = yes
+												has_character_flag = developing_illness
+												has_character_flag = disease_not_serious
+											}
+										}
+										set_character_flag = disease_not_serious
+										character_event = { id = RIP.5003 days = 5 }
+										character_event = { id = RIP.11005 days = 10 random = 50 }
+									}
+								}
+							}
+						}
+					}
+					if = {
+						limit = {
+							has_nickname = no
+						}
+						random_list = {
+							20 = { # Get nickname The Cannibal
+								give_nickname = nick_the_cannibal
+							}
+							15 = { # Get nickname The Dragon
+								give_nickname = nick_the_dragon
+							}
+							15 = { # Get nickname The Abomination
+								give_nickname = nick_the_abomination
+							}
+							10 = { # Get nickname The Monster
+								give_nickname = nick_the_monster
+							}
+							40 = { } # No nickname
+						}
+					}
+				}
+			}
+			death = {
+				death_reason = death_execution_eaten
+				killer = FROM
+			}
+			save_event_target_as = kinslayer_target
+			FROM = {
+				add_kinslayer_trait_effect = yes
+			}
+		}
+	}
+
+
+#
+# Forgive someone with the Dishonorable opinion modifier
+#
+
+	lf_forgive_dishonorable = {
+		filter = realm
+		ai_target_filter = none
+		ai = no
+		from_potential = {
+			ai = no
+			OR = {
+				has_opinion_modifier = {
+					who = ROOT
+					modifier = opinion_dishonorable
+				}
+				has_opinion_modifier = {
+					who = ROOT
+					modifier = abuse_of_office
+				}
+			}
+		}
+		potential = {
+			any_liege = {
+				character = FROM
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				text = lf_forgive_dishonorable_bloodfeud
+				OR = {
+					NOT = { has_game_rule = { name = lf_blood_feud value = lf_bf_on } }
+					NOT = { lf_blood_feud_exists = yes }
+					trait = kind
+				}
+			}
+		}
+		effect = {
+			FROM = {
+				remove_opinion = {
+					who = ROOT
+					modifier = abuse_of_office
+				}
+				remove_opinion = {
+					who = ROOT
+					modifier = opinion_dishonorable
+				}
+			}
+		}
+	}
+
+	lf_immortal_grow_up = {
+		filter = self
+		ai_target_filter = self
+		potential = {
+			immortal_age < 16
+			age = 16
+			trait = immortal
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			hidden_effect = {
+				remove_trait = immortal
+				trigger_switch = {
+					on_trigger = trait
+					dwse_dragon_child = {
+						remove_trait = dwse_dragon_child
+						add_trait = dwse_dragon_adult
+						add_random_dwse_dragon_portrait = yes
+					}
+					lf_orc = {
+						character_event = { id = LF_Fae_Children.2 }
+					}
+					lf_elf = {
+						character_event = { id = LF_Fae_Children.2 }
+					}
+					lf_fairy = {
+						character_event = { id = LF_Fae_Children.2 }
+					}
+					lf_kitsune = {
+						character_event = { id = LF_FarEast_Children.2 }
+					}
+					lf_neko = {
+						character_event = { id = LF_FarEast_Children.4 }
+					}
+				}
+				add_trait = immortal
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}		
+	}
+
+
+#
+# Add/remove custom portraits
+#
+	
+	lf_change_custom_portrait = {
+		filter = realm_including_me
+		ai_target_filter = none
+		ai = no
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			OR = {
+				trait = lf_orc
+				trait = lf_elf
+				trait = lf_neko
+				trait = lf_kitsune
+				trait = lf_fairy
+				trait = dwse_lizard
+				trait = lf_angel
+				trait = lf_demon
+				trait = lf_fallen_angel
+			}
+			is_adult = yes
+			NOR = {
+				has_character_flag = portrait_is_fine
+				has_game_rule = { name = lf_custom_portraits value = lf_custom_off } 
+				has_character_flag = special_npc
+			}
+		}
+		allow= {
+			always = yes
+		}
+		effect = {
+			hidden_tooltip = {
+				lf_portrait_change = yes
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	lf_portrait_is_fine = {
+		filter = realm_including_me
+		ai_target_filter = none
+		ai = no
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			OR = {
+				trait = lf_orc
+				trait = lf_elf
+				trait = lf_neko
+				trait = lf_kitsune
+				trait = lf_fairy
+				trait = dwse_lizard
+				trait = dwse_dragon_adult
+				trait = lf_angel
+				trait = lf_demon
+				trait = lf_fallen_angel
+			}
+			is_adult = yes
+			NOR = {
+				has_character_flag = portrait_is_fine
+				has_game_rule = { name = lf_custom_portraits value = lf_custom_off } 
+				has_character_flag = special_npc
+			}
+		}
+		allow= {
+			always = yes
+		}
+		effect = {
+			hidden_tooltip = {
+				set_character_flag = portrait_is_fine				
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

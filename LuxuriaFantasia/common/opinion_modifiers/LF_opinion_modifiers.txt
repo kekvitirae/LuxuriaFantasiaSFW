@@ -1,0 +1,15 @@
+lf_slave_master = {
+	opinion = -25
+	obedient = yes
+}
+
+lf_slave_master_compliant = {
+	opinion = 25
+	obedient = yes
+}
+
+lf_freed_me = {
+	opinion = 50
+	decay = yes
+	years = 5
+}

@@ -1,0 +1,40 @@
+lf_ghost;[GetGhostName];;;;;;;;;;;;;x
+lf_ghost_desc;This character has unfinished business in the living world, and thus cannot properly pass over into the afterlife.\n§GHas, at least, 25 years of unlife.§!\n§RHas, at most, 50 years of unlife.§!;;;;;;;;;;;;;x
+lf_ghost_irish;Ben Side;;;;;;;;;;;;;x
+lf_ghost_welsh;Cyhyraeth;;;;;;;;;;;;;x
+lf_ghost_scottish;Caoineag;;;;;;;;;;;;;x
+lf_ghost_other;Ghost;;;;;;;;;;;;;x
+
+lf_ghost_opinion_EXPLANATION; (opinion from ghosts);;;;;;;;;;;;;x
+opinion_of_lf_ghost_EXPLANATION; (opinion of ghosts);;;;;;;;;;;;;x
+lf_ghost_opinion;Ghostly opinion;;;;;;;;;;;;;x
+opinion_of_lf_ghost;Opinion of ghosts;;;;;;;;;;;;;x
+
+LFSpoopy1;You feel your life draining away. This is it... this is the end. Before your soul moves toward the light, you pause and look back upon your body. Lingering doubts of your life's accomplishments fill your mind.;;;;;;;;;;;;;x
+LFSpoopy1TTA;"No! My life cannot end now!";;;;;;;;;;;;;x
+LFSpoopy1TTAtooltip;You will live on in undeath, §Rbut on borrowed time.§!;;;;;;;;;;;;;x
+LFSpoopy1TTB;"I have lived well.";;;;;;;;;;;;;x
+LFSpoopy1TTBtooltip;You walk toward the light.;;;;;;;;;;;;;x
+LFSpoopy2;The lure of the afterlife is too great for your soul to resist. Whether or not you have accomplished your goals in undeath is now irrelevant, as you feel your soul being tugged toward the light.;;;;;;;;;;;;;x
+LFSpoopy2TTA;"I can finally rest...";;;;;;;;;;;;;x
+
+#
+# Portraits
+#
+lf_werewolf_portrait12_cheri;Custom Werewolf Portrait;;;;;;;;;;;;;x
+lf_werewolf_portrait15_cheri;Custom Werewolf Portrait;;;;;;;;;;;;;x
+lf_werewolf_portrait17_cheri;Custom Werewolf Portrait;;;;;;;;;;;;;x
+lf_werewolf_portrait21_cheri;Custom Werewolf Portrait;;;;;;;;;;;;;x
+lf_werewolf_portrait22_cheri;Custom Werewolf Portrait;;;;;;;;;;;;;x
+lf_werewolf_portrait23_cheri;Custom Werewolf Portrait;;;;;;;;;;;;;x
+lf_werewolf_portrait24_cheri;Custom Werewolf Portrait;;;;;;;;;;;;;x
+lf_werewolf_portrait25_cheri;Custom Werewolf Portrait;;;;;;;;;;;;;x
+lf_werewolf_portrait12_cheri_desc;Trait code: lf_werewolf_portrait12_cheri;;;;;;;;;;;;;x
+lf_werewolf_portrait15_cheri_desc;Trait code: lf_werewolf_portrait15_cheri;;;;;;;;;;;;;x
+lf_werewolf_portrait17_cheri_desc;Trait code: lf_werewolf_portrait17_cheri;;;;;;;;;;;;;x
+lf_werewolf_portrait21_cheri_desc;Trait code: lf_werewolf_portrait21_cheri;;;;;;;;;;;;;x
+lf_werewolf_portrait22_cheri_desc;Trait code: lf_werewolf_portrait22_cheri;;;;;;;;;;;;;x
+lf_werewolf_portrait23_cheri_desc;Trait code: lf_werewolf_portrait23_cheri;;;;;;;;;;;;;x
+lf_werewolf_portrait24_cheri_desc;Trait code: lf_werewolf_portrait24_cheri;;;;;;;;;;;;;x
+lf_werewolf_portrait25_cheri_desc;Trait code: lf_werewolf_portrait25_cheri;;;;;;;;;;;;;x
+

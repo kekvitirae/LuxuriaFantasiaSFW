@@ -1,0 +1,258 @@
+### This file contains events specific to the Angel portion of the Dark World mod
+
+namespace = LF_Divine
+
+# .10 Divine Inspiration
+narrative_event = {
+	id = LF_Divine.10
+	picture = lf_a_placeholder
+	is_triggered_only = yes # Triggered by Decision
+	title = lf_divine_start_title	
+	desc = { # Female specific
+		trigger = { 
+			is_female = yes
+		}
+		text = LF_Divine10
+		picture = angel_start1
+	}
+	desc = { # Male specific
+		trigger = {
+			is_female = no
+		}
+		text = LF_Divine10
+		picture = angel_start2
+	}
+	option = { # My will is his will
+		name = LF_Divine10A
+		lf_add_angel = yes
+		hidden_tooltip = {
+			lf_add_random_angel_portrait = yes
+		}
+	}
+	option = { # My will is his will
+		name = LF_Divine10B
+		lf_add_angel = yes
+		hidden_tooltip = {
+			lf_add_random_angel_portrait = yes
+		}
+		custom_tooltip = {
+			text = LFAllRealmCharacters
+			hidden_tooltip = {
+				character_event = { id = LF_Divine.11 }
+			}
+		}
+	}	
+	after = {
+		if = {
+			limit = {
+				has_global_flag = LFGenderBendOn
+			}
+			set_character_flag = lf_divine_genderbend
+		}
+	}
+}
+
+character_event = {
+	id = LF_Divine.11
+	hide_window = yes
+	is_triggered_only = yes # Triggered by Decision
+	immediate = {
+		any_realm_character = {
+			limit = {
+				any_liege = { character = ROOT }
+			}
+			character_event = { id = LFSeeding.2 }
+		}
+	}
+}
+
+character_event = { # Adds an angelic portrait on adulthood
+	id = LF_Divine.12
+	is_triggered_only = yes  
+	hide_window = yes 
+	trigger = {
+		is_angel = yes
+		is_not_orc = yes
+		is_not_elf = yes 
+		is_not_fairy = yes
+		is_not_neko = yes
+		is_not_kitsune = yes
+		NOR = {
+			trait = dwse_dragon_adult
+			trait = dwse_lizard
+		}
+	}
+	immediate = {
+		lf_add_random_angel_portrait = yes
+	}
+}
+
+character_event = {
+	id = LF_Divine.100
+	desc = LFDivine100
+	picture = lf_gypsy_small
+	trigger = {
+		is_angel = yes
+		NOT = { has_character_flag = lf_remain_divine }
+		OR = {
+			ROOT = {
+				calc_true_if = {
+					amount = 5
+					trait = wroth
+					trait = greedy
+					trait = lustful
+					trait = gluttonous
+					trait = slothful
+					trait = envious
+					trait = proud
+				}
+			}
+			trait = bad_priest_zoroastrian
+			trait = bad_priest_aztec
+			trait = bad_priest_norse
+			trait = bad_priest_tengri
+			trait = bad_priest_muslim
+			trait = bad_priest_christian
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = LFDivine100TTA
+		custom_tooltip = {
+			text = LFDivine100TTATooltip
+		}
+		lf_remove_angel = yes
+		add_trait = lf_fallen_angel
+		hidden_tooltip = {
+			lf_remove_angel_portrait = yes
+			lf_add_random_demon_portrait = yes
+			clr_character_flag = portrait_is_fine
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0.5
+				liege = {
+					is_angel = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = LFDivine100TTB
+		custom_tooltip = {
+			text = LFDivine100TTBTooltip
+		}
+		trigger_switch = {
+			on_trigger = trait
+			bad_priest_zoroastrian = { remove_trait = bad_priest_zoroastrian }
+			bad_priest_aztec = { remove_trait = bad_priest_aztec }
+			bad_priest_norse = { remove_trait = bad_priest_norse }
+			bad_priest_tengri = { remove_trait = bad_priest_tengri }
+			bad_priest_muslim = { remove_trait = bad_priest_muslim }
+			bad_priest_christian = { remove_trait = bad_priest_christian }
+			greedy = { remove_trait = greedy }
+			lustful = { remove_trait = lustful }
+			proud = { remove_trait = proud }
+			wroth = { remove_trait = wroth }
+			gluttonous = { remove_trait = gluttonous }
+			slothful = { remove_trait = slothful }
+			envious = { remove_trait = envious }
+		}
+		set_character_flag = lf_remain_divine
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0.5
+				liege = {
+					NOT = { is_angel = yes }
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = LF_Divine.101
+	desc = LFDivine101
+	picture = lf_gypsy_small
+	trigger = {
+		trait = lf_fallen_angel
+		NOT = { has_character_flag = lf_remain_fallen }
+		OR = {
+			ROOT = {
+				calc_true_if = {
+					amount = 5
+					trait = patient
+					trait = charitable
+					trait = chaste
+					trait = temperate
+					trait = diligent
+					trait = kind
+					trait = humble
+				}
+			}
+			NOR = {
+				trait = bad_priest_zoroastrian
+				trait = bad_priest_aztec
+				trait = bad_priest_norse
+				trait = bad_priest_tengri
+				trait = bad_priest_muslim
+				trait = bad_priest_christian
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = LFDivine101TTA
+		custom_tooltip = {
+			text = LFDivine101TTATooltip
+		}
+		remove_trait = lf_fallen_angel
+		lf_add_angel = yes
+		hidden_tooltip = {
+			lf_remove_demon_portrait = yes
+			lf_add_random_angel_portrait = yes
+			clr_character_flag = portrait_is_fine
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0.5
+				liege = {
+					trait = lf_fallen_angel
+				}
+			}
+		}
+	}
+	option = {
+		name = LFDivine101TTB
+		custom_tooltip = {
+			text = LFDivine101TTBTooltip
+		}
+		trigger_switch = {
+			on_trigger = trait
+			diligent = { remove_trait = diligent }
+			patient = { remove_trait = patient }
+			charitable = { remove_trait = charitable }
+			temperate = { remove_trait = temperate }
+			kind = { remove_trait = kind }
+			humble = { remove_trait = humble }
+			chaste = { remove_trait = chaste }
+		}
+		set_character_flag = lf_remain_fallen
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0.5
+				liege = {
+					NOT = { trait = lf_fallen_angel }
+				}
+			}
+		}
+	}
+}	

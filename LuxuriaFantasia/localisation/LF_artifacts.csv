@@ -1,0 +1,28 @@
+lf_kama_sutra;Kama Sutra;;;;;;;;;;;;;x
+lf_kama_sutra_desc;A book with scandalous illustrations. Studying this might make one a better lover.;;;;;;;;;;;;;x
+lf_spellbook;Spellbook;;;;;;;;;;;;;x
+lf_spellbook_desc;Brimming with magic, this book contains all the knowledge a mage needs to cast spells.;;;;;;;;;;;;;x
+lf_crown_custom;Custom-made Crown;;;;;;;;;;;;;x
+lf_crown_custom_desc;Your steward assures you that this is not a lazy replica of the Falkyr crown.;;;;;;;;;;;;;x
+lf_amulet_nondetection;[GetLFAmuletName];;;;;;;;;;;;;x
+lf_amulet_nondetection_desc;[GetLFAmuletDesc];;;;;;;;;;;;;x
+lf_amulet_nosilly_n;Amulet of Nondetection;;;;;;;;;;;;;x
+lf_amulet_nosilly_d;This magically-infused necklace is a favorite of paranoid rulers.;;;;;;;;;;;;;x
+lf_amulet_silly_n;Omelette of Nondetection;;;;;;;;;;;;;x
+lf_amulet_silly_d;This magically-infused breakfast is a favorite of paranoid rulers.;;;;;;;;;;;;;x
+lf_pirate_booty;Pirate Booty;;;;;;;;;;;;;x
+lf_pirate_booty_desc;Every raider needs a little junk in their trunk.;;;;;;;;;;;;;x
+lf_elven_quiver;Elven Quiver;;;;;;;;;;;;;x
+lf_elven_quiver_desc;This quiver always seems to replenish any arrows that were loosed.;;;;;;;;;;;;;x
+lf_orcish_bracers;Orcish Steel Bracers;;;;;;;;;;;;;x
+lf_orcish_bracers_desc;Like its makers, these braces are strong and unbreaking.;;;;;;;;;;;;;x
+lf_ring_protection;Ring of Protection;;;;;;;;;;;;;x
+lf_ring_protection_desc;A simple ring at first glance, it provides a small, imperceptible bubble of protection around the user.;;;;;;;;;;;;;x
+lf_lightsaber;Lightsaber;;;;;;;;;;;;;x
+lf_lightsaber_desc;This sword is nearly weightless, likely from some magical enchantment.;;;;;;;;;;;;;x
+
+lf_magic_item;Luxuria Magic Item;;;;;;;;;;;;;x
+
+LFArtifacts1;You and your men have stumbled upon a rare treasure while raiding the coastal province!;;;;;;;;;;;;;x
+LFArtifacts1TTA;This will make a fine addition to my collection.;;;;;;;;;;;;;x
+LFArtifacts1TTB;We need the gold more. Sell it.;;;;;;;;;;;;;x

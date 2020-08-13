@@ -1,0 +1,28 @@
+on_startup = {
+	events = {
+		dwse_startup.1
+	}
+}
+
+on_yearly_pulse = {
+	events = { 
+		dwseliz.5
+	}
+}	
+on_decade_pulse = {
+	events = { 
+		dwseliz.5
+	}
+}
+on_adulthood = {
+	events = {
+		dwseliz.2
+		dwseliz.5
+		dwseom.4000 # Adulthood for dragons
+	}
+}
+on_birth = {
+	events = { 
+		dwseom.4001 # Birth for dragons
+	}
+}

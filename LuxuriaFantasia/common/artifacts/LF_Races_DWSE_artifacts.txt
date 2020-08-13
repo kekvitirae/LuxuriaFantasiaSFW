@@ -1,0 +1,15 @@
+slots = {
+	dwse_dragonegg_slot = 1
+}
+
+dwse_dragon_egg = { 
+	quality = 1
+	spouse_opinion = -20
+	allowed_gift = {
+		always = yes
+	}
+	slot = dwse_dragonegg_slot
+	stacking = no
+	picture = "GFX_dwse_dragon_egg"
+	flags = { dragon_egg curse chinese irae }
+}

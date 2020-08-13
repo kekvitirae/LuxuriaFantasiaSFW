@@ -1,0 +1,312 @@
+#
+# Customizable Loc
+#
+
+LFYesAdult;§GAdult§!;;;;;;;;;;;;;x
+LFNoAdult;§RAdult§!;;;;;;;;;;;;;x
+LFNeutralAdult;Adult;;;;;;;;;;;;;x
+LFYesFemale;§GFemale§!;;;;;;;;;;;;;x
+LFNoFemale;§RFemale§!;;;;;;;;;;;;;x
+LFNeutralFemale;Female;;;;;;;;;;;;;x
+LFYesAnyDemon;§GHalf-Demon, Demon, or Fallen§!;;;;;;;;;;;;;x
+LFNoAnyDemon;§RHalf-Demon, Demon, or Fallen§!;;;;;;;;;;;;;x
+LFNeutralAnyDemon;Half-Demon, Demon, or Fallen;;;;;;;;;;;;;x
+LFYesDemon;§GDemon or Fallen§!;;;;;;;;;;;;;x
+LFNoDemon;§RDemon or Fallen§!;;;;;;;;;;;;;x
+LFNeutralDemon;Demon or Fallen;;;;;;;;;;;;;x
+LFYesToNTKitsune;§GNot a Kitsune if Tale of Nine Tails is installed§!;;;;;;;;;;;;;x
+LFNoToNTKitsune;§RNot a Kitsune if Tale of Nine Tails is installed§!;;;;;;;;;;;;;x
+LFNeutralToNTKitsune;Not a Kitsune if Tale of Nine Tails is installed;;;;;;;;;;;;;x
+LFYesPrisoner;§GNot a prisoner§!;;;;;;;;;;;;;x
+LFNoPrisoner;§RNot a prisoner§!;;;;;;;;;;;;;x
+LFNeutralPrisoner;Not a prisoner;;;;;;;;;;;;;x
+LFYesIncapable;§GNot incapable§!;;;;;;;;;;;;;x
+LFNoIncapable;§RNot incapable§!;;;;;;;;;;;;;x
+LFNeutralIncapable;Not incapable;;;;;;;;;;;;;x
+LFYesAsexual;§GNot Asexual§!;;;;;;;;;;;;;x
+LFNoAsexual;§RNot Asexual§!;;;;;;;;;;;;;x
+LFNeutralAsexual;Not Asexual;;;;;;;;;;;;;x
+LFYesPerfectBody;§GHas any ugly, disfiguring, or scarring trait , or does not have Attractive§!;;;;;;;;;;;;;x
+LFNoPerfectBody;§RHas any ugly, disfiguring, or scarring trait, or does not have Attractive§!;;;;;;;;;;;;;x
+LFNeutralPerfectBody;Has any ugly, disfiguring, or scarring trait, or does not have Attractive;;;;;;;;;;;;;x
+LFYesMinor;§GHas a minor illness or injury§!;;;;;;;;;;;;;x
+LFNoMinor;§RHas a minor illness or injury§!;;;;;;;;;;;;;x
+LFNeutralMinor;Has a minor illness or injury;;;;;;;;;;;;;x
+LFYesModerate;§GHas a moderate illness or injury§!;;;;;;;;;;;;;x
+LFNoModerate;§RHas a moderate illness or injury§!;;;;;;;;;;;;;x
+LFNeutralModerate;Has a moderate illness or injury;;;;;;;;;;;;;x
+LFYesMajor;§GHas a major illness or injury§!;;;;;;;;;;;;;x
+LFNoMajor;§RHas a major illness or injury§!;;;;;;;;;;;;;x
+LFNeutralMajor;Has a major illness or injury;;;;;;;;;;;;;x
+
+
+#
+# Society
+#
+
+lf_society_seduction;Society of Seduction;;;;;;;;;;;;;x
+lf_society_seduction_desc;The Society of Seduction is a cult that views sex as holy and sacred. Watched over by the various goddesses of sex and hedonism in the world, the society's main goal is to bring the pleasures of the flesh to those who have not yet experienced such a thing. Needless to say, most of the highest members of the society are demons specialized in seduction.;;;;;;;;;;;;;x
+lf_society_seduction_leader_desc;The Ascendant has risen above their kin, to be recognized and favored by [GetLilithName].;;;;;;;;;;;;;x
+lf_society_seduction_rank_1_male;Slave;;;;;;;;;;;;;x
+lf_society_seduction_rank_2_male;Pet;;;;;;;;;;;;;x
+lf_society_seduction_rank_3_male;Lover;;;;;;;;;;;;;x
+lf_society_seduction_rank_4_male;Master;;;;;;;;;;;;;x
+lf_society_seduction_rank_1_female;Slave;;;;;;;;;;;;;x
+lf_society_seduction_rank_2_female;Pet;;;;;;;;;;;;;x
+lf_society_seduction_rank_3_female;Lover;;;;;;;;;;;;;x
+lf_society_seduction_rank_4_female;Mistress;;;;;;;;;;;;;x
+currency_name_lf_society_seduction;Sexual Favor;;;;;;;;;;;;;x
+lf_society_seduction_recruit_block_tooltip;Has not been approached by a Society of Seduction before.;;;;;;;;;;;;;x
+
+#
+# Quests
+#
+
+quest_lilith_seduce_virgin;Seduce Virgin;;;;;;;;;;;;;x
+quest_lilith_seduce_virgin_desc;[GetLilithName] has commanded you to take someone's virginity and turn them to our ways.;;;;;;;;;;;;;x
+quest_lilith_seduce_virgin_tooltip;To complete this mission, use your §YDemonic Seduction§! on the target.;;;;;;;;;;;;;x
+quest_lilith_seduce_priest;Seduce Priest;;;;;;;;;;;;;x
+quest_lilith_seduce_priest_desc;[GetLilithName] has commanded you to seduce a priest and turn them to our ways.;;;;;;;;;;;;;x
+quest_lilith_seduce_priest_tooltip;To complete this mission, use your §YDemonic Seduction§! on the target.;;;;;;;;;;;;;x
+quest_lilith_seduce_ruler;Seduce Foreign Ruler;;;;;;;;;;;;;x
+quest_lilith_seduce_ruler_desc;[GetLilithName] has commanded you to seduce a foreign ruler and turn them to our ways.;;;;;;;;;;;;;x
+quest_lilith_seduce_ruler_tooltip;To complete this mission, use your §YDemonic Seduction§! on the target.;;;;;;;;;;;;;x
+quest_lilith_seduce_spouse;Seduce Ruler's Spouse;;;;;;;;;;;;;x
+quest_lilith_seduce_spouse_desc;[GetLilithName] has commanded you to seduce a foreign ruler's own spouse and turn them to our ways.;;;;;;;;;;;;;x
+quest_lilith_seduce_spouse_tooltip;To complete this mission, use your §YDemonic Seduction§! on the target.;;;;;;;;;;;;;x
+
+#
+# Tooltips
+#
+
+lf_max_consorts_1;Men and women will now be able to take a maximum of one consort.;;;;;;;;;;;;;x
+lf_max_consorts_2;Men and women will now be able to take a maximum of two consorts.;;;;;;;;;;;;;x
+lf_max_consorts_3;Men and women will now be able to take a maximum of three consorts.;;;;;;;;;;;;;x
+lilith_seduction;Demonic Seduction successes;;;;;;;;;;;;;x
+lf_change_sexuality_backfire;Catastrophic Backfire;;;;;;;;;;;;;x
+lf_society_seduction_invite_society_member_to_court_tooltip;Place a call to one of the Society of Seduction to join your court.;;;;;;;;;;;;;x
+lf_disapproves_of_satanism_tooltip;You've not spoken out against devil or demon worship to a society member.;;;;;;;;;;;;;x
+lf_opinion_recently_seduced;Recently seduced;;;;;;;;;;;;;x
+LFHHDemonOrSociety;Be a member of the Society of Seduction or be a Demon/Fallen.;;;;;;;;;;;;;x
+
+#
+# Opinion Modifiers
+#
+
+lf_mind_slave;Mind Slave;;;;;;;;;;;;;x
+lf_demon_charmed;Charmed;;;;;;;;;;;;;x
+lf_changed_sexuality;Changed my sexuality;;;;;;;;;;;;;x
+
+#
+# Custom Loc
+#
+
+LilithJudeoChristianIslam;Lilith;;;;;;;;;;;;;x
+LilithIndian;Rati;;;;;;;;;;;;;x
+LilithNorse;Freyja;;;;;;;;;;;;;x
+LilithFarEastern;Bai Mudan;;;;;;;;;;;;;x
+LilithHellenic;Hedone;;;;;;;;;;;;;x
+LilithIrish;Cliodhna;;;;;;;;;;;;;x
+LilithSlavic;Dzydzilelya;;;;;;;;;;;;;x
+LilithAztec;Tiacapan;;;;;;;;;;;;;x
+LilithFallback;Lilith;;;;;;;;;;;;;x
+
+#
+# Powers/Decisions
+#
+
+lf_demonic_seduction;Demonic Seduction;;;;;;;;;;;;;x
+lf_demonic_seduction_power_desc;Enables §Gright-clicking§! a character's portrait to seduce them. Functionally the same as the normal seduction without needing the focus. Those with demonic blood get bonuses to success.\nRequirements to use:\n[LFAdultTT]\n[LFPrisonerTT]\n[LFIncapableTT]\n[LFAsexualTT];;;;;;;;;;;;;x
+lf_demonic_seduction_desc;Demonic children of [GetLilithName], or members of the Society of Seduction, can draw upon their unholy powers to persuade someone into bed with them.\n§GThis is identical to the vanilla Seduction focus without needing the focus.\nDemons have a higher chance of successfully seducing someone.§!;;;;;;;;;;;;;x
+
+lf_demonic_charm;Demonic Charm;;;;;;;;;;;;;x
+lf_demonic_charm_power_desc;Enables §Gright-clicking§! a character's portrait to grant a sizable bonus to opinion. Required for some powers.\nRequired to use:\n[LFAnyDemonTT]\n[LFAdultTT]\n[LFPrisonerTT]\n[LFIncapableTT];;;;;;;;;;;;;x
+lf_demonic_charm_desc;Demonic children of [GetLilithName] who hold the second highest rank in the Society of Seduction can draw upon their unholy powers to persuade someone into liking them more.;;;;;;;;;;;;;x
+
+lf_demonic_mind_control;Demonic Mind Control;;;;;;;;;;;;;x
+lf_demonic_mind_control_power_desc;Enables §Gright-clicking§! a character's portrait to force them to serve you unquestioningly as a love slave. Requires the target to be under the effect of Demonic Charm.\Requirements to use:\n[LFDemonTT]\n[LFAdultTT]\n[LFPrisonerTT]\n[LFIncapableTT]\n[LFAsexualTT];;;;;;;;;;;;;x
+lf_demonic_mind_control_desc;Demonic children of [GetLilithName] with full demonic blood and holding the highest rank in the Society of Seduction can draw upon their unholy powers to wipe the memories of someone and replace them with thoughts of complete and total obedience and adoration.;;;;;;;;;;;;;x
+
+lf_command_mind_slave_war;§YMind Control§!: War;;;;;;;;;;;;;x
+lf_command_mind_slave_war_desc;Whispers words of paranoia into the back of [Root.GetFirstName]'s mind, causing [Root.GetHerHim] to view a neighbor of your choosing as a threat that needs to be taken care of right now.\n§YThis will remove the mind control effect.§!;;;;;;;;;;;;;x
+
+lf_command_mind_slave_divorce;§YMind Control§!: Divorce;;;;;;;;;;;;;x
+lf_command_mind_slave_divorce_desc;Whispers words of loathing into the back of [Root.GetFirstName]'s mind, causing [Root.GetHerHim] to immediately divorce [Root.GetHerHis] (seemingly) unfaithful spouse.\n§YThis will remove the mind control effect.§!;;;;;;;;;;;;;x
+
+lf_command_mind_slave_marriage;§YMind Control§!: Marriage;;;;;;;;;;;;;x
+lf_command_mind_slave_marriage_desc;Whispers words of love and adoration into the back of [Root.GetFirstName]'s mind, causing [Root.GetHerHim] to view you as someone to immediately elope with.\n§YThis will remove the mind control effect.§!;;;;;;;;;;;;;x
+
+lf_command_mind_slave_pious;§YMind Control§!: Pious;;;;;;;;;;;;;x
+lf_command_mind_slave_pious_desc;Whispers words of piety into the back of [Root.GetFirstName]'s mind, causing [Root.GetHerHim] to drop all sinful traits and take up a more pious life.\n§YThis will remove the mind control effect.§!;;;;;;;;;;;;;x
+lf_add_pious_tt;All sinful traits and lifestyles will be removed and replaced with the seven good virtues.;;;;;;;;;;;;;x
+
+lf_command_mind_slave_sinful;§YMind Control§!: Sinful;;;;;;;;;;;;;x
+lf_command_mind_slave_sinful_desc;Whispers words of corruption into the back of [Root.GetFirstName]'s mind, causing [Root.GetHerHim] to drop all virtuous traits and take up a more sinful life.\n§YThis will remove the mind control effect.§!;;;;;;;;;;;;;x
+lf_add_sinful_tt;All virtuous traits and lifestyles wlll be removed and replaced with the seven deadly sins.;;;;;;;;;;;;;x
+
+lf_infuse_with_demon_blood_half;Infuse with Demonic Blood;;;;;;;;;;;;;x
+lf_infuse_with_demon_blood_half_desc;Speak a prayer before bed and [GetLilithName] may grant you the blood of demons to flow through your veins.;;;;;;;;;;;;;x
+lf_infuse_with_demon_blood_half_power_desc;Allows a lesser race to become an alu-fiend or a cambion in exchange for §Y[Root.Society.GetCurrency]§!.;;;;;;;;;;;;;x
+
+lf_infuse_with_demon_blood_full;Infuse with [GetLilithName]'s Blood;;;;;;;;;;;;;x
+lf_infuse_with_demon_blood_full_desc;Speak a prayer before bed and [GetLilithName] may grant you her own lifeblood to flow through your veins.;;;;;;;;;;;;;x
+lf_infuse_with_demon_blood_full_power_desc;Allows a halfblood to become a succubus or an incubus in exchange for §Y[Root.Society.GetCurrency]§!;;;;;;;;;;;;;x
+
+lf_cure_sti;Cure Sexual Disease;;;;;;;;;;;;;x
+lf_cure_sti_desc;[GetLilithName] recognizes that sometimes sex can have its disadvantages. Thankfully, she has provided those of demonic blood, or Society of Seduction members, with the tools needed to remove sexual diseases.\nRequirements to use:\n[LFAdultTT]\n[LFIncapableTT]\n[LFToNTKitsuneTT];;;;;;;;;;;;;x
+lf_cure_sti_power_desc;Enables §Gright-clicking§! on a portrait to remove Lover's Pox or Herpes in exchange for §Y[Root.Society.GetCurrency]§!.\nValid targets: you, spouses, lovers, concubines.;;;;;;;;;;;;;x
+
+lf_demonic_minor_heal_self;Minor Heal Self;;;;;;;;;;;;;x
+lf_demonic_minor_heal_self_desc;Having obtained the ability to alter my form comes with the additional benefit of healing simple wounds or illnesses that I am afflicted with.;;;;;;;;;;;;;x
+lf_demonic_minor_heal_self_power_desc;Enables §Gright-clicking§! on your portrait to heal minor wounds and diseases in exchange for §Y[Root.Society.GetCurrency]§!.\nRequirements to use:\n[LFAdultTT]\n[LFIncapableTT]\n[LFToNTKitsuneTT]\n[LFMinor];;;;;;;;;;;;;x
+
+lf_demonic_moderate_heal_self;Moderate Heal Self;;;;;;;;;;;;;x
+lf_demonic_moderate_heal_self_desc;I've improved control over my ability to alter my body, allowing me the ability to remove some diseases, repair severe damage, and correct imperfections on my body.;;;;;;;;;;;;;x
+lf_demonic_moderate_heal_self_power_desc;Enables §Gright-clicking§! on your portrait to heal moderate wounds and diseases in exchange for §Y[Root.Society.GetCurrency]§!.\nRequirements to use:\n[LFAdultTT]\n[LFIncapableTT]\n[LFAnyDemonTT]\n[LFModerate];;;;;;;;;;;;;x
+
+lf_demonic_major_heal_self;Major Heal Self;;;;;;;;;;;;;x
+lf_demonic_major_heal_self_desc;In having reached the peak of evolution as a child of [GetLilithName], I'm now skilled enough to where my ability to change form can be focused in such a way as to heal myself of major diseases and injuries, to include regenerating lost body parts.;;;;;;;;;;;;;x
+lf_demonic_major_heal_self_power_desc;Enables §Gright-clicking§! on your portrait to heal major wounds and diseases in exchange for §Y[Root.Society.GetCurrency]§!.\nRequirements to use:\n[LFAdultTT]\n[LFIncapableTT]\n[LFDemonTT]\n[LFMajor];;;;;;;;;;;;;x
+
+lf_change_sexuality;Change Sexuality;;;;;;;;;;;;;x
+lf_change_sexuality_desc;Sometimes someone's sexual orientation just doesn't match with your own. Use the powers granted by [GetLilithName] to change their minds.;;;;;;;;;;;;;x
+lf_change_sexuality_power_desc;Enables §Gright-clicking§! on a portrait add or remove the Homosexual trait in exchange for §Y[Root.Society.GetCurrency]§!.\nValid targets: you, courtier.\n§RMay backfire if cast on another.\nWill give a negative opinion if cast on another.§!\nRequirements to use:\n[LFAdultTT]\n[LFAnyDemonTT];;;;;;;;;;;;;x
+
+lf_society_seduction_recruit;§YLF§!: Recruit into the Society;;;;;;;;;;;;;x
+lf_society_seduction_recruit_desc;Begins the process to determine if the person is both a good fit, and if they're interested in joining.;;;;;;;;;;;;;x
+lf_society_seduction_recruit_power_desc;Enables §Gright-clicking§! on the portrait of a prospective member to begin the recruitment evaluation process.;;;;;;;;;;;;;x
+
+lf_perfect_body;Perfect Body;;;;;;;;;;;;;x
+lf_perfect_body_desc;I am blessed with the ability improve upon my looks so as to be more attractive others. If I am disfigured, this may require multiple castings.\nRequirements to use:\n[LFAdultTT]\n[LFToNTKitsuneTT]\n[LFPerfectBodyTT];;;;;;;;;;;;;x
+lf_perfect_body_power_desc;Enables §Gright-clicking§! on your portrait to beautify yourself in exchange for §Y[Root.Society.GetCurrency]§!.;;;;;;;;;;;;;x
+
+lf_futa_morph_spell;Futanari Morph;;;;;;;;;;;;;x
+lf_futa_morph_spell_desc;With your ability to alter your body, you can go so far as to alter your sexual make-up as well, becoming both male and female as you grow a cock and become a futanari.;;;;;;;;;;;;;x
+lf_futa_morph_spell_power_desc;Enables §Gright-clicking§! on your portrait to add or remove the futa trait in exchange for §Y[Root.Society.GetCurrency]§!.\nRequirements to use:\n[LFAdultTT]\n[LFFemaleTT]\n[LFAnyDemonTT];;;;;;;;;;;;;x
+
+#
+# Event Titles
+#
+
+lf_society_seduction_approach_title;The Approach;;;;;;;;;;;;;x
+lf_society_seduction_recruitment;Society Recruitment;;;;;;;;;;;;;x
+lf_society_seduction_court_title;A Courtly Seducer;;;;;;;;;;;;;x
+lf_demonic_seduction_title;Demonic Seduction;;;;;;;;;;;;;x
+lf_futa_morph_spell_title;Futanari Morph;;;;;;;;;;;;;x
+#
+# Event Desc
+#
+
+LFSeduction103;My oh my. Try to place the Demonic Seduction on one of the devout. How potentially scandalous. \n  Hrm, to take the scandalous path, or to back out and consider a safer route. I wonder which I'll choose...;;;;;;;;;;;;;x
+LFSeduction103A;Oh, I'm totally seeing this through. [target_seduced.GetFirstName] will be mine.;;;;;;;;;;;;;x
+LFSeduction103B;I'll pass. [target_seduced.GetFirstName] isn't worth the potential headache.;;;;;;;;;;;;;x
+LFSeduction100;I've set my eyes on [target_seduced.GetBestName]. They may not know it yet, but I plan on sharing my Demonic Seduction with them. And when I do, they'll be bound to me as my lover. \n  Oh how I enjoy a little game.;;;;;;;;;;;;;x
+LFSeduction100A;[target_seduced.GetFirstName] shall be mine.;;;;;;;;;;;;;x
+LFSeduction100B;On second thought, maybe not.;;;;;;;;;;;;;x
+LFSeduction101;I've set my eyes on [target_seduced.GetBestName] and I shall have them dancing like a puppet on my strings. Then, when the time is right, I plan on sharing my Demonic Seduction with them. And when I do, they'll be bound to me as my lover. \n  Oh how I enjoy a little game.;;;;;;;;;;;;;x
+LFSeduction105;I've set my eyes on [target_seduced.GetBestName] and I shall have them dancing like a puppet on my strings. Of course, the age gap between us may raise some eyebrows. \n  Of course, if I do pursue them, I plan on sharing my Demonic Seduction with them when the time is right. And when I do, they'll be bound to me as my lover. \n  Oh how I enjoy a little game.;;;;;;;;;;;;;x
+LFSeduction101A;[target_seduced.GetFirstName] shall be mine.;;;;;;;;;;;;;x
+LFSeduction1017;I'm a prisoner. Either actually rotting away in some other ruler's cell or wasting away in my own useless body (prisoner or incapable). I think briefly of [target_seduced.GetBestName], and all of the progress that will now have gone to waste, for I must start over with my seduction attempt should I ever obtain my freedom.;;;;;;;;;;;;;x
+LFSeduction1017A;If I could only be free once more.;;;;;;;;;;;;;x
+LFSeduction1014;While the game of seduction can be entertaining, sometimes things take place that make the game irrelevant. In this case, I've obtained the object of my desire. With [target_seduced.GetBestName] now mine, it is time to drop the game of seduction so I can turn my eyes towards another should I wish it.;;;;;;;;;;;;;x
+LFSeduction1014A;I look forward to my time with [target_seduced.GetFirstName].;;;;;;;;;;;;;x
+LFSeduction1011;I find myself recalling both my experiences with [target_seduced.GetBestName] and thinking of what will never come to pass. With the death of [target_seduced.GetFirstName] I am free from the game I was engaged in, and am now capable of directing my attentions to others should I so wish.;;;;;;;;;;;;;x
+LFSeduction1011A;Too bad [target_seduced.GetFirstName] passed before I finished what I had planned.;;;;;;;;;;;;;x
+LFSeduction1012;I've learned that [target_seduced.GetBestName] is no longer eligible for my continued advances. It is such a shame, as I was enjoying the game. Alas, be it physical imprisonment in some walled cell, or screaming internally as one's mind becomes a prisoner within their own failing body, neither are conducive towards the game of seduction. Alas, while [target_seduced.GetFirstName] isn't free, at least I am, so I can now consider pursuing another.;;;;;;;;;;;;;x
+LFSeduction1012A;May [target_seduced.GetFirstName] be free some day.;;;;;;;;;;;;;x
+LFSeduction5203;Bah. [target_seduced.GetFirstName] is playing hard to get. Apparently my letter was not well received. \n The only question left is do I push forward or let this go?;;;;;;;;;;;;;x
+LFSeduction5203A;Continue the pursuit!;;;;;;;;;;;;;x
+LFSeduction5203B;End this waste of time.;;;;;;;;;;;;;x
+LFSeduction5202;My sources indicate that [target_seduced.GetFirstName] did indeed receive my letter. What is their intention by not giving me a response? Are they playing coy, or simply hoping I waste time pursuing them further? \n What shall I do?;;;;;;;;;;;;;x
+LFSeduction5202A;Continue the pursuit!;;;;;;;;;;;;;x
+LFSeduction5202B;End this waste of time.;;;;;;;;;;;;;x
+LFSeduction5201;Oh ho! [target_seduced.GetFirstName] appreciates the letter and even went so far as being flirtatious in their response. Things are progressing well. \n Of course, I could just end this game if I so desire.;;;;;;;;;;;;;x
+LFSeduction5201A;Continue the pursuit, as it's nearing an end!;;;;;;;;;;;;;x
+LFSeduction5201B;My desires have waned, let me end this.;;;;;;;;;;;;;x
+LFSeduction5200;I received a love letter from [target_seducer.GetFirstName]! Oh my, the lewd things they'd like to do with me. \n  I feel my heart flutter and my cheeks grow warm. Is it from interest in the letter or repulsion?;;;;;;;;;;;;;x
+LFSeduction5200A;I have to admit, the words and imagery moves me.;;;;;;;;;;;;;x
+LFSeduction5200B;I've not time for this foolishness.;;;;;;;;;;;;;x
+LFSeduction5200C;How dare they imply such things!;;;;;;;;;;;;;x
+LFSeduction5200G;I shall communicate my rejection of their advances.;;;;;;;;;;;;;x
+LFSeduction1030;I believe things will progress a bit better with a little push. The only question is what is the best method to employ in winning them over.;;;;;;;;;;;;;x
+LFSeduction1030A;A love letter will sway them.;;;;;;;;;;;;;x
+LFSeduction1015;How long must I wait? [target_seduced.GetFirstName] isn't cooperating and I'm beginning to question whether such pursuit is worth my time.;;;;;;;;;;;;;x
+LFSeduction1015A;I must be patient and press onward.;;;;;;;;;;;;;x
+LFSeduction1015B;Bah, I shall end this and seek other prey.;;;;;;;;;;;;;x
+LFSeduction1020;Well now. It would appear that [target_seduced.GetFirstName] has made it quite clear that any such pursuit of them is no more than a waste of my time. Such a shame, we would have made such wonderful music together.;;;;;;;;;;;;;x
+LFSeduction1020A;At least I can now focus elsewhere.;;;;;;;;;;;;;x
+LFSeductionDoh;Doh! I shouldn't be targeting the player!;;;;;;;;;;;;;x
+
+
+
+LFLilithQuests3;Greetings, [Root.GetSocietyRank] [Root.GetFirstName],\n\n[GetLilithName] has sensed a being who has not yet tasted the delicious flavor of sex yet. She has commanded you to care of this and rob [lf_seduce_virgin_target.GetHerHim] of [lf_seduce_virgin_target.GetHerHis] virginity.;;;;;;;;;;;;;x
+LFLilithQuests5;Greetings, [Root.GetSocietyRank] [Root.GetFirstName],\n\n[GetLilithName] has sensed a foul priest close by. She has commanded you to seduce [lf_seduce_priest_target.GetHerHim] and bring [lf_seduce_priest_target.GetHerHis] the sweet taste of sex.;;;;;;;;;;;;;x
+LFLilithQuests7;Greetings, [Root.GetSocietyRank] [Root.GetFirstName],\n\n[GetLilithName] has decided it is time for a foreign ruler to be awakened to the power of the Society. She has commanded you to seduce [lf_seduce_ruler_target.GetHerHim] and bring [lf_seduce_ruler_target.GetHerHis] the sweet taste of sex.;;;;;;;;;;;;;x
+LFLilithQuests8T;[GetLilithName]'s Court;;;;;;;;;;;;;x
+LFLilithQuests8;You retire to bed, praying for [GetLilithName] to grant you power or guidance. You have accomplished much in her name, and await the day you can feel her favor running through your body. Your eyes close, drifting off into a deep slumber.\n\n  When you awake, you find yourself... elsewhere. A stately throneroom, the court comprised of demons of all types. Most are engaged in an orgy with each other. All except one... a beautiful, nude queen sitting atop her throne. You know who this is.\n  "Welcome to my court, [Root.GetFirstName]," she nonchalantly mutters, surveying the sex-fueled scene before her. As if already bored of the orgy, the demon queen gets up off of her throne and moves toward you, her eyes locked on to you with lust. "You have done very, very well for yourself." [GetLilithName] licks her lips and runs her hands down her lithe body. "Allow me to reward you for your actions."\n  Just as you about to reach out to embrace the woman, [GetLilithName] stops you with a finger to your lips. "Ah ah," she chastises, "you have not yet earned the right. For now, however, you have earned my lineage." With a sudden movement, [GetLilithName] thrusts her hand through your ribcage to grasp your heart. And yet... there is no pain, only unending lust for the woman. This lust grows stronger with each beat of your heart, until eventually [GetLilithName] pulls her hand back out of your chest.\n  You feel... changed, somehow. "You are now one of us, my darling grand[Root.GetSonDaughter]. Continue to serve me well, and I might share my body with you." Your new 'grandmother' leans in and places a small kiss on your lips, a kiss that shocks you back into reality.\n\n  You are back in your bed, covered in a cold sweat. And yet... something is different about you. You can feel the demonic blood flowing through your veins.;;;;;;;;;;;;;x
+LFLilithQuests8TTA;Thank you, grandmother.;;;;;;;;;;;;;x
+LFLilithQuests9T;[GetLilithName]'s Court;;;;;;;;;;;;;x
+LFLilithQuests9Male;You retire to bed, praying for [GetLilithName] to grant you power or guidance. You have accomplished much in her name, and await the day you can feel her favor running through your body. Your eyes close, drifting off into a deep slumber.\n\n When you awake, you find yourself back in [GetLilithName]'s court, the same place as the last dream. Only this time, [GetLilithName] is bent down on all fours on the floor, her ass raised in the air invitingly. "You have done much, my grandson," she flirtatiously teases. "Come, take your reward, claim your grandmother's pussy."\n  Needing no further invitation, you get down on your knees behind her and push your cock inside her inviting flower. A small moan from the woman is all it takes for your body to autonomously start thrusting. With each slap of flesh as your hip connects to her ass, you feel yourself getting stronger. It's not long before you're no longer making love, but simply rutting the woman, fucking her like a slave.\n "I grant you my lifeblood," she moans out. "You are now one of my own flesh and blood. Welcome, my son." You can barely hear her words over your reckless fucking, and barely take notice when one of your 'sisters' comes up behind you and runs her hands across your body, urging you onward. "Fill your mother's womb with your new demonic seed," [GetLilithName] commands. A command that you can no longer deny. With one final thrust and a roar of triumph, you fill your new mother with your cum. Before you have a chance to recover, or even to ponder the possibility that you seeded her womb with new life, you are shocked back into reality.\n\n  You are back in your bed, covered in a cold sweat. And yet... something is different about you. You can feel the upgraded demonic blood flowing through your veins.;;;;;;;;;;;;;x
+LFLilithQuests9Female;You retire to bed, praying for [GetLilithName] to grant you power or guidance. You have accomplished much in her name, and await the day you can feel her favor running through your body. Your eyes close, drifting off into a deep slumber.\n\n When you awake, you find yourself back in [GetLilithName]'s court, the same place as the last dream. Only this time, you are on the floor, flat on your back with [GetLilithName] between your legs. "You have done much, my granddaughter," she flirtatiously teases, running a finger along the length of your slit. Only now do you notice that [GetLilithName] has something extra between her legs, something that is now pressing against your flower. "It is time I rewarded you." And with that, [GetLilithName] makes a single thrust of her hips, embedding her cock up to the entrance of your womb. The sensation is both painful and pleasurable, something you desire more of.\n As if she knew what you were thinking, [GetLilithName] starts moving her hips, thrusting her demonic rod in and out of your pussy. With each thrust, you can feel your desires growing, and soon your mind is a blank. "With my seed in your body, you will become a new woman. My new daughter." You can barely hear her words over the raging orgasm that is overwhelming your body, and you barely take notice when [GetLilithName] thrusts one last time, filling your flower with her nectar. "Welcome to the family, my daughter," she whispers. Before you had a chance to recover, you are shocked back into reality.\n\n  You are back in your bed, covered in a cold sweat. And yet... something is different about you. You can feel the upgraded demonic blood flowing through your veins.;;;;;;;;;;;;;x
+LFLilithQuests9Futa;You retire to bed, praying for [GetLilithName] to grant you power or guidance. You have accomplished much in her name, and await the day you can feel her favor running through your body. Your eyes close, drifting off into a deep slumber.\n\n When you awake, you find yourself back in [GetLilithName]'s court, the same place as the last dream. Only this time, [GetLilithName] is bent down on all fours on the floor, her ass raised in the air invitingly. "You have done much, my granddaughter," she flirtatiously teases. "Come, take your reward, claim your grandmother's pussy."\n  Needing no further invitation, you get down on your knees behind her and push your cock inside her inviting flower. A small moan from the woman is all it takes for your body to autonomously start thrusting. With each slap of flesh as your hip connects to her ass, you feel yourself getting stronger. It's not long before you're no longer making love, but simply rutting the woman, fucking her like a slave.\n "I grant you my lifeblood," she moans out. "You are now one of my own flesh and blood. Welcome, my daughter." You can barely hear her words over your reckless fucking. "Fill your mother's womb with your new demonic seed," [GetLilithName] commands. A command that you can no longer deny. With one final thrust and a roar of triumph, you fill your new mother with your cum. Before you have a chance to recover, or even to ponder the possibility that you seeded her womb with new life, you are shocked back into reality.\n\n  You are back in your bed, covered in a cold sweat. And yet... something is different about you. You can feel the upgraded demonic blood flowing through your veins.;;;;;;;;;;;;;x
+LFLilithQuests9TTA;My goddess has blessed me.;;;;;;;;;;;;;x
+LFLilithQuests10;Greetings, [Root.GetSocietyRank] [Root.GetFirstName],\n\n[GetLilithName] has decided it is time for a foreign ruler's spouse to be awakened to the power of the Society. She has commanded you to seduce [lf_seduce_spouse_target.GetHerHim] and bring [lf_seduce_spouse_target.GetHerHis] the sweet taste of sex.;;;;;;;;;;;;;x
+
+LFSocietySeduction91;Your interest has been noticed.\n  Interest in itself is only the first step. Journey to the tavern at the edge of town in a week's time, alone and incognito.\n  There, an agent shall contact you.;;;;;;;;;;;;;x
+LFSocietySeduction91A;Contact, at last. I shall be there.;;;;;;;;;;;;;x
+LFSocietySeduction91B;This sounds like a trap. I'll not attend.;;;;;;;;;;;;;x
+LFSocietySeduction100.0;I take a seat at a table in the corner as I await my contact. A barmaid brings over a tankard and places it on the table, its contents foaming over. She leans forward, giving me a clear view of her cleavage.\n  "What have we here? An orphan in search of it's mother?"\n  I look the tavern wench over intently. I understand that [GetLilithName] is viewed as a mother to many. I lick my lips in anticipation and nod in acknowledgement of her question.\n  "Is that so?" Her eyes seem to sparkle. She bites her lip and lets a small drop of blood fall into the tankard of ale. Her lips twist in a maniacal smile as she slides the tankard of ale over.\n  "Know that my Mother sees through me. My blood carries her gift of judgement. If you hold true desire or love for my Mother, then drink up and see if she accepts you. If she does not, your end will be a painful one."\n  I look at the foaming tankard and notice that it seems to boil with an unnatural fervor. I meet the gaze of the emissary. I can drink and accept the judgement or leave now.;;;;;;;;;;;;;x
+LFSocietySeduction100A;I remain true to my convictions and accept.;;;;;;;;;;;;;x
+LFSocietySeduction100B;I've made a mistake and must stop now.;;;;;;;;;;;;;x
+LFSocietySeduction101.0;The ale tastes horrible as I choke it down. I feel a burning sensation arise from deep within me, and I fail to keep down a choking cough. With sweat beading down my forehead, the burning sensation passes. I look up and see the tavern wench smiling at me.\n  "Well, well. You may be one of my kin after all. You've passed the Mother's first, and dare I say most important test. Rest and rule. Another shall seek you out in due time."\n  With a wink she saunters off back towards the bar, leaving me to my thoughts.;;;;;;;;;;;;;x
+LFSocietySeduction101A;I look forward to the next contact.;;;;;;;;;;;;;x
+LFSocietySeduction102.0;I don't know how long the cloaked figure was standing there, in the corner of my study, staring at me from the shadows. But as soon as I noticed it, the figure spoke.\n  "You should feel blessed child. The moment of your acceptance is at hand. Come with me to complete your joining. Or turn away now and forget what shadows you've witnessed."\n  I can sense that this is the moment. If I go forward, and I don't like what I see, it could be too late to back out. Potentially making enemies of the Society. So if I proceed, and go with the shadowy figure, I must be certain of my resolve.;;;;;;;;;;;;;x
+LFSocietySeduction102A;I will not back out now. I accept all that is required.;;;;;;;;;;;;;x
+LFSocietySeduction102B;I've made a mistake. I shall abandon my pursuit.;;;;;;;;;;;;;x
+LFSocietySeduction104.0;I follow the cloaked figure out into the night, where we stand under a new moon. Turning towards me, the cloaked figure spreads their arms out wide.\n  "Child of Mother [GetLilithName]. You already bear her mark, and are given membership without trial. Under the gaze of this new moon, the Mother sees you, and the Society of Seduction welcome you."\n  I blink in surprise. I confirm that this is really all there is to it, and the cloaked figure makes it known that my blood lineage is considered adequate. So I inquire about what trial I would have faced if I wasn't already a Succubus.\n  "If you were not already a child of Mother [GetLilithName], we would have called to consummate your joining the order, with you taking the seed of multiple members into your womb. And while it's not necessary, if you so wish, we could still follow through with the act."\n  So I'm in either way, the only question is if I want my belly filled with the spunk of strangers or not.;;;;;;;;;;;;;x
+LFSocietySeduction104.1;I follow the cloaked figure out into the night, where we stand under a new moon. Turning towards me, the cloaked figure spreads their arms out wide.\n  "Child of Mother [GetLilithName]. You already bear her mark, and are given membership without trial. Under the gaze of this new moon, the Mother sees you, and the Society of Seduction welcome you."\n  I blink in surprise. I confirm that this is really all there is to it, and the cloaked figure makes it known that my blood lineage is considered adequate. So I inquire about what trial I would have faced if I wasn't already an Incubus.\n  "If you were not already a child of Mother [GetLilithName], we would have needed proof of your subservience. We would have bound you, and then to consummate your joining the order, we would have you taken by multiple members who would use you for their release. And while it's not necessary, if you so wish, we could still follow through with the act."\n  So I'm in either way, the only question is if I want to be bound and used by a bunch of strangers or not.;;;;;;;;;;;;;x
+LFSocietySeduction104A;I am one of the Society of Seduction.;;;;;;;;;;;;;x
+LFSocietySeduction104B;You know, the night is still young...;;;;;;;;;;;;;x
+LFSocietySeduction105.0;I follow the cloaked figure, and I feel my body tingle from excitement over what I'm about to do. I lick my lips in anticipation as we approach a small home. As he opens the door, and I step through, my arousal to the point where my nipples are firm and wish to be free, while my pussy juices have begun to flow.\n  Inside the dimly lit room is a simple bed and a group of naked men, each with their cock in hand, stroking while looking upon me with lust. My body shivers in anticipation as I gaze upon their engorged members. My eyes locked on their cocks, I feel the cloaked figures hands on me, peeling my clothing off and exposing my body.\n  "I hope you find them pleasing. They have been carefully selected for their endurance and quantity of seed."\n  Free of my clothing, I stand there naked before them, my nipples stiff and my skin yearning to be touched.;;;;;;;;;;;;;x
+LFSocietySeduction105.1;I follow the cloaked figure out into the night. We make our way to a small home on the outskirts of town. He pauses by the door and looks around as if to ensure there are no witnesses. He opens the door and motions for me to enter into the dimly lit room.\n  I step through the doorway, my eyes taking just a moment to adjust to the change in light. It's a simple room, with a rough bed and a strong smell of musk in the air. We're not alone, as a group of men, all naked with their cocks in the hand are looking at me as they stroke their members.\n I tense as I hear the door shut behind me. "Mother [GetLilithName] wishes to consummate your joining our ranks. These men have all been especially chosen based on their endurance and quantity of seed."\n  My mind is swimming with what is about to happen, when I gasp as the hands of the cloaked man begins to remove my clothing. As my flesh is bared before them, I watch as their cocks stiffen even further. Soon, I'm naked before them.;;;;;;;;;;;;;x
+LFSocietySeduction105A;I climb on the bed and motion for them to join me.;;;;;;;;;;;;;x
+LFSocietySeduction106.0;The men join me on the bed and soon I'm covered in hands touching, probing, pulling, and pinching my flesh. I moan with hunger as I surrender my body to their manipulations.\n  I gasp as the first man enters me, sliding in cleanly thanks to my wet pussy's arousal. Another cock slaps my cheek and I reflexively turn my head and flick my tongue across it's tip. I feel hands slip around the back of my skull and I open my mouth to take in his member as he pulls my head to his groin.\n Soon, I'm rolled over to where I'm straddling a man while riding his cock. I feel another tip poke my asshole. I relax and moan around the cock in my mouth as I push back to accept the new cock into my ass.\n  The rotation lasts for a couple hours, with each taking multiple turns with me. It's wonderful, and when they're finally laying spent around me, I feel stronger from the energy that they shared with me.\n  I trace a finger up my inner thigh to catch some of the semen trying to escape, and I lick it from my finger. Grinning widely, I dress before departing back to my home.;;;;;;;;;;;;;x
+LFSocietySeduction106.1;The men join me on the bed and soon I'm covered in hands touching, probing, pulling, and pinching my flesh. I tremble as my body is overwhelmed with the attention. I can almost feel their hunger for my body.\n  My hands are guided to grasp hard members, while I'm pulled atop another man, who grinds his groin against me, and I feel my pussy tingle from the sensation. Another cock slaps my cheek and I turn my head to gaze upon the impressive member. He guides my face towards his cock, and open my mouth to accept it. \n The man beneath me lifts me slightly, and then guides me onto him. His grinding has stimulated my pussy to where my juices allow me to accept him without much pain. Once I sink down, he begins thrusting while I try to get my timing down to ride his cock.\n  Soon, I feel another tip poke my asshole. I tense and am told that it would be best for me to relax. I try to do so as I feel it push into me, the pain quickly getting lost in the pleasure and stimulation I'm experiencing. The rotation lasts for a couple hours, with each taking multiple turns with me.\n  Later, I find myself laying amongst them. They're all spent, and I'm a little sore, yet I must admit it was pleasurable. I quietly dress before departing back to my home.;;;;;;;;;;;;;x
+LFSocietySeduction106A;I join the Society.;;;;;;;;;;;;;x
+LFSocietySeduction112;I awake to the sound of birds singing their morning song outside of my bedroom window. I cover my eyes from the rising sunlight slipping into my room.\n  My mind dances as I try to recall something that feels like a fading dream. I do my best to focus on the features of an individual as the thought fades from memory, and end up instead breathing deeply from the sharp pain that shoots through my head.\n  I lay there for a bit longer, letting the headache subside, until it's finally gone. I realize also that the details of my dream are also lost, yet a part of me is uncomfortable, as though some foreboding warning has now been lost.;;;;;;;;;;;;;x
+LFSocietySeduction112A;What a nightmare.;;;;;;;;;;;;;x
+LFSocietySeduction111;As soon as I swallow the small red pill, my throat feels as though it is on fire. I open my mouth and find that I'm unable to make a sound or breathe.\n  "You've just consumed a portion of mana, arcane energy which has been extracted from a variety of sources. It's lethal to many who consume it, and can cripple those who survive. The secret to you surviving will be your ability to exert your will over your body. Forcing it to continue to function while the energy within the pill dissipates within you."\n  I do my best to quell the panic within me while willing my body to take a breath. I somehow manage to take a breath, and my chest feels like it's about to burst. I try to continue breathing, when my ears begin ringing so loudly that I want to scream. I clasp my hands over them, while fighting a scream, as I feel to do so would render me unable to breathe.\n  I steal a glance at the man, he's watching me calmly, with a measured gaze. I fall to my knees before him, as my body begins to convulse. I grit my teeth, sucking in a vital breath as the man leans closer to observe me.\n  "About a tenth of the way through I'd wager."\n  I fight the urge to surrender, and I continue my battle with my body.;;;;;;;;;;;;;x
+LFSocietySeduction111A;I have survived and am now in the Wizard's College.;;;;;;;;;;;;;x
+LFSocietySeduction111B;I have failed. Death embraces me.;;;;;;;;;;;;;x
+LFSocietySeduction110;The elderly man stares at me for a moment before nodding in what seems to be approval.\n  "We often make decisions based upon facts or parameters provided by others. Limited thinking that reduces innovation. It is good to see that you are one who sees options that are not provided by others. It also saves me considerable time. Welcome to the Wizard's College."\n  I ask a few more questions, and receive some short answers regarding rules and expectations. Until with a sigh, the elderly man motions for me to leave through the doorway that I came through. Upon walking through it, I find myself standing back in my hallway, outside of the door to my study.;;;;;;;;;;;;;x
+LFSocietySeduction110A;I am now a member of the Wizard's College.;;;;;;;;;;;;;x
+LFSocietySeduction107.0;I follow the cloaked figure, and I feel my body tremble in anticipation of what's to come. I tug at my cloak in anticipation as we approach a small home on the outskirts of town. As he opens the door, and I step through into a dimly lit room, my heart racing from what is to come.\n  Inside I find a simple bed and a group of rough looking men who immediately come forward and grab my arms. I'm pulled into the center of the room, where another pulls out a length of fine black rope and another steps forward with some interesting blackened manacles. Pressure to the back of my knee brings me down. As I fall, firm hands pull away my cloak and tear away my clothing, leaving my upper body exposed. My arms are pulled upward and a manacle attached to each wrist. There are no chains on them, yet I quickly see the intent, as the rope is pulled through, and with movements that show a measure of practice, it isn't long before my arms are bound behind me and I'm largely at the mercy of the men around me.\n  I'm pulled upright and then pushed on the bed where my belt and pants are pulled off, leaving me bound and naked on the bed. With a grunt of apparent satisfaction, the robed men begin to shed their clothing, and soon I'm surrounded, prone on the bed between large rough looking men with a wild glint in their eyes and cocks that are raising up to point at me.;;;;;;;;;;;;;x
+LFSocietySeduction107.1;I follow the cloaked figure out into the night. We keep to the shadows as we cross town. I remain silent, pondering what to expect. A secret ritual? Some test of confidence? Mind mind rolls through the possibilities in anticipation of what's to come.\n  As we approach a small home on the outskirts of town, he stops and scans the area quickly, as if to ensure we weren't followed. Without a word, he opens the door, and I step through into a dimly lit room.\n  Inside I find a simple bed and a group of rough looking men who immediately come forward and grab my arms. Fear races through me, as I wonder if it's a trap or some other test. My moment of hesitation is broken as I'm pulled into the center of the room and then kicked in the back of the knees, causing me to collapse on the floor. Firm hands pull away my cloak and tear away my clothing while my arms are pulled in opposite directions by those with a hold on me. I try to resist as fear seizes me, until a knee slams into the back of my head, causing my vision to blur. In my stunned moment, I feel the cold, metallic sensation of manacles placed on my wrists. I tug again reflexively, and the knee presses into my back, while another hand pulls my head backwards, with my arms outstretched, I've no leverage to resist.\n  "Man. Headstrong and willful. These traits serve us well in the world, yet before [GetLilithName], she demands obedience."\n  I see the meaning in the words and cease my struggles. It isn't long before my arms are bound behind me, with my upper body exposed.  I'm pulled upright and then pushed on the bed where my belt and pants are pulled off, leaving me bound and naked on the bed. With a grunt of apparent satisfaction, the robed men begin to shed their clothing, and soon I'm surrounded, prone on the bed between large rough looking men with a wild glint in their eyes and cocks that are raising up to point at me.;;;;;;;;;;;;;x
+LFSocietySeduction107.2;I follow the cloaked figure, and I feel my body tremble in anticipation of what's to come. I tug at my cloak in anticipation as we approach a small home on the outskirts of town. As he opens the door, and I step through into a dimly lit room, my heart racing from what is to come.\n  Inside I find a simple bed and a group of hungry-looking women who immediately come forward and grab my arms. I'm pulled into the center of the room, where another pulls out a length of fine black rope and another steps forward with some interesting blackened manacles. Pressure to the back of my knee brings me down. As I fall, firm hands pull away my cloak and tear away my clothing, leaving my upper body exposed. My arms are pulled upward and a manacle attached to each wrist. There are no chains on them, yet I quickly see the intent, as the rope is pulled through, and with movements that show a measure of practice, it isn't long before my arms are bound behind me and I'm largely at the mercy of the women around me.\n  I'm pulled upright and then pushed on the bed where my belt and pants are pulled off, leaving me bound and naked on the bed. With a grunt of apparent satisfaction, the robed women begin to shed their garments, and soon I'm surrounded, prone on the bed between several wild-eyed women moving in around me, reaching out to grope and grab at me as one begins to stroke my cock to hardness in preparation to ride me.;;;;;;;;;;;;;x
+LFSocietySeduction107A;I lay there, awaiting what comes next.;;;;;;;;;;;;;x
+LFSocietySeduction107B;I lay there, awaiting what comes next.;;;;;;;;;;;;;x
+LFSocietySeduction107.3;I follow the cloaked figure out into the night. We keep to the shadows as we cross town. I remain silent, pondering what to expect. A secret ritual? Some test of confidence? Mind mind rolls through the possibilities in anticipation of what's to come.\n  As we approach a small home on the outskirts of town, he stops and scans the area quickly, as if to ensure we weren't followed. Without a word, he opens the door, and I step through into a dimly lit room.\n  Inside I find a simple bed and a group of hungry looking women who immediately come forward and grab my arms as the man slams the door shut behind me. Fear races through me, as I wonder if it's a trap or some other test. My moment of hesitation is broken as I'm pulled into the center of the room and then kicked in the back of the knees, causing me to collapse on the floor. Firm hands pull away my cloak and tear away my clothing while my arms are pulled in opposite directions by those with a hold on me. I try to resist as fear seizes me, until a knee slams into the back of my head, causing my vision to blur. In my stunned moment, I feel the cold, metallic sensation of manacles placed on my wrists. I tug again reflexively, and the knee presses into my back, while another hand pulls my head backwards, with my arms outstretched, I've no leverage to resist.\n  A sultry yet insistent feminine voice speaks out, "Man. Headstrong and willful. These traits serve you well in the world, yet before [GetLilithName], she demands your obedience."\n  I see the meaning in the words and cease my struggles. It isn't long before my arms are bound behind me, with my upper body exposed.  I'm pulled upright and then pushed on the bed where my belt and pants are pulled off, leaving me bound and naked on the bed. With a grunt of apparent satisfaction, the robed women begin to shed their clothing, and soon I'm surrounded, prone on the bed between several wild-eyed women moving in around me, reaching out to grope and grab at me as one begins to stroke my cock to hardness in preparation to ride me.;;;;;;;;;;;;;x
+LFSocietySeduction108.2;The women descend upon me, pawing and prodding me. One slaps my cheek and orders me to service her, before moving to straddle my head between her thighs. Her musky smell is overwhelming, yet I obediently obey as I open my mouth and flick my tongue across her folds. I focus on both stimulating and lubricating her sex as I know what's coming. Sure enough, I feel her hand grab the back of my head, as she shoves her hips forward, urging me to push my tongue between her folds up into her wet sex.\n  While I'm being ridden, the other women have been stroking at my chest and cock, trying to figure out who's going to be the first to ride it apparently. Upon hearing there is a victor, I lift up my hips in an attempt to present my cock better for them. The women adjust me a bit further and I then feel something cool and slimy, some kind of grease perhaps, rubbed around my cock. A pair of fingers push into my ass, even as I moan against the woman straddling my head. Soon, I feel one of them moving atop me, and fingers reaching to guide my cock to the entrance of a waiting woman's sex. I relax and with a slow deliberate push, I sink in deeply as she lowers herself on to me. I give into the sensation of being ridden by both women, and enjoy the night as others trade out to enjoy themselves as well.\n  I awake in the morning, free of my bonds. The women are sleeping throughout the room, the sound of their breathing breaking the silence. An interesting night indeed, and one that I imagine most males who desire to join the Society would find it difficult to perform well enough to satisfy them all. Alas, it was just what I needed for the night. I put on a cloak to cover myself before departing, and then head back to my home.;;;;;;;;;;;;;x
+LFSocietySeduction108.3;The women descend upon me, pawing and prodding me. One slaps my cheek and orders me to service her, before moving to straddle my head between her thighs. Her musky smell is overwhelming, and I turn my head away. I then yelp as my cock is slapped.\n  "You can do what we say, or you can resist and we get rough. Either's fine, because you're going to satisfy us all one way or another, and personally, I'm hoping you resist a bit more."\n  I'm in no position to resist, and it's clear that continued non-compliance will result in my getting beaten severely. Not something I want to have to explain in court. Resigning myself to the situation, I turn my head back towards her waiting labia. I push out the scent before me and open my mouth to service the woman.\n The remaining women grab at my cock, rubbing insistently at it to force me to harden whether I like it or not, while I try not to suffocate against the flesh of the woman rubbing her vulva insistently against my nose and mouth. I tense as a pair of finger push into my asshole. The sensation is both painful and... not bad. The fingers slide out, having coated my asshole with some sort of oil or grease, while another hand reaches to rub the same stuff around my reluctantly hardening cock. Soon, I feel one of them lifting my legs to expose my ass, and a dildo prods up against my asshole before pushing into me. I begin to lose track as one sex act follows another, the women seemingly insatiable.\n I awake in the morning, free of my bonds. The women are sleeping throughout the room, their sound of their breathing breaking the silence. Do all males who desire to join the Society have to go through such a test? I imagine most be hard pressed to perform so repeatedly in one night, or even find some of the acts profoundly disturbing. Rubbing the back of my head where I was kneed when I struggled, I wonder how many fought further and didn't heed the call to obedience. Unable to answer the questions, I put on a cloak to cover myself before departing. Then with one final glance, at those who had their way with me, I turn and head back to my home.;;;;;;;;;;;;;x
+LFSocietySeduction108.0;The men descend upon me, pawing and prodding me. One slaps his cock on my cheek and orders me to service his cock. His musky smell is overwhelming, yet I obediently obey as I open my mouth and flick my tongue across the tip. I focus on both stimulating and lubricating his cock as I know what's coming. Sure enough, I feel his hand grab the back of my head, as he shoves his hips forward, ramming his cock into my mouth and down my throat.\n  While I'm being throat fucked, the other men have been trying to figure out who's going to take my ass first apparently. Upon hearing there is a victor, I lift up my legs in an attempt to roll my hips to make my ass more accessible. The men adjust me a bit further and I then feel something cool and slimy, some kind of grease perhaps, rubbed around my asshole. A pair of fingers push into my ass, lubing my hole and I moan around the cock in my mouth. Soon, the fingers are removed and a few moments later, I feel a man's cock seeking entrance. I relax and with a slow deliberate push, he sinks in deeply. I give into the sensation of being spit-roasted, and enjoy the night.\n  I awake in the morning, free of my bonds. The men are sleeping throughout the room, their snores breaking the silence. An interesting night indeed, and one that I imagine most males who desire to join the Society would find disturbing. Alas, it was just what I needed for the night. I put on a cloak to cover myself before departing, and then head back to my home.;;;;;;;;;;;;;x
+LFSocietySeduction108.1;The men descend upon me, pawing and prodding me. One slaps his cock on my cheek and orders me to service his cock. His musky smell is overwhelming, and I turn my head away. I then yelp as my cock is slapped.\n  "You can do what we say, or you can resist and we get rough. Either's fine, and personally, I'm hoping you resist a bit more."\n  I'm in no position to resist, and it's clear that continued non-compliance will result in my getting beaten severely. Not something I want to have to explain in court. Resigning myself to the situation, I turn my head back towards the waiting cock. I push out the scent before me and open my mouth to service the man.\n  The remaining men hike my legs up and shift my ass near the end of the bed, while I'm doing my best to not gag as my mouth and throat is being fucked. I tense as a pair of finger push into my asshole. The sensation is both painful and... not bad. The fingers slide out, and I can tell that some kind of oil or grease was just generously applied from the probing. There is some motion and the sound of one of the men claiming victory, as he apparently won the opportunity to go first. I know what's coming, and I do my best to relax and take it all..\n  I awake in the morning, free of my bonds. The men are sleeping throughout the room, their snores breaking the silence. Do all males who desire to join the Society have to go through such a test? I imagine most would find disturbing. Rubbing the back of my head where I was kneed when I struggled, I wonder how many fought further and didn't heed the call to obedience. Unable to answer the questions, I put on a cloak to cover myself before departing. Then with one final glance, at those who had their way with me, I turn and head back to my home.;;;;;;;;;;;;;x
+LFSocietySeduction108A;I'm one of the Society of Seduction.;;;;;;;;;;;;;x
+LFSocietySeduction7001;[lf_seduction_recruiter.GetFirstName] asks me about some alternative views on the world and religion in general.\n  If I didn't know better, I'd say they were probing me to potentially join some kind of secret society.;;;;;;;;;;;;;x
+LFSocietySeduction7001A;It just so happens that I share similar thoughts.;;;;;;;;;;;;;x
+LFSocietySeduction7001B;Begone with your sacrilegious questions.;;;;;;;;;;;;;x
+LFSocietySeduction7008;I'm visited again by [lf_seduction_recruiter.GetFirstName]. They bring up their alternate views once more, and speak to the advantages of being with other like minded individuals who also share the same or similar views. I agree to the advantages, and after another hour of discussing various topics, I'm invited to join them.;;;;;;;;;;;;;x
+LFSocietySeduction7008A;I'm now a member of the Society of Seduction.;;;;;;;;;;;;;x
+LFSocietySeduction7009;I've received a confirmation from [lf_seduction_recruit.GetFirstName] that they are prepared to join the Society of Seduction. I inform my brethren and in the evening we hold a ceremony to bring them into the fold.\n  As we grow in numbers, so to does our influence upon the world.;;;;;;;;;;;;;x
+LFSocietySeduction7009A;Our society grows stronger.;;;;;;;;;;;;;x
+LFSocietySeduction7003;The exploratory meeting with [lf_seduction_recruit.GetFirstName] was horrible. A waste of time, with a fool who is too entrenched in their ways to properly appreciate the gifts of [GetLilithName].\n  Unfortunately, a failed effort like this could also increase my exposure, so I must be careful in the months that follow.;;;;;;;;;;;;;x
+LFSocietySeduction7003A;Disappointing.;;;;;;;;;;;;;x
+LFSocietySeduction7002;The exploratory meeting with [lf_seduction_recruit.GetFirstName] went very well. They are open minded, willing to question the existing religious powers, and can likely appreciate the gifts of [GetLilithName].\n  Our ranks could use new members, and I see no drawbacks in proceeding forward.;;;;;;;;;;;;;x
+LFSocietySeduction7002A;I shall extend an invitation to our society.;;;;;;;;;;;;;x
+LFSocietySeductionimpregnated;Your womb is filled with the seed of the unknown men.;;;;;;;;;;;;;x
+LFSocietySeductionimpregnate;The unknown women are filled with your seed.;;;;;;;;;;;;;x
+
+LFDemons220.0;I desire the experiences of having a cock. It fascinates me the way to shapes the world we live in, and I feel that having one will open me to new pleasures. I focus on my ability to alter my shape. \n  Working to mold my body, I begin working my clit furiously while seeking growth. I gasp as my knees tremble as a quick orgasm washes through me. I don't let the wave escape though, as I instead turn the energies towards my groin. \n  My clit appears to have grown a twin, right above itself. It's very sensitive and I find the waves of pleasure are more intense as I stimulate it. I feel it growing, and look down to see what appears to be the beginning of a tiny cock. \n  I must keep at it. I can tell that should I fall to the sensations washing over me as I begin to tug on my new cock, it'll finish the spell. So my size shall be determined by how well I can hold out... I can do this.;;;;;;;;;;;;;x 
+LFDemons220.1;I'm considering an end to my time as a futanari. Having a cock definitely has its advantages, yet there are inconvenient times when it seems to have a mind of its own. \n  As I'm stroking my cock, I can feel the path towards purging the growth from my body. I simply need to link the flesh of my cock to the essence of the seed which is accumulating within my balls. So as I milk my cock and spray my seed, so to shall I whittle away at my rod. \n  Knowing the task at hand, I get to work. Fighting to maintain my focus as waves of pleasure wash over me. I stroke, rub, squeeze and slap my cock until I reach my first intensive orgasm, with thick white gobs of semen spraying forth. \n  My head swims from the sensation. I have to shake it off and continue on until my cock is gone... or I could always just keep it and enjoy these sensations...;;;;;;;;;;;;;x
+LFDemons220A;I now have a cock to enjoy.;;;;;;;;;;;;;x
+LFDemons220B;I'm all woman once more.;;;;;;;;;;;;;x
+LFDemons220C;I've changed my mind and remain as I was.;;;;;;;;;;;;;x

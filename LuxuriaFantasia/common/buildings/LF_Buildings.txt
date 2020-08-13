@@ -1,0 +1,294 @@
+city = {
+	lf_slave_market_city = {
+		desc = lf_slave_market_desc
+		add_number_to_name = no
+		potential = {
+			OR = {
+				FROM = {
+					capital_holding = {
+						title = FROMFROM
+					}
+				}
+				FROMFROM = { has_building = lf_slave_market_city }
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+		prerequisites = { ct_marketplace_1 }
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		gold_cost = 150
+		build_time = 365
+		ai_creation_factor = 30
+		extra_tech_building_start = 10 # No one should start with this pre-built
+		tax_income = 1.5
+	}
+	lf_potion_seller_city = {
+		desc = lf_potion_seller_desc
+		add_number_to_name = no
+		potential = {
+			OR = {
+				FROM = {
+					capital_holding = {
+						title = FROMFROM
+					}
+				}
+				FROMFROM = { has_building = lf_potion_seller_city }
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+		prerequisites = { ct_marketplace_1 }
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		gold_cost = 150
+		build_time = 365
+		ai_creation_factor = 5
+		extra_tech_building_start = 10 # No one should start with one pre-built
+		tax_income = 1
+		tech_growth_modifier = 0.05
+	}
+}
+
+nomad = {
+	lf_slave_market_nomad = {
+		desc = lf_slave_market_desc
+		add_number_to_name = no
+		trigger = { FROM = { TECH_CITY_CONSTRUCTION = 0 } }
+		prerequisites = { no_cattle_pens_1 }
+		gold_cost = 150
+		build_time = 365
+		ai_creation_factor = 80
+		extra_tech_building_start = 4
+		nomad_tax_modifier = 0.03
+		global_supply_limit = 0.03
+		moved_capital_months_mult = -0.06
+	}
+	lf_potion_seller_nomad = {
+		desc = lf_potion_seller_desc
+		add_number_to_name = no
+		trigger = { FROM = { TECH_CITY_CONSTRUCTION = 0 } }
+		prerequisites = { no_cattle_pens_1 }
+		gold_cost = 150
+		build_time = 365
+		ai_creation_factor = 25
+		extra_tech_building_start = 5
+		nomad_tax_modifier = 0.01
+		culture_techpoints = 0.05 # 5% culture tech growth
+	}
+}
+
+tribal = {
+	lf_slave_market_tribal = {
+		desc = lf_slave_market_desc
+		add_number_to_name = no
+		potential = {
+			OR = {
+				FROM = {
+					capital_holding = {
+						title = FROMFROM
+					}
+				}
+				FROMFROM = { has_building = lf_slave_market_tribal }
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+		trigger = { TECH_CITY_CONSTRUCTION = 0 } # No special technology needs for a basic shrine
+		prerequisites = { tb_market_town_1 } # Larger slave pen needs a market town around it to support the business
+		gold_cost = 150
+		build_time = 365
+		ai_creation_factor = 25
+		ai_feudal_modifier = -15
+		ai_republic_modifier = 25
+		extra_tech_building_start = 10
+		convert_to_city = lf_slave_market_city
+		convert_to_castle = lf_slave_market_castle
+		#convert_to_temple - No direct conversion path yet
+		#modifiers provided by the building:
+		tax_income = 0.5
+	}
+	lf_potion_seller_tribal = {
+		desc = lf_potion_seller_desc
+		add_number_to_name = no
+		potential = {
+			OR = {
+				FROM = {
+					capital_holding = {
+						title = FROMFROM
+					}
+				}
+				FROMFROM = { has_building = lf_potion_seller_tribal }
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		prerequisites = { tb_market_town_1 }
+		gold_cost = 150
+		build_time = 365
+		ai_creation_factor = 50
+		ai_feudal_modifier = -50
+		ai_republic_modifier = -25
+		extra_tech_building_start = 10 # No one should start the game with one
+		convert_to_city = lf_potion_seller_city
+		convert_to_castle = lf_potion_seller_castle
+		tax_income = 0.1 #
+		culture_techpoints = 0.05 # 5% culture tech growth
+	}
+}
+
+castle = {
+	lf_gypsy_wagon = {
+		desc = lf_gypsy_wagon_desc
+		add_number_to_name = no
+		potential = {
+			OR = {
+				FROM = {
+					capital_holding = {
+						title = FROMFROM
+					}
+				}
+				FROMFROM = { has_building = lf_gypsy_wagon }
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		gold_cost = 150
+		build_time = 180
+		ai_creation_factor = 10
+		extra_tech_building_start = 5
+	}
+	lf_slave_market_castle = {
+		desc = lf_slave_market_desc
+		potential = {
+			OR = {
+				FROM = {
+					capital_holding = {
+						title = FROMFROM
+					}
+				}
+				FROMFROM = { has_building = lf_slave_market_castle }
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+		add_number_to_name = no
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		gold_cost = 150
+		build_time = 365
+		ai_creation_factor = 10
+		extra_tech_building_start = 10 # No one should start with one pre-built
+		tax_income = 1.0
+	}
+	lf_potion_seller_castle = {
+		desc = lf_potion_seller_desc
+		potential = {
+			OR = {
+				FROM = {
+					capital_holding = {
+						title = FROMFROM
+					}
+				}
+				FROMFROM = { has_building = lf_potion_seller_castle }
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+		add_number_to_name = no
+		prerequisites = { ca_town_1 }
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		gold_cost = 150
+		build_time = 365
+		ai_creation_factor = 15
+		extra_tech_building_start = 10 # No one should start with one pre-built
+		tax_income = 0.5
+	}
+	lf_wizard_tower_castle = {
+		desc = lf_wizard_tower_desc
+		potential = {
+			OR = {
+				FROM = {
+					capital_holding = {
+						title = FROMFROM
+					}
+				}
+				FROMFROM = { has_building = lf_wizard_tower_castle }
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				capital_holding = {
+					title = FROMFROM
+				}
+			}
+		}
+		add_number_to_name = no
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		gold_cost = 150
+		build_time = 365
+		ai_creation_factor = 25
+		extra_tech_building_start = 10 # No one should start with one pre-built
+		tech_growth_modifier = 0.05 # 5% growth in all technology
+	}
+}
+
+family_palace = {
+
+	lf_slave_market_fp = {
+		desc = lf_slave_market_desc
+		potential = {
+		}
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		gold_cost = 150
+		build_time = 760
+		ai_creation_factor = 30
+		extra_tech_building_start = 10 # No one should start with this pre-built
+		tax_income = 1.5
+	}
+	lf_potion_seller_fp = {
+		desc = lf_potion_seller_desc
+		add_number_to_name = no
+		trigger = { TECH_CITY_CONSTRUCTION = 0 }
+		gold_cost = 150
+		build_time = 760
+		ai_creation_factor = 5
+		extra_tech_building_start = 10 # No one should start with one pre-built
+		tax_income = 1
+		tech_growth_modifier = 0.03 # 5% growth in all technology
+	}
+}

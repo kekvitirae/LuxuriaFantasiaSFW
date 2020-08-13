@@ -1,0 +1,24 @@
+namespace = LF_FarEast_Genetics
+
+#
+# Placeholder for now
+#
+
+character_event = {
+	id = LF_FarEast_Genetics.1
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		character_event = { id = LF_Core_Genetics.2 }
+	}
+	after = {
+		if = {
+			limit = {
+				has_game_rule = { name = lf_blood_feud value = lf_bf_on }
+			}
+			lf_add_blood_feud = yes
+		}
+	}
+	
+}
+		

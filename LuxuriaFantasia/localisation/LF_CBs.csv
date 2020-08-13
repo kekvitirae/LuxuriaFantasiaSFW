@@ -1,0 +1,5 @@
+lf_blood_feud_cd;Bloodlust Satiated;;;;;;;;;;;;;;x
+lf_blood_feud_cd_desc;This character has recently called for a Blood Feud. They cannot call another for some time.;;;;;;;;;;;;;;x
+lf_blood_feud_TT;Will imprison any rival race and convert the province's offending culture.;;;;;;;;;;;;;;x
+lf_rivalry_name;Blood Feud over [Title.GetBaseName];;;;;;;;;;;;;;x
+lf_rivalry_war_name;$ORDER$$FIRST_ADJ$ Blood Feud over $OTHER_TITLE$;;;;;;;;;;;;;;x

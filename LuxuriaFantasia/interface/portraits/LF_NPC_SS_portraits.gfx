@@ -1,0 +1,78 @@
+spriteTypes = {
+
+# Misc characters
+	spriteType = {
+		name = "GFX_portrait_lf_core_npcs_ss"
+		texturefile = "gfx/static_portraits/LF_NPCs_SS.dds"
+		noOfFrames = 5
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+    portraitType = {
+        name = "PORTRAIT_lf_misc_npcs_ss_static"
+		effectFile = "gfx/FX/portrait.lua"
+        weight = {
+            additive_modifier = {
+                value = 100000
+                portrait_clothing = yes
+				OR = {
+					portrait_has_trait = lf_npc_brielle
+					portrait_has_trait = lf_npc_joseph
+					portrait_has_trait = lf_npc_kalyian
+					portrait_has_trait = lf_npc_valri
+					portrait_has_trait = lf_npc_amora
+				}
+	 		}
+        }
+
+        layer = {
+			"GFX_empty:p0"
+			"GFX_empty:p2"
+			"GFX_empty:c0"
+            "GFX_empty:c2"
+            "GFX_empty:c3"
+            "GFX_empty:c1"
+            "GFX_empty:c4"
+            "GFX_empty:p1:h:y"
+			"GFX_empty:p6"
+            "GFX_portrait_lf_core_npcs_ss:c5"
+			"GFX_lover_overlay:p37"
+			"GFX_player_overlay:p11"
+        }
+
+        allow_property_values = {
+ 			0 = {
+				21 = { always = no }
+			}
+           1 = {
+				0  = { always = yes }
+            }
+            19 = {
+				0  = { always = yes }
+            }
+			33 = {
+				0  = { always = yes }
+            }
+            34 = {
+				0  = { always = yes }
+            }
+            35 = {
+				0  = { always = yes }
+            }
+            36 = {
+				0  = { always = yes }
+            }
+            6 = {
+				0  = { always = yes }
+            }
+            5 = {
+				0 = { portrait_has_trait = lf_npc_brielle }
+				1 = { portrait_has_trait = lf_npc_joseph }
+				2 = { portrait_has_trait = lf_npc_kalyian }
+				3 = { portrait_has_trait = lf_npc_valri }
+				4 = { portrait_has_trait = lf_npc_amora }
+			}
+		}
+	}
+}

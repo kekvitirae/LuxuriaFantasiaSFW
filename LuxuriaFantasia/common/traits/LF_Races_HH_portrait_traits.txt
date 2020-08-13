@@ -1,0 +1,231 @@
+demon_portrait11 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+demon_portrait12 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+demon_portrait13 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+demon_portrait14 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+demon_portrait15 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+demon_portrait16 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+demon_portrait17 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+demon_portrait18 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+demon_portrait19 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+demon_portrait20 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+demon_portrait1_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+demon_portrait2_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+demon_portrait3_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+demon_portrait4_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+demon_portrait5_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+demon_portrait6_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+demon_portrait7_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+demon_portrait8_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+demon_portrait9_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+demon_portrait10_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+
+angel_portrait13 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+angel_portrait14 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+angel_portrait15 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+angel_portrait16 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+angel_portrait17 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+angel_portrait18 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+angel_portrait19 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+angel_portrait20 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+angel_portrait21 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+angel_portrait22 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+angel_portrait23 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+angel_portrait24 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+angel_portrait25 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+angel_portrait26= {
+	hidden = yes
+	random = no
+	customizer = no
+}
+angel_portrait1_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+angel_portrait2_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+angel_portrait3_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+angel_portrait4_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+angel_portrait5_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+angel_portrait6_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+angel_portrait7_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+angel_portrait8_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+angel_portrait9_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+angel_portrait10_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+angel_portrait11_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+angel_portrait12_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}

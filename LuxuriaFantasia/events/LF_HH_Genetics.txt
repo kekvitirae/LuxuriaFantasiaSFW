@@ -1,0 +1,143 @@
+namespace = LF_HH_Genetics
+
+character_event = { # Wanna party?
+	id = LF_HH_Genetics.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = { # Fullblood demon or Fallen Angel
+			limit = {
+				mother = {
+					is_demon = yes
+				}
+				true_father_even_if_dead = {
+					is_demon = yes
+				}
+			}
+			add_trait = lustful
+			lf_add_demon = yes
+			character_event = { id = LF_Core_Genetics.2 }
+		}
+		else_if = { # Halfblood/demon
+			limit = {
+				OR = {
+					AND = {
+						mother = {
+							trait = lf_halfdemon
+						}
+						true_father_even_if_dead = {
+							is_demon = yes
+						}
+					}
+					AND = {
+						true_father_even_if_dead = {
+							trait = lf_halfdemon
+						}
+						mother = {
+							is_demon = yes
+						}
+					}
+				}						
+			}
+			random_list = {
+				50 = {
+					lf_add_demon = yes
+					add_trait = lustful
+					character_event = { id = LF_Core_Genetics.2 }
+				}
+				50 = {
+					add_trait = lf_halfdemon
+					character_event = { id = LF_Core_Genetics.2 }
+				}
+			}
+		}
+		else_if = { # Halfblood/halfblood
+			limit = {
+				mother = {
+					trait = lf_halfdemon
+				}
+				true_father_even_if_dead = {
+					trait = lf_halfdemon
+				}
+			}
+			add_trait = lf_halfdemon
+			character_event = { id = LF_Core_Genetics.2 }
+		}		
+		else_if = { # Fullblood/Other
+			limit = {
+				OR = {
+					AND = {
+						mother = {
+							is_demon = yes
+						}
+						true_father_even_if_dead = {
+							is_not_any_demon = yes
+						}
+					}
+					AND = {
+						true_father_even_if_dead = {
+							is_demon = yes
+						}
+						mother = {
+							is_not_any_demon = yes
+						}
+					}
+				}
+			}
+			random_list = {
+				25 = { 
+					character_event = { id = LF_Core_Genetics.2 }
+				}
+				50 = {
+					add_trait = lf_halfdemon
+					character_event = { id = LF_Core_Genetics.2 }
+				}
+				25 = {
+					lf_add_demon = yes
+					add_trait = lustful
+					character_event = { id = LF_Core_Genetics.2 }
+				}
+			}
+		}
+		else_if = { # Halfblood/Other
+			limit = {
+				OR = {
+					AND = {
+						mother = {
+							trait = lf_halfdemon
+						}
+						true_father_even_if_dead = {
+							is_not_any_demon = yes
+						}
+					}
+					AND = {
+						true_father_even_if_dead = {
+							trait = lf_halfdemon
+						}
+						mother = {
+							is_not_any_demon = yes
+						}
+					}
+				}
+			}
+			random_list = {
+				50 = {
+					add_trait = lf_halfdemon
+					character_event = { id = LF_Core_Genetics.2 }
+				}
+				50 = { 
+					character_event = { id = LF_Core_Genetics.2 }
+				}
+			}
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				has_game_rule = { name = lf_blood_feud value = lf_bf_on }
+			}
+			lf_add_blood_feud = yes
+		}
+	}
+}	

@@ -1,0 +1,109 @@
+namespace = LFDemons
+
+character_event = {
+	id = LFDemons.2
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_demon = yes
+		is_not_elf = yes
+		is_not_orc = yes
+		is_not_neko = yes
+		is_not_kitsune = yes
+		is_not_fairy = yes
+		NOR = {
+			trait = dwse_dragon_adult
+			trait = dwse_lizard
+		}
+	}
+	immediate = {
+		lf_add_random_demon_portrait = yes
+	}
+}
+
+# .10 The dream
+narrative_event = {
+	id = LFDemons.10
+	ai = no
+	picture = {
+		trigger = {
+			lf_has_nsfw = yes
+		}
+		picture = lilith_avatar1
+	}
+	picture = {
+		trigger = {
+			lf_has_nsfw = no
+		}
+		picture = lf_lilith_sfw
+	}
+	title = lf_lilith_dream_title
+	desc = {
+		trigger = {
+			is_female = no
+		}
+		text = LFDemons11
+	}
+	desc = {
+		trigger = {
+			is_female = yes
+		}
+		text = LFDemons15
+	}		
+	is_triggered_only = yes # Triggered by decision
+	option = { # Who are you?
+		name = LFDemons12A
+		add_trait = lf_halfdemon
+		any_spouse = {
+			add_trait = lf_halfdemon
+		}
+	}
+}
+
+# .220 Futa Morph spell on self (Succubus only)
+narrative_event = {
+	id = LFDemons.220
+	picture = {
+		trigger = {
+			lf_has_nsfw = yes
+		}
+		picture = succubus_spell_shape_cock
+	}
+	picture = {
+		trigger = {
+			lf_has_nsfw = no
+		}
+		picture = lf_lilith_sfw
+	}
+	title = lf_futa_morph_spell_title
+	is_triggered_only = yes # by targetted_decision
+	desc = { # not a futa
+		trigger = { 
+			is_not_futa = yes
+		}
+		text = LFDemons220.0
+	}	
+	desc = { # already a futa
+		trigger = { 
+			is_futa = yes
+		}
+		text = LFDemons220.1
+	}	
+	option = { # I'm a Futa
+		trigger = {
+			is_not_futa = yes
+		}
+		name = "LFDemons220A"
+		lf_add_futa = yes
+	}
+	option = { # I'm no longer a futa
+		trigger = {
+			is_futa = yes
+		}
+		name = "LFDemons220B"
+		lf_remove_futa = yes # Removes futa trait
+	}
+	option = { # Nevermind
+		name = "LFDemons220C"
+	}
+}

@@ -1,0 +1,54 @@
+lf_races_fae_active = {
+	has_global_flag = LFFaeOn
+}
+
+lf_has_elves = {
+	custom_tooltip = {
+		text = LFHasElves
+		has_global_flag = LFElfOn
+	}
+}
+
+lf_has_orcs = {
+	custom_tooltip = {
+		text = LFHasOrcs
+		has_global_flag = LFOrcOn
+	}
+}
+
+lf_has_fairies = {
+	custom_tooltip = {
+		text = LFHasFairies
+		has_global_flag = LFFairyOn
+	}
+}
+
+lf_has_elven_buildings = {
+	capital_holding = {
+		OR = {
+			has_building = lf_castle_elven_fletcher # Castle
+			has_building = lf_elven_fletcher # Tribal
+			has_building = lf_elven_fletcher_nomad # Nomad
+		}
+	}
+}
+
+lf_has_orcish_buildings = {
+	capital_holding = {
+		OR = {
+			has_building = lf_castle_axe_smithy # Castle
+			has_building = lf_axe_smithy # Tribal
+			has_building = lf_axe_smithy_nomad # Nomad
+		}
+	}
+}
+
+lf_has_fae_buildings = {
+	capital_holding = {
+		OR = {
+			has_building = lf_castle_fairy_garden # Castle
+			has_building = lf_fairy_garden # Tribal
+			has_building = lf_fairy_garden_nomad # Nomad
+		}
+	}
+}

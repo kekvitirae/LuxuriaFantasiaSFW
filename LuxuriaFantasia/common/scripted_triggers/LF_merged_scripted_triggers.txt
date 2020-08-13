@@ -1,0 +1,443 @@
+#
+# Universal triggers for everyone to use.
+# scripted_triggers will append themselves into duplicate triggers, allowing for cross-mod compatibility
+# To use in a decision/event condition, do not use a NOT or a NOR when calling on these scripted_triggers.
+#
+
+
+# DWR trigger
+
+not_valid_targets = {
+	NOT = { has_character_flag = special_npc }
+}
+
+# Racial traits
+
+is_elf = {
+	OR = {
+		trait = lf_elf
+		trait = elf
+	}
+}
+
+is_not_elf = {
+	NOR = { 
+		trait = lf_elf 
+		trait = elf
+	}
+}
+
+is_orc = {
+	OR = {
+		trait = lf_orc
+		trait = orc
+	}
+}
+
+is_not_orc = {
+	NOR = { 
+		trait = lf_orc 
+		trait = orc
+	}
+}
+
+is_fairy = {
+	OR = {
+		trait = lf_fairy
+		trait = fae_kin
+	}
+}
+
+is_not_fairy = {
+	NOR = { 
+		trait = lf_fairy 
+		trait = fae_kin
+	}
+}
+
+is_demon = {
+	OR = {
+		trait = lf_demon
+		trait = lf_fallen_angel
+		trait = demon_kin
+	}
+}
+
+is_not_demon = {
+	NOR = {
+		trait = lf_demon
+		trait = lf_fallen_angel
+		trait = demon_kin
+	}
+}
+
+is_any_demon = {
+	OR = {
+		trait = lf_demon
+		trait = lf_fallen_angel
+		trait = lf_halfdemon
+		trait = demon_kin
+	}
+}
+
+is_not_any_demon = {
+	NOR = {
+		trait = lf_demon
+		trait = lf_fallen_angel
+		trait = lf_halfdemon
+		trait = demon_kin
+	}
+}
+
+
+is_angel = {
+	OR = {
+		trait = lf_angel
+		trait = angel_kin
+	}
+}
+
+is_not_angel = {
+	NOR = {
+		trait = lf_angel
+		trait = angel_kin
+	}
+}
+
+is_succubus = {
+	OR = {
+		trait = lf_demon
+		trait = lf_fallen_angel
+		trait = demon_kin
+	}
+	is_female = yes
+}
+
+is_not_succubus = {
+	OR = {
+		trait = lf_demon
+		trait = lf_fallen_angel
+		trait = demon_kin
+	}
+	is_female = no
+}
+
+is_incubus = {
+	OR = {
+		trait = lf_demon
+		trait = lf_fallen_angel
+		trait = demon_kin
+	}
+	is_female = no
+}
+
+is_not_incubus = {
+	OR = {
+		trait = lf_demon
+		trait = lf_fallen_angel
+		trait = demon_kin
+	}
+	is_female = yes
+}
+
+is_neko = {
+	OR = {
+		trait = lf_neko
+		trait = cat_kin
+	}
+}
+
+is_not_neko = {
+	NOR = {
+		trait = lf_neko
+		trait = cat_kin
+	}
+}
+
+is_kitsune = {
+	OR = {
+		trait = lf_kitsune
+		trait = fox_kin
+	}
+}
+
+is_not_kitsune = {
+	NOR = {
+		trait = lf_kitsune
+		trait = fox_kin
+	}
+}
+
+is_fantasy_race = {
+	OR = {
+		trait = lf_elf
+		trait = lf_orc
+		trait = lf_kitsune
+		trait = lf_neko
+		trait = lf_demon
+		trait = lf_fallen_angel
+		trait = lf_angel
+		trait = lf_fairy
+		trait = lf_halfdemon
+		trait = dwse_lizard
+		trait = dwse_dragon_child
+		trait = dwse_dragon_adult
+		trait = dwse_shapeshifted
+		trait = lf_ghost
+		trait = cat_kin
+		trait = fox_kin
+		trait = demon_kin
+		trait = angel_kin
+		trait = elf
+		trait = orc
+		trait = fae_kin
+	}
+}
+
+is_not_fantasy_race = {
+	NOR = {
+		trait = lf_elf
+		trait = lf_orc
+		trait = lf_kitsune
+		trait = lf_neko
+		trait = lf_demon
+		trait = lf_fallen_angel
+		trait = lf_angel
+		trait = lf_fairy
+		trait = lf_halfdemon
+		trait = dwse_lizard
+		trait = dwse_dragon_child
+		trait = dwse_dragon_adult
+		trait = dwse_shapeshifted
+		trait = lf_ghost
+		trait = cat_kin
+		trait = fox_kin
+		trait = demon_kin
+		trait = angel_kin
+		trait = elf
+		trait = orc
+		trait = fae_kin
+	}
+}
+
+is_elf_bf = {
+	has_character_modifier = lf_elf_bf
+}
+
+is_not_elf_bf = {
+	NOT = { 
+		has_character_modifier = lf_elf_bf
+	}
+}
+
+is_orc_bf = {
+	has_character_modifier = lf_orc_bf
+}
+
+is_not_orc_bf = {
+	NOT = { 
+		has_character_modifier = lf_orc_bf
+	}
+}
+
+is_demon_bf = {
+	OR = {
+		has_character_modifier = lf_demon_bf
+		has_character_modifier = lf_fallen_angel_bf
+	}
+}
+
+is_not_demon_bf = {
+	NOR = {
+		has_character_modifier = lf_demon_bf
+		has_character_modifier = lf_fallen_angel_bf
+	}
+}
+
+is_angel_bf = {
+	has_character_modifier = lf_angel_bf
+}
+
+is_not_angel_bf = {
+	NOT = {
+		has_character_modifier = lf_angel_bf
+	}
+}
+
+is_neko_bf = {
+	has_character_modifier = lf_neko_bf
+}
+
+is_not_neko_bf = {
+	NOT = {
+		has_character_modifier = lf_neko_bf
+	}
+}
+
+is_kitsune_bf = {
+	has_character_modifier = lf_kitsune_bf
+}
+
+is_not_kitsune_bf = {
+	NOT = {
+		has_character_modifier = lf_kitsune_bf
+	}
+}
+
+
+# Sexual triggers
+
+is_futa = {
+	OR = {
+		trait = lf_futa
+		trait = futa
+	}
+}
+
+is_not_futa = {
+	NOR = { 
+		trait = lf_futa
+		trait = futa
+	}
+}
+
+
+# Magic related
+
+is_mage = {
+	OR = {
+		trait = lf_mage
+		trait = mage
+	}
+}
+
+is_not_mage = {
+	NOR = { 
+		trait = lf_mage
+		trait = mage
+	}
+}
+
+is_magical = {
+	OR = {
+		trait = lf_kitsune
+		trait = lf_elf
+		trait = houseirae_halfelf
+		trait = houseirae_drow
+		trait = lf_mage
+		trait = lf_fairy
+		trait = fox_kin
+		trait = elf
+		trait = fae_kin
+		trait = mage
+	}
+}
+
+is_not_magical = {
+	NOR = {
+		trait = lf_kitsune
+		trait = lf_elf
+		trait = houseirae_halfelf
+		trait = houseirae_drow
+		trait = lf_mage
+		trait = lf_fairy
+		trait = fox_kin
+		trait = elf
+		trait = fae_kin
+		trait = mage
+	}
+}
+
+
+
+# Slavery related
+
+is_enslaved = {
+	OR = {
+		trait = lf_enslaved
+		trait = branded_slave
+	}
+}
+
+is_not_enslaved = {
+	NOR = {
+		trait = lf_enslaved
+		trait = branded_slave
+	}
+}
+
+
+# Building related
+#
+# No longer merged due to how merging works
+#
+
+lf_has_wizards = {
+	capital_scope = {
+		has_building = lf_wizard_tower_castle
+	}
+}
+
+lf_has_potions = {
+	OR = {
+		AND = {
+			ai = no
+			OR = {
+				family_palace = {
+					has_building = lf_potion_seller_fp
+				}
+				capital_holding = {
+					OR = {
+						has_building = lf_potion_seller_castle # Castle
+						has_building = lf_potion_seller_city # City
+						has_building = lf_potion_seller_tribal # Tribal
+						has_building = lf_potion_seller_nomad # Nomad
+					}
+				}
+			}
+		}
+		AND = {
+			ai = yes
+			location = {
+				OR = {
+					has_building = lf_potion_seller_castle # Castle
+					has_building = lf_potion_seller_city # City
+					has_building = lf_potion_seller_tribal # Tribal
+					has_building = lf_potion_seller_nomad # Nomad
+				}
+			}
+		}
+	}
+}
+
+lf_has_slaves = {
+	OR = {
+		family_palace = {
+			has_building = lf_slave_market_fp
+		}
+		capital_holding = {
+			OR = {
+				has_building = lf_slave_market_castle # Castle
+				has_building = lf_slave_market_city # City
+				has_building = lf_slave_market_tribal # Tribal
+				has_building = lf_slave_market_nomad # Nomad
+			}
+		}
+	}
+}
+
+lf_has_curios = {
+	OR = {
+		family_palace = {
+			has_building = lf_curio_shop_fp
+		}
+		capital_holding = {
+			OR = {
+				has_building = lf_curio_shop_castle # Castle
+				has_building = lf_curio_shop_city # City
+				has_building = lf_curio_shop_nomad # Nomad
+				has_building = lf_curio_shop_tribal # tribal
+			}
+		}
+	}
+}

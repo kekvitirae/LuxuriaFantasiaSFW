@@ -1,0 +1,117 @@
+targetted_decisions = {
+	## Allows a player to visit their lover, spouse, or consort
+	lf_spend_time_with = {
+		filter = all # For those lovers who are outside of our realm 
+		ai_target_filter = none # Doesn't really apply as the ai should not be using this
+		ai = no
+		from_potential = { # From is the person targeting the person to evoke the decision
+			NOT = { is_incapable = yes }
+			ai = no # Player only
+		}
+		potential = { # This is where we check the target to ensure they're valid
+			lf_has_nsfw = yes
+			NOT = { is_incapable = yes }
+			OR = { # Should be a lover, spouse, or concubine
+				is_lover = FROM
+				any_spouse = {
+					character = FROM
+				}
+				any_consort = {
+					character = FROM
+				}
+				AND = {
+					has_minor_title = title_lf_neko_maid
+					liege = {
+						character = FROM
+					}
+				}
+			}
+		}
+		allow = {
+			ROOT = {
+				custom_tooltip = {
+					text = lf_can_have_sex
+					lf_can_have_sex = yes
+				}
+				OR = {
+					at_location = FROM
+					same_realm = FROM
+				}
+				OR = {
+					trait = lf_submissive
+					trait = lf_dominant
+					trait = lf_switch
+					custom_tooltip = {
+						text = lf_always_position_tt
+						OR = {
+							has_character_modifier = lf_always_dominant
+							has_character_modifier = lf_always_switch
+							has_character_modifier = lf_always_submissive
+						}
+					}
+				}
+			}
+			FROM = {
+				custom_tooltip = {
+					text = lf_can_have_sex
+					lf_can_have_sex = yes
+				}
+				custom_tooltip = { # The target shouldn't have been visited within the past month
+					text = lf_visit_recovery_loc
+					OR = {
+						NOT = { has_character_modifier = lf_sex_recovery }
+						trait = lf_insatiable
+					}
+				}
+				OR = {
+					trait = lf_submissive
+					trait = lf_dominant
+					trait = lf_switch
+					custom_tooltip = {
+						text = lf_always_position_tt
+						OR = {
+							has_character_modifier = lf_always_dominant
+							has_character_modifier = lf_always_switch
+							has_character_modifier = lf_always_submissive
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			# adding to the insatiable counter
+			FROM = {
+				character_event = { id = LFSexytimesRouting.12 }
+			}
+			# Saving event targets
+			save_event_target_as = lf_sex_partner
+			FROM = { 
+				save_event_target_as = lf_sex_player
+			}
+			# Only one visit per month, just to keep things reasonable, sets on the target
+			FROM = {
+				if = {
+					limit = {
+						NOR = { 
+							trait = lf_insatiable 
+							has_character_modifier = lf_neko_heat
+						}
+					}
+					add_character_modifier = {
+						name = lf_sex_recovery
+						duration = 30
+					}
+				}
+			}
+			# Initiate visit event
+			hidden_tooltip = {
+				FROM = {
+					character_event = { id = LFSexytimesFramework.1 }
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0 # ai shouldn't be doing this
+		}
+	}
+}

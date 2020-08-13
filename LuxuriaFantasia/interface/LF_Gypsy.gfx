@@ -1,0 +1,52 @@
+spriteTypes = {
+	spriteType = {
+		name = "lf_humility_artifact"
+		texturefile = "gfx\\interface\\artifacts\\lf_humility_artifact.dds"
+	}
+	spriteType = {
+		name = "lf_humility_artifact_small"
+		texturefile = "gfx\\interface\\artifacts\\lf_humility_artifact_small.dds"
+	}	
+	spriteType = {
+		name = "lf_spirituality_artifact"
+		texturefile = "gfx\\interface\\artifacts\\lf_spirituality_artifact.dds"
+	}
+	spriteType = {
+		name = "lf_spirituality_artifact_small"
+		texturefile = "gfx\\interface\\artifacts\\lf_spirituality_artifact_small.dds"
+	}	
+	spriteType = {
+		name = "lf_compassion_artifact"
+		texturefile = "gfx\\interface\\artifacts\\lf_compassion_artifact.dds"
+	}
+	spriteType = {
+		name = "lf_compassion_artifact_small"
+		texturefile = "gfx\\interface\\artifacts\\lf_compassion_artifact_small.dds"
+	}	
+	spriteType = {
+		name = "lf_sacrifice_artifact"
+		texturefile = "gfx\\interface\\artifacts\\lf_sacrifice_artifact.dds"
+	}
+	spriteType = {
+		name = "lf_sacrifice_artifact_small"
+		texturefile = "gfx\\interface\\artifacts\\lf_sacrifice_artifact_small.dds"
+	}	
+	spriteType = {
+		name = "lf_justice_artifact"
+		texturefile = "gfx\\interface\\artifacts\\lf_justice_artifact.dds"
+	}
+	spriteType = {
+		name = "lf_justice_artifact_small"
+		texturefile = "gfx\\interface\\artifacts\\lf_justice_artifact_small.dds"
+	}	
+
+
+	spriteType = {
+		name = "lf_gypsy"
+		texturefile = "gfx\\event_pictures\\lf_gypsy.dds"
+	}
+	spriteType = {
+		name = "lf_gypsy_small"
+		texturefile = "gfx\\event_pictures\\lf_gypsy_small.dds"
+	}	
+}

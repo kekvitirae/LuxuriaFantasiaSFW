@@ -1,0 +1,180 @@
+lf_core_gypsy_reading;Visit the Gypsy Wagon;;;;;;;;;;;;;x
+lf_core_gypsy_reading_desc;A local gypsy has a natural talent for reading one's personality. Perhaps it is time to pay her a visit?;;;;;;;;;;;;;x
+lf_humility_artifact;Shepherd's Crook;;;;;;;;;;;;;x
+lf_humility_artifact_desc;A humble crook for a humble life.;;;;;;;;;;;;;x
+lf_spirituality_artifact;Hoe of Destruction;;;;;;;;;;;;;x
+lf_spirituality_artifact_desc;Not to be confused with [GetLilithName], another kind of Hoe of Destruction.;;;;;;;;;;;;;x
+lf_compassion_artifact;Rose of Compassion;;;;;;;;;;;;;x
+lf_compassion_artifact_desc;Let a Compassionate life bloom.;;;;;;;;;;;;;x
+lf_sacrifice_artifact;Tear of Sacrifice;;;;;;;;;;;;;x
+lf_sacrifice_artifact_desc;Those who Sacrifice shall shed just tears.;;;;;;;;;;;;;x
+lf_valor_artifact;Sword of Valor;;;;;;;;;;;;;x
+lf_valor_artifact_desc;Just a replica, but no less Valorous.;;;;;;;;;;;;;x
+lf_honor_artifact;Cup of Honor;;;;;;;;;;;;;x
+lf_honor_artifact_desc;This cup overflows with Honor.;;;;;;;;;;;;;x
+lf_honesty_artifact;Hand of Honesty;;;;;;;;;;;;;x
+lf_honesty_artifact_desc;The hand will point the way to an Honest life.;;;;;;;;;;;;;x
+lf_justice_artifact;Scales of Justice;;;;;;;;;;;;;x
+lf_justice_artifact_desc;The scales will tip toward Justice.;;;;;;;;;;;;;x
+#
+lf_virtue;Virtue Items;;;;;;;;;;;;;x
+lf_compassion;Bard;;;;;;;;;;;;;x
+lf_compassion_desc;This character has chosen to uphold a compassionate life.;;;;;;;;;;;;;x
+lf_sacrifice;Tinker;;;;;;;;;;;;;x
+lf_sacrifice_desc;This character has chosen to uphold a life of sacrifice.;;;;;;;;;;;;;x
+lf_valor;Fighter;;;;;;;;;;;;;x
+lf_valor_desc;This character has chosen to uphold a valorous life.;;;;;;;;;;;;;x
+lf_justice;Druid;;;;;;;;;;;;;x
+lf_justice_desc;This character has chosen to uphold a just life.;;;;;;;;;;;;;x
+lf_honesty;Mage;;;;;;;;;;;;;x
+lf_honesty_desc;This character has chosen to uphold an honest life.;;;;;;;;;;;;;x
+lf_honor;Paladin;;;;;;;;;;;;;x
+lf_honor_desc;This character has chosen to uphold an honorable life.;;;;;;;;;;;;;x
+lf_spirituality;Ranger;;;;;;;;;;;;;x
+lf_spirituality_desc;This character has chosen to uphold a spiritual life.;;;;;;;;;;;;;x
+lf_humility;Shepherd;;;;;;;;;;;;;x
+lf_humility_desc;This character has chosen to uphold a humble life.;;;;;;;;;;;;;x
+
+LFCoreGypsyHonesty; You have chosen the honest path.;;;;;;;;;;;;;x
+LFCoreGypsyHonor;You have chosen the honorable path.;;;;;;;;;;;;;x
+LFCoreGypsyValor;You have chosen the valorous path.;;;;;;;;;;;;;x
+LFCoreGypsySacrifice;You have chosen the sacrificial path.;;;;;;;;;;;;;x
+LFCoreGypsyCompassion;You have chosen the compassionate path.;;;;;;;;;;;;;x
+LFCoreGypsyJustice;You have chosen the just path.;;;;;;;;;;;;;x
+LFCoreGypsySpirituality;You have chosen the spiritual path.;;;;;;;;;;;;;x
+LFCoreGypsyHumility;You have chosen the humble path.;;;;;;;;;;;;;x
+
+LFCoreGypsy1T;Luxuria - The Gypsy Wagon;;;;;;;;;;;;;x
+LFCoreGypsy1;As you approach the wagon, you notice a woman sitting out in front, dressed in colorful traditional Romani clothes. She smiles at you and beckons you closer.\n\n"Well met, my [Root.GetLordLady]. No doubt thou hast heard of my residence. I have been waiting for a virtuous [Root.GetManWoman] such as thee." Her speech is a little odd, but she does not give off any hint of deception or hostility. "I can tell thine personality and possibly future. All thou dost need is to answer seven questions of mine."\n\nThe woman continues before I have a chance to speak, "I must warn thee, however. Once thee answers the questions, the change on thee is permanent. Thou can only walk one path, so choose wisely and with conviction."\n\n The woman grins with a wink. "And fear not, my [Root.GetLordLady], there will be no questions about sweetrolls.";;;;;;;;;;;;;x
+LFCoreGypsy1TTa;Ask me the questions.;;;;;;;;;;;;;x
+LFCoreGypsy1TTb;I do not have the time. Maybe later.;;;;;;;;;;;;;x
+LFCoreGypsy1TTc;What a waste of time. I'm leaving.;;;;;;;;;;;;;x
+LFCoreGypsy1TTRead;Let us begin the casting.;;;;;;;;;;;;;x
+LFCoreGypsy1TTLater;You leave, but can return at a later date.;;;;;;;;;;;;;x
+LFCoreGypsy1TTDenied;You leave, never to return.;;;;;;;;;;;;;x
+
+LFCoreGypsy2;Entrusted to deliver an uncounted purse of gold, thou dost meet a poor beggar. Dost thou...;;;;;;;;;;;;;x
+LFCoreGypsy2TTa;Deliver the gold knowing the trust in thee was well-placed.;;;;;;;;;;;;;x
+LFCoreGypsy2TTb;Give the beggar a coin, knowing it won't be missed.;;;;;;;;;;;;;x
+
+LFCoreGypsy3;Thou hast been sent to secure a needed treaty with a distant Lord. Thy host is agreeable to the proposal but insults thy country at dinner. Dost thou...;;;;;;;;;;;;;x
+LFCoreGypsy3TTa;Bear the slurs.;;;;;;;;;;;;;x
+LFCoreGypsy3TTb;Rise and demand an apology.;;;;;;;;;;;;;x
+
+LFCoreGypsy4;Thou art a bounty hunter sworn to return an alleged murderer. After his capture, thou believest him to be innocent. Dost thou...;;;;;;;;;;;;;x
+LFCoreGypsy4TTa;Sacrifice thy sizeable bounty for thy belief.;;;;;;;;;;;;;x
+LFCoreGypsy4TTb;Return him as thou hast promised.;;;;;;;;;;;;;x
+
+LFCoreGypsy5;Thy parents wish thee to become an apprentice. Two positions are available. Dost thou...;;;;;;;;;;;;;x
+LFCoreGypsy5TTa;Become an acolyte in a spiritual order.;;;;;;;;;;;;;x
+LFCoreGypsy5TTb;Become an assistant to a village cobbler.;;;;;;;;;;;;;x
+
+LFCoreGypsy7;Thou has been prohibited by thy absent Lord from joining thy friends in a close pitched battle. Dost thou...;;;;;;;;;;;;;x
+LFCoreGypsy7TTa;Refrain, so thou may claim obedience.;;;;;;;;;;;;;x
+LFCoreGypsy7TTb;Aid thy comrades, knowing thou may deny it later.;;;;;;;;;;;;;x
+
+LFCoreGypsy8;A merchant owes thy friend money, now long past due. Thou dost see the same merchant drop a purse of gold. Dost thou...;;;;;;;;;;;;;x
+LFCoreGypsy8TTa;Return the purse intact.;;;;;;;;;;;;;x
+LFCoreGypsy8TTb;Give thy friend a portion of the gold first.;;;;;;;;;;;;;x
+
+LFCoreGypsy9;Thee and thy friend are valiant but penniless warriors. Thou both go out to slay a mighty dragon. Thy friend thinks he slew it, thee did. When asked, dost thou...;;;;;;;;;;;;;x
+LFCoreGypsy9TTa;Claim the gold.;;;;;;;;;;;;;x
+LFCoreGypsy9TTb;Allow thy friend the large reward.;;;;;;;;;;;;;x
+
+LFCoreGypsy10;Thou art sworn to protect thy Lord at any cost, yet thou knowest he hath committed a crime. Authorities ask thee of the affair, dost thou...;;;;;;;;;;;;;x
+LFCoreGypsy10TTa;Break thine oath by speaking.;;;;;;;;;;;;;x
+LFCoreGypsy10TTb;Silently keep thine oath.;;;;;;;;;;;;;x
+
+LFCoreGypsy11;Thy friend seeks admittance to thy spiritual order. Thou art asked to vouch for his purity of spirit, of which thou art unsure. Dost thou...;;;;;;;;;;;;;x
+LFCoreGypsy11TTa;Express thy doubt.;;;;;;;;;;;;;x
+LFCoreGypsy11TTb;Vouch for him, hoping for his improvement.;;;;;;;;;;;;;x
+
+LFCoreGypsy12;Thy Lord mistakenly believes he slew a dragon. Thou hast proof that thy lance felled the beast. When asked, dost thou...;;;;;;;;;;;;;x
+LFCoreGypsy12TTa;Claim the kill and the prize.;;;;;;;;;;;;;x
+LFCoreGypsy12TTb;Permit thy Lord his belief.;;;;;;;;;;;;;x
+
+LFCoreGypsy13;Thou dost manage to disarm thy mortal enemy in a duel. He is at thy mercy. Dost thou...;;;;;;;;;;;;;x
+LFCoreGypsy13TTa;Permit him to yield.;;;;;;;;;;;;;x
+LFCoreGypsy13TTb;Slay him as expected of a duelist.;;;;;;;;;;;;;x
+
+LFCoreGypsy14;After 20 years thou hast found the slayer of thy best friends. The villain proves to be a man who provides the sole support for a young girl. Dost thou...;;;;;;;;;;;;;x
+LFCoreGypsy14TTa;Spare him for sake of the girl.;;;;;;;;;;;;;x
+LFCoreGypsy14TTb;Slay him for his horrible deeds.;;;;;;;;;;;;;x
+
+LFCoreGypsy15;Thee and thy friends have been routed and ordered to retreat. In defiance of thy orders, dost thou...;;;;;;;;;;;;;x
+LFCoreGypsy15TTa;Stop to aid a wounded companion.;;;;;;;;;;;;;x
+LFCoreGypsy15TTb;Slow the pursuing enemy, so others can escape.;;;;;;;;;;;;;x
+
+LFCoreGypsy16;Thou art sworn to uphold a Lord who participates in the forbidden torture of prisoners. Each night their cries of pain reach thee. Dost thou...;;;;;;;;;;;;;x
+LFCoreGypsy16TTa;Report the deeds.;;;;;;;;;;;;;x
+LFCoreGypsy16TTb;Ignore the deeds.;;;;;;;;;;;;;x
+
+LFCoreGypsy17;Thou hast been taught to preserve all life as sacred. A man lies fatally stung by a venomous serpent. He pleads for a merciful death. Dost thou...;;;;;;;;;;;;;x
+LFCoreGypsy17TTa;End his pain.;;;;;;;;;;;;;x
+LFCoreGypsy17TTb;Heed thy beliefs and refuse.;;;;;;;;;;;;;x
+
+LFCoreGypsy18;As one of the King's Guard, thy Captain has asked that one amongst you visit a hospital to cheer the children with tales of thy valiant deeds. Dost thou...;;;;;;;;;;;;;x
+LFCoreGypsy18TTa;Go and play the braggart.;;;;;;;;;;;;;x
+LFCoreGypsy18TTb;Let another go.;;;;;;;;;;;;;x
+
+LFCoreGypsy19;A mighty, yet hungry, knight accosts thee and demands thy food. Dost thou...;;;;;;;;;;;;;x
+LFCoreGypsy19TTa;Refuse and engage the knight.;;;;;;;;;;;;;x
+LFCoreGypsy19TTb;Give thy food unto the hungry knight.;;;;;;;;;;;;;x
+
+LFCoreGypsy20;During battle thou art ordered to guard thy commander's empty tent. The battle goes poorly and thou dost yearn to aid thy fellows. Dost thou...;;;;;;;;;;;;;x
+LFCoreGypsy20TTa;Enter the battle to aid thy companions.;;;;;;;;;;;;;x
+LFCoreGypsy20TTb;Stand thy post as guard.;;;;;;;;;;;;;x
+
+LFCoreGypsy21;A local bully pushes for a fight. Dost thou...;;;;;;;;;;;;;x
+LFCoreGypsy21TTa;Trounce the rogue.;;;;;;;;;;;;;x
+LFCoreGypsy21TTb;Decline, knowing no lasting good will come of it.;;;;;;;;;;;;;x
+
+LFCoreGypsy22;Although a teacher of music, thou art a skillful wrestler. Thou hast been asked to fight in a local championship. Dost thou...;;;;;;;;;;;;;x
+LFCoreGypsy22TTa;Accept the invitation and fight to win.;;;;;;;;;;;;;x
+LFCoreGypsy22TTb;Decline, knowing thou art sure to win.;;;;;;;;;;;;;x
+
+LFCoreGypsy23;During a pitched battle, thou dost see a fellow desert his post, endangering many. As he flees, he is set upon by several enemies. Dost thou...;;;;;;;;;;;;;x
+LFCoreGypsy23TTa;Let him fight alone.;;;;;;;;;;;;;x
+LFCoreGypsy23TTb;Risk thine own life to aid him.;;;;;;;;;;;;;x
+
+LFCoreGypsy24;Thou hast sworn to do thy Lord's bidding in all. He covets a piece of land and orders the owner removed. Dost thou...;;;;;;;;;;;;;x
+LFCoreGypsy24TTa;Refuse to act, thus being disgraced.;;;;;;;;;;;;;x
+LFCoreGypsy24TTb;Unfairly evict the landowner.;;;;;;;;;;;;;x
+
+LFCoreGypsy25;Thou dost believe that virtue resides in all people. Thou dost see a rogue steal from thy Lord. Dost thou...;;;;;;;;;;;;;x
+LFCoreGypsy25TTa;Call him to justice.;;;;;;;;;;;;;x
+LFCoreGypsy25TTb;Personally try to sway him back to good.;;;;;;;;;;;;;x
+
+LFCoreGypsy26;Unwitnessed, thou hast slain a great dragon in self defense. A poor warrior claims the offered reward. Dost thou...;;;;;;;;;;;;;x
+LFCoreGypsy26TTa;Step forward to claim the reward.;;;;;;;;;;;;;x
+LFCoreGypsy26TTb;Go about life, secure in thy self-esteem.;;;;;;;;;;;;;x
+
+LFCoreGypsy27;Thou hast spent thy life in charitable and righteous work. Thine uncle the innkeeper lies ill and asks you to take over his tavern. Dost thou...;;;;;;;;;;;;;x
+LFCoreGypsy27TTa;Stay and aid thy kin.;;;;;;;;;;;;;x
+LFCoreGypsy27TTb;Decline and follow thy calling.;;;;;;;;;;;;;x
+
+LFCoreGypsy28;Thou art an elderly, wealthy eccentric. Thy end is near. Dost thou...;;;;;;;;;;;;;x
+LFCoreGypsy28TTa;Donate all thy wealth to feed hundreds of starving children.;;;;;;;;;;;;;x
+LFCoreGypsy28TTb;Live out thy life, willing thy fortune to thine heirs.;;;;;;;;;;;;;x
+
+LFCoreGypsy29;In thy youth thou pledged to marry thy sweetheart. Now thou art on a sacred quest in distant lands. Thy sweetheart asks thee to keep thy vow. Dost thou...;;;;;;;;;;;;;x
+LFCoreGypsy29TTa;Stay and wed thy sweetheart.;;;;;;;;;;;;;x
+LFCoreGypsy29TTb;Follow thy spiritual quest.;;;;;;;;;;;;;x
+
+LFCoreGypsy30;Thou art at a crossroads in thy life. Two career paths are available to thee. Dost thou...;;;;;;;;;;;;;x
+LFCoreGypsy30TTa;Uphold thine oath to thy lord and become a knight's squire.;;;;;;;;;;;;;x
+LFCoreGypsy30TTb;Live a life of simplicity and peace as a farmer.;;;;;;;;;;;;;x
+
+LFVirtueChosen;Luxuria - Path Chosen;;;;;;;;;;;;;x
+LFCoreGypsy31TTB;I feel like a world of sin has washed away...;;;;;;;;;;;;;x
+LFCoreGypsy31TT;Interesting.;;;;;;;;;;;;;x
+LFCompassionChosen;"Ah," the woman nods contemplatively, "thou hast chosen the path of the Bard, as marked by thy devotion to Compassion."\n\nThe gypsy smiles and waves her hand. "Compassion is the primary virtue of Love. It is the non-judgmental empathy for thine fellow creatures. The quality of empathy, of recognizing and sharing the feelings of others."\n\n"He who lives without Compassion dies Loveless. Compassion is the child's awe at the natural world and their love for all who live in it. Compassion for others reflects the Love in thy soul. It requires strength to hold Compassion, for under duress, it is quick to flee. In testing thy will to aid others, Compassion shall grow in your spirit like a wildfire.";;;;;;;;;;;;;x
+LFSacrificeChosen;"Ah," the woman nods contemplatively, "thou hast chosen the path of the Tinker, as marked by thy devotion to Sacrifice."\n\nThe gypsy smiles and waves her hand. "Sacrifice is the combination of both Love and Courage. It is the Courage to give of thyself in the name of Love. It is the placing of the interests of others and the ends of virtue over thine own well-being."\n\n"Sacrifice gathers Love in the palm of Courage. Sacrifice requires a Love of thyself to be given without consideration to others when that selfish Love suggests safer choices. Where there is no choice, therein lies no sacrifice. Where the shape of thy choices blur and lose definition, the highest standards of the common good find expression. In finding the Courage to share your Love, thou shalt find therein Sacrifice.";;;;;;;;;;;;;x
+LFValorChosen;"Ah," the woman nods contemplatively, "thou hast chosen the path of the Fighter, as marked by thy devotion to Valor."\n\nThe gypsy smiles and waves her hand. "Valor is the primary virtue of Courage. It is the courage to take actions in support of thy convictions."\n\n"Valor is the cloak that protects the other seven virtues. Valor gathers selfish Courage and shares it with the beliefs that one holds and protects. Valor is tested again and again, and through it, thee sees the portal to virtue. To demand Valor of thyself is to lead the way for others to find it in their hearts.";;;;;;;;;;;;;x
+LFJusticeChosen;"Ah," the woman nods contemplatively, "thou hast chosen the path of the Druid, as marked by thy devotion to Justice."\n\nThe gypsy smiles and waves her hand. "Justice is the combination of both Love and Truth. It is the devotion to Truth, tempered by Love. It is the wisdom that perceives what is right and what is wrong in human action."\n\n"Wherein Truth and Courage are reconciles lie the secrets of Justice. It bears no moderation, for it doth not shine in the fog of war. The fiery will that spurs thee towards Justice can lose sight of the Truth. To judge with a level eye demands Truth and Courage of conviction to pursue the Truth. In reward, Justice shall give temperament to thy spirit.";;;;;;;;;;;;;x
+LFHonestyChosen;"Ah," the woman nods contemplatively, "thou hast chosen the path of the Mage, as marked by thy devotion to Honesty."\n\nThe gypsy smiles and waves her hand. "Honesty is the primary virtue of Truth. It is scrupulous respect for Truth- the willingness never to deceive thyself or another. The pursuit of Truthfulness, with respect to thyself and with respect to other beings."\n\n"To thyself, be true. Honesty begins with the will to regard the Truth in thy heart. A true heart spreads its warmth to the home and across the entire world. In seeing the world in true form, thou can draw upon the magic that connects all living things: the power of the ether. To thy self, be true. In repetition and experience, thou shalt find Honesty whose comeliness inflicts shame upon evil.";;;;;;;;;;;;;x
+LFHonorChosen;"Ah," the woman nods contemplatively, "thou hast chosen the path of the Paladin, as marked by thy devotion to Honor."\n\nThe gypsy smiles and waves her hand. "Honor is the combination of both Truth and Courage. It is the courage to stand for the Truth, against any odds. It is the Courage to stand for Truth regardless of the circumstances."\n\n"Truth is the tree from whose top sing the bird of Honor. The Courage to be true in repetition brings the song of Honor to thy spirit. Though its melody sweetens over time, Honor can be lost in a moment's hesitation. Honor sings from a lonely mountain. In finding the Courage to pursue the Truths in thy life, thou shall find Honor.";;;;;;;;;;;;;x
+LFSpiritualityChosen;"Ah," the woman nods contemplatively, "thou hast chosen the path of the Ranger, as marked by thy devotion to Spirituality."\n\nThe gypsy smiles and waves her hand. "Spirituality is the combination of Truth, Love, and Courage. It is the concern with thy inner being and how thee deals with Truth, Love, and Courage. It is also the awareness of the love that unites thine own inner being to those around thee."\n\n"Spirituality is the urge towards steady improvement of the soul. The spiritual are never sated in thy hunger for Truth, Love, and Courage. From whatever place the Three Principles are viewed, Spirituality rights thee into proper balance. In the unity of Truth, Love, and Courage, thou shalt infuse thy spirit with peaceful Spirituality.";;;;;;;;;;;;;x
+LFHumilityChosen;"Ah," the woman nods contemplatively, "thou hast chosen the path of the Shepherd, as marked by thy devotion to Humility."\n\nThe gypsy smiles and waves her hand. "Humility is an odd one, that. It is the opposite of Pride, and independent of the Three Principles of Virtue. Humility is about perceiving thy place in the world, not according to thine own accomplishments, but according to the intrinsic value of all individuals. It is the recognition of the worthiness of all beings, and the perception of thine own place among them, regardless of thy own personal accomplishments or mistakes in the world."\n\n"On the road to Virtue, Humility is an elusive wind in thy face. To lack Truth, Love, and Courage is to spread the seeds of Pride. Humility is that gentle breeze which, upon seeing the seeds of Pride, sweeps away these begetters of hubris and discontent. Humility is often the last Virtue captured, for Pride is quick to flourish. To find Humility, thou must bear witness to the Pride in thy spirit. Only after such an examination, can thou call forth the winds of Humility.";;;;;;;;;;;;;x
+
+LFGypsyAngel;You feel your §Yangelic blood§! guiding your hand toward this tarot card. §RYou will never get another chance like this ever again.§!;;;;;;;;;;;;;x

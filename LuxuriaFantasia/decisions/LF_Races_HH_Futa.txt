@@ -1,0 +1,114 @@
+# Original code by zia, author of Serpent Expansion
+
+targetted_decisions = {
+	lf_futa_concubine = {
+		diplomacy_icon = GFX_lf_demon_decisions
+		filter = realm
+		ai_target_filter = none
+		ai = no
+
+		from_potential = {
+			NOT = { is_incapable = yes }
+			has_polygamy = no # Polygamy and concubinage cant co-exist.
+			ai = no
+			practical_age = 16
+			is_futa = yes
+			is_any_demon = yes
+			society_rank >= 2
+			society_member_of = lf_society_seduction
+			prisoner = no
+		}
+		potential = {
+			NOT = { is_incapable = yes }
+			prisoner = no
+			same_realm = FROM
+			practical_age = 16
+			is_married = no
+			is_betrothed = no
+			is_consort = no
+			is_female = yes
+			is_ruler = no
+			OR = {
+				NOT = {
+					is_close_relative = FROM
+				}
+				AND = {
+					is_close_relative = FROM
+					FROM = {
+						OR = {
+							religion = messalian
+							religion = lf_adamite
+							religion = zoroastrian
+							AND = {
+								OR = {
+									religion = lf_luxuria_custom
+									religion = lf_luxuria_custom_reformed
+								}
+								has_global_flag = lf_custom_incest_on
+							}
+							has_religion_feature = religion_holy_family
+						}
+					}
+				}
+			}
+		}
+		allow = {
+			FROM = {
+				OR = {
+					AND = {
+						society_rank == 2
+						society_member_of = lf_society_seduction
+						NOT = {
+							num_of_consorts = 1
+						}
+					}
+					AND = {
+						society_rank == 3
+						society_member_of = lf_society_seduction
+						NOT = {
+							num_of_consorts = 2
+						}
+					}
+					AND = {
+						society_rank == 4
+						society_member_of = lf_society_seduction
+						NOT = {
+							num_of_consorts = 3
+						}
+					}
+				}
+				has_society_currency_medium_trigger = yes
+			}
+		}
+		effect = {
+			FROM = { detract_society_currency_medium_effect = yes }
+			hidden_effect = {
+				set_gender = male
+			}
+			FROM = {
+				add_consort = ROOT
+			}
+			hidden_effect = {
+				set_gender = female
+			}
+			if = {
+				limit = {
+					NOT = {
+						trait = homosexual
+					}
+				}
+				add_trait = homosexual
+			}
+			opinion = {
+				who = FROM
+				modifier = lf_futa_mistress
+			}
+			add_lover = ROOT
+			hidden_effect = { 
+				FROM = { add_lover = ROOT } 
+			}		}
+		ai_will_do = {
+    			factor = 0
+ 		}
+	}
+}

@@ -1,0 +1,30 @@
+RULE_GROUP_LF;Luxuria Fantasia;;;;;;;;;;;;;x
+lf_racial_seeding_go_fuck_yourself;§PLuxuria§! Racial Seeding;;;;;;;;;;;;;x
+lf_there_was_never_any_choice;Off;;;;;;;;;;;;;x
+lf_there_was_never_any_choice_desc;Racial Seeding has been permanently disabled. This is controlled by Random/Shattered World settings instead.\n§KStop asking about it.§!;;;;;;;;;;;;;x
+lf_seeding;§PLuxuria§! Racial Seeding;;;;;;;;;;;;;x
+lf_seeding_on;Partial;;;;;;;;;;;;;x
+lf_seeding_on_desc;Chance for any independent rulers and their vassals to be a special race on the third day.\n§KUnavailable in Random/Shattered Worlds.§!;;;;;;;;;;;;;x
+lf_seeding_off;Off;;;;;;;;;;;;;x
+lf_seeding_off_desc;The world will remain as it was.;;;;;;;;;;;;;x
+lf_seeding_full;Luxuria Fantasia;;;;;;;;;;;;;x
+lf_seeding_full_desc;All starting characters will be a Luxuria race on the third day.\n§KUnavailable in Random/Shattered Worlds.§!;;;;;;;;;;;;;x
+lf_custom_portraits;§PLuxuria§! Custom Portraits;;;;;;;;;;;;;x
+lf_custom_on;On;;;;;;;;;;;;;x
+lf_custom_on_desc;Luxuria Fantasia portraits will be assigned to LF races as normal.;;;;;;;;;;;;;x
+lf_cheri;Cheri Portraits;;;;;;;;;;;;;x
+lf_cheri_desc;LF races will use the included portraits from Cheri Portraits.;;;;;;;;;;;;;x
+lf_custom_off;Off;;;;;;;;;;;;;x
+lf_custom_off_desc;Luxuria Fantasia static portraits on LF races will not be applied. Unique NPCs and children will still have custom portraits.;;;;;;;;;;;;;x
+lf_new_courtiers;§PLuxuria§! Racial Courtiers;;;;;;;;;;;;;x
+lf_courtiers_off;Off;;;;;;;;;;;;;x
+lf_courtiers_off_desc;Courtiers will spawn as their default race.;;;;;;;;;;;;;x
+lf_courtiers_on;On;;;;;;;;;;;;;x
+lf_courtiers_on_desc;Courtiers will spawn as the race of their new liege.;;;;;;;;;;;;;x
+
+lf_blood_feud;§PLuxuria§! Blood Feud;;;;;;;;;;;;;x
+lf_bf_off;Peaceful;;;;;;;;;;;;;x
+lf_bf_off_desc;Everyone lives in peace and harmony. Negative opinion modifiers will remain.;;;;;;;;;;;;;x
+lf_bf_on;§KTHERE WILL BE BLOOD§!;;;;;;;;;;;;;x
+lf_bf_on_desc;Demons, divines, nekos, kitsune, elves, and orcs will attempt to destroy any trace of their opposite race.;;;;;;;;;;;;;x
+

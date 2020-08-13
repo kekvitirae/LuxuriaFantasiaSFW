@@ -1,0 +1,16 @@
+spriteTypes = {
+	spriteType = {
+		name = "aura_male"
+		texturefile = "gfx/event_pictures/aura_male.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "aura_female"
+		texturefile = "gfx/event_pictures/aura_female.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+}

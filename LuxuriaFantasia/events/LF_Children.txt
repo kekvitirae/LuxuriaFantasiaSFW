@@ -1,0 +1,402 @@
+#
+# Children events
+#
+
+namespace = LFCoreChildren
+
+# Gain Masculine
+character_event = {
+	id = LFCoreChildren.1
+	desc = LFCoreChildren1
+	picture = "GFX_evt_child_play"
+	only_women = yes
+	is_triggered_only = yes
+	
+	min_age = 6
+	max_age = 16
+
+	trigger = {
+		has_gender_bender_content = yes
+		NOT = { personality_traits = 5 }
+		NOT = { trait = masculine }
+		prisoner = no
+		has_guardian = yes
+		NOT = { has_character_flag = lf_refused_masculine }
+	}
+		
+	option = {
+		name = LFCoreChildren1TT
+		add_trait = masculine
+		hidden_tooltip = {
+			guardian = {
+				character_event = {
+					id = LFCoreChildren.2
+					days = 3
+				}
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = LFCoreChildren1TTB
+		set_character_flag = lf_refused_masculine
+		ai_chance = {
+			factor = 95
+		}
+	}
+}
+
+character_event = {
+	id = LFCoreChildren.2
+	desc = LFCoreChildren2
+	picture = GFX_evt_child_play
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LFCoreChildren2TTA # Encourage it
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 4
+				trait = masculine
+			}
+			modifier = {
+				factor = 4
+				trait = feminine
+			}
+			modifier = {
+				factor = 0
+				trait = zealous
+			}
+		}
+
+		FROM = {
+			tooltip = {
+				add_trait = masculine
+			}
+			opinion = {
+				who = ROOT
+				modifier = opinion_happy_with_guardian
+				years = 2
+			}
+		}
+	}
+	
+	option = {
+		name = LFCoreChildren2TTB # Birch Him!
+		trigger = {
+			NOT = { trait = kind }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 5
+				trait = cruel
+			}
+			modifier = {
+				factor = 5
+				trait = wroth
+			}
+			modifier = {
+				factor = 0
+				trait = masculine
+			}
+			modifier = {
+				factor = 0
+				trait = feminine
+			}
+		}
+		
+		pacifists_lose_piety_effect = yes
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_sad
+			years = 2
+		}
+		random = {
+			chance = 40
+			FROM = { 
+				remove_trait = masculine
+				hidden_tooltip = { 
+					character_event = { 
+						id = LFCoreChildren.3 
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = LFCoreChildren2TTC # Pray God will save her..
+		trigger = {
+			OR = {
+				religion_group = christian
+				religion_group = muslim
+			}
+			NOT = { trait = cynical }
+		}
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 150
+				trait = zealous
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					trait = masculine
+					trait = feminine
+				}
+			}
+		}
+		
+		piety = 5
+		random = {
+			chance = 20 
+			FROM = { 
+				remove_trait = masculine
+				hidden_tooltip = { 
+					character_event = {	
+						id = LFCoreChildren.3
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+# Guardian discourages masculine
+character_event = {
+	id = LFCoreChildren.3
+	desc = LFCoreChildren3
+	picture = "GFX_evt_guardian"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_tooltip = {
+			add_trait = masculine
+		}
+	}
+	
+	option = {
+		name = LFCoreChildren3TT
+		remove_trait = masculine
+		set_character_flag = lf_refused_masculine
+	}
+}
+
+# Gain Feminine
+# On-action: on_yearly_childhood_pulse
+character_event = {
+	id = LFCoreChildren.4
+	desc = LFCoreChildren4
+	picture = "GFX_evt_child_play"
+	only_men = yes
+	is_triggered_only = yes
+	
+	min_age = 6
+	max_age = 16
+
+	trigger = {
+		has_gender_bender_content = yes
+		NOT = { personality_traits = 5 }
+		NOT = { trait = feminine }
+		prisoner = no
+		has_guardian = yes
+		NOT = { has_character_flag = lf_refused_feminine }
+	}
+		
+	option = {
+		name = LFCoreChildren4TT
+		add_trait = feminine
+		hidden_tooltip = {
+			guardian = {
+				character_event = {
+					id = LFCoreChildren.5
+					days = 3
+				}
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = LFCoreChildren1TTB
+		set_character_flag = lf_refused_feminine
+		ai_chance = {
+			factor = 95
+		}
+	}
+}
+
+character_event = {
+	id = LFCoreChildren.5
+	desc = LFCoreChildren5
+	picture = GFX_evt_child_play
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LFCoreChildren5TTA # Encourage it
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 4
+				trait = masculine
+			}
+			modifier = {
+				factor = 4
+				trait = feminine
+			}
+			modifier = {
+				factor = 0
+				trait = zealous
+			}
+		}
+
+		FROM = {
+			tooltip = {
+				add_trait = feminine
+			}
+			opinion = {
+				who = ROOT
+				modifier = opinion_happy_with_guardian
+				years = 2
+			}
+		}
+	}
+	
+	option = {
+		name = LFCoreChildren5TTB # Birch Him!
+		trigger = {
+			NOT = { trait = kind }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 5
+				trait = cruel
+			}
+			modifier = {
+				factor = 5
+				trait = wroth
+			}
+			modifier = {
+				factor = 0
+				trait = masculine
+			}
+			modifier = {
+				factor = 0
+				trait = feminine
+			}
+		}
+		
+		pacifists_lose_piety_effect = yes
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_sad
+			years = 2
+		}
+		random = {
+			chance = 40
+			FROM = { 
+				remove_trait = feminine
+				hidden_tooltip = { 
+					character_event = { 
+						id = LFCoreChildren.6
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = LFCoreChildren5TTC # Pray God will save her..
+		trigger = {
+			OR = {
+				religion_group = christian
+				religion_group = muslim
+			}
+			NOT = { trait = cynical }
+		}
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 150
+				trait = zealous
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					trait = masculine
+					trait = feminine
+				}
+			}
+		}
+		
+		piety = 5
+		random = {
+			chance = 20 
+			FROM = { 
+				remove_trait = feminine
+				hidden_tooltip = { 
+					character_event = {	
+						id = LFCoreChildren.6
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+# Guardian discourages feminine
+character_event = {
+	id = LFCoreChildren.6
+	desc = LFCoreChildren6
+	picture = "GFX_evt_guardian"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_tooltip = {
+			add_trait = feminine
+		}
+	}
+	
+	option = {
+		name = LFCoreChildren6TT
+		remove_trait = feminine
+		set_character_flag = lf_refused_feminine
+	}
+}
+
+character_event = { # Masculine/feminine routing event
+	id = LFCoreChildren.7
+	hide_window = yes
+	is_triggered_only = yes
+	has_global_flag = LFGenderBendOn
+	
+	immediate = {
+		random = {
+			chance = 5
+			if = {
+				limit = {
+					is_female = yes
+				}
+				character_event = { id = LFCoreChildren.1 }
+			}
+			else = {
+				character_event = { id = LFCoreChildren.4 }
+			}
+		}
+	}
+}

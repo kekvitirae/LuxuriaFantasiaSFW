@@ -1,0 +1,7 @@
+macabre_harp = {
+	monthly_character_prestige = 0.2
+	monthly_character_piety = -0.1	
+	quality = 1
+	flags = { curse chinese irae }
+	picture = "GFX_king_davids_harp"
+}

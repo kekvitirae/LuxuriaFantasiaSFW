@@ -1,0 +1,6 @@
+death_elf_boredom = {
+	can_nokiller = yes
+	long_desc = "DEATH_ELF_GOT_BORED"
+	icon = 2
+	sound = no
+}

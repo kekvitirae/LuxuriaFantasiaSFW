@@ -1,0 +1,1533 @@
+namespace = LFCoreGypsy
+
+#
+# The Gypsy Wagon
+#
+narrative_event = {
+	id = LFCoreGypsy.1
+	is_triggered_only = yes
+	picture = lf_gypsy
+	desc = LFCoreGypsy1
+	title = LFCoreGypsy1T
+	
+	option = { # Let us begin the casting
+		name = LFCoreGypsy1TTa
+		custom_tooltip = {
+			text = LFCoreGypsy1TTRead
+		}
+		clr_character_flag = lf_gypsy_reading_temp
+		set_character_flag = lf_gypsy_reading_read
+		character_event = { id = LFCoreGypsy.2 }
+	}
+	
+	option = { # Maybe later
+		name = LFCoreGypsy1TTb
+		custom_tooltip = {
+			text = LFCoreGypsy1TTLater
+		}
+		clr_character_flag = lf_gypsy_reading_temp
+	}
+	
+	option = { # Never
+		name = LFCoreGypsy1TTc
+		custom_tooltip = {
+			text = LFCoreGypsy1TTDenied
+		}
+		clr_character_flag = lf_gypsy_reading_temp
+		set_character_flag = lf_gypsy_reading_denied
+	}
+}
+
+#
+# Tier 1 Questions (All Virtues)
+#	
+character_event = { # Honesty vs Compassion
+	id = LFCoreGypsy.2
+	is_triggered_only = yes
+	picture = lf_gypsy_small
+	desc = LFCoreGypsy2
+	
+	option = { # Honesty
+		name = LFCoreGypsy2TTa
+		custom_tooltip = {
+			text = LFCoreGypsyHonesty
+			set_character_flag = lf_gypsy_dropped_compassion
+		}
+		character_event = { id = LFCoreGypsy.3 }
+	}
+	
+	option = { # Compassion
+		name = LFCoreGypsy2TTb
+		custom_tooltip = {
+			text = LFCoreGypsyCompassion
+			set_character_flag = lf_gypsy_dropped_honesty
+		}
+		character_event = { id = LFCoreGypsy.3 }
+	}
+}
+
+character_event = { # Valor vs Justice
+	id = LFCoreGypsy.3
+	is_triggered_only = yes
+	picture = lf_gypsy_small
+	desc = LFCoreGypsy3
+	
+	option = { # Valor
+		name = LFCoreGypsy3TTa
+		custom_tooltip = {
+			text = LFCoreGypsyValor
+			set_character_flag = lf_gypsy_dropped_justice
+		}
+		character_event = { id = LFCoreGypsy.4 }
+	}
+	
+	option = { # Justice
+		name = LFCoreGypsy3TTb
+		custom_tooltip = {
+			text = LFCoreGypsyJustice
+			set_character_flag = lf_gypsy_dropped_valor
+		}
+		character_event = { id = LFCoreGypsy.4 }
+	}
+}
+character_event = { # Sacrifice vs Honor
+	id = LFCoreGypsy.4
+	is_triggered_only = yes
+	picture = lf_gypsy_small
+	desc = LFCoreGypsy4
+	
+	option = { # Sacrifice
+		name = LFCoreGypsy4TTa
+		custom_tooltip = {
+			text = LFCoreGypsySacrifice
+			set_character_flag = lf_gypsy_dropped_honor
+		}
+		character_event = { id = LFCoreGypsy.5 }
+	}
+	
+	option = { # Honor
+		name = LFCoreGypsy4TTb
+		custom_tooltip = {
+			text = LFCoreGypsyHonor
+			set_character_flag = lf_gypsy_dropped_sacrifice
+		}
+		character_event = { id = LFCoreGypsy.5 }
+	}
+}
+character_event = { # Spirituality vs Humility
+	id = LFCoreGypsy.5
+	is_triggered_only = yes
+	picture = lf_gypsy_small
+	desc = LFCoreGypsy5
+	
+	option = { # Spirituality
+		name = LFCoreGypsy5TTa
+		trigger = {
+			NOT = { trait = lf_fallen_angel }
+		}
+		custom_tooltip = {
+			text = LFCoreGypsySpirituality
+			set_character_flag = lf_gypsy_dropped_humility
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+	option = { # Spirituality
+		name = LFCoreGypsy5TTa
+		trigger = {
+			trait = lf_fallen_angel
+		}
+		tooltip_info_custom = LFGypsyAngel
+		custom_tooltip = {
+			text = LFCoreGypsySpirituality
+			set_character_flag = lf_gypsy_dropped_humility
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+	
+	option = { # Humility
+		name = LFCoreGypsy5TTb
+		custom_tooltip = {
+			text = LFCoreGypsyHumility
+			set_character_flag = lf_gypsy_dropped_spirituality
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+}
+
+#
+# Single elimination tombola
+#
+
+character_event = {
+	id = LFCoreGypsy.6
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		if = { # Compassion Chosen
+			limit = {
+				has_character_flag = lf_gypsy_dropped_humility
+				has_character_flag = lf_gypsy_dropped_justice
+				has_character_flag = lf_gypsy_dropped_valor
+				has_character_flag = lf_gypsy_dropped_honor
+				has_character_flag = lf_gypsy_dropped_honesty
+				has_character_flag = lf_gypsy_dropped_sacrifice
+				has_character_flag = lf_gypsy_dropped_spirituality
+			}
+			set_character_flag = lf_gypsy_compassion_chosen
+			narrative_event = { id = LFCoreGypsy.31 }
+			break = yes
+		}
+		else_if = { # Humility Chosen
+			limit = {
+				has_character_flag = lf_gypsy_dropped_compassion
+				has_character_flag = lf_gypsy_dropped_spirituality
+				has_character_flag = lf_gypsy_dropped_valor
+				has_character_flag = lf_gypsy_dropped_honor
+				has_character_flag = lf_gypsy_dropped_honesty
+				has_character_flag = lf_gypsy_dropped_sacrifice
+				has_character_flag = lf_gypsy_dropped_justice
+			}
+			set_character_flag = lf_gypsy_humility_chosen
+			narrative_event = { id = LFCoreGypsy.31 }
+			break = yes
+		}
+		else_if = { # Spirituality Chosen
+			limit = {
+				has_character_flag = lf_gypsy_dropped_humility
+				has_character_flag = lf_gypsy_dropped_compassion
+				has_character_flag = lf_gypsy_dropped_valor
+				has_character_flag = lf_gypsy_dropped_honor
+				has_character_flag = lf_gypsy_dropped_honesty
+				has_character_flag = lf_gypsy_dropped_sacrifice
+				has_character_flag = lf_gypsy_dropped_justice
+			}
+			set_character_flag = lf_gypsy_spirituality_chosen
+			narrative_event = { id = LFCoreGypsy.31 }
+			break = yes
+		}
+		else_if = { # Valor Chosen
+			limit = {
+				has_character_flag = lf_gypsy_dropped_compassion
+				has_character_flag = lf_gypsy_dropped_spirituality
+				has_character_flag = lf_gypsy_dropped_humility
+				has_character_flag = lf_gypsy_dropped_honor
+				has_character_flag = lf_gypsy_dropped_honesty
+				has_character_flag = lf_gypsy_dropped_sacrifice
+				has_character_flag = lf_gypsy_dropped_justice
+			}
+			set_character_flag = lf_gypsy_valor_chosen
+			narrative_event = { id = LFCoreGypsy.31 }
+			break = yes
+		}
+		else_if = { # Honor Chosen
+			limit = {
+				has_character_flag = lf_gypsy_dropped_compassion
+				has_character_flag = lf_gypsy_dropped_spirituality
+				has_character_flag = lf_gypsy_dropped_valor
+				has_character_flag = lf_gypsy_dropped_humility
+				has_character_flag = lf_gypsy_dropped_honesty
+				has_character_flag = lf_gypsy_dropped_sacrifice
+				has_character_flag = lf_gypsy_dropped_justice
+			}
+			set_character_flag = lf_gypsy_honor_chosen
+			narrative_event = { id = LFCoreGypsy.31 }
+			break = yes
+		}
+		else_if = { # Honesty Chosen
+			limit = {
+				has_character_flag = lf_gypsy_dropped_compassion
+				has_character_flag = lf_gypsy_dropped_spirituality
+				has_character_flag = lf_gypsy_dropped_valor
+				has_character_flag = lf_gypsy_dropped_honor
+				has_character_flag = lf_gypsy_dropped_humility
+				has_character_flag = lf_gypsy_dropped_sacrifice
+				has_character_flag = lf_gypsy_dropped_justice
+			}
+			set_character_flag = lf_gypsy_honesty_chosen
+			narrative_event = { id = LFCoreGypsy.31 }
+			break = yes
+		}
+		else_if = { # Sacrifice Chosen
+			limit = {
+				has_character_flag = lf_gypsy_dropped_compassion
+				has_character_flag = lf_gypsy_dropped_spirituality
+				has_character_flag = lf_gypsy_dropped_valor
+				has_character_flag = lf_gypsy_dropped_honor
+				has_character_flag = lf_gypsy_dropped_honesty
+				has_character_flag = lf_gypsy_dropped_humility
+				has_character_flag = lf_gypsy_dropped_justice
+			}
+			set_character_flag = lf_gypsy_sacrifice_chosen
+			narrative_event = { id = LFCoreGypsy.31 }
+			break = yes
+		}
+		else_if = { # Justice Chosen
+			limit = {
+				has_character_flag = lf_gypsy_dropped_compassion
+				has_character_flag = lf_gypsy_dropped_spirituality
+				has_character_flag = lf_gypsy_dropped_valor
+				has_character_flag = lf_gypsy_dropped_honor
+				has_character_flag = lf_gypsy_dropped_honesty
+				has_character_flag = lf_gypsy_dropped_sacrifice
+				has_character_flag = lf_gypsy_dropped_humility
+			}
+			set_character_flag = lf_gypsy_justice_chosen
+			narrative_event = { id = LFCoreGypsy.31 }
+			break = yes
+		}
+		else = {
+			random_list = {
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_character_flag = lf_gypsy_dropped_honesty
+							has_character_flag = lf_gypsy_dropped_valor
+						}
+					}
+					character_event = { id = LFCoreGypsy.7 }
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_character_flag = lf_gypsy_dropped_honesty
+							has_character_flag = lf_gypsy_dropped_justice
+						}
+					}
+					character_event = { id = LFCoreGypsy.8 }
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_character_flag = lf_gypsy_dropped_honesty
+							has_character_flag = lf_gypsy_dropped_sacrifice
+						}
+					}
+					character_event = { id = LFCoreGypsy.9 }
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_character_flag = lf_gypsy_dropped_honesty
+							has_character_flag = lf_gypsy_dropped_honor
+						}
+					}
+					character_event = { id = LFCoreGypsy.10 }
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_character_flag = lf_gypsy_dropped_honesty
+							has_character_flag = lf_gypsy_dropped_spirituality
+						}
+					}
+					character_event = { id = LFCoreGypsy.11 }
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_character_flag = lf_gypsy_dropped_honesty
+							has_character_flag = lf_gypsy_dropped_humility
+						}
+					}
+					character_event = { id = LFCoreGypsy.12 }
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_character_flag = lf_gypsy_dropped_compassion
+							has_character_flag = lf_gypsy_dropped_valor
+						}
+					}
+					character_event = { id = LFCoreGypsy.13 }
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_character_flag = lf_gypsy_dropped_compassion
+							has_character_flag = lf_gypsy_dropped_justice
+						}
+					}
+					character_event = { id = LFCoreGypsy.14 }
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_character_flag = lf_gypsy_dropped_compassion
+							has_character_flag = lf_gypsy_dropped_sacrifice
+						}
+					}
+					character_event = { id = LFCoreGypsy.15 }
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_character_flag = lf_gypsy_dropped_compassion
+							has_character_flag = lf_gypsy_dropped_honor
+						}
+					}
+					character_event = { id = LFCoreGypsy.16 }
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_character_flag = lf_gypsy_dropped_compassion
+							has_character_flag = lf_gypsy_dropped_spirituality
+						}
+					}
+					character_event = { id = LFCoreGypsy.17 }
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_character_flag = lf_gypsy_dropped_compassion
+							has_character_flag = lf_gypsy_dropped_humility
+						}
+					}
+					character_event = { id = LFCoreGypsy.18 }
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_character_flag = lf_gypsy_dropped_valor
+							has_character_flag = lf_gypsy_dropped_sacrifice
+						}
+					}
+					character_event = { id = LFCoreGypsy.19 }
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_character_flag = lf_gypsy_dropped_valor
+							has_character_flag = lf_gypsy_dropped_honor
+						}
+					}
+					character_event = { id = LFCoreGypsy.20 }
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_character_flag = lf_gypsy_dropped_valor
+							has_character_flag = lf_gypsy_dropped_spirituality
+						}
+					}
+					character_event = { id = LFCoreGypsy.21 }
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_character_flag = lf_gypsy_dropped_valor
+							has_character_flag = lf_gypsy_dropped_humility
+						}
+					}
+					character_event = { id = LFCoreGypsy.22 }
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_character_flag = lf_gypsy_dropped_justice
+							has_character_flag = lf_gypsy_dropped_sacrifice
+						}
+					}
+					character_event = { id = LFCoreGypsy.23 }
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_character_flag = lf_gypsy_dropped_justice
+							has_character_flag = lf_gypsy_dropped_honor
+						}
+					}
+					character_event = { id = LFCoreGypsy.24 }
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_character_flag = lf_gypsy_dropped_justice
+							has_character_flag = lf_gypsy_dropped_spirituality
+						}
+					}
+					character_event = { id = LFCoreGypsy.25 }
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_character_flag = lf_gypsy_dropped_justice
+							has_character_flag = lf_gypsy_dropped_humility
+						}
+					}
+					character_event = { id = LFCoreGypsy.26 }
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_character_flag = lf_gypsy_dropped_sacrifice
+							has_character_flag = lf_gypsy_dropped_spirituality
+						}
+					}
+					character_event = { id = LFCoreGypsy.27 }
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_character_flag = lf_gypsy_dropped_sacrifice
+							has_character_flag = lf_gypsy_dropped_humility
+						}
+					}
+					character_event = { id = LFCoreGypsy.28 }
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_character_flag = lf_gypsy_dropped_honor
+							has_character_flag = lf_gypsy_dropped_spirituality
+						}
+					}
+					character_event = { id = LFCoreGypsy.29 }
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_character_flag = lf_gypsy_dropped_honor
+							has_character_flag = lf_gypsy_dropped_humility
+						}
+					}
+					character_event = { id = LFCoreGypsy.30 }
+				}
+			}
+		}
+	}
+}
+
+#
+# Tier 2 & 3 Questions (Top 4 Virtues, then Top 2 Virtues)
+#
+
+character_event = { # Honesty vs Valor
+	id = LFCoreGypsy.7
+	is_triggered_only = yes
+	picture = lf_gypsy_small
+	desc = LFCoreGypsy7
+	
+	option = { # Honesty
+		name = LFCoreGypsy7TTa
+		custom_tooltip = {
+			text = LFCoreGypsyHonesty
+			set_character_flag = lf_gypsy_dropped_valor
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+	
+	option = { # Valor
+		name = LFCoreGypsy7TTb
+		custom_tooltip = {
+			text = LFCoreGypsyValor
+			set_character_flag = lf_gypsy_dropped_honesty
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+}
+
+character_event = { # Honesty vs Justice
+	id = LFCoreGypsy.8
+	is_triggered_only = yes
+	picture = lf_gypsy_small
+	desc = LFCoreGypsy8
+	
+	option = { # Honesty
+		name = LFCoreGypsy8TTa
+		custom_tooltip = {
+			text = LFCoreGypsyHonesty
+			set_character_flag = lf_gypsy_dropped_justice
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+	
+	option = { # Justice
+		name = LFCoreGypsy8TTb
+		custom_tooltip = {
+			text = LFCoreGypsyJustice
+			set_character_flag = lf_gypsy_dropped_honesty
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+}
+
+character_event = { # Honesty vs Sacrifice
+	id = LFCoreGypsy.9
+	is_triggered_only = yes
+	picture = lf_gypsy_small
+	desc = LFCoreGypsy9
+	
+	option = { # Honesty
+		name = LFCoreGypsy9TTa
+		custom_tooltip = {
+			text = LFCoreGypsyHonesty
+			set_character_flag = lf_gypsy_dropped_sacrifice
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+	
+	option = { # Sacrifice
+		name = LFCoreGypsy9TTb
+		custom_tooltip = {
+			text = LFCoreGypsySacrifice
+			set_character_flag = lf_gypsy_dropped_honesty
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+}
+
+character_event = { # Honesty vs Honor
+	id = LFCoreGypsy.10
+	is_triggered_only = yes
+	picture = lf_gypsy_small
+	desc = LFCoreGypsy10
+	
+	option = { # Honesty
+		name = LFCoreGypsy10TTa
+		custom_tooltip = {
+			text = LFCoreGypsyHonesty
+			set_character_flag = lf_gypsy_dropped_honor
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+	
+	option = { # Honor
+		name = LFCoreGypsy10TTb
+		custom_tooltip = {
+			text = LFCoreGypsyHonor
+			set_character_flag = lf_gypsy_dropped_honesty
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+}
+
+character_event = { # Honesty vs Spirituality
+	id = LFCoreGypsy.11
+	is_triggered_only = yes
+	picture = lf_gypsy_small
+	desc = LFCoreGypsy11
+	
+	option = { # Honesty
+		name = LFCoreGypsy11TTa
+		custom_tooltip = {
+			text = LFCoreGypsyHonesty
+			set_character_flag = lf_gypsy_dropped_spirituality
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+	
+	option = { # Spirituality
+		name = LFCoreGypsy11TTb
+		trigger = {
+			NOT = { trait = lf_fallen_angel }
+		}
+		custom_tooltip = {
+			text = LFCoreGypsySpirituality
+			set_character_flag = lf_gypsy_dropped_honesty
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+	option = { # Spirituality
+		name = LFCoreGypsy11TTb
+		trigger = {
+			trait = lf_fallen_angel
+		}
+		tooltip_info_custom = LFGypsyAngel
+		custom_tooltip = {
+			text = LFCoreGypsySpirituality
+			set_character_flag = lf_gypsy_dropped_honesty
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+}
+
+character_event = { # Honesty vs Humility
+	id = LFCoreGypsy.12
+	is_triggered_only = yes
+	picture = lf_gypsy_small
+	desc = LFCoreGypsy12
+	
+	option = { # Honesty
+		name = LFCoreGypsy12TTa
+		custom_tooltip = {
+			text = LFCoreGypsyHonesty
+			set_character_flag = lf_gypsy_dropped_humility
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+	
+	option = { # Humility
+		name = LFCoreGypsy12TTb
+		custom_tooltip = {
+			text = LFCoreGypsyHumility
+			set_character_flag = lf_gypsy_dropped_honesty
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+}
+
+character_event = { # Compassion vs Valor
+	id = LFCoreGypsy.13
+	is_triggered_only = yes
+	picture = lf_gypsy_small
+	desc = LFCoreGypsy13
+	
+	option = { # Compassion
+		name = LFCoreGypsy13TTa
+		custom_tooltip = {
+			text = LFCoreGypsyCompassion
+			set_character_flag = lf_gypsy_dropped_valor
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+	
+	option = { # Valor
+		name = LFCoreGypsy13TTb
+		custom_tooltip = {
+			text = LFCoreGypsyValor
+			set_character_flag = lf_gypsy_dropped_compassion
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+}
+
+character_event = { # Compassion vs Justice
+	id = LFCoreGypsy.14
+	is_triggered_only = yes
+	picture = lf_gypsy_small
+	desc = LFCoreGypsy14
+	
+	option = { # Compassion
+		name = LFCoreGypsy14TTa
+		custom_tooltip = {
+			text = LFCoreGypsyCompassion
+			set_character_flag = lf_gypsy_dropped_justice
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+	
+	option = { # Justice
+		name = LFCoreGypsy14TTb
+		custom_tooltip = {
+			text = LFCoreGypsyJustice
+			set_character_flag = lf_gypsy_dropped_compassion
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+}
+
+character_event = { # Compassion vs Sacrifice
+	id = LFCoreGypsy.15
+	is_triggered_only = yes
+	picture = lf_gypsy_small
+	desc = LFCoreGypsy15
+	
+	option = { # Compassion
+		name = LFCoreGypsy15TTa
+		custom_tooltip = {
+			text = LFCoreGypsyCompassion
+			set_character_flag = lf_gypsy_dropped_sacrifice
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+	
+	option = { # Sacrifice
+		name = LFCoreGypsy15TTb
+		custom_tooltip = {
+			text = LFCoreGypsySacrifice
+			set_character_flag = lf_gypsy_dropped_compassion
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+}
+
+character_event = { # Compassion vs Honor
+	id = LFCoreGypsy.16
+	is_triggered_only = yes
+	picture = lf_gypsy_small
+	desc = LFCoreGypsy16
+	
+	option = { # Compassion
+		name = LFCoreGypsy16TTa
+		custom_tooltip = {
+			text = LFCoreGypsyCompassion
+			set_character_flag = lf_gypsy_dropped_honor
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+	
+	option = { # Honor
+		name = LFCoreGypsy16TTb
+		custom_tooltip = {
+			text = LFCoreGypsyHonor
+			set_character_flag = lf_gypsy_dropped_compassion
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+}
+
+character_event = { # Compassion vs Spirituality
+	id = LFCoreGypsy.17
+	is_triggered_only = yes
+	picture = lf_gypsy_small
+	desc = LFCoreGypsy17
+	
+	option = { # Compassion
+		name = LFCoreGypsy17TTa
+		custom_tooltip = {
+			text = LFCoreGypsyCompassion
+			set_character_flag = lf_gypsy_dropped_spirituality
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+	
+	option = { # Spirituality
+		name = LFCoreGypsy17TTb
+		trigger = {
+			NOT = { trait = lf_fallen_angel }
+		}
+		custom_tooltip = {
+			text = LFCoreGypsySpirituality
+			set_character_flag = lf_gypsy_dropped_compassion
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+	option = { # Spirituality
+		name = LFCoreGypsy17TTb
+		trigger = {
+			trait = lf_fallen_angel
+		}
+		tooltip_info_custom = LFGypsyAngel
+		custom_tooltip = {
+			text = LFCoreGypsySpirituality
+			set_character_flag = lf_gypsy_dropped_compassion
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+}
+
+character_event = { # Compassion vs Humility
+	id = LFCoreGypsy.18
+	is_triggered_only = yes
+	picture = lf_gypsy_small
+	desc = LFCoreGypsy18
+	
+	option = { # Compassion
+		name = LFCoreGypsy18TTa
+		custom_tooltip = {
+			text = LFCoreGypsyCompassion
+			set_character_flag = lf_gypsy_dropped_humility
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+	
+	option = { # Humility
+		name = LFCoreGypsy18TTb
+		custom_tooltip = {
+			text = LFCoreGypsyHumility
+			set_character_flag = lf_gypsy_dropped_compassion
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+}
+
+character_event = { # Valor vs Sacrifice
+	id = LFCoreGypsy.19
+	is_triggered_only = yes
+	picture = lf_gypsy_small
+	desc = LFCoreGypsy19
+	
+	option = { # Valor
+		name = LFCoreGypsy19TTa
+		custom_tooltip = {
+			text = LFCoreGypsyValor
+			set_character_flag = lf_gypsy_dropped_sacrifice
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+	
+	option = { # Sacrifice
+		name = LFCoreGypsy19TTb
+		custom_tooltip = {
+			text = LFCoreGypsySacrifice
+			set_character_flag = lf_gypsy_dropped_valor
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+}
+
+character_event = { # Valor vs Honor
+	id = LFCoreGypsy.20
+	is_triggered_only = yes
+	picture = lf_gypsy_small
+	desc = LFCoreGypsy20
+	
+	option = { # Valor
+		name = LFCoreGypsy20TTa
+		custom_tooltip = {
+			text = LFCoreGypsyValor
+			set_character_flag = lf_gypsy_dropped_honor
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+	
+	option = { # Honor
+		name = LFCoreGypsy20TTb
+		custom_tooltip = {
+			text = LFCoreGypsyHonor
+			set_character_flag = lf_gypsy_dropped_valor
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+}
+
+character_event = { # Valor vs Spirituality
+	id = LFCoreGypsy.21
+	is_triggered_only = yes
+	picture = lf_gypsy_small
+	desc = LFCoreGypsy21
+	
+	option = { # Valor
+		name = LFCoreGypsy21TTa
+		custom_tooltip = {
+			text = LFCoreGypsyValor
+			set_character_flag = lf_gypsy_dropped_spirituality
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+	
+	option = { # Spirituality
+		name = LFCoreGypsy21TTb
+		trigger = {
+			NOT = { trait = lf_fallen_angel }
+		}
+		custom_tooltip = {
+			text = LFCoreGypsySpirituality
+			set_character_flag = lf_gypsy_dropped_valor
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+	option = { # Spirituality
+		name = LFCoreGypsy21TTb
+		trigger = {
+			trait = lf_fallen_angel
+		}
+		tooltip_info_custom = LFGypsyAngel
+		custom_tooltip = {
+			text = LFCoreGypsySpirituality
+			set_character_flag = lf_gypsy_dropped_valor
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+}
+
+character_event = { # Valor vs Humility
+	id = LFCoreGypsy.22
+	is_triggered_only = yes
+	picture = lf_gypsy_small
+	desc = LFCoreGypsy22
+	
+	option = { # Valor
+		name = LFCoreGypsy22TTa
+		custom_tooltip = {
+			text = LFCoreGypsyValor
+			set_character_flag = lf_gypsy_dropped_humility
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+	
+	option = { # Humility
+		name = LFCoreGypsy22TTb
+		custom_tooltip = {
+			text = LFCoreGypsyHumility
+			set_character_flag = lf_gypsy_dropped_valor
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+}
+
+character_event = { # Justice vs Sacrifice
+	id = LFCoreGypsy.23
+	is_triggered_only = yes
+	picture = lf_gypsy_small
+	desc = LFCoreGypsy23
+	
+	option = { # Justice
+		name = LFCoreGypsy23TTa
+		custom_tooltip = {
+			text = LFCoreGypsyJustice
+			set_character_flag = lf_gypsy_dropped_sacrifice
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+	
+	option = { # Sacrifice
+		name = LFCoreGypsy23TTb
+		custom_tooltip = {
+			text = LFCoreGypsySacrifice
+			set_character_flag = lf_gypsy_dropped_justice
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+}
+
+
+character_event = { # Justice vs Honor
+	id = LFCoreGypsy.24
+	is_triggered_only = yes
+	picture = lf_gypsy_small
+	desc = LFCoreGypsy24
+	
+	option = { # Justice
+		name = LFCoreGypsy24TTa
+		custom_tooltip = {
+			text = LFCoreGypsyJustice
+			set_character_flag = lf_gypsy_dropped_honor
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+	
+	option = { # Honor
+		name = LFCoreGypsy24TTb
+		custom_tooltip = {
+			text = LFCoreGypsyHonor
+			set_character_flag = lf_gypsy_dropped_justice
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+}
+
+character_event = { # Justice vs Spirituality
+	id = LFCoreGypsy.25
+	is_triggered_only = yes
+	picture = lf_gypsy_small
+	desc = LFCoreGypsy25
+	
+	option = { # Justice
+		name = LFCoreGypsy25TTa
+		custom_tooltip = {
+			text = LFCoreGypsyJustice
+			set_character_flag = lf_gypsy_dropped_spirituality
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+	
+	option = { # Spirituality
+		name = LFCoreGypsy25TTb
+		trigger = {
+			NOT = { trait = lf_fallen_angel }
+		}
+		custom_tooltip = {
+			text = LFCoreGypsySpirituality
+			set_character_flag = lf_gypsy_dropped_justice
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+	option = { # Spirituality
+		name = LFCoreGypsy25TTb
+		trigger = {
+			trait = lf_fallen_angel
+		}
+		tooltip_info_custom = LFGypsyAngel
+		custom_tooltip = {
+			text = LFCoreGypsySpirituality
+			set_character_flag = lf_gypsy_dropped_justice
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+}
+
+character_event = { # Justice vs Humility
+	id = LFCoreGypsy.26
+	is_triggered_only = yes
+	picture = lf_gypsy_small
+	desc = LFCoreGypsy26
+	
+	option = { # Justice
+		name = LFCoreGypsy26TTa
+		custom_tooltip = {
+			text = LFCoreGypsyJustice
+			set_character_flag = lf_gypsy_dropped_humility
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+	
+	option = { # Humility
+		name = LFCoreGypsy26TTb
+		custom_tooltip = {
+			text = LFCoreGypsyHumility
+			set_character_flag = lf_gypsy_dropped_justice
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+}
+
+character_event = { # Sacrifice vs Spirituality
+	id = LFCoreGypsy.27
+	is_triggered_only = yes
+	picture = lf_gypsy_small
+	desc = LFCoreGypsy27
+	
+	option = { # Sacrifice
+		name = LFCoreGypsy27TTa
+		custom_tooltip = {
+			text = LFCoreGypsySacrifice
+			set_character_flag = lf_gypsy_dropped_spirituality
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+	
+	option = { # Spirituality
+		name = LFCoreGypsy27TTb
+		trigger = {
+			NOT = { trait = lf_fallen_angel }
+		}
+		custom_tooltip = {
+			text = LFCoreGypsySpirituality
+			set_character_flag = lf_gypsy_dropped_sacrifice
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+	option = { # Spirituality
+		name = LFCoreGypsy27TTb
+		trigger = {
+			trait = lf_fallen_angel
+		}
+		tooltip_info_custom = LFGypsyAngel
+		custom_tooltip = {
+			text = LFCoreGypsySpirituality
+			set_character_flag = lf_gypsy_dropped_sacrifice
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+}
+
+character_event = { # Sacrifice vs Humility
+	id = LFCoreGypsy.28
+	is_triggered_only = yes
+	picture = lf_gypsy_small
+	desc = LFCoreGypsy28
+	
+	option = { # Sacrifice
+		name = LFCoreGypsy28TTa
+		custom_tooltip = {
+			text = LFCoreGypsySacrifice
+			set_character_flag = lf_gypsy_dropped_humility
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+	
+	option = { # Humility
+		name = LFCoreGypsy28TTb
+		custom_tooltip = {
+			text = LFCoreGypsyHumility
+			set_character_flag = lf_gypsy_dropped_sacrifice
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+}
+
+character_event = { # Honor vs Spirituality
+	id = LFCoreGypsy.29
+	is_triggered_only = yes
+	picture = lf_gypsy_small
+	desc = LFCoreGypsy29
+	
+	option = { # Honor
+		name = LFCoreGypsy29TTa
+		custom_tooltip = {
+			text = LFCoreGypsyHonor
+			set_character_flag = lf_gypsy_dropped_spirituality
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+	
+	option = { # Spirituality
+		name = LFCoreGypsy29TTb
+		trigger = {
+			NOT = { trait = lf_fallen_angel }
+		}
+		custom_tooltip = {
+			text = LFCoreGypsySpirituality
+			set_character_flag = lf_gypsy_dropped_honor
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+	option = { # Spirituality
+		name = LFCoreGypsy29TTb
+		trigger = {
+			trait = lf_fallen_angel
+		}
+		tooltip_info_custom = LFGypsyAngel
+		custom_tooltip = {
+			text = LFCoreGypsySpirituality
+			set_character_flag = lf_gypsy_dropped_honor
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+}
+
+character_event = { # Honor vs Humility
+	id = LFCoreGypsy.30
+	is_triggered_only = yes
+	picture = lf_gypsy_small
+	desc = LFCoreGypsy30
+	
+	option = { # Honor
+		name = LFCoreGypsy30TTa
+		custom_tooltip = {
+			text = LFCoreGypsyHonor
+			set_character_flag = lf_gypsy_dropped_humility
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+	
+	option = { # Humility
+		name = LFCoreGypsy30TTb
+		custom_tooltip = {
+			text = LFCoreGypsyHumility
+			set_character_flag = lf_gypsy_dropped_honor
+		}
+		character_event = { id = LFCoreGypsy.6 }
+	}
+}
+
+#
+# Virtue chosen
+#
+
+narrative_event = {
+	id = LFCoreGypsy.31
+	is_triggered_only = yes
+	title = LFVirtueChosen
+	picture = lf_gypsy
+	desc =  {
+		trigger = {
+			has_character_flag = lf_gypsy_compassion_chosen
+		}
+		text = LFCompassionChosen
+	}
+	desc =  {
+		trigger = {
+			has_character_flag = lf_gypsy_honor_chosen
+		}
+		text = LFHonorChosen
+	}
+	desc =  {
+		trigger = {
+			has_character_flag = lf_gypsy_valor_chosen
+		}
+		text = LFValorChosen
+	}
+	desc =  {
+		trigger = {
+			has_character_flag = lf_gypsy_sacrifice_chosen
+		}
+		text = LFSacrificeChosen
+	}
+	desc =  {
+		trigger = {
+			has_character_flag = lf_gypsy_honesty_chosen
+		}
+		text = LFHonestyChosen
+	}
+	desc =  {
+		trigger = {
+			has_character_flag = lf_gypsy_justice_chosen
+		}
+		text = LFJusticeChosen
+	}
+	desc =  {
+		trigger = {
+			has_character_flag = lf_gypsy_spirituality_chosen
+		}
+		text = LFSpiritualityChosen
+	}
+	desc =  {
+		trigger = {
+			has_character_flag = lf_gypsy_humility_chosen
+		}
+		text = LFHumilityChosen
+	}
+	
+	option = {
+		name = LFCoreGypsy31TT
+		trigger_switch = {
+			on_trigger = has_character_flag
+			lf_gypsy_humility_chosen = {
+				add_character_modifier = {
+					name = lf_humility
+					duration = -1
+				}
+				add_artifact = lf_humility_artifact
+			}
+			lf_gypsy_spirituality_chosen = {
+				add_character_modifier = {
+					name = lf_spirituality
+					duration = -1
+				}
+				add_artifact = lf_spirituality_artifact
+				if = {
+					limit = {
+						trait = lf_fallen_angel
+					}
+					custom_tooltip = {
+						text = LFCoreGypsy31TTB
+					}
+					lf_rose_from_sin = yes
+				}
+			}
+			lf_gypsy_justice_chosen = {
+				add_character_modifier = {
+					name = lf_justice
+					duration = -1
+				}
+				add_artifact = lf_justice_artifact
+			}
+			lf_gypsy_valor_chosen = {
+				add_character_modifier = {
+					name = lf_valor
+					duration = -1
+				}
+				add_artifact = lf_valor_artifact
+			}
+			lf_gypsy_sacrifice_chosen = {
+				add_character_modifier = {
+					name = lf_sacrifice
+					duration = -1
+				}
+				add_artifact = lf_sacrifice_artifact
+			}
+			lf_gypsy_compassion_chosen = {
+				add_character_modifier = {
+					name = lf_compassion
+					duration = -1
+				}
+				add_artifact = lf_compassion_artifact
+			}
+			lf_gypsy_honor_chosen = {
+				add_character_modifier = {
+					name = lf_honor
+					duration = -1
+				}
+				add_artifact = lf_honor_artifact
+			}
+			lf_gypsy_honesty_chosen = {
+				add_character_modifier = {
+					name = lf_honesty
+					duration = -1
+				}
+				add_artifact = lf_honesty_artifact
+			}
+		}
+	}
+	
+	after = {
+		clr_character_flag = lf_gypsy_humility_chosen
+		clr_character_flag = lf_gypsy_spirituality_chosen
+		clr_character_flag = lf_gypsy_compassion_chosen
+		clr_character_flag = lf_gypsy_sacrifice_chosen
+		clr_character_flag = lf_gypsy_valor_chosen
+		clr_character_flag = lf_gypsy_justice_chosen
+		clr_character_flag = lf_gypsy_honesty_chosen
+		clr_character_flag = lf_gypsy_honor_chosen
+		clr_character_flag = lf_gypsy_dropped_spirituality
+		clr_character_flag = lf_gypsy_dropped_humility
+		clr_character_flag = lf_gypsy_dropped_compassion
+		clr_character_flag = lf_gypsy_dropped_sacrifice
+		clr_character_flag = lf_gypsy_dropped_valor
+		clr_character_flag = lf_gypsy_dropped_justice
+		clr_character_flag = lf_gypsy_dropped_honesty
+		clr_character_flag = lf_gypsy_dropped_honor
+	}
+}
+
+#
+# Artifact effects
+#
+
+character_event = {
+	id = LFCoreGypsy.32
+	hide_window = yes
+	ai = no
+	trigger = {
+		OR = {
+			AND = {
+				any_artifact = {
+					artifact_type = lf_compassion_artifact
+					is_artifact_equipped = yes
+				}
+				NOT = { trait = kind }
+			}
+			AND = {
+				any_artifact = {
+					artifact_type = lf_sacrifice_artifact
+					is_artifact_equipped = yes
+				}
+				NOT = { trait = charitable }
+
+				any_artifact = {
+					artifact_type = lf_valor_artifact
+					is_artifact_equipped = yes
+				}
+				NOT = { trait = brave }
+			}
+			AND = {
+				any_artifact = {
+					artifact_type = lf_honor_artifact
+					is_artifact_equipped = yes
+				}
+				NOT = { trait = gregarious }
+			}
+			AND = {
+				any_artifact = {
+					artifact_type = lf_honesty_artifact
+					is_artifact_equipped = yes
+				}
+				NOT = { trait = honest }
+			}
+			AND = {
+				any_artifact = {
+					artifact_type = lf_justice_artifact
+					is_artifact_equipped = yes
+				}
+				NOT = { trait = just }
+			}
+			AND = {
+				any_artifact = {
+					artifact_type = lf_justice_artifact
+					is_artifact_equipped = yes
+				}
+				NOT = { trait = just }
+			}
+			AND = {
+				any_artifact = {
+					artifact_type = lf_spirituality_artifact
+					is_artifact_equipped = yes
+				}
+				NOT = { trait = erudite }
+			}
+			AND = {
+				any_artifact = {
+					artifact_type = lf_humility_artifact
+					is_artifact_equipped = yes
+				}
+				NOT = { trait = humble }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				any_artifact = {
+					artifact_type = lf_compassion_artifact
+					is_artifact_equipped = yes
+				}
+				NOT = { trait = kind }
+			}
+			add_trait = kind
+		}
+		else_if = {
+			limit = {
+				any_artifact = {
+					artifact_type = lf_sacrifice_artifact
+					is_artifact_equipped = yes
+				}
+				NOT = { trait = charitable }
+			}
+			add_trait = charitable
+		}
+		else_if = {
+			limit = {
+				any_artifact = {
+					artifact_type = lf_valor_artifact
+					is_artifact_equipped = yes
+				}
+				NOT = { trait = brave }
+			}
+			add_trait = brave
+		}
+		else_if = {
+			limit = {
+				any_artifact = {
+					artifact_type = lf_honor_artifact
+					is_artifact_equipped = yes
+				}
+				NOT = { trait = gregarious }
+			}
+			add_trait = gregarious
+		}
+		else_if = {
+			limit = {
+				any_artifact = {
+					artifact_type = lf_honesty_artifact
+					is_artifact_equipped = yes
+				}
+				NOT = { trait = honest }
+			}
+			add_trait = honest
+		}
+		else_if = {
+			limit = {
+				any_artifact = {
+					artifact_type = lf_justice_artifact
+					is_artifact_equipped = yes
+				}
+				NOT = { trait = just }
+			}
+			add_trait = just
+		}
+		else_if = {
+			limit = {
+				any_artifact = {
+					artifact_type = lf_spirituality_artifact
+					is_artifact_equipped = yes
+				}
+				NOT = { trait = erudite }
+			}
+			add_trait = erudite
+		}
+		else_if = {
+			limit = {
+				any_artifact = {
+					artifact_type = lf_humility_artifact
+					is_artifact_equipped = yes
+				}
+				NOT = { trait = humble }
+			}
+			add_trait = humble
+		}
+	}
+}
+		

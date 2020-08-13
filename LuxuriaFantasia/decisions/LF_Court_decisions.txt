@@ -1,0 +1,235 @@
+targetted_decisions = {
+
+# Decision for futas to take a female wife
+	lf_take_wife_as_futa = {
+		filter = realm
+		ai_target_filter = realm
+		ai_check_interval = 24
+		from_potential = {
+			NOT = { is_incapable = yes }
+			is_female = yes
+			is_futa = yes
+			is_adult = yes
+			is_married = no
+			NOR = {
+				is_consort = yes
+				trait = lf_ghost
+			}
+		}
+		potential = {
+			NOT = { is_incapable = yes }
+			ai = yes # Don't want the AI to marry the player without their consent
+			is_female = yes
+			is_adult = yes
+			is_married = no
+			OR = {
+				is_consort = no
+				is_consort = FROM
+			}
+			OR = {
+				NOT = { is_close_relative = FROM }
+				AND = {
+					is_close_relative = FROM
+					OR = {
+						religion = messalian
+						religion = lf_adamite
+						religion = zoroastrian
+						AND = {
+							OR = {
+								religion = lf_luxuria_custom
+								religion = lf_luxuria_custom_reformed
+							}
+							has_global_flag = lf_custom_incest_on
+						}
+						has_religion_feature = religion_holy_family
+						has_religion_feature = religion_feature_zun
+					}
+				}
+			}
+			is_not_futa = yes
+			NOR = {
+				is_consort = yes
+				trait = lf_ghost
+			}
+		}
+		allow = {
+			practical_age < 45
+			can_marry = yes
+			FROM = {
+				practical_age < 45
+			}
+			NOR = { 
+				is_inaccessible_trigger = yes 
+				FROM = { is_inaccessible_trigger = yes }
+			}
+
+		}
+		effect = {
+			add_spouse_matrilineal = FROM
+			set_character_flag = lf_futa_wife
+		}
+
+		ai_acceptance = {
+			factor = 0
+			yes_threshold = 1
+			show_maybe_for_human = no
+			additive_modifier = {
+				value = 1
+				localisation_key = "lf_take_wife_reason_subdom"
+					FROM = {
+						trait = lf_dominant
+					}
+				trait = lf_submissive
+			}
+			additive_modifier = {
+				value = 1
+				localisation_key = "lf_take_wife_reason_domsub"
+					FROM = {
+						trait = lf_submissive
+					}
+				trait = lf_dominant
+			}
+			additive_modifier = {
+				value = 1
+				localisation_key = "lf_take_wife_reason_samerace"
+				OR = {
+					AND = {
+						FROM = {
+							is_kitsune = yes
+						}
+						is_kitsune = yes
+					}
+					AND = {
+						FROM = {
+							is_neko = yes
+						}
+						is_neko = yes
+					}
+					AND = {
+						FROM = {
+							is_elf = yes
+						}
+						is_elf = yes
+					}
+					AND = {
+						FROM = {
+							is_orc = yes
+						}
+						is_orc = yes
+					}
+					AND = {
+						FROM = {
+							is_fairy = yes
+						}
+						is_fairy = yes
+					}
+					AND = {
+						FROM = {
+							is_any_demon = yes
+						}
+						is_any_demon = yes
+					}
+					AND = {
+						FROM = {
+							trait = dwse_lizard
+						}
+						trait = dwse_lizard
+					}
+				}
+			}
+			additive_modifier = {
+				value = -3
+				localisation_key = "lf_take_wife_reason_cruel"
+				FROM = {
+					trait = cruel
+				}
+			}
+			additive_modifier = {
+				value = -1
+				localisation_key = "lf_take_wife_reason_shy"
+				trait = shy
+			}
+			additive_modifier = {
+				value = -1000
+				localisation_key = "lf_take_wife_reason_dragon"
+				trait = dwse_dragon_adult
+			}
+			additive_modifier = {
+				value = -1000
+				localisation_key = "lf_take_wife_reason_celibate"
+				trait = celibate
+			}
+			additive_modifier = {
+				value = 1
+				localisation_key = "lf_take_wife_reason_attractive"
+				FROM = { 
+					trait = fair 
+				}
+			}
+			additive_modifier = {
+				value = 1
+				localisation_key = "lf_take_wife_reason_groomed"
+				FROM = { 
+					trait = groomed 
+				}
+			}
+			additive_modifier = {
+				value = 1
+				localisation_key = "lf_take_wife_reason_lustful"
+				trait = lustful
+			}
+			additive_modifier = {
+				value = -1
+				localisation_key = "lf_take_wife_reason_homosexual"
+				NOT = { trait = homosexual }
+			}
+			additive_modifier = {
+				value = 1
+				localisation_key = "lf_take_wife_reason_friend"
+				is_friend = FROM
+			}
+			additive_modifier = {
+				value = 3
+				localisation_key = "lf_take_wife_reason_lover"
+				OR = {
+					is_lover = FROM
+					AND = {
+						is_consort = FROM
+						NOT = {
+							has_opinion_modifier = {
+								who = FROM
+								modifier = opinion_abducted
+							}
+						}
+					}
+				}
+			}
+			additive_modifier = {
+				value = 1
+				localisation_key = "lf_take_wife_reason_lowborn"
+				is_lowborn = yes
+				FROM = {
+					is_lowborn = no
+				}
+			}
+			additive_modifier = {
+				value = -1000
+				localisation_key = "lf_take_wife_reason_ruler"
+				OR = {
+					is_ruler = yes
+					is_primary_heir = yes
+				}
+			}
+			additive_modifier = {
+				value = -1000
+				localisation_key = "lf_take_wife_reason_bloodfeud"
+				lf_blood_feud_exists = yes
+				has_game_rule = { name = lf_blood_feud value = lf_bf_on }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0.25
+		}
+	}
+}

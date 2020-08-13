@@ -1,0 +1,24 @@
+targetted_decisions = {
+
+	lf_turn_on_heat_notifications = {
+		diplomacy_icon = GFX_lf_neko_decision
+		filter = self
+		ai_target_filter = none
+		ai = no
+		from_potential = {
+			is_female = yes
+			is_neko = yes
+			has_character_flag = lf_neko_heat_no_notification
+			ai = no
+		}
+		potential = {
+			character = FROM
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			clr_character_flag = lf_neko_heat_no_notification
+		}
+	}
+}

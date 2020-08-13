@@ -1,0 +1,56 @@
+lf_challenges_name;§PLuxuria§! Challenges;;;;;;;;;;;;;x
+lf_challenges_off;Off;;;;;;;;;;;;;x
+lf_challenges_off_desc;You will not be challenged any more than usual.;;;;;;;;;;;;;x
+lf_challenges_random;Random Ruler;;;;;;;;;;;;;x
+lf_challenges_random_desc;Upon death, you will be reincarnated... somewhere else.;;;;;;;;;;;;;x
+lf_challenges_gender;Gender Bender;;;;;;;;;;;;;x
+lf_challenges_gender_desc;Every 10 years, your sex will change.;;;;;;;;;;;;;x
+lf_challenges_lucy;Luciferium;;;;;;;;;;;;;x
+lf_challenges_lucy_desc;The §YCannibal§! trait will be given to you for free. Consume or die.;;;;;;;;;;;;;x
+lf_challenges_opposite;Opposite Day;;;;;;;;;;;;;x
+lf_challenges_opposite_desc;Every 10 years, your traits will change to their opposites.;;;;;;;;;;;;;x
+lf_challenges_genes;Bad Genetics;;;;;;;;;;;;;x
+lf_challenges_genes_desc;You and your brood are cursed with a horrific hereditary affliction.;;;;;;;;;;;;;x
+
+LFChallenge1Stay;As you draw your final breath, you see a strikingly beautiful woman- dressed in all black- standing over you. She reaches out a hand. It's time to go.;;;;;;;;;;;;;x
+LFChallenge1Random;As you draw your final breath, you see a strikingly beautiful woman- dressed in all black- standing over you. She sneers at you in disdain and waves a hand. You feel your soul being wrenched from your body.;;;;;;;;;;;;;x
+LFChallenge1TTA;I shall go.;;;;;;;;;;;;;x
+LFChallenge1TTB;Wait! No!;;;;;;;;;;;;;x
+
+LFChallenge2;Your body has, once again, morphed itself into the opposite sex.;;;;;;;;;;;;;x
+LFChallenge2TTA;I'll need new clothes again...;;;;;;;;;;;;;x
+
+LF_DEATH_LUCY_NO_KILLER;succumbed to the dreadful addition;;;;;;;;;;;;;x
+LF_DEATH_LUCY;succumbed to the dreadful addition;;;;;;;;;;;;;x
+lf_lucy_good;Fueled by Flesh;;;;;;;;;;;;;x
+lf_lucy_bad_1;Addiction Withdrawal;;;;;;;;;;;;;x
+lf_lucy_bad_2;Addiction Hunger;;;;;;;;;;;;;x
+lf_lucy_bad_3;Addiction Desperation;;;;;;;;;;;;;x
+lf_lucy_good_desc;You feel alive!;;;;;;;;;;;;;x
+lf_lucy_bad_1_desc;You are feeling a little peckish.;;;;;;;;;;;;;x
+lf_lucy_bad_2_desc;You are feeling crippling hunger pains.;;;;;;;;;;;;;x
+lf_lucy_bad_3_desc;You are desperate to satiate their hunger!;;;;;;;;;;;;;x
+LFChallenge301;The flesh... it strengthens you...\nFor just the briefest of moments, you feel free of the addition.;;;;;;;;;;;;;x
+LFChallenge302;Another year has passed and your hunger grows stronger.;;;;;;;;;;;;;x
+LFChallenge302TTA;I feel so hungry...;;;;;;;;;;;;;x
+LFChallenge303;Maybe insulting that witch wasn't a good idea. Your bloodline has been cursed with a cannibalistic hunger. Even if you die, your heirs will hunger same as you. Consume or die.;;;;;;;;;;;;;x
+LFChallenge303TTA;OM NOM NOM;;;;;;;;;;;;;x
+lf_consume_lucy_decision;Feed Addition;;;;;;;;;;;;;x
+lf_consume_lucy_decision_desc;Consume this hapless prisoner to feed your cannibalistic addiction!;;;;;;;;;;;;;x
+
+LFChallenge4;It's Opposite Day once again! Your body and mind have shifted to polar opposites.;;;;;;;;;;;;;x
+LFChallenge4TTA;I feel... different.;;;;;;;;;;;;;x
+
+lf_genetics_bloodline;Bloodline of the [LFGetGeneBL];;;;;;;;;;;;;x
+lf_genetics_bloodline_nosilly;Afflicted;;;;;;;;;;;;;x
+lf_genetics_bloodline_silly;Pepe;;;;;;;;;;;;;x
+lf_genetics_bloodline_desc;[This.Founder.GetBestName] insulted a cruel witch, and now all those who share [This.Founder.GetHerHis] blood will suffer.;;;;;;;;;;;;;x
+lf_bad_genetics;[GetLFGeneName];;;;;;;;;;;;;x
+lf_bad_genes_nosilly;Hereditary Affliction;;;;;;;;;;;;;x
+lf_bad_genes_silly;Aspergers;;;;;;;;;;;;;x
+lf_bad_genetics_desc;[GetLFGeneDesc];;;;;;;;;;;;;x
+lf_bad_genes_nosilly_d;Something's seriously wrong with this character.;;;;;;;;;;;;;x
+lf_bad_genes_silly_d;This character spends their days downloading LoversLab mods, clopping to MLP pictures, and sharing dank maymays.;;;;;;;;;;;;;x
+lf_bad_genetics_modifier;75% chance of gaining the §R[GetLFGeneName]§! trait on birth.;;;;;;;;;;;;;x
+LFChallenge501;Maybe insulting that witch wasn't a good idea. Your bloodline has been cursed with a hereditary abnormality. You and every child you have will be afflicted for all of time. Who will live and who will die?;;;;;;;;;;;;;x
+LFChallenge501TTA;I feel so weak...;;;;;;;;;;;;;x

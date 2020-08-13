@@ -1,0 +1,44 @@
+lf_potion_cd = {
+	icon = 86
+}
+
+lf_potion_temp = {
+	icon = 86
+}
+
+lf_potion_strength = {
+	martial = 5
+	combat_rating = 20
+	icon = 85
+}
+
+lf_potion_paranoia = {
+	defensive_plot_power_modifier = 0.5
+	plot_discovery_chance = 0.5
+	icon = 85
+}
+
+lf_potion_wisdom = {
+	diplomacy = 5
+	learning = 5
+	icon = 85
+}
+
+lf_potion_resist_disease = {
+	icon = 85
+}
+
+lf_potion_midas = {
+	tax_income = 2.5
+	icon = 85
+}
+
+lf_beauty_potion = {
+	icon = 85
+	sex_appeal_opinion = 25
+}
+
+lf_potion_youth = {
+	icon = 85
+	health = 0.2
+}

@@ -1,0 +1,163 @@
+spriteTypes = {
+	spriteType = {
+		name = "lf_npc_asha"
+		texturefile = "gfx/event_pictures/lf_npc_asha.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lf_npc_asha_sfw"
+		texturefile = "gfx/event_pictures/lf_npc_asha_sfw.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lf_npc_lynness"
+		texturefile = "gfx/event_pictures/lf_npc_lynness.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lf_npc_lenora"
+		texturefile = "gfx/event_pictures/lf_npc_lenora.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lf_npc_charlotte"
+		texturefile = "gfx/event_pictures/lf_npc_charlotte.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lf_npc_ying_li"
+		texturefile = "gfx/event_pictures/lf_npc_ying_li.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lf_npc_mwamba"
+		texturefile = "gfx/event_pictures/lf_npc_mwamba.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lf_npc_desmona"
+		texturefile = "gfx/event_pictures/lf_npc_desmona.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lf_npc_ss_brielle"
+		texturefile = "gfx/event_pictures/lf_npc_ss_brielle.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lf_npc_ss_joseph"
+		texturefile = "gfx/event_pictures/lf_npc_ss_joseph.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lf_npc_ss_kalyian"
+		texturefile = "gfx/event_pictures/lf_npc_ss_kalyian.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lf_npc_ss_kalyian2"
+		texturefile = "gfx/event_pictures/lf_npc_ss_kalyian2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lf_npc_ss_kalyian_sfw"
+		texturefile = "gfx/event_pictures/lf_npc_ss_kalyian_sfw.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lf_npc_ss_brielle2"
+		texturefile = "gfx/event_pictures/lf_npc_ss_brielle2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lf_npc_ss_valri"
+		texturefile = "gfx/event_pictures/lf_npc_ss_valri.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lf_npc_ss_amora"
+		texturefile = "gfx/event_pictures/lf_npc_ss_amora.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "beefcake_angel"
+		texturefile = "gfx/event_pictures/beefcake_angel.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "beefcake_devil"
+		texturefile = "gfx/event_pictures/beefcake_devil.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "beefcake_kitsune"
+		texturefile = "gfx/event_pictures/beefcake_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "beefcake_neko"
+		texturefile = "gfx/event_pictures/beefcake_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "beefcake_elf"
+		texturefile = "gfx/event_pictures/beefcake_elf.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "beefcake_orc"
+		texturefile = "gfx/event_pictures/beefcake_orc.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "beefcake_fairy"
+		texturefile = "gfx/event_pictures/beefcake_elf.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+}

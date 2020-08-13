@@ -1,0 +1,303 @@
+has_enough_mana_minor = {
+	check_variable = { 
+		which = current_mana
+		value >= 10
+	}
+}
+
+has_enough_mana_moderate = {
+	check_variable = { 
+		which = current_mana
+		value >= 25
+	}
+}
+
+has_enough_mana_major = {
+	check_variable = { 
+		which = current_mana
+		value >= 50
+	}
+}
+
+lf_check_minor_mana_kitsune = {
+	OR = {
+		AND = {
+			is_kitsune = yes
+			check_variable = {
+				which = current_mana
+				value = 8
+			}
+		}
+		AND = {
+			is_not_kitsune = yes
+			check_variable = {
+				which = current_mana
+				value = 12
+			}
+		}
+	}
+}
+lf_check_moderate_mana_kitsune = {
+	OR = {
+		AND = {
+			is_kitsune = yes
+			check_variable = {
+				which = current_mana
+				value = 20
+			}
+		}
+		AND = {
+			is_not_kitsune = yes
+			check_variable = {
+				which = current_mana
+				value = 30
+			}
+		}
+	}
+}
+lf_check_major_mana_kitsune = {
+	OR = {
+		AND = {
+			is_kitsune = yes
+			check_variable = {
+				which = current_mana
+				value = 40
+			}
+		}
+		AND = {
+			is_not_kitsune = yes
+			check_variable = {
+				which = current_mana
+				value = 60
+			}
+		}
+	}
+}
+lf_check_minor_mana_neko = {
+	OR = {
+		AND = {
+			is_neko = yes
+			check_variable = {
+				which = current_mana
+				value = 8
+			}
+		}
+		AND = {
+			is_not_neko = yes
+			check_variable = {
+				which = current_mana
+				value = 12
+			}
+		}
+	}
+}
+lf_check_moderate_mana_neko = {
+	OR = {
+		AND = {
+			is_neko = yes
+			check_variable = {
+				which = current_mana
+				value = 20
+			}
+		}
+		AND = {
+			is_not_neko = yes
+			check_variable = {
+				which = current_mana
+				value = 30
+			}
+		}
+	}
+}
+lf_check_major_mana_neko = {
+	OR = {
+		AND = {
+			is_neko = yes
+			check_variable = {
+				which = current_mana
+				value = 40
+			}
+		}
+		AND = {
+			is_not_neko = yes
+			check_variable = {
+				which = current_mana
+				value = 60
+			}
+		}
+	}
+}
+lf_check_minor_mana_elf = {
+	OR = {
+		AND = {
+			OR = {
+				is_elf = yes
+				trait = houseirae_halfelf
+			}
+			check_variable = {
+				which = current_mana
+				value = 8
+			}
+		}
+		AND = {
+			is_not_elf = yes
+			NOT = { trait = houseirae_halfelf }
+			check_variable = {
+				which = current_mana
+				value = 12
+			}
+		}
+	}
+}
+lf_check_moderate_mana_elf = {
+	OR = {
+		AND = {
+			OR = {
+				is_elf = yes
+				trait = houseirae_halfelf
+			}
+			check_variable = {
+				which = current_mana
+				value = 20
+			}
+		}
+		AND = {
+			is_not_elf = yes
+			NOT = { trait = houseirae_halfelf }
+			check_variable = {
+				which = current_mana
+				value = 30
+			}
+		}
+	}
+}
+lf_check_major_mana_elf = {
+	OR = {
+		AND = {
+			OR = {
+				is_elf = yes
+				trait = houseirae_halfelf
+			}
+			check_variable = {
+				which = current_mana
+				value = 40
+			}
+		}
+		AND = {
+			is_not_elf = yes
+			NOT = { trait = houseirae_halfelf }
+			check_variable = {
+				which = current_mana
+				value = 60
+			}
+		}
+	}
+}
+lf_check_minor_mana_drow = {
+	OR = {
+		AND = {
+			trait = houseirae_drow
+			check_variable = {
+				which = current_mana
+				value = 8
+			}
+		}
+		AND = {
+			NOT = { trait = houseirae_drow }
+			check_variable = {
+				which = current_mana
+				value = 12
+			}
+		}
+	}
+}
+lf_check_moderate_mana_drow = {
+	OR = {
+		AND = {
+			trait = houseirae_drow
+			check_variable = {
+				which = current_mana
+				value = 20
+			}
+		}
+		AND = {
+			NOT = { trait = houseirae_drow }
+			check_variable = {
+				which = current_mana
+				value = 30
+			}
+		}
+	}
+}
+lf_check_major_mana_drow = {
+	OR = {
+		AND = {
+			trait = houseirae_drow
+			check_variable = {
+				which = current_mana
+				value = 40
+			}
+		}
+		AND = {
+			NOT = { trait = houseirae_drow }
+			check_variable = {
+				which = current_mana
+				value = 60
+			}
+		}
+	}
+}
+lf_check_minor_mana_fairy = {
+	OR = {
+		AND = {
+			is_fairy = yes
+			check_variable = {
+				which = current_mana
+				value = 8
+			}
+		}
+		AND = {
+			is_not_fairy = yes
+			check_variable = {
+				which = current_mana
+				value = 12
+			}
+		}
+	}
+}
+lf_check_moderate_mana_fairy = {
+	OR = {
+		AND = {
+			is_fairy = yes
+			check_variable = {
+				which = current_mana
+				value = 20
+			}
+		}
+		AND = {
+			is_not_fairy = yes
+			check_variable = {
+				which = current_mana
+				value = 30
+			}
+		}
+	}
+}
+lf_check_major_mana_fairy = {
+	OR = {
+		AND = {
+			is_fairy = yes
+			check_variable = {
+				which = current_mana
+				value = 40
+			}
+		}
+		AND = {
+			is_not_fairy = yes
+			check_variable = {
+				which = current_mana
+				value = 60
+			}
+		}
+	}
+}

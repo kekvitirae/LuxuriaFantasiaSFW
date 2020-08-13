@@ -1,0 +1,774 @@
+namespace = LF_Vampire
+
+character_event = {
+	id = LF_Vampire.01
+	hide_window = yes # Nothing to see here
+	ai = no
+	trigger = {
+		lf_random_vampire_attacks = yes
+		NOT = {
+			rtp_is_lower_baron = yes # Rise To Power compatibility
+		}
+	}
+	mean_time_to_happen = {
+		years = 20
+		modifier = { # Less chance of this happening if you already encountered one
+			factor = 5
+			has_character_flag = lf_vampire_attack_won
+		}
+	}
+	immediate = {
+		create_character = {
+			random_traits = yes
+			culture = ROOT
+			religion = ROOT
+			female = no
+			age = 45
+			flag = lf_never_change_race
+		}
+		new_character = {
+			remove_trait = craven
+			remove_trait = weak
+			random_list = {
+				50 = { # Blood Feud
+					trigger = {
+						ROOT = {
+							has_game_rule = { name = lf_blood_feud value = lf_bf_on }
+							NOT = { trait = kind }
+							NOT = { has_global_flag = LFBFAttacksOff }
+							OR = {
+								is_elf = yes
+								is_orc = yes
+								is_kitsune = yes
+								is_neko = yes
+								is_angel = yes
+								is_demon = yes
+							}
+						}
+					}
+					if = {
+						limit = {
+							ROOT = {
+								is_elf = yes
+							}
+						}
+						lf_add_orc = yes
+						lf_add_random_orc_portrait = yes
+						set_character_flag = vampire_orc
+					}
+					else_if = {
+						limit = {
+							ROOT = {
+								is_orc = yes
+							}
+						}
+						lf_add_elf = yes
+						lf_add_random_elf_portrait = yes
+						set_character_flag = vampire_elf
+					}
+					else_if = {
+						limit = {
+							ROOT = {
+								is_kitsune = yes
+							}
+						}
+						lf_add_neko = yes
+						lf_add_random_neko_portrait = yes
+						set_character_flag = vampire_neko
+					}
+					else_if = {
+						limit = {
+							ROOT = {
+								is_neko = yes
+							}
+						}
+						lf_add_kitsune = yes
+						lf_add_random_kitsune_portrait = yes
+						set_character_flag = vampire_kitsune
+					}
+					else_if = {
+						limit = {
+							ROOT = {
+								is_demon = yes
+							}
+						}
+						lf_add_angel = yes
+						lf_add_random_angel_portrait = yes
+						set_character_flag = vampire_angel
+					}
+					else_if = {
+						limit = {
+							ROOT = {
+								is_angel = yes
+							}
+						}
+						add_trait = lf_fallen_angel
+						lf_add_random_demon_portrait = yes
+						set_character_flag = vampire_fallen
+					}
+				}
+				50 = { # Normal vampire
+					random_list = {
+						33 = { add_trait = lf_vampire_portrait1 }
+						33 = { add_trait = lf_vampire_portrait2 }
+						33 = { add_trait = lf_vampire_portrait3 }
+					}
+					set_character_flag = normal_vampire
+					if = {
+						limit = {
+							NOT = {
+								trait = homosexual
+							}
+						}
+						random_list = {
+							50 = {
+								add_trait = homosexual
+							}
+							50 = {
+							}
+						}
+					}
+				}
+			}
+			lf_assign_vampire_combat_ability = yes
+			set_character_flag = lf_npc_combat_vampire
+			save_event_target_as = lf_vampire_attacker
+		}
+	}
+	after = {
+		narrative_event = { id = LF_Vampire.4000 }
+	}
+}
+
+
+### .4000 Vampires
+narrative_event = {
+	id = LF_Vampire.4000
+	picture = lf_a_placeholder
+	title = lf_hunted_by_vampire_title
+	is_triggered_only = yes
+	prisoner = no
+	ai = no
+	desc = { # Desmona is in the player's court
+		trigger = {
+			event_target:lf_vampire_attacker = {
+				has_character_flag = normal_vampire
+			}
+			any_realm_character ={
+				has_character_flag = lf_npc_desmona
+			}
+		}
+		text = LFNight4000.0
+		picture = lf_desmona_feeds
+	}
+	desc = { # No special situations present
+		trigger = {
+			event_target:lf_vampire_attacker = {
+				has_character_flag = normal_vampire
+			}
+			NOT = {
+				any_realm_character ={
+					has_character_flag = lf_npc_desmona
+				}
+			}
+		}
+		text = LFNight4000.1
+		picture = lf_vampire_normal
+	}
+	desc = { # Blood Feud - Elf Attacker
+		trigger = {
+			event_target:lf_vampire_attacker = {
+				has_character_flag = vampire_elf
+			}
+		}
+		text = LFNight4000BFElf
+		picture = lf_vampire_elf
+	}
+	desc = { # Blood Feud - Orc Attacker
+		trigger = {
+			event_target:lf_vampire_attacker = {
+				has_character_flag = vampire_orc
+			}
+		}
+		text = LFNight4000BFOrc
+		picture = lf_vampire_orc
+	}
+	desc = { # Blood Feud - Neko Attacker
+		trigger = {
+			event_target:lf_vampire_attacker = {
+				has_character_flag = vampire_neko
+			}
+		}
+		text = LFNight4000BFNeko
+		picture = lf_vampire_neko
+	}
+	desc = { # Blood Feud - Kitsune Attacker
+		trigger = {
+			event_target:lf_vampire_attacker = {
+				has_character_flag = vampire_kitsune
+			}
+		}
+		text = LFNight4000BFKitsune
+		picture = lf_vampire_kitsune
+	}
+	desc = { # Blood Feud - Fallen Attacker
+		trigger = {
+			event_target:lf_vampire_attacker = {
+				has_character_flag = vampire_fallen
+			}
+		}
+		text = LFNight4000BFFallen
+		picture = lf_vampire_fallen
+	}
+	desc = { # Blood Feud - Divine Attacker
+		trigger = {
+			event_target:lf_vampire_attacker = {
+				has_character_flag = vampire_angel
+			}
+		}
+		text = LFNight4000BFDivine
+		picture = lf_vampire_divine
+	}
+		
+	option = { # Desmona specific
+		trigger = {
+			event_target:lf_vampire_attacker = {
+				has_character_flag = normal_vampire
+			}
+			any_courtier_or_vassal ={
+				has_character_flag = lf_npc_desmona
+			}
+		}
+		name = LFNight4000A
+		hidden_effect = { # Desmona consumed some vampire blood and gains strength from it.
+			random_realm_character = {
+				limit = { has_character_flag = lf_npc_desmona }
+				save_event_target_as = lf_desmona_vampire_fight
+			}
+			event_target:lf_vampire_attacker = {
+				set_character_flag = lf_never_turn_spoopy
+				death = { death_reason = death_duel killer = event_target:lf_desmona_vampire_fight }
+			}
+		}
+	}
+
+	option = { # No special - fight
+		name = {
+			trigger = {
+				OR = {
+					AND = {
+						event_target:lf_vampire_attacker = {
+							has_character_flag = normal_vampire
+						}
+						NOT = {
+							any_realm_character ={
+								has_character_flag = lf_npc_desmona
+							}
+						}
+					}
+					event_target:lf_vampire_attacker = {
+						NOT = { has_character_flag = normal_vampire }
+					}
+				}
+				lf_is_silly = yes
+			}
+			text = LFNight4000BSilly
+		}
+		name = {
+			trigger = {
+				OR = {
+					AND = {
+						event_target:lf_vampire_attacker = {
+							has_character_flag = normal_vampire
+						}
+						NOT = {
+							any_realm_character ={
+								has_character_flag = lf_npc_desmona
+							}
+						}
+					}
+					event_target:lf_vampire_attacker = {
+						NOT = { has_character_flag = normal_vampire }
+					}
+				}
+				NOT = { lf_is_silly = yes }
+			}
+			text = LFNight4000B
+		}
+		
+		hidden_effect = {
+			if = { # Auto succeed
+				limit = {
+					lf_best_vampire_combat_trigger = yes
+					NOT = {
+						event_target:lf_vampire_attacker = {
+							trait = lf_vampire_holyshit
+						}
+					}
+				}
+				character_event = { id = LF_Vampire.4007 }
+			}
+			else_if = { # Auto fail
+				limit = {
+					lf_worst_vampire_combat_trigger = yes
+				}
+				character_event = { id = LF_Vampire.4008 }
+			}
+			else_if = { # It's time to duel
+				limit = {
+					OR = {
+						lf_ok_vampire_combat_trigger = yes
+						event_target:lf_vampire_attacker = {
+							trait = lf_vampire_holyshit
+						}
+					}
+						
+				}
+				character_event = { id = LF_Vampire.4001 }
+			}
+		}
+	}	
+}
+# .4001 Fight Vampire
+character_event = {
+	id = LF_Vampire.4001
+	hide_window = yes
+	is_triggered_only = yes # .4000
+    immediate = {
+        set_variable = { which = vampire_combat_player value = 0 }
+		set_variable = { which = vampire_combat_vampire value = 0 }
+		random_list = {
+			50 = { # Player wounded
+				change_variable = { which = vampire_combat_player value = 1 }
+			}
+			50 = { # Vampire wounded
+				change_variable = { which = vampire_combat_vampire value = 1 }
+			}
+		}
+		narrative_event = { id = LF_Vampire.4009 }
+    }
+}
+
+# .4007 Auto win fight
+character_event = {
+	id = LF_Vampire.4007
+	is_triggered_only = yes
+	picture = GFX_evt_dead_body_hf
+	title = lf_hunted_by_vampire_title
+	desc = LFVampire4007
+	option = { # Pathetic
+		name = LFVampire4007TT
+		event_target:lf_vampire_attacker = {
+			set_character_flag = lf_never_turn_spoopy
+			death = { death_reason = death_duel killer = ROOT }
+		}
+		increase_duel_exp_modifier_effect = yes
+		apply_generic_duel_victory_effect = yes
+		add_blood_splatter_effect = yes
+		if = {
+			limit = {
+				NOT = { has_character_flag = lf_vampire_attack_won }
+			}
+			custom_tooltip = {
+				text = LFDesmonaNotify
+				set_character_flag = lf_vampire_attack_won
+			}
+		}
+	}
+}
+
+# .4008 Auto lose fight
+character_event = {
+	id = LF_Vampire.4008
+	picture = GFX_evt_dead_body_hf
+	title = lf_hunted_by_vampire_title
+	is_triggered_only = yes
+	desc = {
+		trigger = {
+			lf_has_nsfw = yes
+			has_character_flag = lf_vampire_femraped
+		}
+		text = LFVampire4008FemRaped
+	}
+	desc = {
+		trigger = {
+			lf_has_nsfw = yes
+			has_character_flag = lf_vampire_maleraped
+		}
+		text = LFVampire4008MaleRaped
+	}
+	desc = {
+		trigger = {
+			has_character_flag = lf_vampire_nommed
+		}
+		text = LFVampire4008Nommed
+	}
+	desc = {
+		trigger = {
+			has_character_flag = lf_vampire_death
+		}
+		text = LFVampire4008Death
+	}
+	immediate = {
+		if = {
+			limit = {
+				is_female = yes
+				is_adult = yes
+				event_target:lf_vampire_attacker = {
+					has_character_flag = normal_vampire
+					NOT = { trait = homosexual }
+				}			
+			}
+			set_character_flag = lf_vampire_femraped
+		}
+		else_if = {
+			limit = {
+				is_female = no
+				is_adult = no
+				event_target:lf_vampire_attacker = {
+					has_character_flag = normal_vampire
+					trait = homosexual
+				}			
+			}
+			set_character_flag = lf_vampire_maleraped
+		}
+		else_if = {
+			limit = {
+				OR = {
+					event_target:lf_vampire_attacker = {
+						has_character_flag = normal_vampire
+					}
+					has_global_flag = LFBFAttacksOff
+				}
+			}
+			set_character_flag = lf_vampire_nommed
+		}
+		else_if = {
+			limit = {
+				event_target:lf_vampire_attacker = {
+					NOT = { has_character_flag = normal_vampire }
+				}
+				NOT = { has_global_flag = LFBFAttacksOff }
+			}
+			set_character_flag = lf_vampire_death
+		}	
+	}
+			
+				
+	option = {
+		name = LFVampire4008TT
+		if = {
+			limit = {
+				has_character_flag = lf_vampire_death
+			}
+			clr_character_flag = lf_vampire_death
+			set_character_flag = lf_never_turn_spoopy
+			death = { death_reason = death_murder_unknown }
+			hidden_effect = {
+				event_target:lf_vampire_attacker = {
+					death = { death_reason = death_missing }
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				lf_has_nsfw = yes
+				has_character_flag = lf_vampire_femraped
+			}
+			clr_character_flag = lf_vampire_femraped
+			add_character_modifier = {
+				name = lf_vampire_drained_small
+				months = 60
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						fertility = 0.01
+						is_pregnant = no
+					}
+					impregnate = event_target:lf_vampire_attacker
+				}
+				event_target:lf_vampire_attacker = {
+					set_character_flag = lf_never_turn_spoopy
+					death = { death_reason = death_missing }
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				lf_has_nsfw = yes
+				has_character_flag = lf_vampire_maleraped
+			}
+			clr_character_flag = lf_vampire_maleraped
+			add_character_modifier = {
+				name = lf_vampire_drained_small
+				months = 60
+			}
+			hidden_effect = {
+				event_target:lf_vampire_attacker = {
+					set_character_flag = lf_never_turn_spoopy
+					death = { death_reason = death_missing }
+				}
+			}
+		}
+		else = {
+			clr_character_flag = lf_vampire_nommed
+			add_character_modifier = {
+				name = lf_vampire_drained_big
+				months = 60
+			}
+			hidden_effect = {
+				event_target:lf_vampire_attacker = {
+					set_character_flag = lf_never_turn_spoopy
+					death = { death_reason = death_missing }
+				}
+			}
+		}
+	}
+}
+				
+# .4009 Process combat round
+narrative_event = {
+	id = LF_Vampire.4009
+	picture = { # No special situations present
+		trigger = {
+			event_target:lf_vampire_attacker = {
+				has_character_flag = normal_vampire
+			}
+		}
+		picture = lf_vampire_normal
+	}
+	picture = { # Blood Feud - Elf Attacker
+		trigger = {
+			event_target:lf_vampire_attacker = {
+				has_character_flag = vampire_elf
+			}
+		}
+		picture = lf_vampire_elf
+	}
+	picture = { # Blood Feud - Orc Attacker
+		trigger = {
+			event_target:lf_vampire_attacker = {
+				has_character_flag = vampire_orc
+			}
+		}
+		picture = lf_vampire_orc
+	}
+	picture = { # Blood Feud - Neko Attacker
+		trigger = {
+			event_target:lf_vampire_attacker = {
+				has_character_flag = vampire_neko
+			}
+		}
+		picture = lf_vampire_neko
+	}
+	picture = { # Blood Feud - Kitsune Attacker
+		trigger = {
+			event_target:lf_vampire_attacker = {
+				has_character_flag = vampire_kitsune
+			}
+		}
+		picture = lf_vampire_kitsune
+	}
+	picture = { # Blood Feud - Fallen Attacker
+		trigger = {
+			event_target:lf_vampire_attacker = {
+				has_character_flag = vampire_fallen
+			}
+		}
+		picture = lf_vampire_fallen
+	}
+	picture = { # Blood Feud - Divine Attacker
+		trigger = {
+			event_target:lf_vampire_attacker = {
+				has_character_flag = vampire_angel
+			}
+		}
+		picture = lf_vampire_divine
+	}
+	title = lf_hunted_by_vampire_title
+	is_triggered_only = yes
+	desc = { # First round, player wounded
+		trigger = {
+			check_variable = { which = vampire_combat_player value == 1 }
+			check_variable = { which = vampire_combat_vampire value == 0 }
+		}
+		text = LFNight4001.4
+	}
+	desc = { # First round, vampire wounded
+		trigger = {
+			check_variable = { which = vampire_combat_player value == 0 }
+			check_variable = { which = vampire_combat_vampire value == 1 }
+		}
+		text = LFNight4001.5
+	}
+	desc = { # Second round, both wounded
+		trigger = {
+			check_variable = { which = vampire_combat_player value == 1 }
+			check_variable = { which = vampire_combat_vampire value == 1 }
+		}
+		text = LFNight4001.3
+	}
+	desc = { # Player loses
+		trigger = {
+			check_variable = { which = vampire_combat_player value == 2 }
+			OR = {
+				event_target:lf_vampire_attacker = {
+					has_character_flag = normal_vampire
+				}
+				has_global_flag = LFBFAttacksNoFatal
+			}
+		}
+		text = LFNight4001.1
+	}
+	desc = { # Player dies
+		trigger = {
+			check_variable = { which = vampire_combat_player value == 2 }
+			event_target:lf_vampire_attacker = {
+				NOT = { has_character_flag = normal_vampire }
+			}
+			NOT = { has_global_flag = LFBFAttacksNoFatal }
+		}
+		text = LFNight4001.6
+	}
+	desc = { # Vampire loses
+		trigger = {
+			event_target:lf_vampire_attacker = {
+				check_variable = { which = vampire_combat_vampire value == 2 }
+			}
+		}
+		text = LFNight4001.2
+	}
+	
+	option = { # Cheat, but only once
+		trigger = {
+			NOT = { check_variable = { which = vampire_combat_player value == 2 } }
+			intrigue = 25
+			NOT = { has_character_flag = lf_vampire_cheat }
+		}
+		name = LFFightCheat
+		tooltip_info = intrigue
+		custom_tooltip = {
+			text = LFFightCheater
+			change_variable = { which = vampire_combat_vampire value = 1 }
+			set_character_flag = lf_vampire_cheat
+			random_list = {
+				20 = { # Player wounded
+					change_variable = { which = vampire_combat_player value = 1 }
+				}
+				80 = { # Vampire wounded
+					change_variable = { which = vampire_combat_vampire value = 1 }
+				}
+			}
+			narrative_event = { id = LF_Vampire.4009 }
+		}
+	}
+	
+	option = { # The fight continues
+		trigger = {
+			OR = {
+				AND = {
+					check_variable = { which = vampire_combat_player value == 1 }
+					check_variable = { which = vampire_combat_vampire value == 0 }
+				}
+				AND = {
+					check_variable = { which = vampire_combat_player value == 0 }
+					check_variable = { which = vampire_combat_vampire value == 1 }
+				}
+				AND = {
+					check_variable = { which = vampire_combat_player value == 1 }
+					check_variable = { which = vampire_combat_vampire value == 1 }
+				}
+			}
+		}
+		name = LFNight4001A
+		hidden_tooltip = {
+			random_list = {
+				50 = { # Player wounded
+					change_variable = { which = vampire_combat_player value = 1 }
+				}
+				50 = { # Vampire wounded
+					change_variable = { which = vampire_combat_vampire value = 1 }
+				}
+			}
+		}
+		narrative_event = { id = LF_Vampire.4009 }
+	}
+	option = { # Player loses
+		trigger = {
+			check_variable = { which = vampire_combat_player value == 2 }
+			OR = {
+				event_target:lf_vampire_attacker = {
+					has_character_flag = normal_vampire
+				}
+				has_global_flag = LFBFAttacksNoFatal
+			}
+		}
+		name = LFNight4001B
+		add_character_modifier = {
+			name = lf_vampire_drained_big
+			months = 60
+		}
+		hidden_tooltip = {
+			set_variable = { which = vampire_combat_player value = 0 }
+			set_variable = { which = vampire_combat_vampire value = 0 }
+			event_target:lf_vampire_attacker = {
+				set_character_flag = lf_never_turn_spoopy
+				death = { death_reason = death_missing }
+			}
+			clr_character_flag = lf_vampire_cheat
+		}
+	}
+	option = { # Player dies
+		trigger = {
+			check_variable = { which = vampire_combat_player value == 2 }
+			event_target:lf_vampire_attacker = {
+				NOT = { has_character_flag = normal_vampire }
+			}
+			NOT = { has_global_flag = LFBFAttacksNoFatal }
+		}
+		name = LFNight4001B
+		death = { death_reason = death_murder_unknown }
+		hidden_effect = {
+			event_target:lf_vampire_attacker = {
+				set_character_flag = lf_never_turn_spoopy
+				death = { death_reason = death_missing }
+			}
+		}
+	}
+	option = { # Vampire loses
+		trigger = {
+			check_variable = { which = vampire_combat_vampire value == 2 }
+		}
+		name = LFNight4001C
+		event_target:lf_vampire_attacker = {
+			set_character_flag = lf_never_turn_spoopy
+			death = { death_reason = death_duel killer = ROOT }
+		}
+		increase_duel_exp_modifier_effect = yes
+		apply_generic_duel_victory_effect = yes
+		add_blood_splatter_effect = yes
+		if = {
+			limit = {
+				NOT = { has_character_flag = lf_vampire_attack_won }
+			}
+			custom_tooltip = {
+				text = LFDesmonaNotify
+				set_character_flag = lf_vampire_attack_won
+			}
+		}
+		if = {
+			limit = {
+				check_variable = { which = vampire_combat_player value == 1 }
+			}
+			add_trait = wounded
+		}
+		hidden_tooltip = {
+			set_variable = { which = vampire_combat_player value = 0 }
+			set_variable = { which = vampire_combat_vampire value = 0 }
+			set_character_flag = lf_vampire_attack_won
+			clr_character_flag = lf_vampire_cheat
+		}
+	}
+}
+		

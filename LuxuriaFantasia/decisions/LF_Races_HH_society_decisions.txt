@@ -1,0 +1,1114 @@
+decisions = {
+	lf_a_claim_demonic_bloodline = {
+		is_high_prio = yes
+		ai = no
+		potential = {
+			ai = no
+			is_demon = yes
+			lf_has_demons = yes
+			NOT = { has_global_flag = demonic_bloodline_claimed }
+		}
+		allow = {
+			check_variable = { which = lilith_seduction value >= 30 }
+		}
+		effect = {
+			set_global_flag = demonic_bloodline_claimed
+			create_bloodline = {
+				type = demonic_bloodline
+			}
+			new_bloodline = {
+				set_description = "demonic_bloodline_desc"
+			}
+		}
+	}
+}
+
+targeted_decisions = {
+
+#
+# Society rank 1
+#
+
+	lf_demonic_seduction = {
+		diplomacy_icon = GFX_lf_demon_decisions
+		filter = all
+		ai_target_filter = realm
+		ai_check_interval = 36
+		from_potential = {
+			is_adult = yes
+			OR = {
+				AND = {
+					society_rank >= 1
+					society_member_of = lf_society_seduction
+				}
+				is_demon = yes
+			}
+			prisoner = no
+			OR = { # Prevents the AI from seducing unless they have a quest to do so
+				ai = no
+				OR = {
+					has_quest = quest_lilith_seduce_priest
+					has_quest = quest_lilith_seduce_ruler
+					has_quest = quest_lilith_seduce_spouse
+				}
+			}
+			NOT = { is_incapable = yes }
+			NOR = { 
+				has_any_opinion_modifier = opinion_seducing 
+				trait = lf_asexual
+			}
+			
+		}		
+		potential = {
+			is_within_diplo_range = FROM
+			is_adult = yes
+			NOT = { is_incapable = yes }
+			NOR = { 
+				character = FROM
+				is_lover = FROM
+				is_consort = FROM
+				any_spouse = { character = FROM }
+				trait = lf_ghost
+			}
+			prisoner = no
+		}
+		allow = {
+			custom_tooltip = {
+				text = LFHHDemonOrSociety
+				FROM = {
+					OR = {
+						AND = {
+							society_rank >= 1
+							society_member_of = lf_society_seduction
+						}
+						is_demon = yes
+					}
+				}
+			}
+			NOR = {
+				has_opinion_modifier = { who = FROM modifier = opinion_seduced_refused }
+				has_character_modifier = dismissed_proposal
+				has_opinion_modifier = { who = FROM modifier = lf_opinion_recently_seduced }
+				trait = chaste
+				trait = celibate
+				trait = eunuch
+				is_incapable = yes
+				trait = lf_asexual
+			}
+			prisoner = no # Very difficult from behind bars as well
+			practical_age >= 16
+		}
+		effect = {
+			hidden_tooltip = {
+				FROM = {
+					opinion = {
+						who = ROOT
+						modifier = opinion_seducing # Placing this keeps us from being able to overlap with the normal seduction, and limits to pursuing only one person at a time
+						years = 1000
+					}
+					if = {
+						limit = {
+							is_close_relative = ROOT
+							NOR = { 
+								religion = messalian
+								religion = lf_adamite
+								religion = zoroastrian
+								AND = {
+									religion = lf_luxuria_custom
+									has_global_flag = lf_custom_incest_on
+								}
+								has_religion_feature = religion_holy_family
+							}
+						}
+						character_event = { id = LFSeduction.102 } # Warning - Incest scandal risk
+					}				
+					else_if = {
+						limit = {
+							same_sex = ROOT
+							NOT = { religion = lf_adamite }
+							ROOT = { 
+								NOT = { religion = lf_adamite }
+							}
+						}
+						character_event = { id = LFSeduction.104 } # Warning - Homosexual scandal risk
+					}					
+					else_if = {
+						limit = {
+							religion_group = christian
+							OR = {
+								is_priest = yes
+								trait = monk
+								trait = nun
+								ROOT = { is_priest = yes }
+								ROOT = { trait = monk }
+								ROOT = { trait = nun }
+							}
+						}
+						character_event = { id = LFSeduction.103 } # Warning - Priest scandal risk
+					}					
+					else_if = {
+						limit = { 
+							age_diff = {
+								who = ROOT
+								years = 25
+							}
+						}
+						character_event = { id = LFSeduction.105 } # Warning - Age scandal risk
+					}
+					else_if = {
+						limit = {
+							is_female = no
+						}
+						narrative_event = { id = LFSeduction.101 } # No warning - Male start
+					}					
+					else = {
+						narrative_event = { id = LFSeduction.100 } # No warning - Female start
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0.25 # 25% chance
+			modifier = {
+				factor = 0
+				OR = {
+					FROM = { ai_honor = 50 } # If an incubus or succubus somehow becomes very honorable, they'll no longer seek to use this method to sway others
+					FROM = { NOT = { ai_ambition = -40 }} # If there simply isn't the drive to seek a seduction conquest
+					AND = { # No trying to seduce grannies that aren't immortal
+						is_female = yes
+						NOT = { trait = immortal }
+						practical_age = 50
+					}
+					FROM = { num_of_children = 12 } # We're calling it quits if the ai reaches a dozen
+					FROM = { num_of_lovers = 3 } # The ai figures enough is enough at this point
+					trait = ugly # We're setting some basic standards for the ai with the items below
+					trait = dwarf
+					trait = inbred
+					trait = imbecile
+					trait = clubfooted
+					trait = harelip
+					trait = hunchback
+					trait = eunuch
+					is_ill = yes
+					is_pregnant = yes
+				}
+			}
+			modifier = {
+				factor = 0.5
+				FROM = {
+					num_of_children = 2 # Half as likely to do it if they've already a couple of kids
+				}
+			}
+			modifier = {
+				factor = 0.5
+				FROM = {
+					num_of_children = 4 # Half again as likely if they've 4
+				}
+			}
+			modifier = {
+				factor = 0.5
+				FROM = {
+					num_of_children = 8 # And only half again as likely if they've 8 kids (.25 * .5 * .5 * .5 = 3% )
+				}
+			}
+			modifier = { # 4 times as likely to pursue them if they're good looking
+				factor = 4
+				trait = fair
+			}
+			modifier = {
+				factor = 4 # 4 times as likely to do if the incubus/succubus is naturally inclined towards it
+				FROM = {
+					OR = {
+						trait = lustful
+						trait = hedonist
+						trait = seducer
+						trait = seductress
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				is_quest_target_of = FROM
+			}
+		}
+	}
+
+#	
+# Society rank 2
+#
+
+	lf_society_seduction_recruit = {
+		diplomacy_icon = GFX_lf_demon_decisions
+		filter = all
+		ai_target_filter = realm
+		ai_check_interval = 12
+		from_potential = {
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }
+			NOT = { has_character_modifier = recruitment_timer }
+			society_member_of = lf_society_seduction
+			society_rank = {
+				society = lf_society_seduction
+				rank >= 2
+			}
+		}
+		potential = {
+			NOT = { trait = lf_ghost }
+			is_within_diplo_range = FROM
+			is_adult = yes
+			prisoner = no
+			ai = yes
+			NOT = { is_incapable = yes }
+			can_join_society = lf_society_seduction
+			is_in_society = no
+			#AI cannot invite other AIs when society is full
+			NOT = {
+				is_society_rank_full = {
+					society = lf_society_seduction 		
+					rank = 1 								
+				}
+			}
+		}
+		allow = {
+			is_inaccessible_trigger = no
+			custom_tooltip = {
+				text = lf_society_seduction_recruit_block_tooltip
+				OR = {
+					NOT = { has_character_flag = lf_society_seduction_attempted_recruitment }
+					interested_in_society = lf_society_seduction
+				}
+				NOT = { has_character_flag = being_recruited_by_the_chosen }
+			}
+			FROM = {
+				is_inaccessible_trigger = no
+				custom_tooltip = {
+					text = recruit_delay_timer_tooltip
+					NOT = { has_character_modifier = recruitment_delay_timer }
+				}
+			}
+			opinion = { who = FROM value = 1 }
+		}
+		effect = {
+			set_character_flag = lf_society_seduction_attempted_recruitment
+			set_character_flag = being_recruited_by_lf_society_seduction
+			hidden_effect = {
+				narrative_event = { id = LFSocietySeduction.7001 days = 1 } # recruitment chain
+				FROM = {
+					if = {
+						limit = { ai = yes }
+						add_character_modifier = {
+							name = recruitment_timer
+							days = 730
+							hidden = yes
+						}
+					}
+					add_character_modifier = {
+						name = recruitment_delay_timer
+						days = 120
+						hidden = yes
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0.25
+			modifier = {
+				factor = 10 # recruit interested parties
+				interested_in_society = lf_society_seduction
+			}
+			modifier = {
+				factor = 0 # don't recruit characters interested in something else
+				NOT = { interested_in_society = lf_society_seduction }
+				is_interested_in_any_society = yes
+			}
+		}
+	}
+	
+	
+#
+# Society rank 3
+#
+
+	lf_demonic_charm = {
+		diplomacy_icon = GFX_lf_demon_decisions
+		filter = all
+		ai_target_filter = none
+		ai_check_interval = 48
+		ai = no
+		from_potential = {
+			NOT = { is_incapable = yes }
+			lf_has_demons = yes
+			society_rank >= 3
+			society_member_of = lf_society_seduction
+			is_any_demon = yes
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }			
+		}
+		potential = {
+			is_within_diplo_range = FROM
+			prisoner = no
+			NOR = { 
+				character = FROM 
+				is_inaccessible_trigger = yes
+				diplomatic_immunity = yes 
+				trait = lf_ghost
+				has_opinion_modifier = { who = FROM modifier = lf_demon_charmed }
+			}			
+		}
+		allow = {
+			FROM = { has_society_currency_medium_trigger = yes }
+		}
+		effect = {
+			opinion = {
+				modifier = lf_demon_charmed
+				who = FROM
+			}
+			FROM = { 
+				detract_society_currency_medium_effect = yes
+			}
+		}
+		ai_will_do = {
+			factor = .1 # 10%
+			modifier = {
+				factor = 0
+				OR = {
+					ROOT = { ai = no } # No using this on the player
+					FROM = { 
+						opinion = { who = ROOT value = 25 }
+					}
+				}
+			}
+		}		
+	}
+	
+#	
+# Society rank 4
+#
+
+#
+# Society rank 4 (Purebloods)
+#
+
+	lf_demonic_mind_control = {
+		diplomacy_icon = GFX_lf_demon_decisions
+		filter = all
+		ai_target_filter = none
+		ai_check_interval = 48
+		ai = no
+		from_potential = {
+			lf_has_demons = yes
+			is_demon = yes
+			society_rank = 4
+			society_member_of = lf_society_seduction
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }
+			ai = no			
+			NOT = { trait = lf_asexual }
+		}
+		potential = {
+			NOR = { 
+				trait = lf_ghost
+				has_character_flag = special_npc
+				character = FROM
+				is_inaccessible_trigger = yes
+				diplomatic_immunity = yes
+				has_opinion_modifier = { who = FROM modifier = lf_mind_slave }
+			}
+			ai = yes
+			is_within_diplo_range = FROM
+			prisoner = no
+			is_adult = yes
+		}
+		allow = {
+			FROM = { has_society_currency_major_trigger = yes }
+			has_opinion_modifier = { who = FROM modifier = lf_demon_charmed }
+			is_not_any_demon = yes
+		}
+		effect = {
+			if = {
+				limit = {
+					trait = lf_asexual
+				}
+				remove_trait = lf_asexual
+			}
+			if = {
+				limit = {
+					same_sex = FROM
+					NOT = { trait = homosexual }
+				}
+				add_trait = homosexual
+			}
+			if = {
+				limit = {
+					NOT = { same_sex = FROM }
+					trait = homosexual
+				}
+				remove_trait = homosexual
+			}
+			add_lover = FROM
+			hidden_tooltip = {
+				remove_opinion = { who = FROM modifier = lf_demon_charmed }
+			}
+			opinion = {
+				modifier = lf_mind_slave
+				who = FROM
+			}
+		}
+	}
+	
+	lf_command_mind_slave_war = {
+		diplomacy_icon = GFX_lf_demon_decisions
+		filter = independent_rulers
+		ai_target_filter = none
+		third_party = FROM
+		third_party_filter = independent_rulers
+		ai = no
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			is_ruler = yes
+			independent = yes
+			war = no
+			ai = yes
+			has_opinion_modifier = { who = FROM modifier = lf_mind_slave }
+		}
+		third_party_potential = {
+			FROMFROM = {
+				is_ruler = yes
+				independent = yes
+				war = no
+				ai = yes
+				any_neighbor_independent_ruler = {
+					character = ROOT
+				}
+			}
+		}
+		third_party_allow = {
+			FROM = { 
+				NOR = {
+					has_truce = FROMFROM
+					is_allied_with = FROMFROM
+				}
+			}
+		}
+		effect = {
+			ROOT = {
+				hidden_tooltip = {
+					remove_opinion = { who = FROM modifier = lf_mind_slave }
+				}
+				unsafe_war = {
+					target = FROMFROM
+					casus_belli = lf_mindslave_cb
+				}
+			}
+		}
+	}	
+	
+	lf_command_mind_slave_divorce = {
+		diplomacy_icon = GFX_lf_demon_decisions
+		filter = all
+		ai_target_filter = none
+		third_party = ROOT
+		third_party_filter = spouse
+		ai = no
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			is_married = yes
+			is_adult = yes
+			ai = yes
+			has_opinion_modifier = { who = FROM modifier = lf_mind_slave }
+		}
+		third_party_potential = {
+			FROMFROM = {
+				is_married = ROOT
+				ai = yes
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			ROOT = {
+				hidden_tooltip = {
+					remove_opinion = { who = FROM modifier = lf_mind_slave }
+				}
+				remove_spouse = FROMFROM
+				if = {
+					limit = {
+						is_lover = FROMFROM
+					}
+					remove_lover = FROMFROM
+				}
+				if = {
+					limit = {
+						is_friend = FROMFROM
+					}
+					remove_friend = FROMFROM
+				}
+			}
+		}
+	}
+			
+	lf_command_mind_slave_marriage = {
+		diplomacy_icon = GFX_lf_demon_decisions
+		filter = all
+		ai_target_filter = none
+		ai = no
+		from_potential = {
+			ai = no
+			can_marry = yes
+		}
+		potential = {
+			is_married = no
+			is_adult = yes
+			can_marry = yes
+			ai = yes
+			has_opinion_modifier = { who = FROM modifier = lf_mind_slave }
+			is_opposite_sex = FROM
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			ROOT = {
+				hidden_tooltip = {
+					remove_opinion = { who = FROM modifier = lf_mind_slave }
+				}
+				if = {
+					limit = {
+						is_female = yes
+						FROM = { is_female = no }
+					}
+					add_spouse = FROM
+				}
+				else_if = {
+					limit = {
+						is_female = no
+						FROM = { is_female = yes }
+					}
+					add_spouse_matrilineal = FROM
+				}
+				if = {
+					limit = {
+						NOT = { is_lover = FROM }
+					}
+					add_lover = FROM
+				}
+			}
+		}
+	}
+	
+	lf_command_mind_slave_pious = {
+		diplomacy_icon = GFX_lf_demon_decisions
+		filter = all
+		ai_target_filter = none
+		ai = no
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			ai = yes
+			has_opinion_modifier = { who = FROM modifier = lf_mind_slave }
+		}
+		allow = {
+			NAND = {
+				trait = chaste
+				trait = charitable
+				trait = patient
+				trait = humble
+				trait = kind
+				trait = diligent
+				trait = temperate
+			}
+		}
+		effect = {
+			ROOT = {
+				hidden_tooltip = {
+					remove_opinion = { who = FROM modifier = lf_mind_slave }
+				}
+				custom_tooltip = {
+					text = lf_add_pious_tt
+					lf_remove_sinful_traits = yes
+					lf_add_pious_traits = yes
+				}
+			}
+		}
+	}
+
+	lf_command_mind_slave_sinful = {
+		diplomacy_icon = GFX_lf_demon_decisions
+		filter = all
+		ai_target_filter = none
+		ai = no
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			ai = yes
+			has_opinion_modifier = { who = FROM modifier = lf_mind_slave }
+		}
+		allow = {
+			NAND = {
+				trait = lustful
+				trait = greedy
+				trait = wroth
+				trait = proud
+				trait = envious
+				trait = slothful
+				trait = gluttonous
+			}
+		}
+		effect = {
+			ROOT = {
+				hidden_tooltip = {
+					remove_opinion = { who = FROM modifier = lf_mind_slave }
+				}
+				custom_tooltip = {
+					text = lf_add_sinful_tt
+					lf_remove_pious_traits = yes
+					lf_add_sinful_traits = yes
+				}
+			}
+		}
+	}
+	
+
+#
+# Society rank 1
+#
+	lf_futa_morph_spell = {
+		diplomacy_icon = GFX_lf_demon_decisions
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 36
+		ai = no
+		potential = {
+			NOT = { is_incapable = yes }
+			is_adult = yes
+			lf_has_demons = yes
+			has_gender_bender_content = yes
+			is_female = yes
+			society_rank >= 1
+			society_member_of = lf_society_seduction
+			is_any_demon = yes
+		}
+		allow = {
+			society_rank >= 1
+			society_member_of = lf_society_seduction
+			is_any_demon = yes
+		}
+		effect = {
+			detract_society_currency_minor_effect = yes
+			narrative_event = {	id = LFDemons.220 }
+		}
+		ai_will_do = {
+			factor = 0 # We don't want the ai constantly changing how it looks. Or at least I don't. If you do, then change the 0 to anything from a 1 (100%) to a 0.01 (1%) chance
+		}		
+	}
+	lf_cure_sti = {
+		diplomacy_icon = GFX_lf_demon_decisions
+		filter = realm_including_me
+		ai_target_filter = none
+		ai_check_interval = 36
+		ai = no
+		from_potential = {
+			NOT = { is_incapable = yes }
+			is_adult = yes
+			society_rank >= 2
+			society_member_of = lf_society_seduction
+			NAND = {
+				has_global_flag = tont_is_started
+				is_kitsune = yes
+			}
+			ai = no
+		}
+		potential = {
+			OR = {
+				has_character_modifier = minor_disease_herpes
+				trait = lovers_pox
+			}
+			OR = {
+				character = FROM
+				is_lover = FROM
+				is_married = FROM
+				is_consort = FROM
+			}
+		}
+		allow = {
+			FROM = {
+				society_rank >= 2
+				society_member_of = lf_society_seduction
+				has_society_currency_minor_trigger = yes
+			}
+			OR = {
+				has_character_modifier = minor_disease_herpes
+				trait = lovers_pox
+			}
+		}
+		effect = {
+			FROM = {
+				detract_society_currency_minor_effect = yes
+			}
+			if = {
+				limit = {
+					has_character_modifier = minor_disease_herpes
+				}
+				remove_character_modifier = minor_disease_herpes
+			}
+			if = {
+				limit = {
+					trait = lovers_pox
+				}
+				remove_trait = lovers_pox
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	lf_change_sexuality = {
+		diplomacy_icon = GFX_lf_demon_decisions
+		filter = court_including_me
+		ai_target_filter = none
+		ai_check_interval = 36		
+		ai = no
+		from_potential = {
+			NOT = { is_incapable = yes }
+			is_adult = yes
+			ai = no
+			lf_has_demons = yes
+			is_any_demon = yes
+			society_rank >= 1
+			society_member_of = lf_society_seduction
+		}
+		potential = {
+			is_adult = yes
+			OR = {
+				character = FROM
+				ai = yes
+			}
+			NOR = { 
+				is_inaccessible_trigger = yes
+				diplomatic_immunity = yes
+			}
+			same_realm = FROM
+			NOT = { trait = lf_asexual }
+		}
+		allow = {
+			FROM = {
+				society_rank >= 1
+				society_member_of = lf_society_seduction
+				has_society_currency_medium_trigger = yes
+				is_any_demon = yes
+			}
+			is_adult = yes
+		}
+		effect = {
+			detract_society_currency_medium_effect = yes
+			if = {
+				limit = {
+					NOT = { character = FROM }
+				}
+				random_list = {
+					10 = { # Backfire
+						custom_tooltip = {
+							text = lf_change_sexuality_backfire
+							add_trait = lf_asexual
+						}
+					}
+					90 = {
+						if = {
+							limit = {
+								trait = homosexual
+							}
+							remove_trait = homosexual
+							opinion = {
+								who = FROM
+								modifier = lf_changed_sexuality
+							}
+						}
+						else = {
+							add_trait = homosexual
+						}
+					}
+				}
+			}
+		}
+	}
+			
+		
+
+#
+# Society rank 2
+#
+
+	lf_perfect_body = {
+		diplomacy_icon = GFX_lf_demon_decisions
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 36
+		potential = {
+			NOT = { is_incapable = yes }
+			is_adult = yes
+			lf_has_demons = yes
+			society_rank >= 2
+			society_member_of = lf_society_seduction
+			OR = {
+				trait = ugly
+				trait = hunchback
+				trait = harelip
+				trait = clubfooted
+				trait = disfigured
+				trait = mangled
+				trait = uncouth
+				trait = giant
+				trait = dwarf
+				trait = scarred
+				trait = scarred_mid
+				trait = scarred_high
+				NOT = { trait = fair }
+			}
+			NAND = {
+				has_global_flag = tont_is_started
+				is_kitsune = yes
+			}
+		}
+		allow = {
+			society_rank >= 2
+			society_member_of = lf_society_seduction
+			has_society_currency_major_trigger = yes
+			OR = {
+				trait = ugly
+				trait = hunchback
+				trait = harelip
+				trait = clubfooted
+				trait = disfigured
+				trait = mangled
+				trait = dwarf
+				trait = giant
+				trait = uncouth
+				trait = scarred
+				trait = scarred_mid
+				trait = scarred_high
+				NOT = { trait = fair }
+			}			
+		}
+		effect = {
+			detract_society_currency_major_effect = yes
+			lf_perfect_self_spell = yes
+		}
+		ai_will_do = {
+			factor = 0.1
+		}		
+	}
+
+#
+# Society rank 3
+#
+
+	lf_demonic_minor_heal_self = {
+		diplomacy_icon = GFX_lf_demon_decisions
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 36
+		potential = {
+			NOT = { is_incapable = yes }
+			is_adult = yes
+			society_rank >= 3
+			society_member_of = lf_society_seduction
+			OR = {
+				trait = wounded
+				trait = ill
+				trait = flu
+				trait = dysentery
+				trait = gout
+				trait = cough
+				trait = fever
+				trait = diarrhea
+				trait = vomiting
+				trait = chest_pain
+				trait = cramps
+				trait = rash
+				trait = headache
+				trait = abdominal_pain
+				trait = fatigue
+				trait = malaise
+				trait = infection
+			}
+			NAND = {
+				has_global_flag = tont_is_started
+				is_kitsune = yes
+			}
+		}
+		allow = {
+			society_member_of = lf_society_seduction
+			has_society_currency_minor_trigger = yes
+		}
+		effect = {
+			detract_society_currency_minor_effect = yes
+			lf_heal_self_minor = yes
+		}
+		ai_will_do = {
+			factor = 1 # 100%
+		}		
+	}
+
+#
+# Society rank 4
+#
+
+	lf_demonic_moderate_heal_self = {
+		diplomacy_icon = GFX_lf_demon_decisions
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 36
+		potential = {
+			NOT = { is_incapable = yes }
+			is_adult = yes
+			lf_has_demons = yes
+			society_rank >= 4
+			society_member_of = lf_society_seduction
+			is_any_demon = yes
+			OR = {
+				trait = maimed
+				trait = pneumonic
+				trait = syphilitic
+				trait = has_tuberculosis
+				trait = has_typhoid_fever
+				trait = has_typhus
+				trait = has_measles
+				trait = food_poisoning
+				trait = scurvy
+				trait = mangled
+				trait = severely_injured
+				trait = lisp
+			}
+		}
+		allow = {
+			society_member_of = lf_society_seduction
+			has_society_currency_medium_trigger = yes
+			is_any_demon = yes
+		}
+		effect = {
+			detract_society_currency_medium_effect = yes
+			lf_heal_self_moderate = yes
+		}
+		ai_will_do = {
+			factor = 1 # 100%
+		}		
+	}
+	
+
+#
+# Society rank 4 (Purebloods)
+#
+
+	lf_demonic_major_heal_self = {
+		diplomacy_icon = GFX_lf_demon_decisions
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 36
+		potential = {
+			is_adult = yes
+			lf_has_demons = yes
+			is_demon = yes
+			society_rank = 4
+			society_member_of = lf_society_seduction
+			OR = {
+				trait = leper
+				trait = has_bubonic_plague
+				trait = has_small_pox
+				trait = has_aztec_disease
+				trait = rabies
+				trait = cancer
+				trait = dancing_plague
+				trait = infirm
+				trait = incapable
+				trait = one_eyed
+				trait = one_handed
+				trait = one_legged
+			}
+		}
+		allow = {
+			has_society_currency_major_trigger = yes
+		}
+		effect = {
+			detract_society_currency_major_effect = yes
+			lf_heal_self_major = yes
+			clear_disease_level_effect = yes
+		}
+		ai_will_do = {
+			factor = 1 # 100%
+		}		
+	}
+
+}
+
+society_decisions = {
+
+	lf_infuse_with_demon_blood_half = {
+		is_high_prio = yes
+		potential = {
+			is_adult = yes
+			society_rank >= 3
+			society_member_of = lf_society_seduction
+			lf_has_demons = yes
+			is_not_any_demon = yes
+			prisoner = no
+		}
+		allow = {
+			NOT = { is_incapable = yes }
+			prisoner = no
+			is_not_any_demon = yes
+			society_currency >= 1000
+		}
+		effect = {
+			change_society_currency = -1000
+			narrative_event = { id = LFLilithQuests.8 days = 1 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.2 
+				has_global_flag = tont_is_started
+				trait = lf_kitsune # Unwilling to become a demon when they already are
+			}
+			modifier = { # Have more power than Lilith can offer them
+				factor = 0
+				OR = {
+					trait = eight_tails
+					trait = nine_tails
+				}
+			}
+		}
+	}
+					
+	lf_infuse_with_demon_blood_full = {
+		is_high_prio = yes
+		potential = {
+			is_adult = yes
+			society_rank = 4
+			society_member_of = lf_society_seduction
+			lf_has_demons = yes
+			trait = lf_halfdemon
+			prisoner = no
+		}
+		allow = {
+			NOT = { is_incapable = yes }
+			prisoner = no
+			trait = lf_halfdemon
+			society_currency >= 2000
+		}
+		effect = {
+			change_society_currency = -2000
+			narrative_event = { id = LFLilithQuests.9 days = 1 }
+		}
+	}		
+}

@@ -1,0 +1,567 @@
+namespace = LFMagic
+
+# Sets the maximum mana upon adulthood for magically-inclined races or upon gaining the mage trait
+character_event = {
+	id = LFMagic.1
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_magical = yes
+	}
+	immediate = {
+		set_max_mana = yes
+	}
+}
+
+# Yearly mana increase
+character_event = {
+	id = LFMagic.2
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_adult = yes
+		is_magical = yes
+	}
+	immediate = {
+		yearly_mana_increase = yes
+	}
+}
+
+# Gain the mage trait
+narrative_event = {
+	id = LFMagic.3
+	picture = lf_mage_trait
+	title = LFMagic3T
+	is_triggered_only = yes
+	desc = {
+		trigger = {
+			is_kitsune = yes
+		}
+		text = LFMagic3Kitsune
+	}
+	desc = {
+		trigger = {
+			is_fairy = yes
+		}
+		text = LFMagic3Fairy
+	}
+	desc = {
+		trigger = {
+			OR = {
+				is_elf = yes
+				trait = houseirae_drow
+				trait = houseirae_halfelf
+			}
+		}
+		text = LFMagic3Elf
+	}
+	desc = {
+		trigger = {
+			NOR = {
+				trait = houseirae_drow
+				trait = houseirae_halfelf
+			}
+			is_not_kitsune = yes
+			is_not_elf = yes
+			is_not_fairy = yes
+		}
+		text = LFMagic3
+	}
+
+	option = { # Accept the trait
+		name = LFMagic3TTA
+		lf_add_mage = yes
+		if = {
+			limit = {
+				NOR = {
+					trait = houseirae_drow
+					trait = houseirae_halfelf
+				}
+				is_not_kitsune = yes
+				is_not_elf = yes
+				is_not_fairy = yes
+			}
+			health = -1
+		}
+		custom_tooltip = {
+			text = increased_mana_tt
+			set_max_mana = yes
+		}
+	}
+	
+	option = { # Come back later
+		name = LFMagic3TTB
+	}
+}
+	
+character_event = { # Buy a spellbook
+	id = LFMagic.4
+	title = LFSpells6T
+	picture = GFX_evt_experiment
+	desc = LFSpells6
+
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+
+	option = {
+		name = LFSpells6TTBest
+		trigger = {
+			NOT = { has_artifact = lf_spellbook }
+		}
+		custom_tooltip = {
+			text = LFSpells6TTBestTT
+			add_artifact = lf_spellbook
+			lf_add_random_spell = yes
+		}
+		wealth = -150
+	}
+	option = {
+		name = LFSpells6TTNevermind
+	}	
+}
+
+character_event = {
+    id = LFMagic.5
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+    	FROM = { has_artifact_flag = spellbook }
+    }
+
+    immediate = {
+   		FROM = { destroy_artifact = yes }
+    }
+}
+
+namespace = LFSpells
+
+character_event = { # Spell of Bodily Enslavement
+	id = LFSpells.2
+	title = LFSpells2T
+	picture = {
+		trigger = {
+			is_female = no
+		}
+		picture = lf_magic_user_male
+	}
+	picture = {
+		trigger = {
+			is_female = yes
+		}
+		picture = lf_magic_user_female
+	}
+	picture = lf_a_placeholder
+	desc = LFSpells2
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+
+	option = {
+		name = LFSpells2TT
+		random_list = {
+			75 = {
+				custom_tooltip = {
+					text = LFSpells2TTSuccess
+					event_target:spell_target = {
+						lf_add_slave = yes
+					}
+					character_event = { id = LFSpells.9 }
+				}			
+			}
+			25 = {
+				custom_tooltip = {
+					text = LFSpells2TTFail
+					character_event = { id = LFSpells.10 }
+				}
+			}
+		}
+	}
+}
+
+character_event = { # Spell of Heart Enslavement
+	id = LFSpells.3
+	title = LFSpells3T
+	picture = {
+		trigger = {
+			is_female = no
+		}
+		picture = lf_magic_user_male
+	}
+	picture = {
+		trigger = {
+			is_female = yes
+		}
+		picture = lf_magic_user_female
+	}
+	desc = LFSpells3
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+
+	option = {
+		name = LFSpells3TT
+		random_list = {
+			75 = { # Spell succeeds
+				custom_tooltip = {
+					text = LFSpells3TTSuccess
+					event_target:spell_target = {
+						add_lover = ROOT
+						if = {
+							limit = {
+								same_sex = ROOT
+								NOT = { trait = homosexual }
+							}
+							add_trait = homosexual
+						}
+					}
+					if = {
+						limit = {
+							event_target:spell_target = {
+								is_female = yes
+							}
+							ai = no
+							OR = {
+								is_female = no
+								is_futa = yes
+							}
+						}
+						event_target:spell_target = {
+							impregnate_cuckoo = ROOT
+						}
+					}
+					if = {
+						limit = {
+							ai = no
+							event_target:spell_target = {
+								OR = {
+									is_female = no
+									is_futa = yes
+								}
+							}
+							is_female = yes
+						}
+						impregnate_cuckoo = event_target:spell_target
+					}
+					character_event = { id = LFSpells.9 }
+				}
+			}
+			25 = { 
+				custom_tooltip = { # Spell succeeds but doesn't last past the night
+					text = LFSpells3TTFail
+					if = {
+						limit = {
+							event_target:spell_target = {
+								is_female = yes
+							}
+							ai = no
+							OR = {
+								is_female = no
+								is_futa = yes
+							}
+						}
+						event_target:spell_target = {
+							impregnate_cuckoo = ROOT
+						}
+					}
+					if = {
+						limit = {
+							event_target:spell_target = {
+								OR = {
+									is_female = no
+									is_futa = yes
+								}
+							}
+							ai = no
+							is_female = yes
+						}
+						impregnate_cuckoo = event_target:spell_target
+					}
+					character_event = { id = LFSpells.11 }
+				}
+			}
+		}
+	}
+}
+
+character_event = { # Spell of Fireball
+	id = LFSpells.4
+	title = LFSpells4T
+	picture = {
+		trigger = {
+			is_female = no
+		}
+		picture = lf_magic_user_male
+	}
+	picture = {
+		trigger = {
+			is_female = yes
+		}
+		picture = lf_magic_user_female
+	}
+	desc = LFSpells4
+
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+
+	option = {
+		name = LFSpells4TT
+		random_list = {
+			25 = { # Spell missed
+				custom_tooltip = {
+					text = LFSpells4TTFail
+					character_event = { id = LFSpells.10 }
+				}
+			}
+			25 = { # Spell missed and hits someone else
+				custom_tooltip = {
+					text = LFSpells4TTMissed
+					random_courtier = {
+						set_character_flag = lf_never_turn_spoopy
+						death = { death_reason = death_murder_unknown_combustion }
+					}
+					character_event = { id = LFSpells.11 }
+				}
+			}
+			50 = { # Spell kills the target
+				custom_tooltip = {
+					text = LFSpells4TTKilled
+					event_target:spell_target = {
+						set_character_flag = lf_never_turn_spoopy
+						death = { death_reason = death_murder_unknown_combustion }
+					}
+					character_event = { id = LFSpells.9 }
+				}
+			}
+		}
+	}
+}
+
+character_event = { # Spell of Flamestrike
+	id = LFSpells.5
+	title = LFSpells5T
+	picture = {
+		trigger = {
+			is_female = no
+		}
+		picture = lf_magic_user_male
+	}
+	picture = {
+		trigger = {
+			is_female = yes
+		}
+		picture = lf_magic_user_female
+	}
+	desc = LFSpells5
+
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+
+	option = {
+		name = LFSpells5TT
+		random_list = {
+			50 = { # Nothing happens
+				custom_tooltip = {
+					text = LFSpells5TTFail
+					character_event = { id = LFSpells.10 }
+				}
+			}
+			50 = { # Spell destroys a building
+				custom_tooltip = {
+					text = LFSpells5TTDestroyed
+					event_target:spell_target = {
+						random_demesne_title = { 
+							destroy_random_building = yes
+						}
+					}
+					character_event = { id = LFSpells.9 }
+				}
+			}
+		}
+	}
+}
+
+
+
+character_event = { # Spell of Trusting
+	id = LFSpells.7
+	title = LFSpells7T
+	picture = {
+		trigger = {
+			is_female = no
+		}
+		picture = lf_magic_user_male
+	}
+	picture = {
+		trigger = {
+			is_female = yes
+		}
+		picture = lf_magic_user_female
+	}
+	desc = LFSpells7
+
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+
+	option = {
+		name = LFSpells7TT
+		random_list = {
+			25 = { # Spell Failed
+				custom_tooltip = {
+					text = 	LFSpells7TTFail
+					character_event = { id = LFSpells.10 }
+				}
+			}
+			75 = { # Spell missed and hits someone else
+				custom_tooltip = {
+					text = LFSpells7TTSuccess
+					event_target:spell_target = {
+						add_trait = trusting
+					}
+					character_event = { id = LFSpells.11 }
+				}
+			}
+		}
+	}
+}
+
+character_event = { # Blessing of the Womb, on_birth
+	id = LFSpells.8
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		mother = {
+			has_character_flag = lf_blessing_womb
+		}
+	}
+	immediate = {
+		remove_trait = inbred
+		random_list = {
+			33 = {
+				add_trait = robust
+			}
+			33 = {
+				add_trait = sturdy
+			}
+			33 = {
+				add_trait = shrewd
+			}
+			33 = {
+				add_trait = groomed
+			}
+			33 = {
+				add_trait = erudite
+			}
+			33 = {
+				add_trait = gregarious
+			}
+			33 = {
+				add_trait = just
+			}
+			33 = {
+				add_trait = brave
+			}
+			33 = {
+				add_trait = mystic
+			}
+			5 = {
+				add_trait = fair
+			}
+			5 = {
+				add_trait = quick
+			}
+			5 = {
+				add_trait = strong
+			}
+		}
+		mother = {
+			clr_character_flag = lf_blessing_womb
+		}
+	}
+}
+
+# Spell successful notification
+character_event = {
+	id = LFSpells.9
+	desc = LFSpellsSuccessful
+	picture = GFX_evt_emissary
+	
+	notification = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK 
+	}
+}
+
+# Spell failed notification
+character_event = {
+	id = LFSpells.10
+	desc = LFSpellsFailed
+	picture = GFX_evt_emissary
+	
+	notification = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK 
+	}
+}
+
+# Spell missed notification
+character_event = {
+	id = LFSpells.11
+	desc = LFSpellsMissed
+	picture = GFX_evt_emissary
+	
+	notification = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK 
+	}
+}
+
+narrative_event = {
+	id = LFSpells.12
+	desc = LFSpells12
+	picture = lf_mage_trait
+	title = LFSpells12T
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK 
+	}
+}
+
+character_event = {
+	id = LFSpells.13
+	desc = LFSpells13
+	picture = {
+		trigger = {
+			is_female = yes
+		}
+		picture = lf_magic_user_female
+	}
+	picture = {
+		trigger = {
+			is_female = no
+		}
+		picture = lf_magic_user_male
+	}
+	is_triggered_only = yes
+	
+	option = {
+		name = LFSpells13TTA
+		wealth = -100
+		custom_tooltip = {
+			text = LFSpells13Random
+			lf_add_random_spell = yes
+		}
+	}
+	option = {
+		name = LFSpells13TTB
+	}
+}

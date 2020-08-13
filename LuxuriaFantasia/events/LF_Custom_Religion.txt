@@ -1,0 +1,955 @@
+namespace = LFCustomReligion
+
+character_event = {
+	id = LFCustomReligion.1
+	desc = LFCustomReligion1
+	picture = lf_gypsy_small
+	ai = no
+	is_triggered_only = yes
+	option = {
+		name = LFCustomReligion1TTA
+		religion = lf_luxuria_custom
+		character_event = { id = LFCustomReligion.2 }
+	}
+	option = {
+		name = LFCustomReligion1TTB
+		set_global_flag = lf_religion_customized
+	}
+}
+
+# Randomize holy sites
+character_event = {
+	id = LFCustomReligion.2
+	desc = LFCustomReligion2
+	picture = lf_gypsy_small
+	ai = no
+	is_triggered_only = yes
+	immediate = {
+		set_global_flag = lf_religion_customized
+		if = {
+			limit = {
+				is_alternate_start = yes
+				has_alternate_start_setting = {
+					setting = religion
+					option = full_random
+				}
+			}
+			lf_luxuria_custom = {
+				reset_religion_features_effect = yes
+			}
+			lf_luxuria_custom_reformed = {
+				reset_religion_features_effect = yes
+			}
+		}
+	}
+	option = { # Full random
+		name = LFCustomReligion2TTA
+		custom_tooltip = {
+			text = LFCustomReligion2TTATooltip
+		}
+		character_event = { id = LFCustomReligion.100 }
+		character_event = { id = LFCustomReligion.3 }
+	}
+	option = { # Continental random
+		name = LFCustomReligion2TTB
+		trigger = {
+			NOR = {
+				has_global_flag = scenario_initialized # After The End compatibility. 
+				has_global_flag = scenario_initialised # AGoT compatibility.
+			}
+		}
+		custom_tooltip = {
+			text = LFCustomReligion2TTBTooltip
+		}
+		character_event = { id = LFCustomReligion.101 }
+		character_event = { id = LFCustomReligion.3 }
+	}
+	option = { # Regional random
+		name = LFCustomReligion2TTC
+		trigger = {
+			NOR = {
+				has_global_flag = scenario_initialized # After The End compatibility. 
+				has_global_flag = scenario_initialised # AGoT compatibility.
+			}
+		}
+		custom_tooltip = {
+			text = LFCustomReligion2TTCTooltip
+		}
+		character_event = { id = LFCustomReligion.102 }
+		character_event = { id = LFCustomReligion.3 }
+	}
+	
+}
+
+# Incest?
+character_event = {
+	id = LFCustomReligion.3
+	desc = LFCustomReligion3
+	picture = lf_gypsy_small
+	ai = no
+	is_triggered_only = yes
+	immediate = {
+		set_pc_marriage = no
+		set_bs_marriage = no
+		set_psc_marriage = no
+		set_cousin_marriage = no
+		set_divine_blood = no
+	}
+	option = { # Yes
+		name = LFCustomReligion3TTA
+		lf_luxuria_custom = {
+			set_pc_marriage = yes
+			set_bs_marriage = yes
+			set_psc_marriage = yes
+			set_cousin_marriage = yes
+		}
+		if = {
+			limit = {
+				NOT = { has_dlc = "Holy Fury" }
+			}
+			lf_luxuria_custom_reformed = {
+				set_pc_marriage = yes
+				set_bs_marriage = yes
+				set_psc_marriage = yes
+				set_cousin_marriage = yes
+			}
+		}
+		set_global_flag = lf_custom_incest_on
+		character_event = { id = LFCustomReligion.4 }
+	}
+	option = { # Yes, with Divine Blood
+		name = LFCustomReligion3TTB
+		lf_luxuria_custom = {
+			set_pc_marriage = yes
+			set_bs_marriage = yes
+			set_psc_marriage = yes
+			set_cousin_marriage = yes
+			set_divine_blood = yes
+		}
+		if = {
+			limit = {
+				NOT = { has_dlc = "Holy Fury" }
+			}
+			lf_luxuria_custom_reformed = {
+				set_pc_marriage = yes
+				set_bs_marriage = yes
+				set_psc_marriage = yes
+				set_cousin_marriage = yes
+				set_divine_blood = yes
+			}
+		}
+		set_global_flag = lf_custom_incest_on
+		character_event = { id = LFCustomReligion.4 }
+	}
+	option = { # No
+		name = LFCustomReligion3TTC
+		lf_luxuria_custom = {
+			set_pc_marriage = no
+			set_bs_marriage = no
+			set_psc_marriage = yes
+			set_cousin_marriage = yes
+			set_divine_blood = no
+		}
+		if = {
+			limit = {
+				NOT = { has_dlc = "Holy Fury" }
+			}
+			lf_luxuria_custom_reformed = {
+				set_pc_marriage = no
+				set_bs_marriage = no
+				set_psc_marriage = yes
+				set_cousin_marriage = yes
+				set_divine_blood = no
+			}
+		}
+		set_global_flag = lf_custom_incest_off
+		character_event = { id = LFCustomReligion.4 }
+	}
+}
+
+# Aggression?
+character_event = {
+	id = LFCustomReligion.4
+	desc = LFCustomReligion4
+	picture = lf_gypsy_small
+	ai = no
+	is_triggered_only = yes
+	
+	option = { # Aggressive
+		name = LFCustomReligion4TTA
+		lf_luxuria_custom = {
+			set_ai_aggression = 1.5
+			set_peace_prestige_loss = yes
+		}
+		if = {
+			limit = {
+				NOT = { has_dlc = "Holy Fury" }
+			}
+			lf_luxuria_custom_reformed = {
+				set_ai_aggression = 1.5
+				set_peace_prestige_loss = yes
+			}
+		}
+		set_global_flag = lf_custom_agg_high
+		character_event = { id = LFCustomReligion.5 }
+	}
+	option = { # Normal
+		name = LFCustomReligion4TTB
+		lf_luxuria_custom = {
+			set_ai_aggression = 1
+		}
+		lf_luxuria_custom_reformed = {
+			set_ai_aggression = 1
+		}
+		set_global_flag = lf_custom_agg_normal
+		character_event = { id = LFCustomReligion.5 }
+	}
+	option = { # Pacifist
+		name = LFCustomReligion4TTC
+		lf_luxuria_custom = {
+			set_ai_aggression = 0.5
+			set_pacifist = yes
+			set_peace_piety_gain = 1.0
+		}
+		if = {
+			limit = {
+				NOT = { has_dlc = "Holy Fury" }
+			}
+			lf_luxuria_custom_reformed = {
+				set_ai_aggression = 0.5
+				set_pacifist = yes
+				set_peace_piety_gain = 1.0
+			}
+		}
+		set_global_flag = lf_custom_agg_low
+		character_event = { id = LFCustomReligion.5 }
+	}
+}
+
+# Feminism?
+character_event = {
+	id = LFCustomReligion.5
+	desc = LFCustomReligion5
+	picture = lf_gypsy_small
+	ai = no
+	is_triggered_only = yes
+	
+	option = { # Normal
+		name = LFCustomReligion5TTA
+		lf_luxuria_custom = {
+			set_feminist = no
+			set_allows_matrilineal_marriage = yes
+			set_female_temple_holders = yes
+			set_male_temple_holders = yes
+		}
+		hidden_tooltip = {
+			lf_luxuria_custom_reformed = {
+				set_feminist = no
+				set_allows_matrilineal_marriage = yes
+				set_female_temple_holders = yes
+				set_male_temple_holders = yes
+			}
+		}
+		set_global_flag = lf_custom_fem_normal
+		character_event = { id = LFCustomReligion.6 }
+	}
+	option = { # Matriarchal
+		name = LFCustomReligion5TTB
+		lf_luxuria_custom = {
+			set_feminist = yes
+			set_allows_matrilineal_marriage = yes
+			set_female_temple_holders = yes
+			set_male_temple_holders = no
+		}
+		hidden_tooltip = {
+			lf_luxuria_custom_reformed = {
+				set_feminist = yes
+				set_allows_matrilineal_marriage = no
+				set_female_temple_holders = yes
+				set_male_temple_holders = no
+			}
+		}
+		set_global_flag = lf_custom_fem_matr
+		character_event = { id = LFCustomReligion.6 }
+	}
+	option = { # Patriarchal
+		name = LFCustomReligion5TTC
+		lf_luxuria_custom = {
+			set_feminist = no
+			set_allows_matrilineal_marriage = no
+			set_female_temple_holders = no
+			set_male_temple_holders = yes
+		}
+		hidden_tooltip = {
+			lf_luxuria_custom_reformed = {
+				set_feminist = no
+				set_allows_matrilineal_marriage = no
+				set_female_temple_holders = no
+				set_male_temple_holders = yes
+			}
+		}
+		set_global_flag = lf_custom_fem_patr
+		character_event = { id = LFCustomReligion.6 }
+	}
+}
+
+# Concubinage?
+character_event = {
+	id = LFCustomReligion.6
+	desc = LFCustomReligion6
+	picture = lf_gypsy_small
+	ai = no
+	is_triggered_only = yes
+	
+	option = { # None
+		name = LFCustomReligion6TTA
+		lf_luxuria_custom = {
+			set_max_consorts = 0
+			set_women_can_take_consorts = no
+			set_men_can_take_consorts = no
+		}
+		hidden_tooltip = {
+			lf_luxuria_custom_reformed = {
+				set_max_consorts = 0
+				set_women_can_take_consorts = no
+				set_men_can_take_consorts = no
+			}
+		}
+		set_global_flag = lf_custom_consort_none
+		character_event = { id = LFCustomReligion.7 }
+	}
+	option = { # Male Concubinage
+		name = LFCustomReligion6TTB
+		lf_luxuria_custom = {
+			set_max_consorts = 3
+			set_women_can_take_consorts = no
+			set_men_can_take_consorts = yes
+		}
+		hidden_tooltip = {
+			lf_luxuria_custom_reformed = {
+				set_max_consorts = 3
+				set_women_can_take_consorts = no
+				set_men_can_take_consorts = yes
+			}
+		}
+		set_global_flag = lf_custom_consort_male
+		character_event = { id = LFCustomReligion.7 }
+	}
+	option = { # Female Concubinage
+		name = LFCustomReligion6TTC
+		lf_luxuria_custom = {
+			set_max_consorts = 3
+			set_women_can_take_consorts = yes
+			set_men_can_take_consorts = no
+		}
+		hidden_tooltip = {
+			lf_luxuria_custom_reformed = {
+				set_max_consorts = 3
+				set_women_can_take_consorts = yes
+				set_men_can_take_consorts = no
+			}
+		}
+		set_global_flag = lf_custom_consort_female
+		character_event = { id = LFCustomReligion.7 }
+	}
+	option = { # Both
+		name = LFCustomReligion6TTD
+		lf_luxuria_custom = {
+			set_max_consorts = 3
+			set_women_can_take_consorts = yes
+			set_men_can_take_consorts = yes
+		}
+		hidden_tooltip = {
+			lf_luxuria_custom_reformed = {
+				set_max_consorts = 3
+				set_women_can_take_consorts = yes
+				set_men_can_take_consorts = yes
+			}
+		}
+		set_global_flag = lf_custom_consort_both
+		character_event = { id = LFCustomReligion.7 }
+	}
+}
+
+# Islamic?
+character_event = {
+	id = LFCustomReligion.7
+	desc = LFCustomReligion7
+	picture = lf_gypsy_small
+	ai = no
+	is_triggered_only = yes
+	
+	option = { # Polygamy
+		name = LFCustomReligion7TTA
+		lf_luxuria_custom = {
+			set_max_wives = 3
+			set_men_can_take_consorts = no
+		}
+		hidden_tooltip = {
+			lf_luxuria_custom_reformed = {
+				set_max_wives = 3
+				set_men_can_take_consorts = no
+			}
+		}
+		set_global_flag = lf_custom_islamic_poly
+		character_event = { id = LFCustomReligion.8 }
+	}
+	option = { # Decadence
+		name = LFCustomReligion7TTB
+		lf_luxuria_custom = {
+			set_uses_decadence = yes
+		}
+		hidden_tooltip = {
+			lf_luxuria_custom_reformed = {
+				set_uses_decadence = yes
+			}
+		}
+		set_global_flag = lf_custom_islamic_dec
+		character_event = { id = LFCustomReligion.8 }
+	}
+	option = { # Both
+		name = LFCustomReligion7TTC
+		lf_luxuria_custom = {
+			set_max_wives = 3
+			set_men_can_take_consorts = no
+			set_uses_decadence = yes
+		}
+		hidden_tooltip = {
+			lf_luxuria_custom_reformed = {
+				set_max_wives = 3
+				set_men_can_take_consorts = no
+				set_uses_decadence = yes
+			}
+		}
+		set_global_flag = lf_custom_islamic_both
+		character_event = { id = LFCustomReligion.8 }
+	}
+	option = { # Neither
+		name = LFCustomReligion7TTD
+		set_global_flag = lf_custom_islamic_none
+		character_event = { id = LFCustomReligion.8 }
+	}
+}
+
+# Raiding?
+character_event = {
+	id = LFCustomReligion.8
+	desc = LFCustomReligion8
+	picture = lf_gypsy_small
+	ai = no
+	is_triggered_only = yes
+	
+	option = { # Looting
+		name = LFCustomReligion8TTA
+		lf_luxuria_custom = {
+			set_allow_looting = yes
+		}
+		hidden_tooltip = {
+			lf_luxuria_custom_reformed = {
+				set_allow_looting = yes
+			}
+		}
+		set_global_flag = lf_custom_raiding_looting
+		character_event = { id = LFCustomReligion.9 }
+	}
+	option = { # Seafaring Looting
+		name = LFCustomReligion8TTB
+		lf_luxuria_custom = {
+			set_allow_looting = yes
+			set_seafaring = yes
+			set_allow_rivermovement = yes
+		}
+		hidden_tooltip = {
+			lf_luxuria_custom_reformed = {
+				set_allow_looting = yes
+			}
+			if = {
+				limit = {
+					NOT = { has_dlc = "Holy Fury" }
+				}
+				lf_luxuria_custom_reformed = {
+					set_seafaring = yes
+					set_allow_rivermovement = yes
+				}
+			}
+		}
+		set_global_flag = lf_custom_raiding_sea
+		character_event = { id = LFCustomReligion.9 }
+	}
+	option = { # Neither
+		name = LFCustomReligion8TTC
+		set_global_flag = lf_custom_raiding_none
+		character_event = { id = LFCustomReligion.9 }
+	}
+}
+
+# God name?
+character_event = {
+	id = LFCustomReligion.9
+	desc = LFCustomReligion9
+	picture = lf_gypsy_small
+	ai = no
+	is_triggered_only = yes
+	
+	option = { # Pre-defined names
+		name = LFCustomReligion9TTA
+		character_event = { id = LFCustomReligion.91 }
+	}
+	option = { # True Custom
+		name = LFCustomReligion9TTB
+		custom_tooltip = {
+			text = LFCustomReligion9TTHTooltip
+		}
+		character_event = { id = LFCustomReligion.200 }
+		character_event = { id = LFCustomReligion.10 }
+		set_global_flag = lf_custom_names_playerchoice
+	}
+}
+
+# God name?
+character_event = {
+	id = LFCustomReligion.91
+	desc = LFCustomReligion9
+	picture = lf_gypsy_small
+	ai = no
+	is_triggered_only = yes
+	option = { # Lilith
+		name = LFCustomReligion91TTA
+		lf_add_lilith_gods = yes
+		set_global_flag = lf_lilith_religion_name
+		character_event = { id = LFCustomReligion.10 }
+	}
+	
+	option = { # Seldarine
+		name = LFCustomReligion91TTB
+		trigger = {
+			is_elf = yes
+		}
+		set_global_flag = lf_seldarine_religion_name
+		lf_add_seldarine_gods = yes
+		character_event = { id = LFCustomReligion.10 }
+	}
+	option = { # Orcish
+		name = LFCustomReligion91TTC
+		trigger = {
+			is_orc = yes
+		}
+		set_global_flag = lf_orcish_religion_name
+		lf_add_orcish_gods = yes
+		character_event = { id = LFCustomReligion.10 }
+	}
+	option = { # Fae
+		name = LFCustomReligion91TTD
+		trigger = {
+			is_fairy = yes
+		}
+		set_global_flag = lf_fae_religion_name
+		lf_add_seelie_gods = yes
+		character_event = { id = LFCustomReligion.10 }
+	}
+	option = { # Cats
+		name = LFCustomReligion91TTE
+		trigger = {
+			is_neko = yes
+		}
+		set_global_flag = lf_meow_religion_name
+		lf_add_cat_gods = yes
+		character_event = { id = LFCustomReligion.10 }
+	}
+	option = { # Weeb
+		name = LFCustomReligion91TTF
+		trigger = {
+			is_kitsune = yes
+		}
+		set_global_flag = lf_weeb_religion_name
+		lf_add_weeb_gods = yes
+		character_event = { id = LFCustomReligion.10 }
+	}
+	option = { # FFXIV (Twelve)
+		name = LFCustomReligion91TTG
+		lf_add_ffxiv_gods = yes
+		set_global_flag = lf_twelve_religion_name
+		character_event = { id = LFCustomReligion.10 }
+	}
+	option = { # FFXIV (Primals)
+		name = LFCustomReligion91TTH
+		lf_add_ffxiv_primal_gods = yes
+		set_global_flag = lf_primal_religion_name
+		character_event = { id = LFCustomReligion.10 }
+	}
+}
+
+# Conversion?
+character_event = {
+	id = LFCustomReligion.10
+	desc = LFCustomReligion10
+	picture = lf_gypsy_small
+	ai = no
+	is_triggered_only = yes
+	
+	option = { # All Realm Characters
+		name = LFCustomReligion10TTA
+		hidden_effect = {
+			lf_custom_religion_realm_characters = yes
+		}
+	}
+	option = { # All Realm Provinces
+		name = LFCustomReligion10TTB
+		hidden_effect = {
+			lf_custom_religion_realm_provinces = yes
+		}
+	}
+	option = { # Both
+		name = LFCustomReligion10TTC
+		hidden_effect = {
+			lf_custom_religion_realm_characters = yes
+			lf_custom_religion_realm_provinces = yes
+		}
+	}
+	option = { # None
+		name = LFCustomReligion10TTD
+	}
+	after = {
+		religion_authority = { modifier = lf_religion_founder }
+	}
+}
+
+
+character_event = {
+	id = LFCustomReligion.100
+	hide_window = yes
+	ai = no
+	is_triggered_only = yes
+	immediate = {
+		c_khotan = {
+			remove_holy_site = lf_luxuria_custom
+			remove_holy_site = lf_luxuria_custom_reformed
+		}
+		c_udabhanda = {
+			remove_holy_site = lf_luxuria_custom
+			remove_holy_site = lf_luxuria_custom_reformed
+		}
+		c_gaya = {
+			remove_holy_site = lf_luxuria_custom
+			remove_holy_site = lf_luxuria_custom_reformed
+		}
+		c_lhasa = {
+			remove_holy_site = lf_luxuria_custom
+			remove_holy_site = lf_luxuria_custom_reformed
+		}
+		c_jiuquan = {
+			remove_holy_site = lf_luxuria_custom
+			remove_holy_site = lf_luxuria_custom_reformed
+		}
+		lf_customize_religion_holy_site_full_random = yes
+		lf_customize_religion_holy_site_full_random = yes
+		lf_customize_religion_holy_site_full_random = yes
+		lf_customize_religion_holy_site_full_random = yes
+		lf_customize_religion_holy_site_full_random = yes
+	}
+}
+
+character_event = {
+	id = LFCustomReligion.101
+	hide_window = yes
+	ai = no
+	is_triggered_only = yes
+	immediate = {
+		c_khotan = {
+			remove_holy_site = lf_luxuria_custom
+			remove_holy_site = lf_luxuria_custom_reformed
+		}
+		c_udabhanda = {
+			remove_holy_site = lf_luxuria_custom
+			remove_holy_site = lf_luxuria_custom_reformed
+		}
+		c_gaya = {
+			remove_holy_site = lf_luxuria_custom
+			remove_holy_site = lf_luxuria_custom_reformed
+		}
+		c_lhasa = {
+			remove_holy_site = lf_luxuria_custom
+			remove_holy_site = lf_luxuria_custom_reformed
+		}
+		c_jiuquan = {
+			remove_holy_site = lf_luxuria_custom
+			remove_holy_site = lf_luxuria_custom_reformed
+		}
+		lf_customize_religion_holy_site_regional_random = yes
+		lf_customize_religion_holy_site_regional_random = yes
+		lf_customize_religion_holy_site_regional_random = yes
+		lf_customize_religion_holy_site_regional_random = yes
+		lf_customize_religion_holy_site_regional_random = yes
+	}
+}
+
+character_event = {
+	id = LFCustomReligion.102
+	hide_window = yes
+	ai = no
+	is_triggered_only = yes
+	immediate = {
+		c_khotan = {
+			remove_holy_site = lf_luxuria_custom
+			remove_holy_site = lf_luxuria_custom_reformed
+		}
+		c_udabhanda = {
+			remove_holy_site = lf_luxuria_custom
+			remove_holy_site = lf_luxuria_custom_reformed
+		}
+		c_gaya = {
+			remove_holy_site = lf_luxuria_custom
+			remove_holy_site = lf_luxuria_custom_reformed
+		}
+		c_lhasa = {
+			remove_holy_site = lf_luxuria_custom
+			remove_holy_site = lf_luxuria_custom_reformed
+		}
+		c_jiuquan = {
+			remove_holy_site = lf_luxuria_custom
+			remove_holy_site = lf_luxuria_custom_reformed
+		}
+		lf_customize_religion_holy_site_tight_random = yes
+		lf_customize_religion_holy_site_tight_random = yes
+		lf_customize_religion_holy_site_tight_random = yes
+		lf_customize_religion_holy_site_tight_random = yes
+		lf_customize_religion_holy_site_tight_random = yes
+	}
+}
+
+character_event = {
+	id = LFCustomReligion.200
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		create_character = {
+			name = "Evil God 2 of 2"
+			dynasty = none
+			culture = ROOT
+			religion = ROOT
+		}
+		new_character = {
+			save_event_target_as = lf_evil_god_character2
+			prompt_name = {
+				player = ROOT
+				type = RENAME_CHARACTER_MESSAGE
+			}
+		}
+		create_character = {
+			name = "Evil God 1 of 2"
+			dynasty = none
+			culture = ROOT
+			religion = ROOT
+		}
+		new_character = {
+			save_event_target_as = lf_evil_god_character1
+			prompt_name = {
+				player = ROOT
+				type = RENAME_CHARACTER_MESSAGE
+			}
+		}
+		create_character = {
+			name = "God 3 of 3"
+			dynasty = none
+			culture = ROOT
+			religion = ROOT
+		}
+		new_character = {
+			save_event_target_as = lf_god_character3
+			prompt_name = {
+				player = ROOT
+				type = RENAME_CHARACTER_MESSAGE
+			}
+		}
+		create_character = {
+			name = "God 2 of 3"
+			dynasty = none
+			culture = ROOT
+			religion = ROOT
+		}
+		new_character = {
+			save_event_target_as = lf_god_character2
+			prompt_name = {
+				player = ROOT
+				type = RENAME_CHARACTER_MESSAGE
+			}
+		}
+		create_character = {
+			name = "God 1 of 3"
+			dynasty = none
+			culture = ROOT
+			religion = ROOT
+		}
+		new_character = {
+			save_event_target_as = lf_god_character1
+			prompt_name = {
+				player = ROOT
+				type = RENAME_CHARACTER_MESSAGE
+			}
+		}
+		create_character = {
+			name = "High God"
+			dynasty = none
+			culture = ROOT
+			religion = ROOT
+		}
+		new_character = {
+			save_event_target_as = lf_high_god_character
+			prompt_name = {
+				player = ROOT
+				type = RENAME_CHARACTER_MESSAGE
+			}
+		}
+		create_character = {
+			name = "Religion"
+			dynasty = none
+			culture = ROOT
+			religion = ROOT
+		}
+		new_character = {
+			save_event_target_as = lf_religion_character
+			prompt_name = {
+				player = ROOT
+				type = RENAME_CHARACTER_MESSAGE
+			}
+		}
+		
+	}
+	after = {
+		character_event = { id = LFCustomReligion.201 days = 1 }
+	}
+}
+
+character_event = {
+	id = LFCustomReligion.201
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		lf_luxuria_custom = {
+			remove_god_names = yes
+			remove_evil_god_names = yes
+		}
+		lf_luxuria_custom_reformed = {
+			remove_god_names = yes
+			remove_evil_god_names = yes
+		}
+		event_target:lf_religion_character = {
+			save_global_event_target_as = lf_custom_religion_name
+			set_character_flag = lf_never_turn_spoopy
+			death = { death_reason = death_missing }
+		}
+		event_target:lf_high_god_character = {
+			save_global_event_target_as = lf_high_god
+			set_character_flag = lf_never_turn_spoopy
+			death = { death_reason = death_missing }
+		}
+		event_target:lf_god_character1 = {
+			save_global_event_target_as = lf_god_1
+			set_character_flag = lf_never_turn_spoopy
+			death = { death_reason = death_missing }
+		}
+		event_target:lf_god_character2 = {
+			save_global_event_target_as = lf_god_2
+			set_character_flag = lf_never_turn_spoopy
+			death = { death_reason = death_missing }
+		}
+		event_target:lf_god_character3 = {
+			save_global_event_target_as = lf_god_3
+			set_character_flag = lf_never_turn_spoopy
+			death = { death_reason = death_missing }
+		}
+		event_target:lf_evil_god_character1 = {
+			save_global_event_target_as = lf_evil_god_1
+			set_character_flag = lf_never_turn_spoopy
+			death = { death_reason = death_missing }
+		}
+		event_target:lf_evil_god_character2 = {
+			save_global_event_target_as = lf_evil_god_2
+			set_character_flag = lf_never_turn_spoopy
+			death = { death_reason = death_missing }
+		}
+		lf_luxuria_custom = {
+			set_high_god_name = lf_custom_high_god
+			add_god_name = lf_custom_god1
+			add_god_name = lf_custom_god2
+			add_god_name = lf_custom_god3
+			add_evil_god_name = lf_custom_evil_god1
+			add_evil_god_name = lf_custom_evil_god2
+		}
+		lf_luxuria_custom_reformed = {
+			set_high_god_name = lf_custom_high_god
+			add_god_name = lf_custom_god1
+			add_god_name = lf_custom_god2
+			add_god_name = lf_custom_god3
+			add_evil_god_name = lf_custom_evil_god1
+			add_evil_god_name = lf_custom_evil_god2
+		}
+		set_global_flag = lf_true_custom_religion_name
+	}
+}
+
+#character_event = {
+#	id = LFCustomReligion.203
+#	hide_window = yes
+#	is_triggered_only = yes
+#	ai = no
+#	trigger = {
+#		religion = lf_luxuria_custom_reformed
+#		has_global_flag = lf_true_custom_religion_name
+#	}
+#	immediate = {
+#		create_character = {
+#			name = "Head of Religion Title (Female)"
+#			dynasty = none
+#			culture = ROOT
+#			religion = ROOT
+#		}
+#		new_character = {
+#			save_global_event_target_as = lf_custom_pope_female
+#			prompt_name = {
+#				player = ROOT
+#				type = RENAME_CHARACTER_MESSAGE
+#			}
+#		}
+#		create_character = {
+#			name = "Head of Religion Title (Male)"
+#			dynasty = none
+#			culture = ROOT
+#			religion = ROOT
+#		}
+#		new_character = {
+#			save_global_event_target_as = lf_custom_pope_male
+#			prompt_name = {
+#				player = ROOT
+#				type = RENAME_CHARACTER_MESSAGE
+#			}
+#		}
+#	}
+#	after = {
+#		event_target:lf_custom_pope_male = {
+#			death = { death_reason = death_missing }
+#		}
+#		event_target:lf_custom_pope_female = {
+#			death = { death_reason = death_missing }
+#		}
+#	}
+#}
+
+character_event = {
+	id = LFCustomReligion.205
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = { 
+				OR = {
+					NOT = { has_dlc = "Holy Fury" } 
+					has_religion_feature = religion_temporal_head 
+				} 
+				religion = lf_luxuria_custom_reformed 
+
+			}
+			add_artifact = lf_crown_custom
+		}
+	}
+}

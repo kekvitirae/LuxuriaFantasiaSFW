@@ -1,0 +1,43 @@
+RETTYPE_CUL_HORSE_TAUR_INFANTRY = 
+{
+	first_type = 3
+	first_amount = 150
+	second_type = 4
+	second_amount = 50
+	
+	potential = {
+		culture_group = horse_group
+		lf_is_silly = yes
+		has_global_flag = taurtaur_chosen
+	}
+	
+	modifier = {
+		light_cavalry_defensive = 0.75
+		light_cavalry_morale = 0.75
+		knights_offensive = 0.75
+		knights_morale = 0.75
+
+	}
+}
+
+RETTYPE_CUL_HORSE_TAUR_SKIRMISH = 
+{
+	first_type = 6
+	first_amount = 100
+	second_type = 3
+	second_amount = 100
+	
+	potential = {
+		culture_group = horse_group
+		lf_is_silly = yes
+		has_global_flag = taurtaur_chosen
+	}
+	
+	modifier = {
+		light_cavalry_defensive = 0.75
+		light_cavalry_morale = 0.75
+		horse_archers_offensive = 0.75
+		horse_archers_morale = 0.75
+
+	}
+}

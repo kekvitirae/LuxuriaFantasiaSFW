@@ -1,0 +1,490 @@
+namespace = LFSexytimesRouting
+
+# .1 Event target assignment
+character_event = { 
+	id = LFSexytimesRouting.1
+	hide_window = yes
+	is_triggered_only = yes # targetted_decision
+	immediate = {
+		if = {
+			limit = {
+				event_target:lf_sex_player = {
+					is_female = yes
+					is_not_futa = yes
+				}
+			}
+			character_event = { id = LFSexytimesFemale.1 } # Player Female routing
+		}
+		else_if = {
+			limit = {
+				event_target:lf_sex_player = {
+					is_female = yes
+					is_futa = yes
+				}
+			}
+			character_event = { id = LFSexytimesFuta.1 } # Player Futa routing
+		}
+		else_if = {
+			limit = {
+				event_target:lf_sex_player = {
+					is_female = no
+				}
+			}
+			character_event = { id = LFSexytimesMale.1 } # Player Male routing
+		}
+		if = {
+			limit = {
+				event_target:lf_sex_player = {
+					has_character_modifier = lf_potion_midas
+				}
+			}
+			event_target:lf_sex_player = {
+				character_event = { id = LFSexytimesRouting.16 days = 1 }
+			}
+		}
+	}
+}
+
+# .2 Sex preference assignment (on_startup, on_adulthood)
+character_event = { 
+	id = LFSexytimesRouting.2
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = { has_character_flag = lf_switchsubdom_chosen }
+		NOR = {
+			trait = lf_submissive
+			trait = lf_dominant
+			trait = lf_switch
+		}
+		is_adult = yes
+	}
+	immediate = {
+		random_list = {
+			15 = {
+				modifier = {
+					factor = 0.25
+					trait = kind
+					trait = chaste
+					trait = shy
+				}
+				modifier = {
+					factor = 3
+					OR = {
+						trait = cruel
+						trait = wroth
+					}
+				}
+				add_trait = lf_dominant
+			}
+			15 = {
+				modifier = {
+					factor = 0.25
+					OR = {
+						trait = cruel
+						trait = wroth
+					}
+				}
+				modifier = {
+					factor = 3
+					OR = {
+						trait = shy
+						trait = chaste
+						trait = kind
+					}
+				}
+				add_trait = lf_submissive
+			}
+			45 = {
+				add_trait = lf_switch
+			}
+		}
+	}
+	
+	after = {
+		set_character_flag = lf_switchsubdom_chosen
+	}
+	
+}
+
+# .3 Actual assignment event because fuck on_chronicle events
+character_event = {
+	id = LFSexytimesRouting.3
+	desc = LFSexytimesRouting3
+	picture = GFX_evt_gift
+	is_triggered_only = yes
+	ai = no
+	trigger = {
+		is_adult = yes
+		NOT = { has_character_flag = lf_switchsubdom_chosen }
+		NOR = {
+			trait = lf_switch
+			trait = lf_dominant
+			trait = lf_submissive
+		}
+	}
+	
+	immediate = {
+		set_character_flag = lf_switchsubdom_chosen
+	}
+	
+	option = { # Switch
+		name = LFSexytimesRouting3TTA
+		add_trait = lf_switch
+		custom_tooltip = {
+			text = LFSexytimesRouting3TTA2
+		}
+	}
+	
+	option = { # Dominant
+		name = LFSexytimesRouting3TTB
+		add_trait = lf_dominant
+		custom_tooltip = {
+			text = LFSexytimesRouting3TTB2
+		}
+	}
+
+	option = { # Submissive
+		name = LFSexytimesRouting3TTC
+		add_trait = lf_submissive
+		custom_tooltip = {
+			text = LFSexytimesRouting3TTC2
+		}
+	}
+}
+
+# .4 Second routing event for role assignment because fuck on_chronicle events
+character_event = {
+	id = LFSexytimesRouting.4
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_adult = yes
+		NOT = { has_character_flag = lf_switchsubdom_chosen }
+		NOR = {
+			trait = lf_switch
+			trait = lf_dominant
+			trait = lf_submissive
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				ai = no
+			}
+			character_event = { id = LFSexytimesRouting.3 }
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			character_event = { id = LFSexytimesRouting.2 }
+		}
+	}
+}
+
+# .5 First routing event for role assignment because fuck on_chronicle events
+character_event = {
+	id = LFSexytimesRouting.5
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_adult = yes
+		NOT = { has_character_flag = lf_switchsubdom_chosen }
+		NOR = {
+			trait = lf_switch
+			trait = lf_dominant
+			trait = lf_submissive
+		}
+	}
+	immediate = {
+		character_event = { id = LFSexytimesRouting.4 days = 3 }
+	}
+}
+
+# .6 Increase the breeder counter by 1
+character_event = {
+	id = LFSexytimesRouting.6
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		lf_has_nsfw = yes
+		NOT = {
+			trait = lf_breeder
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				father_of_unborn = {
+					is_alive = yes
+					NOT = {
+						trait = lf_breeder
+					}
+				}
+			}
+			father_of_unborn = {
+				change_variable = { which = lf_breeder_count value = 1 }
+			}
+		}
+		change_variable = { which = lf_breeder_count value = 1 }
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						check_variable = { which = lf_breeder_count value = 9 }
+						immortal = no
+					}
+					AND = {
+						check_variable = { which = lf_breeder_count value = 18 }
+						immortal = yes
+					}
+				}
+			}
+			add_trait = lf_breeder
+			character_event = { id = LFSexytimesRouting.14 }
+		}
+		if = {
+			limit = {
+				father_of_unborn = {
+					is_alive = yes
+					OR = {
+						AND = {
+							check_variable = { which = lf_breeder_count value = 15 }
+							immortal = no
+						}
+						AND = {
+							check_variable = { which = lf_breeder_count value = 30 }
+							immortal = yes
+						}
+					}
+				}
+			}
+			father_of_unborn = {
+				add_trait = lf_breeder
+				character_event = { id = LFSexytimesRouting.14 }
+			}
+		}
+	}
+}
+
+# .9 AI on_startup and on_adulthood routing events for Insatiable
+character_event = {
+	id = LFSexytimesRouting.9
+	hide_window = yes
+	is_triggered_only = yes
+	ai = yes
+	trigger = {
+		lf_has_nsfw = yes
+		NOR = {
+			trait = chaste
+			trait = celibate
+			trait = lf_insatiable
+			trait = eunuch
+			has_character_flag = lf_insatiable_chance
+		}
+		trait = lustful
+		is_adult = yes
+	}
+	immediate = {
+		random_list = {
+			5 = {
+				add_trait = lf_insatiable
+			}
+			95 = { }
+		}
+		set_character_flag = lf_insatiable_chance
+	}
+}
+
+# .10 AI on_startup and on_adulthood routing events for Breeder
+character_event = {
+	id = LFSexytimesRouting.10
+	hide_window = yes
+	is_triggered_only = yes
+	ai = yes
+	trigger = {
+		lf_has_nsfw = yes
+		NOR = {
+			trait = chaste
+			trait = celibate
+			trait = lf_breeder
+			trait = eunuch
+			has_character_flag = lf_breeder_chance
+		}
+		trait = lustful
+		is_adult = yes
+	}
+	immediate = {
+		character_event = { id = LFSexytimesRouting.11 days = 1 }
+	}
+}
+		
+character_event = {
+	id = LFSexytimesRouting.11
+	hide_window = yes
+	is_triggered_only = yes
+	ai = yes
+	trigger = {
+		lf_has_nsfw = yes
+		NOR = {
+			trait = chaste
+			trait = celibate
+			trait = lf_breeder
+			trait = eunuch
+			has_character_flag = lf_breeder_chance
+		}
+		trait = lustful
+		is_adult = yes
+	}
+	immediate = {
+		random_list = {
+			5 = {
+				add_trait = lf_breeder
+			}
+			95 = { }
+		}
+		set_character_flag = lf_breeder_chance
+	}
+}
+
+# Insatiable trait
+character_event = {
+	id = LFSexytimesRouting.12
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		lf_has_nsfw = yes
+		NOR = { 
+			trait = lf_insatiable 
+			trait = chaste # Chaste characters will never get the trait
+		}
+	}
+
+	immediate = {
+		# Increases the counter by 1. 15 sexytimes gets you the trait.
+		change_variable = { which = lf_insatiable_counter value = 1 }
+		if = {
+			limit = {
+				check_variable = { which = lf_insatiable_counter value = 15 }
+			}
+			add_trait = lf_insatiable
+			if = {
+				limit = {
+					has_character_modifier = lf_sex_recovery
+				}
+				remove_character_modifier = lf_sex_recovery
+			}
+			set_variable = { which = lf_insatiable_counter value = 0 }
+			character_event = { id = LFSexytimesRouting.15 }
+		}
+	}
+}
+
+# on_yearly_pulse to reduce the counter
+character_event = {
+	id = LFSexytimesRouting.13
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = { trait = lf_insatiable }
+	}
+	immediate = {
+		if = { # decays by 3 each year
+			limit = {
+				NOT = { check_variable = { which = lf_insatiable_counter value = 15 } }
+				NOT = { trait = lustful }
+			}
+			subtract_variable = { which = lf_insatiable_counter value = 3 }
+		}
+		else_if = { # Lustful characters only decay by 2
+			limit = {
+				NOT = { check_variable = { which = lf_insatiable_counter value = 15 } }
+				trait = lustful
+			}
+			subtract_variable = { which = lf_insatiable_counter value = 2 }
+		}
+		if = { # Failsafe against going into the negatives
+			limit = {
+				check_variable = { which = lf_insatiable_counter value < 0 }
+			}
+			set_variable = { which = lf_insatiable_counter value = 0 }
+		}
+	}
+}
+
+#I have become a Breeder
+character_event = {
+	id = LFSexytimesRouting.14
+	desc = {
+		trigger = {
+			NOT = { lf_is_silly = yes }
+		}
+		text = LFSexytimesBreeder
+	}
+	desc = {
+		trigger = {
+			lf_is_silly = yes
+		}
+		text = LFSexytimesBreederSilly
+	}
+	picture = GFX_evt_emissary
+	
+	notification = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK 
+	}
+}
+
+#I have become Insatiable
+character_event = {
+	id = LFSexytimesRouting.15
+	desc = {
+		trigger = {
+			NOT = { lf_is_silly = yes }
+		}
+		text = LFSexytimesInsatiable
+	}
+	desc = {
+		trigger = {
+			lf_is_silly = yes
+		}
+		text = LFSexytimesInsatiableSilly
+	}
+	picture = GFX_evt_emissary
+	
+	notification = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK 
+	}
+}
+
+character_event = {
+	id = LFSexytimesRouting.16
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_character_modifier = lf_potion_midas
+		NOT = {
+			event_target:lf_sex_partner = {
+				has_character_flag = special_npc
+			}
+		}
+	}
+	immediate = {
+		random_list = {
+			50 = {
+			}
+			50 = { 
+				character_event = { id = LFPotions.7 }
+			}
+		}
+	}
+}

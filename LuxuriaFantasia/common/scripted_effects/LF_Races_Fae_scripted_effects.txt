@@ -1,0 +1,1454 @@
+check_elven_fertility = {
+	if = {
+		limit = {
+			is_female = yes
+			NOT = { has_character_flag = lf_npc_desmona }
+		}
+		if = {
+			limit = {
+				num_of_children = 3
+			}
+			if = {
+				limit = {
+					OR = {
+						has_character_modifier = lf_elven_infertility1
+						has_character_modifier = lf_elven_infertility2
+						has_character_modifier = lf_elven_infertility3
+					}
+				}
+				remove_character_modifier = lf_elven_infertility1
+				remove_character_modifier = lf_elven_infertility2
+				remove_character_modifier = lf_elven_infertility3
+			}
+			add_character_modifier = {
+				name = lf_elven_infertility4
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				num_of_children == 2
+			}
+			if = {
+				limit = {
+					OR = {
+						has_character_modifier = lf_elven_infertility1
+						has_character_modifier = lf_elven_infertility2
+					}
+				}
+				remove_character_modifier = lf_elven_infertility1
+				remove_character_modifier = lf_elven_infertility2
+			}
+			add_character_modifier = {
+				name = lf_elven_infertility3
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				num_of_children == 1
+			}
+			if = {
+				limit = {
+					has_character_modifier = lf_elven_infertility1
+				}
+				remove_character_modifier = lf_elven_infertility1
+			}
+			add_character_modifier = {
+				name = lf_elven_infertility2
+				duration = -1
+			}
+		}
+		else = {
+			add_character_modifier = {
+				name = lf_elven_infertility1
+				duration = -1
+			}
+		}
+	}
+	else_if = { # In case of gender swapping
+		limit = {
+			is_female = no
+			OR = {
+				has_character_modifier = lf_elven_infertility1
+				has_character_modifier = lf_elven_infertility2
+				has_character_modifier = lf_elven_infertility3
+				has_character_modifier = lf_elven_infertility4
+			}
+		}
+		remove_character_modifier = lf_elven_infertility1
+		remove_character_modifier = lf_elven_infertility2
+		remove_character_modifier = lf_elven_infertility3
+		remove_character_modifier = lf_elven_infertility4
+	}
+}			
+
+lf_add_random_fairy_portrait = {
+	if = {
+		limit = {
+			has_game_rule = { name = lf_custom_portraits value = lf_custom_off }
+		}
+		break = yes
+	}
+	random_list = {
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_fairy_portrait1_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_fairy_portrait2_cheri 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_fairy_portrait3_cheri 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_fairy_portrait4_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_fairy_portrait5_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_fairy_portrait6_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_fairy_portrait7_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_fairy_portrait8_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_fairy_portrait9_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_fairy_portrait10_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_fairy_portrait11_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_fairy_portrait12_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_fairy_portrait13_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_fairy_portrait14
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_fairy_portrait15 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_fairy_portrait16 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_fairy_portrait17 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_fairy_portrait18 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_fairy_portrait19 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_fairy_portrait20 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_fairy_portrait21 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_fairy_portrait22 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_fairy_portrait23 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_fairy_portrait24 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_fairy_portrait25 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_fairy_portrait26 
+		}
+	}
+}
+
+lf_remove_fairy_portrait = {
+	remove_trait = lf_fairy_portrait14
+	remove_trait = lf_fairy_portrait15
+	remove_trait = lf_fairy_portrait16
+	remove_trait = lf_fairy_portrait17
+	remove_trait = lf_fairy_portrait18
+	remove_trait = lf_fairy_portrait19
+	remove_trait = lf_fairy_portrait20
+	remove_trait = lf_fairy_portrait21
+	remove_trait = lf_fairy_portrait22
+	remove_trait = lf_fairy_portrait23
+	remove_trait = lf_fairy_portrait24
+	remove_trait = lf_fairy_portrait25
+	remove_trait = lf_fairy_portrait26
+	remove_trait = lf_fairy_portrait1_cheri
+	remove_trait = lf_fairy_portrait2_cheri
+	remove_trait = lf_fairy_portrait3_cheri
+	remove_trait = lf_fairy_portrait4_cheri
+	remove_trait = lf_fairy_portrait5_cheri
+	remove_trait = lf_fairy_portrait6_cheri
+	remove_trait = lf_fairy_portrait7_cheri
+	remove_trait = lf_fairy_portrait8_cheri
+	remove_trait = lf_fairy_portrait9_cheri
+	remove_trait = lf_fairy_portrait10_cheri
+	remove_trait = lf_fairy_portrait11_cheri
+	remove_trait = lf_fairy_portrait12_cheri
+	remove_trait = lf_fairy_portrait13_cheri
+}
+
+lf_add_random_elf_portrait = {
+	if = {
+		limit = {
+			has_game_rule = { name = lf_custom_portraits value = lf_custom_off }
+		}
+		break = yes
+	}
+	random_list = {
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_elf_portrait1_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_elf_portrait2_cheri 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_elf_portrait3_cheri 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_elf_portrait4_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_elf_portrait5_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_elf_portrait6_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_elf_portrait7_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_elf_portrait8_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_elf_portrait9_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_elf_portrait10_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_elf_portrait11_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_elf_portrait12_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_elf_portrait13_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_elf_portrait14
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_elf_portrait15 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_elf_portrait16 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_elf_portrait17 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_elf_portrait18 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_elf_portrait19 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_elf_portrait20 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_elf_portrait21 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_elf_portrait22 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_elf_portrait23 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_elf_portrait24 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_elf_portrait25 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_elf_portrait26 
+		}
+	}
+}
+
+lf_remove_elf_portrait = {
+	remove_trait = lf_elf_portrait14
+	remove_trait = lf_elf_portrait15
+	remove_trait = lf_elf_portrait16
+	remove_trait = lf_elf_portrait17
+	remove_trait = lf_elf_portrait18
+	remove_trait = lf_elf_portrait19
+	remove_trait = lf_elf_portrait20
+	remove_trait = lf_elf_portrait21
+	remove_trait = lf_elf_portrait22
+	remove_trait = lf_elf_portrait23
+	remove_trait = lf_elf_portrait24
+	remove_trait = lf_elf_portrait25
+	remove_trait = lf_elf_portrait26
+	remove_trait = lf_elf_portrait1_cheri
+	remove_trait = lf_elf_portrait2_cheri
+	remove_trait = lf_elf_portrait3_cheri
+	remove_trait = lf_elf_portrait4_cheri
+	remove_trait = lf_elf_portrait5_cheri
+	remove_trait = lf_elf_portrait6_cheri
+	remove_trait = lf_elf_portrait7_cheri
+	remove_trait = lf_elf_portrait8_cheri
+	remove_trait = lf_elf_portrait9_cheri
+	remove_trait = lf_elf_portrait10_cheri
+	remove_trait = lf_elf_portrait11_cheri
+	remove_trait = lf_elf_portrait12_cheri
+	remove_trait = lf_elf_portrait13_cheri
+}
+
+lf_add_random_orc_portrait = {
+	if = {
+		limit = {
+			has_game_rule = { name = lf_custom_portraits value = lf_custom_off }
+		}
+		break = yes
+	}
+	random_list = {
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_orc_portrait1 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_orc_portrait2 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_orc_portrait3 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_orc_portrait4 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_orc_portrait5 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_orc_portrait6 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_orc_portrait7 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_orc_portrait8 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_orc_portrait9 
+		}
+
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_orc_portrait10 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_orc_portrait11 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_orc_portrait12 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = lf_orc_portrait13 
+		}
+
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_orc_portrait14
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_orc_portrait15 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_orc_portrait16 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_orc_portrait17 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_orc_portrait18 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_orc_portrait19 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_orc_portrait20 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_orc_portrait21 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_orc_portrait22 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_orc_portrait23 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_orc_portrait24 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_orc_portrait25 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = lf_orc_portrait26 
+		}
+	}
+}
+
+lf_remove_orc_portrait = {
+	remove_trait = lf_orc_portrait1
+	remove_trait = lf_orc_portrait2
+	remove_trait = lf_orc_portrait3
+	remove_trait = lf_orc_portrait4
+	remove_trait = lf_orc_portrait5
+	remove_trait = lf_orc_portrait6
+	remove_trait = lf_orc_portrait7
+	remove_trait = lf_orc_portrait8
+	remove_trait = lf_orc_portrait9
+	remove_trait = lf_orc_portrait10
+	remove_trait = lf_orc_portrait11
+	remove_trait = lf_orc_portrait12
+	remove_trait = lf_orc_portrait13
+	remove_trait = lf_orc_portrait14
+	remove_trait = lf_orc_portrait15
+	remove_trait = lf_orc_portrait16
+	remove_trait = lf_orc_portrait17
+	remove_trait = lf_orc_portrait18
+	remove_trait = lf_orc_portrait19
+	remove_trait = lf_orc_portrait20
+	remove_trait = lf_orc_portrait21
+	remove_trait = lf_orc_portrait22
+	remove_trait = lf_orc_portrait23
+	remove_trait = lf_orc_portrait24
+	remove_trait = lf_orc_portrait25
+	remove_trait = lf_orc_portrait26
+}

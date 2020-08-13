@@ -1,0 +1,72 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+dwse_dragon_group;Dragon;;;;;;;;;;;;;;x
+dwse_dragon;Dragon;;;;;;;;;;;;;;x
+dwse_dragon_desc;A breed of ancient reptile long thought lost to the world.;;;;;;;;;;;;;;x
+dwse_dragon_adj;Draconic;;;;;;;;;;;;;;x
+dwse_dragon_child;Dragonling;;;;;;;;;;;;;;x
+dwse_dragon_child_desc;A breed of ancient reptile long thought lost to the world. This one has yet to reach maturity.;;;;;;;;;;;;;;x
+dwse_dragon_adult;Dragon;;;;;;;;;;;;;;;x
+dwse_dragon_adult_desc;A breed of ancient reptile long thought lost to the world.;;;;;;;;;;;;;;x
+dwse_dragonslut;Dragon Slut;;;;;;;;;;;;;;x
+dwse_dragonslut_desc;This character is enthralled with the idea of getting filled by a huge dragon and being used as nothing more than a just breeding slave for them.;;;;;;;;;;;;;;x
+dragon_pregnancy;Heavy with Dragon Egg;;;;;;;;;;;;;;x
+dragon_pregnancy_desc;Impregnanted by a dragon;;;;;;;;;;;;;;x
+was_dragon_ambassador;Former Dragon Ambassador;;;;;;;;;;;;;;x
+was_dragon_ambassador_desc;You can see it in her eyes... the things she's seen and done in the Elder Forest certainly left a mark on her. Whether it was so good that she fears never wanting to return home, or so bad that she was permanently scarred... she wont say, only that she refuses to go back.;;;;;;;;;;;;;;x
+dwse_dragon_egg;Dragon Egg;;;;;;;;;;;;;;x
+dwse_dragon_egg_desc;A Dragon's Egg laid by a human. It reeks of sulfur and brimstone;;;;;;;;;;;;;;x
+dwse_dragonegg_slot;Your Dragon Egg;;;;;;;;;;;;;;x
+lf_kidnap_title;Kidnapping;;;;;;;;;;;;;;x
+dwseom3800;I call for my dragon and inform them of my desire to abduct [dw_kidnap_target.GetBestName] and make them my prisoner. They in turn flex there wings with a sadistic grin.\n  In the end, it will take a week for my dragon to deposit [dw_kidnap_target.GetFirstName] into my dungeons if they're successful. How successful is influenced by how skilled my dragon is in intrigue, versus that of the target.  \n  As far as risks go, since my Dragon is involved personally, they're putting themselves in harms way. And while every failure doesn't necessarily result in the dragon being harmed or worse, it is still indeed a risk. Another risk is the chance that the SpyMaster of the country we're seeking to do our kidnapping in, may end up catching wind of the attempt and in turn become involved themselves. Oh, and obviously the ruler of the realm would be able to leverage their realm intrigue in their defense. \n  With my options and the risks made clear, the only thing left is my decision.;;;;;;;;;;;;;x
+dwseom3800A;Yes, proceed as normal with the kidnapping [dw_kidnap_target.GetFirstName].;;;;;;;;;;;;;x
+dwseom3800B;I've changed my mind. Let's not do this.;;;;;;;;;;;;;x
+dwseom3801;A courtier steps forward to inform me that my Dragon has returned, and and it's hunt was successful. I excuse myself from court and make my way to the cells. \n  There I find [dw_kidnap_target.GetBestName] in a holding cell. I can't help but grin a bit at seeing my new captive. The options now available to me with this new prisoner are definitely enticing. It's time for me to return to court, but before I leave, I address my new prisoner...;;;;;;;;;;;;;x 
+dragon_kidnap;Draconic Abduction;;;;;;;;;;;;;x 
+dragon_kidnap_desc;Have one of your dragons abduct an unsuspecting individual.;;;;;;;;;;;;;x 
+dwseom900;[From.GetBestName]'s guardian [From.Mother.GetBestName]has died. Without them there is nothing holding [From.GetBestName] here.\n The sky has called to [From.GetBestName] and they have flown off into the night. Journeying to the homeland of the Dragons; The Elder Forest.;;;;;;;;;;;;;x
+dwseom900A;May [From.GetBestName] fly Straight and True.;;;;;;;;;;;;;x 
+dragon_battle; Burn Enemy with Dragon Fire;;;;;;;;;;;;;x 
+dragon_battle_desc;Utilize one of your dragons to lay waaste to enemy forces.;;;;;;;;;;;;;x 
+dragon_sex_event;Calm a Dragon;;;;;;;;;;;;;x 
+dragon_sex_event_desc;Your dragon's have been becoming more aggressive lately. Calm them before it is to late.;;;;;;;;;;;;;x 
+DWSE_dragon_sex_tooltip_you;You: Female, breeding age, not pregnant, not a dragon or ghost, not asexual.;;;;;;;;;;;;;x 
+DWSE_dragon_sex_tooltip_weyrleader;Courtier or Vassal: Female, breeding age, not pregnant, not a dragon or ghost, not asexual. Must be a Weyrleader.;;;;;;;;;;;;;x 
+DWSE_dragon_sex_tooltip_prisoner;Prisoner: Female, breeding age, not pregnant, not a dragon or ghost.;;;;;;;;;;;;;x 
+
+dragon_satisfied;Calmed;;;;;;;;;;;;;x 
+dragon_satisfied_desc;This dragon has been calmed and is not acting aggressivly.;;;;;;;;;;;;;x 
+dragon_fire;Exhausted Flames;;;;;;;;;;;;;x 
+dragon_fire_desc; This dragon has recently used its fire and needs time before it can use it's flame again.;;;;;;;;;;;;;x 
+dwseom_dragon_stable;Aggressive Dragons;;;;;;;;;;;;;x 
+dwseom1000;One of my dragons has been acting aggressive lately.\n  Their scales are tough and very sharp around the edges, which easily cut the hands of anyone trying to wash the beasts. Dragons are playful in nature and seldom recognise their own strength. A few playful nips can turn serious if not tended to. These are to be expect when dealing with dragons.\n  What I did not expect was a stable hand to nearly lose his head when a dragon disagreed with him or a maid to suffer intense burns at the hands of one of my dragons. While these incidents are shocking, you must be cautious when working with dragons.\n  What shocked me the most was when one of the maids came forth and stated that my dragon attempted to mount her, if not for her clothing she would surely be carrying a dragon's egg right now.\n Maybe I can use this to calm my dragon?;;;;;;;;;;;;;x 
+dwseom1000A;I will attempt to calm them myself.;;;;;;;;;;;;;x 
+dwseom1000B;I will have a Weyrleader calm them.;;;;;;;;;;;;;x 
+dwseom1000D;I will let them play with one of the prisoners.;;;;;;;;;;;;;x 
+dwseom_dragon_sex;To Ride a Dragon;;;;;;;;;;;;;x 
+dwseom1001;I enter the hall that houses my dragon, [dragonbreed.GetFirstName], and dismiss the guard and the servants tending to him. After the last one leaves and the hall door closes, I disrobe.\n [dragonbreed.GetFirstName] approaches as he gets close I can feel his warm breath across my bare form. He lets out a low growl before shoving me to the floor. \n I barely have time to register what happened before I feel his member press against my rearer. With a mighty shove he enters me. Again and again he thrusts.\n Minutes pass, or maybe it is hours I do not know. I am blind to the passage of time as [dragonbreed.GetFirstName] continues to thrust. Pleasure filling me. Suddenly he stops thrusting, his member still inside. And I feel the throbbing of his form.;;;;;;;;;;;;;;x
+dwseom1001A;"YES! FILL ME!" I command;;;;;;;;;;;;;;x
+dwseom1002;On the orders of [From.GetBestName] I enter the hall that houses [From.GetHerHis]'s dragon, [dragonbreed.GetFirstName], and dismiss the guard and the servants tending to him. After the last one leaves and the hall door closes, I disrobe.\n [dragonbreed.GetFirstName] approaches as he gets close I can feel his warm breath across my bare form. He lets out a low growl before shoving me to the floor. \n I barely have time to register what happened before I feel his member press against my rearer. With a mighty shove he enters me. Again and again he thrusts.\n Minutes pass, or maybe it is hours I do not know. I am blind to the passage of time as [dragonbreed.GetFirstName] continues to thrust. Pleasure filling me. Suddenly he stops thrusting, his member still inside. And I feel the throbbing of his form.;;;;;;;;;;;;;;x
+dwseom1002A;"YES! FILL ME!";;;;;;;;;;;;;;x
+dwseom1003; I order [dragon_mate.GetBestName] to try and calm my dragon, [dragonbreed.GetFirstName] , with their body. At first they refused but with a little convincing they agreed. A dragon's egg is a fine payment to offer, though I do not think they realize that they will be the one to lay the egg. \n I watch as [dragon_mate.GetFirstName] enters the hall and dismisses the servants. I watch her disrobe and get thrown to the floor by [dragonbreed.GetFirstName].\n I watched her get mounted and bred much like a dog in heat. I leave her to enjoy spending time with [dragonbreed.GetFirstName]. \n I return an hour later to find the servants standing slack jawed at the door. Inside the hall [dragon_mate.GetFirstName] is still be ravaged by [dragonbreed.GetFirstName] . Even with barely being able to see her under his form i can tell she is enjoying it. She wears such a blissful smile while being covered in a dragon's seed as it spills out.\n Another hour passes before [dragonbreed.GetFirstName] dismounts and retires to the back of the hall for well deserved rest.\n [dragon_mate.GetFirstName] has been coated inside and out with [dragonbreed.GetFirstName]'s seed. She does not appear to be moving. If not for her breathing I would think she was dead. I ordered the servants to clean her and take her to her room.;;;;;;;;;;;;;;x   
+dwseom1003A;Surely, [dragon_mate.GetBestName], is with dragon egg now.;;;;;;;;;;;;;;x
+dwseom1100;My enemy's army stands before me. Shout os fury and anger echo across the battle field. I can turn the tide of this battle with one simple command. But do I truely wish to risk my dragon?;;;;;;;;;;;;;;x
+dwseom1100A;"BURN THEM ALL!";;;;;;;;;;;;;;x
+dwseom1100B;We can win without my dragon.;;;;;;;;;;;;;;x
+dwse_weyrleader;Weyrleader;;;;;;;;;;;;;;x
+dwse_weyrleader_desc;Caretaker of the realm's dragons. They tend to a dragon's day to day needs.;;;;;;;;;;;;;;x
+dwse_garrison_guard;Guard Barracks;;;;;;;;;;;;;;x
+dwse_garrison_guard_desc;Barracks for housing the defenders of this fort.;;;;;;;;;;;;;;x
+dwse_dragon_pregnancy_TT;[dragon_mate.GetFirstName] will bear a half-breed child.;;;;;;;;;;;;;;x
+dwse_lizard_pregnancy_TT;[dragon_mate.GetFirstName] will bear a draconian egg.;;;;;;;;;;;;;;x
+dwse_dragon_pregnancy_self_TT;You will bear a half-breed child.;;;;;;;;;;;;;;x
+dwse_lizard_pregnancy_self_TT;You will bear a draconian egg.;;;;;;;;;;;;;;x
+dwse_shapeshifted;Shapeshifted;;;;;;;;;;;;;;x
+dwse_shapeshifted_desc;This character is actually a dragon that has shapeshifted into a form other than their natural draconian body. While in this form, they will take on all attributes and abilities associated with the new body while still retaining some of their draconian strength. They can shapeshift back into a dragon at any time, provided they aren't already carrying an unborn child.;;;;;;;;;;;;;;x
+dwse_dragon_shapeshift_human;Shapeshift Into Human;;;;;;;;;;;;;;x
+dwse_dragon_shapeshift_human_desc;Using the magically-gifted abilities of your draconian race, you can shapeshift your form into that of a normal human. Other dragonkin will be able to see through your disguise due to the subtle draconian scent of your body. You will retain a small portion of your draconian strength.;;;;;;;;;;;;;;x
+dwse_dragon_shapeshift_human_revert;Shapeshift Back;;;;;;;;;;;;;;x
+dwse_dragon_shapeshift_human_revert_desc;It is time to throw off the disguise and revert back to your full dragon form.;;;;;;;;;;;;;;x
+dwse_dragon_shapeshift_aura;Shapeshift Into Half-Dragon;;;;;;;;;;;;;;x
+dwse_dragon_shapeshift_aura_desc;Using the magically-gifted abilities of your draconian race, you can shapeshift your form into that of a half-dragon. Other dragonkin will be able to see through your disguise due to the subtle draconian scent of your body. You will retain a small portion of your draconian strength, and will have the full abilities of a half-dragon.;;;;;;;;;;;;;;x
+dwse_dragon_shapeshift_aura_revert;Shapeshift Back;;;;;;;;;;;;;;x
+dwse_dragon_shapeshift_aura_revert_desc;It is time to throw off the disguise and revert back to your full dragon form.;;;;;;;;;;;;;;x

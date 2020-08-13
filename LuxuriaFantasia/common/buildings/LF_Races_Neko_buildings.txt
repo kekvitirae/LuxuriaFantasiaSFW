@@ -1,0 +1,133 @@
+nomad = {
+	lf_nomad_neko_playroom = {
+		potential = {
+			lf_has_nekos = yes
+			OR = {
+				FROM = {
+					is_neko = yes
+				}
+				FROMFROM = { has_building = lf_nomad_neko_playroom }
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				is_neko = yes
+			}
+		}
+		desc = lf_neko_playroom_desc
+		add_number_to_name = no # Not necessary with only one version
+		# trigger = { FROM = { TECH_CASTLE_CONSTRUCTION = 0 } }
+		gold_cost = 50
+		build_time = 365
+		ai_creation_factor = 50
+		ai_feudal_modifier = 10
+		ai_republic_modifier = 10
+		extra_tech_building_start = 10 # Should prevent any from being pre-built at game start
+		convert_to_castle = lf_castle_neko_playroom
+		convert_to_tribal = lf_tribal_neko_playroom
+		#modifiers provided by the building:
+		sex_appeal_opinion = 10 # It smells faintly of sex
+		fertility = 0.1
+		population_growth = 0.01
+	}
+}
+
+tribal = {
+	lf_tribal_neko_playroom = {
+		potential = {
+			lf_has_nekos = yes
+			OR = {
+				FROM = {
+					capital_holding = {
+						title = FROMFROM
+					}			
+					is_neko = yes
+				}
+				FROMFROM = { has_building = lf_nomad_neko_playroom }
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				is_neko = yes
+			}
+		}
+		desc = lf_neko_playroom_desc
+		add_number_to_name = no # Not necessary with only one version
+		# trigger = { TECH_CITY_CONSTRUCTION = 0 } # No special technology needs for a basic shrine
+		gold_cost = 50
+		build_time = 365
+		ai_creation_factor = 50
+		ai_feudal_modifier = 10
+		ai_republic_modifier = 10
+		extra_tech_building_start = 10 # Should prevent any from being pre-built at game start
+		convert_to_castle = lf_castle_neko_playroom
+		#modifiers provided by the building:
+		sex_appeal_opinion = 10 # It smells faintly of sex
+		fertility = 0.1 
+	}
+}	
+
+castle = {
+	lf_castle_neko_playroom = {
+		potential = {
+			lf_has_nekos = yes
+			OR = {
+				FROM = {
+					capital_holding = {
+						title = FROMFROM
+					}			
+					is_neko = yes
+				}
+				FROMFROM = { has_building = lf_castle_neko_playroom }
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				is_neko = yes
+			}
+		}
+		desc = lf_neko_playroom_desc
+		add_number_to_name = no # Not necessary with only one version
+		# trigger = { TECH_CITY_CONSTRUCTION = 0 } # No special technology needs for a basic shrine
+		gold_cost = 150
+		build_time = 365
+		ai_creation_factor = 50
+		ai_feudal_modifier = 10
+		ai_republic_modifier = 10
+		extra_tech_building_start = 10 # Should prevent any from being pre-built at game start
+		#modifiers provided by the building:
+		sex_appeal_opinion = 10 # It smells faintly of sex
+		fertility = 0.1 
+	}
+}
+
+family_palace = {
+	lf_palace_neko_playroom = {
+		potential = {
+			lf_has_nekos = yes
+			OR = {
+				FROM = {
+					is_neko = yes
+				}
+				FROMFROM = { has_building = lf_palace_neko_playroom }
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				is_neko = yes
+			}
+		}
+		desc = lf_neko_playroom_desc
+		add_number_to_name = no # Not necessary with only one version
+		# trigger = { FROM = { TECH_CITY_CONSTRUCTION = 0 } } # No special technology needs for a basic shrine
+		gold_cost = 150
+		build_time = 760
+		ai_creation_factor = 50
+		ai_feudal_modifier = 10
+		ai_republic_modifier = 10
+		extra_tech_building_start = 10 # Should prevent any from being pre-built at game start
+		#modifiers provided by the building:
+		sex_appeal_opinion = 10 # It smells faintly of sex
+		fertility = 0.1 
+	}
+}

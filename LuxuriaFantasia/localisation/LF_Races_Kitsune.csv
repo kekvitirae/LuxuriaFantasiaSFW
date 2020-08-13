@@ -1,0 +1,65 @@
+#
+# Traits
+#
+lf_kitsune_bf;Kitsune (§RBlood Feud§!);;;;;;;;;;;;;x
+lf_kitsune_bf_desc;A being descended from a Far Eastern fox demon. They have fox ears, and sport up to nine tails, depending on power and age.;;;;;;;;;;;;;x
+lf_kitsune;Kitsune;;;;;;;;;;;;;x
+lf_kitsune_desc;A being descended from a Far Eastern fox demon. They have fox ears, and sport up to nine tails, depending on power and age.;;;;;;;;;;;;;x
+#
+# Events
+#
+LFKitsune10T;Kitsune;;;;;;;;;;;;;x
+LFKitsune10;While not entirely vulpine, not entirely human, and not entirely demonic, kitsune are a combination of all three. Originally hailing from the lands of the Far East, kitsunes are friendly yet aloof, wise yet playful, and curious yet cautious. A kitsune's most distinctive features are their fox ears and fox tails, the latter of which can be up to nine at a time, depending on the kitsune's age. Generations of kitsune have been hunted down for their fluffy tails, and many more have been taken as sex slaves (though most who are enslaved turn the tables on their captors using their seduction and charm).\n\nKitsune culture is- more or less- matriarchal, owing to the fact that the women have a greater grasp on their magical heritage than the men. Because of this, women are predominantly groomed to be temple priestesses. This grants kitsune women a greater degree of respect among their peers than men, though there is no law forbidding a kitsune male from learning and obtaining the power women have control over.;;;;;;;;;;;;;x
+LFKitsune10TTA;I love my fluffy tail!;;;;;;;;;;;;;x
+LFKitsune10TTB;Everyone loves my fluffy tail!;;;;;;;;;;;;;x
+LFKitsuneOnlyShinto;NANI?!;;;;;;;;;;;;;x
+LFKitsuneAllShinto;YES! YES! YES!;;;;;;;;;;;;;x
+lf_kitsune_seduction;Kitsune Seduction;;;;;;;;;;;;;x
+lf_kitsune_seduction_desc;While the game of seduction is often interesting to play, when it comes down to it, I've an advantage over most. For my fluffy tails carry the gift of seduction that few can resist. \n  Of course, just wrapping someone up in my tails blatantly can cause issues, so I must first play this little game of seduction until the opportunity arises.;;;;;;;;;;;;;x
+LFKitsuneShintoReplacement;Theocratic characters will be killed and replaced with a human. The replacements will change to kitsune on the second day.;;;;;;;;;;;;;x
+LFKitsune100;Burying myself in [From.GetFirstName]'s tails is just the thing I needed to wash away all this stress! I would stay here forever if I didn't have other duties to attend to...;;;;;;;;;;;;;x
+LFKitsune100TT;SO FLUFFY!;;;;;;;;;;;;;x
+#
+# Decisions
+#
+lf_fluff_kitsune;Fluff [Root.GetFirstName]'s Tails;;;;;;;;;;;;;x
+lf_fluff_kitsune_desc;Feeling a little stressed? Why not bury yourself in [Root.GetFirstName]'s tails and forget about the worries of the world?;;;;;;;;;;;;;x
+#
+# Buildings
+#
+lf_kitsune_shrine;LF - Kitsune Tribal Shrine;;;;;;;;;;;;;x
+lf_castle_kitsune_shrine;LF - Kitsune Feudal Shrine;;;;;;;;;;;;;x
+lf_palace_kitsune_shrine;LF - Kitsune Palace Shrine;;;;;;;;;;;;;x
+lf_kitsune_shrine_nomad;LF - Kitsune Nomadic Shrine;;;;;;;;;;;;;x
+lf_kitsune_shrine_desc;Because kitsunes are so far from home, a shrine dedicated to meditation can be useful. There are hidden alcoves off to the side for some reason.;;;;;;;;;;;;;x
+#
+# Modifier definitions
+#
+lf_kitsune_opinion_EXPLANATION; (opinion from kitsunes);;;;;;;;;;;;;x
+opinion_of_lf_kitsune_EXPLANATION; (opinion of kitsunes);;;;;;;;;;;;;x
+lf_kitsune_opinion;Kitsune opinion;;;;;;;;;;;;;x
+opinion_of_lf_kitsune;Opinion of kitsunes;;;;;;;;;;;;;x
+lf_kitsune_bf_opinion_EXPLANATION; (opinion from kitsunes);;;;;;;;;;;;;x
+opinion_of_lf_kitsune_bf_EXPLANATION; (opinion of kitsunes);;;;;;;;;;;;;x
+lf_kitsune_bf_opinion;Kitsune opinion;;;;;;;;;;;;;x
+opinion_of_lf_kitsune_bf;Opinion of kitsunes;;;;;;;;;;;;;x
+#
+# Retinues
+#
+RETTYPE_KITSUNE;Kitsune Mages;;;;;;;;;;;;;x
+#
+# Titles
+#
+title_lf_many_tailed;Many-Tailed;;;;;;;;;;;;;x
+title_lf_many_tailed_desc;Among the kitsune, those with the most tails- up to nine of them- are the oldest and wisest of them all.;;;;;;;;;;;;;x
+title_lf_spirit_speaker;Spirit Speaker;;;;;;;;;;;;;x
+title_lf_spirit_speaker_desc;While kitsunes are naturally attuned to magic, only a few can communicate with the spirit world. They are seen as the spiritual guides in the community.;;;;;;;;;;;;;x
+modifier_lf_many_tailed;Many-Tailed;;;;;;;;;;;;;x
+modifier_lf_many_tailed_desc;Among the kitsune, those with the most tails- up to nine of them- are the oldest and wisest of them all.;;;;;;;;;;;;;x
+modifier_lf_spirit_speaker;Spirit Speaker;;;;;;;;;;;;;x
+modifier_lf_spirit_speaker_desc;While kitsunes are naturally attuned to magic, only a few can communicate with the spirit world. They are seen as the spiritual guides in the community.;;;;;;;;;;;;;x
+#
+# Culture
+#
+kitsune_culture;Kitsune;;;;;;;;;;;;;x
+kitsune_culture_adj;Kitsune;;;;;;;;;;;;;x

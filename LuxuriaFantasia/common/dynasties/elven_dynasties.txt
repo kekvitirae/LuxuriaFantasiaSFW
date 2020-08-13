@@ -1,0 +1,125 @@
+
+#
+# Elven dynasties
+#
+
+9051395 = {
+	name="Phijyre"
+	culture="elven"
+}
+9051396 = {
+	name="Famoira"
+	culture="elven"
+}
+9051397 = {
+	name="Venrieth"
+	culture="elven"
+}
+9051398 = {
+	name="Zylzorwyn"
+	culture="elven"
+}
+9051399 = {
+	name="Yllawynn"
+	culture="elven"
+}
+9051400 = {
+	name="Presvaris"
+	culture="elven"
+}
+9051401 = {
+	name="Yllarel"
+	culture="elven"
+}
+9051402 = {
+	name="Magmoira"
+	culture="elven"
+}
+9051403 = {
+	name="Magmys"
+	culture="elven"
+}
+9051404 = {
+	name="Tornala"
+	culture="elven"
+}
+9051405 = {
+	name="Xyrthyra"
+	culture="elven"
+}
+9051406 = {
+	name="Phisys"
+	culture="elven"
+}
+9051407 = {
+	name="Quitris"
+	culture="elven"
+}
+9051408 = {
+	name="Torfina"
+	culture="elven"
+}
+9051409 = {
+	name="Qirora"
+	culture="elven"
+}
+9051410 = {
+	name="Eilsys"
+	culture="elven"
+}
+9051411 = {
+	name="Ennala"
+	culture="elven"
+}
+9051412 = {
+	name="Venmoira"
+	culture="elven"
+}
+9051413 = {
+	name="Torharice"
+	culture="elven"
+}
+9051414 = {
+	name="Bryharice"
+	culture="elven"
+}
+9051415 = {
+	name="Joqirelle"
+	culture="elven"
+}
+9051416 = {
+	name="Cairalei"
+	culture="elven"
+}
+9051417 = {
+	name="Birel"
+	culture="elven"
+}
+9051418 = {
+	name="Zinmoira"
+	culture="elven"
+}
+9051419 = {
+	name="Fadove"
+	culture="elven"
+}
+9051420 = {
+	name="Faesatra"
+	culture="elven"
+}
+9051421 = {
+	name="Chaefina"
+	culture="elven"
+}
+9051422 = {
+	name="Aragwyn"
+	culture="elven"
+}
+9051423 = {
+	name="Holathyra"
+	culture="elven"
+}
+9051424 = {
+	name="Ravagella"
+	culture="elven"
+}

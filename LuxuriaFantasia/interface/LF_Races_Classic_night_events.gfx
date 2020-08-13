@@ -1,0 +1,80 @@
+spriteTypes = {
+	spriteType = {
+		name = "lf_vampire_normal"
+		texturefile = "gfx/event_pictures/lf_vampire_normal.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lf_vampire_elf"
+		texturefile = "gfx/event_pictures/lf_vampire_elf.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lf_vampire_orc"
+		texturefile = "gfx/event_pictures/lf_vampire_orc.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lf_vampire_kitsune"
+		texturefile = "gfx/event_pictures/lf_vampire_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lf_vampire_neko"
+		texturefile = "gfx/event_pictures/lf_vampire_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lf_vampire_fallen"
+		texturefile = "gfx/event_pictures/lf_vampire_fallen.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lf_vampire_divine"
+		texturefile = "gfx/event_pictures/lf_vampire_divine.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	spriteType = {
+		name = "lf_desmona_feeds"
+		texturefile = "gfx/event_pictures/desmona_feeds.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "vampire_bite_male_1"
+		texturefile = "gfx/event_pictures/vampire_bite_male_1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "vampire_feeds_nos_1"
+		texturefile = "gfx/event_pictures/vampire_feeds_nos_1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "vampire_dead_1"
+		texturefile = "gfx/event_pictures/vampire_dead_1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+}

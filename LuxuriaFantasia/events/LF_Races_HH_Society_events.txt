@@ -1,0 +1,669 @@
+namespace = LFSocietySeduction
+
+## Interest has been made - now it's only about awaiting a response
+character_event = {
+	id = LFSocietySeduction.90
+	hide_window = yes
+	is_triggered_only = yes # From on_character_ask_to_join_society
+	immediate = {
+		random_society_member = {
+			limit = {
+				is_society_grandmaster = yes
+				society_member_of = lf_society_seduction
+			}
+			save_event_target_as = grand_enchanter
+		}
+		letter_event = { id = LFSocietySeduction.91 days = 5 random = 10 }
+	}
+}
+
+## A mysterious letter
+letter_event = {
+    id = LFSocietySeduction.91
+    desc = LFSocietySeduction91
+	portrait = event_target:grand_enchanter
+    is_triggered_only = yes # from .90
+	trigger = {
+		interested_in_society = lf_society_seduction
+	}
+	option = { # I shall go to the meeting
+		name = LFSocietySeduction91A
+		narrative_event = { id = LFSocietySeduction.100 days = 7 }
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0 # If they're paranoid, then there is no way they're going to this, as they view it as a trap
+				trait = paranoid
+			}
+		}
+	}
+	option = { # I don't trust it.
+		name = LFSocietySeduction91B
+		ai_chance = {
+			factor = 20
+		}
+	}
+}
+
+## The first test
+narrative_event = {
+    id = LFSocietySeduction.100
+	picture = lf_a_placeholder
+	title = lf_society_seduction_approach_title
+    is_triggered_only = yes 
+    desc = { # The Chosen of Lilith
+    	trigger = {
+   			interested_in_society = lf_society_seduction
+    	}
+    	text = LFSocietySeduction100.0
+    	picture = lilith_society_approach1
+    }
+	trigger = {
+		interested_in_society = lf_society_seduction
+	}
+	option = { # I still wish to join
+		name = LFSocietySeduction100A
+		narrative_event = { id = LFSocietySeduction.101 days = 1 }
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				trait = trusting
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					trait = bad_priest_christian
+					trait = bad_priest_muslim
+					trait = bad_priest_norse
+					trait = bad_priest_tengri
+					trait = bad_priest_zoroastrian
+					trait = bad_priest_aztec
+				}
+			}
+			modifier = {
+				factor = 1.5
+				trait = hedonist
+			}
+			modifier = {
+				factor = 1.5
+				trait = lustful
+			}
+			modifier = {
+				factor = 1.5
+				trait = cynical
+			}
+		}
+	}
+	option = { # I've made a mistake.
+		name = LFSocietySeduction100B
+		if = {
+			limit = {
+				interested_in_society = lf_society_seduction
+			}
+			set_character_flag = disapproves_of_satanism
+		}
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 2
+				has_pious_trait_trigger = yes
+			}
+			modifier = {
+				factor = 2
+				has_crusade_trait_trigger = yes
+			}
+		}
+	}
+}
+
+# Passed the first test, another shall follow
+narrative_event = {
+    id = LFSocietySeduction.101
+	picture = lf_a_placeholder
+	title = lf_society_seduction_approach_title
+    is_triggered_only = yes 
+    desc = { # The Chosen of Lilith
+    	trigger = {
+   			interested_in_society = lf_society_seduction
+    	}
+    	text = LFSocietySeduction101.0
+    	picture = lilith_society_approach1
+    }
+	trigger = {
+		interested_in_society = lf_society_seduction
+	}
+	option = { # I shall look forward to the contact
+		name = LFSocietySeduction101A
+		narrative_event = { id = LFSocietySeduction.102 days = 5 random = 10 }
+	}
+}
+
+# Second test
+narrative_event = {
+    id = LFSocietySeduction.102
+	picture = lf_a_placeholder
+	title = lf_society_seduction_approach_title
+    is_triggered_only = yes 
+    desc = { # The Chosen of Lilith
+    	trigger = {
+   			interested_in_society = lf_society_seduction
+    	}
+    	text = LFSocietySeduction102.0
+    	picture = lilith_society_approach2
+    }
+	trigger = {
+		interested_in_society = lf_society_seduction
+	}
+    option = { # I'm still in this
+		trigger = {
+			interested_in_society = lf_society_seduction
+		}
+        name = LFSocietySeduction102A
+		if = {
+			limit = {
+				lf_has_nsfw = no
+			}
+			join_society = lf_society_seduction
+		}
+		else = {
+			hidden_effect = {
+				character_event = { id = LFSocietySeduction.103 }
+			}
+		}
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0.1
+				trait = craven
+			}
+		}
+    }
+	option = { # I've made a mistake.
+		trigger = {
+			interested_in_society = lf_society_seduction
+		}
+		name = LFSocietySeduction102B
+		set_character_flag = disapproves_of_satanism
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 2
+				has_pious_trait_trigger = yes
+			}
+			modifier = {
+				factor = 2
+				has_crusade_trait_trigger = yes
+			}
+		}
+	}
+}
+
+## Chosen of Lilith routing
+character_event = {
+	id = LFSocietySeduction.103
+	hide_window = yes
+	is_triggered_only = yes # from 102
+	immediate = {
+		if = {
+			limit = {
+				is_demon = yes
+			}
+			narrative_event = { id = LFSocietySeduction.104 days = 1 }
+			break = yes # This should end the immediate block
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			narrative_event = { id = LFSocietySeduction.105 days = 1 }
+			break = yes # This should end the immediate block
+		}
+		else_if = {
+			limit = {
+				NOT = { is_female = yes }
+			}
+			narrative_event = { id = LFSocietySeduction.107 days = 1 }
+			break = yes # This should end the immediate block
+		}
+	}
+}
+
+## Incubus or Succubus Granted automatic entry
+narrative_event = {
+    id = LFSocietySeduction.104
+	picture = lf_a_placeholder
+	title = lf_society_seduction_approach_title
+    is_triggered_only = yes 
+    desc = { # Succubus
+    	trigger = {
+   			is_succubus = yes
+    	}
+    	text = LFSocietySeduction104.0
+    	picture = lilith_society_approach2
+    }
+    desc = { # Incubus
+    	trigger = {
+   			is_incubus = yes
+    	}
+    	text = LFSocietySeduction104.1
+    	picture = lilith_society_approach2
+    }
+	trigger = {
+		interested_in_society = lf_society_seduction
+	}
+	immediate = { set_character_flag = society_join_block }
+
+    option = { # I'm happy just joining.
+        name = LFSocietySeduction104A
+		if = {
+			limit = {
+				interested_in_society = lf_society_seduction
+			}
+			join_society = lf_society_seduction
+		}
+		clr_character_flag = society_join_block
+    }
+	option = { # Fuck it, let's go with what you had planned
+		name = LFSocietySeduction104B
+		if = {
+			limit = {
+				is_succubus = yes
+			}
+			narrative_event = { id = LFSocietySeduction.105 }
+		}
+		else = {
+			narrative_event = { id = LFSocietySeduction.107 }
+		}
+	}
+}
+
+## Female faces gang bang for entry
+narrative_event = {
+    id = LFSocietySeduction.105
+	picture = lf_a_placeholder
+	title = lf_society_seduction_approach_title
+    is_triggered_only = yes 
+    desc = { # Succubus - from 104
+    	trigger = {
+   			is_succubus = yes
+    	}
+    	text = LFSocietySeduction105.0
+    	picture = lilith_society_approach3
+    }
+    desc = { # Not a Succubus
+    	trigger = {
+   			is_not_succubus = yes
+    	}
+    	text = LFSocietySeduction105.1
+    	picture = lilith_society_approach3
+    }
+	trigger = {
+		interested_in_society = lf_society_seduction
+	}
+
+    option = { # I prepare to give myself to the men
+        name = LFSocietySeduction105A
+		narrative_event = { id = LFSocietySeduction.106 }
+    }
+	# TODO Add an option to try and flee, which can lead to rape, escape, or potentially death
+}
+
+## Female completes gang bang for entry
+narrative_event = {
+    id = LFSocietySeduction.106
+	picture = lf_a_placeholder
+	title = lf_society_seduction_approach_title
+    is_triggered_only = yes 
+    desc = { # Succubus - from 104
+    	trigger = {
+   			is_succubus = yes
+    	}
+    	text = LFSocietySeduction106.0
+    	picture = lilith_society_approach4
+    }
+    desc = { # Not a Succubus
+    	trigger = {
+   			is_not_succubus = yes
+    	}
+    	text = LFSocietySeduction106.1
+    	picture = lilith_society_approach4
+    }
+	trigger = {
+		interested_in_society = lf_society_seduction
+	}
+	immediate = { 
+		set_character_flag = society_join_block 
+	}
+
+    option = {
+        name = LFSocietySeduction106A
+		if = {
+			limit = {
+				NAND = { 
+					trait = lf_halfdemon
+					is_female = yes
+				}
+				is_pregnant = no
+				practical_age < 45
+			}
+			custom_tooltip = {
+				text = LFSocietySeductionimpregnated
+				random_society_member = {
+					limit = {
+						is_in_society = lf_society_seduction
+						is_female = no
+					}
+					ROOT = {
+						impregnate_cuckoo = PREV
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				interested_in_society = lf_society_seduction
+			}
+			join_society = lf_society_seduction
+		}
+		clr_character_flag = society_join_block
+    }
+}
+
+## Male faces submission for entry
+narrative_event = {
+    id = LFSocietySeduction.107
+	picture = lf_a_placeholder
+	title = lf_society_seduction_approach_title
+    is_triggered_only = yes 
+    desc = { # Incubus - from 104
+    	trigger = {
+   			is_incubus = yes
+			NOT = { trait = homosexual }
+    	}
+    	text = LFSocietySeduction107.2
+    	picture = lilith_society_approach5
+    }
+    desc = { # Not an Incubus
+    	trigger = {
+   			is_not_incubus = yes
+			NOT = { trait = homosexual }
+    	}
+    	text = LFSocietySeduction107.3
+    	picture = lilith_society_approach5
+    }
+    desc = { # Incubus - from 104
+    	trigger = {
+			is_incubus = yes
+			trait = homosexual
+    	}
+    	text = LFSocietySeduction107.0
+    	picture = lilith_society_approach5
+    }
+    desc = { # Not an Incubus
+    	trigger = {
+   			is_not_incubus = yes
+			trait = homosexual 
+    	}
+    	text = LFSocietySeduction107.1
+    	picture = lilith_society_approach5
+    }
+
+	trigger = {
+		interested_in_society = lf_society_seduction
+	}
+
+    option = { # I prepare to give myself to the men
+        name = LFSocietySeduction107A
+		trigger = { trait = homosexual }
+		narrative_event = { id = LFSocietySeduction.108 }
+    }
+    option = { # I prepare to give myself to the women
+        name = LFSocietySeduction107B
+		trigger = { NOT = { trait = homosexual } }
+		narrative_event = { id = LFSocietySeduction.108 }
+    }
+	# TODO Add an option to try and flee, which can lead to rape, escape, or potentially death
+}
+
+## Male completes submissive role for entry
+narrative_event = {
+    id = LFSocietySeduction.108
+	picture = lf_a_placeholder
+	title = lf_society_seduction_approach_title
+    is_triggered_only = yes 
+    desc = { # Incubus
+    	trigger = {
+			is_incubus = yes
+			trait = homosexual
+    	}
+    	text = LFSocietySeduction108.0
+    	picture = lilith_society_approach6
+    }
+    desc = { # Not an Incubus
+    	trigger = {
+   			is_not_incubus = yes
+			trait = homosexual
+    	}
+    	text = LFSocietySeduction108.1
+    	picture = lilith_society_approach6
+    }
+    desc = { # Incubus
+    	trigger = {
+			is_incubus = yes
+			NOT = { trait = homosexual }
+    	}
+    	text = LFSocietySeduction108.2
+    	picture = lilith_society_approach7
+    }
+    desc = { # Not an Incubus
+    	trigger = {
+   			is_not_incubus = yes
+			NOT = { trait = homosexual }
+   	}
+    	text = LFSocietySeduction108.3
+    	picture = lilith_society_approach7
+    }
+	trigger = {
+		interested_in_society = lf_society_seduction
+	}
+	immediate = { set_character_flag = society_join_block }
+
+    option = {
+        name = LFSocietySeduction108A
+		if = {
+			limit = {
+				NAND = {
+					trait = lf_halfdemon
+					is_female = no
+				}
+			}
+			custom_tooltip = {
+				text = LFSocietySeductionimpregnate
+				random_society_member = {
+					limit = {
+						is_in_society = lf_society_seduction
+						is_female = yes
+						is_pregnant = no
+						practical_age < 45
+					}
+					impregnate_cuckoo = ROOT
+				}
+				random_society_member = {
+					limit = {
+						is_in_society = lf_society_seduction
+						is_female = yes
+						is_pregnant = no
+						practical_age < 45
+					}
+					impregnate_cuckoo = ROOT
+				}
+				random_society_member = {
+					limit = {
+						is_in_society = lf_society_seduction
+						is_female = yes
+						is_pregnant = no
+						practical_age < 45
+					}
+					impregnate_cuckoo = ROOT
+				}
+			}
+		}
+		if = {
+			limit = {
+				interested_in_society = lf_society_seduction
+			}
+			join_society = lf_society_seduction
+		}
+		clr_character_flag = society_join_block
+    }
+}
+
+
+### Recruitment ###
+
+# Do you approve of "alternative views"? - Recruit
+narrative_event = {
+	id = LFSocietySeduction.7001
+	desc = LFSocietySeduction7001
+	picture = lilith_society_approach2
+	is_triggered_only = yes # targetted_decision
+	title = lf_society_seduction_recruitment
+	prisoner = no # pre-trigger
+	immediate = {
+		if = {
+			limit = { NOT = { event_target:lf_seduction_recruiter = { always = yes } } }
+			FROMFROM = { save_event_target_as = lf_seduction_recruiter }
+		}
+		save_event_target_as = lf_seduction_recruit
+	}
+	fail_trigger_effect = {
+		clr_character_flag = being_recruited_by_seduction
+		clr_character_flag = lf_seduction_attempted_recruitment
+	}
+	#Approving of heretics
+	option = {
+		name = LFSocietySeduction7001A
+		reverse_opinion = {
+			who = event_target:lf_seduction_recruiter
+			modifier = opinion_agreed_with_opinion
+			years = 5
+		}
+		set_character_flag = approves_of_satanism
+		hidden_effect = { 
+			narrative_event = { id = LFSocietySeduction.7002 days = 3 } 
+		}
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 1.5
+				trait = trusting
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					trait = bad_priest_christian
+					trait = bad_priest_muslim
+					trait = bad_priest_norse
+					trait = bad_priest_tengri
+					trait = bad_priest_zoroastrian
+					trait = bad_priest_aztec
+				}
+			}
+			modifier = {
+				factor = 1.5
+				trait = hedonist
+			}
+			modifier = {
+				factor = 1.5
+				trait = lustful
+			}
+			modifier = {
+				factor = 1.5
+				trait = cynical
+			}
+		}
+	}
+	#Disapproving of heretics
+	option = {
+		name = LFSocietySeduction7001B
+		reverse_opinion = {
+			who = event_target:lf_seduction_recruiter
+			modifier = opinion_disagreed_with_opinion
+			years = 5
+		}
+		set_character_flag = disapproves_of_satanism
+		clr_character_flag = being_recruited_by_seduction
+		hidden_effect = { 
+			event_target:lf_seduction_recruiter = {
+				increase_visibility_effect = yes # Visibility increased by 5 for the failed probing attempt
+				narrative_event = { id = LFSocietySeduction.7003 days = 15 } 
+			} 
+		}
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 5
+				has_pious_trait_trigger = yes
+			}
+			modifier = {
+				factor = 2
+				has_crusade_trait_trigger = yes
+			}
+		}
+	}
+}
+## We've an interested party - Recruiter
+narrative_event = {
+	id = LFSocietySeduction.7002
+	desc = LFSocietySeduction7002
+	picture = lilith_society_approach2
+	is_triggered_only = yes # .7001
+	title = lf_society_seduction_recruitment
+	option = { # Let's invite them
+		name = LFSocietySeduction7002A
+		hidden_effect = {
+			event_target:lf_seduction_recruit = { narrative_event = { id = LFSocietySeduction.7008 days = 5 } }
+		}
+	}
+}
+## We've been rejected - Recruiter
+narrative_event = {
+	id = LFSocietySeduction.7003
+	desc = LFSocietySeduction7003
+	picture = lilith_society_approach2
+	is_triggered_only = yes # .7001
+	title = lf_society_seduction_recruitment
+	option = { # Disappointing
+		name = LFSocietySeduction7003A
+	}
+}
+## I'm a member of the society - Recruit
+narrative_event = {
+	id = LFSocietySeduction.7008
+	desc = LFSocietySeduction7008
+	picture = lilith_society_approach2
+	is_triggered_only = yes # .7003 or .7002
+	title = lf_society_seduction_recruitment
+	option = { # Joins
+		name = LFSocietySeduction7008A
+		join_society = lf_society_seduction
+		hidden_effect = {
+			clr_character_flag = being_recruited_by_seduction
+			clr_character_flag = lf_seduction_attempted_recruitment
+			event_target:lf_seduction_recruiter = { narrative_event = { id = LFSocietySeduction.7009 days = 3 } }
+		}
+	}
+}
+## We've a new member of the society - Recruiter
+narrative_event = {
+	id = LFSocietySeduction.7009
+	desc = LFSocietySeduction7009
+	picture = lilith_society_approach2
+	is_triggered_only = yes # .7003 or .7002
+	title = lf_society_seduction_recruitment
+	option = { # I've strengthened our society
+		name = LFSocietySeduction7009A
+		add_society_currency_medium_effect = yes
+	}
+}

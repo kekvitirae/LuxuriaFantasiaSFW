@@ -1,0 +1,79 @@
+#
+# Bloodline
+#
+
+demonic_bloodline;Bloodline of the Seducer;;;;;;;;;;;;;x
+demonic_bloodline_desc;[This.Founder.GetBestName] seduced enough pawns into their bed to earn the attention and favor of powerful sex-crazed demons.;;;;;;;;;;;;;x
+lf_a_claim_demonic_bloodline;Claim your Demonic Birthright;;;;;;;;;;;;;x
+lf_a_claim_demonic_bloodline_desc;[GetLilithName] is pleased that her faithful child is so seductive. She is willing to enhance your lineage. It would not be a wise idea to turn her offer down.;;;;;;;;;;;;;x
+LFDemonsSeductionSuccesses;The current number of people you have bedded with Demonnic Seduction before bedding [From.GetFirstName] is §Y[Root.lilith_seduction.GetValue]§!.;;;;;;;;;;;;;x
+
+#
+# CBs
+#
+
+lf_rivalry_cb_hh;Blood Feud;;;;;;;;;;;;;;x
+lf_rivalry_cb_hh_desc;A neighbor of ours is a long-hated enemy. It's time to wipe them off the map.;;;;;;;;;;;;;;x
+lf_mindslave_war;Mindslave War;;;;;;;;;;;;;;x
+lf_mindslave_war_desc;You shouldn't be seeing this.;;;;;;;;;;;;;;x
+
+#
+# Traits
+#
+
+lf_asexual;Asexual;;;;;;;;;;;;;;x
+lf_asexual_desc;This character has zero interest in sex.;;;;;;;;;;;;;;x
+lf_demon;[GetDemonType];;;;;;;;;;;;;x
+lf_demon_desc;A full-blooded demon, this character is a child of [GetLilithName].;;;;;;;;;;;;;x
+lf_demon_bf;[GetDemonType] (§RBlood Feud§!);;;;;;;;;;;;;x
+lf_demon_bf_desc;A full-blooded demon, this character is a child of [GetLilithName].;;;;;;;;;;;;;x
+lf_halfdemon;[GetHalfDemonType];;;;;;;;;;;;;x
+lf_halfdemon_desc;A half-blooded demon, this character is descended from [GetLilithName].;;;;;;;;;;;;;x
+
+#
+# Custom Loc
+#
+
+Succubus;Succubus;;;;;;;;;;;;;x
+Incubus;Incubus;;;;;;;;;;;;;x
+AluFiend;Alu-fiend;;;;;;;;;;;;;x
+Cambion;Cambion;;;;;;;;;;;;;x
+GenericDemon;Demon;;;;;;;;;;;;;x
+GenericHalfDemon;Half-Demon;;;;;;;;;;;;;x
+
+#
+# Modifier Definitions
+#
+
+lf_angel_opinion_EXPLANATION; (opinion from the divine);;;;;;;;;;;;;x
+opinion_of_lf_angel_EXPLANATION; (opinion of the divine);;;;;;;;;;;;;x
+lf_angel_opinion;Angelic opinion;;;;;;;;;;;;;x
+opinion_of_lf_angel;Opinion of the divine;;;;;;;;;;;;;x
+lf_demon_opinion_EXPLANATION; (opinion from demons);;;;;;;;;;;;;x
+opinion_of_lf_demon_EXPLANATION; (opinion of demons);;;;;;;;;;;;;x
+lf_demon_opinion;Demonic opinion;;;;;;;;;;;;;x
+opinion_of_lf_demon;Opinion of demons;;;;;;;;;;;;;x
+lf_angel_bf_opinion_EXPLANATION; (opinion from the divine);;;;;;;;;;;;;x
+opinion_of_lf_angel_bf_EXPLANATION; (opinion of the divine);;;;;;;;;;;;;x
+lf_angel_bf_opinion;Angelic opinion;;;;;;;;;;;;;x
+opinion_of_lf_angel_bf;Opinion of the divine;;;;;;;;;;;;;x
+lf_demon_bf_opinion_EXPLANATION; (opinion from demons);;;;;;;;;;;;;x
+opinion_of_lf_demon_bf_EXPLANATION; (opinion of demons);;;;;;;;;;;;;x
+lf_demon_bf_opinion;Demonic opinion;;;;;;;;;;;;;x
+opinion_of_lf_demon_bf;Opinion of demons;;;;;;;;;;;;;x
+lf_halfdemon_opinion_EXPLANATION; (opinion from half-demons);;;;;;;;;;;;;x
+opinion_of_lf_halfdemon_EXPLANATION; (opinion of half-demon);;;;;;;;;;;;;x
+lf_halfdemon_opinion;Half-demonic opinion;;;;;;;;;;;;;x
+opinion_of_lf_halfdemon;Opinion of half-demons;;;;;;;;;;;;;x
+
+
+
+lf_lilith_dream_title;Dreaming of [GetLilithName];;;;;;;;;;;;;x
+
+#Decisions
+#Event Descriptions
+LFDemons11;My dreams have often been dark. With whispers of calling out to me, tempting me with fleshly delights. I often awake with my bed being damp with signs of my climax. \n  Tonight seems to be different though, the dream is more real. I feel the warmth of the room, the eyes of the bodies writhing in erotic embraces gazing upon me as I walk towards a figure lazily lying upon an altar. She is unlike any other woman I've seen. Beautiful, smooth skin, a pair of horns curling from her forehead, and a tail that lazily flips back and forth. \n  She smiles at me and licks her lips. A wave of arousal washes over me as she beckons for me to approach her. My cock twitches as if anticipation of a blissful release. \n  I somehow find a moment of clarity and ask "Who are you?" A sultry smile crosses the beautiful woman's lips. "You know who I am child. I'm [GetLilithName], your mother." \n  I feel my heart beat quicken as my blood responds to her words. My cock aches to be buried between her perfectly shaped legs. I proceed forward, and [GetLilithName] sits upright on the altar, spreading her arms and legs open to greet me. \n  "That's it my child. Come, let your mother embrace you and awaken the power within you.";;;;;;;;;;;;;x
+LFDemons15;My dreams have often been dark. With whispers of calling out to me, tempting me with fleshly delights. I often awake with my bed being damp with signs of my climax. \n  Tonight seems to be different though, the dream is more real. I feel the warmth of the room, the eyes of the bodies writhing in erotic embraces gazing upon me as I walk towards a figure lazily lying upon an altar. She is unlike any other woman I've seen. Beautiful, smooth skin, a pair of horns curling from her forehead, and a tail that lazily flips back and forth. \n  She smiles at me and licks her lips. A wave of arousal washes over me as she beckons for me to approach her. My nipples ache to be touched and my pussy seems to be dripping with anticipation of a blissful touch. \n  I somehow find a moment of clarity and ask, "Who are you?" A sultry smile crosses the beautiful woman's lips. "You know who I am child. I'm [GetLilithName], your mother." \n  I feel my heart beat quicken as my blood responds to her words. I moan as my hips twitch instinctively forward, seeking pleasure. I proceed forward, and [GetLilithName] sits upright on the altar, spreading her arms and legs open to greet me. Even her tail seems to beckon me forth and I quiver at the thought of pleasure I may feel. \n  "That's it my child. Come, let your mother embrace you and awaken the power within you.";;;;;;;;;;;;;x
+LFDemons12A;I welcome your embrace, [GetLilithName].;;;;;;;;;;;;;x
+
+

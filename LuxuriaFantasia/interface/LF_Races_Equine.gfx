@@ -1,0 +1,16 @@
+spriteTypes = {
+	spriteType = {
+		name = "lf_taurtaur"
+		texturefile = "gfx/event_pictures/lf_taurtaur.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lf_taurtaur_aquatic"
+		texturefile = "gfx/event_pictures/lf_taurtaur_aquatic.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+}	

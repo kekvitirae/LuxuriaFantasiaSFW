@@ -1,0 +1,15 @@
+lf_neko = {
+	random = no
+	customizer = no
+	opposites = {
+		dwse_lizard
+		lf_kitsune
+		lf_fairy
+		lf_orc
+		lf_elf
+		dwse_dragon_adult
+		dwse_dragon_child
+	}
+	inherit_chance = 50
+	both_parent_has_trait_inherit_chance = 100
+}

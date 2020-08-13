@@ -1,0 +1,402 @@
+lf_is_silly = {
+	has_global_flag = lf_silly_mode
+}
+
+has_dark_world_started = { # Keeping this in in case old mods haven't updated yet
+	OR = {
+		has_global_flag = Dark_World_Fantasy_Present
+		has_global_flag = Dark_World_Reborn_Present
+	}
+}
+
+lf_has_dwr = {
+	has_global_flag = Dark_World_Reborn_Present
+}
+
+lf_has_dwr_replacer = {
+	lf_has_dwr = yes
+	has_global_flag = LFDWRReplaceOn
+}
+
+lf_has_dwr_no_replacer = {
+	lf_has_dwr = yes
+	has_global_flag = LFDWRReplaceOff
+}
+
+lf_has_nsfw = {
+	has_global_flag = LFNSFWOn
+}
+
+lf_started = {
+	has_global_flag = luxuria_fantasia_started
+}
+
+has_nosferatu_enabled = {
+	has_global_flag = LFClassicOn
+}
+has_heaven_hell_content = {
+	has_global_flag = LFHHOn
+}
+has_ghosts_content = {
+	has_global_flag = LFGhostOn
+}
+has_fae_content = {
+	has_global_flag = LFFaeOn
+}
+has_far_east_content = {
+	has_global_flag = LFFarEastOn
+}
+has_gender_bender_content = {
+	has_global_flag = LFGenderBendOn
+}
+has_bestiality_content = {
+	has_global_flag = LFBestialityOn
+}
+
+lf_has_cock = {
+	OR = {
+		is_futa = yes
+		AND = {
+			is_female = no
+			NOT = { trait = eunuch }
+		}
+	}
+}
+
+
+lf_can_have_sex = {
+	prisoner = no
+	is_adult = yes
+	NOR = { 
+		trait = lf_ghost
+		trait = dwse_dragon_adult
+		trait = celibate
+		trait = eunuch
+		trait = incapable
+		trait = monk
+		trait = nun
+		trait = depressed
+		is_inaccessible_trigger = yes
+		lf_disease_trigger = yes
+		has_character_flag = no_sexytimes_allowed
+		trait = lf_asexual
+	}
+}
+
+lf_disease_trigger = { # vanilla scripted effect, minus ill and lovers_pox
+	OR= {
+		trait = has_tuberculosis
+		trait = has_typhoid_fever
+		trait = has_typhus
+		trait = has_bubonic_plague
+		trait = has_measles
+		trait = has_small_pox
+		trait = has_aztec_disease
+		trait = syphilitic
+		trait = flu
+		trait = dysentery
+		trait = gout
+		trait = food_poisoning
+		trait = rabies
+		trait = cancer
+		trait = pneumonic
+		trait = dancing_plague
+		trait = scurvy
+		trait = leper
+	}
+}
+
+lf_can_sell_slave = {
+	NOR = {
+		lf_disease_trigger = yes
+		trait = ill
+		trait = lovers_pox
+		trait = mangled
+		trait = severely_injured
+		trait = wounded
+		trait = infirm
+		trait = incapable
+	}
+}
+
+lf_can_get_pregnant = {
+	is_female = yes
+	NOT = { practical_age = 45 }
+	is_adult = yes
+	is_pregnant = no
+	health = 3
+}
+
+#
+# Custom Religion
+#
+
+has_custom_satan_prerequisites = {
+	has_common_devilworship_prerequisites = yes
+	religion_openly_custom_or_reformed_trigger = yes
+}
+
+religion_openly_custom_or_reformed_trigger = {
+	custom_tooltip = {
+		text = religion_openly_custom_or_reformed_tooltip
+		hidden_trigger = {
+			OR = {
+				religion = lf_luxuria_custom
+				religion = lf_luxuria_custom_reformed
+			}
+		}
+	}
+}
+
+#
+# CB related
+#
+
+lf_is_not_same_race = {
+	OR = {
+		AND = {
+			NOT = { trait = lf_elf }
+			ROOT = {
+				trait = lf_elf
+			}
+		}
+		AND = {
+			NOT = { trait = lf_orc }
+			ROOT = {
+				trait = lf_orc
+			}
+		}
+		AND = {
+			NOT = { trait = lf_fairy }
+			ROOT = {
+				trait = lf_fairy
+			}
+		}
+		AND = {
+			NOT = { trait = lf_kitsune }
+			ROOT = {
+				trait = lf_kitsune
+			}
+		}
+		AND = {
+			NOT = { trait = lf_neko }
+			ROOT = {
+				trait = lf_neko
+			}
+		}
+		AND = {
+			NOR = { 
+				trait = dwse_dragon_adult
+				trait = dwse_lizard
+				trait = dwse_shapeshifted
+				trait = dwse_dragon_child
+			}
+			ROOT = {
+				OR = { 
+					trait = dwse_dragon_adult
+					trait = dwse_lizard
+					trait = dwse_shapeshifted
+					trait = dwse_dragon_child
+				}
+			}
+		}
+		AND = {
+			NOR = { 
+				trait = lf_demon
+				trait = lf_halfdemon
+				trait = lf_fallen_angel
+			}
+			ROOT = {
+				OR = { 
+					trait = lf_demon
+					trait = lf_halfdemon
+					trait = lf_fallen_angel
+				}
+			}
+		}
+		AND = {
+			NOT = { trait = lf_angel }
+			ROOT = {
+				trait = lf_angel
+			}
+		}
+	}
+}
+
+lf_blood_feud_exists = {
+	OR = {
+		AND = {
+			ROOT = {
+				is_elf_bf = yes
+			}
+			FROM = {
+				is_orc_bf = yes
+			}
+		}
+		AND = {
+			ROOT = {
+				is_orc_bf = yes
+			}
+			FROM = {
+				is_elf_bf = yes
+			}
+		}
+		AND = {
+			ROOT = {
+				is_angel_bf = yes
+			}
+			FROM = {
+				is_demon_bf = yes
+			}
+		}
+		AND = {
+			ROOT = {
+				is_demon_bf = yes
+			}
+			FROM = {
+				is_angel_bf = yes
+			}
+		}
+		AND = {
+			ROOT = {
+				is_kitsune_bf = yes
+			}
+			FROM = {
+				is_neko_bf = yes
+			}
+		}
+		AND = {
+			ROOT = {
+				is_neko_bf = yes
+			}
+			FROM = {
+				is_kitsune_bf = yes
+			}
+		}
+		
+	}
+}
+
+lf_blood_feud_exists_banish = {
+	OR = {
+		AND = {
+			ROOT = {
+				is_elf_bf = yes
+			}
+			is_orc_bf = yes
+		}
+		AND = {
+			ROOT = {
+				is_orc_bf = yes
+			}
+			is_elf_bf = yes
+		}
+		AND = {
+			ROOT = {
+				is_angel_bf = yes
+			}
+			is_demon_bf = yes
+		}
+		AND = {
+			is_demon_bf = yes
+			ROOT = {
+				is_angel_bf = yes
+			}
+		}
+		AND = {
+			ROOT = {
+				is_kitsune_bf = yes
+			}
+			is_neko_bf = yes
+		}
+		AND = {
+			ROOT = {
+				is_neko_bf = yes
+			}
+			is_kitsune_bf = yes
+		}
+		
+	}
+}
+
+lf_has_desirable_trait = {
+	OR = {
+		AND = {
+			trait = genius
+			FROM = {
+				NOT = { trait = genius }
+			}
+		}
+		AND = {
+			trait = quick
+			FROM = {
+				NOT = { trait = quick }
+			}
+		}
+		AND = {
+			trait = strong
+			FROM = {
+				NOT = { trait = strong }
+			}
+		}
+		AND = {
+			trait = fair
+			FROM = {
+				NOT = { trait = fair }
+			}
+		}
+	}
+}
+
+lf_has_desirable_bloodline = {
+	any_owned_bloodline = {
+		NOR = {
+			FROM = {
+				is_bloodline_member_of = PREV # Prevent redundancy
+			}
+			has_bloodline_flag = irae_bloodline # Nope
+		}
+	}
+}
+
+lf_has_desirable_trait_event = {
+	OR = {
+		AND = {
+			event_target:omnomnom_target = { trait = genius }
+			ROOT = {
+				NOT = { trait = genius }
+			}
+		}
+		AND = {
+			event_target:omnomnom_target = { trait = quick }
+			ROOT = {
+				NOT = { trait = quick }
+			}
+		}
+		AND = {
+			event_target:omnomnom_target = { trait = strong }
+			ROOT = {
+				NOT = { trait = strong }
+			}
+		}
+		AND = {
+			event_target:omnomnom_target = { trait = fair }
+			ROOT = {
+				NOT = { trait = fair }
+			}
+		}
+	}
+}
+
+lf_has_desirable_bloodline_event = {
+	event_target:omnomnom_target = { 
+		any_owned_bloodline = {
+			NOR = {
+				ROOT = {
+					is_bloodline_member_of = PREV # Prevent redundancy
+				}
+				has_bloodline_flag = irae_bloodline # Nope
+			}
+		}
+	}
+}

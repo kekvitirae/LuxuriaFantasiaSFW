@@ -1,0 +1,5 @@
+on_death = {
+	random_events = {
+		10 = LFSpoopy.1 # Restless souls
+	}
+}

@@ -1,0 +1,2206 @@
+namespace = LFRecruit
+
+#
+# Base choices
+#
+narrative_event = {
+	id = LFRecruit.1
+	desc = LFRecruit1
+	picture = lf_lilith_sfw
+	title = lf_recruitment1
+	is_triggered_only = yes # Triggered by targetted decision
+	option = { # Heaven or Hell
+		name = LFRecruit1A
+		trigger = {
+			OR = {
+				lf_has_demons = yes
+				lf_has_divines = yes
+			}
+		}
+		narrative_event = { id = LFRecruit.2 }
+	}
+	option = { # Heaven & Hell not installed
+		trigger = {
+			NOR = {
+				lf_has_demons = yes
+				lf_has_divines = yes
+			}
+		}
+		name = LFHHNotInstalled
+		scaled_wealth = { value = 1.0 min = 75 max = 250 }
+	}
+	option = { # Far East
+		name = LFRecruit1B
+		trigger = {
+			OR = {
+				lf_has_kitsune = yes
+				lf_has_nekos = yes
+			}
+		}
+		narrative_event = { id = LFRecruit.3 }
+	}
+	option = { # Far East not installed
+		trigger = {
+			NOR = {
+				lf_has_kitsune = yes
+				lf_has_nekos = yes
+			}
+		}
+		name = LFFarEastNotInstalled
+		scaled_wealth = { value = 1.0 min = 75 max = 250 }
+	}
+	option = { # Fae
+		name = LFRecruit1C
+		trigger = {
+			OR = {
+				lf_has_elves = yes
+				lf_has_orcs = yes
+				lf_has_fairies = yes
+			}
+		}
+		narrative_event = { id = LFRecruit.4 }
+	}
+	option = { # Fae not installed
+		trigger = {
+			NOR = {
+				lf_has_elves = yes
+				lf_has_orcs = yes
+				lf_has_fairies = yes
+			}
+		}
+		name = LFFaeNotInstalled
+		scaled_wealth = { value = 1.0 min = 75 max = 250 }
+	}
+	option = { # Nevermind
+		name = LFRecruit1D
+		scaled_wealth = { value = 1.0 min = 75 max = 250 }
+	}
+}
+# Angels and Demons
+narrative_event = {
+	id = LFRecruit.2
+	desc = LFRecruit2
+	picture = angel_start2
+	title = lf_recruitment2
+	is_triggered_only = yes # Triggered by targetted decision
+	option = { # Angel for player
+		name = LFRecruit2A
+		trigger = {
+			OR = {
+				trait = kind
+				is_not_demon = yes
+				has_game_rule = { name = lf_blood_feud value = lf_bf_off }
+			}
+			lf_has_divines = yes
+			ai = no
+		}
+		narrative_event = { id = LFRecruit.5 }
+	}
+	option = { # Angel for AI
+		name = LFRecruit2A
+		trigger = {
+			OR = {
+				trait = kind
+				is_not_demon = yes
+				has_game_rule = { name = lf_blood_feud value = lf_bf_off }
+			}
+			lf_has_divines = yes
+			ai = yes
+		}
+		
+		hidden_tooltip = {
+			random_list = {
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = ROOT
+						religion = ROOT
+						female = yes
+						age = 16
+						trait = just
+						flag = lf_never_change_race
+					}
+				}
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = ROOT
+						religion = ROOT
+						female = no
+						age = 16
+						trait = just
+						flag = lf_never_change_race
+					}
+				}
+			}
+			new_character = {
+				random_list = {
+					33 = {
+						add_trait = lf_switch
+					}
+					33 = {
+						add_trait = lf_submissive
+					}
+					33 = {
+						add_trait = lf_dominant
+					}
+				}
+				lf_add_angel = yes
+				lf_add_random_angel_portrait = yes
+				save_event_target_as = invited_character
+			}
+			character_event = { id = NE.1 }
+		}
+		ai_chance = {
+			factor = 1
+		}		
+	}
+	option = { # Demon for AI
+		name = LFRecruit2B
+		trigger = {
+			OR = {
+				trait = kind
+				is_not_angel = yes
+				has_game_rule = { name = lf_blood_feud value = lf_bf_off }
+			}
+			lf_has_demons = yes
+			ai = yes
+		}
+		
+		hidden_tooltip = {
+			random_list = {
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = ROOT
+						religion = ROOT
+						female = yes
+						age = 16
+						trait = lustful
+						flag = lf_never_change_race
+					}
+				}
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = ROOT
+						religion = ROOT
+						female = no
+						age = 16
+						trait = lustful
+						flag = lf_never_change_race
+					}
+				}
+			}
+			new_character = {
+				random_list = {
+					33 = {
+						add_trait = lf_switch
+					}
+					33 = {
+						add_trait = lf_submissive
+					}
+					33 = {
+						add_trait = lf_dominant
+					}
+				}
+				lf_add_demon = yes
+				lf_add_random_demon_portrait = yes
+				save_event_target_as = invited_character
+			}
+			character_event = { id = NE.1 }
+		}
+		ai_chance = {
+			factor = 1
+		}			
+	}
+	option = { # Demon for player
+		name = LFRecruit2B
+		trigger = {
+			OR = {
+				trait = kind
+				is_not_angel = yes
+				has_game_rule = { name = lf_blood_feud value = lf_bf_off }
+			}
+			lf_has_demons = yes
+			ai = no
+		}
+		narrative_event = { id = LFRecruit.6 }
+
+		ai_chance = {
+			factor = 1
+		}			
+	}
+	option = { # Go back
+		name = LFRecruitBack
+		narrative_event = { id = LFRecruit.1 }
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Kitsune and Nekos
+narrative_event = {
+	id = LFRecruit.3
+	desc = LFRecruit3
+	picture = lf_kitsune_start_male
+	title = lf_recruitment3
+	is_triggered_only = yes # Triggered by targetted decision
+	option = { # LF Kitsune for players
+		name = LFRecruit3A
+		trigger = {
+			OR = {
+				trait = kind
+				is_not_neko = yes # Blood Feud
+				has_game_rule = { name = lf_blood_feud value = lf_bf_off }
+			}
+			lf_has_kitsune = yes
+			ai = no
+		}
+		narrative_event = { id = LFRecruit.7 }
+
+		ai_chance = {
+			factor = 1
+		}		
+	}
+	option = { # LF Neko for players
+		name = LFRecruit3B
+		trigger = {
+			OR = {
+				trait = kind
+				is_not_kitsune = yes # Blood Feud
+				has_game_rule = { name = lf_blood_feud value = lf_bf_off }
+			}
+			lf_has_nekos = yes
+			ai = no
+		}
+		narrative_event = { id = LFRecruit.8 }
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = { # LF Kitsune for AI
+		name = LFRecruit3A
+		trigger = {
+			OR = {
+				trait = kind
+				is_not_neko = yes # Blood Feud
+				has_game_rule = { name = lf_blood_feud value = lf_bf_off }
+			}
+			lf_has_kitsune = yes
+			ai = yes
+		}
+		
+		hidden_tooltip = {
+			random_list = {
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = kitsune_culture
+						religion = ROOT
+						female = yes
+						age = 16
+						trait = erudite
+						flag = lf_never_change_race
+					}
+				}
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = kitsune_culture
+						religion = ROOT
+						female = no
+						age = 16
+						trait = erudite
+						flag = lf_never_change_race
+					}
+				}
+			}
+			new_character = {
+				random_list = {
+					33 = {
+						add_trait = lf_switch
+					}
+					33 = {
+						add_trait = lf_submissive
+					}
+					33 = {
+						add_trait = lf_dominant
+					}
+				}
+				lf_add_kitsune = yes
+				save_event_target_as = invited_character
+				lf_add_random_kitsune_portrait = yes
+			}
+		character_event = { id = NE.1 }
+		}
+		ai_chance = {
+			factor = 1
+		}		
+	}
+	option = { # LF Neko for AI
+		name = LFRecruit3B
+		trigger = {
+			OR = {
+				trait = kind
+				is_not_kitsune = yes # Blood Feud
+				has_game_rule = { name = lf_blood_feud value = lf_bf_off }
+			}
+			lf_has_nekos = yes
+			ai = yes
+		}
+		
+		hidden_tooltip = {
+			random_list = {
+					50 = {
+						create_character = {
+							random_traits = yes
+							dynasty = random
+							culture = neko_culture
+							religion = ROOT
+							female = yes
+							age = 16
+							trait = slothful # Because cats
+							flag = lf_never_change_race
+						}
+					}
+					50 = {
+						create_character = {
+							random_traits = yes
+							dynasty = random
+							culture = neko_culture
+							religion = ROOT
+							female = no
+							age = 16
+							trait = slothful
+							flag = lf_never_change_race
+						}
+					}
+				}
+				new_character = {
+					random_list = {
+						33 = {
+							add_trait = lf_switch
+						}
+						33 = {
+							add_trait = lf_submissive
+						}
+						33 = {
+							add_trait = lf_dominant
+						}
+					}
+					lf_add_neko = yes
+					save_event_target_as = invited_character
+					lf_add_random_neko_portrait = yes
+				}
+				character_event = { id = NE.1 }
+			}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = { # Go back
+		name = LFRecruitBack
+		narrative_event = { id = LFRecruit.1 }
+		ai_chance = {
+			factor = 0
+		}		
+	}
+}
+
+# Elves, Orcs, and Fairies
+narrative_event = {
+	id = LFRecruit.4
+	desc = LFRecruit4
+	picture = lf_elf_start_male
+	title = lf_recruitment4
+	is_triggered_only = yes # Triggered by targetted decision
+
+	option = { # Elf for players
+		name = LFRecruit4A
+		trigger = {
+			OR = {
+				trait = kind
+				is_not_orc = yes
+				has_game_rule = { name = lf_blood_feud value = lf_bf_off }
+			}
+			lf_has_elves = yes
+			ai = no
+		}
+			
+		narrative_event = { id = LFRecruit.9 }
+
+	}
+	option = { # Orc for players
+		name = LFRecruit4B
+		trigger = {
+			OR = {
+				trait = kind
+				is_not_elf = yes
+				has_game_rule = { name = lf_blood_feud value = lf_bf_off }
+			}
+			lf_has_orcs = yes
+			ai = no
+		}
+		narrative_event = { id = LFRecruit.10 }
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = { # Fairy for players
+		name = LFRecruit4C
+		trigger = {
+			lf_has_fairies = yes
+			ai = no
+		}
+		narrative_event = { id = LFRecruit.11 }
+		
+	}
+
+	option = { # Elf for AI
+		name = LFRecruit4A
+		trigger = {
+			OR = {
+				trait = kind
+				is_not_orc = yes
+				has_game_rule = { name = lf_blood_feud value = lf_bf_off }
+			}
+			lf_has_elves = yes
+			ai = yes
+		}
+			
+		hidden_tooltip = {
+			random_list = {
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = elven
+						religion = ROOT
+						female = yes
+						age = 16
+						trait = proud
+						flag = lf_never_change_race
+					}
+				}
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = elven
+						religion = ROOT
+						female = no
+						age = 16
+						trait = proud
+						flag = lf_never_change_race
+					}
+				}
+			}
+			new_character = {
+				random_list = {
+					33 = {
+						add_trait = lf_switch
+					}
+					33 = {
+						add_trait = lf_submissive
+					}
+					33 = {
+						add_trait = lf_dominant
+					}
+				}
+				lf_add_elf = yes
+				save_event_target_as = invited_character
+				lf_add_random_elf_portrait = yes
+			}
+			character_event = { id = NE.1 }	
+		}
+	}
+	option = { # Orc for AI
+		name = LFRecruit4B
+		trigger = {
+			OR = {
+				trait = kind
+				is_not_elf = yes
+				has_game_rule = { name = lf_blood_feud value = lf_bf_off }
+			}
+			lf_has_orcs = yes
+			ai = yes
+		}
+			
+		hidden_tooltip = {
+			random_list = {
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = orcish
+						religion = ROOT
+						female = yes
+						age = 16
+						trait = wroth
+						flag = lf_never_change_race
+					}
+				}
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = orcish
+						religion = ROOT
+						female = no
+						age = 16
+						trait = wroth
+						flag = lf_never_change_race
+					}
+				}
+			}
+			new_character = {
+				random_list = {
+					33 = {
+						add_trait = lf_switch
+					}
+					33 = {
+						add_trait = lf_submissive
+					}
+					33 = {
+						add_trait = lf_dominant
+					}
+				}
+				lf_add_orc = yes
+				save_event_target_as = invited_character
+				lf_add_random_orc_portrait = yes
+			}
+			character_event = { id = NE.1 }
+			}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = { # Fairy for AI
+		name = LFRecruit4C
+		trigger = {
+			lf_has_fairies = yes
+			ai = yes
+		}
+			hidden_tooltip = {
+			random_list = {
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = fae
+						religion = ROOT
+						female = yes
+						age = 16
+						trait = lf_fairy
+						trait = shy
+						flag = lf_never_change_race
+					}
+				}
+				50 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = fae
+						religion = ROOT
+						female = no
+						age = 16
+						trait = lf_fairy
+						trait = shy
+						flag = lf_never_change_race
+					}
+				}
+			}
+			new_character = {
+				random_list = {
+					33 = {
+						add_trait = lf_switch
+					}
+					33 = {
+						add_trait = lf_submissive
+					}
+					33 = {
+						add_trait = lf_dominant
+					}
+				}
+				save_event_target_as = invited_character
+				lf_add_random_fairy_portrait = yes
+			}
+			character_event = { id = NE.1 }
+			}
+		ai_chance = {
+			factor = 1
+		}			
+	}
+	option = { # Go back
+		name = LFRecruitBack
+		narrative_event = { id = LFRecruit.1 }	
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+narrative_event = { # Male or female
+	id = LFRecruit.5
+	desc = LFRecruitMaleOrFemale
+	picture = angel_start1
+	title = LFRecruitMaleOrFemaleT
+	is_triggered_only = yes
+	option = { # Male angel
+		name = LFRecruitMale
+		hidden_tooltip = {
+			random_list = {
+				90 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = ROOT
+						religion = ROOT
+						female = no
+						age = 16
+						trait = just
+						flag = lf_never_change_race
+					}
+					new_character = {
+						random_list = {
+							33 = {
+								add_trait = lf_switch
+							}
+							33 = {
+								add_trait = lf_submissive
+							}
+							33 = {
+								add_trait = lf_dominant
+							}
+						}
+						lf_add_angel = yes
+						lf_add_random_angel_portrait = yes
+						set_immune_to_pruning = yes
+						save_event_target_as = invited_character
+					}
+					character_event = { id = NE.1 }
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_global_flag = beefcake_angel_found
+							practical_age < 16
+							NOT = { has_global_flag = LFSpecialNPCOn }
+						}
+					}
+					narrative_event = { id = LFRecruit.12 }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}		
+	}	
+	option = { # Female angel
+		name = LFRecruitFemale
+		hidden_tooltip = {
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				culture = ROOT
+				religion = ROOT
+				female = yes
+				age = 16
+				trait = just
+				flag = lf_never_change_race
+			}
+			new_character = {
+				random_list = {
+					33 = {
+						add_trait = lf_switch
+					}
+					33 = {
+						add_trait = lf_submissive
+					}
+					33 = {
+						add_trait = lf_dominant
+					}
+				}
+				lf_add_angel = yes
+				lf_add_random_angel_portrait = yes
+				set_immune_to_pruning = yes
+				save_event_target_as = invited_character
+			}
+			character_event = { id = NE.1 }
+		}
+		ai_chance = {
+			factor = 1
+		}		
+	}
+	option = { # Futa angel
+		name = LFRecruitBoth
+		trigger = {
+			has_gender_bender_content = yes
+		}
+		hidden_tooltip = {
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				culture = ROOT
+				religion = ROOT
+				female = yes
+				age = 16
+				trait = lf_futa
+				trait = just
+				flag = lf_never_change_race
+			}
+			new_character = {
+				random_list = {
+					33 = {
+						add_trait = lf_switch
+					}
+					33 = {
+						add_trait = lf_submissive
+					}
+					33 = {
+						add_trait = lf_dominant
+					}
+				}
+				lf_add_angel = yes
+				lf_add_random_angel_portrait = yes
+				set_immune_to_pruning = yes
+				save_event_target_as = invited_character
+			}
+			character_event = { id = NE.1 }
+		}
+		ai_chance = {
+			factor = 1
+		}		
+	}	
+}
+
+narrative_event = { # Male or female
+	id = LFRecruit.6
+	desc = LFRecruitMaleOrFemale
+	picture = lf_lilith_sfw
+	title = LFRecruitMaleOrFemaleT
+	is_triggered_only = yes
+	option = { # Male incubus
+		name = LFRecruitMale
+		hidden_tooltip = {
+			random_list = {
+				90 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = ROOT
+						religion = ROOT
+						female = no
+						age = 16
+						trait = lustful
+					flag = lf_never_change_race
+					}
+					new_character = {
+						random_list = {
+							33 = {
+								add_trait = lf_switch
+							}
+							33 = {
+								add_trait = lf_submissive
+							}
+							33 = {
+								add_trait = lf_dominant
+							}
+						}
+						lf_add_demon = yes
+						lf_add_random_demon_portrait = yes
+						set_immune_to_pruning = yes
+						save_event_target_as = invited_character
+					}
+					character_event = { id = NE.1 }
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_global_flag = beefcake_devil_found
+							practical_age < 16
+							NOT = { has_global_flag = LFSpecialNPCOn }
+						}
+					}
+					narrative_event = { id = LFRecruit.13 }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}		
+	}	
+	option = { # Female succubus
+		name = LFRecruitFemale
+		hidden_tooltip = {
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				culture = ROOT
+				religion = ROOT
+				female = yes
+				age = 16
+				trait = lustful
+				flag = lf_never_change_race
+			}
+			new_character = {
+				random_list = {
+					33 = {
+						add_trait = lf_switch
+					}
+					33 = {
+						add_trait = lf_submissive
+					}
+					33 = {
+						add_trait = lf_dominant
+					}
+				}
+				lf_add_demon = yes
+				lf_add_random_demon_portrait = yes
+				set_immune_to_pruning = yes
+				save_event_target_as = invited_character
+			}
+			character_event = { id = NE.1 }
+		}
+		ai_chance = {
+			factor = 1
+		}		
+	}
+	option = { # Futa succubus
+		name = LFRecruitBoth
+		trigger = {
+			has_gender_bender_content = yes
+		}
+		hidden_tooltip = {
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				culture = ROOT
+				religion = ROOT
+				female = yes
+				age = 16
+				trait = lf_futa
+				trait = lustful
+				flag = lf_never_change_race
+			}
+			new_character = {
+				random_list = {
+					33 = {
+						add_trait = lf_switch
+					}
+					33 = {
+						add_trait = lf_submissive
+					}
+					33 = {
+						add_trait = lf_dominant
+					}
+				}
+				lf_add_demon = yes
+				lf_add_random_demon_portrait = yes
+				set_immune_to_pruning = yes
+				save_event_target_as = invited_character
+			}
+			character_event = { id = NE.1 }
+		}
+		ai_chance = {
+			factor = 1
+		}		
+	}	
+}
+
+narrative_event = { # Male or female
+	id = LFRecruit.7
+	desc = LFRecruitMaleOrFemale
+	picture = kitsune_male_seduce
+	title = LFRecruitMaleOrFemaleT
+	is_triggered_only = yes
+	option = { # Male kitsune
+		name = LFRecruitMale
+		hidden_tooltip = {
+			random_list = {
+				90 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = kitsune_culture
+						religion = ROOT
+						female = no
+						age = 16
+						trait = erudite
+						flag = lf_never_change_race
+					}
+					new_character = {
+						random_list = {
+							33 = {
+								add_trait = lf_switch
+							}
+							33 = {
+								add_trait = lf_submissive
+							}
+							33 = {
+								add_trait = lf_dominant
+							}
+						}
+						lf_add_kitsune = yes
+						lf_add_random_kitsune_portrait = yes
+						set_immune_to_pruning = yes
+						save_event_target_as = invited_character
+					}
+					character_event = { id = NE.1 }
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_global_flag = beefcake_kitsune_found
+							practical_age < 16
+							NOT = { has_global_flag = LFSpecialNPCOn }
+						}
+					}
+					narrative_event = { id = LFRecruit.14 }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}		
+	}	
+	option = { # Female kitsune
+		name = LFRecruitFemale
+		hidden_tooltip = {
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				culture = kitsune_culture
+				religion = ROOT
+				female = yes
+				age = 16
+				trait = erudite
+				flag = lf_never_change_race
+			}
+			new_character = {
+				random_list = {
+					33 = {
+						add_trait = lf_switch
+					}
+					33 = {
+						add_trait = lf_submissive
+					}
+					33 = {
+						add_trait = lf_dominant
+					}
+				}
+				lf_add_kitsune = yes
+				lf_add_random_kitsune_portrait = yes
+				set_immune_to_pruning = yes
+				save_event_target_as = invited_character
+			}
+			character_event = { id = NE.1 }
+		}
+		ai_chance = {
+			factor = 1
+		}		
+	}
+	option = { # Futa kitsune
+		name = LFRecruitBoth
+		trigger = {
+			has_gender_bender_content = yes
+		}
+		hidden_tooltip = {
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				culture = kitsune_culture
+				religion = ROOT
+				female = yes
+				age = 16
+				trait = lf_futa
+				trait = erudite
+				flag = lf_never_change_race
+			}
+			new_character = {
+				random_list = {
+					33 = {
+						add_trait = lf_switch
+					}
+					33 = {
+						add_trait = lf_submissive
+					}
+					33 = {
+						add_trait = lf_dominant
+					}
+				}
+				lf_add_kitsune = yes
+				lf_add_random_kitsune_portrait = yes
+				set_immune_to_pruning = yes
+				save_event_target_as = invited_character
+			}
+			character_event = { id = NE.1 }
+		}
+		ai_chance = {
+			factor = 1
+		}		
+	}	
+}
+
+narrative_event = { # Male or female
+	id = LFRecruit.8
+	desc = LFRecruitMaleOrFemale
+	picture = neko_start1
+	title = LFRecruitMaleOrFemaleT
+	is_triggered_only = yes
+	option = { # Male neko
+		name = LFRecruitMale
+		hidden_tooltip = {
+			random_list = {
+				90 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = neko_culture
+						religion = ROOT
+						female = no
+						age = 16
+						trait = slothful
+						flag = lf_never_change_race
+					}
+					new_character = {
+						random_list = {
+							33 = {
+								add_trait = lf_switch
+							}
+							33 = {
+								add_trait = lf_submissive
+							}
+							33 = {
+								add_trait = lf_dominant
+							}
+						}
+						lf_add_neko = yes
+						lf_add_random_neko_portrait = yes
+						set_immune_to_pruning = yes
+						save_event_target_as = invited_character
+					}
+					character_event = { id = NE.1 }
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_global_flag = beefcake_neko_found
+							practical_age < 16
+							NOT = { has_global_flag = LFSpecialNPCOn }
+						}
+					}
+					narrative_event = { id = LFRecruit.15 }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}		
+	}	
+	option = { # Female neko
+		name = LFRecruitFemale
+		hidden_tooltip = {
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				culture = neko_culture
+				religion = ROOT
+				female = yes
+				age = 16
+				trait = slothful # Because cats
+				flag = lf_never_change_race
+			}
+			new_character = {
+				random_list = {
+					33 = {
+						add_trait = lf_switch
+					}
+					33 = {
+						add_trait = lf_submissive
+					}
+					33 = {
+						add_trait = lf_dominant
+					}
+				}
+				lf_add_neko = yes
+				lf_add_random_neko_portrait = yes
+				set_immune_to_pruning = yes
+				save_event_target_as = invited_character
+			}
+			character_event = { id = NE.1 }
+		}
+		ai_chance = {
+			factor = 1
+		}		
+	}
+	option = { # Futa neko
+		name = LFRecruitBoth
+		trigger = {
+			has_gender_bender_content = yes
+		}
+		hidden_tooltip = {
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				culture = neko_culture
+				religion = ROOT
+				female = yes
+				age = 16
+				trait = lf_futa
+				trait = slothful # Because cats
+				flag = lf_never_change_race
+			}
+			new_character = {
+				random_list = {
+					33 = {
+						add_trait = lf_switch
+					}
+					33 = {
+						add_trait = lf_submissive
+					}
+					33 = {
+						add_trait = lf_dominant
+					}
+				}
+				lf_add_neko = yes
+				lf_add_random_neko_portrait = yes
+				set_immune_to_pruning = yes
+				save_event_target_as = invited_character
+			}
+			character_event = { id = NE.1 }
+		}
+		ai_chance = {
+			factor = 1
+		}		
+	}	
+}
+narrative_event = { # Male or female
+	id = LFRecruit.9
+	desc = LFRecruitMaleOrFemale
+	picture = lf_elf_start_female
+	title = LFRecruitMaleOrFemaleT
+	is_triggered_only = yes
+	option = { # Male elf
+		name = LFRecruitMale
+		hidden_tooltip = {
+			random_list = {
+				90 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = elven
+						religion = ROOT
+						female = no
+						age = 16
+						trait = proud
+						flag = lf_never_change_race
+					}
+					new_character = {
+						random_list = {
+							33 = {
+								add_trait = lf_switch
+							}
+							33 = {
+								add_trait = lf_submissive
+							}
+							33 = {
+								add_trait = lf_dominant
+							}
+						}
+						lf_add_elf = yes
+						lf_add_random_elf_portrait = yes
+						set_immune_to_pruning = yes
+						save_event_target_as = invited_character
+					}
+					character_event = { id = NE.1 }
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_global_flag = beefcake_elf_found
+							practical_age < 16
+							NOT = { has_global_flag = LFSpecialNPCOn }
+						}
+					}
+					narrative_event = { id = LFRecruit.16 }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}		
+	}	
+	option = { # Female elf
+		name = LFRecruitFemale
+		hidden_tooltip = {
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				culture = elven
+				religion = ROOT
+				female = yes
+				age = 16
+				trait = proud
+				flag = lf_never_change_race
+			}
+
+			new_character = {
+				random_list = {
+					33 = {
+						add_trait = lf_switch
+					}
+					33 = {
+						add_trait = lf_submissive
+					}
+					33 = {
+						add_trait = lf_dominant
+					}
+				}
+				lf_add_elf = yes
+				lf_add_random_elf_portrait = yes
+				set_immune_to_pruning = yes
+				save_event_target_as = invited_character
+			}
+			character_event = { id = NE.1 }
+		}
+		ai_chance = {
+			factor = 1
+		}		
+	}
+	option = { # Futa elf
+		name = LFRecruitBoth
+		trigger = {
+			has_gender_bender_content = yes
+		}
+		hidden_tooltip = {
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				culture = elven
+				religion = ROOT
+				female = yes
+				age = 16
+				trait = lf_futa
+				trait = proud
+				flag = lf_never_change_race
+			}
+
+			new_character = {
+				random_list = {
+					33 = {
+						add_trait = lf_switch
+					}
+					33 = {
+						add_trait = lf_submissive
+					}
+					33 = {
+						add_trait = lf_dominant
+					}
+				}
+				lf_add_elf = yes
+				lf_add_random_elf_portrait = yes
+				set_immune_to_pruning = yes
+				save_event_target_as = invited_character
+			}
+			character_event = { id = NE.1 }
+		}
+		ai_chance = {
+			factor = 1
+		}		
+	}	
+}
+narrative_event = { # Male or female
+	id = LFRecruit.10
+	desc = LFRecruitMaleOrFemale
+	picture = lf_orc_start_male
+	title = LFRecruitMaleOrFemaleT
+	is_triggered_only = yes
+	option = { # Male orc
+		name = LFRecruitMale
+		hidden_tooltip = {
+			random_list = {
+				90 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = orcish
+						religion = ROOT
+						female = no
+						age = 16
+						trait = wroth
+						flag = lf_never_change_race
+					}
+					new_character = {
+						random_list = {
+							33 = {
+								add_trait = lf_switch
+							}
+							33 = {
+								add_trait = lf_submissive
+							}
+							33 = {
+								add_trait = lf_dominant
+							}
+						}
+						lf_add_orc = yes
+						lf_add_random_orc_portrait = yes
+						set_immune_to_pruning = yes
+						save_event_target_as = invited_character
+					}
+					character_event = { id = NE.1 }
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_global_flag = beefcake_orc_found
+							practical_age < 16
+							NOT = { has_global_flag = LFSpecialNPCOn }
+						}
+					}
+					narrative_event = { id = LFRecruit.17 }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}		
+	}	
+	option = { # Female orc
+		name = LFRecruitFemale
+		hidden_tooltip = {
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				culture = orcish
+				religion = ROOT
+				female = yes
+				age = 16
+				trait = wroth
+				flag = lf_never_change_race
+			}
+
+			new_character = {
+				random_list = {
+					33 = {
+						add_trait = lf_switch
+					}
+					33 = {
+						add_trait = lf_submissive
+					}
+					33 = {
+						add_trait = lf_dominant
+					}
+				}
+				lf_add_orc = yes
+				lf_add_random_orc_portrait = yes
+				set_immune_to_pruning = yes
+				save_event_target_as = invited_character
+			}
+			character_event = { id = NE.1 }
+		}
+		ai_chance = {
+			factor = 1
+		}		
+	}
+	option = { # Futa orc
+		name = LFRecruitBoth
+		trigger = {
+			has_gender_bender_content = yes
+		}
+		hidden_tooltip = {
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				culture = orcish
+				religion = ROOT
+				female = yes
+				age = 16
+				trait = lf_futa
+				trait = wroth
+				flag = lf_never_change_race
+			}
+
+			new_character = {
+				random_list = {
+					33 = {
+						add_trait = lf_switch
+					}
+					33 = {
+						add_trait = lf_submissive
+					}
+					33 = {
+						add_trait = lf_dominant
+					}
+				}
+				lf_add_orc = yes
+				lf_add_random_orc_portrait = yes
+				set_immune_to_pruning = yes
+				save_event_target_as = invited_character
+			}
+			character_event = { id = NE.1 }
+		}
+		ai_chance = {
+			factor = 1
+		}		
+	}	
+}
+narrative_event = { # Male or female
+	id = LFRecruit.11
+	desc = LFRecruitMaleOrFemale
+	picture = fairies_dancing
+	title = LFRecruitMaleOrFemaleT
+	is_triggered_only = yes
+	option = { # Male fairy
+		name = LFRecruitMale
+		hidden_tooltip = {
+			random_list = {
+				90 = {
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						culture = fae
+						religion = ROOT
+						female = no
+						age = 16
+						trait = lf_fairy
+						trait = shy
+						flag = lf_never_change_race
+					}
+					new_character = {
+						random_list = {
+							33 = {
+								add_trait = lf_switch
+							}
+							33 = {
+								add_trait = lf_submissive
+							}
+							33 = {
+								add_trait = lf_dominant
+							}
+						}
+						lf_add_random_fairy_portrait = yes
+						set_immune_to_pruning = yes
+						save_event_target_as = invited_character
+					}
+					character_event = { id = NE.1 }
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							has_global_flag = beefcake_fairy_found
+							practical_age < 16
+							NOT = { has_global_flag = LFSpecialNPCOn }
+						}
+					}
+					narrative_event = { id = LFRecruit.18 }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}		
+	}	
+	option = { # Female fairy
+		name = LFRecruitFemale
+		hidden_tooltip = {
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				culture = fae
+				religion = ROOT
+				female = yes
+				age = 16
+				trait = lf_fairy
+				trait = shy
+				flag = lf_never_change_race
+			}
+
+			new_character = {
+				random_list = {
+					33 = {
+						add_trait = lf_switch
+					}
+					33 = {
+						add_trait = lf_submissive
+					}
+					33 = {
+						add_trait = lf_dominant
+					}
+				}
+				lf_add_random_fairy_portrait = yes
+				set_immune_to_pruning = yes
+				save_event_target_as = invited_character
+			}
+			character_event = { id = NE.1 }
+		}
+		ai_chance = {
+			factor = 1
+		}		
+	}
+	option = { # Futa fairy
+		name = LFRecruitBoth
+		trigger = {
+			has_gender_bender_content = yes
+		}
+		hidden_tooltip = {
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				culture = fae
+				religion = ROOT
+				female = yes
+				age = 16
+				trait = lf_fairy
+				trait = shy
+				flag = lf_never_change_race
+			}
+			new_character = {
+				random_list = {
+					33 = {
+						add_trait = lf_switch
+					}
+					33 = {
+						add_trait = lf_submissive
+					}
+					33 = {
+						add_trait = lf_dominant
+					}
+				}
+				lf_add_random_fairy_portrait = yes
+				set_immune_to_pruning = yes
+				save_event_target_as = invited_character
+			}
+			character_event = { id = NE.1 }
+		}
+		ai_chance = {
+			factor = 1
+		}		
+	}	
+}
+
+narrative_event = {
+	id = LFRecruit.12
+	desc = LFBeefcake12
+	picture = beefcake_angel
+	title = LFBeefcake12T
+	is_triggered_only = yes
+	
+	immediate = {
+		create_character = {
+			random_traits = no
+			name = "Kasbiel"
+			dynasty = 9100009
+			culture = ROOT
+			religion = ROOT
+			female = no
+			age = 16
+			trait = grey_eminence
+			trait = just
+			trait = fair
+			trait = strong
+			trait = robust
+			trait = groomed
+			trait = socializer
+			trait = lf_immortal_npc
+			trait = lf_beefcake_angel_portrait
+			flag = special_npc		
+		}
+		new_character = {
+			lf_add_angel = yes
+			random_list = {
+				33 = {
+					add_trait = lf_switch
+				}
+				33 = {
+					add_trait = lf_submissive
+				}
+				33 = {
+					add_trait = lf_dominant
+				}
+			}
+			set_immune_to_pruning = yes
+			if = {
+				limit = {
+					ROOT = {
+						is_female = no
+						trait = homosexual
+					}
+				}
+				add_trait = homosexual
+			}
+			save_event_target_as = invited_character
+
+		}
+	}
+	
+	option = {
+		name = LFOhmai
+		set_global_flag = beefcake_angel_found
+	}
+	option = {
+		name = LFOhmaigawd
+		set_global_flag = beefcake_angel_found
+		add_lover = event_target:invited_character
+		add_character_modifier = {
+			name = lf_great_sex
+			duration = 30
+		}
+		hidden_tooltip = {
+			if = {
+				limit = {
+					is_female = yes
+					is_pregnant = no
+					is_married = no
+				}
+				impregnate = event_target:invited_character
+			}
+			else_if = {
+				limit = {
+					is_female = yes
+					is_pregnant = no
+					is_married = yes
+				}
+				impregnate_cuckoo = event_target:invited_character
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = LFRecruit.13
+	desc = LFBeefcake13
+	picture = beefcake_devil
+	title = LFBeefcake13T
+	is_triggered_only = yes
+	
+	immediate = {
+		create_character = {
+			random_traits = no
+			name = "Therzon"
+			dynasty = 9100008
+			culture = ROOT
+			religion = ROOT
+			female = no
+			age = 16
+			trait = elusive_shadow
+			trait = lustful
+			trait = fair
+			trait = strong
+			trait = robust
+			trait = groomed
+			trait = hedonist
+			trait = lf_immortal_npc
+			trait = lf_beefcake_demon_portrait
+			flag = special_npc		
+		}
+		new_character = {
+			lf_add_demon = yes
+			random_list = {
+				33 = {
+					add_trait = lf_switch
+				}
+				33 = {
+					add_trait = lf_submissive
+				}
+				33 = {
+					add_trait = lf_dominant
+				}
+			}
+			set_immune_to_pruning = yes
+			if = {
+				limit = {
+					ROOT = {
+						is_female = no
+						trait = homosexual
+					}
+				}
+				add_trait = homosexual
+			}
+			save_event_target_as = invited_character
+		}
+	}
+	
+	option = {
+		name = LFOhmai
+		set_global_flag = beefcake_devil_found
+	}
+	option = {
+		name = LFOhmaigawd
+		set_global_flag = beefcake_devil_found
+		add_lover = event_target:invited_character
+		add_character_modifier = {
+			name = lf_great_sex
+			duration = 30
+		}
+		hidden_tooltip = {
+			if = {
+				limit = {
+					is_female = yes
+					is_pregnant = no
+					is_married = no
+				}
+				impregnate = event_target:invited_character
+			}
+			else_if = {
+				limit = {
+					is_female = yes
+					is_pregnant = no
+					is_married = yes
+				}
+				impregnate_cuckoo = event_target:invited_character
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = LFRecruit.14
+	desc = LFBeefcake14
+	picture = beefcake_kitsune
+	title = LFBeefcake14T
+	is_triggered_only = yes
+	
+	immediate = {
+		create_character = {
+			random_traits = no
+			name = "Noriharu"
+			dynasty = 9100004
+			culture = kitsune_culture
+			religion = buddhist
+			female = no
+			age = 16
+			trait = mastermind_theologian
+			trait = erudite
+			trait = fair
+			trait = strong
+			trait = robust
+			trait = groomed
+			trait = mystic
+			trait = lf_immortal_npc
+			trait = lf_beefcake_kitsune_portrait
+			flag = special_npc		
+		}
+		new_character = {
+			lf_add_kitsune = yes
+			random_list = {
+				33 = {
+					add_trait = lf_switch
+				}
+				33 = {
+					add_trait = lf_submissive
+				}
+				33 = {
+					add_trait = lf_dominant
+				}
+			}
+			set_immune_to_pruning = yes
+			if = {
+				limit = {
+					ROOT = {
+						is_female = no
+						trait = homosexual
+					}
+				}
+				add_trait = homosexual
+			}
+			save_event_target_as = invited_character
+		}
+	}
+	
+	option = {
+		name = LFOhmai
+		set_global_flag = beefcake_kitsune_found
+	}
+	option = {
+		name = LFOhmaigawd
+		set_global_flag = beefcake_kitsune_found
+		add_lover = event_target:invited_character
+		add_character_modifier = {
+			name = lf_great_sex
+			duration = 30
+		}
+		hidden_tooltip = {
+			if = {
+				limit = {
+					is_female = yes
+					is_pregnant = no
+					is_married = no
+				}
+				impregnate = event_target:invited_character
+			}
+			else_if = {
+				limit = {
+					is_female = yes
+					is_pregnant = no
+					is_married = yes
+				}
+				impregnate_cuckoo = event_target:invited_character
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = LFRecruit.15
+	desc = LFBeefcake15
+	picture = beefcake_neko
+	title = LFBeefcake15T
+	is_triggered_only = yes
+	
+	immediate = {
+		create_character = {
+			random_traits = no
+			name = "Chao"
+			dynasty = 9100003
+			culture = han
+			religion = ROOT
+			female = no
+			age = 16
+			trait = midas_touched
+			trait = content
+			trait = fair
+			trait = strong
+			trait = robust
+			trait = groomed
+			trait = hunter
+			trait = lf_immortal_npc
+			trait = lf_beefcake_neko_portrait
+			flag = special_npc		
+		}
+		new_character = {
+			lf_add_neko = yes
+			random_list = {
+				33 = {
+					add_trait = lf_switch
+				}
+				33 = {
+					add_trait = lf_submissive
+				}
+				33 = {
+					add_trait = lf_dominant
+				}
+			}
+			set_immune_to_pruning = yes
+			if = {
+				limit = {
+					ROOT = {
+						is_female = no
+						trait = homosexual
+					}
+				}
+				add_trait = homosexual
+			}
+			save_event_target_as = invited_character
+		}
+	}
+	
+	option = {
+		name = LFOhmai
+		set_global_flag = beefcake_neko_found
+	}
+	option = {
+		name = LFOhmaigawd
+		set_global_flag = beefcake_neko_found
+		add_lover = event_target:invited_character
+		add_character_modifier = {
+			name = lf_great_sex
+			duration = 30
+		}
+		hidden_tooltip = {
+			if = {
+				limit = {
+					is_female = yes
+					is_pregnant = no
+					is_married = no
+				}
+				impregnate = event_target:invited_character
+			}
+			else_if = {
+				limit = {
+					is_female = yes
+					is_pregnant = no
+					is_married = yes
+				}
+				impregnate_cuckoo = event_target:invited_character
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = LFRecruit.16
+	desc = LFBeefcake16
+	picture = beefcake_elf
+	title = LFBeefcake16T
+	is_triggered_only = yes
+	
+	immediate = {
+		create_character = {
+			random_traits = no
+			name = "Lockesly"
+			dynasty = 9100005
+			culture = elven
+			religion = ROOT
+			female = no
+			age = 16
+			trait = grey_eminence
+			trait = proud
+			trait = fair
+			trait = strong
+			trait = robust
+			trait = groomed
+			trait = poet
+			trait = baltic_leader
+			trait = lf_immortal_npc
+			trait = lf_beefcake_elf_portrait
+			flag = special_npc		
+		}
+		new_character = {
+			lf_add_elf = yes
+			random_list = {
+				33 = {
+					add_trait = lf_switch
+				}
+				33 = {
+					add_trait = lf_submissive
+				}
+				33 = {
+					add_trait = lf_dominant
+				}
+			}
+			set_immune_to_pruning = yes
+			if = {
+				limit = {
+					ROOT = {
+						is_female = no
+						trait = homosexual
+					}
+				}
+				add_trait = homosexual
+			}
+			save_event_target_as = invited_character
+		}
+	}
+	
+	option = {
+		name = LFOhmai
+		set_global_flag = beefcake_elf_found
+	}
+	option = {
+		name = LFOhmaigawd
+		set_global_flag = beefcake_elf_found
+		add_lover = event_target:invited_character
+		add_character_modifier = {
+			name = lf_great_sex
+			duration = 30
+		}
+		hidden_tooltip = {
+			if = {
+				limit = {
+					is_female = yes
+					is_pregnant = no
+					is_married = no
+				}
+				impregnate = event_target:invited_character
+			}
+			else_if = {
+				limit = {
+					is_female = yes
+					is_pregnant = no
+					is_married = yes
+				}
+				impregnate_cuckoo = event_target:invited_character
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = LFRecruit.17
+	desc = LFBeefcake17
+	picture = beefcake_orc
+	title = LFBeefcake17T
+	is_triggered_only = yes
+	
+	immediate = {
+		create_character = {
+			random_traits = no
+			name = "Varguk"
+			dynasty = 9100006
+			culture = orcish
+			religion = ROOT
+			female = no
+			age = 16
+			trait = brilliant_strategist
+			trait = fair
+			trait = strong
+			trait = robust
+			trait = groomed
+			trait = unyielding_leader
+			trait = lf_immortal_npc
+			trait = lf_beefcake_orc_portrait
+			flag = special_npc		
+		}
+		new_character = {
+			lf_add_orc = yes
+			random_list = {
+				33 = {
+					add_trait = lf_switch
+				}
+				33 = {
+					add_trait = lf_submissive
+				}
+				33 = {
+					add_trait = lf_dominant
+				}
+			}
+			set_immune_to_pruning = yes
+			if = {
+				limit = {
+					ROOT = {
+						is_female = no
+						trait = homosexual
+					}
+				}
+				add_trait = homosexual
+			}
+			save_event_target_as = invited_character
+		}
+	}
+	
+	option = {
+		name = LFOhmai
+		set_global_flag = beefcake_orc_found
+	}
+	option = {
+		name = LFOhmaigawd
+		set_global_flag = beefcake_orc_found
+		add_lover = event_target:invited_character
+		add_character_modifier = {
+			name = lf_great_sex
+			duration = 30
+		}
+		hidden_tooltip = {
+			if = {
+				limit = {
+					is_female = yes
+					is_pregnant = no
+					is_married = no
+				}
+				impregnate = event_target:invited_character
+			}
+			else_if = {
+				limit = {
+					is_female = yes
+					is_pregnant = no
+					is_married = yes
+				}
+				impregnate_cuckoo = event_target:invited_character
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = LFRecruit.18
+	desc = LFBeefcake18
+	picture = beefcake_fairy
+	title = LFBeefcake18T
+	is_triggered_only = yes
+	
+	immediate = {
+		create_character = {
+			random_traits = no
+			name = "Silverleaf"
+			dynasty = 9100007
+			culture = fae
+			religion = ROOT
+			female = no
+			age = 16
+			trait = elusive_shadow
+			trait = lf_fairy
+			trait = fair
+			trait = strong
+			trait = robust
+			trait = groomed
+			trait = trickster
+			trait = lf_immortal_npc
+			trait = lf_beefcake_fairy_portrait
+			flag = special_npc		
+		}
+		new_character = {
+			random_list = {
+				33 = {
+					add_trait = lf_switch
+				}
+				33 = {
+					add_trait = lf_submissive
+				}
+				33 = {
+					add_trait = lf_dominant
+				}
+			}
+			set_immune_to_pruning = yes
+			if = {
+				limit = {
+					ROOT = {
+						is_female = no
+						trait = homosexual
+					}
+				}
+				add_trait = homosexual
+			}
+			save_event_target_as = invited_character
+		}
+	}
+	
+	option = {
+		name = LFOhmai
+		set_global_flag = beefcake_fairy_found
+	}
+	option = {
+		name = LFOhmaigawd
+		set_global_flag = beefcake_fairy_found
+		add_lover = event_target:invited_character
+		add_character_modifier = {
+			name = lf_great_sex
+			duration = 30
+		}
+		hidden_tooltip = {
+			if = {
+				limit = {
+					is_female = yes
+					is_pregnant = no
+					is_married = no
+				}
+				impregnate = event_target:invited_character
+			}
+			else_if = {
+				limit = {
+					is_female = yes
+					is_pregnant = no
+					is_married = yes
+				}
+				impregnate_cuckoo = event_target:invited_character
+			}
+		}
+	}
+}

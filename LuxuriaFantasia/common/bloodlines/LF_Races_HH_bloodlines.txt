@@ -1,0 +1,14 @@
+demonic_bloodline = {
+	diplomacy = 2
+	health = 1
+	sex_appeal_opinion = 20
+	lustful_opinion = 10
+	chaste_opinion = -20
+	inheritance = all_descendants
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_murder_rose
+	flags = { historical_bloodline lf_bloodline lf_demonic }
+	active = {
+		is_any_demon = yes
+	}
+}

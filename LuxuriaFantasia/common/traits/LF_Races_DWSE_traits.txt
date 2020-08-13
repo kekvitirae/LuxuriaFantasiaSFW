@@ -1,0 +1,115 @@
+dwse_dragonslut = {
+	random = no
+	#random = yes
+	#potential = {
+	#	is_female = yes
+	#	is_adult = yes
+	#	NOR = { 
+	#		trait = dwse_dragon_adult
+	#		trait = dwse_shapeshifted
+	#	}
+	#	trait = lustful
+	#}
+	customizer = no
+	opinion_of_dwse_dragon_adult = 50 # Breed me, daddy!
+	opinion_of_dwse_dragon_child = 10 # How cute!
+	opinion_of_dwse_lizard = 5 # Eh, I guess they are kinda dragons.
+}
+
+dragon_pregnancy = {
+	random = no
+	customizer = no
+ 	potential = {
+		is_female = yes
+	}
+	inherit_chance = 0 
+	fertility = -5000
+} 
+dwse_dragon_child = {
+	random = no
+	customizer = no
+	opposites = {
+		dwse_lizard
+		dwse_dragon_adult
+		lf_werewolf
+		lf_kitsune
+		lf_neko
+		lf_fairy
+		lf_orc
+		lf_elf
+	}	
+	can_hold_titles = no
+ 	combat_rating = -20 # A dragonling must be protected by its mother
+}
+dwse_lizard = {
+	random = no
+	customizer = no
+	ruler_designer_cost = 0
+	opposites = {
+		lf_werewolf
+		dwse_dragon_adult
+		dwse_dragon_child
+		lf_kitsune
+		lf_neko
+		lf_fairy
+		lf_orc
+		lf_elf
+	}
+	martial = 2
+	fertility = 0.1
+	male_compliment = dwse_lizardm_comp
+	female_compliment = dwse_lizardf_comp
+	child_compliment = dwse_lizardc_comp
+	male_insult = dwse_lizardm_insult
+	female_insult = dwse_lizardf_insult
+	child_insult = dwse_lizardc_insult
+}
+dwse_lizard_pregnancy = {
+	hidden = yes
+	random = no
+	customizer = no
+	inherit_chance = 0
+	ai_rationality = -10
+}
+dragon_ambassador = {
+	random = no
+	customizer = no
+	pilgrimage = yes
+}
+was_dragon_ambassador = {
+	random = no
+	customizer = no
+}
+dwse_dragon_adult = {
+	random = no
+	customizer = no
+	opposites = {
+		dwse_lizard
+		dwse_dragon_child
+		lf_werewolf
+		lf_kitsune
+		lf_neko
+		lf_fairy
+		lf_orc
+		lf_elf
+	}	
+ 	martial = 5
+	combat_rating = 20
+}
+
+dwse_shapeshifted = {
+	random = no
+	customizer = no
+	martial = 2
+	combat_rating = 5
+	is_visible = {
+		OR = {
+			character = FROM
+			dynasty = FROM
+			trait = dwse_dragon_adult
+			trait = dwse_dragon_child
+			trait = dwse_lizard
+		}
+	}
+}
+		

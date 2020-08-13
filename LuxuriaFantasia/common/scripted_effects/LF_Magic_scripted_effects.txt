@@ -1,0 +1,466 @@
+lf_use_minor_mana = {
+	subtract_variable = {
+		which = current_mana
+		value = 10
+	}
+}
+lf_use_moderate_mana = {
+	subtract_variable = {
+		which = current_mana
+		value = 25
+	}
+}
+lf_use_major_mana = {
+	subtract_variable = {
+		which = current_mana
+		value = 50
+	}
+}
+lf_use_minor_mana_kitsune = {
+	if = {
+		limit = {
+			is_kitsune = yes
+		}
+		subtract_variable = {
+			which = current_mana
+			value = 8
+		}
+	}
+	else = {
+		subtract_variable = {
+			which = current_mana
+			value = 12
+		}
+	}
+}
+lf_use_moderate_mana_kitsune = {
+	if = {
+		limit = {
+			is_kitsune = yes
+		}
+		subtract_variable = {
+			which = current_mana
+			value = 20
+		}
+	}
+	else = {
+		subtract_variable = {
+			which = current_mana
+			value = 30
+		}
+	}
+}
+lf_use_major_mana_kitsune = {
+	if = {
+		limit = {
+			is_kitsune = yes
+		}
+		subtract_variable = {
+			which = current_mana
+			value = 40
+		}
+	}
+	else = {
+		subtract_variable = {
+			which = current_mana
+			value = 60
+		}
+	}
+}
+lf_use_minor_mana_neko = {
+	if = {
+		limit = {
+			is_neko = yes
+		}
+		subtract_variable = {
+			which = current_mana
+			value = 8
+		}
+	}
+	else = {
+		subtract_variable = {
+			which = current_mana
+			value = 12
+		}
+	}
+}
+lf_use_moderate_mana_neko = {
+	if = {
+		limit = {
+			is_neko = yes
+		}
+		subtract_variable = {
+			which = current_mana
+			value = 20
+		}
+	}
+	else = {
+		subtract_variable = {
+			which = current_mana
+			value = 30
+		}
+	}
+}
+lf_use_major_mana_neko = {
+	if = {
+		limit = {
+			is_neko = yes
+		}
+		subtract_variable = {
+			which = current_mana
+			value = 40
+		}
+	}
+	else = {
+		subtract_variable = {
+			which = current_mana
+			value = 60
+		}
+	}
+}
+lf_use_minor_mana_elf = {
+	if = {
+		limit = {
+			OR = {
+				is_elf = yes
+				trait = houseirae_halfelf
+			}
+		}
+		subtract_variable = {
+			which = current_mana
+			value = 8
+		}
+	}
+	else = {
+		subtract_variable = {
+			which = current_mana
+			value = 12
+		}
+	}
+}
+lf_use_moderate_mana_elf = {
+	if = {
+		limit = {
+			OR = {
+				is_elf = yes
+				trait = houseirae_halfelf
+			}
+		}
+		subtract_variable = {
+			which = current_mana
+			value = 20
+		}
+	}
+	else = {
+		subtract_variable = {
+			which = current_mana
+			value = 30
+		}
+	}
+}
+lf_use_major_mana_elf = {
+	if = {
+		limit = {
+			OR = {
+				is_elf = yes
+				trait = houseirae_halfelf
+			}
+		}
+		subtract_variable = {
+			which = current_mana
+			value = 40
+		}
+	}
+	else = {
+		subtract_variable = {
+			which = current_mana
+			value = 60
+		}
+	}
+}
+lf_use_minor_mana_drow = {
+	if = {
+		limit = {
+			trait = houseirae_drow
+		}
+		subtract_variable = {
+			which = current_mana
+			value = 8
+		}
+	}
+	else = {
+		subtract_variable = {
+			which = current_mana
+			value = 12
+		}
+	}
+}
+lf_use_moderate_mana_drow = {
+	if = {
+		limit = {
+			trait = houseirae_drow
+		}
+		subtract_variable = {
+			which = current_mana
+			value = 20
+		}
+	}
+	else = {
+		subtract_variable = {
+			which = current_mana
+			value = 30
+		}
+	}
+}
+lf_use_major_mana_drow = {
+	if = {
+		limit = {
+			trait = houseirae_drow
+		}
+		subtract_variable = {
+			which = current_mana
+			value = 40
+		}
+	}
+	else = {
+		subtract_variable = {
+			which = current_mana
+			value = 60
+		}
+	}
+}
+lf_use_minor_mana_fairy = {
+	if = {
+		limit = {
+			is_fairy = yes
+		}
+		subtract_variable = {
+			which = current_mana
+			value = 8
+		}
+	}
+	else = {
+		subtract_variable = {
+			which = current_mana
+			value = 12
+		}
+	}
+}
+lf_use_moderate_mana_fairy = {
+	if = {
+		limit = {
+			is_fairy = yes
+		}
+		subtract_variable = {
+			which = current_mana
+			value = 20
+		}
+	}
+	else = {
+		subtract_variable = {
+			which = current_mana
+			value = 30
+		}
+	}
+}
+lf_use_major_mana_fairy = {
+	if = {
+		limit = {
+			is_fairy = yes
+		}
+		subtract_variable = {
+			which = current_mana
+			value = 40
+		}
+	}
+	else = {
+		subtract_variable = {
+			which = current_mana
+			value = 60
+		}
+	}
+}
+
+yearly_mana_increase = {
+	set_variable = {
+		which = mana_increase
+		which = max_mana
+	}
+	if = {
+		limit = {
+			has_character_flag = lf_lenora_blessed
+		}
+		divide_variable = {
+			which = mana_increase
+			value = 8
+		}
+	}
+	else = {
+		divide_variable = {
+			which = mana_increase
+			value = 10
+		}
+	}
+	change_variable = {
+		which = current_mana
+		which = mana_increase
+	}
+	
+	if = {
+		limit = {
+			check_variable = {
+				which = current_mana
+				which >= max_mana
+			}
+		}
+		set_variable = {
+			which = current_mana
+			which = max_mana
+		}
+	}
+}
+
+set_max_mana = {
+	set_variable = {
+		which = max_mana
+		value = 0
+	}
+	
+	if = {
+		limit = {
+			is_mage = yes
+		}
+		change_variable = {
+			which = max_mana
+			value = 50
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				trait = houseirae_drow
+				is_kitsune = yes
+				is_elf = yes
+				is_fairy = yes
+			}
+		}
+		change_variable = {
+			which = max_mana
+			value = 50
+		}
+	}
+	if = {
+		limit = {
+			trait = houseirae_halfelf
+		}
+		change_variable = {
+			which = max_mana
+			value = 25
+		}
+	}
+	if = {
+		limit = {
+			has_character_flag = lf_lenora_blessed
+		}
+		change_variable = {
+			which = max_mana
+			value = 25
+		}
+	}
+		
+	if = {
+		limit = {
+			NOT = {
+				has_character_flag = lf_mana_set
+			}
+		}
+		set_variable = {
+			which = starting_mana
+			which = max_mana
+		}
+		divide_variable = {
+			which = starting_mana
+			value = 2
+		}
+		set_variable = {
+			which = current_mana
+			which = starting_mana
+		}
+		set_character_flag = lf_mana_set
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_character_modifier = lf_mana_stores
+			}
+		}
+		add_character_modifier = {
+			name = lf_mana_stores
+			duration = -1
+		}
+	}
+}
+
+lf_add_random_spell = {
+	random_list = {
+		5 = {
+			trigger = {
+				NOT = { has_character_flag = lf_fireball_known }
+			}
+			set_character_flag = lf_fireball_known
+		}
+		5 = {
+			trigger = {
+				NOT = { has_character_flag = lf_flamestrike_known }
+			}
+			set_character_flag = lf_flamestrike_known
+		}
+		5 = {
+			trigger = {
+				NOT = { has_character_flag = lf_familiar_known }
+			}
+			set_character_flag = lf_familiar_known
+		}
+		5 = {
+			trigger = {
+				NOT = { has_character_flag = lf_womb_known }
+			}
+			set_character_flag = lf_womb_known
+		}
+		5 = {
+			trigger = {
+				NOT = { has_character_flag = lf_snail_known }
+			}
+			set_character_flag = lf_snail_known
+		}
+		5 = {
+			trigger = {
+				NOT = { has_character_flag = lf_cuckold_known }
+				is_not_elf = yes
+			}
+			set_character_flag = lf_cuckold_known
+		}
+		5 = {
+			trigger = {
+				NOT = { has_character_flag = lf_lust_known }
+				is_not_kitsune = yes
+			}
+			set_character_flag = lf_lust_known
+		}
+		5 = {
+			trigger = {
+				NOT = { has_character_flag = lf_fairy_known }
+				is_not_fairy = yes
+			}
+			set_character_flag = lf_fairy_known
+		}
+		5 = {
+			trigger = {
+				NOT = { has_character_flag = lf_enslave_known }
+				NOT = { trait = houseirae_drow }
+			}
+			set_character_flag = lf_enslave_known
+		}
+	}
+}
+		

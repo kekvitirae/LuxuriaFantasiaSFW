@@ -1,0 +1,16 @@
+spriteTypes = {
+	spriteType = {
+		name = "fairies_dancing"
+		texturefile = "gfx/event_pictures/lf_fairies_dancing.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lf_bonny_swans_drown"
+		texturefile = "gfx/event_pictures/bonny_swans_drown.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+}

@@ -1,0 +1,75 @@
+lf_b_potion_shopping;Go Potion Shopping;;;;;;;;;;;;;x
+lf_b_potion_shopping_desc;A local alchemist has set up shop in your holding. Pay her a visit and you can buy potions that have various effects.;;;;;;;;;;;;;x
+lf_potion_temp;Temp Potion CD;;;;;;;;;;;;;x
+lf_potion_temp_desc;You should never see this.;;;;;;;;;;;;;x
+lf_potion_cd;Recently Bought Potion;;;;;;;;;;;;;x
+lf_potion_cd_desc;This character has recently bought a potion. The alchemist warns against drinking more than one within a period of two years.;;;;;;;;;;;;;x
+lf_beauty_potion;Beautiful;;;;;;;;;;;;;x
+lf_beauty_potion_desc;This character is glowing with unnatural beauty and sex appeal.;;;;;;;;;;;;;x
+
+LFPotions1T;LF - Potion Shopping;;;;;;;;;;;;;x
+LFPotions1;The inside of the shop is extremely cluttered, with potions, alembics, and various other alchemic instruments and creations scattered around. Despite the clutter, it's surprisingly ordered, with everything being where it should.\n\nThe resident alchemist is a woman, likely a mage considering her weaving of aetherical energies into her current work, and pays you no mind while she toils away at her project. "If you have any questions, feel free to ask," she speaks, never looking up from her alchemical equipment.\n\nThe shelves on the left wall of the shop are stocked labeled with potions for bodily enhancement, the right wall is stocked and labeled with potions for mental enhancement, and the shelf on the wall behind the counter isn't labeled, but it's clear the potions for sale there are of the more... exotic variety.;;;;;;;;;;;;;x
+LFPotions1TTA;Potions of Bodily Enhancement;;;;;;;;;;;;;x
+LFPotions1TTB;Potions of Mental Enhancement;;;;;;;;;;;;;x
+LFPotions1TTC;Exotic Potions;;;;;;;;;;;;;x
+LFPotions1TTD;"Just browsing today, thank you.";;;;;;;;;;;;;x
+
+LFPotions2T;LF - Bodily Enhancement;;;;;;;;;;;;;x
+LFPotions2;The shelf is stocked with three varieties of potions:\n\nPotions of Strength, which enhances your martial strength for a time.\n\nPotions of Beauty, to alchemically dissolve any disfigurement that might be seen as unattractive.\n\nPotions of Resist Disease, which grants temporary immunity to most disease outbreaks.;;;;;;;;;;;;;x
+LFPotions2TTA;Potion of Strength;;;;;;;;;;;;;x
+lf_strength_potion_tooltip;This potion enhances your muscles and grants you a temporary boost to physical strength and martial capacity.;;;;;;;;;;;;;x
+LFPotions2TTB;Potion of Beauty;;;;;;;;;;;;;x
+lf_beauty_potion_tooltip;This potion will permanently remove one undesirable physical trait from your body at random.;;;;;;;;;;;;;x
+LFPotions2TTC;Potion of Resist Disease;;;;;;;;;;;;;x
+lf_resist_disease_tooltip;This potion creates a temporary vaccine that grants immunity to most disease outbreaks.;;;;;;;;;;;;;x
+lf_resist_disease_tooltip_silly;This potion creates a temporary vaccine that grants immunity to most disease outbreaks.\nUnemployed mothers named Karen would rather be scammed by oil extract sellers than drink this.\nDon't be like Karen, vaccinate your children.;;;;;;;;;;;;;x
+LFPotionsGoBack;"Let me see your other stock.";;;;;;;;;;;;;x
+
+LFPotions3T;LF - Mental Enhancement;;;;;;;;;;;;;x
+LFPotions3;The shelf is stocked with three varieties of potions:\n\nPotion of Paranoia, which will overcome the imbiber with extreme paranoia for some time.\n\nPotion of Amnesia, which can wipe away certain mental afflictions.\n\nPotion of Wisdom, which grants a temporary boost to one's mental capacities.;;;;;;;;;;;;;x
+LFPotions3TTA;Potion of Paranoia;;;;;;;;;;;;;x
+lf_paranoia_potion_tooltip;This potion creates a temporary surge of paranoia in your mind, granting increased assassination defense.;;;;;;;;;;;;;x
+LFPotions3TTB;Potion of Amnesia;;;;;;;;;;;;;x
+lf_amnesia_potion_tooltip;This potion will randomly remove a negative mental affliction at random. Not completely reliable.;;;;;;;;;;;;;x
+LFPotions3TTC;Potion of Wisdom;;;;;;;;;;;;;x
+lf_wisdom_potion_tooltip;This potion creates a temporary surge in the brain, allowing for greater learning and diplomacy.;;;;;;;;;;;;;x
+
+LFPotions4T;LF - Exotic Potions;;;;;;;;;;;;;x
+LFPotions4;The back shelf has three potions for sale:\n\nA potion with swirling ranbow colors.\n\nA dull grey potion.\n\nA potion bottled in gold rather than glass.\n\nThe alchemist did not label these potions, and makes no move to explain their contents.;;;;;;;;;;;;;x
+LFPotions4TTA;Swirling Potion;;;;;;;;;;;;;x
+lf_change_potion_tooltip;The alchemist will not say what this potion does. She only replies with a deep grin when asked. The potion itself seems to change its swirling colors from blue to pink and then back to blue, in a repeating pattern.;;;;;;;;;;;;;x
+lf_change_potion_mage_tooltip;Your arcane senses tell you that this potion will change one's sex.;;;;;;;;;;;;;x
+LFPotions4TTB;Grey Potion;;;;;;;;;;;;;x
+lf_age_potion_tooltip;The alchemist will not say what this potion does. She only replies with a deep grin when asked. The potion itself is a dull grey color, but simply looking at it gives me youthful vigor.;;;;;;;;;;;;;x
+lf_age_potion_mage_tooltip;Your arcane senses tell you that this potion will reduce your age by half a decade.;;;;;;;;;;;;;x
+LFPotions4TTC;Gold-Bottled Potion;;;;;;;;;;;;;x
+lf_midas_potion_tooltip;The alchemist will not say what this potion does. She only replies with a deep grin when asked. Looking at the bottle, made entirely from gold, I get the feeling that this has something to do with wealth.;;;;;;;;;;;;;x
+lf_midas_potion_mage_tooltip;Your arcane senses tell you that this potion will turn any object the imbiber touches for more than an hour (clothing and mundane objects excluded) into solid gold.;;;;;;;;;;;;;x
+LFPotions6a;The Potion of Wisdom grants you great insight.\nUnfortunately, the insight is telling you that you should have drunk a Potion of Intelligence instead, you idiot.;;;;;;;;;;;;;x
+LFPotions6b;Your new-found wisdom grants you great insight.\nInsight says... man who not shit for many days must deal with backlog.;;;;;;;;;;;;;x
+LFPotions6c;Your new-found wisdom grants you great insight.\nInsight says... man who cut self while shaving lose face.;;;;;;;;;;;;;x
+LFPotions6d;Your new-found wisdom grants you great insight.\nInsight says... virginity like bubble, one prick - all gone.;;;;;;;;;;;;;x
+LFPotions6e;Your new-found wisdom grants you great insight.\nInsight says... woman laid in tomb may become mummy.;;;;;;;;;;;;;x
+LFPotions6f;Your new-found wisdom grants you great insight.\nInsight says... whore who like bondage, strapped for cash.;;;;;;;;;;;;;x
+LFPotions6g;Your new-found wisdom grants you great insight.\nInsight says... bird in hand not better than two in bush.;;;;;;;;;;;;;x
+LFPotions6h;Your new-found wisdom grants you great insight.\nInsight says... man who do business in brothel get jerked around.;;;;;;;;;;;;;x
+LFPotions6i;Your new-found wisdom grants you great insight.\nInsight says... man who stick penis in squirrel nest, fucking nuts.;;;;;;;;;;;;;x
+LFPotions6TTA;Huh. My insight is right.;;;;;;;;;;;;;x
+
+LFPotions7;After making love, my partner screams in agony, and I can only watch helplessly as their entire body is slowly (and quite possibly painfully) turning into solid gold!;;;;;;;;;;;;;x
+LFPotions7TTA;Whoops.;;;;;;;;;;;;;x
+
+lf_potion_strength;Potion of Strength;;;;;;;;;;;;;x
+lf_potion_strength_desc;This character is infused with great strength.;;;;;;;;;;;;;x
+lf_potion_paranoia;Potion of Paranoia;;;;;;;;;;;;;x
+lf_potion_paranoia_desc;This character is infused with extreme paranoia.;;;;;;;;;;;;;x
+lf_potion_wisdom;Potion of Wisdom;;;;;;;;;;;;;x
+lf_potion_wisdom_desc;This character is infused with great insight.;;;;;;;;;;;;;x
+lf_potion_resist_disease;Potion of Resist Disease;;;;;;;;;;;;;x
+lf_potion_resist_disease_desc;This character is infused with great resistance to disease.;;;;;;;;;;;;;x
+lf_potion_midas;Potion of Midas Touch;;;;;;;;;;;;;x
+lf_potion_midas_desc;The alchemist warns you against prolonged exposure to objects you care about.;;;;;;;;;;;;;x
+LF_DEATH_MIDAS;was turned to gold by $KILLER$;;;;;;;;;;;;;x
+
+lf_potion_youth;Youthful;;;;;;;;;;;;;x
+lf_potion_youth_desc;This character is feeling the warm effects of drinking a youth-restoring potion. Drinking a second one before this effect wears off will do nothing.;;;;;;;;;;;;;x

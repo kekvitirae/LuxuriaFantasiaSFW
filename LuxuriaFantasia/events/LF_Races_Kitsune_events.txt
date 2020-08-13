@@ -1,0 +1,64 @@
+namespace = LFKitsune
+
+narrative_event = {
+	id = LFKitsune.10
+	title = LFKitsune10T	
+	picture = {
+		trigger = { 
+			is_female = yes
+		}
+		picture = lf_kitsune_start_female
+	}
+	picture = {
+		trigger = { 
+			is_female = no
+		}
+		picture = lf_kitsune_start_male
+	}
+	desc = LFKitsune10
+	is_triggered_only = yes
+	
+	option = {
+		name = LFKitsune10TTA
+		set_character_flag = lf_kitsune
+		lf_change_race = yes
+	}
+	option = {
+		name = LFKitsune10TTB
+		set_character_flag = lf_kitsune
+		lf_change_race = yes
+		custom_tooltip = {
+			text = LFAllRealmCharacters
+		}
+		hidden_tooltip = {
+			any_realm_character = {
+				limit = {
+					any_liege = { character = ROOT }
+				}
+				set_character_flag = lf_kitsune
+				lf_change_race = yes
+			}
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				has_global_flag = LFGenderBendOn
+			}
+			set_character_flag = lf_kitsune_genderbend
+		}
+		character_event = { id = LFMultiplayer.1000 }
+	}
+}
+
+character_event = {
+	id = LFKitsune.100
+	picture = kitsune_fluff_tail
+	desc = LFKitsune100
+	is_triggered_only = yes # Triggered by Decision
+	option = {
+		name = LFKitsune100TT
+		remove_trait = stressed
+	}
+}
+

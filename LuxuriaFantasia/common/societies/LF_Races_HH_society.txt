@@ -1,0 +1,452 @@
+lf_society_seduction = {
+	primary_attribute = intrigue
+	is_secret = yes
+	sound = devil_worshippers_interface
+	opinion_to_other_members = +5
+	opinion_to_pretenders = -10
+	opinion_to_perceived_members = -10
+	opinion_per_rank_above = +10
+	society_ranks_gfx = lf_society_seduction_ranks
+	
+	active = {
+		always = yes
+	}
+	indestructible = yes
+	
+	can_join_society = {
+		hidden_trigger = {
+			NOR = {
+				trait = houseirae_matron_mother
+				trait = lf_ghost
+			}
+			NAND = {
+				ai = yes
+				is_society_rank_full = { 
+					society = lf_society_seduction
+					rank = 1
+				}
+			}
+		}
+		OR = {
+			trait = proud
+			trait = greedy
+			trait = wroth
+			trait = slothful
+			trait = gluttonous
+			trait = envious
+			trait = lustful
+			trait = hedonist
+			is_any_demon = yes
+			trait = seducer
+			trait = seductress
+			custom_tooltip = {
+				text = LFCustomReligionLilithJoin
+				AND = {
+					OR = {
+						religion = lf_luxuria_custom
+						religion = lf_luxuria_custom_reformed
+					}
+					has_global_flag = lf_lilith_religion_name
+				}
+			}
+		}
+		is_not_angel = yes
+		NOR = {
+			trait = chaste
+			trait = celibate
+			trait = lf_asexual
+		}		
+		hidden_trigger = { mercenary = no }
+		practical_age = 16
+		hidden_trigger = {
+			NOR = { 
+				has_character_flag = society_join_block 
+				has_character_flag = special_npc
+			}
+		}
+	}
+
+	show_society = {
+		is_adult = yes
+		OR = {
+			trait = proud
+			trait = greedy
+			trait = wroth
+			trait = slothful
+			trait = gluttonous
+			trait = envious
+			trait = lustful
+			trait = hedonist
+			is_any_demon = yes
+			trait = seducer
+			trait = seductress
+			custom_tooltip = {
+				text = LFCustomReligionLilithJoin
+				OR = {
+					religion = lf_luxuria_custom
+					religion = lf_luxuria_custom_reformed
+				}
+				has_global_flag = lf_lilith_religion_name
+			}
+		}
+		is_not_angel = yes
+		NOR = {
+			trait = chaste
+			trait = celibate
+			trait = lf_asexual
+		}		
+	}
+
+	potential = { } #no rules
+
+	society_rank = {
+		level = 1
+		limit = 96
+		startup_limit = 9
+		powers = {
+			lf_demonic_seduction
+			lf_futa_morph_spell
+			lf_change_sexuality
+		}
+	}
+	
+	society_rank = {
+		level = 2
+		limit = 69
+		startup_limit = 6
+		modifier = { 
+			intrigue = 1
+		}
+		powers = {
+			lf_society_seduction_recruit
+			lf_perfect_body
+			lf_cure_sti
+		}
+		max_consorts = 1
+		men_can_take_consorts = yes
+		women_can_take_consorts = yes
+		
+		custom_tooltip = lf_max_consorts_1
+	}
+	
+	society_rank = {
+		level = 3
+		limit = 33
+		startup_limit = 3
+		modifier = {
+			intrigue = 2
+		}
+		powers = {
+			lf_demonic_charm
+			lf_demonic_minor_heal_self
+			lf_infuse_with_demon_blood_half
+		}
+		max_consorts = 2
+		men_can_take_consorts = yes
+		women_can_take_consorts = yes		
+		custom_tooltip = lf_max_consorts_2
+	}
+
+	society_rank = {
+		level = 4
+		limit = 14 
+		startup_limit = 3
+		modifier = { 
+			intrigue = 3
+		}
+		powers = {
+			lf_demonic_mind_control
+			lf_demonic_moderate_heal_self
+			lf_demonic_major_heal_self
+			lf_infuse_with_demon_blood_full
+		}
+		max_consorts = 3
+		men_can_take_consorts = yes
+		women_can_take_consorts = yes	
+		custom_tooltip = lf_max_consorts_3
+		obedience_tooltip = obedience_tooltip #this can be unique per rank/society 
+		obedient = {
+			ROOT = {
+				always = yes
+			}
+		}
+	}
+
+	monthly_currency_gain = {
+		name = currency_name_lf_society_seduction
+    
+		per_attribute = {
+			name = intrigue
+			value = 1
+		}
+		has_trait = {
+			trait = ambitious
+			value = 5
+		}
+		has_trait = {
+			trait = genius
+			value = 5
+		}
+		has_trait = {
+			trait = quick
+			value = 5
+		}
+		has_trait = {
+			trait = shrewd
+			value = 5
+		}
+		has_trait = {
+			trait = hedonist
+			value = 6
+		}
+		has_trait = {
+			trait = mystic
+			value = 5
+		}
+		has_trait = {
+			trait = seducer
+			value = 6
+		}
+		has_trait = {
+			trait = seductress
+			value = 6
+		}
+		has_trait = {
+			trait = schemer
+			value = 6
+		}
+		has_trait = {
+			trait = impaler
+			value = 6
+		}
+		has_trait = {
+			trait = lustful
+			value = 4
+		}
+		has_trait = {
+			trait = proud
+			value = 2
+		}
+		has_trait = {
+			trait = greedy
+			value = 2
+		}
+		has_trait = {
+			trait = deceitful
+			value = 2
+		}
+		has_trait = {
+			trait = arbitrary
+			value = 2
+		}
+		has_trait = {
+			trait = kind
+			value = -2
+		}		
+		has_trait = {
+			trait = temperate
+			value = -2
+		}
+		has_trait = {
+			trait = charitable
+			value = -2
+		}
+		has_trait = {
+			trait = humble
+			value = -2
+		}
+		has_trait = {
+			trait = immortal
+			value = 10
+		}
+		has_trait = {
+			trait = monk
+			value = -10
+		}
+		has_trait = {
+			trait = nun
+			value = -10
+		}
+		has_trait = {
+			trait = is_fat
+			value = -4
+		}
+		has_trait = {
+			trait = is_malnourished
+			value = -4
+		}		
+		has_trait = {
+			trait = fair
+			value = 10
+		}
+		has_trait = {
+			trait = groomed
+			value = 4
+		}
+		has_trait = {
+			trait = lf_halfdemon
+			value = 4
+		}
+		has_trait = {
+			trait = lf_demon
+			value = 8
+		}
+		has_trait = {
+			trait = lf_fallen_angel
+			value = 4
+		}
+		society_rank = {
+			rank = 4
+			value = 10
+		}
+	}
+
+	member_score_per_attribute = 3
+	member_score_per_rank = 100
+
+	member_score = {
+		value = 10
+
+		modifier = {
+			trait = ambitious
+			factor = 1.5
+		}
+		modifier = {
+			trait = genius
+			factor = 1.3
+		}
+		modifier = {
+			trait = quick
+			factor = 1.3
+		}
+		modifier = {
+			trait = shrewd
+			factor = 1.3
+		}
+		modifier = {
+			trait = hedonist
+			factor = 1.3
+		}
+		modifier = {
+			trait = mystic
+			factor = 1.3
+		}
+		modifier = {
+			trait = seducer
+			factor = 1.3
+		}
+		modifier = {
+			trait = seductress
+			factor = 1.3
+		}
+		modifier = {
+			trait = schemer
+			factor = 1.3
+		}
+		modifier = {
+			trait = impaler
+			factor = 1.3
+		}
+		modifier = {
+			trait = lustful
+			factor = 1.1
+		}
+		modifier = {
+			trait = proud
+			factor = 1.1
+		}
+		modifier = {
+			trait = greedy
+			factor = 1.1
+		}
+		modifier = {
+			trait = deceitful
+			factor = 1.1
+		}
+		modifier = {
+			trait = arbitrary
+			factor = 1.1
+		}
+		modifier = {
+			trait = kind
+			factor = 0.8
+		}
+		modifier = {
+			trait = temperate
+			factor = 0.8
+		}
+		modifier = {
+			trait = charitable
+			factor = 0.8
+		}
+		modifier = {
+			trait = humble
+			factor = 0.8
+		}
+		modifier = {
+			trait = monk
+			factor = 0.5
+		}
+		modifier = {
+			trait = nun
+			factor = 0.5
+		}
+		modifier = {
+			trait = immortal
+			factor = 2
+		}
+		modifier = {
+			trait = lovers_pox
+			factor = 0.5
+		}
+		modifier = {
+			trait = is_fat
+			factor = 0.9
+		}
+		modifier = {
+			trait = is_malnourished
+			factor = 0.9
+		}
+		modifier = {
+			trait = fair
+			factor = 1.5
+		}
+		modifier = {
+			trait = groomed
+			factor = 1.1
+		}
+		
+	}
+	
+	startup_populate = {
+		trigger = {
+			NOR = {
+				trait = houseirae_matron_mother
+				trait = lf_ghost
+				trait = lf_asexual
+				trait = lf_angel
+				trait = lf_fallen_angel
+				trait = chaste
+				trait = celibate
+				mercenary = yes
+				holy_order = yes
+				higher_tier_than = DUKE
+			}
+			ai = yes
+			controls_religion = no
+			OR = {
+				trait = lustful
+				trait = hedonist
+				trait = lf_demon
+				trait = lf_halfdemon
+				trait = lf_fallen_angel
+				trait = seducer
+				trait = seductress
+				trait = possessed
+				trait = fair
+			}
+			practical_age = 16
+			is_in_society = no
+		}
+	}
+}

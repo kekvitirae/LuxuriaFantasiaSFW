@@ -1,0 +1,250 @@
+namespace = LFHostChange
+
+character_event = {
+	id = LFHostChange.1
+	hide_window = yes
+	is_triggered_only = yes # on_host_change
+	trigger = {
+		is_adult = yes
+		has_game_rule = { name = lf_new_courtiers value = lf_courtiers_on }
+		FROM = { # Ensures this is just for newly spawned characters
+			character = no
+		}
+		NOR = { # No specially-created characters
+			has_character_flag = special_npc
+			trait = houseirae_drow
+			trait = houseirae_halfelf
+			is_elf = yes
+			trait = lf_unicorn
+			is_orc = yes
+			is_fairy = yes
+			is_any_demon = yes
+			is_angel = yes
+			is_kitsune = yes
+			is_neko = yes
+			trait = lf_ghost
+			trait = dwse_lizard
+			trait = dwse_dragon_adult
+			trait = dwse_dragon_child
+			has_character_flag = lf_never_change_race
+		}
+	}
+	immediate = {
+		liege = {
+			trigger_switch = {
+				on_trigger = trait
+				lf_elf = {
+					if = {
+						limit = {
+							lf_has_elves = yes
+						}
+						ROOT = {
+							character_event = { id = LFSeeding.5 }
+						}
+					}
+				}
+				lf_orc = {
+					if = {
+						limit = {
+							lf_has_orcs = yes
+						}
+						ROOT = {
+							character_event = { id = LFSeeding.4 }
+						}
+					}
+				}
+				lf_fairy = {
+					if = {
+						limit = {
+							lf_has_fairies = yes
+						}
+						ROOT = {
+							character_event = { id = LFSeeding.6 }
+						}
+					}
+				}
+				lf_kitsune = {
+					if = {
+						limit = {
+							lf_has_kitsune = yes
+						}
+						ROOT = {
+							character_event = { id = LFSeeding.7 }
+						}
+					}
+				}
+				lf_neko = {
+					if = {
+						limit = {
+							lf_has_nekos = yes
+						}
+						ROOT = {
+							character_event = { id = LFSeeding.8 }
+						}
+					}
+				}
+				dwse_lizard = {
+					ROOT = {
+						character_event = { id = LFSeeding.11 }
+					}
+				}
+				dwse_dragon_adult = {
+					ROOT = {
+						character_event = { id = LFSeeding.11 }
+					}
+				}
+				dwse_dragon_child = {
+					ROOT = {
+						character_event = { id = LFSeeding.11 }
+					}
+				}
+				lf_demon = {
+					if = {
+						limit = {
+							lf_has_demons = yes
+						}
+						ROOT = {
+							character_event = { id = LFSeeding.3 }
+						}
+					}
+				}
+				lf_fallen_angel = {
+					if = {
+						limit = {
+							lf_has_demons = yes
+						}
+						ROOT = {
+							character_event = { id = LFSeeding.3 }
+						}
+					}
+				}
+				lf_halfdemon = {
+					if = {
+						limit = {
+							lf_has_demons = yes
+						}
+						ROOT = {
+							character_event = { id = LFSeeding.3 }
+						}
+					}
+				}
+				lf_angel = {
+					if = {
+						limit = {
+							lf_has_divines = yes
+						}
+						ROOT = {
+							character_event = { id = LFSeeding.2 }
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+# Secret Slut assignment
+
+character_event = {
+	id = LFHostChange.2
+	hide_window = yes
+	is_triggered_only = yes # on_host_change
+	trigger = {
+		lf_has_nsfw = yes
+		practical_age = 16
+		NOT = { practical_age = 45 }
+		is_female = yes
+		FROM = { # Ensures this is just for newly spawned characters
+			character = no
+		}
+		has_game_rule = { name = lf_secret_sluts value = lf_secret_sluts_on }
+	}
+	immediate = {
+		random_list = {
+			10 = {
+				modifier = {
+					factor = 0
+					OR = {
+						AND = {
+							is_not_any_demon = yes
+							NOR = {
+								trait = lustful
+								trait = hedonist
+							}
+						}
+						is_angel = yes
+					}
+				}
+				add_trait = lf_secret_slut
+				add_trait = deceitful
+			}
+			90 = {
+			}
+		}
+	}
+}
+
+# Sexual role assignment
+
+character_event = {
+	id = LFHostChange.3
+	hide_window = yes
+	is_triggered_only = yes # on_host_change
+	trigger = {
+		practical_age = 16
+		FROM = { # Ensures this is just for newly spawned characters
+			character = no
+		}
+		NOR = {
+			trait = lf_switch
+			trait = lf_dominant
+			trait = lf_submissive
+		}
+	}
+	immediate = {
+		character_event = { id = LFSexytimesRouting.2 }
+	}
+}
+
+# Bad Genetics fix for create_character births
+
+character_event = {
+	id = LFHostChange.3
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_game_rule = { name = lf_challenges value = lf_challenges_genes }
+		OR = {
+			mother_even_if_dead = {
+				any_owned_bloodline = {
+					has_bloodline_flag = lf_bad_genetics
+				}
+			}
+			father_even_if_dead = {
+				any_owned_bloodline = {
+					has_bloodline_flag = lf_bad_genetics
+				}
+			}
+			true_father_even_if_dead = {
+				any_owned_bloodline = {
+					has_bloodline_flag = lf_bad_genetics
+				}
+			}
+		}		
+		age == 0
+	}
+	immediate = {
+		random_list = {
+			75 = {
+				remove_trait = fair
+				remove_trait = genius
+				remove_trait = quick
+				remove_trait = strong
+				add_trait = lf_bad_genetics
+			}
+			25 = {
+			}
+		}
+	}
+}
+

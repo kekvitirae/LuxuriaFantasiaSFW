@@ -1,0 +1,174 @@
+offmap_decisions = {
+	dwse_dragon_marriage = {
+		only_playable = yes
+		button_name = dwse_boons
+		third_party_filter = realm_including_me
+		ai_third_party_filter = court
+		third_party = FROM
+		ai_check_interval = 48
+		show_third_party_potential = yes
+		
+		from_potential = {
+			NOT = { is_incapable = yes }
+			is_landed = yes
+			lf_races_dwse_active = yes
+			NOT = {
+				has_dwse_no_empire = yes
+			}
+			NOT = { trait = lf_ghost }
+		}
+
+		potential = {
+			is_offmap_tag = offmap_dwse
+		}
+
+		allow = {
+			show_only_failed_conditions = yes
+			FROM = {
+				NOT = { trait = lf_asexual }
+				OR = {
+					capital_holding = {
+						OR = {
+							has_building = dwse_dragon_roost_castle
+							has_building = dwse_dragon_roost_tribal
+							has_building = dwse_dragon_roost_nomad
+						}
+					}
+					family_palace = {
+						has_building = dwse_dragon_roost_palace
+					}
+				}
+				show_scope_change = no
+				conditional_tooltip = {
+					trigger = { NOT = { trait = dwse_lizard } }
+					has_offmap_currency = { offmap = offmap_dwse value = 1000 }
+				}
+				conditional_tooltip = {
+					trigger = { trait = dwse_lizard }
+					has_offmap_currency = { offmap = offmap_dwse value = 750 }
+				}
+				OR = {
+					custom_tooltip = {
+						text = can_marry_chinese_royal_tt
+						is_adult = yes
+						is_married = no
+					}
+					custom_tooltip = {
+						text = has_courtier_eligible_for_marriage_tt
+						OR = {
+							any_dynasty_member = {
+								is_adult = yes
+								is_married = no
+								liege = { character = ROOT_FROM }
+							}
+							any_close_relative = {
+								is_adult = yes
+								is_married = no
+								liege = { character = ROOT_FROM }
+								NOT = { any_spouse = { character = ROOT_FROM } } #turns out without this, it includes your spouse
+							}
+						}
+					}
+				}
+				prisoner = no
+				NOT = { trait = incapable }
+				is_inaccessible_trigger = no
+			}
+		}
+
+		third_party_potential = {
+			show_only_failed_conditions = yes
+			FROMFROM = {
+				show_scope_change = no
+				OR = {
+					dynasty = ROOT_FROM
+					is_close_relative = ROOT_FROM
+				}
+				OR = {
+					character = ROOT_FROM
+					AND = {
+						liege = { character = ROOT_FROM }
+						ai = yes
+					}
+				}
+				NOT = { any_spouse = { character = ROOT_FROM } } 
+				NOT = { trait = lf_ghost }
+				is_adult = yes
+				is_betrothed = no
+			}
+		}
+
+		third_party_allow = {
+			show_only_failed_conditions = yes
+			FROMFROM = {
+				custom_tooltip = {
+					text = can_marry_chinese_royal_tt
+					can_marry = yes
+					is_married = no
+				}
+			}
+		}
+
+		effect = {
+			FROM = {
+				show_scope_change = no
+				sound_effect = china_grace_spend
+				if = {
+					limit = { trait = dwse_lizard }
+					add_offmap_currency = {
+						offmap = offmap_dwse
+						value = -750
+					}
+				}
+				else = {
+					add_offmap_currency = {
+						offmap = offmap_dwse
+						value = -1000
+					}
+					custom_tooltip = { text = chinese_imperial_marriage_peace_deal_tt }	
+				}				
+			}
+			if = { 
+				limit = { FROMFROM = { is_female = yes } } 
+				custom_tooltip = { text = chinese_imperial_marriage_prince_effect_tt }
+			}
+			if = { 
+				limit = { FROMFROM = { is_female = no } } 
+				custom_tooltip = { text = chinese_imperial_marriage_princess_effect_tt }
+			}
+			hidden_effect = { FROMFROM = { add_trait = cannot_marry } }
+			hidden_effect = { offmap_dwse = { governor = { character_event = { id = dwseliz.20045 } } } }
+			hidden_effect = { FROM = { set_china_boon_cd_effect = yes } }
+			FROM = {
+				if = {
+					limit = {
+						ai = no
+					}
+					hidden_effect = { set_character_flag = achievement_imperial_marriage }
+				}
+			}
+			FROMFROM = { set_character_flag = awaiting_imperial_wedding }
+		}
+
+		ai_will_do = {
+			factor = 0.05
+			modifier = {
+				factor = 0
+				FROM = {
+					NOT = {
+						higher_tier_than = DUKE
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				FROM = {
+					NOT = {
+						independent = yes
+					}
+				}
+			}
+		}
+	}
+
+}

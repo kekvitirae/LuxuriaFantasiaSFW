@@ -1,0 +1,5 @@
+lf_headpats = {
+	opinion = 10
+	months = 1
+	decay = yes
+}

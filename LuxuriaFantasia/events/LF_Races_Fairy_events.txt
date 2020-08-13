@@ -1,0 +1,269 @@
+namespace = LF_Fairy
+
+character_event = { # Adds a Fairy portrait on adulthood
+	id = LF_Fairy.1
+	is_triggered_only = yes  
+	hide_window = yes 
+	trigger = {
+		is_fairy = yes
+	}
+	immediate = {
+		lf_add_random_fairy_portrait = yes
+	}
+}
+
+narrative_event = {
+	id = LF_Fairy.2
+	picture = fairies_dancing
+	title = lf_fairies2
+	is_triggered_only = yes
+	desc = { # Female specific
+		trigger = { 
+			is_female = yes
+		}
+		text = LF_FairyFemale1
+	}
+	desc = { # Male specific
+		trigger = {
+			is_female = no
+		}
+		text = LF_FairyMale1
+	}
+	option = { # King/Queen of the Fae
+		name = {
+			trigger = {
+				is_female = no
+			}
+			text = LF_FairyMale2
+		}
+		name = {
+			trigger = {
+				is_female = yes
+			}
+			text = LF_FairyFemale2
+		}
+		set_character_flag = lf_fairy
+		lf_change_race = yes
+	}
+	option = { # Everyone is fae
+		name = LF_Fairy2TTC
+		lf_change_race = yes
+		custom_tooltip = {
+			text = LFAllRealmCharacters
+		}
+		hidden_tooltip = {
+			set_character_flag = lf_fairy
+			lf_change_race = yes
+			any_realm_character = {
+				limit = {
+					any_liege = { character = ROOT }
+				}
+				set_character_flag = lf_fairy
+				lf_change_race = yes
+			}
+		}
+	}	
+	after = {
+		if = {
+			limit = {
+				has_global_flag = LFGenderBendOn
+			}
+			set_character_flag = lf_fairy_genderbend
+		}
+		character_event = { id = LFMultiplayer.1000 }
+	}
+}
+
+#
+# The Bonny Swans event chain
+#	
+
+narrative_event = { # You spy a girl drowning
+	id = LF_Fairy.3
+	ai = no
+	title = LF_Fairy3T
+	picture = lf_bonny_swans_drown
+	desc = LF_Fairy3
+	is_triggered_only = yes
+	trigger = {
+		trait = poet
+		is_fairy = yes
+		lf_has_fairies = yes
+		NOT = { has_global_flag = bonny_swan_happened }
+	}
+	
+	immediate = {
+		set_global_flag = bonny_swan_happened
+		create_character = {
+			random_traits = no
+			female = yes
+			name = Anne
+			age = 18
+			religion = ROOT
+			culture = ROOT
+			health = 8.0
+			historical = yes
+			trait = flamboyant_schemer
+			trait = fair
+			trait = cruel
+			trait = deceitful
+			flag = special_npc		
+			attributes = {
+				diplomacy = 3 
+				intrigue = 6 
+				martial = 3
+				stewardship = 3
+				learning = 3 
+			}
+		}
+		new_character = {
+			save_event_target_as = bonny_swan_murderer
+		}
+		create_character = {
+			random_traits = no
+			female = yes
+			age = 16
+			religion = ROOT
+			culture = ROOT
+			health = 8.0
+			trait = charismatic_negotiator
+			trait = fair
+			trait = chaste
+			trait = kind
+			flag = special_npc		
+			attributes = {
+				diplomacy = 6 
+				intrigue = 3 
+				martial = 3
+				stewardship = 3
+				learning = 3 
+			}
+		}
+		new_character = {
+			save_event_target_as = bonny_swan
+		}		
+	}
+	
+	option = { # I must help the girl!
+		name = LF_Fairy3TTA
+		hidden_tooltip = {
+			character_event = { id = LF_Fairy.31 } # Hides the portraits
+		}
+		narrative_event = { id = LF_Fairy.4 }
+	}
+	
+	option = { # How tragic.
+		name = LF_Fairy3TTB
+		hidden_tooltip = {
+			character_event = { id = LF_Fairy.31 } # Hides the portraits
+		}
+	}
+}
+
+character_event = { # Ping event
+	id = LF_Fairy.31
+	is_triggered_only = yes  
+	hide_window = yes 
+	immediate = {
+		event_target:bonny_swan = {
+			set_character_flag = lf_never_turn_spoopy
+			death = { death_reason = death_murder_unknown_drowning killer = event_target:bonny_swan_murderer }
+		}
+		event_target:bonny_swan_murderer = {
+			banish = yes
+		}
+	}
+}
+
+narrative_event = { # What to do with the body?
+	id = LF_Fairy.4
+	title = LF_Fairy4T
+	picture = lf_bonny_swans_drown
+	desc = LF_Fairy4
+	is_triggered_only = yes	
+	
+	option = { # Maybe I can fashion a harp from her body...
+		name = LF_Fairy4TTA
+		add_artifact = macabre_harp
+		narrative_event = { id = LF_Fairy.5 days = 30 random = 90 }
+	}
+	option = { # I should bury her
+		name = LF_Fairy4TTB
+		piety = 100
+	}
+	option = { # I am getting a little hungry...
+		name = LF_Fairy4TTC
+		trigger = {
+			trait = cannibal_trait
+		}
+		tooltip_info = cannibal_trait
+		health = 1
+	}
+}
+
+narrative_event = { # I'm bored
+	id = LF_Fairy.5
+	title = LF_Fairy5T
+	picture = lf_bonny_swans_drown
+	desc = LF_Fairy5
+	is_triggered_only = yes	
+	
+	option = { # Maybe a party? I'll invite everyone!
+		name = LF_Fairy5TTA
+		narrative_event = { id = LF_Fairy.6 days = 7 random = 14 }
+	}
+	option = { # Prayer and meditation
+		trigger = {
+			NOT = {
+				trait = content
+			}
+		}
+		name = LF_Fairy5TTB
+		piety = 100
+	}
+	option = { # I should go hunting
+		trigger = {
+			NOT = {
+				trait = content
+			}
+		}
+		name = LF_Fairy5TTC
+		prestige = 100
+	}	
+	option = { # I am content with my life
+		name = LF_Fairy5TTD
+		trigger = {
+			trait = content
+		}
+		piety = 100
+		prestige = 100
+		tooltip_info = content
+	}
+}
+
+narrative_event = { # The party
+	id = LF_Fairy.6
+	title = LF_Fairy6T
+	picture = lf_bonny_swans_drown
+	desc = LF_Fairy6
+	is_triggered_only = yes	
+	immediate = {
+		event_target:bonny_swan_murderer = {
+			move_character = ROOT
+		}
+	}
+	option = { # She's a murderer. Guards! Seize her!
+		name = LF_Fairy6TTA
+		unsafe_destroy_artifact = macabre_harp
+		event_target:bonny_swan_murderer = {
+			imprison = ROOT
+		}
+	}
+	option = { # Break the harp before it embarrasses me further
+		name = LF_Fairy6TTB
+		unsafe_destroy_artifact = macabre_harp
+		event_target:bonny_swan_murderer = {
+			add_friend = ROOT
+		}
+	}
+}

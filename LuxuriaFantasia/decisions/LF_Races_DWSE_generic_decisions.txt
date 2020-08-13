@@ -1,0 +1,73 @@
+targetted_decisions = {
+	awaken_beast = {
+		filter = realm
+		ai_target_filter = none
+		from_potential = {
+			NOT = { is_incapable = yes }
+			is_demon = yes
+			ai = no # For right now, we only want the player to be able to cast this spell
+		}
+		potential = {
+			is_adult = yes 
+		}
+		allow = {
+			is_within_diplo_range = FROM # The target should be within reasonable travel range
+			FROM = { piety = 250 } # The cost for casting the spell
+		}
+		effect = {
+			FROM = { piety = -250 }
+			random_list = {
+				33 = { 
+					set_graphical_culture = horse
+					culture = horse 
+				}
+				33 = { 
+					set_graphical_culture = cat
+					culture = cat 
+				}
+				33 = { 
+					set_graphical_culture = bear
+					culture = bear 
+				}
+				33 = {
+					trigger = {
+						has_dlc = "Holy Fury"
+					}
+					set_graphical_culture = hedgehog_culture
+					culture = hedgehog_culture
+				}				
+				33 = {
+					trigger = {
+						has_dlc = "Holy Fury"
+					}
+					set_graphical_culture = duck_culture
+					culture = duck_culture
+				}				
+				33 = {
+					trigger = {
+						has_dlc = "Holy Fury"
+					}
+					set_graphical_culture = dog_culture
+					culture = dog_culture
+				}				
+				33 = {
+					trigger = {
+						has_dlc = "Holy Fury"
+					}
+					set_graphical_culture = elephant_culture
+					culture = elephant_culture
+				}				
+				33 = {
+					trigger = {
+						has_dlc = "Holy Fury"
+					}
+					set_graphical_culture = dragon_culture
+					culture = dragon_culture
+				}				
+			}
+		}
+		ai_will_do = {
+			factor = 0 # Nope
+		}		
+	}
+}

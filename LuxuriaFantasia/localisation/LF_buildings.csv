@@ -1,0 +1,34 @@
+lf_curio_shop_city;LF - Curio Shop;;;;;;;;;;;;;x
+lf_curio_shop_castle;LF - Curio Shop;;;;;;;;;;;;;x
+lf_curio_shop_nomad;LF - Curio Shop;;;;;;;;;;;;;x
+lf_curio_shop_tribal;LF - Curio Shop;;;;;;;;;;;;;x
+lf_curio_shop_fp;LF - Curio Shop;;;;;;;;;;;;;x
+lf_curio_shop_desc;A merchant tucked away in a sparsely populated area of your holding, selling trinkets and baubles from the local area and beyond.;;;;;;;;;;;;;x
+
+lf_slave_market_city;LF - Slave Market;;;;;;;;;;;;;x
+lf_slave_market_castle;LF - Slave Market;;;;;;;;;;;;;x
+lf_slave_market_nomad;LF - Slave Market;;;;;;;;;;;;;x
+lf_slave_market_tribal;LF - Slave Market;;;;;;;;;;;;;x
+lf_slave_market_fp;LF - Slave Market;;;;;;;;;;;;;x
+lf_slave_market_desc;A large wooden platform tucked away in a sparsely populated area of your holding, displaying slaves gathered from lands unknown.;;;;;;;;;;;;;x
+
+lf_potion_seller_city;LF - Potion Seller;;;;;;;;;;;;;x
+lf_potion_seller_castle;LF - Potion Seller;;;;;;;;;;;;;x
+lf_potion_seller_nomad;LF - Potion Seller;;;;;;;;;;;;;x
+lf_potion_seller_tribal;LF - Potion Seller;;;;;;;;;;;;;x
+lf_potion_seller_fp;LF - Potion Seller;;;;;;;;;;;;;x
+lf_potion_seller_desc;A merchant tucked away in a sparsely populated area of your holding, selling alchemical potions and salves for various ailments.;;;;;;;;;;;;;x
+
+lf_gypsy_wagon;LF - Gypsy Wagon;;;;;;;;;;;;;x
+lf_gypsy_wagon_desc;A local gypsy has taken up residence in this ornate wagon. Perhaps she can be of use?;;;;;;;;;;;;;x
+
+lf_wizard_tower_castle;LF - Hall of Wizardry;;;;;;;;;;;;;x
+lf_wizard_tower_desc;A tall building seated just beyond the walls of your castle. It is home to those who have an inclination toward magic and the desire to learn about the aether.;;;;;;;;;;;;;x
+
+LF_Races_Buildings2;[lf_new_kitsune.GetDynName] has arrived at your court, attracted by your Kitsune Shrine.;;;;;;;;;;;;;x
+LF_Races_Buildings3;[lf_new_neko.GetDynName] has arrived at your court, attracted by your Neko Playroom.;;;;;;;;;;;;;x
+LF_Races_Buildings4;[lf_new_elf.GetDynName] has arrived at your court, attracted by your ElvenFletcher.;;;;;;;;;;;;;x
+LF_Races_Buildings5;[lf_new_fairy.GetDynName] has arrived at your court, attracted by your Fairy Garden.;;;;;;;;;;;;;x
+LF_Races_Buildings6;[lf_new_orc.GetDynName] has arrived at your court, attracted by your Axe Smithy.;;;;;;;;;;;;;x
+LF_Races_Buildings7;[lf_new_demon.GetDynName] has arrived at your court, attracted by your Demonic Shrine.;;;;;;;;;;;;;x
+LF_Races_Buildings8;[lf_new_divine.GetDynName] has arrived at your court, attracted by your Divine Chapel.;;;;;;;;;;;;;x

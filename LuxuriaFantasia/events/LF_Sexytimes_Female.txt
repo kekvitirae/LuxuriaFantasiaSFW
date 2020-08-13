@@ -1,0 +1,1585 @@
+namespace = LFSexytimesFemale
+
+# .1 Female position choice
+character_event = {
+	id = LFSexytimesFemale.1
+	is_triggered_only = yes # targetted_decision
+	title = LFSexytimesFemale1T
+	desc = {
+		trigger = {
+			event_target:lf_sex_partner = {
+				is_female = no
+			}
+		}
+		text = LFSexytimesFemale1Male
+	}
+	desc = {
+		trigger = {
+			event_target:lf_sex_partner = {
+				is_female = yes
+				is_not_futa = yes
+			}
+		}
+		text = LFSexytimesFemale1Fem
+	}
+	desc = {
+		trigger = {
+			event_target:lf_sex_partner = {
+				is_female = yes
+				is_futa = yes
+			}
+		}
+		text = LFSexytimesFemale1Futa
+	}
+	picture = GFX_evt_gift
+	
+	option = { # Standard
+		name = LFSexytimesFemale1Standard
+		trigger = {
+			event_target:lf_sex_player = {
+				NOR = {
+					has_character_modifier = lf_always_dominant
+					has_character_modifier = lf_always_switch
+					has_character_modifier = lf_always_submissive
+				}
+			}
+			event_target:lf_sex_partner = {
+				NOR = {
+					has_character_modifier = lf_always_dominant
+					has_character_modifier = lf_always_switch
+					has_character_modifier = lf_always_submissive
+				}
+			}
+		}
+		character_event = { id = LFSexytimesFemale.3 }
+	}
+	option = { # Partner is always a Switch
+		name = LFSexytimesFemale1Standard
+		trigger = {
+			OR = {
+				event_target:lf_sex_player = {
+					has_character_modifier = lf_always_switch
+				}
+				event_target:lf_sex_partner = {
+					has_character_modifier = lf_always_switch
+				}
+			}
+		}
+		tooltip_info_custom = lf_switch_partner
+		character_event = { id = LFSexytimesFemale.3 }
+	}	
+	option = { # Dominant
+		name = LFSexytimesFemale1Dom
+		trigger = {
+			event_target:lf_sex_player = {
+				OR = {
+					trait = lf_dominant
+					trait = lf_switch
+				}
+				NOR = {
+					has_character_modifier = lf_always_dominant
+					has_character_modifier = lf_always_switch
+					has_character_modifier = lf_always_submissive
+				}
+			}
+			event_target:lf_sex_partner = {
+				OR = {
+					trait = lf_submissive
+					trait = lf_switch
+				}
+				NOR = {
+					has_character_modifier = lf_always_dominant
+					has_character_modifier = lf_always_switch
+					has_character_modifier = lf_always_submissive
+				}
+			}
+		}
+		tooltip_info = lf_dominant
+		character_event = { id = LFSexytimesFemale.2 }
+	}
+	option = { # Partner is always a Submissive
+		name = LFSexytimesFemale1Dom
+		trigger = {
+			OR = {
+				event_target:lf_sex_player = {
+					has_character_modifier = lf_always_dominant
+				}
+				event_target:lf_sex_partner = {
+					has_character_modifier = lf_always_submissive
+				}
+			}
+		}
+		tooltip_info_custom = lf_submissive_partner
+		character_event = { id = LFSexytimesFemale.2 }
+	}
+	option = { # Submissive
+		name = LFSexytimesFemale1Sub
+		trigger = {
+			event_target:lf_sex_player = {
+				OR = {
+					trait = lf_submissive
+					trait = lf_switch
+				}
+				NOR = {
+					has_character_modifier = lf_always_dominant
+					has_character_modifier = lf_always_switch
+					has_character_modifier = lf_always_submissive
+				}
+			}
+			event_target:lf_sex_partner = {
+				OR = {
+					trait = lf_dominant
+					trait = lf_switch
+				}
+				NOR = {
+					has_character_modifier = lf_always_dominant
+					has_character_modifier = lf_always_switch
+					has_character_modifier = lf_always_submissive
+				}
+			}
+		}
+		tooltip_info = lf_submissive
+		hidden_tooltip = {
+			lf_female_sub_results = yes
+		}
+	}
+	option = { # Partner is always Dominant
+		name = LFSexytimesFemale1Sub
+		trigger = {
+			OR = {
+				event_target:lf_sex_player = {
+					has_character_modifier = lf_always_submissive
+				}
+				event_target:lf_sex_partner = {
+					has_character_modifier = lf_always_dominant
+				}
+			}
+		}
+		tooltip_info_custom = lf_dominant_partner
+		hidden_tooltip = {
+			lf_female_sub_results = yes
+		}
+	}	
+}
+
+# .2 Female dominant sex choices
+character_event = {
+	id = LFSexytimesFemale.2
+	is_triggered_only = yes # targetted_decision
+	title = LFSexytimesFemale1T
+	desc = {
+		trigger = {
+			event_target:lf_sex_partner = {
+				is_female = no
+			}
+		}
+		text = LFSexytimesFemale2Male
+	}
+	desc = {
+		trigger = {
+			event_target:lf_sex_partner = {
+				is_female = yes
+				is_not_futa = yes
+			}
+		}
+		text = LFSexytimesFemale2Fem
+	}
+	desc = {
+		trigger = {
+			event_target:lf_sex_partner = {
+				is_female = yes
+				is_futa = yes
+			}
+		}
+		text = LFSexytimesFemale2Futa
+	}
+	picture = GFX_evt_gift
+	
+	option = { # Fem Oral
+		name = LFSexytimesFemale2TTOral
+		trigger = {
+			event_target:lf_sex_partner = {
+				is_female = yes
+				is_not_futa = yes
+			}
+		}
+		set_character_flag = lf_domfemoral
+		narrative_event = { id = LFSexytimesFemale.7 }
+	}
+	option = { # Futa Oral
+		name = LFSexytimesFemale2TTOral
+		trigger = {
+			event_target:lf_sex_partner = {
+				is_female = yes
+				is_futa = yes
+			}
+		}
+		set_character_flag = lf_domfutaoral
+		narrative_event = { id = LFSexytimesFemale.7 }
+	}
+	option = { # Male Oral
+		name = LFSexytimesFemale2TTOral
+		trigger = {
+			event_target:lf_sex_partner = {
+				is_female = no
+			}
+		}
+		set_character_flag = lf_dommaleoral
+		narrative_event = { id = LFSexytimesFemale.7 }
+	}
+	option = { # Male Vaginal
+		name = LFSexytimesFemale2TTVag
+		trigger = {
+			event_target:lf_sex_partner = {
+				is_female = no
+			}
+		}
+		set_character_flag = lf_dommalecow
+		narrative_event = { id = LFSexytimesFemale.7 }
+	}
+	option = { # Futa Vaginal
+		name = LFSexytimesFemale2TTVag
+		trigger = {
+			event_target:lf_sex_partner = {
+				is_female = yes
+				is_futa = yes
+			}
+		}
+		set_character_flag = lf_domfutacow
+		narrative_event = { id = LFSexytimesFemale.7 }
+	}
+	option = { # Male Anal
+		name = LFSexytimesFemale2TTAnal
+		trigger = {
+			event_target:lf_sex_partner = {
+				is_female = no
+			}
+		}
+		set_character_flag = lf_dommaleanal
+		narrative_event = { id = LFSexytimesFemale.7 }
+	}
+	option = { # Futa Anal
+		name = LFSexytimesFemale2TTAnal
+		trigger = {
+			event_target:lf_sex_partner = {
+				is_female = yes
+				is_futa = yes
+			}
+		}
+		set_character_flag = lf_domfutaanal
+		narrative_event = { id = LFSexytimesFemale.7 }
+	}
+}
+
+# .3 Female standard sex choices
+character_event = {
+	id = LFSexytimesFemale.3
+	is_triggered_only = yes # targetted_decision
+	title = LFSexytimesFemale1T
+	desc = {
+		trigger = {
+			event_target:lf_sex_partner = {
+				is_female = no
+			}
+		}
+		text = LFSexytimesFemale3Male
+	}
+	desc = {
+		trigger = {
+			event_target:lf_sex_partner = {
+				is_female = yes
+				is_not_futa = yes
+			}
+		}
+		text = LFSexytimesFemale3Fem
+	}
+	desc = {
+		trigger = {
+			event_target:lf_sex_partner = {
+				is_female = yes
+				is_futa = yes
+			}
+		}
+		text = LFSexytimesFemale3Futa
+	}
+	picture = GFX_evt_gift
+	
+	option = { # Fem Oral
+		name = LFSexytimesFemale3TTOral
+		trigger = {
+			event_target:lf_sex_partner = {
+				is_female = yes
+				is_not_futa = yes
+			}
+		}
+		set_character_flag = lf_standardfemoral
+		narrative_event = { id = LFSexytimesFemale.9 }
+	}
+	option = { # Futa Oral
+		name = LFSexytimesFemale3TTOral
+		trigger = {
+			event_target:lf_sex_partner = {
+				is_female = yes
+				is_futa = yes
+			}
+		}
+		set_character_flag = lf_standardfutaoral
+		narrative_event = { id = LFSexytimesFemale.9 }
+	}
+	option = { # Male Oral
+		name = LFSexytimesFemale3TTOral
+		trigger = {
+			event_target:lf_sex_partner = {
+				is_female = no
+			}
+		}
+		set_character_flag = lf_standardmaleoral
+		narrative_event = { id = LFSexytimesFemale.9 }
+	}
+	option = { # Male Vaginal
+		name = LFSexytimesFemale3TTVag
+		trigger = {
+			event_target:lf_sex_partner = {
+				is_female = no
+			}
+		}
+		hidden_tooltip = {
+			random_list = {
+				50 = {
+					set_character_flag = lf_standardmalecow
+				}
+				50 = {
+					set_character_flag = lf_standardmaledog
+				}
+			}
+		}
+		narrative_event = { id = LFSexytimesFemale.9 }
+	}
+	option = { # Futa Vaginal
+		name = LFSexytimesFemale3TTVag
+		trigger = {
+			event_target:lf_sex_partner = {
+				is_female = yes
+				is_futa = yes
+			}
+		}
+		random_list = {
+			50 = {
+				set_character_flag = lf_standardfutacow
+			}
+			50 = {
+				set_character_flag = lf_standardfutadog
+			}
+		}
+		narrative_event = { id = LFSexytimesFemale.9 }
+	}
+	option = { # Male Anal
+		name = LFSexytimesFemale3TTAnal
+		trigger = {
+			event_target:lf_sex_partner = {
+				is_female = no
+			}
+		}
+		set_character_flag = lf_standardmaleanal
+		narrative_event = { id = LFSexytimesFemale.9 }
+	}
+	option = { # Futa Anal
+		name = LFSexytimesFemale3TTAnal
+		trigger = {
+			event_target:lf_sex_partner = {
+				is_female = yes
+				is_futa = yes
+			}
+		}
+		set_character_flag = lf_standardfutaoral
+		narrative_event = { id = LFSexytimesFemale.9 }
+	}
+}
+
+# .4 Submissive results
+narrative_event = {
+	id = LFSexytimesFemale.4
+	title = LFSexytimesFemale1T
+	picture = lf_a_placeholder
+	desc = {
+		trigger = {
+			has_character_flag = lf_subfemoral
+		}
+		text = LFSexytimesFemale4FemOral
+		picture = sexytimes_male_female_oral
+	}
+	desc = {
+		trigger = {
+			has_character_flag = lf_subfutaoral
+		}
+		text = LFSexytimesFemale4FutaOral1 # Swallow
+		picture = sexytimes_male_femfuta_oral
+	}
+	desc = {
+		trigger = {
+			has_character_flag = lf_subfutaoral
+		}
+		text = LFSexytimesFemale4FutaOral2 # Painted
+		picture = sexytimes_male_femfuta_oral
+	}
+	desc = {
+		trigger = {
+			has_character_flag = lf_submaleoral
+		}
+		text = LFSexytimesFemale4MaleOral1 # Swallow
+		picture = sexytimes_male_femfuta_oral
+	}
+	desc = {
+		trigger = {
+			has_character_flag = lf_submaleoral
+		}
+		text = LFSexytimesFemale4MaleOral2 # Painted
+		picture = sexytimes_male_femfuta_oral
+	}
+	desc = {
+		trigger = {
+			has_character_flag = lf_subfutaanal
+		}
+		text = LFSexytimesFemale4FutaAnal
+		picture = wizard_hermione_futa1
+	}
+	desc = {
+		trigger = {
+			has_character_flag = lf_submaleanal
+		}
+		text = LFSexytimesFemale4MaleAnal
+		picture = sex_mf_anal_1
+	}
+	desc = {
+		trigger = {
+			has_character_flag = lf_subfutamiss
+		}
+		text = LFSexytimesFemale4FutaMiss
+		picture = sex_pullout_stomach_1
+	}
+	desc = {
+		trigger = {
+			has_character_flag = lf_submalemiss
+		}
+		text = LFSexytimesFemale4MaleMiss
+		picture = sex_mf_missionary_1
+	}
+	desc = {
+		trigger = {
+			has_character_flag = lf_subfutadog
+		}
+		text = LFSexytimesFemale4FutaDog
+		picture = sex_trapfuta_doggy_1
+	}
+	desc = {
+		trigger = {
+			has_character_flag = lf_submaledog
+		}
+		text = LFSexytimesFemale4MaleDog
+		picture = sex_mf_doggy_1
+	}
+		
+	is_triggered_only = yes
+	
+	option = { # Thank you, Master/Mistress
+		name = LFSexytimes4TTA
+		trigger = {
+			OR = {
+				has_character_flag = lf_subfemoral
+				has_character_flag = lf_subfutaoral
+				has_character_flag = lf_submaleoral
+				has_character_flag = lf_subfutaanal
+				has_character_flag = lf_submaleanal
+			}
+		}
+		if = {
+			limit = {
+				any_artifact = {
+					artifact_type = lf_kama_sutra
+					is_artifact_active = yes
+				}
+			}
+			event_target:lf_sex_player = {
+				add_character_modifier = { name = lf_great_sex days = 30 }
+			}
+			event_target:lf_sex_partner = {
+				add_character_modifier = { name = lf_great_sex days = 30 }
+			}
+		}
+		else = {
+			event_target:lf_sex_player = {
+				add_character_modifier = { name = lf_good_sex days = 30 }
+			}
+			event_target:lf_sex_partner = {
+				add_character_modifier = { name = lf_good_sex days = 30 }
+			}
+		}
+	}
+	
+	option = { # Don't cum in me!
+		name = LFSexytimes4TTB
+		trigger = {
+			OR = {
+				has_character_flag = lf_subfutamiss
+				has_character_flag = lf_submalemiss
+				has_character_flag = lf_subfutadog
+				has_character_flag = lf_submaledog
+			}
+			NOT = { trait = lf_breeder }
+		}
+		custom_tooltip = {
+			text = LFSexytimes4TTCustom
+			random_list = {
+				50 = { # Will not cum in you
+					modifier = { # ...but will if they have Breeder
+						factor = 0
+						event_target:lf_sex_partner = {
+							trait = lf_breeder
+						}
+					}
+					narrative_event = { id = LFSexytimesFemale.6 }
+				}
+				50 = { # Will go against your wishes
+					set_character_flag = lf_domrefused_cameinyou
+					narrative_event = { id = LFSexytimesFemale.5 }
+				}
+			}
+		}
+	}
+
+	option = { # Please cum in me!
+		name = LFSexytimes4TTC
+		trigger = {
+			OR = {
+				has_character_flag = lf_subfutamiss
+				has_character_flag = lf_submalemiss
+				has_character_flag = lf_subfutadog
+				has_character_flag = lf_submaledog
+			}
+		}
+		custom_tooltip = {
+			text = LFSexytimes4TTCustom
+			random_list = {
+				50 = { # Will cum in you
+					narrative_event = { id = LFSexytimesFemale.5 }
+				}
+				50 = { # Will go against your wishes
+					modifier = { # ...but wont if they have Breeder
+						factor = 0
+						event_target:lf_sex_partner = {
+							trait = lf_breeder
+						}
+					}
+					set_character_flag = lf_domrefused_cameonyou
+					narrative_event = { id = LFSexytimesFemale.6 }
+				}
+			}
+		}
+	}
+	after = {
+		clr_character_flag = lf_subfutamiss
+		clr_character_flag = lf_submalemiss
+		clr_character_flag = lf_subfutadog
+		clr_character_flag = lf_submaledog
+		clr_character_flag = lf_subfemoral
+		clr_character_flag = lf_subfutaoral
+		clr_character_flag = lf_submaleoral
+		clr_character_flag = lf_subfutaanal
+		clr_character_flag = lf_submaleanal
+	}
+}
+
+# .5 Dom cums in you
+narrative_event = {
+	id = LFSexytimesFemale.5
+	title = LFSexytimesFemale1T
+	is_triggered_only = yes
+	picture = sexytimes_cum_inside
+	desc = {
+		trigger = {
+			has_character_flag = lf_domrefused_cameinyou
+		}
+		text = LFSexytimesFemale5Refused
+	}
+	desc = {
+		trigger = {
+			NOT = { has_character_flag = lf_domrefused_cameinyou }
+		}
+		text = LFSexytimesFemale5Complied
+	}
+	
+	option = { # Thank you, Master/Mistress
+		name = LFSexytimesFemale5TTA
+		trigger = {
+			NOT = { has_character_flag = lf_domrefused_cameinyou }
+		}
+		if = {
+			limit = {
+				any_artifact = {
+					artifact_type = lf_kama_sutra
+					is_artifact_active = yes
+				}
+			}
+			event_target:lf_sex_player = {
+				add_character_modifier = { name = lf_great_sex days = 30 }
+			}
+			event_target:lf_sex_partner = {
+				add_character_modifier = { name = lf_great_sex days = 30 }
+			}
+		}
+		else = {
+			event_target:lf_sex_player = {
+				add_character_modifier = { name = lf_good_sex days = 30 }
+			}
+			event_target:lf_sex_partner = {
+				add_character_modifier = { name = lf_good_sex days = 30 }
+			}
+		}
+		# Pregnancy check
+		hidden_tooltip = {
+			if = {
+				limit = {
+					lf_can_get_pregnant = yes
+				}
+				set_character_flag = lf_possible_pregnancy
+				lf_impregnate_check = yes
+			}
+		}
+	}
+	
+	option = { # You are such an asshole, Master/Mistress
+		name = LFSexytimesFemale5TTB
+		trigger = {
+			has_character_flag = lf_domrefused_cameinyou
+		}
+		if = {
+			limit = {
+				any_artifact = {
+					artifact_type = lf_kama_sutra
+					is_artifact_active = yes
+				}
+			}
+			event_target:lf_sex_player = {
+				add_character_modifier = { name = lf_good_sex days = 30 }
+			}
+			event_target:lf_sex_partner = {
+				add_character_modifier = { name = lf_great_sex days = 30 }
+			}
+		}
+		else = {
+			event_target:lf_sex_partner = {
+				add_character_modifier = { name = lf_good_sex days = 30 }
+			}
+		}
+		# Pregnancy check
+		hidden_tooltip = {
+			if = {
+				limit = {
+					lf_can_get_pregnant = yes
+				}
+				set_character_flag = lf_possible_pregnancy
+				lf_impregnate_check = yes
+			}
+		}
+	}
+	after = {
+		clr_character_flag = lf_domrefused_cameinyou
+	}
+}
+
+# .6 Dom pulls out
+narrative_event = {
+	id = LFSexytimesFemale.6
+	title = LFSexytimesFemale1T
+	is_triggered_only = yes
+	picture = sexytimes_pulled_out
+	desc = {
+		trigger = {
+			has_character_flag = lf_domrefused_cameonyou
+		}
+		text = LFSexytimesFemale6Refused
+	}
+	desc = {
+		trigger = {
+			NOT = { has_character_flag = lf_domrefused_cameonyou }
+		}
+		text = LFSexytimesFemale6Complied
+	}
+	
+	option = { # Thank you, Master/Mistress
+		name = LFSexytimesFemale6TTA
+		trigger = {
+			NOT = { has_character_flag = lf_domrefused_cameonyou }
+		}
+		if = {
+			limit = {
+				any_artifact = {
+					artifact_type = lf_kama_sutra
+					is_artifact_active = yes
+				}
+			}
+			event_target:lf_sex_player = {
+				add_character_modifier = { name = lf_great_sex days = 30 }
+			}
+			event_target:lf_sex_partner = {
+				add_character_modifier = { name = lf_great_sex days = 30 }
+			}
+		}
+		else = {
+			event_target:lf_sex_player = {
+				add_character_modifier = { name = lf_good_sex days = 30 }
+			}
+			event_target:lf_sex_partner = {
+				add_character_modifier = { name = lf_good_sex days = 30 }
+			}
+		}
+	}
+	
+	option = { # You are such an asshole, Master/Mistress
+		name = LFSexytimesFemale6TTB
+		trigger = {
+			has_character_flag = lf_domrefused_cameonyou
+		}
+		if = {
+			limit = {
+				any_artifact = {
+					artifact_type = lf_kama_sutra
+					is_artifact_active = yes
+				}
+			}
+			event_target:lf_sex_player = {
+				add_character_modifier = { name = lf_good_sex days = 30 }
+			}
+			event_target:lf_sex_partner = {
+				add_character_modifier = { name = lf_great_sex days = 30 }
+			}
+		}
+		else = {
+			event_target:lf_sex_partner = {
+				add_character_modifier = { name = lf_good_sex days = 30 }
+			}
+		}
+	}
+	after = {
+		clr_character_flag = lf_domrefused_cameonyou
+	}
+}
+
+# .7 Dominant results
+narrative_event = {
+	id = LFSexytimesFemale.7
+	title = LFSexytimesFemale1T
+	is_triggered_only = yes
+	picture = lf_a_placeholder
+	desc = {
+		trigger = {
+			has_character_flag = lf_domfemoral
+		}
+		text = LFSexytimesFemale7FemOral
+		picture = sexytimes_male_female_oral
+	}
+	desc = {
+		trigger = {
+			has_character_flag = lf_domfutaoral
+		}
+		text = LFSexytimesFemale7FutaOral
+		picture = sexytimes_male_female_oral
+	}
+	desc = {
+		trigger = {
+			has_character_flag = lf_dommaleoral
+		}
+		text = LFSexytimesFemale7MaleOral
+		picture = sexytimes_male_female_oral
+	}
+	desc = {
+		trigger = {
+			has_character_flag = lf_domfutaanal
+		}
+		text = LFSexytimesFemale7FutaAnal
+		picture = sexytimes_female_futamale_anal
+	}
+	desc = {
+		trigger = {
+			has_character_flag = lf_dommaleanal
+		}
+		text = LFSexytimesFemale7MaleAnal
+		picture = sexytimes_female_futamale_anal
+	}
+	desc = {
+		trigger = {
+			has_character_flag = lf_domfutacow
+		}
+		text = LFSexytimesFemale7FutaCow
+		picture = sexytimes_female_futamale_cow
+	}
+	desc = {
+		trigger = {
+			has_character_flag = lf_dommalecow
+		}
+		text = LFSexytimesFemale7MaleCow
+		picture = sexytimes_female_futamale_cow
+	}
+		
+	option = { # You did well, pet.
+		name = LFSexytimes7TTA
+		trigger = {
+			OR = {
+				has_character_flag = lf_domfemoral
+				has_character_flag = lf_domfutaoral
+				has_character_flag = lf_dommaleoral
+				has_character_flag = lf_domfutaanal
+				has_character_flag = lf_dommaleanal
+			}
+		}
+		if = {
+			limit = {
+				any_artifact = {
+					artifact_type = lf_kama_sutra
+					is_artifact_active = yes
+				}
+			}
+			event_target:lf_sex_player = {
+				add_character_modifier = { name = lf_great_sex days = 30 }
+			}
+			event_target:lf_sex_partner = {
+				add_character_modifier = { name = lf_great_sex days = 30 }
+			}
+		}
+		else = {
+			event_target:lf_sex_player = {
+				add_character_modifier = { name = lf_good_sex days = 30 }
+			}
+			event_target:lf_sex_partner = {
+				add_character_modifier = { name = lf_good_sex days = 30 }
+			}
+		}
+	}
+	
+	option = { # Pull out
+		name = LFSexytimes7TTC
+		trigger = {
+			OR = {
+				has_character_flag = lf_domfutacow
+				has_character_flag = lf_dommalecow
+			}
+			NOT = { trait = lf_breeder }
+		}
+		set_character_flag = lf_dompulledout
+		narrative_event = { id = LFSexytimesFemale.8 }
+	}
+
+	option = { # Let him/her cum in you
+		name = LFSexytimes7TTB
+		trigger = {
+			OR = {
+				has_character_flag = lf_domfutacow
+				has_character_flag = lf_dommalecow
+			}
+		}
+		set_character_flag = lf_domcameinyou
+		narrative_event = { id = LFSexytimesFemale.8 }
+	}
+	after = {
+		clr_character_flag = lf_domfutacow
+		clr_character_flag = lf_dommalecow
+		clr_character_flag = lf_domfemoral
+		clr_character_flag = lf_domfutaoral
+		clr_character_flag = lf_dommaleoral
+		clr_character_flag = lf_domfutaanal
+		clr_character_flag = lf_dommaleanal
+	}
+}
+
+# .8 Female Dom - Cum results
+narrative_event = {
+	id = LFSexytimesFemale.8
+	title = LFSexytimesFemale1T
+	picture = {
+		trigger = {
+			has_character_flag = lf_dompulledout
+		}
+		picture = sexytimes_pulled_out
+	}
+	picture = {
+		trigger = {
+			has_character_flag = lf_domcameinyou
+		}
+		picture = sexytimes_cum_inside
+	}
+	is_triggered_only = yes
+	desc = {
+		trigger = {
+			has_character_flag = lf_dompulledout
+		}
+		text = LFSexytimesFemale8Painted
+	}
+	desc = {
+		trigger = {
+			has_character_flag = lf_domcameinyou
+		}
+		text = LFSexytimesFemale8Cum
+	}
+	
+	option = { # You did well, pet. - Painted version
+		name = LFSexytimesFemale8TTA
+		trigger = {
+			has_character_flag = lf_dompulledout
+		}
+		if = {
+			limit = {
+				any_artifact = {
+					artifact_type = lf_kama_sutra
+					is_artifact_active = yes
+				}
+			}
+			event_target:lf_sex_player = {
+				add_character_modifier = { name = lf_great_sex days = 30 }
+			}
+			event_target:lf_sex_partner = {
+				add_character_modifier = { name = lf_great_sex days = 30 }
+			}
+		}
+		else = {
+			event_target:lf_sex_player = {
+				add_character_modifier = { name = lf_good_sex days = 30 }
+			}
+			event_target:lf_sex_partner = {
+				add_character_modifier = { name = lf_good_sex days = 30 }
+			}
+		}
+	}
+	option = { # You did well, pet. - Cum version
+		name = LFSexytimesFemale8TTA
+		trigger = {
+			has_character_flag = lf_domcameinyou
+		}
+		if = {
+			limit = {
+				any_artifact = {
+					artifact_type = lf_kama_sutra
+					is_artifact_active = yes
+				}
+			}
+			event_target:lf_sex_player = {
+				add_character_modifier = { name = lf_great_sex days = 30 }
+			}
+			event_target:lf_sex_partner = {
+				add_character_modifier = { name = lf_great_sex days = 30 }
+			}
+		}
+		else = {
+			event_target:lf_sex_player = {
+				add_character_modifier = { name = lf_good_sex days = 30 }
+			}
+			event_target:lf_sex_partner = {
+				add_character_modifier = { name = lf_good_sex days = 30 }
+			}
+		}
+		# Pregnancy check
+		hidden_tooltip = {
+			if = {
+				limit = {
+					lf_can_get_pregnant = yes
+				}
+				set_character_flag = lf_possible_pregnancy
+				lf_impregnate_check = yes
+			}
+		}
+	}
+
+	after = {
+		clr_character_flag = lf_domcameinyou
+		clr_character_flag = lf_dompulledout
+	}
+}
+
+# .9 Standard results
+narrative_event = {
+	id = LFSexytimesFemale.9
+	title = LFSexytimesFemale1T
+	picture = lf_a_placeholder
+	is_triggered_only = yes
+	desc = {
+		trigger = {
+			has_character_flag = lf_standardfemoral
+		}
+		text = LFSexytimesFemale9FemOral1
+		picture = sexytimes_male_female_oral
+	}
+	desc = {
+		trigger = {
+			has_character_flag = lf_standardfemoral
+		}
+		text = LFSexytimesFemale9FemOral2
+		picture = sexytimes_male_female_oral
+	}
+	desc = {
+		trigger = {
+			has_character_flag = lf_standardfutaoral
+		}
+		text = LFSexytimesFemale9FutaOral1
+		picture = sexytimes_male_female_oral
+	}
+	desc = {
+		trigger = {
+			has_character_flag = lf_standardfutaoral
+		}
+		text = LFSexytimesFemale9FutaOral2
+		picture = sexytimes_male_femfuta_oral
+	}
+	desc = {
+		trigger = {
+			has_character_flag = lf_standardmaleoral
+		}
+		text = LFSexytimesFemale9MaleOral
+		picture = sexytimes_male_female_oral
+	}
+	desc = {
+		trigger = {
+			has_character_flag = lf_standardfutaanal
+		}
+		text = LFSexytimesFemale9FutaAnal
+		picture = sexytimes_female_futamale_anal
+	}
+	desc = {
+		trigger = {
+			has_character_flag = lf_standardmaleanal
+		}
+		text = LFSexytimesFemale9MaleAnal
+		picture = sexytimes_female_futamale_anal
+	}
+	desc = { # Hedonist Doggy Style written by Jim Raynor on LL
+		trigger = {
+			has_character_flag = lf_standardfutadog
+			event_target:lf_sex_partner = {
+				# trait = hedonist
+			}
+		}
+		text = LFSexytimesFemale9FutaDogJimHedonist
+		picture = sex_trapfuta_doggy_1
+	}
+	desc = { # Hedonist Doggy Style written by Jim Raynor on LL
+		trigger = {
+			has_character_flag = lf_standardmaledog
+			event_target:lf_sex_partner = {
+				# trait = hedonist
+			}
+		}
+		text = LFSexytimesFemale9MaleDogJimHedonist
+		picture = sex_mf_doggy_1
+	}
+	desc = { # Doggy Style written by R0nin78 on LL
+		trigger = {
+			has_character_flag = lf_standardmaledog
+		}
+		text = LFSexytimesFemale9MaleDogR0nin
+		picture = sex_mf_doggy_1
+	}
+	desc = { # Cowgirl written by Jim Raynor on LL
+		trigger = {
+			has_character_flag = lf_standardfutacow
+		}
+		text = LFSexytimesFemale9FutaCowJim
+		picture = sex_ffuta_cowgirl_1
+	}
+	desc = { # Cowgirl written by Jim Raynor on LL, modified for a male partner
+		trigger = {
+			has_character_flag = lf_standardmalecow
+		}
+		text = LFSexytimesFemale9MaleCowJim
+		picture = sexytimes_female_male_cow
+	}
+	desc = { # Cowgirl Style written by R0nin78 on LL
+		trigger = {
+			has_character_flag = lf_standardmalecow
+		}
+		text = LFSexytimesFemale9MaleCowR0nin
+		picture = sexytimes_female_male_cow
+	}
+		
+	
+	option = { # Thank you, my love.
+		name = LFSexytimes9TTA
+		trigger = {
+			OR = {
+				has_character_flag = lf_standardfemoral
+				has_character_flag = lf_standardfutaoral
+				has_character_flag = lf_standardmaleoral
+				has_character_flag = lf_standardfutaanal
+				has_character_flag = lf_standardmaleanal
+			}
+		}
+		if = {
+			limit = {
+				any_artifact = {
+					artifact_type = lf_kama_sutra
+					is_artifact_active = yes
+				}
+			}
+			event_target:lf_sex_player = {
+				add_character_modifier = { name = lf_great_sex days = 30 }
+			}
+			event_target:lf_sex_partner = {
+				add_character_modifier = { name = lf_great_sex days = 30 }
+			}
+		}
+		else = {
+			event_target:lf_sex_player = {
+				add_character_modifier = { name = lf_good_sex days = 30 }
+			}
+			event_target:lf_sex_partner = {
+				add_character_modifier = { name = lf_good_sex days = 30 }
+			}
+		}
+	}
+	
+	option = { # Don't cum in me!
+		name = LFSexytimes9TTB
+		trigger = {
+			OR = {
+				has_character_flag = lf_standardfutadog
+				has_character_flag = lf_standardmaledog
+				has_character_flag = lf_standardfutacow
+				has_character_flag = lf_standardmalecow
+			}
+			NOT = { trait = lf_breeder }
+		}
+		custom_tooltip = {
+			text = LFSexytimes9TTCustom
+			random_list = {
+				80 = { # Will not cum in you
+					modifier = { # ...but will if they have Breeder
+						factor = 0
+						event_target:lf_sex_partner = {
+							trait = lf_breeder
+						}
+					}
+					narrative_event = { id = LFSexytimesFemale.11 }
+				}
+				20 = { # Will go against your wishes
+					set_character_flag = lf_standardpulledout_refused
+					narrative_event = { id = LFSexytimesFemale.10 }
+				}
+			}
+		}
+	}
+
+	option = { # Please cum in me!
+		name = LFSexytimes9TTC
+		trigger = {
+			OR = {
+				has_character_flag = lf_standardfutadog
+				has_character_flag = lf_standardmaledog
+				has_character_flag = lf_standardfutacow
+				has_character_flag = lf_standardmalecow
+			}
+		}
+		custom_tooltip = {
+			text = LFSexytimes9TTCustom
+			random_list = {
+				80 = { # Will cum in you
+					narrative_event = { id = LFSexytimesFemale.10 }
+				}
+				20 = { # Will go against your wishes
+					modifier = { # ...but wont if they have Breeder
+						factor = 0
+						event_target:lf_sex_partner = {
+							trait = lf_breeder
+						}
+					}
+					set_character_flag = lf_standardcameinyou_refused
+					narrative_event = { id = LFSexytimesFemale.11 }
+				}
+			}
+		}
+	}
+	after = {
+		clr_character_flag = lf_standardfemoral
+		clr_character_flag = lf_standardfutaoral
+		clr_character_flag = lf_standardmaleoral
+		clr_character_flag = lf_standardfutaanal
+		clr_character_flag = lf_standardmaleanal
+	}
+}
+
+# . Partner cums in you
+narrative_event = {
+	id = LFSexytimesFemale.10
+	title = LFSexytimesFemale1T
+	picture = sexytimes_cum_inside
+	is_triggered_only = yes
+	desc = {
+		trigger = {
+			has_character_flag = lf_standardcameinyou_refused
+			has_character_flag = lf_standardfutadog
+			event_target:lf_sex_partner = {
+				is_female = yes
+				is_futa = yes
+				# trait = hedonist
+			}
+		}
+		text = LFSexytimesFemale10FutaRefusedDoggyJimHedonist
+	}
+	desc = {
+		trigger = {
+			has_character_flag = lf_standardcameinyou_refused
+			has_character_flag = lf_standardmaledog
+			event_target:lf_sex_partner = {
+				is_female = no
+				# trait = hedonist
+			}
+		}
+		text = LFSexytimesFemale10MaleRefusedDoggyJimHedonist
+	}
+	desc = {
+		trigger = {
+			has_character_flag = lf_standardcameinyou_refused
+			has_character_flag = lf_standardfutacow
+			event_target:lf_sex_partner = {
+				is_female = yes
+				is_futa = yes
+				# trait = hedonist
+			}
+		}
+		text = LFSexytimesFemale10FutaRefusedCowgirlJim
+	}
+	desc = {
+		trigger = {
+			has_character_flag = lf_standardcameinyou_refused
+			has_character_flag = lf_standardmalecow
+			event_target:lf_sex_partner = {
+				is_female = no
+			}
+		}
+		text = LFSexytimesFemale10MaleRefusedCowgirlJim
+	}
+	desc = {
+		trigger = {
+			NOT = { has_character_flag = lf_standardcameinyou_refused }
+			has_character_flag = lf_standardfutacow
+			event_target:lf_sex_partner = {
+				is_female = yes
+				is_futa = yes
+			}
+		}
+		text = LFSexytimesFemale10FutaCompliedCowgirlJim
+	}
+	desc = {
+		trigger = {
+			NOT = { has_character_flag = lf_standardcameinyou_refused }
+			has_character_flag = lf_standardmalecow`
+			event_target:lf_sex_partner = {
+				is_female = no
+			}
+		}
+		text = LFSexytimesFemale10MaleCompliedCowgirlJim
+	}
+	desc = {
+		trigger = {
+			NOT = { has_character_flag = lf_standardcameinyou_refused }
+			has_character_flag = lf_standardfutadog
+			event_target:lf_sex_partner = {
+				is_female = yes
+				is_futa = yes
+				# trait = hedonist
+			}
+		}
+		text = LFSexytimesFemale10FutaCompliedDoggyJimHedonist
+	}
+	desc = {
+		trigger = {
+			NOT = { has_character_flag = lf_standardcameinyou_refused }
+			has_character_flag = lf_standardmaledog
+			event_target:lf_sex_partner = {
+				is_female = no
+				# trait = hedonist
+			}
+		}
+		text = LFSexytimesFemale10MaleCompliedDoggyJimHedonist
+	}
+	desc = { # Cowgirl written by R0nin78 on LL
+		trigger = {
+			has_character_flag = lf_standardcameinyou_refused
+			has_character_flag = lf_standardmalecow
+			event_target:lf_sex_partner = {
+				is_female = no
+			}
+		}
+		text = LFSexytimesFemale10MaleRefusedCowgirlR0nin
+	}
+	desc = { # Cowgirl written by R0nin78 on LL
+		trigger = {
+			NOT = { has_character_flag = lf_standardcameinyou_refused }
+			has_character_flag = lf_standardmalecow
+			event_target:lf_sex_partner = {
+				is_female = no
+			}
+		}
+		text = LFSexytimesFemale10MaleCompliedCowgirlR0nin
+	}
+	desc = { # Doggy Style written by R0nin78 on LL
+		trigger = {
+			NOT = { has_character_flag = lf_standardcameinyou_refused }
+			has_character_flag = lf_standardmaledog
+			event_target:lf_sex_partner = {
+				is_female = no
+			}
+		}
+		text = LFSexytimesFemale10MaleCompliedDoggyR0nin
+	}
+	desc = { # Doggy Style written by R0nin78 on LL
+		trigger = {
+			has_character_flag = lf_standardcameinyou_refused
+			has_character_flag = lf_standardmaledog
+			event_target:lf_sex_partner = {
+				is_female = no
+			}
+		}
+		text = LFSexytimesFemale10MaleRefusedDoggyR0nin
+	}
+	
+	
+	
+	
+	option = { # Thank you, my love.
+		name = LFSexytimesFemale10TTA
+		trigger = {
+			NOT = { has_character_flag = lf_standardcameinyou_refused }
+		}
+		if = {
+			limit = {
+				any_artifact = {
+					artifact_type = lf_kama_sutra
+					is_artifact_active = yes
+				}
+			}
+			event_target:lf_sex_player = {
+				add_character_modifier = { name = lf_great_sex days = 30 }
+			}
+			event_target:lf_sex_partner = {
+				add_character_modifier = { name = lf_great_sex days = 30 }
+			}
+		}
+		else = {
+			event_target:lf_sex_player = {
+				add_character_modifier = { name = lf_good_sex days = 30 }
+			}
+			event_target:lf_sex_partner = {
+				add_character_modifier = { name = lf_good_sex days = 30 }
+			}
+		}
+		# Pregnancy check
+		hidden_tooltip = {
+			if = {
+				limit = {
+					lf_can_get_pregnant = yes
+				}
+				set_character_flag = lf_possible_pregnancy
+				lf_impregnate_check = yes
+			}
+		}
+	}
+	
+	option = { # You are such an asshole.
+		name = LFSexytimesFemale10TTB
+		trigger = {
+			has_character_flag = lf_standardcameinyou_refused
+		}
+		if = {
+			limit = {
+				any_artifact = {
+					artifact_type = lf_kama_sutra
+					is_artifact_active = yes
+				}
+			}
+			event_target:lf_sex_player = {
+				add_character_modifier = { name = lf_good_sex days = 30 }
+			}
+			event_target:lf_sex_partner = {
+				add_character_modifier = { name = lf_great_sex days = 30 }
+			}
+		}
+		else = {
+			event_target:lf_sex_partner = {
+				add_character_modifier = { name = lf_good_sex days = 30 }
+			}
+		}
+		# Pregnancy check
+		hidden_tooltip = {
+			if = {
+				limit = {
+					lf_can_get_pregnant = yes
+				}
+				set_character_flag = lf_possible_pregnancy
+				lf_impregnate_check = yes
+			}
+		}
+	}
+	after = {
+		clr_character_flag = lf_standardfutadog
+		clr_character_flag = lf_standardmaledog
+		clr_character_flag = lf_standardfutacow
+		clr_character_flag = lf_standardmalecow
+		clr_character_flag = lf_standardcameinyou_refused
+	}
+}
+
+# .6 Partner pulls out
+narrative_event = {
+	id = LFSexytimesFemale.11
+	title = LFSexytimesFemale1T
+	picture = sexytimes_pulled_out
+	is_triggered_only = yes
+	desc = {
+		trigger = {
+			has_character_flag = lf_standardpulledout_refused
+			has_character_flag = lf_standardfutadog
+			event_target:lf_sex_partner = {
+				is_female = yes
+				is_futa = yes
+			}
+		}
+		text = LFSexytimesFemale11FutaRefusedDoggyJim
+	}
+	desc = {
+		trigger = {
+			has_character_flag = lf_standardpulledout_refused
+			has_character_flag = lf_standardmaledog
+			event_target:lf_sex_partner = {
+				is_female = no
+			}
+		}
+		text = LFSexytimesFemale11MaleRefusedDoggyJim
+	}
+	desc = {
+		trigger = {
+			has_character_flag = lf_standardpulledout_refused
+			has_character_flag = lf_standardfutadog
+			event_target:lf_sex_partner = {
+				is_female = yes
+				is_futa = yes
+				# trait = hedonist
+			}
+		}
+		text = LFSexytimesFemale11FutaRefusedDoggyJimHedonist
+	}
+	desc = {
+		trigger = {
+			has_character_flag = lf_standardpulledout_refused
+			has_character_flag = lf_standardmaledog
+			event_target:lf_sex_partner = {
+				is_female = no
+				# trait = hedonist
+			}
+		}
+		text = LFSexytimesFemale11MaleRefusedDoggyJimHedonist
+	}
+	desc = {
+		trigger = {
+			NOT = { has_character_flag = lf_standardpulledout_refused }
+			has_character_flag = lf_standardfutadog
+			event_target:lf_sex_partner = {
+				is_female = yes
+				is_futa = yes
+				# trait = hedonist
+			}
+		}
+		text = LFSexytimesFemale11FutaCompliedDoggyJimHedonist
+	}
+	desc = {
+		trigger = {
+			NOT = { has_character_flag = lf_standardpulledout_refused }
+			has_character_flag = lf_standardmaledog
+			event_target:lf_sex_partner = {
+				is_female = no
+				# trait = hedonist
+			}
+		}
+		text = LFSexytimesFemale11MaleCompliedDoggyJimHedonist
+	}
+	desc = {
+		trigger = {
+			NOT = { has_character_flag = lf_standardpulledout_refused }
+			has_character_flag = lf_standardmaledog
+			event_target:lf_sex_partner = {
+				is_female = no
+			}
+		}
+		text = LFSexytimesFemale11MaleCompliedDoggyR0nin
+	}
+	desc = {
+		trigger = {
+			has_character_flag = lf_standardpulledout_refused
+			has_character_flag = lf_standardmaledog
+			event_target:lf_sex_partner = {
+				is_female = no
+			}
+		}
+		text = LFSexytimesFemale11MaleRefusedDoggyR0nin
+	}
+	
+	
+	
+	option = { # Thank you, my love.
+		name = LFSexytimesFemale11TTA
+		trigger = {
+			NOT = { has_character_flag = lf_standardpulledout_refused }
+		}
+		if = {
+			limit = {
+				any_artifact = {
+					artifact_type = lf_kama_sutra
+					is_artifact_active = yes
+				}
+			}
+			event_target:lf_sex_player = {
+				add_character_modifier = { name = lf_great_sex days = 30 }
+			}
+			event_target:lf_sex_partner = {
+				add_character_modifier = { name = lf_great_sex days = 30 }
+			}
+		}
+		else = {
+			event_target:lf_sex_player = {
+				add_character_modifier = { name = lf_good_sex days = 30 }
+			}
+			event_target:lf_sex_partner = {
+				add_character_modifier = { name = lf_good_sex days = 30 }
+			}
+		}
+	}
+	
+	option = { # You are such an asshole.
+		name = LFSexytimesFemale11TTB
+		trigger = {
+			has_character_flag = lf_standardpulledout_refused
+		}
+		if = {
+			limit = {
+				any_artifact = {
+					artifact_type = lf_kama_sutra
+					is_artifact_active = yes
+				}
+			}
+			event_target:lf_sex_player = {
+				add_character_modifier = { name = lf_good_sex days = 30 }
+			}
+			event_target:lf_sex_partner = {
+				add_character_modifier = { name = lf_great_sex days = 30 }
+			}
+		}
+		else = {
+			event_target:lf_sex_partner = {
+				add_character_modifier = { name = lf_good_sex days = 30 }
+			}
+		}
+	}
+	after = {
+		clr_character_flag = lf_standardfutadog
+		clr_character_flag = lf_standardmaledog
+		clr_character_flag = lf_standardfutacow
+		clr_character_flag = lf_standardmalecow
+		clr_character_flag = lf_standardpulledout_refused
+	}
+}

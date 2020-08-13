@@ -1,0 +1,42 @@
+lf_ghost = {
+	random = no
+	customizer = no
+	immortal = yes
+	fertility = -1000
+}
+lf_vampire_holyshit = {
+	random = no
+	customizer = no
+	hidden = yes
+	combat_rating = 125
+}
+lf_vampire_godlike = {
+	random = no
+	customizer = no
+	hidden = yes
+	combat_rating = 60
+}
+lf_vampire_buff = {
+	random = no
+	customizer = no
+	hidden = yes
+	combat_rating = 45
+}
+lf_vampire_good = {
+	random = no
+	customizer = no
+	hidden = yes
+	combat_rating = 15
+}
+lf_vampire_bad = {
+	random = no
+	customizer = no
+	hidden = yes
+	combat_rating = -15
+}
+lf_vampire_weak = {
+	random = no
+	customizer = no
+	hidden = yes
+	combat_rating = -30
+}

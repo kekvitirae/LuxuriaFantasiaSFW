@@ -1,0 +1,1060 @@
+namespace = dwseom
+#Governor presents slave
+letter_event = {
+    id = dwseom.200
+	
+    desc = EVTDESC_DWSEOM_200
+    border = GFX_event_letter_frame_diplomacy
+
+    hide_new = yes
+
+    is_triggered_only = yes
+
+    option = { 
+        name = EVTOPTA_DWSEOM_200
+        custom_tooltip = { text = EVTOPTA_DWSEOM_200_TT }
+	   new_character = { imprison = ROOT }
+
+	}
+}
+
+#Futa Slave
+character_event = {
+    id = dwseom.1
+	
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = { 
+        FROMFROM = { 
+            random_list = {
+                100 = { #Female
+                    create_character = {
+                        age = 16
+                        dynasty = random
+                        religion = random
+                        culture = random
+                        female = yes
+                        health = 10
+                        random_traits = yes
+						flag = lf_never_change_race
+                    }
+                }
+            }
+            new_character = {
+                set_character_flag = no_court_invites
+				add_trait = lf_futa                
+            }
+            letter_event = { id = dwseom.200 } 
+        } 
+    }
+}
+
+#Normal Female Slave
+character_event = {
+    id = dwseom.2
+	
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = { 
+        FROMFROM = { 
+            random_list = {
+                100 = { #Female
+                    create_character = {
+                        age = 16
+                        dynasty = random
+                        religion = random
+                        culture = random
+                        female = yes
+                        health = 10
+                        random_traits = yes
+						flag = lf_never_change_race
+                    }
+                }
+            }
+            new_character = {
+                set_character_flag = no_court_invites
+            }
+            letter_event = { id = dwseom.200 } 
+        } 
+    }
+}
+#Normal Male Slave
+character_event = {
+    id = dwseom.3
+	
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = { 
+        FROMFROM = { 
+            random_list = {
+                100 = { 
+                    create_character = {
+                        age = 16
+                        dynasty = random
+                        religion = random
+                        culture = random
+                        female = no
+                        health = 10
+                        random_traits = yes
+						flag = lf_never_change_race
+                    }
+                }
+            }
+            new_character = {
+                set_character_flag = no_court_invites
+            }
+            letter_event = { id = dwseom.200 } 
+        } 
+    }
+}
+#Normal Female Exotic Slave
+character_event = {
+    id = dwseom.4
+	
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = { 
+        FROMFROM = { 
+            random_list = {
+                100 = { 
+                    create_character = {
+                        age = 16
+                        dynasty = random
+                        religion = random
+                        culture = random
+                        female = yes
+                        health = 10
+                        random_traits = yes
+						flag = lf_never_change_race
+                    }
+                }
+            }
+            new_character = {
+                set_character_flag = no_court_invites
+                random_list = {
+                    20 = { 
+						modifier = {
+							factor = 0
+							NOT = { lf_races_fae_active = yes }
+						}
+						add_trait = lf_orc 
+						lf_add_random_orc_portrait = yes
+					}
+                    20 = { 
+						modifier = {
+							factor = 0
+							NOT = { lf_races_fae_active = yes }
+						}
+						add_trait = lf_elf
+						lf_add_random_elf_portrait = yes
+						add_trait = lf_elf_immortality
+						check_elven_fertility = yes
+					}
+                    20 = { 
+						modifier = {
+							factor = 0
+							NOT = { lf_races_fareast_active = yes }
+						}
+						add_trait = lf_neko
+						lf_add_random_neko_portrait = yes
+					}
+                    20 = { 
+						modifier = {
+							factor = 0
+							NOT = { lf_races_fareast_active = yes }
+						}
+						add_trait = lf_kitsune
+						lf_add_random_kitsune_portrait = yes
+					}
+                }
+			
+            }
+            letter_event = { id = dwseom.200 } 
+        } 
+    }
+}
+#Normal Male Exotic Slave
+character_event = {
+    id = dwseom.5
+	
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = { 
+        FROMFROM = { 
+            random_list = {
+                100 = { 
+                    create_character = {
+                        age = 16
+                        dynasty = random
+                        religion = random
+                        culture = random
+                        female = no
+                        health = 10
+                        random_traits = yes
+						flag = lf_never_change_race
+                    }
+                }
+            }
+            new_character = {
+                set_character_flag = no_court_invites
+                random_list = {
+                    20 = { 
+						modifier = {
+							factor = 0
+							NOT = { lf_races_fae_active = yes }
+						}
+						add_trait = lf_orc
+						lf_add_random_orc_portrait = yes						
+					}
+                    20 = { 
+						modifier = {
+							factor = 0
+							NOT = { lf_races_fae_active = yes }
+						}
+						add_trait = lf_elf
+						lf_add_random_elf_portrait = yes
+					}
+                    20 = { 
+						modifier = {
+							factor = 0
+							NOT = { lf_races_fareast_active = yes }
+						}
+						add_trait = lf_neko
+						lf_add_random_neko_portrait = yes
+					}
+                    20 = { 
+						modifier = {
+							factor = 0
+							NOT = { lf_races_fareast_active = yes }
+						}
+						add_trait = lf_kitsune
+						lf_add_random_kitsune_portrait = yes						
+					}
+                }
+			
+
+            }
+            letter_event = { id = dwseom.200 } 
+        } 
+    }
+}
+narrative_event = {
+	id = dwseom.500
+	desc = dwseom500
+	picture = dragon_breeding
+	is_triggered_only = yes 
+	option = { # 
+		name = dwseom500A
+		ai_chance = {
+			factor = 100
+		}
+		if = { 
+			limit = {
+				lf_races_dwse_active = yes
+			}
+			random_list = {
+				50 = { 
+					add_trait = dragon_pregnancy
+					hidden_tooltip = {
+						offmap_dwse = {
+							offmap_ruler = { 
+								ROOT = {
+									impregnate = PREV
+								}
+							} 
+						}
+					}
+					narrative_event = { id = dwseom.501 days = 45 }
+				} 
+				50 = {
+					offmap_dwse = {
+						offmap_ruler = { 
+							ROOT = {
+								impregnate = PREV
+							}
+						} 
+					}
+					hidden_tooltip = {
+						ROOT = {
+							add_trait = dwse_lizard_pregnancy 
+						}
+					}
+				}
+			}
+		
+			add_character_modifier = { name = dragon_festival_modifier duration = 3650 }
+			ROOT = {
+				sound_effect = china_grace_spend
+				add_offmap_currency = {
+					offmap = offmap_dwse
+					value = 100
+				}
+			}
+		}
+	}
+	option = { # Changed my mind
+		name = dwseom500B
+		ROOT = {
+			sound_effect = china_grace_spend
+			add_offmap_currency = {
+				offmap = offmap_dwse
+				value = -50
+			}
+		}
+	}
+}
+narrative_event = {
+	id = dwseom.501
+	desc = dwseom501
+	picture = {
+		trigger = {
+			lf_has_nsfw = yes
+		}
+		picture = egg_laying
+	}
+	picture = {
+		trigger = {
+			lf_has_nsfw = no
+		}
+		picture = dragon_ambassador_egg
+	}
+	is_triggered_only = yes 
+	trigger = { # Will not occur if something removes the trait.
+		trait = dragon_pregnancy
+	}
+	immediate = {
+		cancel_pregnancy = yes
+	}
+	option = { # 
+		name = dwseom501A
+		remove_trait = dragon_pregnancy
+		ROOT = {
+			add_artifact = dwse_dragon_egg
+		}
+		if = {
+			limit = { 
+				is_ruler = no
+			}
+			character_event = { id = dwseom.800 }
+		}
+	}
+}
+narrative_event = {
+	id = dwseom.700
+	desc = dwseom700
+	picture = dragon_gift
+	is_triggered_only = yes 
+	option = { # 
+		name = dwseom700A
+		ROOT = {
+			destroy_artifact = dwse_dragon_egg
+			add_offmap_currency = {
+				offmap = offmap_dwse
+				value = 1000
+			}
+		}
+	}
+	option = { # 
+		name = dwseom700B
+	}
+}
+
+narrative_event = {
+	id = dwseom.800
+	desc = dwseom800
+	picture = dwse_dragon_egg_hatch
+	is_triggered_only = yes 
+	option = {  
+		name = dwseom800A
+		ai_chance = {
+			factor = 100
+		}
+		ROOT = {
+			destroy_artifact = dwse_dragon_egg
+		}
+		narrative_event = { id = dwseom.801 months = 12 }
+	}
+	option = { 
+		name = dwseom800B
+	}
+
+}
+
+narrative_event = {
+	id = dwseom.801
+	desc = dwseom801
+	picture = dragon_hatching
+	is_triggered_only = yes 
+	option = {  
+		name = dwseom801A
+		random_list = {
+			50 = {
+				create_character = {
+					random_traits = yes 
+					culture = dwse_dragon
+					dynasty = ROOT
+					female = no
+					age = 0
+					trait = dwse_dragon_child
+					health = 20
+				}
+			}
+			50 = {
+				create_character = {
+					random_traits = yes 
+					culture = dwse_dragon
+					dynasty = ROOT
+					female = yes
+					age = 0
+					trait = dwse_dragon_child
+					health = 20
+				}				
+			}
+		}
+		new_character = {
+			set_character_flag = no_court_invites
+			set_mother = ROOT
+		}
+	}
+}
+
+# .3800 SpyMaster Kidnapping Attempt
+narrative_event = {
+	id = dwseom.3800
+	picture = dragon_kidnap
+	title = lf_kidnap_title
+	is_triggered_only = yes # by targetted_decision
+	desc = dwseom3800
+	immediate = {
+		FROM = { # We set the kidnap target
+			save_event_target_as = dw_kidnap_target
+		}
+		# And we set the SpyMaster of the realm the target is in
+		event_target:dw_kidnap_target = {
+			top_liege = {
+				job_spymaster = {
+					save_event_target_as = dw_kidnap_target_spymaster
+				}
+			}
+		}
+		# And the liege of the realm as well in case we have to stick the SpyMaster into their prison
+		event_target:dw_kidnap_target = {
+			top_liege = {
+				save_event_target_as = dw_kidnap_target_liege
+			}
+		}
+	}
+	option = { # Spare no expense
+		name = dwseom3800A
+		kidnap_dragon = yes
+	}
+	option = { # I've changed my mind
+		name = dwseom3800B
+	}
+}
+# .3801 Kidnapping Success!
+narrative_event = {
+	id = dwseom.3801
+	picture = lf_a_placeholder
+	title = lf_kidnap_title
+	is_triggered_only = yes # by targetted_decision
+	desc = { # Male captured
+		trigger = {
+			event_target:dw_kidnap_target = {
+				is_female = no
+			}
+		}
+		text = dwseom3801
+		picture = prisoner_male1
+	}
+	desc = { # Futa captured
+		trigger = {
+			event_target:dw_kidnap_target = {
+				is_futa = yes
+			}
+		}
+		text = dwseom3801
+		picture = prisoner_futa1
+	}
+	desc = { # Female captured (not werewolf or futa)
+		trigger = {
+			event_target:dw_kidnap_target = {
+				is_not_futa = yes
+				is_female = yes
+			}
+		}
+		text = dwseom3801
+		picture = prisoner_female1
+	}
+	option = { # Welcome to my dungeon
+		name = dwseom3801TTA
+		event_target:dw_kidnap_target = {
+			imprison = ROOT
+		}
+	}
+}
+narrative_event = {
+	id = dwseom.1000
+	desc = "dwseom1000"
+	picture = {
+		trigger = {
+			lf_has_nsfw = yes
+		}
+		picture = dragon_sex
+	}
+	picture = {
+		trigger = {
+			lf_has_nsfw = no
+		}
+		picture = dragon_ambassador_return
+	}
+	title = dwseom_dragon_stable
+	
+	is_triggered_only = yes
+
+	option = { # Female ruler
+		name = "dwseom1000A" 
+		trigger = { 
+			is_adult = yes
+			is_female = yes
+			is_pregnant = no
+			NOT = {
+				practical_age >= 45
+			}
+			NOT = {
+				trait = dragon_pregnancy
+			}
+		}
+		save_event_target_as = dragon_mate
+		random_courtier = {
+			limit = { 
+				trait = dwse_dragon_adult
+				is_adult = yes
+				is_female = no
+				dynasty = ROOT
+				NOR = {
+					trait = lf_asexual
+					has_character_modifier = dragon_satisfied 
+				}
+			}
+			add_character_modifier = { name = dragon_satisfied duration = 365 }
+			save_event_target_as = dragonbreed
+		}
+		clr_character_flag = dragon_sexy_times
+		narrative_event = { id = dwseom.1001 }
+		ai_chance = {
+			factor = 0.2
+			modifier = {
+				factor = 0
+				any_child = {
+					trait = dwse_dragon_adult
+					OR = {
+						is_alive = yes
+						is_adult = no
+					}
+				}		
+			}
+		}
+	}
+	
+	option = { # Female weyrleader
+		name = "dwseom1000B" 
+		trigger = { 
+			any_courtier_or_vassal = {
+				is_adult = yes
+				is_female = yes
+				is_pregnant = no
+				has_minor_title = dwse_weyrleader
+				NOR = {
+					practical_age >= 45
+					trait = dragon_pregnancy
+					trait = lf_asexual
+				}
+			}
+		}
+		clr_character_flag = dragon_sexy_times
+		random_courtier = {
+			limit = { 
+				trait = dwse_dragon_adult
+				is_adult = yes
+				is_female = no
+				dynasty = ROOT
+				NOR = {
+					has_character_modifier = dragon_satisfied
+					trait = lf_asexual
+				}
+			}
+			add_character_modifier = { name = dragon_satisfied duration = 365 }
+			save_event_target_as = dragonbreed
+		}
+		random_courtier_or_vassal = {
+			limit = {
+				is_adult = yes
+				is_female = yes
+				is_pregnant = no
+				prisoner = no
+				has_minor_title = dwse_weyrleader
+				NOR = {
+					practical_age >= 45
+					trait = dragon_pregnancy
+					trait = lf_asexual
+				}
+			}
+			save_event_target_as = dragon_mate
+			narrative_event = { id = dwseom.1002 }
+
+		}
+
+		narrative_event = { id = dwseom.1003 }
+		ai_chance = {
+			factor = 0.2
+			modifier = {
+				factor = 0
+				any_child = {
+					trait = dwse_dragon_adult
+					OR = {
+						is_alive = yes
+						is_adult = no
+					}
+				}		
+			}
+		}
+	}
+
+	option = { # Female prisoner
+		name = "dwseom1000D" 
+		trigger = { 
+			any_courtier = {
+				is_adult = yes
+				is_female = yes
+				is_pregnant = no
+				prisoner = yes
+				NOR = {
+					practical_age >= 45
+					trait = dragon_pregnancy
+					trait = lf_asexual
+				}
+			}
+		}
+		clr_character_flag = dragon_sexy_times
+		random_courtier = {
+			limit = { 
+				trait = dwse_dragon_adult
+				is_female = no
+				is_adult = yes
+				dynasty = ROOT
+				NOR = {
+					has_character_modifier = dragon_satisfied
+					trait = lf_asexual					
+				}
+			}
+			add_character_modifier = { name = dragon_satisfied duration = 365 }
+			save_event_target_as = dragonbreed
+		}
+		random_courtier = {
+			limit = {
+				is_adult = yes
+				is_female = yes
+				is_pregnant = no
+				prisoner = yes
+				NOR = {
+					practical_age >= 45
+					trait = dragon_pregnancy
+					trait = lf_asexual
+				}
+			}
+			save_event_target_as = dragon_mate
+			narrative_event = { id = dwseom.1002 }
+		}
+		narrative_event = { id = dwseom.1003 }
+		ai_chance = {
+			factor = 0		
+		}
+	}
+}
+
+narrative_event = {
+	id = dwseom.1001
+	desc = "dwseom1001"
+	picture = {
+		trigger = {
+			lf_has_nsfw = yes
+		}
+		picture = dragon_sex2
+	}
+	picture = {
+		trigger = {
+			lf_has_nsfw = no
+		}
+		picture = dragon_ambassador_return
+	}
+	title = dwseom_dragon_sex
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "dwseom1001A" 
+		if = { 
+			limit = {
+				lf_races_dwse_active = yes
+			}
+			random_list = {
+				25 = { 
+					custom_tooltip = {
+						text = dwse_lizard_pregnancy_self_TT
+						ROOT = {
+							impregnate = event_target:dragonbreed
+						}
+						hidden_tooltip = {
+							ROOT = {
+								add_trait = dwse_lizard_pregnancy 
+							}
+						}
+					}
+				}
+				25 = {
+					custom_tooltip = {
+						text = dwse_dragon_pregnancy_self_TT
+						ROOT = {
+							add_trait = dragon_pregnancy
+							narrative_event = { id = dwseom.501 months = 3 }
+						}
+					}
+				}
+				50 = {
+				}
+			}
+		}		
+	}
+}
+narrative_event = {
+	id = dwseom.1002
+	desc = "dwseom1002"
+	picture = {
+		trigger = {
+			lf_has_nsfw = yes
+		}
+		picture = dragon_sex2
+	}
+	picture = {
+		trigger = {
+			lf_has_nsfw = no
+		}
+		picture = dragon_ambassador_return
+	}
+	title = dwseom_dragon_sex
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "dwseom1002A" 
+		if = { 
+			limit = {
+				lf_races_dwse_active = yes
+			}
+			random_list = {
+				25 = {
+					custom_tooltip = {
+						text = dwse_lizard_pregnancy_TT
+						event_target:dragon_mate = {
+							impregnate = event_target:dragonbreed
+						}
+						hidden_tooltip = { 
+							event_target:dragon_mate = {
+								add_trait = dwse_lizard_pregnancy 
+							}
+						}
+					}
+				}
+				25= {
+					custom_tooltip = {
+						text = dwse_dragon_pregnancy_TT
+						add_trait = dragon_pregnancy
+						narrative_event = { id = dwseom.501 months = 3 }
+					}
+				}
+				50 = {
+				}
+			}
+		}
+	}
+}
+narrative_event = {
+	id = dwseom.1003
+	desc = "dwseom1003"
+	picture = {
+		trigger = {
+			lf_has_nsfw = yes
+		}
+		picture = dragon_sex2
+	}
+	picture = {
+		trigger = {
+			lf_has_nsfw = no
+		}
+		picture = dragon_ambassador_return
+	}
+	title = dwseom_dragon_sex
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "dwseom1003A" 
+	}
+}
+
+character_event = {
+	id = dwseom.1100
+	desc = dwseom1100
+	picture = gfx_evt_battle_scene
+	is_triggered_only = yes #triggered by decision
+
+	option = {
+		name = dwseom1100A
+		any_child = {
+			limit = {
+				trait = dwse_dragon_adult
+			}
+			add_character_modifier = { name = dragon_fire duration = 150 }
+			random_list = {
+				10 = {
+					add_trait = wounded
+				}
+				10 = {
+					add_trait = severely_injured 
+				}
+				10 = {
+					add_trait = infection
+				}
+				70 = {
+				}
+			}
+		}
+		any_current_enemy = {
+			limit = { 
+				at_location = ROOT
+				in_command = yes
+				prisoner = no
+			}
+			if = {
+				limit = {
+					has_character_flag = dragon_flames
+				}
+				troops = -0.1
+				morale = -0.5
+			}
+			else = { 
+				troops = -0.1
+				morale = -0.5
+			}
+
+		}
+
+		any_current_enemy = {
+			any_realm_character = {
+				limit = {
+					at_location = ROOT
+					in_command = yes
+					prisoner = no
+				}
+				if = {
+					limit = {
+						has_character_flag = dragon_flames
+					}
+					troops = -0.1
+					morale = -0.5
+				}
+				else = { 
+					troops = -0.1
+					morale = -0.5
+				}
+
+			}
+		}
+		clr_character_flag = dragon_flames
+	}
+	option = {
+		name = dwseom1100B
+		clr_character_flag = dragon_flames
+	}
+}
+narrative_event = {
+	id = dwseom.3000
+	desc = "dwseom3000"
+	picture = dragon_gift
+	title = dwseom_dragon_ambassador
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "dwseom3000A"
+		FROMFROMFROM = {
+			add_trait = dragon_ambassador
+			save_event_target_as = dragon_ambassador
+			set_character_flag = previous_dragon_ambassador
+		}
+		random_list = {
+			85 = {
+				custom_tooltip = { text = dwse_goodthings }
+				narrative_event = { id = dwseom.3001 months = 12 }
+			}
+			15 = {
+				trigger = {
+					FROMFROMFROM = {
+						NOT = { has_character_flag = special_npc }
+					}
+				}
+						
+				custom_tooltip = { text = dwse_badthings }
+				narrative_event = { id = dwseom.3003 months = 12 }
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = dwseom.3001
+	desc = "dwseom3001"
+	picture = dragon_ambassador_return
+	title = dwseom_dragon_ambassador_return
+	
+	immediate = {
+		if = {
+			limit = {
+				event_target:dragon_ambassador = {
+					trait = dwse_dragonslut
+				}
+			}
+			narrative_event = { id = dwseom.3003 }
+			break = yes
+		}
+	}
+	is_triggered_only = yes
+	
+	option = {
+		name = "dwseom3001A"
+		event_target:dragon_ambassador = {
+			remove_trait = dragon_ambassador
+			add_trait = was_dragon_ambassador
+			add_artifact = dwse_dragon_egg
+		}
+		narrative_event = { id = dwseom.3002 }
+	}
+}
+narrative_event = {
+	id = dwseom.3002
+	desc = "dwseom3002"
+	picture = dragon_ambassador_egg
+	title = dwseom_dragon_ambassador_egg
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "dwseom3002A"
+		clr_character_flag = dragon_am_send
+		event_target:dragon_ambassador = {
+			random_artifact = {	
+				limit = {
+					artifact_type = dwse_dragon_egg
+				}
+				transfer_artifact = {
+					from = event_target:dragon_ambassador 
+					to = FROM
+				}
+			}		
+		}
+	}
+}
+narrative_event = {
+	id = dwseom.3003
+	desc = "dwseom3003"
+	picture = {
+		trigger = {
+			lf_has_nsfw = yes
+		}
+		picture = dragon_ambassador_stay
+	}
+	picture = {
+		trigger = {
+			lf_has_nsfw = no
+		}
+		picture = dragon_ambassador_return
+	}
+	title = dwseom_dragon_ambassador_stay
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "dwseom3003A"
+		clr_character_flag = dragon_am_send
+		event_target:dragon_ambassador = {
+			remove_trait = dragon_ambassador
+			leave_court_for_forest_effect = yes
+		}
+	}
+}
+
+character_event = { # Adulthood for dragons
+	id = dwseom.4000
+	is_triggered_only = yes  
+	hide_window = yes 
+	immediate = {
+		if = {
+			limit = {
+				trait = dwse_dragon_child
+			}
+			remove_trait = dwse_dragon_child
+			add_trait = dwse_dragon_adult
+			add_random_dwse_dragon_portrait = yes
+		}
+	}
+}
+
+character_event = { # Birth for dragons
+	id = dwseom.4001
+	is_triggered_only = yes  
+	hide_window = yes 
+	immediate = {
+		if = {
+			limit = {
+				trait = dwse_dragon_adult
+			}
+			remove_trait = dwse_dragon_adult
+			add_trait = dwse_dragon_child
+		}
+	}
+}
+
+narrative_event = { # The dragon egg empryo dies from not being incubated
+	id = dwseom.4002
+	desc = dwseom4002
+	title = dwseom4002T
+	picture = dwse_dragon_egg_hatch
+	trigger = {
+		any_artifact = {
+			artifact_type = dwse_dragon_egg
+			artifact_age >= 1
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		any_artifact = {
+			limit = {
+				artifact_type = dwse_dragon_egg
+				artifact_age >= 1
+			}
+			destroy_artifact = yes
+		}
+	}
+	option = {
+		name = dwseom4002TT
+		add_offmap_currency = {
+			offmap = offmap_dwse
+			value = -500
+		}
+	}
+}

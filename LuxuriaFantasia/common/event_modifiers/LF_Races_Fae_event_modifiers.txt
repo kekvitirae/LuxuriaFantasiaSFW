@@ -1,0 +1,67 @@
+modifier_lf_eagles_eye = {
+	icon = 73
+	general_opinion = 5 # Elven society values marksmenship
+	martial = 3 
+	combat_rating = 10 
+	health = 0.5
+	archers_offensive = 0.2
+	archers_morale = 0.2
+	archers_defensive = 0.2
+}	
+modifier_lf_foxs_cunning = {
+	icon = 71
+	intrigue = 2
+	defensive_plot_power_modifier = 0.2
+	plot_discovery_chance = 0.2
+}
+modifier_lf_owls_wisdom = {
+	icon = 47
+	learning = 2
+	same_religion_opinion = 10
+}
+modifier_lf_war_captain = {
+	icon = 1
+	martial = 5
+	combat_rating = 15
+	heavy_infantry_offensive = 0.2
+	heavy_infantry_morale = 0.2
+	heavy_infantry_defensive = 0.2
+}
+modifier_lf_warlock = {
+	icon = 75
+	learning = 1
+	martial = 1
+	combat_rating = 5
+}
+modifier_lf_peon = {
+	icon = 29
+	combat_rating = -5
+	general_opinion = -10
+}	
+unicorn_meat = {
+	icon = 59
+	health = 3
+	lf_elf_opinion = -15
+	lf_fairy_opinion = -15
+	lf_orc_opinion = 15
+}
+
+lf_elven_infertility1 = {
+	icon = 40
+	fertility = -0.25
+}
+
+lf_elven_infertility2 = {
+	icon = 40
+	fertility = -0.75
+}
+
+lf_elven_infertility3 = {
+	icon = 40
+	fertility = -0.75
+}
+
+lf_elven_infertility4 = {
+	icon = 40
+	fertility = -10
+}

@@ -1,0 +1,26 @@
+modifier_lf_mew = {
+	icon = 46
+	sex_appeal_opinion = 20
+	fertility = 0.1
+}
+modifier_lf_owo = {
+	icon = 103
+	fertility = 0.5
+}	
+modifier_lf_hiss = {
+	icon = 46
+	martial = 2
+	combat_rating = 10
+}
+modifier_lf_neko_maid = {
+	icon = 46
+	sex_appeal_opinion = 5
+	liege_prestige = 0.1
+	liege_opinion = 5
+	female_opinion = -5
+}
+
+lf_neko_heat = {
+	icon = 46
+	fertility = 10
+}

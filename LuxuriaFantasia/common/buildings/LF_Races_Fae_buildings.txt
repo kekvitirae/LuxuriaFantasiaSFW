@@ -1,0 +1,310 @@
+nomad = {
+	lf_elven_fletcher_nomad = {
+		potential = {
+			lf_has_elves = yes
+			OR = {
+				FROM = {
+					is_elf = yes
+				}
+				FROMFROM = { has_building = lf_elven_fletcher_nomad }
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				is_elf = yes
+			}
+		}
+		desc = lf_elven_fletcher_desc
+		add_number_to_name = no # Not necessary with only one version
+		trigger = { FROM = { TECH_CASTLE_CONSTRUCTION = 0 } }
+		gold_cost = 50
+		build_time = 365
+		ai_creation_factor = 50
+		ai_feudal_modifier = 10
+		ai_republic_modifier = 10
+		extra_tech_building_start = 10 # Should prevent any from being pre-built at game start
+		convert_to_castle = lf_castle_elven_fletcher
+		convert_to_tribal = lf_elven_fletcher
+		#modifiers provided by the building:
+		archers_offensive = 0.15
+		horse_archers_offensive = 0.10
+	}
+	lf_axe_smithy_nomad = {
+		potential = {
+			lf_has_orcs = yes
+			OR = {
+				FROM = {
+					is_orc = yes
+				}
+				FROMFROM = { has_building = lf_axe_smithy_nomad }
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				is_orc = yes
+			}
+		}
+		desc = lf_axe_smithy_desc
+		add_number_to_name = no # Not necessary with only one version
+		trigger = { FROM = { TECH_CASTLE_CONSTRUCTION = 0 } }
+		gold_cost = 50
+		build_time = 365
+		ai_creation_factor = 50
+		ai_feudal_modifier = 10
+		ai_republic_modifier = 10
+		extra_tech_building_start = 10 # Should prevent any from being pre-built at game start
+		convert_to_castle = lf_castle_axe_smithy
+		convert_to_tribal = lf_axe_smithy
+		#modifiers provided by the building:
+		heavy_infantry_offensive = 0.15
+	}
+	lf_fairy_garden_nomad = {
+		potential = {
+			lf_has_fairies = yes
+			OR = {
+				FROM = {
+					is_fairy = yes
+				}
+				FROMFROM = { has_building = lf_fairy_garden_nomad }
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				is_fairy = yes
+			}
+		}
+		desc = lf_fairy_garden_desc
+		add_number_to_name = no # Not necessary with only one version
+		trigger = { FROM = { TECH_CASTLE_CONSTRUCTION = 0 } }
+		gold_cost = 50
+		build_time = 365
+		ai_creation_factor = 50
+		ai_feudal_modifier = 10
+		ai_republic_modifier = 10
+		extra_tech_building_start = 10 # Should prevent any from being pre-built at game start
+		convert_to_castle = lf_castle_fairy_garden
+		convert_to_tribal = lf_fairy_garden
+		#modifiers provided by the building:
+		economy_techpoints = 0.02
+		military_techpoints = 0.02
+		culture_techpoints = 0.02
+		tech_growth_modifier = 0.1
+	}
+}
+
+tribal = {
+	lf_elven_fletcher = {
+		potential = {
+			lf_has_elves = yes
+			OR = {
+				FROM = {
+					capital_holding = {
+						title = FROMFROM
+					}
+					is_elf = yes
+				}
+				FROMFROM = { has_building = lf_elven_fletcher }
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				capital_holding = {
+					title = FROMFROM
+				}
+				is_elf = yes
+			}
+		}
+		desc = lf_elven_fletcher_desc
+		add_number_to_name = no # Not necessary with only one version
+		trigger = { TECH_CITY_CONSTRUCTION = 0 } # No special technology needs for a basic shrine
+		gold_cost = 50
+		build_time = 365
+		ai_creation_factor = 50
+		ai_feudal_modifier = 10
+		ai_republic_modifier = 10
+		extra_tech_building_start = 10 # Should prevent any from being pre-built at game start
+		convert_to_castle = lf_castle_elven_fletcher
+		#modifiers provided by the building:
+		archers = 75
+		archers_offensive = 0.15
+	}
+	lf_axe_smithy = {
+		potential = {
+			lf_has_orcs = yes
+			OR = {
+				FROM = {
+					capital_holding = {
+						title = FROMFROM
+					}
+					is_orc = yes
+				}
+				FROMFROM = { has_building = lf_axe_smithy }
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				capital_holding = {
+					title = FROMFROM
+				}
+				is_orc = yes
+			}
+		}
+		desc = lf_axe_smithy_desc
+		add_number_to_name = no # Not necessary with only one version
+		trigger = { TECH_CITY_CONSTRUCTION = 0 } # No special technology needs for a basic shrine
+		gold_cost = 50
+		build_time = 365
+		ai_creation_factor = 50
+		ai_feudal_modifier = 10
+		ai_republic_modifier = 10
+		extra_tech_building_start = 10 # Should prevent any from being pre-built at game start
+		convert_to_castle = lf_castle_axe_smithy
+		#modifiers provided by the building:
+		heavy_infantry = 50
+		heavy_infantry_offensive = 0.15
+	}
+	lf_fairy_garden = {
+		potential = {
+			lf_has_fairies = yes
+			OR = {
+				FROM = {
+					capital_holding = {
+						title = FROMFROM
+					}
+					is_fairy = yes
+				}
+				FROMFROM = { has_building = lf_fairy_garden }
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				capital_holding = {
+					title = FROMFROM
+				}
+				is_fairy = yes
+			}
+		}
+		desc = lf_fairy_garden_desc
+		add_number_to_name = no # Not necessary with only one version
+		trigger = { TECH_CITY_CONSTRUCTION = 0 } # No special technology needs for a basic shrine
+		gold_cost = 50
+		build_time = 365
+		ai_creation_factor = 50
+		ai_feudal_modifier = 10
+		ai_republic_modifier = 10
+		extra_tech_building_start = 10 # Should prevent any from being pre-built at game start
+		convert_to_castle = lf_castle_fairy_garden
+		#modifiers provided by the building:
+		economy_techpoints = 0.02
+		military_techpoints = 0.02
+		culture_techpoints = 0.02
+		tech_growth_modifier = 0.1
+	}
+}
+
+castle = {
+	lf_castle_elven_fletcher = {
+		potential = {
+			lf_has_elves = yes
+			OR = {
+				FROM = {
+					capital_holding = {
+						title = FROMFROM
+					}
+					is_elf = yes
+				}
+				FROMFROM = { has_building = lf_castle_elven_fletcher }
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				capital_holding = {
+					title = FROMFROM
+				}
+				is_elf = yes
+			}
+		}
+		desc = lf_castle_elven_fletcher_desc
+		add_number_to_name = no # Not necessary with only one version
+		trigger = { TECH_CITY_CONSTRUCTION = 0 } # No special technology needs for a basic shrine
+		gold_cost = 150
+		build_time = 365
+		ai_creation_factor = 50
+		ai_feudal_modifier = 10
+		ai_republic_modifier = 10
+		extra_tech_building_start = 10 # Should prevent any from being pre-built at game start
+		#modifiers provided by the building:
+		archers = 75
+		archers_offensive = 0.15
+	}
+	lf_castle_axe_smithy = {
+		potential = {
+			lf_has_orcs = yes
+			OR = {
+				FROM = {
+					capital_holding = {
+						title = FROMFROM
+					}
+					is_orc = yes
+				}
+				FROMFROM = { has_building = lf_castle_axe_smithy }
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				capital_holding = {
+					title = FROMFROM
+				}
+				is_orc = yes
+			}
+		}
+		desc = lf_castle_axe_smithy_desc
+		add_number_to_name = no # Not necessary with only one version
+		trigger = { TECH_CITY_CONSTRUCTION = 0 } # No special technology needs for a basic shrine
+		gold_cost = 150
+		build_time = 365
+		ai_creation_factor = 50
+		ai_feudal_modifier = 10
+		ai_republic_modifier = 10
+		extra_tech_building_start = 10 # Should prevent any from being pre-built at game start
+		#modifiers provided by the building:
+		heavy_infantry = 50
+		heavy_infantry_offensive = 0.15
+	}
+	lf_castle_fairy_garden = {
+		potential = {
+			lf_has_fairies = yes
+			OR = {
+				FROM = {
+					capital_holding = {
+						title = FROMFROM
+					}
+					is_fairy = yes
+				}
+				FROMFROM = { has_building = lf_castle_fairy_garden }
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				capital_holding = {
+					title = FROMFROM
+				}
+				is_fairy = yes
+			}
+		}
+		desc = lf_castle_fairy_garden_desc
+		add_number_to_name = no # Not necessary with only one version
+		trigger = { TECH_CITY_CONSTRUCTION = 0 } # No special technology needs for a basic shrine
+		gold_cost = 150
+		build_time = 365
+		ai_creation_factor = 50
+		ai_feudal_modifier = 10
+		ai_republic_modifier = 10
+		extra_tech_building_start = 10 # Should prevent any from being pre-built at game start
+		#modifiers provided by the building:
+		economy_techpoints = 0.02
+		military_techpoints = 0.02
+		culture_techpoints = 0.02
+		tech_growth_modifier = 0.1
+	}
+}

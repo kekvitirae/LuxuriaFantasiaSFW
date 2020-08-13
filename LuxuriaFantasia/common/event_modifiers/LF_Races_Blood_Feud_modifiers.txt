@@ -1,0 +1,30 @@
+lf_elf_bf = {
+	icon = 42
+	lf_orc_opinion = -50
+}
+lf_orc_bf = {
+	icon = 42
+	lf_elf_opinion = -50
+}
+lf_neko_bf = {
+	icon = 42
+	lf_kitsune_opinion = -50
+}
+lf_kitsune_bf = {
+	icon = 42
+	lf_neko_opinion = -50
+}
+lf_angel_bf = {
+	icon = 42
+	lf_demon_opinion = -50
+	lf_fallen_angel_opinion = -50
+	lf_halfdemon_opinion = -25
+}
+lf_demon_bf = {
+	icon = 42
+	lf_angel_opinion = -50
+}
+lf_fallen_angel_bf = {
+	icon = 42
+	lf_angel_opinion = -50
+}

@@ -1,0 +1,515 @@
+9999991 = {
+	name = "Kon'feu"
+	culture = "dwse_dragon"
+	used_for_random=yes
+}
+9999992 = {
+	name = "Ac'syllta"
+	culture = "dwse_dragon"
+	used_for_random=yes
+}
+9999993 = {
+	name = "Rhu-marlee"
+	culture = "dwse_dragon"
+	used_for_random=yes
+}
+9999994 = {
+	name = "Ta'khoreja"
+	culture = "dwse_dragon"
+	used_for_random=yes
+}
+9999995 = {
+	name = "Acpo'ra"
+	culture = "dwse_dragon"
+	used_for_random=yes
+}
+9999996 = {
+	name = "Thidar'dia"
+	culture = "dwse_dragon"
+	used_for_random=yes
+}
+9999997 = {
+	name = "Blaiso'la"
+	culture = "dwse_dragon"
+	used_for_random=yes
+}
+9999998 = {
+	name = "Thus'styn"
+	culture = "dwse_dragon"
+	used_for_random=yes
+}
+9999999 = {
+	name = "Neni'se"
+	culture = "dwse_dragon"
+	used_for_random=yes
+}
+
+#
+# Dusk Mother tribes
+#
+
+9944500 = {
+	name = "Adarkim"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944501 = {
+	name = "Angura"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944502 = {
+	name = "Arulaq"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944503 = {
+	name = "Avagnar"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944504 = {
+	name = "Barlon"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944505 = {
+	name = "Bayaqud"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944506 = {
+	name = "Bolir"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944507 = {
+	name = "Borlaaq"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944508 = {
+	name = "Buduga"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944509 = {
+	name = "Chaghan"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944510 = {
+	name = "Dalamiq"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944511 = {
+	name = "Dataq"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944512 = {
+	name = "Dazkar"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944513 = {
+	name = "Dhoro"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944514 = {
+	name = "Dothari"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944515 = {
+	name = "Ejinn"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944516 = {
+	name = "Geneq"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944517 = {
+	name = "Gesi"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944518 = {
+	name = "Gharl"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944519 = {
+	name = "Goro"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944520 = {
+	name = "Haragin"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944521 = {
+	name = "Himaa"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944522 = {
+	name = "Horo"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944523 = {
+	name = "Hotgo"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944524 = {
+	name = "Iriq"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944525 = {
+	name = "Jhungid"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944526 = {
+	name = "Kagon"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944527 = {
+	name = "Kahkol"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944528 = {
+	name = "Kha"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944529 = {
+	name = "Kharlu"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944530 = {
+	name = "Khatayin"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944531 = {
+	name = "Malaguld"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944532 = {
+	name = "Malqir"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944533 = {
+	name = "Mankhad"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944534 = {
+	name = "Mierqid"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944535 = {
+	name = "Moks"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944536 = {
+	name = "Mol"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944537 = {
+	name = "Noykin"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944538 = {
+	name = "Olkund"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944539 = {
+	name = "Orben"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944540 = {
+	name = "Orl"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944541 = {
+	name = "Oronir"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944542 = {
+	name = "Oroq"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944543 = {
+	name = "Qalli"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944544 = {
+	name = "Qerel"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944545 = {
+	name = "Qestir"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944546 = {
+	name = "Turgud"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944547 = {
+	name = "Tumet"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944548 = {
+	name = "Ugund"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944549 = {
+	name = "Ura"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944550 = {
+	name = "Urumet"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+9944551 = {
+	name = "Uyagir"
+	culture = "dwse_dusk"
+	used_for_random=yes
+}
+
+#
+# Dawn Father dynasties
+#
+
+9944552 = {
+	name = "Akagane"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944553 = {
+	name = "Bugai"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944554 = {
+	name = "Bunja"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944555 = {
+	name = "Daisho"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944556 = {
+	name = "Dejiki"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944557 = {
+	name = "Edakumi"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944558 = {
+	name = "Furukane"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944559 = {
+	name = "Gakuto"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944560 = {
+	name = "Gunji"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944561 = {
+	name = "Hagane"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944562 = {
+	name = "Hatasashi"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944563 = {
+	name = "Iteya"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944564 = {
+	name = "Jizutsu"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944565 = {
+	name = "Kaifu"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944566 = {
+	name = "Kaneuchi"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944567 = {
+	name = "Kasanui"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944568 = {
+	name = "Kaujin"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944569 = {
+	name = "Kazarishi"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944570 = {
+	name = "Kiba"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944571 = {
+	name = "Kogane"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944572 = {
+	name = "Kusakari"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944573 = {
+	name = "Maibito"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944574 = {
+	name = "Mihata"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944575 = {
+	name = "Mizuhiki"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944576 = {
+	name = "Naeuri"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944577 = {
+	name = "Obinata"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944578 = {
+	name = "Onishi"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944579 = {
+	name = "Oshiga"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944580 = {
+	name = "Rokuyari"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944581 = {
+	name = "Sarugaku"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944582 = {
+	name = "Shibunuri"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944583 = {
+	name = "Shirogane"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944584 = {
+	name = "Tachikake"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944585 = {
+	name = "Tatewaki"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944586 = {
+	name = "Tosho"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944587 = {
+	name = "Tsuwamono"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944588 = {
+	name = "Urabito"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944589 = {
+	name = "Yatsurugi"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944590 = {
+	name = "Yumite"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}
+9944591 = {
+	name = "Kensaki"
+	culture = "dwse_dawn"
+	used_for_random=yes
+}

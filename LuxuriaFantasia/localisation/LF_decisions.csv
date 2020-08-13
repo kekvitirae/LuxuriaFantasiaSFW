@@ -1,0 +1,74 @@
+lf_mr_spouse;§YLuxuria§!: Change Marriage Type;;;;;;;;;;;;;;x
+lf_mr_spouse_desc;Vanilla CK2 has a bug that prevents women from matrilineally marrying while in a Merchant Republic. Use this decision to fix that.;;;;;;;;;;;;;;x
+lf_mr_child;§YLuxuria§!: Change Marriage Type;;;;;;;;;;;;;;x
+lf_mr_child_desc;Vanilla CK2 has a bug that prevents women from matrilineally marrying while in a Merchant Republic. Use this decision to fix that.;;;;;;;;;;;;;;x
+#
+lf_change_custom_portrait;§YLuxuria§!: Change Racial Portrait;;;;;;;;;;;;;;x
+lf_change_custom_portrait_desc;Use this decision to remove a racial portrait and add a new one, if the old one doesn't suit you.;;;;;;;;;;;;;;x
+lf_portrait_is_fine;§YLuxuria§!: Portrait Is Fine;;;;;;;;;;;;;;x
+lf_portrait_is_fine_desc;Use this decision to lock in a custom portrait and remove both this and the Change Portrait decisions from the decision list.\n§RThis decision is permanent to this character.§!\nIf you accidentally choose this decision, or are not happy with your portrait later on, open up the console (tilde key) and type:\n§Yclr_char_flag portrait_is_fine§! (self)\nor:\n§Yclr_char_flag portrait_is_fine <char id>§! (other)\nTo find out someone's char id, open up the console and type §Ycharinfo§! and hover over their portrait.;;;;;;;;;;;;;;x
+#
+lf_b_recruit_exotic;Recruit an Exotic Race;;;;;;;;;;;;;x
+lf_b_recruit_exotic_desc;Though their time has long since passed, there are a few mythical races left in the world. Send an emissary to try and recruit one to your court.;;;;;;;;;;;;;x
+#
+lf_a_hide_unimportant_shit;Hide Minor LF Decisions;;;;;;;;;;;;;x
+lf_a_hide_unimportant_shit_desc;Intrigue menu getting too cluttered? Use this to temporarily hide all minor Luxuria Fantasia decisions for this character.;;;;;;;;;;;;;x
+lf_a_show_unimportant_shit;Show Minor LF Decisions;;;;;;;;;;;;;x
+lf_a_show_unimportant_shit_desc;Show the minor Luxuria Fantasia decisions again.;;;;;;;;;;;;;x
+#
+lf_futa_concubine;§YLuxuria§!: Take Lesbian Concubine;;;;;;;;;;;;;x
+lf_futa_concubine_desc;Your cock aches for something to fill. Your demonic blood can shape this woman's mind into becoming your willing concubine, and make them a lesbian if they aren't already.;;;;;;;;;;;;;x
+lf_futa_mistress;My mistress;;;;;;;;;;;;;x
+#
+lf_immortal_grow_up;§YLuxuria§!: Grow Up;;;;;;;;;;;;;x
+lf_immortal_grow_up_desc;Being an eternal child sucks. It's time to grow up.;;;;;;;;;;;;;x
+#
+lf_b_remove_parentage;Remove Dead Children;;;;;;;;;;;;;x
+lf_b_remove_parentage_desc;Remove the parentage of your unimportant, dead children to reduce the clutter on the character screen.\nThis only removes childless children, to ensure the family tree remains unbroken.;;;;;;;;;;;;;x
+#
+lf_immortal_sterilize;§YLuxuria§!: Sterilize Yourself;;;;;;;;;;;;;x
+lf_immortal_sterilize_desc;Being an immortal has its advantages, but popping out kid after kid after kid is not one of them. I can use my immortal powers to sterilize myself.;;;;;;;;;;;;;x
+#
+lf_take_wife_as_futa;§YLuxuria§!: Take [Root.GetFirstName] As Wife;;;;;;;;;;;;;x
+lf_take_wife_as_futa_desc;You can potentially take this woman as your wife.;;;;;;;;;;;;;x
+lf_take_wife_reason_subdom;"I need a good §YMistress§!.";;;;;;;;;;;;;x
+lf_take_wife_reason_domsub;"I need a good §YPet§!.";;;;;;;;;;;;;x
+lf_take_wife_reason_samerace;"Of course. After all, we're the §Ysame race§!.";;;;;;;;;;;;;x
+lf_take_wife_reason_ruler;"Sorry, no. I have §Yduties§! to attend to.";;;;;;;;;;;;;x
+lf_take_wife_reason_bloodfeud;"I'll NEVER marry one of §Yyour kind§!!";;;;;;;;;;;;;x
+lf_take_wife_reason_dragon;"Fuck you, I'm a §Ydragon§!!";;;;;;;;;;;;;x
+lf_take_wife_reason_cruel;"Get away from me, you §Ycruel thing§!!";;;;;;;;;;;;;x
+lf_take_wife_reason_shy;"Y-y-you want m-me as your wife even though I'm deathly §Yshy§!?!";;;;;;;;;;;;;x
+lf_take_wife_reason_lowborn;"You want to take me as your wife even though I'm §Ya commoner§!? I'm... flattered!";;;;;;;;;;;;;x
+lf_take_wife_reason_homosexual;"Sorry, I'm §Ynot interested in women§!.";;;;;;;;;;;;;x
+lf_take_wife_reason_celibate;"No. I've taken §Yvows of chastity§!.";;;;;;;;;;;;;x
+lf_take_wife_reason_attractive;"Oh my, you are so §Ybeautiful§!!";;;;;;;;;;;;;x
+lf_take_wife_reason_groomed;"Oh my, I love someone who is properly §Ygroomed§!!";;;;;;;;;;;;;x
+lf_take_wife_reason_lustful;"Only if you promise we can have §Ylots of sex§!.";;;;;;;;;;;;;x
+lf_take_wife_reason_friend;"I think I'm falling for you, §Ymy friend§!.";;;;;;;;;;;;;x
+lf_take_wife_reason_lover;"Let's make it official, §Ymy love!§!";;;;;;;;;;;;;x
+
+#
+lf_b_check_stats;Check Hidden Stats;;;;;;;;;;;;;x
+lf_b_check_stats_desc;Take a peek at your character's fertility and health.;;;;;;;;;;;;;x
+LFCheckStats1;\nHealth: [Root.LF_health_check.GetValue]\nFertility: [Root.LF_fertility_check.GetValue];;;;;;;;;;;;;x
+LFCheckStats1T;Good to know.;;;;;;;;;;;;;x
+#
+lf_visit_recovery_loc;Must not have used this decision in the past 30 days. Insatiable characters bypass this requirement.;;;;;;;;;;;;;x
+#
+lf_a_multiplayer_save_dynasty;Save Player Dynasty;;;;;;;;;;;;;x
+lf_a_multiplayer_save_dynasty_desc;Someone's gotten themselves into some serious shit and is without a dynastic heir. Use this decision to grant them a baby of their dynasty so their game doesn't end.;;;;;;;;;;;;;x
+#
+lf_remove_custom_portrait;§YLuxuria§!: Remove custom portrait;;;;;;;;;;;;;x
+lf_remove_custom_portrait_desc;This targeted decision allows you to remove the custom portrait trait. This will remove the custom static image and instead revert back to the default CK2 portrait system.;;;;;;;;;;;;;x
+#
+lf_spend_time_with;§YLuxuria§!: Initiate Sex;;;;;;;;;;;;;x
+lf_spend_time_with_desc;Spend time with your lover, spouse, or concubine. Why wait for the vanilla game to decide when you'll be getting together? Seize your love life today!;;;;;;;;;;;;;x
+#
+lf_forgive_dishonorable;§YLuxuria§!: Forgive [Root.GetFirstName];;;;;;;;;;;;;x
+lf_forgive_dishonorable_desc;[Root.GetFirstName] has acted dishonorably toward you. You can them, removing the imprisonment justification.;;;;;;;;;;;;;x
+lf_forgive_dishonorable_bloodfeud;Must not be a part of a §RBlood Feud§!. §YKind§! targets ignore this restriction.;;;;;;;;;;;;;x
+#
+lf_banish_blood_feud;§YLuxuria§!: Blood Feud Banishment;;;;;;;;;;;;;x
+lf_banish_blood_feud_desc;The air of your court is stinking up with the foul Blood Feud races. Banish them from your court so that you may breathe easily once again!;;;;;;;;;;;;;x
+lf_banish_blood_feud_tt;You will banish all unimportant, unrelated courtiers from your court. This action does not incur tyranny.;;;;;;;;;;;;;x

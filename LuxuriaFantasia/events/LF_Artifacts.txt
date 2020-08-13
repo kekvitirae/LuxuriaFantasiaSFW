@@ -1,0 +1,34 @@
+namespace = LFArtifacts
+
+character_event = {
+	id = LFArtifacts.1
+	desc = LFArtifacts1
+	picture = GFX_evt_vikings_arriving_oldgods
+	border = GFX_event_normal_frame_war
+	ai = no
+	is_triggered_only = yes
+	
+	trigger = {
+		this_is_sea_raider_trigger = yes
+		FROM = {
+			location = { capital_holding = { title = FROM } } #Do not reiterate the event after taking the capital holding.
+			location = { num_of_settlements = 4 } #Only fires for medium to big cities. 
+			is_tribal = no
+			is_nomadic = no
+			location = { port = yes } 		#Coastal provinces are what the Seaking should be terrorizing.
+		}
+	}
+	
+	immediate = {
+		lf_check_artifact_booty = yes
+	}
+	
+	option = { # Keep it.
+		name = LFArtifacts1TTA
+		lf_claim_artifact_booty = yes
+	}
+	option = { # Sell it
+		name = LFArtifacts1TTB
+		wealth = 150
+	}
+}

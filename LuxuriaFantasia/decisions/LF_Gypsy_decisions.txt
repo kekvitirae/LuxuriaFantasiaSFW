@@ -1,0 +1,28 @@
+decisions = {
+	lf_core_gypsy_reading = {
+		is_high_prio = yes
+		ai = no
+		only_playable = yes
+		
+		potential = {
+			NOT = { is_incapable = yes }
+			capital_scope = {
+				has_building = lf_gypsy_wagon
+			}			
+			NOR = {
+				has_character_flag = lf_gypsy_reading_denied
+				has_character_flag = lf_gypsy_reading_read
+				has_character_flag = lf_gypsy_reading_temp
+			}
+		}
+			
+		allow = {
+			practical_age = 16
+		}
+		
+		effect = {
+			narrative_event = { id = LFCoreGypsy.1 }
+			set_character_flag = lf_gypsy_reading_temp
+		}
+	}
+}

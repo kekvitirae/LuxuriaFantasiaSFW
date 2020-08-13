@@ -1,0 +1,16 @@
+spriteTypes = {
+	spriteType = {
+		name = "lf_orc_start_female"
+		texturefile = "gfx/event_pictures/lf_orc_start_female.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lf_orc_start_male"
+		texturefile = "gfx/event_pictures/lf_orc_start_male.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+}

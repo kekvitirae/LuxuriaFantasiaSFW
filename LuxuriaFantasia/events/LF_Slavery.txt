@@ -1,0 +1,58 @@
+namespace = LF_Slavery
+
+character_event = {
+	id = LF_Slavery.1
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		lf_slave_value = yes
+		FROMFROM = {
+			set_variable = {
+				which = lf_slave_sell_price
+				which = ROOT
+			}
+			long_character_event = { id = LF_Slavery.2 }
+		}
+	}
+}
+
+long_character_event = {
+	id = LF_Slavery.2
+	is_triggered_only = yes
+	desc = {
+		trigger = {
+			has_character_flag = foreign_buyer
+		}
+		text = LF_Slavery2foreign
+	}
+	desc = {
+		trigger = {
+			NOT = { has_character_flag = foreign_buyer }
+		}
+		text = LF_Slavery2local
+	}
+	picture = slavery_female_sale1
+	immediate = {
+		random_list = {
+			25 = { # Foreign buyer
+				set_character_flag = foreign_buyer
+				multiply_variable = { which = lf_slave_sell_price value = 1.5 }
+			}
+			75 = { # Sell locally
+			}
+		}
+	}
+	option = {
+		name = LF_Slavery2TTA
+		wealth = lf_slave_sell_price
+		hidden_tooltip = {
+			set_variable = { which = lf_slave_sell_price value = 0 }
+			event_target:lf_slave_being_sold = {
+				set_character_flag = lf_never_turn_spoopy
+				death = { death_reason = death_enslaved }
+			}
+			clr_character_flag = foreign_buyer
+		}
+	}
+}
+	

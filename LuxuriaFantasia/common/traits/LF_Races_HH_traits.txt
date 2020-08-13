@@ -1,0 +1,85 @@
+lf_asexual = {
+	customizer = no
+	random = no
+	opposites = {
+		lustful
+		hedonist
+		lf_insatiable
+		lf_breeder
+	}
+	health = 1
+	learning = 1
+	diplomacy = 1
+	intrigue = -2
+	cannot_marry = yes
+	prevent_decadence = yes
+	fertility = -100
+}
+
+lf_angel = {
+	customizer = no
+	random = no
+	opposites =  {
+		lf_demon
+		lf_halfdemon
+		lf_fallen_angel
+	}
+	inherit_chance = 50
+	both_parent_has_trait_inherit_chance = 100
+	diplomacy = 1
+	learning = 1
+	health = 0.10
+	combat_rating = 10
+}
+
+lf_demon = { 
+	random = no
+	customizer = no
+	opposites =  {
+		lf_angel
+		lf_halfdemon
+		lf_fallen_angel
+	}
+	opinion_of_lf_demon = 15 # Sexy siblings
+	opinion_of_lf_halfdemon = 5 # Sexy children
+	intrigue = 1
+	sex_appeal_opinion = 10
+}
+
+lf_halfdemon = {
+	random = no
+	customizer = no
+	opposites =  {
+		lf_angel
+		lf_demon
+		lf_fallen_angel
+	}
+	is_visible = {
+		OR = {
+			character = FROM
+			society_member_of = lf_society_seduction
+			trait = lf_angel # Angels can sniff them out
+			trait = lf_demon
+			trait = lf_halfdemon
+			trait = lf_fallen_angel
+			trait = hedonist # Those with similar lifestyles can see through the disguise
+		}
+	}
+	sex_appeal_opinion = 5
+}
+
+lf_fallen_angel = {
+	customizer = no
+	random = no
+	opposites =  {
+		lf_demon
+		lf_halfdemon
+		lf_angel
+	}
+	opinion_of_lf_demon = 15 # Sexy siblings
+	opinion_of_lf_halfdemon = 5 # Sexy children
+	martial = 1
+	intrigue = 1
+	health = 0.10
+	combat_rating = 10
+}

@@ -1,0 +1,3 @@
+lf_lovers_embrace_cooldown = {
+	icon = 40
+}

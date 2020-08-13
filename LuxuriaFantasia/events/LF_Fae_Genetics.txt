@@ -1,0 +1,292 @@
+namespace = LF_Fae_Genetics
+
+character_event = {
+	id = LF_Fae_Genetics.1
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = { # Both parents are elves
+			limit = {
+				lf_has_elves = yes
+				mother = {
+					is_elf = yes
+				}
+				true_father_even_if_dead = {
+					is_elf = yes
+				}
+			}
+			lf_add_elf = yes
+			character_event = { id = LF_Core_Genetics.2 }
+		}
+		else_if = { # Both parents are half elves
+			limit = {
+				mother = {
+					trait = houseirae_halfelf
+				}
+				true_father_even_if_dead = {
+					trait = houseirae_halfelf
+				}
+			}
+			add_trait = houseirae_halfelf
+			character_event = { id = LF_Core_Genetics.2 }
+		}
+		else_if = { # Both parents are dark elves
+			limit = {
+				mother = {
+					trait = houseirae_drow
+				}
+				true_father_even_if_dead = {
+					trait = houseirae_drow
+				}
+			}
+			add_trait = houseirae_drow
+			character_event = { id = LF_Core_Genetics.2 }
+		}
+		else_if = { # One parent is drow, one is elf
+			limit = {
+				OR = {
+					AND = { 
+						mother = {
+							trait = houseirae_drow
+						}
+						true_father_even_if_dead = {
+							is_elf = yes
+						}
+					}
+					AND = {
+						mother = {
+							is_elf = yes
+						}
+						true_father_even_if_dead = {
+							trait = houseirae_drow
+						}
+					}
+				}
+			}
+			random_list = { # 50/25/25 chance of a half-elf/drow/elf child
+				50 = {
+					add_trait = houseirae_halfelf
+					character_event = { id = LF_Core_Genetics.2 }
+				}
+				25 = {
+					add_trait = houseirae_drow
+					character_event = { id = LF_Core_Genetics.2 }
+				}
+				25 = {
+					trigger = {
+						lf_has_elves = yes
+					}
+					lf_add_elf = yes
+					character_event = { id = LF_Core_Genetics.2 }
+				}
+				
+			}
+		}
+		else_if = { # One parent is halfelf, one is elf
+			limit = {
+				OR = {
+					AND = { 
+						mother = {
+							trait = houseirae_halfelf
+						}
+						true_father_even_if_dead = {
+							is_elf = yes
+						}
+					}
+					AND = {
+						mother = {
+							is_elf = yes
+						}
+						true_father_even_if_dead = {
+							trait = houseirae_halfelf
+						}
+					}
+				}
+			}
+			random_list = { # 50/50 chance of a half-elf/elf child
+				50 = {
+					add_trait = houseirae_halfelf
+					character_event = { id = LF_Core_Genetics.2 }
+				}
+				50 = {
+					trigger = {
+						lf_has_elves = yes
+					}
+					lf_add_elf = yes
+					character_event = { id = LF_Core_Genetics.2 }
+				}
+			}
+		}		
+		else_if = { # One parent is drow, one is half elf
+			limit = {
+				OR = {
+					AND = { 
+						mother = {
+							trait = houseirae_drow
+						}
+						true_father_even_if_dead = {
+							trait = houseirae_halfelf
+						}
+					}
+					AND = {
+						mother = {
+							trait = houseirae_halfelf
+						}
+						true_father_even_if_dead = {
+							trait = houseirae_drow
+						}
+					}
+				}
+			}
+			random_list = { # 50/50 chance of a half-elf or drow child
+				50 = {
+					add_trait = houseirae_halfelf
+					character_event = { id = LF_Core_Genetics.2 }
+				}
+				50 = {
+					add_trait = houseirae_drow
+					character_event = { id = LF_Core_Genetics.2 }
+				}
+			}
+		}
+		else_if = { # One parent is drow
+			limit = {
+				OR = {
+					AND = {
+						mother = {
+							trait = houseirae_drow
+						}
+						true_father_even_if_dead = {
+							NOR = {
+								trait = houseirae_drow
+								trait = houseirae_halfelf
+							}
+							is_not_elf = yes
+						}
+					}
+					AND = {
+						mother = {
+							NOR = {
+								trait = houseirae_drow
+								trait = houseirae_halfelf
+							}
+							is_not_elf = yes
+						}
+						true_father_even_if_dead = {
+							trait = houseirae_drow
+						}
+					}
+				}
+			}
+			random_list = { 
+				50 = { # 50% chance of a half-elf child
+					add_trait = houseirae_halfelf
+					character_event = { id = LF_Core_Genetics.2 }
+				}
+				25 = { # 25% chance of a drow child
+					add_trait = houseirae_drow
+					character_event = { id = LF_Core_Genetics.2 }
+				}
+				25 = { # 25% normal inheritance
+					character_event = { id = LF_Core_Genetics.2 }
+				}
+			}
+		}
+		else_if = { # One parent is half elf
+			limit = {
+				OR = {
+					AND = {
+						mother = {
+							trait = houseirae_halfelf
+						}
+						true_father_even_if_dead = {
+							NOR = {
+								trait = houseirae_drow
+								trait = houseirae_halfelf
+							}
+							is_not_elf = yes
+						}
+					}
+					AND = {
+						mother = {
+							NOR = {
+								trait = houseirae_drow
+								trait = houseirae_halfelf
+							}
+							is_not_elf = yes
+						}
+						true_father_even_if_dead = {
+							trait = houseirae_halfelf
+						}
+					}
+				}
+			}
+			random_list = { 
+				50 = { # 50% chance of a half-elf child
+					add_trait = houseirae_halfelf
+					character_event = { id = LF_Core_Genetics.2 }
+				}
+				50 = { # 50% chance of normal inheritance
+					character_event = { id = LF_Core_Genetics.2 }
+				}
+			}
+		}
+		else_if = { # One parent is an elf
+			limit = {
+				OR = {
+					AND = {
+						mother = {
+							is_elf = yes
+						}
+						true_father_even_if_dead = {
+							NOR = {
+								trait = houseirae_drow
+								trait = houseirae_halfelf
+							}
+							is_not_elf = yes
+						}
+					}
+					AND = {
+						mother = {
+							NOR = {
+								trait = houseirae_drow
+								trait = houseirae_halfelf
+							}
+							is_not_elf = yes
+						}
+						true_father_even_if_dead = {
+							is_elf = yes
+						}
+					}
+				}
+			}
+			random_list = { 
+				25 = { # 25% chance of a half-elf child
+					add_trait = houseirae_halfelf
+					character_event = { id = LF_Core_Genetics.2 }
+				}
+				25 = { # 25% chance of an elven child
+					trigger = {
+						lf_has_elves = yes
+					}
+					add_trait = lf_elf
+					character_event = { id = LF_Core_Genetics.2 }
+				}
+				50 = { # 50% normal inheritance
+					character_event = { id = LF_Core_Genetics.2 }
+				}
+			}
+		}
+		else = {
+			character_event = { id = LF_Core_Genetics.2 }
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				has_game_rule = { name = lf_blood_feud value = lf_bf_on }
+			}
+			lf_add_blood_feud = yes
+		}
+	}
+}

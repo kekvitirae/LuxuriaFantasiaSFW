@@ -1,0 +1,434 @@
+#
+#
+# These events overwrite the vanilla CK2 events.
+# If you are using an overhaul mod that also overwrites these events, feel free to delete this file.
+#
+#
+
+
+
+# On-action event: Pregnancy starts showing
+character_event = {
+	id = 400
+	desc = { 
+		text = EVTDESC400 
+		trigger = { #The father is alive and a spouse
+			is_married = yes			
+			father_of_unborn = {
+				is_alive = yes
+				any_spouse = { character = ROOT }
+			}
+		}
+	}
+	desc = { 
+		text = EVTDESC400_widow
+		trigger = { #The father is dead and a spouse
+			is_married = no
+			father_of_unborn = {
+				is_alive = no
+				ROOT = {
+					any_spouse_even_if_dead = {
+						character = PREVPREV
+					}
+				}
+			}
+		}
+	}
+	desc = { 
+		text = EVTDESC400_CONSORT
+		trigger = { #Not married, but is consort
+			is_married = no
+			NOT = { num_of_consorts = 2 }
+			is_senior_consort_party = yes
+			NOT = {
+				father_of_unborn = {
+					is_alive = no
+					ROOT = {
+						any_spouse_even_if_dead = {
+							character = PREVPREV
+						}
+					}
+				}
+			}
+		}
+	}
+	desc = { 
+		text = EVTDESC400_CONSORTS
+		trigger = { #Not married, and multiple consorts
+			is_married = no
+			is_senior_consort_party = yes
+			num_of_consorts = 2
+			NOT = {
+				father_of_unborn = {
+					is_alive = no
+					ROOT = {
+						any_spouse_even_if_dead = {
+							character = PREVPREV
+						}
+					}
+				}
+			}
+		}
+	}
+			
+	picture = GFX_evt_pregnancy
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { trait = pregnant }
+		is_consort = no
+		father_of_unborn = {
+			OR = {
+				AND = { #The father is alive and a spouse
+					is_alive = yes
+					any_spouse = { character = ROOT }
+				}
+				AND = { #The father is dead and a spouse
+					is_alive = no
+					ROOT = {
+						any_spouse_even_if_dead = {
+							character = PREVPREV
+						}
+					}
+				}
+				any_consort = {
+					character = ROOT
+					is_senior_consort_party = yes
+				}
+				is_consort = ROOT
+			}
+		}
+	}
+	
+	immediate = {
+		add_trait = pregnant
+	}
+	
+	option = {
+		name = OK
+		tooltip = { add_trait = pregnant }
+		prestige = 10
+		hidden_tooltip = { 
+			if = { 
+				limit = {
+					ai = no
+					NOT = { 
+						any_courtier = { has_minor_title = title_appointed_regent } 
+						has_dynasty_flag = pregnancy_regent_warning 
+					} 
+				}
+				character_event = { id = HFP.20400 } 
+			}
+		}
+		hidden_tooltip = { 
+			random_list = { 
+				80 = { 
+					modifier = { 
+						factor = 0.8
+						trait = shy 
+					}
+					modifier = { 
+						factor = 0.8
+						is_ill = yes
+					}
+					modifier = { 
+						factor = 0.9
+						trait = possessed 
+					}
+					modifier = { 
+						factor = 0.9
+						trait = paranoid 
+					}
+					modifier = { 
+						factor = 0.9
+						trait = lunatic 
+					}
+					modifier = { 
+						factor = 0.8
+						trait = weak 
+					}
+					modifier = { 
+						factor = 0.9
+						age = 37 
+					}
+					modifier = { 
+						factor = 0.9
+						NOT = { age = 20 } 
+					}
+					modifier = { 
+						factor = 0.8
+						num_of_children = 4 
+					}
+					modifier = { 
+						factor = 0.8
+						num_of_children = 5 
+					}
+					modifier = { 
+						factor = 0.8
+						num_of_children = 6 
+					}
+					modifier = { 
+						factor = 0.8
+						num_of_children = 7 
+					}
+					modifier = { 
+						factor = 0.8
+						num_of_children = 8 
+					}
+					modifier = { 
+						factor = 0.8
+						has_character_flag = special_marshal
+					}
+					modifier = { 
+						factor = 1.5
+						is_tribal = yes
+					}
+					modifier = { 
+						factor = 1.5
+						is_nomadic = yes
+					}
+					modifier = { 
+						factor = 0.6
+						trait = feeble
+					}
+					modifier = { 
+						factor = 0.5
+						trait = is_malnourished
+					}
+					modifier = { 
+						factor = 1.75
+						trait = robust
+					}
+					modifier = { 
+						factor = 1.5
+						trait = strong
+					}
+					modifier = { 
+						factor = 1.5
+						trait = sturdy
+					}
+				} 
+				20 = { 
+					modifier = { 
+						factor = 0.5
+						is_ill = no
+					}
+					modifier = { 
+						factor = 0.25
+						age = 18
+						NOT = { age = 40 }
+					}
+					modifier = { 
+						factor = 2
+						trait = drunkard
+					}
+					modifier = { 
+						factor = 2
+						has_character_modifier = hashish_addict
+					}
+					modifier = { 
+						factor = 3
+						has_character_modifier = withdrawal_symptoms
+					}
+					character_event = { id = HFP.20404	days = 10 random = 5 } #Hard pregnancy
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				father_of_unborn = {
+					is_alive = yes
+					is_consort = no #No authority to be paranoid. Indeed, he has no way of knowing the child is his.
+				}
+			}
+			
+			hidden_tooltip = {
+				if = {
+					limit = {
+						father_of_unborn = {
+							trait = paranoid
+						}
+					}
+					random = {
+						chance = 50
+						father_of_unborn = { character_event = { id = 404 } }
+						break = yes
+					}
+				}
+				if = {
+					limit = {
+						father_of_unborn = {
+							NOT = { trait = paranoid }
+							NOT = { trait = trusting }
+						}
+					}
+					random = {
+						chance = 1
+						father_of_unborn = { character_event = { id = 404 } }
+						break = yes
+					}
+				}
+			}
+			
+			father_of_unborn = {
+				show_scope_change = no
+				character_event = { id = 403 tooltip = EVTTOOLTIP403 }
+			}
+		}
+	}
+}
+
+# On-action event: Pregnancy out of wedlock!
+character_event = {
+	id = 401
+	desc = EVTDESC401
+	picture = GFX_evt_pregnancy
+	border = GFX_event_normal_frame_intrigue
+	
+	is_married = no
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { trait = pregnant }
+		NOT = { is_senior_consort_party = yes }
+		is_consort = no
+		father_of_unborn = {
+			NOR = {
+				any_spouse = {
+					character = ROOT
+				}	
+				any_consort = {
+					character = ROOT
+					is_senior_consort_party = yes
+				}				
+			}
+		}
+	}
+	
+	immediate = {
+		add_trait = pregnant
+	}
+	
+	option = {
+		name = OK
+		tooltip = { add_trait = pregnant }
+		piety = -50
+		prestige = -50
+		hidden_tooltip = { 
+			if = { 
+				limit = {
+					ai = no
+					NOT = { any_courtier = { has_minor_title = title_appointed_regent } 
+					has_global_flag = pregnancy_regent_warning } 
+					}
+				character_event = { id = HFP.20400 } 
+			}
+		}
+		hidden_tooltip = { 
+			random_list = { 
+				50 = { 
+					modifier = { 
+						factor = 0.8
+						trait = shy 
+					}
+					modifier = { 
+						factor = 0.8
+						is_ill = yes
+					}
+					modifier = { 
+						factor = 0.8
+						trait = possessed 
+					}
+					modifier = { 
+						factor = 0.8
+						trait = paranoid 
+					}
+					modifier = { 
+						factor = 0.8
+						trait = lunatic 
+					}
+					modifier = { 
+						factor = 0.8
+						trait = weak 
+					}
+					modifier = { 
+						factor = 0.8
+						age = 37 
+					}
+					modifier = { 
+						factor = 0.8
+						NOT = { age = 20 } 
+					}
+					modifier = { 
+						factor = 0.8
+						num_of_children = 3 
+					}
+					modifier = { 
+						factor = 0.8
+						num_of_children = 4 
+					}
+					modifier = { 
+						factor = 0.8
+						num_of_children = 5 
+					}
+					modifier = { 
+						factor = 0.8
+						num_of_children = 6 
+					}
+					modifier = { 
+						factor = 0.8
+						num_of_children = 7 
+					}
+					modifier = { 
+						factor = 0.8
+						has_character_flag = special_marshal
+					}
+					modifier = { 
+						factor = 0.8
+						trait = shieldmaiden
+					}
+					modifier = { 
+						factor = 0.6
+						trait = feeble
+					}
+					modifier = { 
+						factor = 1.75
+						trait = robust
+					}
+					modifier = { 
+						factor = 1.5
+						trait = strong
+					}
+				} 
+				50 = { 
+					modifier = { 
+						factor = 0.5
+						is_ill = no
+					}
+					modifier = { 
+						factor = 0.25
+						age = 18
+						NOT = { age = 40 }
+					}
+					modifier = { 
+						factor = 2
+						trait = drunkard
+					}
+					modifier = { 
+						factor = 2
+						has_character_modifier = hashish_addict
+					}
+					modifier = { 
+						factor = 3
+						has_character_modifier = withdrawal_symptoms
+					}
+					character_event = { id = HFP.20404	days = 10 random = 5 } #Hard pregnancy
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,111 @@
+namespace = LFTaurtaur
+
+narrative_event = {
+	id = LFTaurtaur.1
+	picture = lf_taurtaur
+	is_triggered_only = yes # Triggered by Decision
+	title = LFTaurtaur1T	
+	desc = LFTaurtaur1
+	option = {
+		name = LFTaurtaur1TTA
+		hidden_tooltip = {
+			culture = horse
+			set_graphical_culture = horse
+		}
+	}
+	option = {
+		name = LFTaurtaur1TTB
+		hidden_tooltip = {
+			culture = horse
+			set_graphical_culture = horse
+		}
+		
+		custom_tooltip = {
+			text = LFAllRealmCharacters
+			hidden_tooltip = {
+				any_realm_character = {
+					limit = {
+						any_liege = { character = ROOT }
+					}
+					culture = horse
+					set_graphical_culture = horse
+				}
+			}
+		}
+	}	
+	option = {
+		name = LFTaurtaur1TTC
+		hidden_tooltip = {
+			culture = horse
+			set_graphical_culture = horse
+		}
+		custom_tooltip = {
+			text = LFTaurtaurCulture
+			hidden_tooltip = {
+				capital_scope = {
+					ROOT = {
+						any_realm_province = {
+							limit = {
+								culture = PREVPREV
+							}
+							culture = horse
+						}
+					}
+				}
+			}
+		}
+		
+		custom_tooltip = {
+			text = LFAllRealmCharacters
+			hidden_tooltip = {
+				any_realm_character = {
+					limit = {
+						any_liege = { character = ROOT }
+					}
+					culture = horse
+					set_graphical_culture = horse
+				}
+			}
+		}
+	}	
+	option = {
+		name = LFTaurtaur1TTD
+		custom_tooltip = {
+			text = LFTaurtaurFakeTooltip
+		}
+		custom_tooltip = {
+			text = LFAllRealmCharacters
+		}
+	}	
+	after = {
+		set_global_flag = taurtaur_chosen
+		if = {
+			limit = {
+				any_demesne_province = {
+					port = yes
+				}
+			}
+			narrative_event = { id = LFTaurtaur.2 }
+		}
+	}
+}
+
+narrative_event = {
+	id = LFTaurtaur.2
+	picture = lf_taurtaur_aquatic
+	is_triggered_only = yes # Triggered by Decision
+	title = LFTaurtaur2T	
+	desc = LFTaurtaur2
+	option = {
+		name = LFTaurtaur2TTA
+	}	
+	option = {
+		name = LFTaurtaur2TTB
+		custom_tooltip = {
+			text = LFTaurtaurFakeTooltip2
+		}
+		custom_tooltip = {
+			text = LFAllRealmCharacters
+		}
+	}	
+}	

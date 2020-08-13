@@ -1,0 +1,96 @@
+namespace = LFDebug
+
+#
+# Portrait Removal
+#
+
+character_event = {
+	id = LFDebug.1
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		lf_remove_all_portraits = yes
+	}
+}
+
+#
+# Race Removal + Portrait Removal
+#
+
+character_event = {
+	id = LFDebug.2
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		lf_remove_race = yes
+		lf_remove_all_portraits = yes
+	}
+}
+
+#
+# Race Removal
+#
+
+character_event = {
+	id = LFDebug.3
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		lf_remove_race = yes
+	}
+}
+
+#
+# Blood Feud Modifier Removal
+#
+
+character_event = {
+	id = LFDebug.4
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		lf_remove_blood_feud = yes
+	}
+}
+
+#
+# Remove ALL Dead Children
+#
+
+character_event = {
+	id = LFDebug.5
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		hidden_effect = {
+			any_child_even_if_dead = {
+				limit = {
+					is_alive = no
+				}
+				set_mother = 0
+				set_father = 0
+				dynasty = none
+			}
+		}
+	}
+}
+
+#
+# Fix Holy Site Generation Weirdness
+# For Overhaul Mods Only (e.g. AtE)
+#
+
+character_event = {
+	id = LFDebug.6
+	hide_window = yes
+	ai = no
+	is_triggered_only = yes
+	immediate = {
+		lf_remove_custom_holy_sites = yes
+		lf_customize_religion_holy_site_full_random = yes
+		lf_customize_religion_holy_site_full_random = yes
+		lf_customize_religion_holy_site_full_random = yes
+		lf_customize_religion_holy_site_full_random = yes
+		lf_customize_religion_holy_site_full_random = yes
+	}
+}

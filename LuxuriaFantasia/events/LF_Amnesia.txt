@@ -1,0 +1,330 @@
+namespace = LFAmnesia
+
+character_event = {
+	id = LFAmnesia.1
+	picture = GFX_evt_bad_news
+	desc = {
+		trigger = {
+			OR = {
+				has_character_flag = amnesia_breeder
+				has_character_flag = amnesia_insatiable
+				has_character_flag = amnesia_masculine
+				has_character_flag = amnesia_feminine
+				has_character_flag = amnesia_lustful
+				has_character_flag = amnesia_hedonist
+				has_character_flag = amnesia_chaste
+				has_character_flag = amnesia_possessed
+				has_character_flag = amnesia_stressed
+				has_character_flag = amnesia_lunatic
+				has_character_flag = amnesia_drunkard
+				has_character_flag = amnesia_depressed
+			}
+		}
+		text = LFAmnesia1
+	}
+	desc = {
+		trigger = {
+			has_character_flag = amnesia_lunatic
+			NOT = { lf_is_silly = yes }
+		}
+		text = LFAmnesia1
+	}
+	desc = {
+		trigger = {
+			has_character_flag = amnesia_lunatic
+			lf_is_silly = yes
+		}
+		text = LFAmnesia1Lunatic
+	}
+	desc = {
+		trigger = {
+			has_character_flag = amnesia_failed
+		}
+		text = LFAmnesia1Failed
+	}
+	is_triggered_only = yes # From the Alchemist Shop
+	
+	immediate = {
+		random_list = {
+			5 = { # Removes lf_breeder
+				trigger = {
+					trait = lf_breeder 
+				}
+				set_character_flag = amnesia_breeder
+			}
+			5 = { # Removes lf_insatiable
+				trigger = {
+					trait = lf_insatiable 
+				}
+				set_character_flag = amnesia_insatiable
+			}
+			5 = { # Removes masculine
+				trigger = {
+					trait = masculine 
+				}
+				set_character_flag = amnesia_masculine
+			}
+			5 = { # Removes feminine
+				trigger = {
+					trait = feminine 
+				}
+				set_character_flag = amnesia_feminine
+			}
+			5 = { # Removes lustful
+				trigger = {
+					trait = lustful 
+				}
+				set_character_flag = amnesia_lustful
+			}
+			5 = { # Removes hedonist
+				trigger = {
+					trait = hedonist 
+				}
+				set_character_flag = amnesia_hedonist
+			}
+			5 = { # Removes chaste
+				trigger = {
+					trait = chaste 
+				}
+				set_character_flag = amnesia_chaste
+			}
+			5 = { # Removes lunatic
+				trigger = {
+					trait = lunatic 
+				}
+				set_character_flag = amnesia_lunatic
+			}
+			5 = { # Removes possessed
+				trigger = {
+					trait = possessed 
+				}
+				set_character_flag = amnesia_possessed
+			}
+			5 = { # Removes stressed
+				trigger = {
+					trait = stressed 
+				}
+				set_character_flag = amnesia_stressed
+			}
+			5 = { # Removes drunkard
+				trigger = {
+					trait = drunkard 
+				}
+				set_character_flag = amnesia_drunkard
+			}
+			5 = { # Removes depressed
+				trigger = {
+					trait = depressed 
+				}
+				set_character_flag = amnesia_depressed
+			}
+			fallback = {
+				set_character_flag = amnesia_failed
+			}
+		}
+	}
+	
+	option = {
+		name = LFAmnesia1TT
+		if = {
+			limit = {
+				has_character_flag = amnesia_breeder
+			}
+			remove_trait = lf_breeder
+			hidden_tooltip = {
+				set_variable = { which = lf_breeder_count value = 0 }
+			}
+		}
+		else_if = {
+			limit = {
+				has_character_flag = amnesia_insatiable
+			}
+			remove_trait = lf_insatiable
+			set_variable = { which = lf_insatiable_counter value = 0 }
+		}
+		else_if = {
+			limit = {
+				has_character_flag = amnesia_masculine
+			}
+			remove_trait = masculine
+			hidden_tooltip = {
+				trigger_switch = {
+					on_trigger = trait
+					lf_elf = {
+						set_character_flag = lf_elf_genderbend
+					}
+					elf = {
+						set_character_flag = lf_elf_genderbend
+					}
+					lf_fairy = {
+						set_character_flag = lf_fairy_genderbend
+					}
+					fae_kin = {
+						set_character_flag = lf_fairy_genderbend
+					}
+					lf_orc = {
+						set_character_flag = lf_orc_genderbend
+					}
+					orc = {
+						set_character_flag = lf_orc_genderbend
+					}
+					lf_kitsune = {
+						set_character_flag = lf_kitsune_genderbend
+					}
+					fox_kin = {
+						set_character_flag = lf_kitsune_genderbend
+					}
+					lf_neko = {
+						set_character_flag = lf_neko_genderbend
+					}
+					cat_kin = {
+						set_character_flag = lf_aura_genderbend
+					}
+					dwse_lizard = {
+						set_character_flag = lf_aura_genderbend
+					}
+					lf_demon = {
+						set_character_flag = lf_demon_genderbend
+					}
+					demon_kin = {
+						set_character_flag = lf_demon_genderbend
+					}
+					lf_angel = {
+						set_character_flag = lf_divine_genderbend
+					}
+					angel_kin = {
+						set_character_flag = lf_divine_genderbend
+					}
+					lf_fallen_angel = {
+						set_character_flag = lf_demon_genderbend
+					}
+				}
+				lf_masculine_feminine_portrait_change = yes
+			}
+		}
+		else_if = {
+			limit = {
+				has_character_flag = amnesia_feminine
+			}
+			remove_trait = feminine
+			hidden_tooltip = {
+				trigger_switch = {
+					on_trigger = trait
+					lf_elf = {
+						set_character_flag = lf_elf_genderbend
+					}
+					elf = {
+						set_character_flag = lf_elf_genderbend
+					}
+					lf_fairy = {
+						set_character_flag = lf_fairy_genderbend
+					}
+					fae_kin = {
+						set_character_flag = lf_fairy_genderbend
+					}
+					lf_orc = {
+						set_character_flag = lf_orc_genderbend
+					}
+					orc = {
+						set_character_flag = lf_orc_genderbend
+					}
+					lf_kitsune = {
+						set_character_flag = lf_kitsune_genderbend
+					}
+					fox_kin = {
+						set_character_flag = lf_kitsune_genderbend
+					}
+					lf_neko = {
+						set_character_flag = lf_neko_genderbend
+					}
+					cat_kin = {
+						set_character_flag = lf_aura_genderbend
+					}
+					dwse_lizard = {
+						set_character_flag = lf_aura_genderbend
+					}
+					lf_demon = {
+						set_character_flag = lf_demon_genderbend
+					}
+					demon_kin = {
+						set_character_flag = lf_demon_genderbend
+					}
+					lf_angel = {
+						set_character_flag = lf_divine_genderbend
+					}
+					angel_kin = {
+						set_character_flag = lf_divine_genderbend
+					}
+					lf_fallen_angel = {
+						set_character_flag = lf_demon_genderbend
+					}
+				}
+				lf_masculine_feminine_portrait_change = yes
+			}
+		}
+		else_if = {
+			limit = {
+				has_character_flag = amnesia_lustful
+			}
+			remove_trait = lustful
+		}
+		else_if = {
+			limit = {
+				has_character_flag = amnesia_hedonist
+			}
+			remove_trait = hedonist
+		}
+		else_if = {
+			limit = {
+				has_character_flag = amnesia_chaste
+			}
+			remove_trait = chaste
+		}
+		else_if = {
+			limit = {
+				has_character_flag = amnesia_lunatic
+			}
+			remove_trait = lunatic
+		}
+		else_if = {
+			limit = {
+				has_character_flag = amnesia_possessed
+			}
+			remove_trait = possessed
+		}
+		else_if = {
+			limit = {
+				has_character_flag = amnesia_stressed
+			}
+			remove_trait = stressed
+		}
+		else_if = {
+			limit = {
+				has_character_flag = amnesia_drunkard
+			}
+			remove_trait = drunkard
+		}
+		else_if = {
+			limit = {
+				has_character_flag = amnesia_depressed
+			}
+			remove_trait = depressed
+		}
+	}
+	
+	after = {
+		clr_character_flag = amnesia_breeder
+		clr_character_flag = amnesia_insatiable
+		clr_character_flag = amnesia_masculine
+		clr_character_flag = amnesia_feminine
+		clr_character_flag = amnesia_lustful
+		clr_character_flag = amnesia_hedonist
+		clr_character_flag = amnesia_chaste
+		clr_character_flag = amnesia_celibate
+		clr_character_flag = amnesia_lunatic
+		clr_character_flag = amnesia_stressed
+		clr_character_flag = amnesia_possessed
+		clr_character_flag = amnesia_failed
+		clr_character_flag = amnesia_drunkard
+	}
+}		

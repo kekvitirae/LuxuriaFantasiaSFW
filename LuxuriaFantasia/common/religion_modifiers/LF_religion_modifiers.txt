@@ -1,0 +1,4 @@
+lf_religion_founder = {
+	authority = 25
+	years = 25
+}

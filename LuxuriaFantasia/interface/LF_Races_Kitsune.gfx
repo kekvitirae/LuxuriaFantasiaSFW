@@ -1,0 +1,58 @@
+spriteTypes = {
+	spriteType = {
+		name = "lf_kitsune_start_female"
+		texturefile = "gfx/event_pictures/lf_kitsune_start_female.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lf_kitsune_start_male"
+		texturefile = "gfx/event_pictures/lf_kitsune_start_male.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "kitsune_female_seduce"
+		texturefile = "gfx/event_pictures/kitsune_female_seduce.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "kitsune_male_seduce"
+		texturefile = "gfx/event_pictures/kitsune_male_seduce.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "kitsune_fluff_tail"
+		texturefile = "gfx/event_pictures/kitsune_fluff_tail.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "GFX_trait_lf_kitsune"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "GFX_trait_lf_kitsune_bf"
+		texturefile = "gfx/traits/lf_kitsune.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "GFX_lf_kitsune_decision"
+		texturefile = "gfx/interface/lf_kitsune_decision.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+}

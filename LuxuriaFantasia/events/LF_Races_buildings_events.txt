@@ -1,0 +1,306 @@
+namespace = LF_Races_Buildings
+
+character_event = {
+	id = LF_Races_Buildings.1
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		ai = no
+		OR = {
+			lf_has_kitsune_buildings = yes
+			lf_has_neko_buildings = yes
+			lf_has_elven_buildings = yes
+			lf_has_orcish_buildings = yes
+			lf_has_fae_buildings = yes
+			lf_has_demonic_buildings = yes
+			lf_has_divine_buildings = yes
+		}
+		NOT = { has_full_court = yes }
+	}
+	immediate = {
+		if = {
+			limit = {
+				lf_has_kitsune_buildings = yes
+			}
+			create_character = {
+				age = 16
+				dynasty = random
+				religion = ROOT
+				culture = ROOT
+				female = 50
+			}
+			new_character = {
+				save_event_target_as = lf_new_kitsune
+				lf_add_kitsune = yes
+				lf_add_random_kitsune_portrait = yes
+				random_list = {
+					40 = { add_trait = erudite }
+					20 = { add_trait = mystic }
+					20 = { add_trait = quick }
+					20 = { add_trait = genius }
+				}
+			}
+			character_event = { id = LF_Races_Buildings.2 }
+		}
+		if = {
+			limit = {
+				lf_has_neko_buildings = yes
+			}
+			create_character = {
+				age = 16
+				dynasty = random
+				religion = ROOT
+				culture = ROOT
+				female = 50
+			}
+			new_character = {
+				save_event_target_as = lf_new_neko
+				lf_add_neko = yes
+				lf_add_random_neko_portrait = yes
+				random_list = {
+					40 = { add_trait = shrewd }
+					20 = { add_trait = groomed }
+					20 = { add_trait = fair }
+					20 = { add_trait = quick }
+				}
+			}
+			character_event = { id = LF_Races_Buildings.3 }
+		}
+		if = {
+			limit = {
+				lf_has_elven_buildings = yes
+			}
+			create_character = {
+				age = 16
+				dynasty = random
+				religion = ROOT
+				culture = ROOT
+				female = 50
+			}
+			new_character = {
+				save_event_target_as = lf_new_elf
+				lf_add_elf = yes
+				lf_add_random_elf_portrait = yes
+				check_elven_fertility = yes
+				random_list = {
+					40 = { add_trait = diligent }
+					20 = { add_trait = erudite }
+					20 = { add_trait = fair }
+					20 = { add_trait = strong }
+				}
+			}
+			character_event = { id = LF_Races_Buildings.4 }
+		}
+		if = {
+			limit = {
+				lf_has_fae_buildings = yes
+			}
+			create_character = {
+				age = 16
+				dynasty = random
+				religion = ROOT
+				culture = ROOT
+				female = 50
+			}
+			new_character = {
+				save_event_target_as = lf_new_fairy
+				lf_add_fairy = yes
+				lf_add_random_fairy_portrait = yes
+				random_list = {
+					40 = { add_trait = groomed }
+					20 = { add_trait = shrewd }
+					20 = { add_trait = quick }
+					20 = { add_trait = genius }
+				}
+			}
+			character_event = { id = LF_Races_Buildings.5 }
+		}
+		if = {
+			limit = {
+				lf_has_orcish_buildings = yes
+			}
+			create_character = {
+				age = 16
+				dynasty = random
+				religion = ROOT
+				culture = ROOT
+				female = 50
+			}
+			new_character = {
+				save_event_target_as = lf_new_orc
+				lf_add_orc = yes
+				lf_add_random_orc_portrait = yes
+			}
+			character_event = { id = LF_Races_Buildings.6 }
+				random_list = {
+					40 = { add_trait = sturdy }
+					20 = { add_trait = robust }
+					20 = { add_trait = strong }
+					20 = { add_trait = heavy_infantry_leader }
+				}
+		}
+		if = {
+			limit = {
+				lf_has_demonic_buildings = yes
+			}
+			create_character = {
+				age = 16
+				dynasty = random
+				religion = ROOT
+				culture = ROOT
+				female = 50
+			}
+			new_character = {
+				save_event_target_as = lf_new_demon
+				add_trait = lf_halfdemon
+				random_list = {
+					40 = { add_trait = lustful }
+					20 = { add_trait = hedonist }
+					20 = { add_trait = fair }
+					20 = { add_trait = gregarious }
+				}
+			}
+			character_event = { id = LF_Races_Buildings.7 }
+		}
+		if = {
+			limit = {
+				lf_has_divine_buildings = yes
+			}
+			create_character = {
+				age = 16
+				dynasty = random
+				religion = ROOT
+				culture = ROOT
+				female = 50
+			}
+			new_character = {
+				save_event_target_as = lf_new_divine
+				lf_add_angel = yes
+				lf_add_random_angel_portrait = yes
+				random_list = {
+					40 = { add_trait = gregarious }
+					20 = { add_trait = just }
+					20 = { add_trait = fair }
+					20 = { add_trait = strong }
+				}
+			}
+			character_event = { id = LF_Races_Buildings.8 }
+		}
+	}
+}
+		
+		
+		
+# Kitsune notification
+character_event = {
+	id = LF_Races_Buildings.2
+	desc = LF_Races_Buildings2
+	picture = GFX_evt_emissary
+	
+	notification = yes
+	
+	portrait = event_target:lf_new_kitsune
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK 
+	}
+}
+# Neko notification
+character_event = {
+	id = LF_Races_Buildings.3
+	desc = LF_Races_Buildings3
+	picture = GFX_evt_emissary
+	
+	notification = yes
+	
+	portrait = event_target:lf_new_neko
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK 
+	}
+}
+# Elf notification
+character_event = {
+	id = LF_Races_Buildings.4
+	desc = LF_Races_Buildings4
+	picture = GFX_evt_emissary
+	
+	notification = yes
+	
+	portrait = event_target:lf_new_elf
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK 
+	}
+}
+# Fairy notification
+character_event = {
+	id = LF_Races_Buildings.5
+	desc = LF_Races_Buildings5
+	picture = GFX_evt_emissary
+	
+	notification = yes
+	
+	portrait = event_target:lf_new_fairy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK 
+	}
+}
+# Orc notification
+character_event = {
+	id = LF_Races_Buildings.6
+	desc = LF_Races_Buildings6
+	picture = GFX_evt_emissary
+	
+	notification = yes
+	
+	portrait = event_target:lf_new_orc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK 
+	}
+}
+# Demon notification
+character_event = {
+	id = LF_Races_Buildings.7
+	desc = LF_Races_Buildings7
+	picture = GFX_evt_emissary
+	
+	notification = yes
+	
+	portrait = event_target:lf_new_demon
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK 
+	}
+}
+# Divine notification
+character_event = {
+	id = LF_Races_Buildings.8
+	desc = LF_Races_Buildings8
+	picture = GFX_evt_emissary
+	
+	notification = yes
+	
+	portrait = event_target:lf_new_divine
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK 
+	}
+}
+			

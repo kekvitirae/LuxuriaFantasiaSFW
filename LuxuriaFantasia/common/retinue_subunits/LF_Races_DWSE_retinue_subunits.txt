@@ -1,0 +1,54 @@
+XAELA_HORSE_ARCHERS =
+{
+	first_type = 3
+	first_amount = 50
+	second_type = 6
+	second_amount = 150
+
+	special_troops = horse_archers
+	
+	hire_cost = 75
+	costs_prestige = yes
+	
+	maintenance_multiplier = 0.3
+	
+	potential = {
+		culture = dwse_dusk
+	}
+	
+	modifier = {
+		light_cavalry_defensive = 0.25
+		light_cavalry_offensive = 0.25
+		light_cavalry_morale = 0.25
+		horse_archers_offensive = 0.25
+		horse_archers_defensive = 0.25
+		horse_archers_morale = 0.25
+	}
+}
+
+XAELA_RAIDERS =
+{
+	first_type = 3
+	first_amount = 150
+	second_type = 6
+	second_amount = 50
+	
+	special_troops = horse_archers
+
+	hire_cost = 75
+	costs_prestige = yes
+	
+	maintenance_multiplier = 0.3
+	
+	potential = {
+		culture = dwse_dusk
+	}
+	modifier = {
+		light_cavalry_defensive = 0.25
+		light_cavalry_offensive = 0.25
+		light_cavalry_morale = 0.25
+		horse_archers_offensive = 0.25
+		horse_archers_defensive = 0.25
+		horse_archers_morale = 0.25
+	}
+}

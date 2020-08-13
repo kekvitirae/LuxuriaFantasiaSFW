@@ -1,0 +1,282 @@
+### This file contains events specific to the Neko portion of the Dark World mod
+
+namespace = LFNeko
+
+# .10 The blood line resurfaces
+narrative_event = {
+	id = LFNeko.10
+	title = LFNeko11T	
+	picture = {
+		trigger = { 
+			is_female = yes
+		}
+		picture = lf_neko_start_female
+	}
+	picture = {
+		trigger = { 
+			is_female = no
+		}
+		picture = lf_neko_start_male
+	}
+	desc = LFNeko11
+	is_triggered_only = yes # Triggered by Decision
+	
+	option = { # Meow
+		name = LFNeko11TTA
+		set_character_flag = lf_neko
+		lf_change_race = yes
+	}
+	option = { # MEOW
+		name = LFNeko11TTB
+		set_character_flag = lf_neko
+		lf_change_race = yes
+		custom_tooltip = {
+			text = LFAllRealmCharacters
+		}
+		hidden_tooltip = {
+			any_realm_character = {
+				limit = {
+					any_liege = { character = ROOT }
+				}
+				set_character_flag = lf_neko
+				lf_change_race = yes
+			}
+		}
+	}	
+	after = {
+		if = {
+			limit = {
+				has_global_flag = LFGenderBendOn
+			}
+			set_character_flag = lf_neko_genderbend
+		}
+		character_event = { id = LFMultiplayer.1000 }
+	}
+}
+
+#
+# Neko heat mechanics
+#
+
+character_event = {
+	id = LFNeko.101
+	hide_window = yes
+	only_women = yes
+	min_age = 16
+	is_triggered_only = yes # on_yearly_pulse
+	trigger = {
+		lf_has_nsfw = yes
+		is_neko = yes
+		is_adult = yes
+		lf_has_nekos = yes
+		NOT = { has_character_modifier = lf_neko_heat }
+		practical_age < 45
+		lf_can_have_sex = yes
+	}
+	weight_multiplier = {
+		days = 1095
+		modifier = {
+			factor = 0.75
+			trait = lustful
+		}
+		modifier = {
+			factor = 0.75
+			trait = hedonist
+		}
+		modifier = {
+			factor = 1.25
+			trait = chaste
+		}
+	}
+	immediate = {
+	
+		if = {
+			limit = {
+				OR = {
+					ai = yes
+					has_character_flag = lf_neko_heat_no_notification
+				}
+			}
+			add_character_modifier = {
+				name = lf_neko_heat
+				duration = -1
+			}
+			if = {
+				limit = {
+					trait = lf_breeder
+				}
+				set_character_flag = lf_had_breeder_trait
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						trait = lf_breeder
+					}
+				}
+				set_character_flag = lf_no_breeder_trait
+				add_trait = lf_breeder
+			}
+			character_event = { id = LFNeko.102 days = 90 random = 90 }
+		}
+		else = {
+			character_event = { id = LFNeko.103 }
+		}
+	}
+}
+
+character_event = {
+	id = LFNeko.102
+	hide_window = yes
+	only_women = yes
+	is_triggered_only = yes # on_pregnancy and previous event
+	trigger = {
+		has_character_modifier = lf_neko_heat
+	}
+	immediate = {
+		if = { # In case the player turned back on notifications
+			limit = {
+				has_character_flag = lf_neko_heat_no_notification
+			}
+			remove_character_modifier = lf_neko_heat
+			trigger_switch = {
+				on_trigger = has_character_flag
+				lf_had_breeder_trait = {
+					clr_character_flag = lf_had_breeder_trait
+				}
+				lf_no_breeder_trait = {
+					clr_character_flag = lf_no_breeder_trait
+					remove_trait = lf_breeder
+				}
+			}
+		}
+		else = {
+			character_event = { id = LFNeko.104 }
+		}
+	}
+}
+
+character_event = {
+	id = LFNeko.103
+	picture = {
+		picture = neko_heat1
+	}
+	picture = {
+		picture = neko_heat2
+	}
+	picture = {
+		picture = neko_heat3
+	}
+	desc = LFNeko103
+	is_triggered_only = yes # previous event
+
+	option = {
+		name = LFNeko103TTA
+		add_character_modifier = {
+			name = lf_neko_heat
+			duration = -1
+		}
+		if = {
+			limit = {
+				trait = lf_breeder
+			}
+			set_character_flag = lf_had_breeder_trait
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					trait = lf_breeder
+				}
+			}
+			set_character_flag = lf_no_breeder_trait
+			add_trait = lf_breeder
+		}
+		character_event = { id = LFNeko.104 days = 120 random = 90 }
+	}
+	
+	option = {
+		name = LFNeko103TTB
+		add_character_modifier = {
+			name = lf_neko_heat
+			duration = -1
+		}
+		if = {
+			limit = {
+				trait = lf_breeder
+			}
+			set_character_flag = lf_had_breeder_trait
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					trait = lf_breeder
+				}
+			}
+			set_character_flag = lf_no_breeder_trait
+			add_trait = lf_breeder
+		}
+		set_character_flag = lf_neko_heat_no_notification
+		character_event = { id = LFNeko.102 days = 120 random = 90 }
+	}
+}
+
+character_event = {
+	id = LFNeko.104
+	picture = {
+		picture = neko_heat1
+	}
+	picture = {
+		picture = neko_heat2
+	}
+	picture = {
+		picture = neko_heat3
+	}
+	desc = {
+		trigger = {
+			is_pregnant = yes
+		}
+		text = LFNeko104Pregnant
+	}
+	desc = {
+		trigger = {
+			is_pregnant = no
+		}
+		text = LFNeko104NotPregnant
+	}
+	is_triggered_only = yes # previous event
+
+	option = {
+		trigger = {
+			is_pregnant = yes
+		}
+		name = LFNeko104TTA
+		remove_character_modifier = lf_neko_heat
+		trigger_switch = {
+			on_trigger = has_character_flag
+			lf_had_breeder_trait = {
+				clr_character_flag = lf_had_breeder_trait
+			}
+			lf_no_breeder_trait = {
+				clr_character_flag = lf_no_breeder_trait
+				remove_trait = lf_breeder
+			}
+		}
+	}
+	
+	option = {
+		trigger = {
+			is_pregnant = no
+		}
+		name = LFNeko104TTB
+		remove_character_modifier = lf_neko_heat
+		trigger_switch = {
+			on_trigger = has_character_flag
+			lf_had_breeder_trait = {
+				clr_character_flag = lf_had_breeder_trait
+			}
+			lf_no_breeder_trait = {
+				clr_character_flag = lf_no_breeder_trait
+				remove_trait = lf_breeder
+			}
+		}
+	}
+}

@@ -1,0 +1,39 @@
+RETTYPE_NEKO = 
+{
+	first_type = 0
+	first_amount = 50
+	second_type = 1
+	second_amount = 100
+	
+	potential = {
+		is_nomadic = no
+		is_neko = yes
+	}
+	
+	modifier = {
+		light_infantry_offensive = 0.75
+		light_infantry_morale = 0.2
+		heavy_infantry_offensive = 0.3
+		heavy_infantry_morale = 0.2
+	}
+}
+
+RETTYPE_KITSUNE = 
+{
+	first_type = 5
+	first_amount = 50
+	second_type = 2
+	second_amount = 100
+	
+	potential = {
+		is_nomadic = no
+		is_kitsune = yes
+	}
+	
+	modifier = {
+		archers_defensive = 0.25
+		archers_morale = 0.5
+		pikemen_defensive = 0.25
+		pikemen_morale = 0.2
+	}
+}

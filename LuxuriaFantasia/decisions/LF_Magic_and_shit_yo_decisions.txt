@@ -1,0 +1,701 @@
+targetted_decisions = {
+
+	lf_open_spellbook = {
+		filter = self
+		ai_target_filter = none
+		ai = no
+		potential = {
+			ai = no
+			any_artifact = {
+				artifact_type = lf_spellbook
+				is_artifact_equipped = yes
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			narrative_event = { id = LFSpells.12 }
+		}
+	}
+
+	lf_wizards_summon_familiar = {
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 240
+		potential = {
+			prisoner = no
+			NOT = { is_incapable = yes }
+			character = FROM
+			is_mage = yes
+			has_character_flag = lf_familiar_known
+			NOR = {
+				has_character_modifier = wolf_familiar
+				has_character_modifier = cat_familiar
+				has_character_modifier = owl_familiar
+				has_character_modifier = raven_familiar			
+			}
+		}
+
+		allow = {
+			is_mage = yes
+		}
+
+		effect = {
+			hidden_effect = {
+				add_character_modifier = {
+					name = summon_familiar_cooldown
+					years = 5
+					hidden = yes
+				}
+				character_event = { id = MNM.7815 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_character_modifier = wolf_familiar
+					has_character_modifier = cat_familiar
+					has_character_modifier = owl_familiar
+					has_character_modifier = raven_familiar
+				}
+			}
+		}
+	}
+	
+	lf_wizards_spell_of_trusting = {
+		filter = spouse
+		ai_target_filter = spouse
+		ai_check_interval = 240
+		from_potential = {
+			prisoner = no
+			NOT = { is_incapable = yes }
+			OR = {
+				AND = {
+					NAND = {
+						has_global_flag = tont_is_started
+						is_kitsune = yes
+					}
+					is_mage = yes
+					has_character_flag = lf_cuckold_known
+					any_artifact = {
+						artifact_type = lf_spellbook
+						is_artifact_equipped = yes
+					}
+				}
+				is_elf = yes
+				trait = houseirae_halfelf
+			}
+		}
+
+		potential = {
+			ai = yes
+			is_married = FROM
+			is_within_diplo_range = FROM			
+			is_adult = yes
+			NOR = { 
+				character = FROM # Should NOT be casting this on themselves
+				is_inaccessible_trigger = yes
+				diplomatic_immunity = yes
+				trait = trusting
+			}
+		}			
+		allow = {
+			prisoner = no
+			FROM = {
+				custom_tooltip = { 
+					text = tt_has_enough_mana_moderate_elf
+					lf_check_moderate_mana_elf = yes
+				}
+			}
+		}
+		effect = {
+			ROOT = {
+				save_event_target_as = spell_target
+			}
+			FROM = {
+				lf_use_moderate_mana_elf = yes
+				character_event = {
+					id = LFSpells.7
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0.25
+			modifier = {
+				factor = 0
+				OR = {
+					trait = trusting
+					trait = chaste
+					trait = celibate
+					ROOT = {
+						is_lover = FROM
+					}
+				}
+				NOR = {
+					trait = lustful
+					trait = hedonist
+					trait = lf_secret_slut
+				}
+			}
+		}		
+	}	
+
+	lf_wizards_spell_of_heart_enslavement = {
+		filter = realm
+		ai_target_filter = court
+		ai_check_interval = 240
+		from_potential = {
+			prisoner = no
+			NOT = { is_incapable = yes }
+			OR = {
+				AND = {
+					NAND = {
+						has_global_flag = tont_is_started
+						is_kitsune = yes
+					}
+					is_mage = yes
+					has_character_flag = lf_lust_known
+					any_artifact = {
+						artifact_type = lf_spellbook
+						is_artifact_equipped = yes
+					}
+				}
+				AND = {
+					NOT = { has_global_flag = tont_is_started }
+					is_kitsune = yes
+				}
+			}
+		}
+
+		potential = {
+			is_adult = yes
+			same_realm = FROM
+			is_within_diplo_range = FROM
+			NOR = {
+				ai = no # No casting on the player
+				character = FROM # Should NOT be casting this on themselves
+				is_inaccessible_trigger = yes
+				diplomatic_immunity = yes 
+				is_lover = FROM # Already bagged them
+				is_married = FROM
+				is_consort = FROM
+			}
+
+		}			
+		allow = {
+			is_adult = yes
+			prisoner = no
+			opinion = { 
+				who = FROM 
+				value = 1
+			}
+			NOT = {
+				trait = eunuch
+				trait = celibate
+			}
+			practical_age < 45
+			FROM = {
+				practical_age < 45
+				NOR = {
+					trait = eunuch
+					trait = celibate
+				}
+				custom_tooltip = { 
+					text = tt_has_enough_mana_moderate_kitsune
+					lf_check_moderate_mana_kitsune = yes
+				}
+			}
+		}
+		effect = {
+			ROOT = {
+				save_event_target_as = spell_target
+			}
+			FROM = {
+				lf_use_moderate_mana_kitsune = yes
+				character_event = {
+					id = LFSpells.3
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0.25
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_lover = yes
+						NAND = {
+							trait = lustful
+							trait = hedonist
+						}
+					}
+					AND = {
+						is_consort = yes
+						NAND = {
+							trait = lustful
+							trait = hedonist
+						}
+					}
+					AND = {
+						is_married = yes
+						NAND = {
+							trait = lustful
+							trait = hedonist
+						}
+					}
+					AND = {
+						same_sex = ROOT
+						NOT = { trait = homosexual }
+					}
+					AND = {
+						NOT = { same_sex = ROOT }
+						trait = homosexual
+					}
+				}
+			}
+		}		
+					
+	}	
+
+	lf_wizards_spell_of_fireball = {
+		filter = realm
+		ai_target_filter = none
+		ai = no
+		from_potential = {
+			prisoner = no
+			NOT = { is_incapable = yes }
+			NAND = {
+				has_global_flag = tont_is_started
+				is_kitsune = yes
+			}
+			is_mage = yes
+			has_character_flag = lf_fireball_known
+			any_artifact = {
+				artifact_type = lf_spellbook
+				is_artifact_equipped = yes
+			}
+		}
+
+		potential = {
+			is_landed = no
+			same_realm = FROM
+			is_within_diplo_range = FROM
+			NOT = { character = FROM } # Should NOT be casting this on themselves
+			NOT = { is_inaccessible_trigger = yes }
+			NOT = { diplomatic_immunity = yes }
+
+		}			
+		allow = {
+			is_landed = no
+			prisoner = no
+			OR = {
+				NOT = {
+					opinion = { 
+						who = FROM 
+						value = 1
+					}
+				}
+				is_rival = FROM
+			}
+			FROM = {
+				custom_tooltip = { 
+					text = tt_has_enough_mana_moderate
+					has_enough_mana_moderate = yes
+				}
+				is_mage = yes
+			}
+		}
+		effect = {
+			ROOT = {
+				save_event_target_as = spell_target
+			}
+			FROM = {
+				lf_use_moderate_mana = yes
+				character_event = {
+					id = LFSpells.4
+				}
+			}
+		}
+	}
+
+	lf_wizards_spell_of_flamestrike = {
+		filter = independent_rulers
+		ai_target_filter = none
+		ai = no
+		from_potential = {
+			prisoner = no
+			NOT = { is_incapable = yes }
+			NAND = {
+				has_global_flag = tont_is_started
+				is_kitsune = yes
+			}
+			is_mage = yes
+			has_character_flag = lf_flamestrike_known
+			any_artifact = {
+				artifact_type = lf_spellbook
+				is_artifact_equipped = yes
+			}
+		}
+
+		potential = {
+			is_landed = yes
+			NOT = { same_realm = FROM }
+			is_within_diplo_range = FROM
+			NOT = { character = FROM } # Should NOT be casting this on themselves
+			NOT = { is_inaccessible_trigger = yes }
+			NOT = { diplomatic_immunity = yes }
+		}			
+		allow = {
+			is_landed = yes
+			capital_holding = { 
+				has_any_building = yes
+			}
+			OR = {
+				NOT = {
+					opinion = { 
+						who = FROM 
+						value = 1
+					}
+				}
+				is_rival = FROM
+			}
+			prisoner = no
+			FROM = {
+				custom_tooltip = { 
+					text = tt_has_enough_mana_major
+					has_enough_mana_major = yes
+				}
+				is_mage = yes
+			}
+			
+		}
+		effect = {
+			ROOT = {
+				save_event_target_as = spell_target
+			}
+			FROM = {
+				lf_use_major_mana = yes
+				character_event = {
+					id = LFSpells.5
+				}
+			}
+		}
+	}
+
+	lf_spell_of_fairy_fire = {
+		filter = realm_including_me
+		ai_target_filter = court
+		ai_check_interval = 240
+		from_potential = {
+			prisoner = no
+			NOT = { is_incapable = yes }
+			OR = {
+				AND = {
+					NAND = {
+						has_global_flag = tont_is_started
+						is_kitsune = yes
+					}
+					is_mage = yes
+					has_character_flag = lf_fairy_known
+					any_artifact = {
+						artifact_type = lf_spellbook
+						is_artifact_equipped = yes
+					}
+				}
+				is_fairy = yes
+			}
+		}
+
+		potential = {
+			OR = {
+				ai = yes
+				character = FROM
+			}
+			is_within_diplo_range = FROM			
+			is_adult = yes
+			NOT = { is_inaccessible_trigger = yes }
+			NOT = { diplomatic_immunity = yes }
+		}			
+		allow = {
+			prisoner = no
+			custom_tooltip = {
+				text = lf_sparkling_tt
+				NOR = {
+					has_character_modifier = lf_sparkling
+					has_character_modifier = lf_sparkling_vampire
+				}
+			}	
+			FROM = {
+				custom_tooltip = { 
+					text = tt_has_enough_mana_moderate_fairy
+					lf_check_moderate_mana_fairy = yes 
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_character_flag = lf_npc_desmona
+				}
+				add_character_modifier = {
+					name = lf_sparkling_vampire
+					days = 365
+				}
+			}
+			else = {
+				add_character_modifier = {
+					name = lf_sparkling
+					days = 365
+				}
+			}	
+			FROM = {
+				lf_use_moderate_mana_fairy = yes
+			}
+		}
+		ai_will_do = {
+			factor = 0.25
+			modifier = {
+				factor = 2
+				OR = {
+					is_lover = ROOT
+					is_consort = ROOT
+					is_married = ROOT
+					is_friend = ROOT
+				}
+			}
+		}		
+	}
+
+	lf_blessing_of_the_womb = {
+		filter = realm_including_me
+		ai_target_filter = court_including_me
+		ai_check_interval = 96
+		from_potential = {
+			prisoner = no
+			NOT = { is_incapable = yes }
+			NAND = {
+				has_global_flag = tont_is_started
+				is_kitsune = yes
+			}
+			is_mage = yes
+			has_character_flag = lf_womb_known
+			any_artifact = {
+				artifact_type = lf_spellbook
+				is_artifact_equipped = yes
+			}
+		}
+		potential = {
+			is_within_diplo_range = FROM
+			is_adult = yes
+			is_pregnant = yes
+			NOT = { has_character_flag = lf_blessing_womb }
+		}
+		
+		allow = {
+			prisoner = no
+			is_pregnant = yes
+			FROM = {
+				custom_tooltip = { 
+					text = tt_has_enough_mana_major
+					has_enough_mana_major = yes 
+				}
+			}
+		}
+		
+		effect = {
+			set_character_flag = lf_blessing_womb
+			FROM = {
+				lf_use_major_mana = yes
+			}
+		}
+		ai_will_do = {
+			factor = 0.25
+			modifier = {
+				factor = 0
+				NOR = {
+					is_lover = ROOT
+					is_consort = ROOT
+					is_married = ROOT
+					is_friend = ROOT
+				}
+			}
+		}		
+	}
+	
+	lf_curse_of_the_snail = {
+		filter = realm
+		ai_target_filter = none
+		ai = no
+		
+		from_potential = {
+			prisoner = no
+			NOT = { is_incapable = yes }
+			NAND = {
+				has_global_flag = tont_is_started
+				is_kitsune = yes
+			}
+			is_mage = yes
+			has_character_flag = lf_snail_known
+			any_artifact = {
+				artifact_type = lf_spellbook
+				is_artifact_equipped = yes
+			}
+		}
+
+		potential = {
+			same_realm = FROM
+			is_within_diplo_range = FROM			
+			is_adult = yes
+			NOT = { is_inaccessible_trigger = yes }
+			NOT = { diplomatic_immunity = yes }
+		}			
+		allow = {
+			prisoner = no
+			custom_tooltip = {
+				text = lf_curse_snail_tt
+				OR = {
+					AND = {
+						NOT = { culture = frankish }
+						lf_is_silly = yes
+					}
+					NOR = { 
+						trait = slow
+						lf_is_silly = yes
+					}
+				}
+			}	
+			FROM = {
+				custom_tooltip = { 
+					text = tt_has_enough_mana_major
+					has_enough_mana_major = yes 
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					lf_is_silly = yes
+				}
+				culture = frankish
+			}
+			else = {
+				add_trait = slow
+			}	
+			FROM = {
+				lf_use_major_mana = yes
+			}
+		}
+	}
+	
+}
+
+
+decisions = {
+
+	lf_a_wizards_buy_spellbook = {
+		is_high_prio = yes
+		ai = no
+		potential = {
+			NOT = { is_incapable = yes }
+			ai = no
+			NAND = {
+				has_global_flag = tont_is_started
+				is_kitsune = yes
+			}
+			is_mage = yes
+			NOT = {
+				has_artifact = lf_spellbook
+			}
+			lf_has_wizards = yes
+		}
+		
+		allow = {
+			wealth = 150
+		}
+		
+		effect = {
+			character_event = { id = LFMagic.4 }
+		}
+		
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	lf_a_yer_a_wizard_harry = {
+		is_high_prio = yes
+		ai = no
+		potential = {
+			NOT = { is_incapable = yes }
+			ai = no
+			is_not_mage = yes
+			NOR = { 
+				trait = dwse_dragon_adult 
+				trait = lf_ghost
+				trait = dwse_shapeshifted
+			}
+			lf_has_wizards = yes
+		}
+		allow = {
+			capital_scope = {
+				has_building = lf_wizard_tower_castle
+			}
+			is_not_mage = yes
+			NOR = {
+				trait = dwse_dragon_adult 
+				trait = lf_ghost
+				trait = dwse_shapeshifted
+			}
+		}
+		effect = {
+			narrative_event = { id = LFMagic.3 }
+		}
+	}
+	
+	lf_b_buy_magic_spell = {
+		ai = no
+		potential = {
+			NOT = { is_incapable = yes }
+			ai = no
+			is_mage = yes
+			has_artifact = lf_spellbook
+			lf_has_wizards = yes
+			NAND = {
+				has_character_flag = lf_fireball_known
+				has_character_flag = lf_flamestrike_known
+				has_character_flag = lf_familiar_known
+				has_character_flag = lf_womb_known
+				has_character_flag = lf_snail_known
+				OR = {
+					has_character_flag = lf_cuckold_known
+					is_elf = yes
+				}
+				OR = {
+					has_character_flag = lf_lust_known
+					is_kitsune = yes
+				}
+				OR = {
+					has_character_flag = lf_fairy_known
+					is_fairy = yes
+				}
+			}
+		}
+		allow = {
+			is_mage = yes
+			wealth = 100
+			custom_tooltip = {
+				text = lf_b_buy_magic_spell_tooltip
+			}
+					
+		}
+		effect = {
+			character_event = { id = LFSpells.13 }
+		}
+	}
+		
+}	

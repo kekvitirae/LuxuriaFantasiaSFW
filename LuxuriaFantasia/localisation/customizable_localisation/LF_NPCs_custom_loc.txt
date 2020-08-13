@@ -1,0 +1,40 @@
+defined_text = {
+	name = GetChinaDynasty
+	text = {
+		localisation_key = LFChinaTang
+		trigger = {
+			year = 618
+			NOT = { year = 960 } # Ignoring the Five Dynasties period
+			NOT = { has_global_flag = lf_silly_mode }
+		}
+	}
+	text = {
+		localisation_key = LFChinaSong
+		trigger = {
+			year = 960
+			NOT = { year = 1279 }
+			NOT = { has_global_flag = lf_silly_mode }
+		}
+	}
+	text = {
+		localisation_key = LFChinaYuan
+		trigger = {
+			year = 1279
+			NOT = { year = 1368 }
+			NOT = { has_global_flag = lf_silly_mode }
+		}
+	}
+	text = {
+		localisation_key = LFChinaMing
+		trigger = {
+			year = 1368 # Game ends on 1453, so ignoring Qing (1644)
+			NOT = { has_global_flag = lf_silly_mode }
+		}
+	}
+	text = {
+		localisation_key = LFChinaWuTang
+		trigger = {
+			has_global_flag = lf_silly_mode
+		}
+	}
+}

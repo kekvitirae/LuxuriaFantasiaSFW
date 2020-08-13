@@ -1,0 +1,116 @@
+lf_fareast_group = {
+	graphical_cultures = { westerngfx }
+	alternate_start = {
+		always = no
+	}
+
+	kitsune_culture = {
+		graphical_cultures = { chinesegfx westerngfx }
+		color = { 1 0.45 0.26 }
+		# Þ 222 þ 254 Ð 208 ð 240 æ
+		male_names = {
+			Yutsuna Gakao Kosamu Jukuchu
+			Maroji Buchi Jurata Kakao
+			Naotoki Daichemon Isu Chitora
+			Risuki Karoji Wahide Shurei
+			Junori Kyukusai Busuke 
+			Kumitsu Bomori Wachiro Mujiro
+			Tetsu Yoshushu Sumatsu Chiseki
+			Ahari Ryuwane Ikushi Ryunjiro
+			Dasada Keikuchu Yuchi Shokazu
+			Eigobei Baishashi Ishi Hashiro
+			Oshi Kyusu Shuchemon Semon
+			Yataka Chirata Kanoye Busu
+			Sofumi Kujio Rimoto Eikuzo
+			Shoyoshi Taharu Jusashi Naonabu
+			Mozo Rizuma Gosami Homane
+		}
+		female_names = {
+			Yaesuka Torime Tsuroe Beyu
+			Reiromi Ideko Maekio Kumaki
+			Hairimi Shimina Hayeko Senae
+			Haimiya Koruko Marime Jozuru
+			Tesano Achi Mukane Moto
+			Betsuko Naonatsu Terika Metomo
+			Eriko Suki Nazu Chisuki
+			Saitsumi Hoshiko Memiya Yaeromi
+			Yuhiro Shimeka Nogusa Yarino
+			Emeko Kocho Akage Josuka
+			Area Shigusa Sumaya Nichi
+			Hiroshi Risuka Nikako Saitsuyo
+			Reiyuko Raitsune Fusae Miko
+			Kuyano Honoue Etsuka Kineko
+			Hozu Yusato Sahori Akagi
+		}
+		horde = no
+		used_for_random = no
+		allow_in_ruler_designer = yes
+		dynasty_name_first = yes
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+		pat_grf_name_chance = 10
+		mat_grf_name_chance = 10
+		father_name_chance = 0
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+		pat_grm_name_chance = 10
+		mat_grm_name_chance = 40
+		mother_name_chance = 0
+		modifier = default_culture_modifier
+		allow_looting = no
+		seafarer = no
+	}
+
+	neko_culture = {
+		graphical_cultures = { celticgfx westerngfx }
+		color = { 1 0.30 0.47 }
+# Neko names come from Final Fantasy XIV's Miqo'te. First 30 are Keepers of the Moon, second 30 are Keepers of the Sun.
+		male_names = {
+			K'yhar N'vovo J'pop Q'dhus
+			C'turuh S'fhozoh M'vhaneh C'jup
+			I'than I'rup J'thuja J'yhuf
+			S'pufe C'bup A'jhaf S'shaz
+			C'johrah D'fhow X'wehzu B'xapu
+			L'subi W'del X'mil L'rehj
+			G'dhedo V'vhij B'yhaw K'yhuw
+			N'wihroh L'vhun Tosa Jahpah 
+			Uhpah Kohmuh Vihkoh Cagi'ra 
+			Pawu'ya Sahfoh'wo Nihge'ra Lohzah'to 
+			Fihco'ya Xaxe'sae Yihwih'wo Lohzih'zi 
+			Wihpo'sae Tuhpi Aro Qisuh 
+			Cuhgo Mohloh Xofoh'wo Cohwoh'li 
+			Xagah'zi Gohti'ya Wujeh'ir Kocuh'a 
+			Sehdah'ya Yisu'wo Ede'sae Xahdah'ir 
+		}
+		female_names = {
+			V'julfha S'rurnhoqi R'jhaumfiyi W'lhifya
+			W'pholmauzi P'yhupoo N'cufhe E'phickaxi
+			W'rifho X'mherkuto E'xheryofi C'ghocdaiaci
+			L'nhedrina T'phudro H'bhekkapa E'chirmati
+			X'leenlafhe F'qeibe L'difneivu B'xhadluzu
+			A'caggomi O'pikyhaiaro N'xhaubga F'qhaursuji
+			X'qachu P'ghosro R'shawa I'yootlaqa
+			Y'rhaiacrobe N'theewwega Uxi Caqo
+			Mopuh Zahsoh Noqih Yuhqe
+			Lohdih Umuh Tuhweh Vora
+			Bubih Cume Uca Ohgah
+			Ruvoh Wixu Lepa Zine
+			Ihbe Wehbi Cihtah Lopih
+			Reti Pohtu Nuhyih Xehpo
+			Bineh Lihwe Behreh Gehjo
+		}
+		horde = no
+		used_for_random = no
+		allow_in_ruler_designer = yes
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+		pat_grf_name_chance = 30
+		mat_grf_name_chance = 10
+		father_name_chance = 0
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+		pat_grm_name_chance = 10
+		mat_grm_name_chance = 40
+		mother_name_chance = 0
+		modifier = default_culture_modifier
+		allow_looting = no
+		seafarer = no
+	}
+	
+}	

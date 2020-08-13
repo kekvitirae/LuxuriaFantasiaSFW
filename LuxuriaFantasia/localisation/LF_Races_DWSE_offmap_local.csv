@@ -1,0 +1,98 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+dwse_badthings;Something bad happens...;;;;;;;;;;;;;;x
+dwse_goodthings;Something good happens...;;;;;;;;;;;;;;x
+dwse_no_empire;No Empire;;;;;;;;;;;;;;x
+dwse_no_empire_desc;Dragons do not exist in this world. The Elder Forest is a thing of myth.;;;;;;;;;;;;;;x
+dwse_no_ai_slaving;Player Only Slaving;;;;;;;;;;;;;;x
+dwse_no_ai_slaving_desc;All dragon content enabled. The AI will never sell prisoners or branded slaves to the Elder Forest.;;;;;;;;;;;;;;x
+dwse_war;Slaving Contract;;;;;;;;;;;;;;x
+dwse_offer_slave;Sell Slave;;;;;;;;;;;;;;x
+dwse_futa_slave;Purchase Futa Slave;;;;;;;;;;;;;;x
+dwse__slavef;Purchase Female Slave;;;;;;;;;;;;;;x 
+dwse__slavefe;Purchase Female Exotic Slave;;;;;;;;;;;;;;x
+dwse__slavem;Purchase Male Slave;;;;;;;;;;;;;;x
+dwse__slaveme;Purchase Male Exotic Slave;;;;;;;;;;;;;;x
+dwse_slave_war;Buy Slaving Contract;;;;;;;;;;;;;;x
+e_offmap_dwse_voice;Elder Forest;;;;;;;;;;;;;;x
+monthly_dwse;Monthly Favor;;;;;;;;;;;;;x
+DWSE_VOICE_TITLE_FEMALE;Weyrguard;;;;;;;;;;;;;;x
+DWSE_VOICE_TITLE_MALE;Weyrguard;;;;;;;;;;;;;;x
+dwseom;Elder Forest;;;;;;;;;;;;;;x
+title_dwse_emperor;Sovereign;;;;;;;;;;;;;;x
+dwse_offer_slave_desc;Sell a Slave;;;;;;;;;;;;;;x
+dwse_futa_slave_desc;Purchase a Futa Slave;;;;;;;;;;;;;;x
+dwse__slavef_desc;Purchase a Female Slave;;;;;;;;;;;;;;x 
+dwse__slavefe_desc;Purchase a Female Exotic Slave;;;;;;;;;;;;;;x
+dwse__slavem_desc;Purchase a Male Slave;;;;;;;;;;;;;;x
+dwse__slaveme_desc;Purchase a Male Exotic Slave;;;;;;;;;;;;;;x
+dwse_slave_war_desc;This boon will grant you a Slaving Contract modifier on your character, allowing you to declare a Slave Raid war against any neighbor. Winning the war will force some characters on the losing side to be captured and automatically put into slave training.\n§RThe contract expires after five years.§!;;;;;;;;;;;;;;x
+EVTDESC_DWSEOM_200;[Root.GetGovernorLetterGreeting]. [Root.GetChineseLetterBlessing].\n\nThe heavenly [From.Offmap.Ruler.GetLongChineseEmperorName], has generously decided to send you a slave from [From.Offmap.Ruler.GetHerHis] court. May they serve you well.;[Root.GetGovernorLetterGreeting]. [Root.GetChineseLetterBlessing].;;;;;;;;;;;;;;x
+EVTOPTA_DWSEOM_200;Send my most sincere gratitude to the [From.Offmap.Ruler.GetTitle].;;;;;;;;;;;;;;x
+EVTOPTA_DWSEOM_200_TT;Your slave arrives at your court;;;;;;;;;;;;;;x
+dwsefavor;Favor;;;;;;;;;;;;;;x
+will_leave_for_forest_tt;§Y[This.GetTitledName]§! will leave [This.GetHerHis] current life behind and travel to the Elder Forest.;;;;;;;;;;;;;;x
+DEATH_WENT_TO_FOREST_NO_KILLER;left their old life behind to travel into the Elder Forest;;;;;;;;;;;;;;x
+DEATH_WENT_TO_FOREST;left their old life behind to travel into the Elder Forest, on the order of $KILLER$;;;;;;;;;;;;;;x
+DEATH_DWSE_STARVATION;died due to lack of care by a Weyrleader.;;;;;;;;;;;;;;x
+dwse_hatch_dragon;Hatch a Dragon Egg;;;;;;;;;;;;;;x
+dwse_hatch_dragon_desc;Hatch a Dragon Egg;;;;;;;;;;;;;;x
+return_dragon_egg;Gift Dragon Egg;;;;;;;;;;;;;;x
+return_dragon_egg_desc;Gift your Dragon Egg to the Elder Forest, so the young hatchling can grow up amongst its own kind;;;;;;;;;;;;;;x
+dragon_festival;Take part in the Dragon Festival;;;;;;;;;;;;;;x
+dragon_festival_desc;Take part in the Dragon Festival, bringing new life to dragonkind.;;;;;;;;;;;;;;x
+dragon_festival_modifier;Took part in the Dragon Festival;;;;;;;;;;;;;;x
+dragon_festival_modifier_desc;Took part in the Dragon Festival, bringing new life to dragonkind.;;;;;;;;;;;;;;x
+dwseom500;As you approach the festival grounds you begin to see the shapes of many dragons dancing in the sky and among the trees surrounding the area.\n As You approach you notice these drakes are not dancing, but mating! You take note that many of the dragons mates are not other dragons but appear to be human. You wonder how one could stoop so low and to breed with these creatures.\n The closer you get to the festival grounds the more deplorable acts you see. Moans begin to fill the air and the scent of sex is dancing past your nose.\n You realise after a few moments that you wish to join in on this fun. Every time you pass a frolicing couple you see a bit of the dragon's staff. You wish to see more, you yearn for it, but push it aside.\n A dragon approaches you, he seems alone. He stares at you with hunger in his eyes.;;;;;;;;;;;;;;x
+dwseom500A;Discard your clothes and join him!;;;;;;;;;;;;;;x
+dwseom500B;Quickly turn and leave before you do something you will regret.;;;;;;;;;;;;;;x
+dwseom501;You awaken in a stupor lying in your bed. You do not remember returning here. The last you remember is your dalliance with a young drake at the festival.\n Suddenly a fire shoots through you. IT BURNS! IT BURNS! Is all you can think as you roll in pain. "Make it stop" You quietly beg.\n The burning increases it is as if the Sun itself is inside you! You must push it out.\n Moments, maybe hours later you lie on your bed exhausted, the fire has receded and left you with a pleasant feeling of completeness.\n As you rise from your bed you notice a molten egg upon your bed.\n\n\n\nGO TO YOUR INTRIGUE MENU AND SELECT HATCH DRAGON EGG, YOU ILLITERATE FUCKNUGGET!\nJESUS FUCKING CHRIST THIS IS THE MOST ASKED QUESTION AND I'M GETTING FUCKING TIRED OF IT.;;;;;;;;;;;;;;x
+dwseom501A;"I will care for you my child" you whisper to the warm egg.;;;;;;;;;;;;;;x
+dwseom700;Before you sits a dragon, old and wise. He has come to collect your egg and take it deep into the Elder Forest so it may hatch and grow among its own kind.\n The drake states that ultimately it is your choice, but it would be best for him to take the egg. He states that any dragon raised on this side would lack the might and prowess of its kin from the Forest. No more than an intelligent beast he states. Strong compared to beasts of this world but quiet lacking to what it could be.\n A Dragon of the forest however would have the greatest mind, mighty wings in which to fly the in the skies of the world and strength to shatter even the tallest mountains. Something it would shorely lack here.;;;;;;;;;;;;;;x
+dwseom700A;Give him the egg and allow your child to grow up in the forest.;;;;;;;;;;;;;;x
+dwseom700B;Keep the egg, you are its mother. Your child will grow up here with you.;;;;;;;;;;;;;;x 
+dwseom800;As you hold your egg in your arms you begin to wonder what kind of creature will you be? Will you be kind? Will you be cruel? Will you be strong or will you be smart? Will you be both?\n Is the world ready for you? Are you ready for the world? Questions upon questions pass through your mind. As the questions pile up in your mind a single through stands at the forefront of your mind: Is it time?\n Time to let your little one open their eyes? Time to let them take to the skys?;;;;;;;;;;;;;;x
+dwseom800A;It is time.;;;;;;;;;;;;;;x
+dwseom800B;The world is not ready.;;;;;;;;;;;;;;x
+dwseom801;Seasons have passed since you decided to bring your little one into the world. You placed your egg carefully in the fireplace months ago and the maids have tended it around the clock. Not once have the flames gone out. But still the egg has not moved. You wish to see your child's shining eyes but know you must wait.\n A shout Echos the hall, a maid rushes up to you. She tells you how the egg has begun to rock and crack.\n A moment is all it takes for the words to register in your mind, before you rush off to your bedroom and look into the fireplace. Indeed the egg is rocking and shows a few cracks.\n A moment passes before a scaley head pokes out of the shell and looks at you in wonder.\n You pick up the young drake as you climbs from the fireplace.;;;;;;;;;;;;;;x
+dwseom801A;"It has been so long, you were well worth the wait little one.";;;;;;;;;;;;;;x
+dwse_dragons_on;Dragons On;;;;;;;;;;;;;;x
+dwse_dragons_off;Dragons Off;;;;;;;;;;;;;;x
+dwse_dragons_localisation_disabled_desc;Dragons only exist in the empire and will not spread through the regular known world.;;;;;;;;;;;;;;x
+dwse_dragons_localisation_enabled_desc;Events are in place that may cause dragons to spread in your game;;;;;;;;;;;;;;x
+dwse_dragons_localisation_enabled_label;Dragons On;;;;;;;;;;;;;;x
+dwse_dragons_localisation_disabled_label;Dragons Off;;;;;;;;;;;;;;x
+dwse_dragons_localisation_label;§RDWSE§! Dragon Controls;;;;;;;;;;;;;;x
+dwse_crown_expansion;Crown Expansion;;;;;;;;;;;;;;x
+dwse_crown_expansion_desc;Controls whether expansion of the realm is handled by the Crown or by vassals.;;;;;;;;;;;;;;x
+dwse_crown_expansion_0_desc;Vassals can expand the realm through wars.;;;;;;;;;;;;;;x
+dwse_crown_expansion_0;Vassals;;;;;;;;;;;;;;x
+dwse_crown_expansion_1_desc;Only the Crown holds the right to declare war and expand the realm.;;;;;;;;;;;;;;x
+dwse_crown_expansion_1;Crown;;;;;;;;;;;;;;x
+awaken_beast;Transmogrify Animal;;;;;;;;;;;;;;x
+awaken_beast_desc;Permanently turn someone into an animal.;;;;;;;;;;;;;;x
+dwse_gifts_desc;If the [offmap_dwse.GetName] is amenable to foreign relations, and you have not yet intruded upon the busy Chinese court with your gifts in the past year, you can send an envoy to provide the Emperor with a token of your subservience.;;;;;;;;;;;;;;x 
+dwseom_boons_desc;If the §Y[offmap_dwse.GetName]§! is amenable to foreign relations, and you have not yet had your appeals heard in the past year, you can send an envoy to request any one of a variety of blessings the Emperor might deem you worthy of.;;;;;;;;;;;;;;x
+dwse_sell_prisoner;Sell Prisoner;;;;;;;;;;;;;;x
+dwse_sell_prisoner_desc;Sell a Prisoner. Due to lack of training, prisoners sell for far less than slaves.;;;;;;;;;;;;;;x
+dragon_ambassador;Dragon Ambassador;;;;;;;;;;;;;;x
+dragon_ambassador_desc;This diplomat has been sent to the Forest Empire to try and gain favor for you.;;;;;;;;;;;;;;x
+dwseom_dragon_ambassador;The Ambassador;;;;;;;;;;;;;;x
+dwseom3000;You have choosen one of your daughters to act in your stead. They will travel to the Forest Empire to gain Favor with the Emporer. \n\nThis is a dangerous task that you have sent them on. Many who venture to the Elder Forest do not return.;;;;;;;;;;;;;;x
+dwseom3000A;I pray for their safe return.;;;;;;;;;;;;;;x
+dwseom_dragon_ambassador_return; The Amabassador Returns;;;;;;;;;;;;;;x
+dwseom3001;Your ambassador [dragon_ambassador.GetFirstName], has returned from the Forest Empire.\n\n She greets you with a smile, claiming her trip to The Forest has gone well.;;;;;;;;;;;;;;x
+dwseom3001A; Welcome home [dragon_ambassador.GetFirstName].;;;;;;;;;;;;;;x
+dwseom_dragon_ambassador_egg;The gift of Family;;;;;;;;;;;;;;x
+dwseom3002; Your Daughter, [dragon_ambassador.GetFirstName], leads you to her room. In the center of her bed, wrapped amoung the blankets, is a rather large egg.\n\n"This is my child." She claims as she rubs the egg. The emperor would only allow me to bring one of them home.\n\n She frowns, "Would like you to raise him?" she asks, looking at you with pleading eyes, "Would you raise my child?"\n\n\n\nGO TO YOUR INTRIGUE MENU AND SELECT HATCH DRAGON EGG, YOU ILLITERATE FUCKNUGGET!\nJESUS FUCKING CHRIST THIS IS THE MOST ASKED QUESTION AND I'M GETTING FUCKING TIRED OF IT.;;;;;;;;;;;;;;x
+dwseom3002A;It would be an Honor.;;;;;;;;;;;;;;x 
+dwseom_dragon_ambassador_stay;Broodmother;;;;;;;;;;;;;;x
+dwseom3003;Your Daughter [dragon_ambassador.GetFirstName] has decided to stay in the Forest Empire and become a Broodmother for the next generation of Dragons.\n\nShe has forgotten her home and now only thirst for the company of dragons and pleasure of laying their eggs.;;;;;;;;;;;;;;x
+dwseom3003A;THAT HARLOT!;;;;;;;;;;;;;;x
+dwseom3801TTA;Welcome to my dungeon.;;;;;;;;;;;;;;x
+dwse_send_ambassador;Send Ambassador;;;;;;;;;;;;;;x
+dwse_send_ambassador_desc; Send one of your daughters to act as an ambassador to the Forest Empire. \n§YIt is very likely the dragons will use her as a cocksleeve.§!\n§RMany choose to stay to be breeder slaves.§!;;;;;;;;;;;;;;x
+dwseom4002T;Dragon Egg Dies;;;;;;;;;;;;;;x
+dwseom4002;Without proper incubation, the empryo within the dragon egg you were carrying has died. The Elder Forest will not take too kindly to this.;;;;;;;;;;;;;;x
+dwseom4002TT;Oh well. Omelettes, anyone?;;;;;;;;;;;;;;x
+
+lf_too_important_for_dragons_tt;§RIs too important to toss away to the dragons forever.§!;;;;;;;;;;;;;;x

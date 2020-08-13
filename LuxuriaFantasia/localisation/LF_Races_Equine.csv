@@ -1,0 +1,19 @@
+taurtaur;Taurtaur;;;;;;;;;;;;;x
+taurtaur_adj;Taurtaurine;;;;;;;;;;;;;x
+LFTaurtaur1;The origins of the taurtaur are a mystery indeed. Some claim that one cold and lonely night, a horse got drunk and had sex with a horse, resulting in a half-horse half-horse hybrid. Since then, the taurtaurs have roamed the earth in disguise as normal horses. Though they look like horses, they most certainly are NOT horses. They are half-horse half-horse.\n\nThe origins of the mantaur are as mysterious as the taurtaur itself. Some claim that one cold and lonely night, a human got drunk and had sex with a human, resulting in a half-human half-human hybrid. Like the taurtaur, they have disguised themselves and have remained hidden in plain view among the normal humans. But normal humans they are not, for they are half-human half-human. Obviously.\n\nRumors of the existence of centaurs are dismissed as idiotic ramblings. A half-human half-horse? Who the fuck would even think something like that would be possible?!;;;;;;;;;;;;;x
+LFTaurtaur1T;Taurtaur and Mantaur;;;;;;;;;;;;;x
+LFTaurtaur1TTA;I am your worse nightmare.;;;;;;;;;;;;;x
+LFTaurtaur1TTB;I'm saddled with more responsibility.;;;;;;;;;;;;;x
+LFTaurtaur1TTC;My realm will be stable.;;;;;;;;;;;;;x
+LFTaurtaur1TTD;*angry mantaur noises*;;;;;;;;;;;;;x
+LFTaurtaurFakeTooltip;§Y[Root.GetTitledName]§! becomes §YMantaur§!.\nAll realm provinces that share your capital's original culture will be converted to §YMantaur§!. Trust me.;;;;;;;;;;;;;x
+LFTaurChoice;'Taurs;;;;;;;;;;;;;x
+LFTaurChoiceSilly;This option is available because you are §Yquite silly§!. Or maybe an idiot. Or both. I haven't decided yet.;;;;;;;;;;;;;x
+LFTaurtaurCulture;All realm provinces that share your capital's original culture will be converted to §YTaurtaur§!.;;;;;;;;;;;;;x
+RETTYPE_CUL_HORSE_TAUR_INFANTRY;Taurtaur Infantry;;;;;;;;;;;;;x
+RETTYPE_CUL_HORSE_TAUR_SKIRMISH;Taurtaur Skirmishers;;;;;;;;;;;;;x
+LFTaurtaur2;While Taurtaurs are the superior equines, having the best traits of both the horse and the horse, there is another Skywalker...\n\nSeataurtaurs are Taurtaurs that have lived in the seas and oceans for centuries, breeding with the local seahorse population until they have evolved into the Seataurtaur, a half horse, half horse, half seahorse. Math was never my strong point.\n\nThe Seataurtaurs have gone unnoticed for so long because of their diet of seaweed. The seaweed breaks down the chemicals in the waste of the bowels, making them fart much less. And trust me, if you've ever been to a Welsh brothel, you know how bad some of the prostitutes smell when fed only a diet of hay and cud.\n\nWill you be regulated to the land and destined to eat hay, or will you be the superior, fartless Seataurtaur?;;;;;;;;;;;;;x
+LFTaurtaur2T;Seataurtaur;;;;;;;;;;;;;x
+LFTaurtaurFakeTooltip2;§Y[Root.GetTitledName]§! becomes §YSeataurtaur§!.\nAll realm provinces that share your capital's original culture will be converted to §YSeataurtaur§! and your capital will be relocated to a nice beach-front property.;;;;;;;;;;;;;x
+LFTaurtaur2TTA;Nay.;;;;;;;;;;;;;x
+LFTaurtaur2TTB;NEIGH! *splashsplash*;;;;;;;;;;;;;x

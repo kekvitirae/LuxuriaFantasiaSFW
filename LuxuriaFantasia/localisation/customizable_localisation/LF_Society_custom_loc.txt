@@ -1,0 +1,361 @@
+defined_text = {
+	name = LFAdultTT
+
+	text = {
+		localisation_key = LFYesAdult
+		trigger = { 
+			is_adult = yes
+		}
+	}
+	text = {
+		localisation_key = LFNoAdult
+		trigger = { 
+			is_adult = no 
+		}
+	}
+	fallback_text = {
+		localisation_key = LFNeutralAdult
+	}
+}
+
+defined_text = {
+	name = LFFemaleTT
+
+	text = {
+		localisation_key = LFYesFemale
+		trigger = { 
+			is_female = yes
+		}
+	}
+	text = {
+		localisation_key = LFNoFemale
+		trigger = { 
+			is_female = no 
+		}
+	}
+	fallback_text = {
+		localisation_key = LFNeutralFemale
+	}
+}
+
+defined_text = {
+	name = LFAnyDemonTT
+
+	text = {
+		localisation_key = LFYesAnyDemon
+		trigger = { 
+			is_any_demon = yes
+		}
+	}
+	text = {
+		localisation_key = LFNoAnyDemon
+		trigger = { 
+			is_any_demon = no 
+		}
+	}
+	fallback_text = {
+		localisation_key = LFNeutralAnyDemon
+	}
+}
+
+defined_text = {
+	name = LFDemonTT
+
+	text = {
+		localisation_key = LFYesDemon
+		trigger = { 
+			is_demon = yes
+		}
+	}
+	text = {
+		localisation_key = LFNoDemon
+		trigger = { 
+			is_demon = no 
+		}
+	}
+	fallback_text = {
+		localisation_key = LFNeutralDemon
+	}
+}
+
+defined_text = {
+	name = LFToNTKitsuneTT
+
+	text = {
+		localisation_key = LFYesToNTKitsune
+		trigger = { 
+			NAND = {
+				has_global_flag = tont_is_started
+				is_kitsune = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = LFNoToNTKitsune
+		trigger = { 
+			has_global_flag = tont_is_started
+			is_kitsune = yes
+		}
+	}
+	fallback_text = {
+		localisation_key = LFNeutralToNTKitsune
+	}
+}
+
+defined_text = {
+	name = LFPrisonerTT
+
+	text = {
+		localisation_key = LFYesPrisoner
+		trigger = { 
+			prisoner = no
+		}
+	}
+	text = {
+		localisation_key = LFNoPrisoner
+		trigger = { 
+			prisoner = yes
+		}
+	}
+	fallback_text = {
+		localisation_key = LFNeutralPrisoner
+	}
+}
+
+defined_text = {
+	name = LFIncapableTT
+
+	text = {
+		localisation_key = LFYesIncapable
+		trigger = { 
+			is_incapable = no
+		}
+	}
+	text = {
+		localisation_key = LFNoIncapable
+		trigger = { 
+			is_incapable = yes
+		}
+	}
+	fallback_text = {
+		localisation_key = LFNeutralIncapable
+	}
+}
+
+defined_text = {
+	name = LFAsexualTT
+
+	text = {
+		localisation_key = LFYesAsexual
+		trigger = { 
+			NOT = {
+				trait = lf_asexual
+			}
+		}
+	}
+	text = {
+		localisation_key = LFNoAsexual
+		trigger = { 
+			trait = lf_asexual
+		}
+	}
+	fallback_text = {
+		localisation_key = LFNeutralAsexual
+	}
+}
+
+defined_text = {
+	name = LFPerfectBodyTT
+
+	text = {
+		localisation_key = LFYesPerfectBody
+		trigger = { 
+			OR = {
+				trait = ugly
+				trait = hunchback
+				trait = harelip
+				trait = clubfooted
+				trait = disfigured
+				trait = mangled
+				trait = uncouth
+				trait = giant
+				trait = dwarf
+				trait = scarred
+				trait = scarred_mid
+				trait = scarred_high
+				NOT = { trait = fair }
+			}
+		}
+	}
+	text = {
+		localisation_key = LFNoPerfectBody
+		trigger = { 
+			NOR = {
+				trait = ugly
+				trait = hunchback
+				trait = harelip
+				trait = clubfooted
+				trait = disfigured
+				trait = mangled
+				trait = uncouth
+				trait = giant
+				trait = dwarf
+				trait = scarred
+				trait = scarred_mid
+				trait = scarred_high
+				NOT = { trait = fair }
+			}
+		}
+	}
+	fallback_text = {
+		localisation_key = LFNeutralPerfectBody
+	}
+}
+
+defined_text = {
+	name = LFMinorTT
+
+	text = {
+		localisation_key = LFYesMinor
+		trigger = { 
+			OR = {
+				trait = wounded
+				trait = ill
+				trait = flu
+				trait = dysentery
+				trait = gout
+				trait = cough
+				trait = fever
+				trait = diarrhea
+				trait = vomiting
+				trait = chest_pain
+				trait = cramps
+				trait = rash
+				trait = headache
+				trait = abdominal_pain
+				trait = fatigue
+				trait = malaise
+				trait = infection
+			}
+		}
+	}
+	text = {
+		localisation_key = LFNoMinor
+		trigger = { 
+			NOR = {
+				trait = wounded
+				trait = ill
+				trait = flu
+				trait = dysentery
+				trait = gout
+				trait = cough
+				trait = fever
+				trait = diarrhea
+				trait = vomiting
+				trait = chest_pain
+				trait = cramps
+				trait = rash
+				trait = headache
+				trait = abdominal_pain
+				trait = fatigue
+				trait = malaise
+				trait = infection
+			}
+		}
+	}
+	fallback_text = {
+		localisation_key = LFNeutralMinor
+	}
+}
+
+defined_text = {
+	name = LFModerateTT
+
+	text = {
+		localisation_key = LFYesModerate
+		trigger = { 
+			OR = {
+				trait = maimed
+				trait = pneumonic
+				trait = syphilitic
+				trait = has_tuberculosis
+				trait = has_typhoid_fever
+				trait = has_typhus
+				trait = has_measles
+				trait = food_poisoning
+				trait = scurvy
+				trait = mangled
+				trait = severely_injured
+				trait = lisp
+			}
+		}
+	}
+	text = {
+		localisation_key = LFNoModerate
+		trigger = { 
+			NOR = {
+				trait = maimed
+				trait = pneumonic
+				trait = syphilitic
+				trait = has_tuberculosis
+				trait = has_typhoid_fever
+				trait = has_typhus
+				trait = has_measles
+				trait = food_poisoning
+				trait = scurvy
+				trait = mangled
+				trait = severely_injured
+				trait = lisp
+			}
+		}
+	}
+	fallback_text = {
+		localisation_key = LFNeutralModerate
+	}
+}
+
+defined_text = {
+	name = LFMajorTT
+
+	text = {
+		localisation_key = LFYesMajor
+		trigger = { 
+			OR = {
+				trait = leper
+				trait = has_bubonic_plague
+				trait = has_small_pox
+				trait = has_aztec_disease
+				trait = rabies
+				trait = cancer
+				trait = dancing_plague
+				trait = infirm
+				trait = incapable
+				trait = one_eyed
+				trait = one_handed
+				trait = one_legged
+			}
+		}
+	}
+	text = {
+		localisation_key = LFNoMajor
+		trigger = { 
+			NOR = {
+				trait = leper
+				trait = has_bubonic_plague
+				trait = has_small_pox
+				trait = has_aztec_disease
+				trait = rabies
+				trait = cancer
+				trait = dancing_plague
+				trait = infirm
+				trait = incapable
+				trait = one_eyed
+				trait = one_handed
+				trait = one_legged
+			}
+		}
+	}
+	fallback_text = {
+		localisation_key = LFNeutralMajor
+	}
+}

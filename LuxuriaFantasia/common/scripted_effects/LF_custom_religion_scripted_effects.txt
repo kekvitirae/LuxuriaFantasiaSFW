@@ -1,0 +1,1107 @@
+lf_remove_custom_holy_sites = {
+	random_province = {
+		limit = {
+			OR = { 
+				county = { is_holy_site = lf_luxuria_custom } 
+				any_province_holding = { is_holy_site = lf_luxuria_custom } 
+			}
+		}
+		county = {
+			remove_holy_site = lf_luxuria_custom
+			remove_holy_site = lf_luxuria_custom_reformed
+		}
+	}
+	random_province = {
+		limit = {
+			OR = { 
+				county = { is_holy_site = lf_luxuria_custom } 
+				any_province_holding = { is_holy_site = lf_luxuria_custom } 
+			}
+		}
+		county = {
+			remove_holy_site = lf_luxuria_custom
+			remove_holy_site = lf_luxuria_custom_reformed
+		}
+	}
+	random_province = {
+		limit = {
+			OR = { 
+				county = { is_holy_site = lf_luxuria_custom } 
+				any_province_holding = { is_holy_site = lf_luxuria_custom } 
+			}
+		}
+		county = {
+			remove_holy_site = lf_luxuria_custom
+			remove_holy_site = lf_luxuria_custom_reformed
+		}
+	}
+	random_province = {
+		limit = {
+			OR = { 
+				county = { is_holy_site = lf_luxuria_custom } 
+				any_province_holding = { is_holy_site = lf_luxuria_custom } 
+			}
+		}
+		county = {
+			remove_holy_site = lf_luxuria_custom
+			remove_holy_site = lf_luxuria_custom_reformed
+		}
+	}
+	random_province = {
+		limit = {
+			OR = { 
+				county = { is_holy_site = lf_luxuria_custom } 
+				any_province_holding = { is_holy_site = lf_luxuria_custom } 
+			}
+		}
+		county = {
+			remove_holy_site = lf_luxuria_custom
+			remove_holy_site = lf_luxuria_custom_reformed
+		}
+	}
+}
+
+lf_customize_religion_holy_site_full_random = {
+	random_province = {
+		limit = {
+			NOR = { 
+				county = { is_holy_site = lf_luxuria_custom } 
+				any_province_holding = { is_holy_site = lf_luxuria_custom } 
+			}
+			is_land = yes
+		}
+		county = { 
+			set_holy_site = lf_luxuria_custom 
+			set_holy_site = lf_luxuria_custom_reformed 
+		}
+	}
+}	
+
+lf_customize_religion_holy_site_regional_random = {
+	
+	if = {
+		limit = {
+			capital_scope = {
+				region = world_europe_west
+			}
+		}
+		random_province = {
+			limit = {
+				NOR = { 
+					county = { is_holy_site = lf_luxuria_custom } 
+					any_province_holding = { is_holy_site = lf_luxuria_custom } 
+				}
+				region = world_europe_west
+			}
+			county = { 
+				set_holy_site = lf_luxuria_custom 
+				set_holy_site = lf_luxuria_custom_reformed 
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			capital_scope = {
+				region = world_europe_north
+			}
+		}
+		random_province = {
+			limit = {
+				NOR = { 
+					county = { is_holy_site = lf_luxuria_custom } 
+					any_province_holding = { is_holy_site = lf_luxuria_custom } 
+				}
+				region = world_europe_north
+			}
+			county = { 
+				set_holy_site = lf_luxuria_custom 
+				set_holy_site = lf_luxuria_custom_reformed 
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			capital_scope = {
+				region = world_europe_south
+			}
+		}
+		random_province = {
+			limit = {
+				NOR = { 
+					county = { is_holy_site = lf_luxuria_custom } 
+					any_province_holding = { is_holy_site = lf_luxuria_custom } 
+				}
+				region = world_europe_south
+			}
+			county = { 
+				set_holy_site = lf_luxuria_custom 
+				set_holy_site = lf_luxuria_custom_reformed 
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			capital_scope = {
+				region = world_europe_east
+			}
+		}
+		random_province = {
+			limit = {
+				NOR = { 
+					county = { is_holy_site = lf_luxuria_custom } 
+					any_province_holding = { is_holy_site = lf_luxuria_custom } 
+				}
+				region = world_europe_east
+			}
+			county = { 
+				set_holy_site = lf_luxuria_custom 
+				set_holy_site = lf_luxuria_custom_reformed 
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			capital_scope = {
+				region = world_middle_east
+			}
+		}
+		random_province = {
+			limit = {
+				NOR = { 
+					county = { is_holy_site = lf_luxuria_custom } 
+					any_province_holding = { is_holy_site = lf_luxuria_custom } 
+				}
+				region = world_middle_east
+			}
+			county = { 
+				set_holy_site = lf_luxuria_custom 
+				set_holy_site = lf_luxuria_custom_reformed 
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			capital_scope = {
+				region = world_india
+			}
+		}
+		random_province = {
+			limit = {
+				NOT = { county = { is_holy_site = lf_luxuria_custom } }
+				region = world_india
+			}
+			county = { 
+				set_holy_site = lf_luxuria_custom 
+				set_holy_site = lf_luxuria_custom_reformed 
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			capital_scope = {
+				region = world_steppe
+			}
+		}
+		random_province = {
+			limit = {
+				NOT = { county = { is_holy_site = lf_luxuria_custom } }
+				region = world_steppe
+			}
+			county = { set_holy_site = lf_luxuria_custom }
+			county = { set_holy_site = lf_luxuria_custom_reformed }
+		}
+	}
+	else_if = {
+		limit = {
+			capital_scope = {
+				region = world_himalayas
+			}
+		}
+		random_province = {
+			limit = {
+				NOT = { county = { is_holy_site = lf_luxuria_custom } }
+				OR = {
+					region = world_india
+					region = world_himalayas
+					region = world_steppe_east
+				}
+			}
+			county = { set_holy_site = lf_luxuria_custom }
+			county = { set_holy_site = lf_luxuria_custom_reformed }
+		}
+		random_province = {
+			limit = {
+				NOT = { county = { is_holy_site = lf_luxuria_custom } }
+				OR = {
+					region = world_india
+					region = world_himalayas
+					region = world_steppe_east
+				}
+			}
+			county = { set_holy_site = lf_luxuria_custom }
+			county = { set_holy_site = lf_luxuria_custom_reformed }
+		}
+	}
+	else_if = {
+		limit = {
+			capital_scope = {
+				region = world_africa
+			}
+		}
+		random_province = {
+			limit = {
+				NOT = { county = { is_holy_site = lf_luxuria_custom } }
+				region = world_africa
+			}
+			county = { set_holy_site = lf_luxuria_custom }
+			county = { set_holy_site = lf_luxuria_custom_reformed }
+		}
+	}
+	else_if = {
+		limit = {
+			capital_scope = {
+				region = world_persia
+			}
+		}
+		random_province = {
+			limit = {
+				NOT = { county = { is_holy_site = lf_luxuria_custom } }
+				OR = { 
+					region = world_persia
+					region = world_india_rajastan
+					region = world_middle_east
+				}
+			}
+			county = { set_holy_site = lf_luxuria_custom }
+			county = { set_holy_site = lf_luxuria_custom_reformed }
+		}
+	}
+	else_if = {
+		limit = {
+			capital_scope = {
+				region = world_asia_minor
+			}
+		}
+		random_province = {
+			limit = {
+				NOT = { county = { is_holy_site = lf_luxuria_custom } }
+				OR = { 
+					region = world_asia_minor
+					region = world_europe_south_east
+					region = world_middle_east_jerusalem
+				}
+			}
+			county = { set_holy_site = lf_luxuria_custom }
+			county = { set_holy_site = lf_luxuria_custom_reformed }
+		}
+	}
+}	
+
+lf_customize_religion_holy_site_tight_random = {
+	
+	if = {
+		limit = {
+			capital_scope = {
+				region = world_europe_west_brittania
+			}
+		}
+		random_province = {
+			limit = {
+				NOR = { 
+					county = { is_holy_site = lf_luxuria_custom } 
+					any_province_holding = { is_holy_site = lf_luxuria_custom } 
+				}
+				region = world_europe_west_brittania
+			}
+			county = { 
+				set_holy_site = lf_luxuria_custom 
+				set_holy_site = lf_luxuria_custom_reformed 
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			capital_scope = {
+				region = world_europe_west_germania
+			}
+		}
+		random_province = {
+			limit = {
+				NOR = { 
+					county = { is_holy_site = lf_luxuria_custom } 
+					any_province_holding = { is_holy_site = lf_luxuria_custom } 
+				}
+				region = world_europe_west_germania
+			}
+			county = { 
+				set_holy_site = lf_luxuria_custom 
+				set_holy_site = lf_luxuria_custom_reformed 
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			capital_scope = {
+				region = world_europe_west_francia
+			}
+		}
+		random_province = {
+			limit = {
+				NOR = { 
+					county = { is_holy_site = lf_luxuria_custom } 
+					any_province_holding = { is_holy_site = lf_luxuria_custom } 
+				}
+				region = world_europe_west_francia
+			}
+			county = { 
+				set_holy_site = lf_luxuria_custom 
+				set_holy_site = lf_luxuria_custom_reformed 
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			capital_scope = {
+				region = world_europe_west_iberia
+			}
+		}
+		random_province = {
+			limit = {
+				NOR = { 
+					county = { is_holy_site = lf_luxuria_custom } 
+					any_province_holding = { is_holy_site = lf_luxuria_custom } 
+				}
+				region = world_europe_west_iberia
+			}
+			county = { 
+				set_holy_site = lf_luxuria_custom 
+				set_holy_site = lf_luxuria_custom_reformed 
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			capital_scope = {
+				region = world_europe_north
+			}
+		}
+		random_province = {
+			limit = {
+				NOR = { 
+					county = { is_holy_site = lf_luxuria_custom } 
+					any_province_holding = { is_holy_site = lf_luxuria_custom } 
+				}
+				region = world_europe_north
+			}
+			county = { 
+				set_holy_site = lf_luxuria_custom 
+				set_holy_site = lf_luxuria_custom_reformed 
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			capital_scope = {
+				region = world_europe_south
+			}
+		}
+		random_province = {
+			limit = {
+				NOT = { county = { is_holy_site = lf_luxuria_custom } }
+				region = world_europe_south
+			}
+			county = { 
+				set_holy_site = lf_luxuria_custom 
+				set_holy_site = lf_luxuria_custom_reformed 
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			capital_scope = {
+				region = world_europe_east
+			}
+		}
+		random_province = {
+			limit = {
+				NOT = { county = { is_holy_site = lf_luxuria_custom } }
+				region = world_europe_east
+			}
+			county = { set_holy_site = lf_luxuria_custom }
+			county = { set_holy_site = lf_luxuria_custom_reformed }
+		}
+	}
+	else_if = {
+		limit = {
+			capital_scope = {
+				region = world_india
+			}
+		}
+		random_province = {
+			limit = {
+				NOT = { county = { is_holy_site = lf_luxuria_custom } }
+				region = world_india
+			}
+			county = { set_holy_site = lf_luxuria_custom }
+			county = { set_holy_site = lf_luxuria_custom_reformed }
+		}
+	}
+	else_if = {
+		limit = {
+			capital_scope = {
+				region = world_middle_east
+			}
+		}
+		random_province = {
+			limit = {
+				NOT = { county = { is_holy_site = lf_luxuria_custom } }
+				region = world_middle_east
+			}
+			county = { set_holy_site = lf_luxuria_custom }
+			county = { set_holy_site = lf_luxuria_custom_reformed }
+		}
+	}
+	else_if = {
+		limit = {
+			capital_scope = {
+				region = world_africa_north
+			}
+		}
+		random_province = {
+			limit = {
+				NOT = { county = { is_holy_site = lf_luxuria_custom } }
+				region = world_africa_north
+			}
+			county = { set_holy_site = lf_luxuria_custom }
+			county = { set_holy_site = lf_luxuria_custom_reformed }
+		}
+	}
+	else_if = {
+		limit = {
+			capital_scope = {
+				region = world_africa_west
+			}
+		}
+		random_province = {
+			limit = {
+				NOT = { county = { is_holy_site = lf_luxuria_custom } }
+				OR = {
+					region = world_africa_west
+					region = world_africa_central
+				}
+			}
+			county = { set_holy_site = lf_luxuria_custom }
+			county = { set_holy_site = lf_luxuria_custom_reformed }
+		}
+	}
+	else_if = {
+		limit = {
+			capital_scope = {
+				region = world_africa_central
+			}
+		}
+		random_province = {
+			limit = {
+				NOT = { county = { is_holy_site = lf_luxuria_custom } }
+				OR = {
+					region = world_africa_west
+					region = world_africa_central
+					region = world_africa_east
+				}
+			}
+			county = { set_holy_site = lf_luxuria_custom }
+			county = { set_holy_site = lf_luxuria_custom_reformed }
+		}
+	}
+	else_if = {
+		limit = {
+			capital_scope = {
+				region = world_africa_east
+			}
+		}
+		random_province = {
+			limit = {
+				NOT = { county = { is_holy_site = lf_luxuria_custom } }
+				OR = {
+					region = world_africa_central
+					region = world_africa_east
+				}
+			}
+			county = { set_holy_site = lf_luxuria_custom }
+			county = { set_holy_site = lf_luxuria_custom_reformed }
+		}
+	}
+	else_if = {
+		limit = {
+			capital_scope = {
+				region = world_himalayas
+			}
+		}
+		random_province = {
+			limit = {
+				NOT = { county = { is_holy_site = lf_luxuria_custom } }
+				region = world_himalayas
+			}
+			county = { set_holy_site = lf_luxuria_custom }
+			county = { set_holy_site = lf_luxuria_custom_reformed }
+		}
+	}
+	else_if = {
+		limit = {
+			capital_scope = {
+				region = world_persia
+			}
+		}
+		random_province = {
+			limit = {
+				NOT = { county = { is_holy_site = lf_luxuria_custom } }
+				region = world_persia
+			}
+			county = { set_holy_site = lf_luxuria_custom }
+			county = { set_holy_site = lf_luxuria_custom_reformed }
+		}
+	}
+	else_if = {
+		limit = {
+			capital_scope = {
+				region = world_asia_minor
+			}
+		}
+		random_province = {
+			limit = {
+				NOT = { county = { is_holy_site = lf_luxuria_custom } }
+				region = world_asia_minor
+			}
+			county = { set_holy_site = lf_luxuria_custom }
+			county = { set_holy_site = lf_luxuria_custom_reformed }
+		}
+	}
+	else_if = {
+		limit = {
+			capital_scope = {
+				region = world_steppe
+			}
+		}
+		random_province = {
+			limit = {
+				NOT = { county = { is_holy_site = lf_luxuria_custom } }
+				region = world_steppe
+			}
+			county = { set_holy_site = lf_luxuria_custom }
+			county = { set_holy_site = lf_luxuria_custom_reformed }
+		}
+	}
+}	
+
+lf_add_lilith_gods = {
+	lf_luxuria_custom = {
+		remove_god_names = yes
+		remove_evil_god_names = yes
+		add_god_name = lf_god_lilith
+		set_high_god_name = lf_god_lilith
+		add_evil_god_name = GOD_GOD
+	}
+	hidden_tooltip = {
+			lf_luxuria_custom_reformed = {
+			remove_god_names = yes
+			remove_evil_god_names = yes
+			add_god_name = lf_god_lilith
+			set_high_god_name = lf_god_lilith
+			add_evil_god_name = GOD_GOD
+		}
+	}
+}
+
+lf_add_seldarine_gods = {
+	lf_luxuria_custom = {
+		remove_god_names = yes
+		remove_evil_god_names = yes
+		set_high_god_name = lf_corellon
+		add_god_name = lf_angharradh
+		add_god_name = lf_rillifane
+		add_god_name = lf_alathrien
+		add_god_name = lf_vandria
+		add_god_name = lf_solonor
+		add_evil_god_name = lf_lolth
+		add_evil_god_name = lf_vhaeraun
+		add_evil_god_name = lf_gruumsh
+	}
+	hidden_tooltip = {
+		lf_luxuria_custom_reformed = {
+			remove_god_names = yes
+			remove_evil_god_names = yes
+			set_high_god_name = lf_corellon
+			add_god_name = lf_angharradh
+			add_god_name = lf_rillifane
+			add_god_name = lf_alathrien
+			add_god_name = lf_vandria
+			add_god_name = lf_solonor
+			add_evil_god_name = lf_lolth
+			add_evil_god_name = lf_vhaeraun
+			add_evil_god_name = lf_gruumsh
+		}
+	}
+}
+
+lf_add_orcish_gods = {
+	lf_luxuria_custom = {
+		remove_god_names = yes
+		remove_evil_god_names = yes
+		set_high_god_name = lf_gruumsh
+		add_god_name = lf_luthic
+		add_god_name = lf_illneval
+		add_god_name = lf_bahgfru
+		add_god_name = lf_shargaas
+		add_god_name = lf_yurtrus
+		add_evil_god_name = lf_corellon
+		add_evil_god_name = lf_lolth
+	}
+	hidden_tooltip = {
+		lf_luxuria_custom_reformed = {
+			remove_god_names = yes
+			remove_evil_god_names = yes
+			set_high_god_name = lf_gruumsh
+			add_god_name = lf_luthic
+			add_god_name = lf_illneval
+			add_god_name = lf_bahgfru
+			add_god_name = lf_shargaas
+			add_god_name = lf_yurtrus
+			add_evil_god_name = lf_corellon
+			add_evil_god_name = lf_lolth
+		}
+	}
+}
+
+lf_add_seelie_gods = {
+	lf_luxuria_custom = {
+		remove_god_names = yes
+		remove_evil_god_names = yes
+		set_high_god_name = lf_oberon
+		add_god_name = lf_titania
+		add_god_name = lf_andraste
+		add_god_name = lf_babd_catha
+		add_god_name = lf_brighid
+		add_god_name = lf_scathach
+		add_evil_god_name = lf_storm_hag
+		add_evil_god_name = lf_ankou
+		add_evil_god_name = lf_leanhaum_shee
+	}
+	hidden_tooltip = {
+		lf_luxuria_custom_reformed = {
+			remove_god_names = yes
+			remove_evil_god_names = yes
+			set_high_god_name = lf_oberon
+			add_god_name = lf_titania
+			add_god_name = lf_andraste
+			add_god_name = lf_babd_catha
+			add_god_name = lf_brighid
+			add_god_name = lf_scathach
+			add_evil_god_name = lf_storm_hag
+			add_evil_god_name = lf_ankou
+			add_evil_god_name = lf_leanhaum_shee
+		}
+	}
+}
+
+lf_add_cat_gods	= {
+	lf_luxuria_custom = {
+		remove_god_names = yes
+		remove_evil_god_names = yes
+		set_high_god_name = lf_bast
+		add_god_name = lf_fluffy
+		add_god_name = lf_ariandel
+		add_god_name = lf_tigger
+		add_god_name = lf_shadow
+		add_god_name = lf_luna
+		add_god_name = lf_chloe
+		add_evil_god_name = lf_rover
+	}
+	hidden_tooltip = {
+		lf_luxuria_custom_reformed = {
+			remove_god_names = yes
+			remove_evil_god_names = yes
+			set_high_god_name = lf_bast
+			add_god_name = lf_fluffy
+			add_god_name = lf_ariandel
+			add_god_name = lf_tigger
+			add_god_name = lf_shadow
+			add_god_name = lf_luna
+			add_god_name = lf_chloe
+			add_evil_god_name = lf_rover
+		}
+	}
+}
+
+lf_add_weeb_gods = {
+	lf_luxuria_custom = {
+		remove_god_names = yes
+		remove_evil_god_names = yes
+		set_high_god_name = THE_KAMI
+		add_god_name = AMATERASU
+		add_god_name = FUJIN
+		add_god_name = IZANAGI_MIKOTO
+		add_god_name = IZANAMI_MIKOTO
+		add_god_name = RYUJIN
+		add_god_name = RAIJIN
+		add_god_name = OKAMI
+		add_evil_god_name = THE_EVIL_KAMI
+	}
+	hidden_tooltip = {
+		lf_luxuria_custom_reformed = {
+			remove_god_names = yes
+			remove_evil_god_names = yes
+			set_high_god_name = THE_KAMI
+			add_god_name = AMATERASU
+			add_god_name = FUJIN
+			add_god_name = IZANAGI_MIKOTO
+			add_god_name = IZANAMI_MIKOTO
+			add_god_name = RYUJIN
+			add_god_name = RAIJIN
+			add_god_name = OKAMI
+			add_evil_god_name = THE_EVIL_KAMI
+		}
+	}
+}
+
+lf_add_ffxiv_gods = {
+	lf_luxuria_custom = {
+		remove_god_names = yes
+		remove_evil_god_names = yes
+		add_god_name = HALONE
+		add_god_name = MENPHINA
+		add_god_name = THALIAK
+		add_god_name = NYMEIA
+		add_god_name = LLYMLAEN
+		add_god_name = OSCHON
+		add_god_name = BYREGOT
+		add_god_name = RHALGR
+		add_god_name = AZEYMA
+		add_god_name = NALDTHAL
+		add_god_name = NOPHICA
+		add_god_name = ALTHYK
+		set_high_god_name = HYDAELYN
+		add_evil_god_name = ZODIARK
+		add_evil_god_name = FFXIV_WARRIOR_DARK
+	}
+	hidden_tooltip = {
+		lf_luxuria_custom_reformed = {
+			remove_god_names = yes
+			remove_evil_god_names = yes
+			add_god_name = HALONE
+			add_god_name = MENPHINA
+			add_god_name = THALIAK
+			add_god_name = NYMEIA
+			add_god_name = LLYMLAEN
+			add_god_name = OSCHON
+			add_god_name = BYREGOT
+			add_god_name = RHALGR
+			add_god_name = AZEYMA
+			add_god_name = NALDTHAL
+			add_god_name = NOPHICA
+			add_god_name = ALTHYK
+			set_high_god_name = HYDAELYN
+			add_evil_god_name = ZODIARK
+			add_evil_god_name = FFXIV_WARRIOR_DARK
+		}
+	}
+}
+	
+lf_add_ffxiv_primal_gods = {
+	lf_luxuria_custom = {
+		remove_god_names = yes
+		remove_evil_god_names = yes
+		add_god_name = IFRIT
+		add_god_name = TITAN
+		add_god_name = GARUDA
+		add_god_name = ULTIMA
+		add_god_name = LEVIATHAN
+		add_god_name = SHIVA
+		add_god_name = KING_MOG
+		add_god_name = ODIN
+		add_god_name = RAVANA
+		add_god_name = BISMARCK
+		add_god_name = SEPHIROT
+		add_god_name = SOPHIA
+		add_god_name = ZURVAN
+		add_god_name = SUSANO
+		add_god_name = LAKSHMI
+		add_god_name = TSUKUYOMI
+		set_high_god_name = BAHAMUT
+		add_evil_god_name = HYDAELYN
+		add_evil_god_name = FFXIV_WARRIOR_LIGHT
+	}
+	hidden_tooltip = {
+		lf_luxuria_custom_reformed = {
+			remove_god_names = yes
+			remove_evil_god_names = yes
+			add_god_name = IFRIT
+			add_god_name = TITAN
+			add_god_name = GARUDA
+			add_god_name = ULTIMA
+			add_god_name = LEVIATHAN
+			add_god_name = SHIVA
+			add_god_name = KING_MOG
+			add_god_name = ODIN
+			add_god_name = RAVANA
+			add_god_name = BISMARCK
+			add_god_name = SEPHIROT
+			add_god_name = SOPHIA
+			add_god_name = ZURVAN
+			add_god_name = SUSANO
+			add_god_name = LAKSHMI
+			add_god_name = TSUKUYOMI
+			set_high_god_name = BAHAMUT
+			add_evil_god_name = HYDAELYN
+			add_evil_god_name = FFXIV_WARRIOR_LIGHT
+		}
+	}
+}
+
+lf_custom_religion_realm_characters = {
+	capital_scope = {
+		ROOT = {
+			any_realm_character = {
+				limit = {
+					religion = PREVPREV
+				}
+				religion = lf_luxuria_custom
+			}
+		}
+	}
+}
+
+lf_custom_religion_realm_provinces = {
+	capital_scope = {
+		ROOT = {
+			any_realm_province = {
+				limit = {
+					religion = PREVPREV
+				}
+				religion = lf_luxuria_custom
+			}
+		}
+	}
+}
+
+lf_add_true_custom_gods = {
+	lf_luxuria_custom = {
+		remove_god_names = yes
+		remove_evil_god_names = yes
+		set_high_god_name = lf_custom_high_god
+		add_god_name = lf_custom_god1
+		add_god_name = lf_custom_god2
+		add_god_name = lf_custom_god3
+		add_evil_god_name = lf_custom_evil_god1
+		add_evil_god_name = lf_custom_evil_god2
+	}
+	lf_luxuria_custom_reformed = {
+		remove_god_names = yes
+		remove_evil_god_names = yes
+		set_high_god_name = lf_custom_high_god
+		add_god_name = lf_custom_god1
+		add_god_name = lf_custom_god2
+		add_god_name = lf_custom_god3
+		add_evil_god_name = lf_custom_evil_god1
+		add_evil_god_name = lf_custom_evil_god2
+	}
+}
+
+lf_fix_dumb_vanilla_name_bug = {
+	if = {
+		limit = {
+			ai = no
+		}
+		lf_luxuria_custom_reformed = {
+			if = {
+				limit = { 
+					is_reformed_religion = yes 
+				}
+				lf_fix_dumb_vanilla_name_bug_step2 = yes
+			}
+		}
+	}
+}
+
+lf_fix_dumb_vanilla_name_bug_step2 = {
+	ROOT = {
+		trigger_switch = {
+			on_trigger = has_global_flag
+			lf_true_custom_religion_name = {
+				lf_add_true_custom_gods = yes
+			}
+			
+			lf_lilith_religion_name = {
+				lf_add_lilith_gods = yes
+			}
+			
+			lf_seldarine_religion_name = {
+				lf_add_seldarine_gods = yes
+			}
+
+			lf_orcish_religion_name = {
+				lf_add_orcish_gods = yes
+			}
+
+			lf_fae_religion_name = {
+				lf_add_seelie_gods = yes
+			}
+
+			lf_meow_religion_name = {
+				lf_add_cat_gods = yes
+			}
+
+			lf_weeb_religion_name = {
+				lf_add_weeb_gods = yes
+			}
+
+			lf_twelve_religion_name = {
+				lf_add_ffxiv_gods = yes
+			}
+
+			lf_primal_religion_name = {
+				lf_add_ffxiv_primal_gods = yes
+			}
+		}
+		if = {
+			limit = { #Holy Family actually becomes Holy.
+				has_dlc = "Holy Fury" 
+				OR = { 
+					has_religion_feature = religion_holy_family 
+					has_religion_feature = religion_feature_zun
+				}
+			}
+			if = {
+				limit = { #Reformer himself, but only if he is not becoming the High God due to synergy.
+					NOT = { has_religion_feature = religion_temporal_head }
+					OR = { 
+						AND = { 
+							is_female = no
+							NOT = { has_religion_feature = religion_matriarchal }
+						}
+						AND = { 
+							is_female = yes
+							NOT = { has_religion_feature = religion_patriarchal }
+						}
+					}
+				}
+				add_god_name = string_reformer_god
+			}
+			if = {
+				limit = { #Spouse.
+					is_married = yes
+					OR = { 
+						AND = { 
+							is_female = yes
+							NOT = { has_religion_feature = religion_matriarchal }
+						}
+						AND = { 
+							is_female = no
+							NOT = { has_religion_feature = religion_patriarchal }
+						}
+					}
+				}
+				random_spouse = { save_event_target_as = scoped_god_spouse }
+				add_god_name = string_reformer_spouse_god
+			}
+			if = {
+				limit = { #Spouse, again.
+					is_married = yes
+					OR = { 
+						AND = { 
+							is_female = yes
+							has_religion_feature = religion_matriarchal
+						}
+						AND = { 
+							is_female = no
+							has_religion_feature = religion_patriarchal
+						}
+					}
+				}
+				random_spouse = { save_event_target_as = scoped_god_spouse }
+				add_evil_god_name = string_reformer_spouse_god
+			}
+			if = {
+				limit = { #Child.
+					any_child = { 
+						OR = { 
+							AND = { 
+								is_female = no
+								NOT = { ROOT = { has_religion_feature = religion_matriarchal } }
+							}
+							AND = { 
+								is_female = yes
+								NOT = { ROOT = { has_religion_feature = religion_matriarchal } }
+							}
+						}
+					}
+				}
+				random_child = { 
+					limit = { 
+						OR = { 
+							AND = { 
+								is_female = no
+								NOT = { ROOT = { has_religion_feature = religion_matriarchal } }
+							}
+							AND = { 
+								is_female = yes
+								NOT = { ROOT = { has_religion_feature = religion_matriarchal } }
+							}
+						}
+					}
+					preferred_limit = {
+						is_primary_heir = ROOT
+					}
+					save_event_target_as = scoped_god_child
+				}
+				add_god_name = string_reformer_child_god
+			}
+			if = {
+				limit = { #Sibling.
+					any_sibling = { 
+						OR = { 
+							AND = { 
+								is_female = no
+								NOT = { ROOT = { has_religion_feature = religion_matriarchal } }
+							}
+							AND = { 
+								is_female = yes
+								NOT = { ROOT = { has_religion_feature = religion_matriarchal } }
+							}
+						}
+					}
+				}
+				random_sibling = { 
+					limit = { 
+						OR = { 
+							AND = { 
+								is_female = no
+								NOT = { ROOT = { has_religion_feature = religion_matriarchal } }
+							}
+							AND = { 
+								is_female = yes
+								NOT = { ROOT = { has_religion_feature = religion_matriarchal } }
+							}
+						}
+					}
+					preferred_limit = {
+						is_primary_heir = ROOT
+					}
+					save_event_target_as = scoped_god_sibling
+				}
+				add_god_name = string_reformer_sibling_god
+			}
+		}
+
+		if = {
+			limit = { #Reformer becomes the High God.
+				has_dlc = "Holy Fury" 
+				OR = { 
+					has_religion_feature = religion_holy_family 
+					has_religion_feature = religion_feature_zun
+				}
+				has_religion_feature = religion_temporal_head 
+			}
+			set_high_god_name = string_reformer_god
+		}
+	}
+}

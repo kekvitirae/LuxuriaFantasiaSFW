@@ -1,0 +1,392 @@
+namespace = LFPotions
+
+narrative_event = {
+	id = LFPotions.1
+	title = LFPotions1T
+	picture = lf_potion_seller
+	desc = LFPotions1
+	is_triggered_only = yes
+	option = { # Bodily Enhancement
+		name = LFPotions1TTA
+		narrative_event = { id = LFPotions.2 }
+	}
+	option = { # Mental Enhancement
+		name = LFPotions1TTB
+		narrative_event = { id = LFPotions.3 }
+	}
+	option = { # Exotic Potions
+		name = LFPotions1TTC
+		narrative_event = { id = LFPotions.4 }
+		ai_chance = {
+			factor = 0 # Don't need the AI to do anything crazy
+		}
+	}
+	option = { # Nothing
+		name = LFPotions1TTD
+		ai_chance = {
+			factor = 0 # They have already chosen to buy a potion from the decision
+		}
+		hidden_tooltip = {
+			remove_character_modifier = lf_potion_temp
+		}
+	}
+}
+
+narrative_event = {
+	id = LFPotions.2
+	title = LFPotions2T
+	picture = lf_potion_seller
+	desc = LFPotions2
+	is_triggered_only = yes
+	option = { # Strength
+		name = LFPotions2TTA
+		wealth = -50
+		custom_tooltip = {
+			text = lf_strength_potion_tooltip
+		}
+		hidden_tooltip = {
+			remove_character_modifier = lf_potion_temp
+			add_character_modifier = {
+				modifier = lf_potion_cd
+				years = 2
+			}
+			add_character_modifier = {
+				modifier = lf_potion_strength
+				years = 2
+			}
+		}
+	}
+	option = { # Beauty
+		name = LFPotions2TTB
+		wealth = -50
+		custom_tooltip = {
+			text = lf_beauty_potion_tooltip
+		}
+		hidden_tooltip = {
+			remove_character_modifier = lf_potion_temp
+			add_character_modifier = {
+				modifier = lf_potion_cd
+				years = 2
+			}
+			lf_beauty_potion_effect = yes
+		}
+	}
+	option = { # Resist Disease
+		name = LFPotions2TTC
+		wealth = -50
+		if = {
+			limit = {
+				lf_is_silly = yes
+			}
+			custom_tooltip = {
+				text = lf_resist_disease_tooltip_silly
+			}
+		}
+		else = {
+			custom_tooltip = {
+				text = lf_resist_disease_tooltip
+			}
+		}
+		hidden_tooltip = {
+			remove_character_modifier = lf_potion_temp
+			add_character_modifier = {
+				modifier = lf_potion_cd
+				years = 2
+			}
+			add_character_modifier = {
+				modifier = lf_potion_resist_disease
+				years = 2
+			}
+			lf_check_disease_immunity = yes
+			character_event = { id = LFPotions.5 days = 730 }
+		}
+	}
+	option = { # Go back
+		name = LFPotionsGoBack
+		ai_chance = {
+			factor = 0 # They have already chosen to buy something
+		}
+		narrative_event = { id = LFPotions.1 }
+	}
+}	
+
+narrative_event = {
+	id = LFPotions.3
+	title = LFPotions3T
+	picture = lf_potion_seller
+	desc = LFPotions3
+	is_triggered_only = yes
+	option = { # Paranoia
+		name = LFPotions3TTA
+		wealth = -50
+		hidden_tooltip = {
+			remove_character_modifier = lf_potion_temp
+			add_character_modifier = {
+				modifier = lf_potion_cd
+				years = 2
+			}
+			add_character_modifier = {
+				modifier = lf_potion_paranoia
+				years = 2
+			}
+		}
+	}
+	option = { # Amnesia
+		name = LFPotions3TTB
+		wealth = -50
+		hidden_tooltip = {
+			remove_character_modifier = lf_potion_temp
+			add_character_modifier = {
+				modifier = lf_potion_cd
+				years = 2
+			}
+			character_event = { id = LFAmnesia.1 }
+		}
+	}
+	option = { # Wisdom
+		name = LFPotions3TTC
+		wealth = -50
+		hidden_tooltip = {
+			remove_character_modifier = lf_potion_temp
+			add_character_modifier = {
+				modifier = lf_potion_cd
+				years = 2
+			}
+			add_character_modifier = {
+				modifier = lf_potion_wisdom
+				years = 2
+			}
+			if = {
+				limit = {
+					lf_is_silly = yes
+				}
+				character_event = { id = LFPotions.6 }
+			}
+		}
+	}
+	option = { # Go back
+		name = LFPotionsGoBack
+		ai_chance = {
+			factor = 0 # They have already chosen to buy something
+		}
+		narrative_event = { id = LFPotions.1 }
+	}
+}	
+
+narrative_event = {
+	id = LFPotions.4
+	title = LFPotions4T
+	picture = lf_potion_seller
+	desc = LFPotions4
+	is_triggered_only = yes
+	option = { # Change
+		name = LFPotions4TTA
+		wealth = -50
+		if = {
+			limit = {
+				is_mage = yes
+			}
+			custom_tooltip = {
+				text = lf_change_potion_mage_tooltip
+			}
+		}
+		else = {
+			custom_tooltip = {
+				text = lf_change_potion_tooltip
+			}
+		}
+	
+		hidden_tooltip = {
+			remove_character_modifier = lf_potion_temp
+			add_character_modifier = {
+				modifier = lf_potion_cd
+				years = 2
+			}
+			set_gender = opposite
+			if = {
+				limit = {
+					trait = lf_futa
+				}
+				remove_trait = lf_futa
+				set_character_flag = lf_former_futa
+			}
+			if = {
+				limit = {
+					has_character_flag = lf_former_futa
+				}
+				clr_character_flag = lf_former_futa
+				add_trait = lf_futa
+			}
+			trigger_switch = {
+				on_trigger = trait
+				lf_elf = {
+					set_character_flag = lf_elf_genderbend
+				}
+				elf = {
+					set_character_flag = lf_elf_genderbend
+				}
+				lf_fairy = {
+					set_character_flag = lf_fairy_genderbend
+				}
+				fae_kin = {
+					set_character_flag = lf_fairy_genderbend
+				}
+				lf_orc = {
+					set_character_flag = lf_orc_genderbend
+				}
+				orc = {
+					set_character_flag = lf_orc_genderbend
+				}
+				lf_kitsune = {
+					set_character_flag = lf_kitsune_genderbend
+				}
+				fox_kin = {
+					set_character_flag = lf_kitsune_genderbend
+				}
+				lf_neko = {
+					set_character_flag = lf_neko_genderbend
+				}
+				cat_kin = {
+					set_character_flag = lf_aura_genderbend
+				}
+				dwse_lizard = {
+					set_character_flag = lf_aura_genderbend
+				}
+				lf_demon = {
+					set_character_flag = lf_demon_genderbend
+				}
+				demon_kin = {
+					set_character_flag = lf_demon_genderbend
+				}
+				lf_angel = {
+					set_character_flag = lf_divine_genderbend
+				}
+				angel_kin = {
+					set_character_flag = lf_divine_genderbend
+				}
+				lf_fallen_angel = {
+					set_character_flag = lf_demon_genderbend
+				}
+			}
+			lf_masculine_feminine_portrait_change = yes
+		}
+	}
+	option = { # Age
+		name = LFPotions4TTB
+		trigger = {
+			age = 21
+		}
+		wealth = -50
+		if = {
+			limit = {
+				is_mage = yes
+			}
+			custom_tooltip = {
+				text = lf_age_potion_mage_tooltip
+			}
+		}
+		else = {
+			custom_tooltip = {
+				text = lf_age_potion_tooltip
+			}
+		}
+		hidden_tooltip = {
+			if = {
+				limit = {
+					NOT = { has_character_modifier = lf_potion_youth }
+				}
+				add_age = -5
+				add_character_modifier = {
+					modifier = lf_potion_cd
+					years = 2
+				}
+				remove_character_modifier = lf_potion_temp
+				add_character_modifier = {
+					modifier = lf_potion_youth
+					years = 10
+				}
+			}
+			else = {
+				add_character_modifier = {
+					modifier = lf_potion_cd
+					years = 2
+				}
+			}
+			
+		}
+	}
+	option = { # Midas Touch
+		name = LFPotions4TTC
+		wealth = -50
+		if = {
+			limit = {
+				is_mage = yes
+			}
+			custom_tooltip = {
+				text = lf_midas_potion_mage_tooltip
+			}
+		}
+		else = {
+			custom_tooltip = {
+				text = lf_midas_potion_tooltip
+			}
+		}
+		hidden_tooltip = {
+			remove_character_modifier = lf_potion_temp
+			add_character_modifier = {
+				modifier = lf_potion_cd
+				years = 2
+			}
+			add_character_modifier = {
+				modifier = lf_potion_midas
+				years = 2
+			}
+		}
+	}
+	option = { # Go back
+		name = LFPotionsGoBack
+		narrative_event = { id = LFPotions.1 }
+	}
+}	
+
+character_event = {
+	id = LFPotions.5
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		lf_remove_disease_flags = yes
+	}
+}
+
+character_event = {
+	id = LFPotions.6
+	desc = LFPotions6a
+	desc = LFPotions6b
+	desc = LFPotions6c
+	desc = LFPotions6d
+	desc = LFPotions6e
+	desc = LFPotions6f
+	desc = LFPotions6g
+	desc = LFPotions6h
+	desc = LFPotions6i
+	picture = GFX_evt_bad_news
+	is_triggered_only = yes
+	option = {
+		name = LFPotions6TTA
+	}
+}
+
+character_event = {
+	id = LFPotions.7
+	desc = LFPotions7
+	picture = GFX_evt_death
+	is_triggered_only = yes
+	option = {
+		name = LFPotions7TTA
+		event_target:lf_sex_partner = {
+			set_character_flag = lf_never_turn_spoopy
+			death = { death_reason = death_midas_touched killer = ROOT }
+		}
+		wealth = 25
+	}
+}

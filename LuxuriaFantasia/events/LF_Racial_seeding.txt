@@ -1,0 +1,1095 @@
+namespace = LFSeeding
+
+#character_event = {
+#	id = LFSeeding.1
+#	hide_window = yes
+#	is_triggered_only = yes
+#	trigger = {
+#		#is_alternate_start = no
+#		#OR = {
+#		#	has_game_rule = { name = lf_racial_seeding value = lf_seeding_on }
+#		#	has_game_rule = { name = lf_racial_seeding value = lf_seeding_full }
+#		#}
+#		#is_save_game = no
+#	}
+#	
+#	immediate = {
+#		character_event = { id = LFSeeding.101 days = 3 }
+#	}
+#}
+#
+#character_event = {
+#	id = LFSeeding.101
+#	hide_window = yes
+#	is_triggered_only = yes
+#	trigger = {
+#		OR = {
+#			has_game_rule = { name = lf_racial_seeding value = lf_seeding_on }
+#			has_game_rule = { name = lf_racial_seeding value = lf_seeding_full }
+#		}
+#		NOT = {
+#			has_global_flag = lf_racial_seeding
+#		}
+#	}
+#	immediate = {
+#		any_independent_ruler = {
+#			limit = {
+#				ai = yes
+#				is_ruler = yes
+#				NOR = { # Removes redundancy.
+#					is_any_demon = yes
+#					is_angel = yes
+#					is_orc = yes
+#					is_elf = yes
+#					is_fairy = yes
+#					is_kitsune = yes
+#					is_neko = yes
+#					trait = dwse_lizard
+#					trait = houseirae_drow
+#					trait = houseirae_halfelf
+#					trait = dwse_dragon_adult
+#					trait = dwse_dragon_child
+#					trait = tentacle_monster
+#					has_character_flag = reserved_for_houseirae
+#					is_offmap_governor = yes # Prevents seeding Elder Forest or House Irae
+#					is_offmap_ruler = yes # Prevents seeding Elder Forest or House Irae
+#				}
+#			}
+#			random_list = {
+#				72 = { # Nothing
+#					trigger = {
+#						NOT = {
+#							has_game_rule = { name = lf_racial_seeding value = lf_seeding_full }
+#						}
+#					}
+#					set_character_flag = lf_seeded
+#					set_character_flag = lf_human_seeded
+#				}
+#				3 = { # Demons
+#					trigger = {
+#						lf_has_demons = yes
+#						NOR = {
+#							any_realm_character = {
+#								ai = no
+#								NOR = {
+#									is_any_demon = yes
+#								}
+#							}
+#						}
+#					}
+#					character_event = { id = LFSeeding.3 }
+#					any_realm_character = {
+#						character_event = { id = LFSeeding.3 }
+#					}
+#				}
+#				3 = { # Angels
+#					trigger = {
+#						lf_has_divines = yes
+#						NOR = {
+#							any_realm_character = {
+#								ai = no
+#								NOT = {
+#									is_angel = yes
+#								}
+#							}
+#						}
+#					}
+#					character_event = { id = LFSeeding.2 }
+#					any_realm_character = {
+#						character_event = { id = LFSeeding.2 }
+#					}
+#				}
+#				3 = { # Orcs
+#					trigger = {
+#						lf_has_orcs = yes
+#						NOR = {
+#							any_realm_character = {
+#								ai = no
+#								NOT = {
+#									is_orc = yes
+#								}
+#							}
+#						}
+#					}
+#					character_event = { id = LFSeeding.4 }
+#					any_realm_character = {
+#						character_event = { id = LFSeeding.4 }
+#					}
+#				}					
+#				3 = { # Elves
+#					trigger = {
+#						lf_has_elves = yes
+#						NOR = {
+#							any_realm_character = {
+#								ai = no
+#								NOT = {
+#									is_elf = yes
+#								}
+#							}
+#						}
+#					}
+#					character_event = { id = LFSeeding.5 }
+#					any_realm_character = {
+#						character_event = { id = LFSeeding.5 }
+#					}
+#				}					
+#				3 = { # Fairies
+#					trigger = {
+#						lf_has_fairies = yes
+#						NOR = {
+#							any_realm_character = {
+#								ai = no
+#								NOT = {
+#									is_fairy = yes
+#								}
+#							}
+#						}
+#					}
+#					character_event = { id = LFSeeding.6 }
+#					any_realm_character = {
+#						character_event = { id = LFSeeding.6 }
+#					}
+#				}
+#				3 = { # Kitsune
+#					trigger = {
+#						lf_has_kitsune = yes
+#						NOR = {
+#							any_realm_character = {
+#								ai = no
+#								NOT = {
+#									is_kitsune = yes
+#								}
+#							}
+#						}
+#					}
+#					character_event = { id = LFSeeding.7 }
+#					any_realm_character = {
+#						character_event = { id = LFSeeding.7 }
+#					}
+#				}				
+#				3 = { # Neko
+#					trigger = {
+#						lf_has_nekos = yes
+#						NOR = {
+#							any_realm_character = {
+#								ai = no
+#								NOT = {
+#									is_neko = yes
+#								}
+#							}
+#						}
+#					}
+#					character_event = { id = LFSeeding.8 }
+#					any_realm_character = {
+#						character_event = { id = LFSeeding.8 }
+#					}
+#				}					
+#				3 = { # DWSE
+#					trigger = {
+#						lf_races_dwse_active = yes
+#						NOR = {
+#							any_realm_character = {
+#								ai = no
+#								NOR = {
+#									trait = dwse_lizard
+#									trait = dwse_dragon_adult
+#									trait = dwse_dragon_child
+#								}
+#							}
+#						}
+#					}
+#					character_event = { id = LFSeeding.11 }
+#					any_realm_character = {
+#						character_event = { id = LFSeeding.11 }
+#					}
+#				}
+#				3 = { # House Irae dark elves
+#					trigger = {
+#						NOR = {
+#							any_realm_character = {
+#								ai = no
+#								NOT = {
+#									trait = houseirae_drow
+#								}
+#							}
+#						}
+#						OR = {
+#							has_global_flag = house_irae_started_no_campaign
+#							has_global_flag = house_irae_started_halfelf_campaign
+#							has_global_flag = house_irae_started_drow_campaign
+#						}
+#					}
+#					set_character_flag = reserved_for_houseirae
+#				}
+#			}
+#		}
+#		if = {
+#			limit = {
+#				has_game_rule = { name = lf_racial_seeding value = lf_seeding_full }
+#			}
+#			any_character = {
+#				limit = {
+#					NOT = {
+#						has_character_flag = lf_seeded
+#					}
+#					ai = yes
+#					NOR = {
+#						is_any_demon = yes
+#						is_angel = yes
+#						is_orc = yes
+#						is_elf = yes
+#						is_fairy = yes
+#						is_kitsune = yes
+#						is_neko = yes
+#						trait = dwse_lizard
+#						trait = houseirae_drow
+#						trait = houseirae_halfelf
+#						trait = dwse_dragon_adult
+#						trait = dwse_dragon_child
+#						trait = tentacle_monster
+#						has_character_flag = reserved_for_houseirae
+#						is_offmap_governor = yes # Prevents seeding Elder Forest or House Irae
+#						is_offmap_ruler = yes # Prevents seeding Elder Forest or House Irae
+#					}				
+#				}
+#				character_event = { id = LFSeeding.14 }
+#			}
+#		}
+#		set_global_flag = lf_racial_seeding
+#	}
+#}
+#
+character_event = { # Angels
+	id = LFSeeding.2
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		ai = yes
+		NOR = { # Removes redundancy. 
+			is_any_demon = yes
+			is_angel = yes
+			is_orc = yes
+			is_elf = yes
+			is_fairy = yes
+			is_kitsune = yes
+			is_neko = yes
+			trait = dwse_lizard
+			trait = houseirae_drow
+			trait = houseirae_halfelf
+			trait = dwse_dragon_adult
+			trait = dwse_dragon_child
+			trait = tentacle_monster
+			has_character_flag = reserved_for_houseirae
+			is_offmap_governor = yes # Prevents seeding Elder Forest or House Irae
+			is_offmap_ruler = yes # Prevents seeding Elder Forest or House Irae
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				is_adult = yes
+			}
+			lf_add_angel = yes
+			lf_add_random_angel_portrait = yes
+		}
+		else = {
+			lf_add_angel = yes
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				has_game_rule = { name = lf_blood_feud value = lf_bf_on }
+			}
+			lf_add_blood_feud = yes
+		}
+		set_character_flag = lf_seeded
+	}
+}
+
+character_event = { # Demons
+	id = LFSeeding.3
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		ai = yes
+		NOR = { # Removes redundancy. 
+			is_any_demon = yes
+			is_angel = yes
+			is_orc = yes
+			is_elf = yes
+			is_fairy = yes
+			is_kitsune = yes
+			is_neko = yes
+			trait = dwse_lizard
+			trait = houseirae_drow
+			trait = houseirae_halfelf
+			trait = dwse_dragon_adult
+			trait = dwse_dragon_child
+			trait = tentacle_monster
+			has_character_flag = reserved_for_houseirae
+			is_offmap_governor = yes # Prevents seeding Elder Forest or House Irae
+			is_offmap_ruler = yes # Prevents seeding Elder Forest or House Irae
+		}
+	}
+	immediate = {
+		random_list = {
+			50 = {		
+				lf_add_demon = yes
+				lf_add_random_demon_portrait = yes
+			}
+			50 = {
+				add_trait = lf_halfdemon
+			}
+		}
+		# break = yes
+	}
+	after = {
+		if = {
+			limit = {
+				has_game_rule = { name = lf_blood_feud value = lf_bf_on }
+			}
+			lf_add_blood_feud = yes
+		}
+		set_character_flag = lf_seeded
+	}
+}
+
+character_event = { # Orcs
+	id = LFSeeding.4
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		ai = yes
+		NOR = { # Removes redundancy. 
+			is_any_demon = yes
+			is_angel = yes
+			is_orc = yes
+			is_elf = yes
+			is_fairy = yes
+			is_kitsune = yes
+			is_neko = yes
+			trait = dwse_lizard
+			trait = houseirae_drow
+			trait = houseirae_halfelf
+			trait = dwse_dragon_adult
+			trait = dwse_dragon_child
+			trait = tentacle_monster
+			has_character_flag = reserved_for_houseirae
+			is_offmap_governor = yes # Prevents seeding Elder Forest or House Irae
+			is_offmap_ruler = yes # Prevents seeding Elder Forest or House Irae
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				independent = yes
+			}
+			if = {
+				limit = {
+					OR = {
+						NOT = { is_alternate_start = yes }
+						AND = {
+							is_alternate_start = yes
+							has_alternate_start_parameter = {
+								key = culture_names
+								value = historical
+							}
+						}
+					}
+				}
+				culture = orcish
+				any_realm_province = {
+					culture = orcish
+				}
+				any_realm_character = {
+					culture = orcish
+				}
+			}
+		}
+		lf_add_orc = yes
+		if = {
+			limit = {
+				is_adult = yes
+			}
+			lf_add_random_orc_portrait = yes
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				has_game_rule = { name = lf_blood_feud value = lf_bf_on }
+			}
+			lf_add_blood_feud = yes
+		}
+		set_character_flag = lf_seeded
+	}
+
+}
+
+character_event = { # Elves
+	id = LFSeeding.5
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		ai = yes
+		NOR = { # Removes redundancy. 
+			is_any_demon = yes
+			is_angel = yes
+			is_orc = yes
+			is_elf = yes
+			is_fairy = yes
+			is_kitsune = yes
+			is_neko = yes
+			trait = dwse_lizard
+			trait = houseirae_drow
+			trait = houseirae_halfelf
+			trait = dwse_dragon_adult
+			trait = dwse_dragon_child
+			trait = tentacle_monster
+			has_character_flag = reserved_for_houseirae
+			is_offmap_governor = yes # Prevents seeding Elder Forest or House Irae
+			is_offmap_ruler = yes # Prevents seeding Elder Forest or House Irae
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				independent = yes
+			}
+			if = {
+				limit = {
+					OR = {
+						NOT = { is_alternate_start = yes }
+						AND = {
+							is_alternate_start = yes
+							has_alternate_start_parameter = {
+								key = culture_names
+								value = historical
+							}
+						}
+					}
+				}
+				culture = elven
+				any_realm_province = {
+					culture = elven
+				}
+				any_realm_character = {
+					culture = elven
+				}
+			}
+		}
+		lf_add_elf = yes
+		if = {
+			limit = {
+				is_adult = yes
+			}
+			lf_add_random_elf_portrait = yes
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				has_game_rule = { name = lf_blood_feud value = lf_bf_on }
+			}
+			lf_add_blood_feud = yes
+		}
+		set_character_flag = lf_seeded
+	}
+}
+
+character_event = { # Fairies
+	id = LFSeeding.6
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		ai = yes
+		NOR = { # Removes redundancy. 
+			is_any_demon = yes
+			is_angel = yes
+			is_orc = yes
+			is_elf = yes
+			is_fairy = yes
+			is_kitsune = yes
+			is_neko = yes
+			trait = dwse_lizard
+			trait = houseirae_drow
+			trait = houseirae_halfelf
+			trait = dwse_dragon_adult
+			trait = dwse_dragon_child
+			trait = tentacle_monster
+			has_character_flag = reserved_for_houseirae
+			is_offmap_governor = yes # Prevents seeding Elder Forest or House Irae
+			is_offmap_ruler = yes # Prevents seeding Elder Forest or House Irae
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				independent = yes
+			}
+			if = {
+				limit = {
+					OR = {
+						NOT = { is_alternate_start = yes }
+						AND = {
+							is_alternate_start = yes
+							has_alternate_start_parameter = {
+								key = culture_names
+								value = historical
+							}
+						}
+					}
+				}
+				culture = fae
+				any_realm_province = {
+					culture = fae
+				}
+				any_realm_character = {
+					culture = fae
+				}
+			}
+		}
+		lf_add_fairy = yes
+		if = {
+			limit = {
+				is_adult = yes
+			}
+			lf_add_random_fairy_portrait = yes
+		}
+	}
+	after = {
+		set_character_flag = lf_seeded
+	}
+}
+
+character_event = { # Kitsune
+	id = LFSeeding.7
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		ai = yes
+		NOR = { # Removes redundancy. 
+			is_any_demon = yes
+			is_angel = yes
+			is_orc = yes
+			is_elf = yes
+			is_fairy = yes
+			is_kitsune = yes
+			is_neko = yes
+			trait = dwse_lizard
+			trait = houseirae_drow
+			trait = houseirae_halfelf
+			trait = dwse_dragon_adult
+			trait = dwse_dragon_child
+			trait = tentacle_monster
+			has_character_flag = reserved_for_houseirae
+			is_offmap_governor = yes # Prevents seeding Elder Forest or House Irae
+			is_offmap_ruler = yes # Prevents seeding Elder Forest or House Irae
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				independent = yes
+			}
+			if = {
+				limit = {
+					OR = {
+						NOT = { is_alternate_start = yes }
+						AND = {
+							is_alternate_start = yes
+							has_alternate_start_parameter = {
+								key = culture_names
+								value = historical
+							}
+						}
+					}
+				}
+				culture = kitsune_culture
+				any_realm_province = {
+					culture = kitsune_culture
+				}
+				any_realm_character = {
+					culture = kitsune_culture
+				}
+			}
+		}
+		lf_add_kitsune = yes
+		if = {
+			limit = {
+				is_adult = yes
+			}
+			lf_add_random_kitsune_portrait = yes
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				has_game_rule = { name = lf_blood_feud value = lf_bf_on }
+			}
+			lf_add_blood_feud = yes
+		}
+		set_character_flag = lf_seeded
+	}
+}
+
+character_event = { # Nekos
+	id = LFSeeding.8
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		ai = yes
+		NOR = { # Removes redundancy. 
+			is_any_demon = yes
+			is_angel = yes
+			is_orc = yes
+			is_elf = yes
+			is_fairy = yes
+			is_kitsune = yes
+			is_neko = yes
+			trait = dwse_lizard
+			trait = houseirae_drow
+			trait = houseirae_halfelf
+			trait = dwse_dragon_adult
+			trait = dwse_dragon_child
+			trait = tentacle_monster
+			has_character_flag = reserved_for_houseirae
+			has_character_flag = lf_seeded
+			is_offmap_governor = yes # Prevents seeding Elder Forest or House Irae
+			is_offmap_ruler = yes # Prevents seeding Elder Forest or House Irae
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				independent = yes
+			}
+			if = {
+				limit = {
+					OR = {
+						NOT = { is_alternate_start = yes }
+						AND = {
+							is_alternate_start = yes
+							has_alternate_start_parameter = {
+								key = culture_names
+								value = historical
+							}
+						}
+					}
+				}
+				culture = neko_culture
+				any_realm_province = {
+					culture = neko_culture
+				}
+				any_realm_character = {
+					culture = neko_culture
+				}
+			}
+		}
+		lf_add_neko = yes
+		if = {
+			limit = {
+				is_adult = yes
+			}
+			lf_add_random_neko_portrait = yes
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				has_game_rule = { name = lf_blood_feud value = lf_bf_on }
+			}
+			lf_add_blood_feud = yes
+		}
+		set_character_flag = lf_seeded
+	}
+}
+
+character_event = { # DWSE
+	id = LFSeeding.11
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		ai = yes
+		NOR = { # Removes redundancy. 
+			is_any_demon = yes
+			is_angel = yes
+			is_orc = yes
+			is_elf = yes
+			is_fairy = yes
+			is_kitsune = yes
+			is_neko = yes
+			trait = dwse_lizard
+			trait = houseirae_drow
+			trait = houseirae_halfelf
+			trait = dwse_dragon_adult
+			trait = dwse_dragon_child
+			trait = tentacle_monster
+			has_character_flag = reserved_for_houseirae
+			is_offmap_governor = yes # Prevents seeding Elder Forest or House Irae
+			is_offmap_ruler = yes # Prevents seeding Elder Forest or House Irae
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				independent = yes
+			}
+			if = {
+				limit = {
+					OR = {
+						NOT = { is_alternate_start = yes }
+						AND = {
+							is_alternate_start = yes
+							has_alternate_start_parameter = {
+								key = culture_names
+								value = historical
+							}
+						}
+					}
+				}
+				culture = dwse_dragon
+				any_realm_province = {
+					culture = dwse_dragon
+				}
+				any_realm_character = {
+					culture = dwse_dragon
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				is_adult = yes
+			}
+			add_trait = dwse_dragon_adult
+			add_random_dwse_dragon_portrait = yes
+		}
+		else = {
+			add_trait = dwse_dragon_child
+		}
+	}
+	after = {
+		set_character_flag = lf_seeded
+	}
+}
+
+character_event = { # DWSE Raen
+	id = LFSeeding.12
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		ai = yes
+		NOR = { # Removes redundancy. 
+			is_any_demon = yes
+			is_angel = yes
+			is_orc = yes
+			is_elf = yes
+			is_fairy = yes
+			is_kitsune = yes
+			is_neko = yes
+			trait = dwse_lizard
+			trait = houseirae_drow
+			trait = houseirae_halfelf
+			trait = dwse_dragon_adult
+			trait = dwse_dragon_child
+			trait = tentacle_monster
+			has_character_flag = reserved_for_houseirae
+			is_offmap_governor = yes # Prevents seeding Elder Forest or House Irae
+			is_offmap_ruler = yes # Prevents seeding Elder Forest or House Irae
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				independent = yes
+			}
+			if = {
+				limit = {
+					OR = {
+						NOT = { is_alternate_start = yes }
+						AND = {
+							is_alternate_start = yes
+							has_alternate_start_parameter = {
+								key = culture_names
+								value = historical
+							}
+						}
+					}
+				}
+				culture = dwse_dawn
+				any_realm_province = {
+					culture = dwse_dawn
+				}
+				any_realm_character = {
+					culture = dwse_dawn
+				}
+			}
+		}
+		add_trait = dwse_lizard
+		if = {
+			limit = {
+				is_adult = yes
+			}
+			add_random_dwse_lizard_portrait = yes
+		}
+	}
+	after = {
+		set_character_flag = lf_seeded
+	}
+}
+
+character_event = { # DWSE Xaela
+	id = LFSeeding.14
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		ai = yes
+		NOR = { # Removes redundancy. 
+			is_any_demon = yes
+			is_angel = yes
+			is_orc = yes
+			is_elf = yes
+			is_fairy = yes
+			is_kitsune = yes
+			is_neko = yes
+			trait = dwse_lizard
+			trait = houseirae_drow
+			trait = houseirae_halfelf
+			trait = dwse_dragon_adult
+			trait = dwse_dragon_child
+			trait = tentacle_monster
+			has_character_flag = reserved_for_houseirae
+			is_offmap_governor = yes # Prevents seeding Elder Forest or House Irae
+			is_offmap_ruler = yes # Prevents seeding Elder Forest or House Irae
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				independent = yes
+			}
+			if = {
+				limit = {
+					OR = {
+						NOT = { is_alternate_start = yes }
+						AND = {
+							is_alternate_start = yes
+							has_alternate_start_parameter = {
+								key = culture_names
+								value = historical
+							}
+						}
+					}
+				}
+				culture = dwse_dusk
+				any_realm_province = {
+					culture = dwse_dusk
+				}
+				any_realm_character = {
+					culture = dwse_dusk
+				}
+			}
+		}
+		add_trait = dwse_lizard
+		if = {
+			limit = {
+				is_adult = yes
+			}
+			add_random_dwse_lizard_portrait = yes
+		}
+	}
+	after = {
+		set_character_flag = lf_seeded
+	}
+}
+
+character_event = { # DWSE Generic
+	id = LFSeeding.15
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		ai = yes
+		NOR = { # Removes redundancy. 
+			is_any_demon = yes
+			is_angel = yes
+			is_orc = yes
+			is_elf = yes
+			is_fairy = yes
+			is_kitsune = yes
+			is_neko = yes
+			trait = dwse_lizard
+			trait = houseirae_drow
+			trait = houseirae_halfelf
+			trait = dwse_dragon_adult
+			trait = dwse_dragon_child
+			trait = tentacle_monster
+			has_character_flag = reserved_for_houseirae
+			is_offmap_governor = yes # Prevents seeding Elder Forest or House Irae
+			is_offmap_ruler = yes # Prevents seeding Elder Forest or House Irae
+		}
+	}
+	immediate = {
+		add_trait = dwse_lizard
+		if = {
+			limit = {
+				is_adult = yes
+			}
+			add_random_dwse_lizard_portrait = yes
+		}
+	}
+	after = {
+		set_character_flag = lf_seeded
+	}
+}
+
+character_event = { # House Irae Dark Elves
+	id = LFSeeding.13
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		ai = yes
+		NOR = { # Removes redundancy. 
+			is_any_demon = yes
+			is_angel = yes
+			is_orc = yes
+			is_elf = yes
+			is_fairy = yes
+			is_kitsune = yes
+			is_neko = yes
+			trait = dwse_lizard
+			trait = houseirae_drow
+			trait = houseirae_halfelf
+			trait = dwse_dragon_adult
+			trait = dwse_dragon_child
+			trait = tentacle_monster
+			has_character_flag = reserved_for_houseirae
+			is_offmap_governor = yes # Prevents seeding Elder Forest or House Irae
+			is_offmap_ruler = yes # Prevents seeding Elder Forest or House Irae
+		}
+	}
+	immediate = {
+		set_character_flag = reserved_for_houseirae
+	}
+	after = {
+		set_character_flag = lf_seeded
+	}
+}
+#character_event = { # Leftovers
+#	id = LFSeeding.14
+#	hide_window = yes
+#	is_triggered_only = yes
+#	trigger = {
+#		NOT = {
+#			has_character_flag = lf_seeded
+#		}
+#	}
+#	
+#	immediate = {
+#		if = {
+#			limit = {
+#				lf_has_demons = yes
+#				liege = { 
+#					is_any_demon = yes
+#				}
+#			}
+#			character_event = { id = LFSeeding.3 }
+#		}
+#		else_if = {
+#			limit = {
+#				lf_has_divines = yes
+#				liege = { 
+#					is_angel = yes
+#				}
+#			}
+#			character_event = { id = LFSeeding.2 }
+#		}
+#		else_if = {
+#			limit = {
+#				lf_has_orcs = yes
+#				liege = { 
+#					is_orc = yes
+#				}
+#			}
+#			character_event = { id = LFSeeding.4 }
+#		}
+#		else_if = {
+#			limit = {
+#				lf_has_elves = yes
+#				liege = { 
+#					is_elf = yes
+#				}
+#			}
+#			character_event = { id = LFSeeding.5 }
+#		}
+#		else_if = {
+#			limit = {
+#				lf_has_fairies = yes
+#				liege = { 
+#					is_fairy = yes
+#				}
+#			}
+#			character_event = { id = LFSeeding.6 }
+#		}
+#		else_if = {
+#			limit = {
+#				lf_has_kitsune = yes
+#				liege = { 
+#					is_kitsune = yes
+#				}
+#			}
+#			character_event = { id = LFSeeding.7 }
+#		}
+#		else_if = {
+#			limit = {
+#				lf_has_nekos = yes
+#				liege = { 
+#					is_neko = yes
+#				}
+#			}
+#			character_event = { id = LFSeeding.8 }
+#		}	
+#		else_if = {
+#			limit = {
+#				lf_races_dwse_active = yes
+#				liege = { 
+#					OR = {
+#						trait = dwse_lizard
+#						trait = dwse_dragon_adult
+#						trait = dwse_dragon_child
+#					}
+#				}
+#			}
+#			character_event = { id = LFSeeding.11 }
+#		}
+#		else_if = {
+#			limit = {
+#				OR = {
+#					has_global_flag = house_irae_started_no_campaign
+#					has_global_flag = house_irae_started_halfelf_campaign
+#					has_global_flag = house_irae_started_drow_campaign
+#				}
+#				liege = { 
+#					trait = houseirae_drow
+#				}
+#			}
+#			character_event = { id = HouseIraeSeeding.2 }
+#			character_event = { id = LFSeeding.13 }
+#		}
+#		else_if = {
+#			limit = {
+#				OR = {
+#					has_global_flag = house_irae_started_no_campaign
+#					has_global_flag = house_irae_started_halfelf_campaign
+#					has_global_flag = house_irae_started_drow_campaign
+#				}
+#				liege = { 
+#					trait = houseirae_halfelf
+#				}
+#			}
+#			character_event = { id = HouseIraeSeeding.4 }
+#			character_event = { id = LFSeeding.13 }
+#		}
+#		else = { }
+#	}
+#}

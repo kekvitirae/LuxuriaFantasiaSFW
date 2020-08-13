@@ -1,0 +1,37 @@
+namespace = LF_Fae_Children
+
+character_event = {
+	id = LF_Fae_Children.2
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			is_orc = yes
+			is_elf = yes
+			is_fairy = yes
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				is_orc = yes
+			}
+			lf_add_random_orc_portrait = yes
+		}
+		else_if = {
+			limit = {
+				is_elf = yes
+			}
+			lf_add_random_elf_portrait = yes
+			check_elven_fertility = yes
+			character_event = { id = LF_Elf.32 days = 1 }
+		}
+		else_if = {
+			limit = {
+				is_fairy = yes
+			}
+			lf_add_random_fairy_portrait = yes
+		}
+	}
+}

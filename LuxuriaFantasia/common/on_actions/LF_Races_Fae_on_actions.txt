@@ -1,0 +1,33 @@
+on_startup = {
+	events = {
+		LF_Elf.30 # Elven Infertility check
+	}
+}
+
+on_birth = {
+	events = {
+		LF_Elf.21 # Wynn's children
+	}
+}
+
+on_yearly_pulse = {
+	events = {
+		LF_Elf.31 # Elven Infertility check
+		LF_Elf.32 # Elven Immortality for spawned characters
+	}
+}
+
+# character
+on_decade_pulse = {
+	random_events = {
+		50 = LF_Fairy.3 # Bonny Swans
+		50 = LF_Elf.20 # The Unicorn
+	}
+}
+
+on_adulthood = {
+	events = {
+		LF_Fairy.1 # Fairy portrait
+		LF_Fae_Children.2 # Removes child portraits
+	}
+}

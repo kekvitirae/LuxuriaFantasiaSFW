@@ -1,0 +1,79 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_lf_claim_lootbox"
+		texturefile = "gfx\\interface\\lf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_lf_b_potion_shopping"
+		texturefile = "gfx\\interface\\lf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_lf_banish_blood_feud"
+		texturefile = "gfx\\interface\\lf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_lf_b_check_stats"
+		texturefile = "gfx\\interface\\lf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_lf_a_singleplayer_remain_human"
+		texturefile = "gfx\\interface\\lf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_lf_a_singleplayer_race_choice"
+		texturefile = "gfx\\interface\\lf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_lf_a_multiplayer_remain_human"
+		texturefile = "gfx\\interface\\lf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_lf_a_multiplayer_race_choice"
+		texturefile = "gfx\\interface\\lf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_lf_a_multiplayer_host_lock"
+		texturefile = "gfx\\interface\\lf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_lf_a_hide_unimportant_shit"
+		texturefile = "gfx\\interface\\lf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_lf_a_show_unimportant_shit"
+		texturefile = "gfx\\interface\\lf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_lf_a_claim_slaver_bloodline"
+		texturefile = "gfx\\interface\\lf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_lf_a_luxuria_fantasia_options"
+		texturefile = "gfx\\interface\\lf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_lf_b_potion_shopping"
+		texturefile = "gfx\\interface\\lf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_lf_b_recruit_exotic"
+		texturefile = "gfx\\interface\\lf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_lf_b_remove_parentage"
+		texturefile = "gfx\\interface\\lf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_lf_a_wizards_buy_spellbook"
+		texturefile = "gfx\\interface\\lf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_lf_a_yer_a_wizard_harry"
+		texturefile = "gfx\\interface\\lf_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_lf_b_tarot_card"
+		texturefile = "gfx\\interface\\lf_decisions.dds"
+	}
+	
+}	

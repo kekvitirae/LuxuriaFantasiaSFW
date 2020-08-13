@@ -1,0 +1,23 @@
+spriteTypes = {
+	spriteType = {
+		name = "lf_tarot_upturned"
+		texturefile = "gfx/event_pictures/tarot_upturned.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lf_tarot_reversed"
+		texturefile = "gfx/event_pictures/tarot_reversed.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lf_astrologian"
+		texturefile = "gfx/event_pictures/lf_astrologian.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+}

@@ -1,0 +1,190 @@
+defined_text = {
+	name = Breeder_N
+	
+	use_first_valid = yes
+	text = {
+		localisation_key = lf_breeder_futa_n
+		trigger = {
+			trait = lf_breeder
+			is_female = yes
+			trait = lf_futa
+		}
+	}
+	text = {
+		localisation_key = lf_breeder_fem_n
+		trigger = {
+			trait = lf_breeder
+			is_female = yes
+			NOT = { trait = lf_futa }
+		}
+	}
+	text = {
+		localisation_key = lf_breeder_m_n
+		trigger = {
+			trait = lf_breeder
+			NOT = { is_female = yes }
+		}
+	}
+	fallback_text = {
+		localisation_key = lf_breeder_g_n
+	}
+}
+defined_text = {
+	name = Breeder_D
+	
+	use_first_valid = yes
+	text = {
+		localisation_key = lf_breeder_futa_d
+		trigger = {
+			trait = lf_breeder
+			is_female = yes
+			trait = lf_futa
+		}
+	}
+	text = {
+		localisation_key = lf_breeder_fem_d
+		trigger = {
+			trait = lf_breeder
+			is_female = yes
+			NOT = { trait = lf_futa }
+		}
+	}
+	text = {
+		localisation_key = lf_breeder_m_d
+		trigger = {
+			trait = lf_breeder
+			NOT = { is_female = yes }
+		}
+	}
+	fallback_text = {
+		localisation_key = lf_breeder_g_d
+	}
+}
+
+defined_text = {
+	name = Dominant_N
+
+	use_first_valid = yes
+	text = {
+		localisation_key = lf_domsadist
+		trigger = { 
+			trait = lf_dominant
+			trait = cruel
+		}
+	}
+	fallback_text = {
+		localisation_key = lf_genericdom
+	}
+}
+
+defined_text = {
+	name = Dominant_D
+
+	use_first_valid = yes
+	text = {
+		localisation_key = lf_domsadist_d
+		trigger = { 
+			trait = lf_dominant
+			trait = cruel
+		}
+	}
+	fallback_text = {
+		localisation_key = lf_genericdom_d
+	}
+}
+
+defined_text = {
+	name = Submissive_N
+
+	use_first_valid = yes
+	text = {
+		localisation_key = lf_subshy
+		trigger = { 
+			trait = lf_submissive
+			trait = shy
+		}
+	}
+	fallback_text = {
+		localisation_key = lf_genericsub
+	}
+}
+
+defined_text = {
+	name = Submissive_D
+
+	use_first_valid = yes
+	text = {
+		localisation_key = lf_subshy_d
+		trigger = { 
+			trait = lf_submissive
+			trait = shy
+		}
+	}
+	fallback_text = {
+		localisation_key = lf_genericsub_d
+	}
+}
+
+defined_text = {
+	name = GetMasterMistress
+
+	use_first_valid = yes
+	text = {
+		localisation_key = lf_sex_partner_master
+		trigger = { 
+			event_target:lf_sex_partner = {
+				is_female = no
+			}
+		}
+	}
+	text = {
+		localisation_key = lf_sex_partner_mistress
+		trigger = { 
+			event_target:lf_sex_partner = {
+				is_female = yes
+			}
+		}
+	}
+	fallback_text = {
+		localisation_key = lf_sex_partner_master
+	}
+}
+
+defined_text = {
+	name = InsatiableLoc_N
+	
+	use_first_valid = yes
+	text = {
+		localisation_key = lf_insatiable_whore_n
+		trigger = { 
+			trait = lf_insatiable
+			OR = {
+				trait = cheap_whore
+				trait = experienced_whore
+				trait = exclusive_whore
+			}
+		}
+	}
+	fallback_text = {
+		localisation_key = lf_insatiable_n
+	}
+}
+defined_text = {
+	name = InsatiableLoc_D
+	
+	use_first_valid = yes
+	text = {
+		localisation_key = lf_insatiable_whore_d
+		trigger = { 
+			trait = lf_insatiable
+			OR = {
+				trait = cheap_whore
+				trait = experienced_whore
+				trait = exclusive_whore
+			}
+		}
+	}
+	fallback_text = {
+		localisation_key = lf_insatiable_d
+	}
+}

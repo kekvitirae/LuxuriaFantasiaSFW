@@ -1,0 +1,525 @@
+lf_elf_portrait1 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_elf_portrait2 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_elf_portrait3 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_elf_portrait4 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_elf_portrait5 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_elf_portrait6 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_elf_portrait7 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_elf_portrait8 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_elf_portrait9 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_elf_portrait10 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_elf_portrait11 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_elf_portrait12 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_elf_portrait13 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_elf_portrait14 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_elf_portrait15 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_elf_portrait16 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_elf_portrait17 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_elf_portrait18 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_elf_portrait19 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_elf_portrait20 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_elf_portrait21 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_elf_portrait22 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_elf_portrait23 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_elf_portrait24 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_elf_portrait25 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_elf_portrait26 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+
+lf_elf_portrait1_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_elf_portrait2_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_elf_portrait3_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_elf_portrait4_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_elf_portrait5_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_elf_portrait6_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_elf_portrait7_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_elf_portrait8_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_elf_portrait9_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_elf_portrait10_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_elf_portrait11_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_elf_portrait12_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_elf_portrait13_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+
+
+lf_orc_portrait1 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_orc_portrait2 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_orc_portrait3 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_orc_portrait4 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_orc_portrait5 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_orc_portrait6 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_orc_portrait7 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_orc_portrait8 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_orc_portrait9 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_orc_portrait10 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_orc_portrait11 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_orc_portrait12 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_orc_portrait13 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_orc_portrait14 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_orc_portrait15 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_orc_portrait16 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_orc_portrait17 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_orc_portrait18 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_orc_portrait19 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_orc_portrait20 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_orc_portrait21 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_orc_portrait22 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_orc_portrait23 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_orc_portrait24 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_orc_portrait25 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_orc_portrait26 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+
+lf_fairy_portrait1 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_fairy_portrait2 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_fairy_portrait3 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_fairy_portrait4 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_fairy_portrait5 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_fairy_portrait6 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_fairy_portrait7 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_fairy_portrait8 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_fairy_portrait9 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_fairy_portrait10 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_fairy_portrait11 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_fairy_portrait12 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_fairy_portrait13 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_fairy_portrait14 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_fairy_portrait15 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_fairy_portrait16 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_fairy_portrait17 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_fairy_portrait18 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_fairy_portrait19 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_fairy_portrait20 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_fairy_portrait21 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_fairy_portrait22 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_fairy_portrait23 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_fairy_portrait24 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_fairy_portrait25 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_fairy_portrait26 = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+
+lf_fairy_portrait1_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_fairy_portrait2_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_fairy_portrait3_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_fairy_portrait4_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_fairy_portrait5_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_fairy_portrait6_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_fairy_portrait7_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_fairy_portrait8_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_fairy_portrait9_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_fairy_portrait10_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_fairy_portrait11_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_fairy_portrait12_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_fairy_portrait13_cheri = {
+	hidden = yes
+	random = no
+	customizer = no
+}

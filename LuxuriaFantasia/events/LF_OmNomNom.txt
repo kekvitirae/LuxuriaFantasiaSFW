@@ -1,0 +1,122 @@
+namespace = LFOmNomNom
+
+character_event = {
+	id = LFOmNomNom.1
+	is_triggered_only = yes
+	desc = LFOmNomNom1
+	picture = GFX_evt_feast
+	immediate = {
+		if = {
+			limit = {
+				lf_has_desirable_trait_event = yes
+			}
+			random_list = {
+				90 = {
+				}
+				10 = {
+					random_list = {
+						10 = {
+							trigger = {
+								event_target:omnomnom_target = {
+									trait = genius
+								}
+								NOT = { trait = genius }
+							}
+							set_character_flag = lf_omnomnom_genius
+						}
+						10 = {
+							trigger = {
+								event_target:omnomnom_target = {
+									trait = quick
+								}
+								NOT = { trait = quick }
+							}
+							set_character_flag = lf_omnomnom_quick
+						}
+						10 = {
+							trigger = {
+								event_target:omnomnom_target = {
+									trait = strong
+								}
+								NOT = { trait = strong }
+							}
+							set_character_flag = lf_omnomnom_strong
+						}
+						10 = {
+							trigger = {
+								event_target:omnomnom_target = {
+									trait = fair
+								}
+								NOT = { trait = fair }
+							}
+							set_character_flag = lf_omnomnom_fair
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				lf_has_desirable_bloodline_event = yes
+			}
+			random_list = {
+				95 = {
+				}
+				5 = {
+					set_character_flag = lf_omnomnom_bloodline
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = {
+			trigger = {
+				OR = {
+					has_character_flag = lf_omnomnom_bloodline
+					has_character_flag = lf_omnomnom_genius
+					has_character_flag = lf_omnomnom_quick
+					has_character_flag = lf_omnomnom_strong
+					has_character_flag = lf_omnomnom_fair
+				}
+			}
+			text = LFOmNomNom1TTA
+		}
+		name = {
+			trigger = {
+				NOR = {
+					has_character_flag = lf_omnomnom_bloodline
+					has_character_flag = lf_omnomnom_genius
+					has_character_flag = lf_omnomnom_quick
+					has_character_flag = lf_omnomnom_strong
+					has_character_flag = lf_omnomnom_fair
+				}
+			}
+			text = LFOmNomNom1TTB
+		}
+		trigger_switch = {
+			on_trigger = has_character_flag
+			lf_omnomnom_genius = { add_trait = genius }
+			lf_omnomnom_quick = { add_trait = quick }
+			lf_omnomnom_strong = { add_trait = strong }
+			lf_omnomnom_fair = { add_trait = fair }
+		}
+		if = {
+			limit = {
+				has_character_flag = lf_omnomnom_bloodline
+			}
+			random_owned_bloodline = {
+				limit = {
+					NOR = {
+						ROOT = {
+							is_bloodline_member_of = PREV # Prevent redundancy
+						}
+						has_bloodline_flag = irae_bloodline # Nope
+					}
+				}
+				add_bloodline_member = ROOT
+			}
+		}
+	}
+}
+		

@@ -1,0 +1,102 @@
+title_lf_many_tailed = { # Nine-tailed kitsune
+	is_high_prio = no
+	realm_in_name = yes
+	dignity = 0.9
+	grant_limit = 1
+	opinion_effect = 10
+	revoke_allowed = yes
+	
+	monthly_prestige = 0.2
+	monthly_piety = 1
+	
+	allowed_to_hold = {
+		prisoner = no
+		is_adult = yes
+		NOT = { trait = incapable }
+		is_kitsune = yes
+	}
+	
+	allowed_to_grant = {
+		is_kitsune = yes
+	}
+	revoke_trigger = {
+		
+	}
+
+	gain_effect = {
+		add_character_modifier = {
+			name = modifier_lf_many_tailed
+			duration = -1
+		}
+	}
+
+	lose_effect = {
+		remove_character_modifier = modifier_lf_many_tailed
+	}
+	retire_effect = {
+		remove_character_modifier = modifier_lf_many_tailed
+	}
+
+	message = yes
+}
+
+title_lf_spirit_speaker = { # Spiritual kitsune
+	is_high_prio = no
+	realm_in_name = yes
+	dignity = 0.9
+	grant_limit = 1
+	opinion_effect = 10
+	revoke_allowed = yes
+	
+	monthly_piety = 0.5
+	
+	allowed_to_hold = {
+		prisoner = no
+		is_adult = yes
+		NOT = { trait = incapable }
+		is_kitsune = yes
+		learning = 10
+	}
+	
+	allowed_to_grant = {
+		is_kitsune = yes
+	}
+	revoke_trigger = {
+		
+	}
+
+	gain_effect = {
+		if = {
+			limit = {
+				NOT = {
+					trait = mystic
+				}
+			}
+			add_trait = mystic
+		}	
+		add_character_modifier = {
+			name = modifier_lf_spirit_speaker
+			duration = -1
+		}		
+	}
+
+	lose_effect = {
+		if = {
+			limit = {
+				trait = mystic
+			}
+			remove_trait = mystic
+		}		
+		remove_character_modifier = modifier_lf_spirit_speaker
+	}
+	retire_effect = {
+		if = {
+			limit = {
+				trait = mystic
+			}
+			remove_trait = mystic
+		}
+		remove_character_modifier = modifier_lf_spirit_speaker
+	}	
+	message = yes
+}

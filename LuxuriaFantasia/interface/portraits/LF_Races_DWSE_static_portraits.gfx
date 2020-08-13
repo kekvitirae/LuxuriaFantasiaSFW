@@ -1,0 +1,464 @@
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_portrait_dwse_remedy_portrait_swapping_cheri"
+		texturefile = "gfx/static_portraits/dwse_remedy_portrait_swapping_cheri.dds"
+		noOfFrames = 27
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_portrait_dwse_dawn_male"
+		texturefile = "gfx/static_portraits/raen_male.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_portrait_dwse_dawn_female"
+		texturefile = "gfx/static_portraits/raen_female.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_portrait_dwse_dusk_male"
+		texturefile = "gfx/static_portraits/xaela_male.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	spriteType = {
+		name = "GFX_portrait_dwse_dusk_female"
+		texturefile = "gfx/static_portraits/xaela_female.dds"
+		noOfFrames = 12
+		norefcount = yes
+		can_be_lowres = yes
+	}
+    portraitType = {
+        name = "DWSE_PORTRAIT_static_1_cheri"
+		effectFile = "gfx/FX/portrait.lua"
+        weight = {
+            additive_modifier = {
+                value = 1000000
+                portrait_clothing = yes
+				OR = {
+					portrait_has_trait = dwse_portrait1_cheri
+					portrait_has_trait = dwse_portrait2_cheri
+					portrait_has_trait = dwse_portrait3_cheri
+					portrait_has_trait = dwse_portrait4_cheri
+					portrait_has_trait = dwse_portrait5_cheri
+					portrait_has_trait = dwse_portrait6_cheri
+					portrait_has_trait = dwse_portrait7_cheri
+					portrait_has_trait = dwse_portrait8_cheri
+					portrait_has_trait = dwse_portrait9_cheri
+					portrait_has_trait = dwse_portrait10_cheri
+					portrait_has_trait = dwse_portrait11_cheri
+					portrait_has_trait = dwse_portrait12_cheri
+					portrait_has_trait = dwse_portrait13_cheri
+					portrait_has_trait = dwse_portrait14_cheri
+					portrait_has_trait = dwse_portrait15_cheri
+					portrait_has_trait = dwse_portrait16_cheri
+					portrait_has_trait = dwse_portrait17_cheri
+					portrait_has_trait = dwse_portrait18_cheri
+					portrait_has_trait = dwse_portrait19_cheri
+					portrait_has_trait = dwse_portrait20_cheri
+					portrait_has_trait = dwse_portrait21_cheri
+					portrait_has_trait = dwse_portrait22
+					portrait_has_trait = dwse_portrait23
+					portrait_has_trait = dwse_portrait24
+					portrait_has_trait = dwse_portrait25
+					portrait_has_trait = dwse_portrait26
+				}
+	 		}
+        }
+
+        layer = {
+            "GFX_empty:c0"
+            "GFX_empty:c2"
+            "GFX_empty:c3"
+            "GFX_empty:c1"
+            "GFX_empty:c4"
+            "GFX_empty:p1:h:y"
+			"GFX_empty:p6"
+            "GFX_portrait_dwse_remedy_portrait_swapping_cheri:c5"
+			"GFX_lover_overlay:p37"
+			"GFX_player_overlay:p11"
+        }
+
+        allow_property_values = {
+			0 = {
+				21 = { always = no }
+			}
+            1 = {
+				0  = { always = yes }
+            }
+            19 = {
+				0  = { always = yes }
+            }
+			33 = {
+				0  = { always = yes }
+            }
+            34 = {
+				0  = { always = yes }
+            }
+            35 = {
+				0  = { always = yes }
+            }
+            36 = {
+				0  = { always = yes }
+            }
+            6 = {
+				0  = { always = yes }
+            }
+            5 = {
+				0 = { always = no }
+				1 = { portrait_has_trait = dwse_portrait1_cheri }
+				2 = { portrait_has_trait = dwse_portrait2_cheri }
+				3 = { portrait_has_trait = dwse_portrait3_cheri }
+				4 = { portrait_has_trait = dwse_portrait4_cheri }
+				5 = { portrait_has_trait = dwse_portrait5_cheri }
+				6 = { portrait_has_trait = dwse_portrait6_cheri }
+				7 = { portrait_has_trait = dwse_portrait7_cheri }
+				8 = { portrait_has_trait = dwse_portrait8_cheri }
+				9 = { portrait_has_trait = dwse_portrait9_cheri }
+				10 = { portrait_has_trait = dwse_portrait10_cheri }
+				11 = { portrait_has_trait = dwse_portrait11_cheri }
+				12 = { portrait_has_trait = dwse_portrait12_cheri }
+				13 = { portrait_has_trait = dwse_portrait13_cheri }
+				14 = { portrait_has_trait = dwse_portrait14_cheri }
+				15 = { portrait_has_trait = dwse_portrait15_cheri }
+				16 = { portrait_has_trait = dwse_portrait16_cheri }
+				17 = { portrait_has_trait = dwse_portrait17_cheri }
+				18 = { portrait_has_trait = dwse_portrait18_cheri }
+				19 = { portrait_has_trait = dwse_portrait19_cheri }
+				20 = { portrait_has_trait = dwse_portrait20_cheri }
+				21 = { portrait_has_trait = dwse_portrait21_cheri }
+				22 = { portrait_has_trait = dwse_portrait22 }
+				23 = { portrait_has_trait = dwse_portrait23 }
+				24 = { portrait_has_trait = dwse_portrait24 }
+				25 = { portrait_has_trait = dwse_portrait25 }
+				26 = { portrait_has_trait = dwse_portrait26 }
+			}
+		}
+	}
+	
+    portraitType = {
+        name = "DWSE_PORTRAIT_static_raen_male"
+		effectFile = "gfx/FX/portrait.lua"
+        weight = {
+            additive_modifier = {
+                value = 1000000
+                portrait_clothing = yes
+				OR = {
+					portrait_has_trait = dwse_raen_male1
+					portrait_has_trait = dwse_raen_male2
+					portrait_has_trait = dwse_raen_male3
+					portrait_has_trait = dwse_raen_male4
+					portrait_has_trait = dwse_raen_male5
+					portrait_has_trait = dwse_raen_male6
+					portrait_has_trait = dwse_raen_male7
+					portrait_has_trait = dwse_raen_male8
+					portrait_has_trait = dwse_raen_male9
+					portrait_has_trait = dwse_raen_male10
+					portrait_has_trait = dwse_raen_male11
+					portrait_has_trait = dwse_raen_male12
+				}
+	 		}
+        }
+
+        layer = {
+            "GFX_empty:c0"
+            "GFX_empty:c2"
+            "GFX_empty:c3"
+            "GFX_empty:c1"
+            "GFX_empty:c4"
+            "GFX_empty:p1:h:y"
+			"GFX_empty:p6"
+            "GFX_portrait_dwse_dawn_male:c5"
+			"GFX_lover_overlay:p37"
+			"GFX_player_overlay:p11"
+        }
+
+        allow_property_values = {
+			0 = {
+				21 = { always = no }
+			}
+            1 = {
+				0  = { always = yes }
+            }
+            19 = {
+				0  = { always = yes }
+            }
+			33 = {
+				0  = { always = yes }
+            }
+            34 = {
+				0  = { always = yes }
+            }
+            35 = {
+				0  = { always = yes }
+            }
+            36 = {
+				0  = { always = yes }
+            }
+            6 = {
+				0  = { always = yes }
+            }
+            5 = {
+				0 = { portrait_has_trait = dwse_raen_male1  }
+				1 = { portrait_has_trait = dwse_raen_male2  }
+				2 = { portrait_has_trait = dwse_raen_male3  }
+				3 = { portrait_has_trait = dwse_raen_male4  }
+				4 = { portrait_has_trait = dwse_raen_male5  }
+				5 = { portrait_has_trait = dwse_raen_male6  }
+				6 = { portrait_has_trait = dwse_raen_male7  }
+				7 = { portrait_has_trait = dwse_raen_male8  }
+				8 = { portrait_has_trait = dwse_raen_male9  }
+				9 = { portrait_has_trait = dwse_raen_male10 }
+				10 = { portrait_has_trait = dwse_raen_male11 }
+				11 = { portrait_has_trait = dwse_raen_male12 }
+			}
+		}
+	}
+
+    portraitType = {
+        name = "DWSE_PORTRAIT_static_raen_female"
+		effectFile = "gfx/FX/portrait.lua"
+        weight = {
+            additive_modifier = {
+                value = 1000000
+                portrait_clothing = yes
+				OR = {
+					portrait_has_trait = dwse_raen_female1
+					portrait_has_trait = dwse_raen_female2
+					portrait_has_trait = dwse_raen_female3
+					portrait_has_trait = dwse_raen_female4
+					portrait_has_trait = dwse_raen_female5
+					portrait_has_trait = dwse_raen_female6
+					portrait_has_trait = dwse_raen_female7
+					portrait_has_trait = dwse_raen_female8
+					portrait_has_trait = dwse_raen_female9
+					portrait_has_trait = dwse_raen_female10
+					portrait_has_trait = dwse_raen_female11
+					portrait_has_trait = dwse_raen_female12
+				}
+	 		}
+        }
+
+        layer = {
+            "GFX_empty:c0"
+            "GFX_empty:c2"
+            "GFX_empty:c3"
+            "GFX_empty:c1"
+            "GFX_empty:c4"
+            "GFX_empty:p1:h:y"
+			"GFX_empty:p6"
+            "GFX_portrait_dwse_dawn_female:c5"
+			"GFX_lover_overlay:p37"
+			"GFX_player_overlay:p11"
+        }
+
+        allow_property_values = {
+			0 = {
+				21 = { always = no }
+			}
+            1 = {
+				0  = { always = yes }
+            }
+            19 = {
+				0  = { always = yes }
+            }
+			33 = {
+				0  = { always = yes }
+            }
+            34 = {
+				0  = { always = yes }
+            }
+            35 = {
+				0  = { always = yes }
+            }
+            36 = {
+				0  = { always = yes }
+            }
+            6 = {
+				0  = { always = yes }
+            }
+            5 = {
+				0 = { portrait_has_trait = dwse_raen_female1  }
+				1 = { portrait_has_trait = dwse_raen_female2  }
+				2 = { portrait_has_trait = dwse_raen_female3  }
+				3 = { portrait_has_trait = dwse_raen_female4  }
+				4 = { portrait_has_trait = dwse_raen_female5  }
+				5 = { portrait_has_trait = dwse_raen_female6  }
+				6 = { portrait_has_trait = dwse_raen_female7  }
+				7 = { portrait_has_trait = dwse_raen_female8  }
+				8 = { portrait_has_trait = dwse_raen_female9  }
+				9 = { portrait_has_trait = dwse_raen_female10 }
+				10 = { portrait_has_trait = dwse_raen_female11 }
+				11 = { portrait_has_trait = dwse_raen_female12 }
+			}
+		}
+	}	
+
+
+
+    portraitType = {
+        name = "DWSE_PORTRAIT_static_xaela_male"
+		effectFile = "gfx/FX/portrait.lua"
+        weight = {
+            additive_modifier = {
+                value = 1000000
+                portrait_clothing = yes
+				OR = {
+					portrait_has_trait = dwse_xaela_male1
+					portrait_has_trait = dwse_xaela_male2
+					portrait_has_trait = dwse_xaela_male3
+					portrait_has_trait = dwse_xaela_male4
+					portrait_has_trait = dwse_xaela_male5
+					portrait_has_trait = dwse_xaela_male6
+					portrait_has_trait = dwse_xaela_male7
+					portrait_has_trait = dwse_xaela_male8
+					portrait_has_trait = dwse_xaela_male9
+					portrait_has_trait = dwse_xaela_male10
+					portrait_has_trait = dwse_xaela_male11
+					portrait_has_trait = dwse_xaela_male12
+				}
+	 		}
+        }
+
+        layer = {
+            "GFX_empty:c0"
+            "GFX_empty:c2"
+            "GFX_empty:c3"
+            "GFX_empty:c1"
+            "GFX_empty:c4"
+            "GFX_empty:p1:h:y"
+			"GFX_empty:p6"
+            "GFX_portrait_dwse_dusk_male:c5"
+			"GFX_lover_overlay:p37"
+			"GFX_player_overlay:p11"
+        }
+
+        allow_property_values = {
+			0 = {
+				21 = { always = no }
+			}
+            1 = {
+				0  = { always = yes }
+            }
+            19 = {
+				0  = { always = yes }
+            }
+			33 = {
+				0  = { always = yes }
+            }
+            34 = {
+				0  = { always = yes }
+            }
+            35 = {
+				0  = { always = yes }
+            }
+            36 = {
+				0  = { always = yes }
+            }
+            6 = {
+				0  = { always = yes }
+            }
+            5 = {
+				0 = { portrait_has_trait = dwse_xaela_male1  }
+				1 = { portrait_has_trait = dwse_xaela_male2  }
+				2 = { portrait_has_trait = dwse_xaela_male3  }
+				3 = { portrait_has_trait = dwse_xaela_male4  }
+				4 = { portrait_has_trait = dwse_xaela_male5  }
+				5 = { portrait_has_trait = dwse_xaela_male6  }
+				6 = { portrait_has_trait = dwse_xaela_male7  }
+				7 = { portrait_has_trait = dwse_xaela_male8  }
+				8 = { portrait_has_trait = dwse_xaela_male9  }
+				9 = { portrait_has_trait = dwse_xaela_male10 }
+				10 = { portrait_has_trait = dwse_xaela_male11 }
+				11 = { portrait_has_trait = dwse_xaela_male12 }
+			}
+		}
+	}
+
+    portraitType = {
+        name = "DWSE_PORTRAIT_static_xaela_female"
+		effectFile = "gfx/FX/portrait.lua"
+        weight = {
+            additive_modifier = {
+                value = 1000000
+                portrait_clothing = yes
+				OR = {
+					portrait_has_trait = dwse_xaela_female1
+					portrait_has_trait = dwse_xaela_female2
+					portrait_has_trait = dwse_xaela_female3
+					portrait_has_trait = dwse_xaela_female4
+					portrait_has_trait = dwse_xaela_female5
+					portrait_has_trait = dwse_xaela_female6
+					portrait_has_trait = dwse_xaela_female7
+					portrait_has_trait = dwse_xaela_female8
+					portrait_has_trait = dwse_xaela_female9
+					portrait_has_trait = dwse_xaela_female10
+					portrait_has_trait = dwse_xaela_female11
+					portrait_has_trait = dwse_xaela_female12
+				}
+	 		}
+        }
+
+        layer = {
+            "GFX_empty:c0"
+            "GFX_empty:c2"
+            "GFX_empty:c3"
+            "GFX_empty:c1"
+            "GFX_empty:c4"
+            "GFX_empty:p1:h:y"
+			"GFX_empty:p6"
+            "GFX_portrait_dwse_dusk_female:c5"
+			"GFX_lover_overlay:p37"
+			"GFX_player_overlay:p11"
+        }
+
+        allow_property_values = {
+			0 = {
+				21 = { always = no }
+			}
+            1 = {
+				0  = { always = yes }
+            }
+            19 = {
+				0  = { always = yes }
+            }
+			33 = {
+				0  = { always = yes }
+            }
+            34 = {
+				0  = { always = yes }
+            }
+            35 = {
+				0  = { always = yes }
+            }
+            36 = {
+				0  = { always = yes }
+            }
+            6 = {
+				0  = { always = yes }
+            }
+            5 = {
+				0 = { portrait_has_trait = dwse_xaela_female1  }
+				1 = { portrait_has_trait = dwse_xaela_female2  }
+				2 = { portrait_has_trait = dwse_xaela_female3  }
+				3 = { portrait_has_trait = dwse_xaela_female4  }
+				4 = { portrait_has_trait = dwse_xaela_female5  }
+				5 = { portrait_has_trait = dwse_xaela_female6  }
+				6 = { portrait_has_trait = dwse_xaela_female7  }
+				7 = { portrait_has_trait = dwse_xaela_female8  }
+				8 = { portrait_has_trait = dwse_xaela_female9  }
+				9 = { portrait_has_trait = dwse_xaela_female10 }
+				10 = { portrait_has_trait = dwse_xaela_female11 }
+				11 = { portrait_has_trait = dwse_xaela_female12 }
+			}
+		}
+	}	
+
+}

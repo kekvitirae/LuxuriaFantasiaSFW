@@ -1,0 +1,225 @@
+#
+# CBs
+#
+lf_rivalry_cb_fae;Blood Feud;;;;;;;;;;;;;;x
+lf_rivalry_cb_fae_desc;A neighbor of ours is a long-hated enemy. It's time to wipe them off the map.;;;;;;;;;;;;;;x
+#
+# Traits
+#
+lf_unicorn;Unicorn;;;;;;;;;;;;;x
+lf_unicorn_desc;A majestic and mythical creature. They only appear to sylphs with a good heart.;;;;;;;;;;;;;x
+lf_elf;[Silly_Elf_N];;;;;;;;;;;;;x
+lf_elf_desc;[Silly_Elf_D];;;;;;;;;;;;;x
+lf_silly_elf_n;Tree Hugger;;;;;;;;;;;;;x
+lf_no_silly_elf_n;Elf;;;;;;;;;;;;;x
+lf_silly_elf_d;Tree Huggers are knife-ears of the worst variety. They will happily sell you any crafts made from wood, but may the gods help you if you dare try the same to them. Tales tell of great dwarven fortresses falling to the Tree Huggers because someone tossed a wooden puzzle box into the trade depot.;;;;;;;;;;;;;x
+lf_no_silly_elf_d;A rarity to be seen. Most have died or moved on from our earthly realm, over to the lands of the fae.;;;;;;;;;;;;;x
+
+lf_orc;Orc;;;;;;;;;;;;;x
+lf_orc_desc;They're a primitive, bestial species of legend. Not seen in centuries, most believe them to never have existed.;;;;;;;;;;;;;x
+lf_elf_bf;Elf (§RBlood Feud§!);;;;;;;;;;;;;x
+lf_elf_bf_desc;A rarity to be seen. Most have died or moved on from our earthly realm, over to the lands of the fae.;;;;;;;;;;;;;x
+lf_orc_bf;Orc (§RBlood Feud§!);;;;;;;;;;;;;x
+lf_orc_bf_desc;They're a primitive, bestial species of legend. Not seen in centuries, most believe them to never have existed.;;;;;;;;;;;;;x
+lf_fairy;Fairy;;;;;;;;;;;;;x
+lf_fairy_desc;One of the fae, known to be able to grow to human size, while others claim they're just part fae.;;;;;;;;;;;;;x
+lf_elf_immortality;Elven Immortality;;;;;;;;;;;;;x
+lf_elf_immortality_desc;You really shouldn't be seeing this.;;;;;;;;;;;;;x
+#
+# Modifier definitions
+#
+lf_elf_opinion_EXPLANATION; (opinion from elves);;;;;;;;;;;;;x
+opinion_of_lf_elf_EXPLANATION; (opinion of elves);;;;;;;;;;;;;x
+lf_elf_opinion;Elven opinion;;;;;;;;;;;;;x
+opinion_of_lf_elf;Opinion of elves;;;;;;;;;;;;;x
+lf_fairy_opinion_EXPLANATION; (opinion from fairies);;;;;;;;;;;;;x
+opinion_of_lf_fairy_EXPLANATION; (opinion of fairies);;;;;;;;;;;;;x
+lf_fairy_opinion;Fae opinion;;;;;;;;;;;;;x
+opinion_of_lf_fairy;Opinion of fairies;;;;;;;;;;;;;x
+lf_orc_opinion_EXPLANATION; (opinion from orcs);;;;;;;;;;;;;x
+opinion_of_lf_orc_EXPLANATION; (opinion of orcs);;;;;;;;;;;;;x
+lf_orc_opinion;Orcish opinion;;;;;;;;;;;;;x
+opinion_of_lf_orc;Opinion of orcs;;;;;;;;;;;;;x
+lf_elf_bf_opinion_EXPLANATION; (opinion from elves);;;;;;;;;;;;;x
+opinion_of_lf_elf_bf_EXPLANATION; (opinion of elves);;;;;;;;;;;;;x
+lf_elf_bf_opinion;Elven opinion;;;;;;;;;;;;;x
+opinion_of_lf_elf_bf;Opinion of elves;;;;;;;;;;;;;x
+lf_orc_bf_opinion_EXPLANATION; (opinion from orcs);;;;;;;;;;;;;x
+opinion_of_lf_orc_bf_EXPLANATION; (opinion of orcs);;;;;;;;;;;;;x
+lf_orc_bf_opinion;Orcish opinion;;;;;;;;;;;;;x
+opinion_of_lf_orc_bf;Opinion of orcs;;;;;;;;;;;;;x
+lf_unicorn_opinion_EXPLANATION; (opinion from unicorns);;;;;;;;;;;;;x
+opinion_of_lf_unicorn_EXPLANATION; (opinion of unicorns);;;;;;;;;;;;;x
+lf_unicorn_opinion;Unicorn opinion;;;;;;;;;;;;;x
+opinion_of_lf_unicorn;Opinion of unicorns;;;;;;;;;;;;;x
+#
+# Titles
+#
+title_lf_eagles_eye;Eagle's Eye;;;;;;;;;;;;;x
+title_lf_eagles_eye_desc;Elves train from birth to shoot a bow. Few rise to the position of commander of an army, and fewer still rise to the rank of Eagle's Eye. They, alone, command their longbowmen to great feats.;;;;;;;;;;;;;x
+title_lf_foxs_cunning;Fox's Cunning;;;;;;;;;;;;;x
+title_lf_foxs_cunning_desc;While elves are naturally inquisitive and subtle, few rise to the ranks of Fox's Cunning. They are the best of the best in dealing with matters of intrigue.;;;;;;;;;;;;;x
+title_lf_owls_wisdom;Owl's Wisdom;;;;;;;;;;;;;x
+title_lf_owls_wisdom_desc;While elves are naturally wise due to their longevity, few rise to the ranks of Owl's Cunning. They are the best of the best in dealing with matters of learning.;;;;;;;;;;;;;x
+title_lf_warlock;Warlock;;;;;;;;;;;;;x
+title_lf_warlock_desc;Master in the demonic arts, the Warlock can bring the Abyss to the battle. Just don't ask them what they parse.;;;;;;;;;;;;;x
+title_lf_war_captain;War Captain;;;;;;;;;;;;;x
+title_lf_war_captain_desc;Lok'tar ogar! FOR THE HORDE!;;;;;;;;;;;;;x
+title_lf_peon;Peon;;;;;;;;;;;;;x
+title_lf_peon_desc;Work is da poop. When a Warchief sees a grunt slacking, they can demote them to peon.;;;;;;;;;;;;;x
+#
+# Buildings
+#
+lf_elven_fletcher;LF - Elven Fletcher;;;;;;;;;;;;;x
+lf_elven_fletcher_nomad;LF - Elven Fletcher;;;;;;;;;;;;;x
+lf_castle_elven_fletcher;LF - Elven Fletcher;;;;;;;;;;;;;x
+lf_axe_smithy;LF - Orcish Smithy;;;;;;;;;;;;;x
+lf_axe_smithy_nomad;LF - Orcish Smithy;;;;;;;;;;;;;x
+lf_castle_axe_smithy;LF - Orcish Smithy;;;;;;;;;;;;;x
+lf_fairy_garden;LF - Fairy Garden;;;;;;;;;;;;;x
+lf_fairy_garden_nomad;LF - Fairy Garden;;;;;;;;;;;;;x
+lf_castle_fairy_garden;LF - Fairy Garden;;;;;;;;;;;;;x
+lf_elven_fletcher_desc;Elves have long been reputated as masters of the bow. This fletcher will craft the finest bodkin arrows and longbows the world has ever seen.;;;;;;;;;;;;;x
+lf_axe_smithy_desc;No proper orc would ever be caught dead without a battleaxe in their hands. This smithy will produce the finest weapons for your horde.;;;;;;;;;;;;;x
+lf_fairy_garden_desc;A small garden dedicated to housing those fae who wish to remain tiny. Not only is this garden a place of community for the faeries, but also a center of learning.;;;;;;;;;;;;;x
+lf_castle_elven_fletcher_desc;Elves have long been reputated as masters of the bow. This fletcher will craft the finest bodkin arrows and longbows the world has ever seen.;;;;;;;;;;;;;x
+lf_castle_axe_smithy_desc;No proper orc would ever be caught dead without a battleaxe in their hands. This smithy will produce the finest weapons for your horde.;;;;;;;;;;;;;x
+lf_castle_fairy_garden_desc;A small garden dedicated to housing those fae who wish to remain tiny. Not only is this garden a place of community for the faeries, but also a center of learning.;;;;;;;;;;;;;x
+#
+# Retinues
+#
+RETTYPE_ELF;Elven Archers;;;;;;;;;;;;;x
+RETTYPE_ORC;Orcish Warband;;;;;;;;;;;;;x
+RETTYPE_FAIRY;Fairydragon Riders;;;;;;;;;;;;;x
+#
+# Events
+#
+lf_fairy_starting_trait;Unfold Your Wings;;;;;;;;;;;;;x
+lf_fairy_starting_trait_desc;Long have you hidden in the forest, but now is the time to venture out of the wilds and into the realm of Man.;;;;;;;;;;;;;x
+lf_fairies2;Unfold Your Wings;;;;;;;;;;;;;x
+LF_FairyFemale1;You have spent much of your life in the comfort and safety of the forest, frolicking with your sisters and playing tricks on your brothers. However, you always have had your eye on the world beyond the magical veil protecting your grove, and thus you ventured out on occasion to spend time among the humans, either hidden from view or grown to human size with your wings safely tucked underneath your cloak. \n\n Your wanderlust has caught up with you, and one day you decided to throw off the shackles of the magical veil and take your place in the human world.;;;;;;;;;;;;;x
+LF_FairyMale1;You have spent much of your life in the comfort and safety of the forest, playing tricks on your fellow fae. One particular trick you were certainly proud of was spilling your seed into one of the girls after telling her you would pull out. While amusing to you, the other fairies did not agree. You were given a choice: stay and raise the child you sired, or be cast out. For you, the choice was simple. \n\n Spending the past few weeks hidden among the humans beyond the magical veil that protected your former home, you have grown fond of their perchance for good drink, good company, and good laughs. You decided to throw off the shackles of the magical veil and take your place in the human world.;;;;;;;;;;;;;x
+LF_FairyFemale2;All hail [Root.GetFirstName], Queen of the Fae!;;;;;;;;;;;;;x
+LF_FairyMale2;All hail [Root.GetFirstName], King of the Fae!;;;;;;;;;;;;;x
+LF_Fairy2TTC;All hail [Root.GetFirstName], High Ruler of the Fae!;;;;;;;;;;;;;x
+LF_Fairy3T;The Two Sisters;;;;;;;;;;;;;x
+LF_Fairy3;A hey ho bonny o\nThe swans swim so bonny o\n\n\n  While taking a morning stroll down a nearby river, you spot three young courtier girls- sisters looks like- walking on the far bank. Curiosity gets the better of you and soon, thanks to your fae magic, you shrink yourself down to the size of a normal fairy and begin watching them. The middle girl waves at the two other girls and returns back where she came, while the elder and the youngest remain to walk and talk along the riverbank.\n Suddenly, and without warning or provokation, the eldest pushes the youngest into the river. The poor girl obviously cannot swim, and she shouts for help from her elder sister while holding on for dear life to a fallen tree branch. You cant quite make out what they are saying, but it is obvious the elder refuses to help.\n Suddenly the branch breaks, and the youngest gets swept up in the river flow. The eldest simply laughs to herself and moves off.;;;;;;;;;;;;;x
+LF_Fairy3TTA;I must help the poor girl!;;;;;;;;;;;;;x
+LF_Fairy3TTB;How tragic. Oh well.;;;;;;;;;;;;;x
+LF_Fairy4T;The Drowned Girl;;;;;;;;;;;;;x
+LF_Fairy4;A hey ho bonny o\nThe swans swim so bonny o\n\n\n With nobody else around, you change back into your human form and take off down the riverbank, following the poor girl. The river is unusually strong this morning, so it takes you some time to catch up to her.\n But you are too late. The girl is found on the nearby riverbank, lungs full of water and her pulse still. She is dead.\n\n You carefully drag her corpse onto dry land and contemplate what to do next.;;;;;;;;;;;;;x
+LF_Fairy4TTA;Her hair is so delicate, I bet I could fashion harp strings from it...;;;;;;;;;;;;;x
+LF_Fairy4TTB;I should bury the poor girl.;;;;;;;;;;;;;x
+LF_Fairy4TTC;Well, I am getting a little hungry...;;;;;;;;;;;;;x
+LF_Fairy5T;A Life of Boredom;;;;;;;;;;;;;x
+LF_Fairy5;A hey ho bonny o \n The swans swim so bonny o \n\n\n It's been several weeks since you fashioned your macabre harp from the bones, sinew, and hair of the poor human girl. Since that time, you have grown quite bored of everything. Administering your realm gives you no pleasure, playing with your fae friends gives you no pleasure, and even something as simple as playing a prank on a courtier gives you no pleasure. Everything is boring.\n\n  You contemplate what to do about your rampant boredom.;;;;;;;;;;;;;x
+LF_Fairy5TTA;I can throw a feast! Everyone will be there!;;;;;;;;;;;;;x
+LF_Fairy5TTB;Maybe some prayer and meditation to get my mind back on track.;;;;;;;;;;;;;x
+LF_Fairy5TTC;Maybe a spot of hunting to invigorate my mind.;;;;;;;;;;;;;x
+LF_Fairy5TTD;I am content with my life.;;;;;;;;;;;;;x
+LF_Fairy6T;The Feast;;;;;;;;;;;;;x
+LF_Fairy6;A hey ho bonny o \n The swans swim so bonny o \n\n\n The table is set, and the courtiers are slowing piling in. The centerpiece of the large feast table is your macabre harp, standing silently while the guests take their seats. Just as you are about to address the audience, the harp turns toward one of the women and starts playing on its own, singing in a haunting, accusing tune.\n There does sit my brother Hugh\n With a hey ho and a bonny o\n And by him William, sweet and true\n The swans swim so bonny o\n And there does sit my false sister, Anne\n With a hey ho and a bonny o\n Who drowned me for the sake of a man\n The swans swim so bonny o;;;;;;;;;;;;;x
+LF_Fairy6TTA;She's the murderer! Guards! Sieze her!;;;;;;;;;;;;;x
+LF_Fairy6TTB;I need to break this thing before it embarrasses me further!;;;;;;;;;;;;;x
+macabre_harp;Macabre Harp;;;;;;;;;;;;;x
+macabre_harp_desc;A harp made from the bones, hair, and sinew of a poor girl.;;;;;;;;;;;;;x
+LF_Elf2T;The Unicorn;;;;;;;;;;;;;x
+LF_Elf2;During an afternoon stroll through your favorite grove, you hear the sounds of a horse from nearby. A horse? Out here? All your steeds are stabled, and you know of no other courtier out riding today.\n With all the grace and agility that comes from being an elf, you dart silently and swiftly through the trees until you come across a grove. Standing with its backside toward you is a majestic white stallion, grazing on the foliage. It has no saddle nor brand, indicating it is likely a wild animal. You involuntarily gasp when the stallion lifts its head.\n It's a unicorn!\n You've only heard of such mythical beasts in legends and tales, but you've never once feasted your eyes upon a living, breathing unicorn before. Your gasp startles the stallion, but after gazing for a few moment upon you, it calmly and gently walks up to your side and nuzzles your body with its neck. According to legend, unicorns will only appear to those of a good nature.\n He seems extremely intelligent, and he is more than willing to allow you to ride him. You must decide now what to do with him....;;;;;;;;;;;;;x
+LF_Elf2TTA;He is so majestic! I must bring him to my court!;;;;;;;;;;;;;x
+LF_Elf2TTB;Before I ride him to court, I'll let him ride me.;;;;;;;;;;;;;x
+LF_Elf2TTC;Looks like meat's back on the menu!;;;;;;;;;;;;;x
+unicorn_meat;Ate Unicorn;;;;;;;;;;;;;x
+unicorn_meat_desc;This character feasted on the flesh of a mythical creature.;;;;;;;;;;;;;x
+#
+# Cultures
+#
+fae;Fairy;;;;;;;;;;;;;x
+fae_adj;Fairy;;;;;;;;;;;;;x
+elven;Elf;;;;;;;;;;;;;x
+elven_adj;Elven;;;;;;;;;;;;;x
+orcish;Orc;;;;;;;;;;;;;x
+orcish_adj;Orcish;;;;;;;;;;;;;x
+#
+# Modifiers
+#
+modifier_lf_eagles_eye;Eagle's Eye;;;;;;;;;;;;;x
+modifier_lf_eagles_eye_desc;Elves train from birth to shoot a bow. Few rise to the position of commander of an army, and fewer still rise to the rank of Eagle's Eye. They, alone, command their longbowmen to great feats.;;;;;;;;;;;;;x
+modifier_lf_foxs_cunning;Fox's Cunning;;;;;;;;;;;;;x
+modifier_lf_foxs_cunning_desc;While elves are naturally inquisitive and subtle, few rise to the ranks of Fox's Cunning. They are the best of the best in dealing with matters of intrigue.;;;;;;;;;;;;;x
+modifier_lf_owls_wisdom;Owl's Wisdom;;;;;;;;;;;;;x
+modifier_lf_owls_wisdom_desc;While elves are naturally wise due to their longevity, few rise to the ranks of Owl's Cunning. They are the best of the best in dealing with matters of learning.;;;;;;;;;;;;;x
+modifier_lf_warlock;Warlock;;;;;;;;;;;;;x
+modifier_lf_warlock_desc;Master in the demonic arts, the Warlock can bring the Abyss to the battle. Just don't ask them what they parse.;;;;;;;;;;;;;x
+modifier_lf_war_captain;War Captain;;;;;;;;;;;;;x
+modifier_lf_war_captain_desc;Lok'tar ogar! FOR THE HORDE!;;;;;;;;;;;;;x
+modifier_lf_peon;Peon;;;;;;;;;;;;;x
+modifier_lf_peon_desc;Work is da poop. When a Warchief sees a grunt slacking, they can demote them to peon.;;;;;;;;;;;;;x
+lf_elven_infertility1;Elven Infertility 1;;;;;;;;;;;;;x
+lf_elven_infertility1_desc;The elven womb is extremely fragile, a side effect of their long life spans. Every child a woman has decreases the chance of having future children.;;;;;;;;;;;;;x
+lf_elven_infertility2;Elven Infertility 2;;;;;;;;;;;;;x
+lf_elven_infertility2_desc;The elven womb is extremely fragile, a side effect of their long life spans. Every child a woman has decreases the chance of having future children.;;;;;;;;;;;;;x
+lf_elven_infertility3;Elven Infertility 3;;;;;;;;;;;;;x
+lf_elven_infertility3_desc;The elven womb is extremely fragile, a side effect of their long life spans. Every child a woman has decreases the chance of having future children.;;;;;;;;;;;;;x
+lf_elven_infertility4;Elven Infertility 4;;;;;;;;;;;;;x
+lf_elven_infertility4_desc;The elven womb is extremely fragile, a side effect of their long life spans. This woman is now completely barren.;;;;;;;;;;;;;x
+#
+# Portraits
+#
+lf_fairy_portrait1_cheri;Custom Fairy Portrait;;;;;;;;;;;;;x
+lf_fairy_portrait2_cheri;Custom Fairy Portrait;;;;;;;;;;;;;x
+lf_fairy_portrait3_cheri;Custom Fairy Portrait;;;;;;;;;;;;;x
+lf_fairy_portrait4_cheri;Custom Fairy Portrait;;;;;;;;;;;;;x
+lf_fairy_portrait5_cheri;Custom Fairy Portrait;;;;;;;;;;;;;x
+lf_fairy_portrait6_cheri;Custom Fairy Portrait;;;;;;;;;;;;;x
+lf_fairy_portrait7_cheri;Custom Fairy Portrait;;;;;;;;;;;;;x
+lf_fairy_portrait8_cheri;Custom Fairy Portrait;;;;;;;;;;;;;x
+lf_fairy_portrait9_cheri;Custom Fairy Portrait;;;;;;;;;;;;;x
+lf_fairy_portrait10_cheri;Custom Fairy Portrait;;;;;;;;;;;;;x
+lf_fairy_portrait11_cheri;Custom Fairy Portrait;;;;;;;;;;;;;x
+lf_fairy_portrait12_cheri;Custom Fairy Portrait;;;;;;;;;;;;;x
+lf_fairy_portrait13_cheri;Custom Fairy Portrait;;;;;;;;;;;;;x
+lf_elf_portrait1_cheri;Custom Elf Portrait;;;;;;;;;;;;;x
+lf_elf_portrait2_cheri;Custom Elf Portrait;;;;;;;;;;;;;x
+lf_elf_portrait3_cheri;Custom Elf Portrait;;;;;;;;;;;;;x
+lf_elf_portrait4_cheri;Custom Elf Portrait;;;;;;;;;;;;;x
+lf_elf_portrait5_cheri;Custom Elf Portrait;;;;;;;;;;;;;x
+lf_elf_portrait6_cheri;Custom Elf Portrait;;;;;;;;;;;;;x
+lf_elf_portrait7_cheri;Custom Elf Portrait;;;;;;;;;;;;;x
+lf_elf_portrait8_cheri;Custom Elf Portrait;;;;;;;;;;;;;x
+lf_elf_portrait9_cheri;Custom Elf Portrait;;;;;;;;;;;;;x
+lf_elf_portrait10_cheri;Custom Elf Portrait;;;;;;;;;;;;;x
+lf_elf_portrait11_cheri;Custom Elf Portrait;;;;;;;;;;;;;x
+lf_elf_portrait12_cheri;Custom Elf Portrait;;;;;;;;;;;;;x
+lf_elf_portrait13_cheri;Custom Elf Portrait;;;;;;;;;;;;;x
+lf_fairy_portrait1_cheri_desc;Trait code: lf_fairy_portrait1_cheri;;;;;;;;;;;;;x
+lf_fairy_portrait2_cheri_desc;Trait code: lf_fairy_portrait2_cheri;;;;;;;;;;;;;x
+lf_fairy_portrait3_cheri_desc;Trait code: lf_fairy_portrait3_cheri;;;;;;;;;;;;;x
+lf_fairy_portrait4_cheri_desc;Trait code: lf_fairy_portrait4_cheri;;;;;;;;;;;;;x
+lf_fairy_portrait5_cheri_desc;Trait code: lf_fairy_portrait5_cheri;;;;;;;;;;;;;x
+lf_fairy_portrait6_cheri_desc;Trait code: lf_fairy_portrait6_cheri;;;;;;;;;;;;;x
+lf_fairy_portrait7_cheri_desc;Trait code: lf_fairy_portrait7_cheri;;;;;;;;;;;;;x
+lf_fairy_portrait8_cheri_desc;Trait code: lf_fairy_portrait8_cheri;;;;;;;;;;;;;x
+lf_fairy_portrait9_cheri_desc;Trait code: lf_fairy_portrait9_cheri;;;;;;;;;;;;;x
+lf_fairy_portrait10_cheri_desc;Trait code: lf_fairy_portrait10_cheri;;;;;;;;;;;;;x
+lf_fairy_portrait11_cheri_desc;Trait code: lf_fairy_portrait11_cheri;;;;;;;;;;;;;x
+lf_fairy_portrait12_cheri_desc;Trait code: lf_fairy_portrait12_cheri;;;;;;;;;;;;;x
+lf_fairy_portrait13_cheri_desc;Trait code: lf_fairy_portrait13_cheri;;;;;;;;;;;;;x
+lf_elf_portrait1_cheri_desc;Trait code: lf_elf_portrait1_cheri;;;;;;;;;;;;;x
+lf_elf_portrait2_cheri_desc;Trait code: lf_elf_portrait2_cheri;;;;;;;;;;;;;x
+lf_elf_portrait3_cheri_desc;Trait code: lf_elf_portrait3_cheri;;;;;;;;;;;;;x
+lf_elf_portrait4_cheri_desc;Trait code: lf_elf_portrait4_cheri;;;;;;;;;;;;;x
+lf_elf_portrait5_cheri_desc;Trait code: lf_elf_portrait5_cheri;;;;;;;;;;;;;x
+lf_elf_portrait6_cheri_desc;Trait code: lf_elf_portrait6_cheri;;;;;;;;;;;;;x
+lf_elf_portrait7_cheri_desc;Trait code: lf_elf_portrait7_cheri;;;;;;;;;;;;;x
+lf_elf_portrait8_cheri_desc;Trait code: lf_elf_portrait8_cheri;;;;;;;;;;;;;x
+lf_elf_portrait9_cheri_desc;Trait code: lf_elf_portrait9_cheri;;;;;;;;;;;;;x
+lf_elf_portrait10_cheri_desc;Trait code: lf_elf_portrait10_cheri;;;;;;;;;;;;;x
+lf_elf_portrait11_cheri_desc;Trait code: lf_elf_portrait11_cheri;;;;;;;;;;;;;x
+lf_elf_portrait12_cheri_desc;Trait code: lf_elf_portrait12_cheri;;;;;;;;;;;;;x
+lf_elf_portrait13_cheri_desc;Trait code: lf_elf_portrait13_cheri;;;;;;;;;;;;;x
+#
+# Misc
+#
+DEATH_Elf_GOT_BORED_NO_KILLER;became bored with their mortal life and went on a pilgrimage to the Great Beyond;;;;;;;;;;;;;;x
+DEATH_ELF_GOT_BORED;;became bored with their mortal life and went on a pilgrimage to the Great Beyond;;;;;;;;;;;;;;x
+

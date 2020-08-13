@@ -1,0 +1,69 @@
+targetted_decisions = {
+	lf_headpat_kitsune = {
+		diplomacy_icon = GFX_lf_kitsune_decision
+		filter = court
+		ai_target_filter = none
+		ai = no
+		from_potential = {
+			NOT = { is_incapable = yes }
+			is_adult = yes
+			lf_is_silly = yes
+		}
+		potential = {
+			NOT = { is_incapable = yes }
+			is_adult = no
+			is_kitsune = yes
+			NOT = {
+				has_opinion_modifier = {
+					modifier = lf_headpats
+					who = FROM
+				}
+			}
+		}
+		allow = {
+			age = 6
+			NOT = { age = 16 }
+			is_kitsune = yes
+		}
+		effect = {
+			opinion = { 
+				modifier = lf_headpats
+				who = FROM
+			}
+		}
+	}
+	lf_headpat_neko = {
+		diplomacy_icon = GFX_lf_neko_decision
+		filter = court
+		ai_target_filter = none
+		ai = no
+		from_potential = {
+			NOT = { is_incapable = yes }
+			is_adult = yes
+			lf_is_silly = yes
+		}
+		potential = {
+			NOT = { is_incapable = yes }
+			is_adult = no
+			is_neko = yes
+			NOT = {
+				has_opinion_modifier = {
+					modifier = lf_headpats
+					who = FROM
+				}
+			}
+		}
+		allow = {
+			age = 6
+			NOT = { age = 16 }
+			is_neko = yes
+		}
+		effect = {
+			opinion = { 
+				modifier = lf_headpats
+				who = FROM
+			}
+		}
+	}
+}
+

@@ -1,0 +1,192 @@
+#
+# House Irae
+#
+
+houseirae_drow = { hidden = yes random = no customizer = no }
+houseirae_halfelf = { hidden = yes random = no customizer = no }
+houseirae_drow_child = { hidden = yes random = no customizer = no }
+houseirae_halfelf_child = { hidden = yes random = no customizer = no }
+
+#
+# ToNT (for HH society decision redundancy)
+#
+
+one_tail = { hidden = yes random = no customizer = no }
+five_tails = { hidden = yes random = no customizer = no }
+six_tails = { hidden = yes random = no customizer = no }
+seven_tails = { hidden = yes random = no customizer = no }
+eight_tails = { hidden = yes random = no customizer = no }
+nine_tails = { hidden = yes random = no customizer = no }
+
+#
+# Tentacled Dreams
+#
+
+tentacle_pregnancy = { hidden = yes random = no customizer = no }
+tentacle_monster = { hidden = yes random = no customizer = no }
+tentacle_slave = { hidden = yes random = no customizer = no }
+
+#
+# Dark World Reborn
+#
+
+cat_kin = {
+	random = no
+	customizer = no
+	potential = { 
+		lf_has_dwr_no_replacer = yes
+	}
+	inherit_chance = 100
+	is_visible = {
+		OR = {
+			FROM = { is_mother = ROOT } # Mama knows what she gave birth to
+			FROM = { trait = cat_kin }
+			has_character_modifier = dw_enemy_of_mankind
+			has_character_modifier = dw_out_of_their_skin
+		}
+	}
+	same_opinion = 10 # As outsiders, they can appreciate the challenges each faces
+	intrigue = 1 # Natural inclination towards intrigue
+	combat_rating = 5
+}
+fox_kin = {
+	random = no
+	customizer = no
+	potential = { 
+		lf_has_dwr_no_replacer = yes
+	}
+	inherit_chance = 100
+	is_visible = {
+		OR = {
+			FROM = { is_mother = ROOT } # Mama knows what she gave birth to
+			FROM = { trait = fox_kin }
+			has_character_modifier = dw_enemy_of_mankind
+			has_character_modifier = dw_out_of_their_skin
+		}
+	}
+	same_opinion = 10 # As outsiders, they can appreciate the challenges each faces
+	intrigue = 1 # Natural inclination towards intrigue
+	combat_rating = 5
+}
+demon_kin = {
+	random = no
+	potential = { 
+		lf_has_dwr_no_replacer = yes
+	}
+	inherit_chance = 100
+	is_visible = {
+		OR = {
+			FROM = { trait = demon_kin }
+			FROM = { trait = angel_kin }
+			FROM = { is_mother = ROOT } # Mama knows what she gave birth to
+			has_character_modifier = dw_out_of_the_abyss
+			has_character_modifier = dw_enemy_of_mankind
+		}
+	}
+	same_opinion = 20
+	intrigue = 1 # The shadows are their friend
+	health = 0.5 # A supernatural boost
+	church_opinion = -5 # Even without knowing someone is a demon_kin, church folks just feel uncomfortable by them
+}
+angel_kin = {
+	random = no
+	potential = { 
+		lf_has_dwr_no_replacer = yes
+	}
+	inherit_chance = 100
+	is_visible = {
+		OR = {
+			FROM = { trait = demon_kin }
+			FROM = { trait = angel_kin }
+			FROM = { is_mother = ROOT } # Mama knows what she gave birth to
+			has_character_modifier = dw_out_of_the_sky
+			has_character_modifier = dw_enemy_of_mankind
+		}
+	}
+	same_opinion = 20
+	diplomacy = 1 # Their words are viewed as trustworthy
+	church_opinion = 5 # Even without knowing someone is angel_kin, church folks sense the divine within
+}
+orc = {
+	random = no
+	potential = { 
+		lf_has_dwr_no_replacer = yes
+	}
+	inherit_chance = 100
+	same_opinion = 10
+	health = 0.25 # a little bit more hardy than normal
+}
+elf = {
+	random = no
+	potential = { 
+		lf_has_dwr_no_replacer = yes
+	}
+	inherit_chance = 100
+	same_opinion = 10
+	intrigue = 1 # Naturally perceptive and adept at avoiding attention
+	sex_appeal_opinion = 5 # Something about them is naturally alluring
+}
+fae_kin = { # Fairies and their related kin
+	random = no
+	potential = { 
+		lf_has_dwr_no_replacer = yes
+	}
+	inherit_chance = 100
+	same_opinion = 10
+	learning = 2 # Those with fae blood tend to be more connected to understanding the world around them.
+	diplomacy = -2 # They also tend to struggle at understanding how others act
+}
+futa = { # Futanari
+	random = no
+	customizer = yes
+	ruler_designer_cost = 0
+	potential = {
+		is_female = yes
+		lf_has_dwr_no_replacer = yes
+	}
+	birth = 10 # Out of 10000 births, 10 will be born as futas
+	inherit_chance = 25
+	both_parent_has_trait_inherit_chance = 100
+    fertility = -0.25 # The heightened sex drive and extra equipment seems to have a balancing effect of a subdued fertility
+	sex_appeal_opinion = 5 # People find them exotic
+
+    female_insult = INSULT_FREAK
+	female_insult_adj = INSULT_GROTESQUE
+	female_compliment = COMPL_BEAUTY
+	female_compliment_adj = COMPL_FAIR
+}
+mage = {
+	# Wielders of the arcane
+	random = no
+	potential = { 
+		lf_has_dwr_no_replacer = yes
+	}
+	general_opinion = -5 # With most folks be superstitious, the view mages as the cause of many ills in the World
+	christian_church_opinion = -10 # Viewed as meddlers in powers that conflict with divine scripture
+	muslim_church_opinion = -5 # Viewed as meddlers in powers that conflict with divine scripture
+	diplomacy = -1 # Due to a natural tendency of being a know-it-all
+	intrigue = 1 # Magic is mysterious
+	learning = 1 # Always tinkering and trying something new in their search for fresh discoveries
+	ai_rationality = 15 # Often views the larger picture and plans accordingly
+	ai_zeal = -50 # Don't hold a lot of sway on the whole religious mumbo-jumbo
+}
+branded_slave = {
+	random = no
+	potential = { 
+		lf_has_dwr_no_replacer = yes
+	}
+	customizer = no
+	diplomacy = -2 # A slave's word has little value, even when it's said to be carrying the words of their master
+	intrigue = -1 # The clear branding of a slave makes their attempts at subterfuge more difficult
+	cannot_inherit = yes # A branded slave has no rights to land or titles
+	general_opinion = -5 # Generally seen as a sub class by everyone
+	ai_ambition = -25 # The enslavement process tempers any ambitious desires
+	female_insult = INSULT_SLAVE
+	female_insult_adj = INSULT_PEASANT_WOMAN
+	female_compliment = COMPL_SERVANT
+	female_compliment_adj = COMPL_LOYAL
+	male_insult = INSULT_SLAVE
+	male_insult_adj = INSULT_PEASANT
+	male_compliment = COMPL_SERVANT
+	male_compliment_adj = COMPL_LOYAL
+}

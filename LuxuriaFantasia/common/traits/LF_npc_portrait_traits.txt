@@ -1,0 +1,118 @@
+lf_npc_mey = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_npc_lynness = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_npc_lenora = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_npc_ying_li = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_npc_mwamba = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_npc_asha = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_npc_charlotte = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+
+meeshka_trait = {
+	hidden = no
+	customizer = no
+	random = no
+}
+
+# Beefcake portraits
+
+lf_beefcake_angel_portrait = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+
+lf_beefcake_demon_portrait = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+
+lf_beefcake_kitsune_portrait = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+
+lf_beefcake_neko_portrait = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+
+lf_beefcake_elf_portrait = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+
+lf_beefcake_orc_portrait = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+
+lf_beefcake_fairy_portrait = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+
+#
+# SubscribeStar portraits
+#
+
+lf_npc_brielle = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+
+lf_npc_joseph = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+lf_npc_kalyian = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+
+lf_npc_valri = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+
+lf_npc_amora = {
+	hidden = yes
+	random = no
+	customizer = no
+}

@@ -1,0 +1,237 @@
+LFCustomReligion1;Do you want to choose the Custom Religion or remain as your current religion?;;;;;;;;;;;;;x
+LFCustomReligion1TTA;Custom Pagan Religion;;;;;;;;;;;;;x
+LFCustomReligion1TTB;Remain Faithful;;;;;;;;;;;;;x
+
+LFCustomReligion2;Holy Site Assignment;;;;;;;;;;;;;x
+LFCustomReligion2TTA;Full Random;;;;;;;;;;;;;x
+LFCustomReligion2TTATooltip;Holy sites will be generated in random locations with no regard to your location.\n§RWarning: This is not a fair option.§! This is mostly for overhaul mods that don't use vanilla geographic regions.;;;;;;;;;;;;;x
+LFCustomReligion2TTB;Continental Random;;;;;;;;;;;;;x
+LFCustomReligion2TTBTooltip;Holy sites will be generated in random locations based on your capital's geographic region.;;;;;;;;;;;;;x
+LFCustomReligion2TTC;Regional Random;;;;;;;;;;;;;x
+LFCustomReligion2TTCTooltip;Holy sites will be generated in random locations based on your capital's geographic region, §Gin a tighter cluster around your location.§!\n§RIs no different than Continental Random if starting out in Scandinavia, the Middle East, India (except the Himalayas), or the Steppes.§!;;;;;;;;;;;;;x
+
+LFCustomReligion3;Allow incest?;;;;;;;;;;;;;x
+LFCustomReligion3TTA;Yes;;;;;;;;;;;;;x
+LFCustomReligion3TTB;Yes, with Divine Blood mechanics;;;;;;;;;;;;;x
+LFCustomReligion3TTC;No;;;;;;;;;;;;;x
+LFCustomReligion4;Aggression?;;;;;;;;;;;;;x
+LFCustomReligion4TTA;Aggressive;;;;;;;;;;;;;x
+LFCustomReligion4TTB;Normal;;;;;;;;;;;;;x
+LFCustomReligion4TTC;Pacifist;;;;;;;;;;;;;x
+LFCustomReligion5;Gender Rules?;;;;;;;;;;;;;x
+LFCustomReligion5TTA;Normal;;;;;;;;;;;;;x
+LFCustomReligion5TTB;Matriarchal;;;;;;;;;;;;;x
+LFCustomReligion5TTC;Patriarchal;;;;;;;;;;;;;x
+LFCustomReligion6;Concubinage?;;;;;;;;;;;;;x
+LFCustomReligion6TTA;None;;;;;;;;;;;;;x
+LFCustomReligion6TTB;Male-allowed Concubinage;;;;;;;;;;;;;x
+LFCustomReligion6TTC;Female-allowed Concubinage;;;;;;;;;;;;;x
+LFCustomReligion6TTD;Both;;;;;;;;;;;;;x
+LFCustomReligion7;Islamic mechanics?;;;;;;;;;;;;;x
+LFCustomReligion7TTA;Polygamy;;;;;;;;;;;;;x
+LFCustomReligion7TTB;Decadence;;;;;;;;;;;;;x
+LFCustomReligion7TTC;Both;;;;;;;;;;;;;x
+LFCustomReligion7TTD;Neither;;;;;;;;;;;;;x
+LFCustomReligion8;Raiding?;;;;;;;;;;;;;x
+LFCustomReligion8TTA;Looting Allowed;;;;;;;;;;;;;x
+LFCustomReligion8TTB;Seafaring Looting Allowed;;;;;;;;;;;;;x
+LFCustomReligion8TTC;Neither;;;;;;;;;;;;;x
+LFCustomReligion9;Names of the gods?\n(choices depend on race);;;;;;;;;;;;;x
+LFCustomReligion9TTA;Pre-Defined Names;;;;;;;;;;;;;x
+LFCustomReligion9TTB;Full Custom;;;;;;;;;;;;;x
+LFCustomReligion91TTA;The Red Rose;;;;;;;;;;;;;x
+LFCustomReligion91TTB;The Seldarine (Elves);;;;;;;;;;;;;x
+LFCustomReligion91TTC;The Orcish Pantheon (Orcs);;;;;;;;;;;;;x
+LFCustomReligion91TTD;The Seelie Court (Fairies);;;;;;;;;;;;;x
+LFCustomReligion91TTE;The Feline Pantheon (Nekos);;;;;;;;;;;;;x
+LFCustomReligion91TTF;The Weeaboo Pantheon (Kitsune);;;;;;;;;;;;;x
+LFCustomReligion91TTG;The Twelve;;;;;;;;;;;;;x
+LFCustomReligion91TTH;The Primals;;;;;;;;;;;;;x
+LFCustomReligion9TTHTooltip;You will be given the opportunity to rename the religion, high god, three gods, and two evil gods. This will take effect in one day after renaming them.;;;;;;;;;;;;;x
+LFCustomReligion10;Realm conversion?;;;;;;;;;;;;;x
+LFCustomReligion10TTA;All Realm Characters;;;;;;;;;;;;;x
+LFCustomReligion10TTB;All Realm Provinces;;;;;;;;;;;;;x
+LFCustomReligion10TTC;Both;;;;;;;;;;;;;x
+LFCustomReligion10TTD;None;;;;;;;;;;;;;x
+
+lf_luxuria_custom;[GetCustomReligionName];;;;;;;;;;;;;x
+lf_luxuria_custom_DESC;[GetCustomReligionDesc];;;;;;;;;;;;;x
+lf_luxuria_custom_long;Customite;;;;;;;;;;;;;x
+lf_luxuria_custom_reformed;[GetCustomReligionName];;;;;;;;;;;;;x
+lf_luxuria_custom_reformed_DESC;[GetCustomReligionDesc];;;;;;;;;;;;;x
+lf_luxuria_custom_reformed_long;Customite;;;;;;;;;;;;;x
+
+lf_god_lilith;Lilith;;;;;;;;;;;;;x
+
+lf_corellon;Corellon Larenthian;;;;;;;;;;;;;x
+lf_angharradh;Angharradh;;;;;;;;;;;;;x
+lf_rillifane;Rillifane;;;;;;;;;;;;;x
+lf_alathrien;Alathrien;;;;;;;;;;;;;x
+lf_vandria;Vandria;;;;;;;;;;;;;x
+lf_solonor;Solonor;;;;;;;;;;;;;x
+lf_lolth;Lolth;;;;;;;;;;;;;x
+lf_vhaeraun;Vhaeraun;;;;;;;;;;;;;x
+
+lf_gruumsh;Gruumsh One-Eye;;;;;;;;;;;;;x
+lf_luthic;Luthic;;;;;;;;;;;;;x
+lf_illneval;Illneval;;;;;;;;;;;;;x
+lf_bahgfru;Bahgfru;;;;;;;;;;;;;x
+lf_shargaas;Shargaas;;;;;;;;;;;;;x
+lf_yurtrus;Yurtrus;;;;;;;;;;;;;x
+
+lf_oberon;Oberon;;;;;;;;;;;;;x
+lf_titania;Titania;;;;;;;;;;;;;x
+lf_andraste;Andraste;;;;;;;;;;;;;x
+lf_babd_catha;Babd Catha;;;;;;;;;;;;;x
+lf_brighid;Bridhid;;;;;;;;;;;;;x
+lf_scathach;Scathach;;;;;;;;;;;;;x
+lf_storm_hag;Storm Hag;;;;;;;;;;;;;x
+lf_ankou;Ankou;;;;;;;;;;;;;x
+lf_leanhaum_shee;Leanhaum-Shee;;;;;;;;;;;;;x
+
+lf_bast;Bast;;;;;;;;;;;;;x
+lf_fluffy;Fluffy;;;;;;;;;;;;;x
+lf_ariandel;Ariandel;;;;;;;;;;;;;x
+lf_tigger;Tigger;;;;;;;;;;;;;x
+lf_shadow;Shadow;;;;;;;;;;;;;x
+lf_luna;Luna;;;;;;;;;;;;;x
+lf_chloe;Chloe;;;;;;;;;;;;;x
+lf_rover;Rover;;;;;;;;;;;;;x
+
+HALONE;Halone;;;;;;;;;;;;;x
+MENPHINA;Menphina;;;;;;;;;;;;;x
+THALIAK;Thaliak;;;;;;;;;;;;;x
+NYMEIA;Nymeia;;;;;;;;;;;;;x
+LLYMLAEN;Llymlaen;;;;;;;;;;;;;x
+OSCHON;Oschon;;;;;;;;;;;;;x
+BYREGOT;Byregot;;;;;;;;;;;;;x
+RHALGR;Rhalgr;;;;;;;;;;;;;x
+AZEYMA;Azeyma;;;;;;;;;;;;;x
+NALDTHAL;Nald'Thal;;;;;;;;;;;;;x
+NOPHICA;Nophica;;;;;;;;;;;;;x
+ALTHYK;Althyk;;;;;;;;;;;;;x
+HYDAELYN;Hydaelyn;;;;;;;;;;;;;x
+ZODIARK;Zodiark;;;;;;;;;;;;;x
+FFXIV_WARRIOR_DARK;Warrior of Darkness;;;;;;;;;;;;;x
+
+IFRIT;Ifrit;;;;;;;;;;;;;x
+TITAN;Titan;;;;;;;;;;;;;x
+GARUDA;Garuda;;;;;;;;;;;;;x
+ULTIMA;Ultima Weapon;;;;;;;;;;;;;x
+LEVIATHAN;Leviathan;;;;;;;;;;;;;x
+SHIVA;Shiva;;;;;;;;;;;;;x
+KING_MOG;Good King Moggle Mog XII;;;;;;;;;;;;;x
+ODIN;Odin;;;;;;;;;;;;;x
+RAVANA;Ravana;;;;;;;;;;;;;x
+BISMARCK;Bismarck;;;;;;;;;;;;;x
+SEPHIROT;Sephirot;;;;;;;;;;;;;x
+SOPHIA;Sophia;;;;;;;;;;;;;x
+ZURVAN;Zurvan;;;;;;;;;;;;;x
+SUSANO;Susano;;;;;;;;;;;;;x
+LAKSHMI;Lakshmi;;;;;;;;;;;;;x
+TSUKUYOMI;Tsukuyomi;;;;;;;;;;;;;x
+BAHAMUT;Bahamut;;;;;;;;;;;;;x
+FFXIV_WARRIOR_LIGHT;Warrior of Light;;;;;;;;;;;;;x
+
+THE_KAMI;The Kami;;;;;;;;;;;;;x
+THE_KOJIKI;The Kojiki;;;;;;;;;;;;;x
+KANNUSHI;Kannushi;;;;;;;;;;;;;x
+KIYOME;Kiyome;;;;;;;;;;;;;x
+THE_EVIL_KAMI;The Evil Kami;;;;;;;;;;;;;x
+AMATERASU;Amaterasu;;;;;;;;;;;;;x
+FUJIN;Fujin;;;;;;;;;;;;;x
+IZANAGI_MIKOTO;Izanagi no Mikoto;;;;;;;;;;;;;x
+IZANAMI_MIKOTO;Izanami no Mikoto;;;;;;;;;;;;;x
+RYUJIN;Ryujin;;;;;;;;;;;;;x
+RAIJIN;Raijin;;;;;;;;;;;;;x
+OKAMI;Inari Okami;;;;;;;;;;;;;x
+
+lf_lilith_name;Red Rose;;;;;;;;;;;;;x
+lf_lilith_desc;Lilith, also known as the Unholy Mother or the Red Rose, was Adam's first wife before Eve, and the first woman created by God. She was cast out of Paradise and transformed into a demon when She demanded equal rights to Adam (and some say She wanted to be on top during sex). Since then, Her followers have taken up the mantle of hedonism in Her name.;;;;;;;;;;;;;x
+lf_seldarine_name;Seldarine;;;;;;;;;;;;;x
+lf_seldarine_desc;Seldarine is the name of the elven pantheon. It is ruled by Corellon Larenthian, father and protector of all elven kin. Eons ago, his consort led a rebellion to usurp his power, but the rebellion failed and the surviving rebels were exiled from the Seldarine and turned into the drow. Since then, the Seldarine has been on constant watch against all threats to their elven kin.;;;;;;;;;;;;;x
+lf_orcish_name;Nishrek;;;;;;;;;;;;;x
+lf_orcish_desc;Caring not for collective names, orcs have not bothered to give their pantheon one. Outsiders, however, call the pantheon the Nishrek, named for the plane of existence where Gruumsh and his deity followers reside. Gruumsh, also called One-Eye, rules over his race with an iron fist, demanding loyalty and dedication to the martial arts so that one day he can take revenge on the elven god Corellon Larenthian for taking his eye in battle.;;;;;;;;;;;;;x
+lf_fae_name;Seelie;;;;;;;;;;;;;x
+lf_fae_desc;The Seelie Court is a fae pantheon, ruled over jointly by both Oberon and Titania, King and Queen of the Fae. Despite being primarily comprised of fairies, the Seelie Court also welcomes brownies, sprites, banshees, and many other faekin as followers. Some human goddesses of Irish origin also have a place in the Seelie Court.;;;;;;;;;;;;;x
+lf_meow_name;Feline;;;;;;;;;;;;;x
+lf_meow_desc;Meow meow meow meow MEOW!;;;;;;;;;;;;;x
+lf_weeb_name;Japanese;;;;;;;;;;;;;x
+lf_weeb_desc;MUDA MUDA MUDA MUDA MUDA MUDA MUDA! ZA WARUDO! Toki yo tomare. ORA ORA ORA ORA ORA ORA WRYYYYYYYYY! Soshite, toki wa ugoki dasu.;;;;;;;;;;;;;x
+lf_custom_name;Custom;;;;;;;;;;;;;x
+lf_custom_desc;A customizable religion.;;;;;;;;;;;;;x
+lf_primal_name;The Primals;;;;;;;;;;;;;x
+lf_primal_desc;Primals are manifestations of extreme aether concentration, given life through desire. Whether this desire is to protect one's homeland, or maintaining balance, or simply self-indulgent hedonism, the Primal will manifest itself and carry out the wishes of those that summoned it. Usually.;;;;;;;;;;;;;x
+lf_twelve_name;The Twelve;;;;;;;;;;;;;x
+lf_twelve_desc;The Twelve saught properity among the people of the world, existing in harming with the world's Crystal, Hydaelyn. Their blessings included granting craftsmen with Byregot's blessing, scholars with Thaliak's wisdom, and even victory in war with Rhalgr's rage. That is, until the primal Bahamut escaped from his prison. Even the Twelve were not strong enough to cage him again, and thus the world was destroyed and remade anew. The world of the Twelve has dwindled since then, only to rise in popularity with the coming chaos.;;;;;;;;;;;;;x
+
+temple_baron_lf_luxuria_custom;Priest;;;;;;;;;;;;;x
+temple_count_lf_luxuria_custom;Priest;;;;;;;;;;;;;x
+temple_duke_lf_luxuria_custom;High Priest;;;;;;;;;;;;;x
+temple_king_lf_luxuria_custom;Grand Priest;;;;;;;;;;;;;x
+temple_baron_female_lf_luxuria_custom;Priestess;;;;;;;;;;;;;x
+temple_count_female_lf_luxuria_custom;Priestess;;;;;;;;;;;;;x
+temple_duke_female_lf_luxuria_custom;High Priestess;;;;;;;;;;;;;x
+temple_king_female_lf_luxuria_custom;Grand Priestess;;;;;;;;;;;;;x
+temple_baron_lf_luxuria_custom_reformed;Priest;;;;;;;;;;;;;x
+temple_count_lf_luxuria_custom_reformed;Priest;;;;;;;;;;;;;x
+temple_duke_lf_luxuria_custom_reformed;High Priest;;;;;;;;;;;;;x
+temple_king_lf_luxuria_custom_reformed;Grand Priest;;;;;;;;;;;;;x
+temple_baron_female_lf_luxuria_custom_reformed;Priestess;;;;;;;;;;;;;x
+temple_count_female_lf_luxuria_custom_reformed;Priestess;;;;;;;;;;;;;x
+temple_duke_female_lf_luxuria_custom_reformed;High Priestess;;;;;;;;;;;;;x
+temple_king_female_lf_luxuria_custom_reformed;Grand Priestess;;;;;;;;;;;;;x
+
+lf_religion_founder;Religion Founder;;;;;;;;;;;;;x
+
+lf_a_customize_religion;Luxuria: Customize Religion;;;;;;;;;;;;;x
+lf_a_customize_religion_desc;You have a custom religion. Now's a good time to customize it how you like.;;;;;;;;;;;;;x
+lf_a_customize_religion_historical;Luxuria: Customize Religion;;;;;;;;;;;;;x
+lf_a_customize_religion_historical_desc;You have access to a custom religion. You can choose to pick it or remain your religion.;;;;;;;;;;;;;x
+
+GOD_KEKVIT;Kekvit Irae;;;;;;;;;;;;;x
+GOD_RASCALOV;Rascalov;;;;;;;;;;;;;x
+GOD_DROZZHAT;Dro'Zzhat;;;;;;;;;;;;;x
+GOD_ALIRIS;Aliris;;;;;;;;;;;;;x
+GOD_BELLADONNA;Belladonna Irae;;;;;;;;;;;;;x
+GOD_ALARATT;Alaratt;;;;;;;;;;;;;x
+GOD_CHERI;Cheri;;;;;;;;;;;;;x
+GOD_NOXBESTIA;NoxBestia;;;;;;;;;;;;;x
+GOD_SHINY_BOOTS;Shiny Boots;;;;;;;;;;;;;x
+GOD_STALINDLRP;Stalindlrp;;;;;;;;;;;;;x
+GOD_TARIN;Tarin;;;;;;;;;;;;;x
+GOD_TRISKELIA;Triskelia;;;;;;;;;;;;;x
+
+LFCustomReligionLilithJoin;Members of the Custom Religion who worship The Red Rose;;;;;;;;;;;;;x
+
+lf_custom_true_name;[lf_custom_religion_name.GetFirstName];;;;;;;;;;;;;x
+lf_custom_true_desc;This religion can be anything you want it to be. All you have to do is believe in yourself and the glory of [lf_high_god.GetFirstName].;;;;;;;;;;;;;x
+lf_custom_high_god;[lf_high_god.GetFirstName];;;;;;;;;;;;;x
+lf_custom_god1;[lf_god_1.GetFirstName];;;;;;;;;;;;;x
+lf_custom_god2;[lf_god_2.GetFirstName];;;;;;;;;;;;;x
+lf_custom_god3;[lf_god_3.GetFirstName];;;;;;;;;;;;;x
+lf_custom_evil_god1;[lf_evil_god_1.GetFirstName];;;;;;;;;;;;;x
+lf_custom_evil_god2;[lf_evil_god_2.GetFirstName];;;;;;;;;;;;;x
+
+LFCUSTOMMALE;Supreme Priest;;;;;;;;;;;;;x
+LFCUSTOMFEMALE;Supreme Priestess;;;;;;;;;;;;;x
+LFCUSTOM_FOA;Your Holiness;Votre Sainteté;Eure Heiligkeit;;Su Santidad;;;;;;;;;x
+LFCustomMaleTrue;[lf_custom_pope_male.GetFirstName];;;;;;;;;;;;;x
+LFCustomMaleLilith;Red Thorn;;;;;;;;;;;;;x
+LFCustomMaleFairy;Oberon;;;;;;;;;;;;;x
+LFCustomMaleSeldarine;Treespeaker;;;;;;;;;;;;;x
+LFCustomMaleOrc;Supreme Warlock;;;;;;;;;;;;;x
+LFCustomMaleFFXIV;Scion;;;;;;;;;;;;;x
+LFCustomMalePrimal;Primalspeaker;;;;;;;;;;;;;x
+LFCustomMaleWeeb;High Kannushi;;;;;;;;;;;;;x
+LFCustomMaleMeow;Hem;;;;;;;;;;;;;x
+LFCustomFemaleTrue;[lf_custom_pope_female.GetFirstName];;;;;;;;;;;;;x
+LFCustomFemaleLilith;Red Petal;;;;;;;;;;;;;x
+LFCustomFemaleFairy;Titania;;;;;;;;;;;;;x
+LFCustomFemaleSeldarine;Windglider;;;;;;;;;;;;;x
+LFCustomFemaleOrc;Supreme Witch;;;;;;;;;;;;;x
+LFCustomFemaleFFXIV;Scion;;;;;;;;;;;;;x
+LFCustomFemalePrimal;Primalspeaker;;;;;;;;;;;;;x
+LFCustomFemaleWeeb;High Miko;;;;;;;;;;;;;x
+LFCustomFemaleMeow;Hemet;;;;;;;;;;;;;x
+d_lf_luxuria_custom_reformed;Supreme Temple;;;;;;;;;;;;;x

@@ -1,0 +1,38 @@
+namespace = LF_FarEast_Children
+
+character_event = {
+	id = LF_FarEast_Children.2
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_kitsune = yes
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				is_kitsune = yes
+			}
+			lf_add_random_kitsune_portrait = yes
+		}	
+	}
+}
+
+character_event = {
+	id = LF_FarEast_Children.4
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_neko = yes
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				is_neko = yes
+			}
+			lf_add_random_neko_portrait = yes
+		}
+	}
+}
+

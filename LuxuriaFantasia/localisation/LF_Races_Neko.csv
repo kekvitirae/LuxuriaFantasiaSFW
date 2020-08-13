@@ -1,0 +1,78 @@
+#
+# Traits
+#
+lf_neko;Neko;;;;;;;;;;;;;x
+lf_neko_desc;A cat person from the far east. Often arbitrary, yet potentially very friendly and supportive.;;;;;;;;;;;;;x
+lf_neko_bf;Neko (§RBlood Feud§!);;;;;;;;;;;;;x
+lf_neko_bf_desc;A cat person from the far east. Often arbitrary, yet potentially very friendly and supportive.;;;;;;;;;;;;;x
+#
+# Events
+#
+LFNeko11T;Nekos;;;;;;;;;;;;;x
+LFNeko11;My great grandfather visited the Far East when he was a young man, and returned with my great grandmother. Many said that she was a spirit in human form, and she apparently caused more than one issue that required great grandfather to smooth out due to her not understanding customs. \n  I'm told that it was a full moon the night of my birth, and at first it was believed that my mother had laid with a tiger thanks to my small tail and feline ears. Soon, it was realized instead that I was a rarity, having somehow shown bloodline traits of my great grandmother. \n  While growing up, I found it difficult to find interest in boring things that they kept trying to teach me, and I was told my behavior wasn't befitting a noble on so many occasions. \n  Now fate has somehow put me in charge of my own realm.;;;;;;;;;;;;;x
+LFNeko11TTA;Meow!;;;;;;;;;;;;;x
+LFNeko11TTB;MEOW!;;;;;;;;;;;;;x
+LFNeko103;My body feels warm, and my pussy tingles at the slightest touch. I have gone into heat! I desire nothing more than to be filled with someone's seed and experience the joys of motherhood.;;;;;;;;;;;;;x
+LFNeko103TTA;I need a cock in me, NOW!;;;;;;;;;;;;;x
+LFNeko103TTB;I need a cock in me, NOW! (Turn off future notifications);;;;;;;;;;;;;x
+LFNeko104Pregnant;I can feel my new child growing inside of my womb, and as a result my body has calmed down. I am no longer in heat.;;;;;;;;;;;;;x
+LFNeko104NotPregnant;My body has calmed down, though I remain barren of children. I am no longer in heat.;;;;;;;;;;;;;x
+LFNeko104TTA;Ah, motherhood...;;;;;;;;;;;;;x
+LFNeko104TTB;Maybe next time...;;;;;;;;;;;;;x
+#
+# Decisions
+#
+lf_turn_on_heat_notifications;Turn on heat notifications;;;;;;;;;;;;;x
+lf_turn_on_heat_notifications_desc;You have turned off the notifications for when you are in heat or no longer in heat. This will turn them back on.;;;;;;;;;;;;;x
+#
+# Buildings
+#
+lf_castle_neko_playroom;LF - Neko Playroom;;;;;;;;;;;;;x
+lf_palace_neko_playroom;LF - Neko Playroom;;;;;;;;;;;;;x
+lf_tribal_neko_playroom;LF - Neko Playroom;;;;;;;;;;;;;x
+lf_nomad_neko_playroom;LF - Neko Playroom;;;;;;;;;;;;;x
+lf_neko_playroom_desc;Nekos are renowned for two things: their laziness and their ability to reproduce. This playroom, equipped with plush beds and sofas, fulfill both these needs.;;;;;;;;;;;;;x
+#
+# Retinues
+#
+RETTYPE_NEKO;Spurned Catgirls;;;;;;;;;;;;;x
+#
+# Titles
+#
+title_lf_owo;owo What's this?;;;;;;;;;;;;;x
+title_lf_owo_desc;*glomp and tackles you* X3 *and notices your bulge*;;;;;;;;;;;;;x
+title_lf_mew;Mew!;;;;;;;;;;;;;x
+title_lf_mew_desc;This little cutie was left to live in a box in an alley. Wont you bring her home out of the rain?;;;;;;;;;;;;;x
+title_lf_hiss;HISS!;;;;;;;;;;;;;x
+title_lf_hiss_desc;Sometimes cats get envious of junk size. Those with smaller junks can get quite... frustrated.;;;;;;;;;;;;;x
+modifier_lf_owo;owo What's this?;;;;;;;;;;;;;x
+modifier_lf_owow_desc;*glomp and tackles you* X3 *and notices your bulge*;;;;;;;;;;;;;x
+modifier_lf_mew;Mew!;;;;;;;;;;;;;x
+modifier_lf_mew_desc;This little cutie was left to live in a box in an alley. Wont you bring her home out of the rain?;;;;;;;;;;;;;x
+modifier_lf_hiss;HISS!;;;;;;;;;;;;;x
+modifier_lf_hiss_desc;Sometimes cats get envious of junk size. Those with smaller junks can get quite... frustrated.;;;;;;;;;;;;;x
+modifier_lf_neko_maid;Neko Maid;;;;;;;;;;;;;x
+modifier_lf_neko_maid_desc;This character's liege has ordered her to wear a strange black and white uniform while she performs her maid duties. Rumors abound that it's not all she performs for him.;;;;;;;;;;;;;x
+title_lf_neko_maid;Neko Maid;;;;;;;;;;;;;x
+title_lf_neko_maid_desc;Among the servants of the court, this particular title is held only for the most... favored of the liege.;;;;;;;;;;;;;x
+#
+# Modifier definitions
+#
+lf_neko_bf_opinion_EXPLANATION; (opinion from nekos);;;;;;;;;;;;;x
+opinion_of_lf_neko_bf_EXPLANATION; (opinion of nekos);;;;;;;;;;;;;x
+lf_neko_bf_opinion;Neko opinion;;;;;;;;;;;;;x
+opinion_of_lf_neko_bf;Opinion of nekos;;;;;;;;;;;;;x
+lf_neko_opinion_EXPLANATION; (opinion from nekos);;;;;;;;;;;;;x
+opinion_of_lf_neko_EXPLANATION; (opinion of nekos);;;;;;;;;;;;;x
+lf_neko_opinion;Neko opinion;;;;;;;;;;;;;x
+opinion_of_lf_neko;Opinion of nekos;;;;;;;;;;;;;x
+#
+# Culture
+#
+neko_culture;Neko;;;;;;;;;;;;;x
+neko_culture_adj;Neko;;;;;;;;;;;;;x
+#
+# Modifiers
+#
+lf_neko_heat;In Heat;;;;;;;;;;;;;x
+lf_neko_heat_desc;This neko is in heat. She can't control itself and desires to be impregnated!;;;;;;;;;;;;;x

@@ -1,0 +1,326 @@
+decisions = {
+
+	# Mass enslavement
+	lf_b_mass_enslave_and_sell = {
+		ai = no
+		potential = {
+			NOT = { is_incapable = yes }
+			ai = no
+			lf_has_slaves = yes
+			prisoner = no
+			is_adult = yes
+			any_courtier = {
+				prisoner = yes
+				host = { character = ROOT }
+				is_adult = yes
+				is_not_enslaved = yes
+				ai = yes
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			custom_tooltip = {
+				text = LFMassEnslavementTooltip
+				any_courtier = {
+					limit = {
+						prisoner = yes
+						host = { character = ROOT }
+						is_adult = yes
+						is_not_enslaved = yes
+						ai = yes
+					}
+					death = { death_reason = death_enslaved }
+					ROOT = {
+						wealth = 2
+					}
+				}
+			}
+		}
+	}
+	lf_b_mass_enslave_and_sell_dwse = {
+		ai = no
+		potential = {
+			NOT = { is_incapable = yes }
+			ai = no
+			has_dwse_dragon_on = yes
+			lf_has_slaves = yes
+			prisoner = no
+			is_adult = yes
+			any_courtier = {
+				prisoner = yes
+				host = { character = ROOT }
+				is_adult = yes
+				is_not_enslaved = yes
+				ai = yes
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			custom_tooltip = {
+				text = LFMassEnslavementDWSETooltip
+				any_courtier = {
+					limit = {
+						prisoner = yes
+						host = { character = ROOT }
+						is_adult = yes
+						is_not_enslaved = yes
+						ai = yes
+					}
+					death = { death_reason = death_went_to_forest }
+					ROOT = {
+						add_offmap_currency = {
+							offmap = offmap_dwse
+							value = 25
+						}
+					}
+				}
+			}
+		}
+	}
+		
+}
+
+targetted_decisions = {
+
+	lf_enslave_prisoner = {
+		filter = court
+		ai_target_filter = court
+		ai_check_interval = 24
+		from_potential = {
+			NOT = { is_incapable = yes }
+			lf_has_slaves = yes
+			is_adult = yes
+			is_ruler = yes
+		}
+		potential = {
+			NOR = { 
+				dynasty = FROM
+				is_incapable = yes 
+			}
+			is_adult = yes
+			prisoner = yes
+			host = { character = FROM }
+			is_not_enslaved = yes
+			ai = yes
+		}
+		allow = {
+			custom_tooltip = {
+				text = lf_no_ghost_enslavement_tt
+				NOT = { trait = lf_ghost }
+			}	
+			custom_tooltip = {
+				text = lf_no_dragon_enslavement_tt
+				NOR = { 
+					trait = dwse_dragon_adult
+					trait = dwse_dragon_child
+					trait = dwse_shapeshifted
+				}
+			}
+			custom_tooltip = {
+				text = lf_no_special_enslavement_tt
+				NOT = { has_character_flag = special_npc }
+			}
+		}
+		effect = {
+			add_trait = lf_enslaved
+			custom_tooltip = {
+				text = lf_character_enslaved
+				if = {
+					limit = {
+						is_ruler = yes
+					}
+					abdicate = yes
+				}
+				any_claim = {
+					remove_claim = PREV
+				}
+				if = {
+					limit = {
+						OR = {
+							trait = content
+							trait = lf_submissive
+							trait = depressed
+							trait = humble
+							trait = shy
+							trait = trusting
+						}
+					}
+					opinion = {
+						who = FROM
+						modifier = lf_slave_master_compliant
+					}
+				}
+				else = {
+					opinion = {
+						who = FROM
+						modifier = lf_slave_master
+					}
+				}
+				imprison = no
+				move_character = FROM
+				remove_character_modifier = house_arrest
+				remove_character_modifier = the_oubliette
+				remove_character_modifier = the_dungeon
+				set_character_flag = lf_enslaved_by_@FROM
+				set_character_flag = no_court_invites
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0.1
+			modifier = { # Kind or charitable characters, or former slaves will never force enslavement on others
+				factor = 0
+				OR = {
+					trait = kind
+					trait = charitable
+					trait = lf_former_slave
+				}
+			}
+			modifier = { # Cruel, greedy, or arbitrary characters are more likely to enslave
+				factor = 5
+				OR = {
+					trait = cruel
+					trait = greedy
+					trait = arbitrary
+				}
+			}
+			modifier = { # Lustful/Hedonists are more likely to enslave someone who is beautiful
+				factor = 2
+				OR = {
+					trait = lustful
+					trait = hedonist
+				}
+				NOT = { trait = lf_asexual }
+				ROOT = {
+					trait = fair
+				}
+				OR = {
+					AND = {
+						same_sex = ROOT
+						trait = homosexual
+					}
+					NOR = { 
+						same_sex = ROOT 
+						trait = homosexual
+					}
+				}
+			}
+		}
+	}
+	
+	
+	lf_sell_slave = {
+		filter = court
+		ai_target_filter = none
+		ai_check_interval = 24
+		ai = no
+		from_potential = {
+			NOT = { is_incapable = yes }
+			lf_has_slaves = yes
+			is_adult = yes
+			ai = no
+		}
+		potential = {
+			is_adult = yes
+			is_enslaved = yes
+			ai = yes
+		}
+		allow = {
+			is_adult = yes
+			prisoner = no
+			host = { character = FROM }
+		}
+		effect = {
+			save_event_target_as = lf_slave_being_sold
+			character_event = { id = LF_Slavery.1 }
+		}
+	}
+	
+	lf_free_slave = {
+		filter = court
+		ai_target_filter = court
+		ai_check_interval = 24
+		from_potential = {
+			NOT = { is_incapable = yes }
+			is_adult = yes
+			is_ruler = yes
+		}
+		potential = {
+			is_enslaved = yes
+			prisoner = no
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			if = { # If the ruler who freed the slave was the one who enslaved them, the slave will leave.
+				limit = {
+					has_character_flag = lf_enslaved_by_@FROM
+				}
+				lf_remove_slave = yes
+				add_trait = lf_former_slave
+				hidden_tooltip = {
+					remove_opinion = {
+						who = FROM
+						modifier = lf_slave_master
+					}
+					remove_opinion = {
+						who = FROM
+						modifier = lf_slave_master_compliant
+					}
+				}
+				if = {
+					limit = {
+						any_independent_ruler = {
+							culture = ROOT
+						}
+					}
+					random_independent_ruler = {
+						limit = {
+							culture = ROOT
+							NOT = { character = FROM }
+						}
+						ROOT = {
+							move_character = PREV
+						}
+					}
+				}
+				else = {
+					banish = yes
+				}
+			}
+			else = {
+				lf_remove_slave = yes
+				add_trait = lf_former_slave
+				opinion = {
+					modifier = lf_freed_me
+					who = FROM
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0.1
+			modifier = { # Kind or charitable characters, or former slaves will always try to free slaves
+				factor = 10
+				OR = {
+					trait = kind
+					trait = charitable
+					trait = lf_former_slave
+				}
+			}
+			modifier = { # Cruel, greedy, or arbitrary characters will never free slaves
+				factor = 0
+				OR = {
+					trait = cruel
+					trait = greedy
+					trait = arbitrary
+				}
+			}
+		}
+	}
+					
+}

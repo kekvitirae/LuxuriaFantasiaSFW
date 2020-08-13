@@ -1,0 +1,218 @@
+namespace = DWSEDragon
+
+#
+# Shapeshifting from dragon to human
+#
+
+character_event = {
+	id = DWSEDragon.1
+	hide_window = yes
+	is_triggered_only = yes # From shapeshift decision
+	immediate = {
+		trigger_switch = {
+			on_trigger = trait
+			dwse_dragon_portrait1 = { set_character_flag = dwse_dragon_portrait1 }
+			dwse_dragon_portrait2 = { set_character_flag = dwse_dragon_portrait2 }
+			dwse_dragon_portrait3 = { set_character_flag = dwse_dragon_portrait3 }
+			dwse_dragon_portrait4 = { set_character_flag = dwse_dragon_portrait4 }
+			dwse_dragon_portrait5 = { set_character_flag = dwse_dragon_portrait5 }
+			dwse_dragon_portrait6 = { set_character_flag = dwse_dragon_portrait6 }
+			dwse_dragon_portrait7 = { set_character_flag = dwse_dragon_portrait7 }
+			dwse_dragon_portrait8 = { set_character_flag = dwse_dragon_portrait8 }
+			dwse_dragon_portrait9 = { set_character_flag = dwse_dragon_portrait9 }
+			dwse_dragon_portrait10 = { set_character_flag = dwse_dragon_portrait10 }
+			dwse_dragon_portrait11 = { set_character_flag = dwse_dragon_portrait11 }
+			dwse_dragon_portrait12 = { set_character_flag = dwse_dragon_portrait12 }
+			dwse_dragon_portrait13 = { set_character_flag = dwse_dragon_portrait13 }
+			dwse_dragon_portrait14 = { set_character_flag = dwse_dragon_portrait14 }
+		}
+		remove_dwse_dragon_portrait = yes
+		remove_trait = dwse_dragon_adult
+		add_trait = dwse_shapeshifted
+	}
+}
+
+#
+# Shapeshifting from human to dragon
+#
+
+character_event = {
+	id = DWSEDragon.2
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		add_trait = dwse_dragon_adult
+		remove_trait = dwse_shapeshifted
+		trigger_switch = {
+			on_trigger = has_character_flag
+			dwse_dragon_portrait1 = { 
+				add_trait = dwse_dragon_portrait1 
+				clr_character_flag = dwse_dragon_portrait1
+			}
+			dwse_dragon_portrait2 = { 
+				add_trait = dwse_dragon_portrait2 
+				clr_character_flag = dwse_dragon_portrait2
+			}
+			dwse_dragon_portrait3 = { 
+				add_trait = dwse_dragon_portrait3  
+				clr_character_flag = dwse_dragon_portrait3
+			}
+			dwse_dragon_portrait4 = { 
+				add_trait = dwse_dragon_portrait4   
+				clr_character_flag = dwse_dragon_portrait4
+			}
+			dwse_dragon_portrait5 = { 
+				add_trait = dwse_dragon_portrait5   
+				clr_character_flag = dwse_dragon_portrait5
+			}
+			dwse_dragon_portrait6 = { 
+				add_trait = dwse_dragon_portrait6   
+				clr_character_flag = dwse_dragon_portrait6
+			}
+			dwse_dragon_portrait7 = { 
+				add_trait = dwse_dragon_portrait7   
+				clr_character_flag = dwse_dragon_portrait7
+			}
+			dwse_dragon_portrait8 = { 
+				add_trait = dwse_dragon_portrait8   
+				clr_character_flag = dwse_dragon_portrait8
+			}
+			dwse_dragon_portrait9 = { 
+				add_trait = dwse_dragon_portrait9   
+				clr_character_flag = dwse_dragon_portrait9
+			}
+			dwse_dragon_portrait10 = { 
+				add_trait = dwse_dragon_portrait10   
+				clr_character_flag = dwse_dragon_portrait10
+			}
+			dwse_dragon_portrait11 = { 
+				add_trait = dwse_dragon_portrait11   
+				clr_character_flag = dwse_dragon_portrait11
+			}
+			dwse_dragon_portrait12 = { 
+				add_trait = dwse_dragon_portrait12   
+				clr_character_flag = dwse_dragon_portrait12
+			}
+			dwse_dragon_portrait13 = { 
+				add_trait = dwse_dragon_portrait13   
+				clr_character_flag = dwse_dragon_portrait13
+			}
+			dwse_dragon_portrait14 = { 
+				add_trait = dwse_dragon_portrait14   
+				clr_character_flag = dwse_dragon_portrait14
+			}
+		}
+	}
+}
+
+#
+# Shapeshifting from dragon to half-dragon
+#
+
+character_event = {
+	id = DWSEDragon.3
+	hide_window = yes
+	is_triggered_only = yes # From shapeshift decision
+	immediate = {
+		trigger_switch = {
+			on_trigger = trait
+			dwse_dragon_portrait1 = { set_character_flag = dwse_dragon_portrait1 }
+			dwse_dragon_portrait2 = { set_character_flag = dwse_dragon_portrait2 }
+			dwse_dragon_portrait3 = { set_character_flag = dwse_dragon_portrait3 }
+			dwse_dragon_portrait4 = { set_character_flag = dwse_dragon_portrait4 }
+			dwse_dragon_portrait5 = { set_character_flag = dwse_dragon_portrait5 }
+			dwse_dragon_portrait6 = { set_character_flag = dwse_dragon_portrait6 }
+			dwse_dragon_portrait7 = { set_character_flag = dwse_dragon_portrait7 }
+			dwse_dragon_portrait8 = { set_character_flag = dwse_dragon_portrait8 }
+			dwse_dragon_portrait9 = { set_character_flag = dwse_dragon_portrait9 }
+			dwse_dragon_portrait10 = { set_character_flag = dwse_dragon_portrait10 }
+			dwse_dragon_portrait11 = { set_character_flag = dwse_dragon_portrait11 }
+			dwse_dragon_portrait12 = { set_character_flag = dwse_dragon_portrait12 }
+			dwse_dragon_portrait13 = { set_character_flag = dwse_dragon_portrait13 }
+			dwse_dragon_portrait14 = { set_character_flag = dwse_dragon_portrait14 }
+		}
+		remove_dwse_dragon_portrait = yes
+		remove_trait = dwse_dragon_adult
+		add_trait = dwse_lizard
+		add_random_dwse_lizard_portrait = yes
+		add_trait = dwse_shapeshifted
+	}
+}
+
+#
+# Shapeshifting from human to dragon
+#
+
+character_event = {
+	id = DWSEDragon.4
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		remove_trait = dwse_lizard
+		remove_dwse_lizard_portrait = yes
+		add_trait = dwse_dragon_adult
+		remove_trait = dwse_shapeshifted
+		trigger_switch = {
+			on_trigger = has_character_flag
+			dwse_dragon_portrait1 = { 
+				add_trait = dwse_dragon_portrait1 
+				clr_character_flag = dwse_dragon_portrait1
+			}
+			dwse_dragon_portrait2 = { 
+				add_trait = dwse_dragon_portrait2 
+				clr_character_flag = dwse_dragon_portrait2
+			}
+			dwse_dragon_portrait3 = { 
+				add_trait = dwse_dragon_portrait3  
+				clr_character_flag = dwse_dragon_portrait3
+			}
+			dwse_dragon_portrait4 = { 
+				add_trait = dwse_dragon_portrait4   
+				clr_character_flag = dwse_dragon_portrait4
+			}
+			dwse_dragon_portrait5 = { 
+				add_trait = dwse_dragon_portrait5   
+				clr_character_flag = dwse_dragon_portrait5
+			}
+			dwse_dragon_portrait6 = { 
+				add_trait = dwse_dragon_portrait6   
+				clr_character_flag = dwse_dragon_portrait6
+			}
+			dwse_dragon_portrait7 = { 
+				add_trait = dwse_dragon_portrait7   
+				clr_character_flag = dwse_dragon_portrait7
+			}
+			dwse_dragon_portrait8 = { 
+				add_trait = dwse_dragon_portrait8   
+				clr_character_flag = dwse_dragon_portrait8
+			}
+			dwse_dragon_portrait9 = { 
+				add_trait = dwse_dragon_portrait9   
+				clr_character_flag = dwse_dragon_portrait9
+			}
+			dwse_dragon_portrait10 = { 
+				add_trait = dwse_dragon_portrait10   
+				clr_character_flag = dwse_dragon_portrait10
+			}
+			dwse_dragon_portrait11 = { 
+				add_trait = dwse_dragon_portrait11   
+				clr_character_flag = dwse_dragon_portrait11
+			}
+			dwse_dragon_portrait12 = { 
+				add_trait = dwse_dragon_portrait12   
+				clr_character_flag = dwse_dragon_portrait12
+			}
+			dwse_dragon_portrait13 = { 
+				add_trait = dwse_dragon_portrait13   
+				clr_character_flag = dwse_dragon_portrait13
+			}
+			dwse_dragon_portrait14 = { 
+				add_trait = dwse_dragon_portrait14   
+				clr_character_flag = dwse_dragon_portrait14
+			}
+		}
+	}
+}
+
+
+	

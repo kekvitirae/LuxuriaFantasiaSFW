@@ -1,0 +1,59 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_trait_lf_neko"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_lf_neko_bf"
+		texturefile = "gfx/traits/lf_neko.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lf_neko_start_female"
+		texturefile = "gfx/event_pictures/neko_start1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lf_neko_start_male"
+		texturefile = "gfx/event_pictures/neko_start2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_lf_neko_decision"
+		texturefile = "gfx/interface/lf_neko_decision.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "neko_heat1"
+		texturefile = "gfx/event_pictures/neko_heat1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "neko_heat2"
+		texturefile = "gfx/event_pictures/neko_heat2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "neko_heat3"
+		texturefile = "gfx/event_pictures/neko_heat3.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+
+}

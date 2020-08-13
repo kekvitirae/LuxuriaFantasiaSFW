@@ -1,0 +1,38 @@
+spriteTypes = {
+	spriteType = {
+		name = "wizard_fireball"
+		texturefile = "gfx/event_pictures/wizard_fireball.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "wizard_flamestrike"
+		texturefile = "gfx/event_pictures/wizard_flamestrike.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lf_mage_trait"
+		texturefile = "gfx/event_pictures/lf_mage_trait.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lf_magic_user_male"
+		texturefile = "gfx/event_pictures/lf_magic_user_male.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lf_magic_user_female"
+		texturefile = "gfx/event_pictures/lf_magic_user_female.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+}

@@ -1,0 +1,87 @@
+lf_unicorn = {
+	random = no
+	customizer = no
+	general_opinion = 5
+	health = 1
+	diplomacy = 3
+	ai_honor = 50
+	opinion_of_lf_elf = 15
+	opinion_of_lf_fairy = 15
+	opinion_of_lf_orc = -15
+}
+
+lf_elf = {
+	customizer = no
+	random = no
+	inherit_chance = 50 # Only a 50-50 chance that a child displays their elven heritage if both parents aren't elves.
+	both_parent_has_trait_inherit_chance = 100 # Two elves will always create another elf
+	opposites = {
+		dwse_lizard
+		houseirae_drow
+		houseirae_halfelf
+		lf_kitsune
+		lf_neko
+		lf_fairy
+		lf_orc
+		dwse_dragon_adult
+		dwse_dragon_child
+	}
+	opinion_of_lf_fairy = 10 # Fae cousins
+	diplomacy = 1 #Seeks balance, and often negotiates fairly
+	intrigue = 1 #Very mysterious
+	combat_rating = 5 #Naturally graceful and fast
+}
+lf_orc = {
+	customizer = no
+	random = no
+	inherit_chance = 50 # Their children have a 50-50 chance to display their orc heritage if one parent is a non-Orc
+	both_parent_has_trait_inherit_chance = 100 # Two orcs will always create another orc
+	opposites = {
+		dwse_lizard
+		houseirae_drow
+		houseirae_halfelf
+		lf_kitsune
+		lf_neko
+		lf_fairy
+		lf_elf
+		dwse_dragon_adult
+		dwse_dragon_child
+	}
+	martial = 2 #Conflict, warfare, the finest arts there are.
+	diplomacy = -2 #Stubborn, finds it difficult to care what others desire.
+	health = 1 # Naturally hardy and healthy
+	combat_rating = 10 #Brutal, can take a lot of damage and dish it out
+	ai_rationality = -10 # Orcs often give into rage or emotion when making their decisions
+	ai_ambition = 10 # Orcs live to conquer
+}
+lf_fairy = {
+	customizer = no
+	random = no
+	inherit_chance = 10 # Their children will rarely have the trait, as when they manage to somehow mate, other bloodlines often overpower it, while others hypothesis that fairies when they make themselves able to mate with others, unwittingly adapt themselves to being more human like, in turn lessening their chances themselves as well
+	both_parent_has_trait_inherit_chance = 100
+	opposites = {
+		dwse_lizard
+		houseirae_drow
+		houseirae_halfelf
+		lf_kitsune
+		lf_neko
+		lf_fairy
+		lf_orc
+		lf_elf
+		dwse_dragon_adult
+		dwse_dragon_child
+	}
+	opinion_of_lf_elf = 10 # Fae cousins
+	diplomacy = -2 # Often fickle and think along different concepts than most humans and other species
+	intrigue = 2 #Very mysterious, just as likely to be kind as they are terrifying 
+	ai_ambition = -10 # Typically not ambitious, as they're too easily distracted, although there are exceptions
+	ai_greed = -10 # Not generally greedy, with even those who like to collect things typically not letting it consume them
+	ai_zeal = -50 # Religion is funny
+}
+
+lf_elf_immortality = {
+	customizer = no
+	random = no
+	hidden = yes
+	immortal = yes
+}

@@ -1,0 +1,119 @@
+dwse_dragon_group = {
+	graphical_cultures = { westerngfx }
+	alternate_start = {
+		always = no
+	}
+	dwse_dragon = {
+		graphical_cultures = { westerngfx }
+		
+		color = { 1 .819 .874 }
+	
+		founder_named_dynasties = yes
+		
+		# Special thanks to Celwenil for hundreds of additonal names!!!
+		
+		male_names = {
+Kota Ryrald Ofur Shaflash Kerthon Lysten Balti Ziussah Diyi Kofall Monro Gencossri Zerion Five Thancry Ze Phanus Thunril Jaeau Tien Marem Entral Parre Flaso Reusme Reusdros Rike Stormthus Dabi Ayde Kon'lin Lesi Keter Lys-ven Zzritic Bakcle Cirme Fa Moth'ka Ry Melingon Cyantia Maris Hablood Rera Drade Rathker Baho Rakel Tilta Bolta Blayta Zzrimy Kery Dass Burnbloodsma Riumo Lecbron Fridia Roti Sirytiannius Diaedonfy Jhadlexblairia Smocapozlyn Fi-lysten Takillatubrass Kir-fidia Baltrem-ar Nuswhissenax Po-sylgil Duriacre Ma-tressno Afuvete Grefurburnmi Jenraduger Napulnyriss Starrshaache Thrackfeuenar Calanterdenoc Bla'note Gerroc'tryfffeu Rionricaro Smaltfrostxusren Alrhaeriver Meadiaribel Miak'blaime Du'lysfi Athusbloodze Calri-nax Ridroskema Kerryensa Droro'kaen Konfurziusver Dekingrisswind Ca-fyrem Dyo'anze Resezeshasoul Langgyes'riss Ko-derze Maratryx Starrnahohox Lan'hogon Sootblaiperdro Ma-turqe Tianma-squall Nianril-ryl Hissstynburnnslean Berbuscydag So-fy Rumrilin Fy'trakder Secyanstomy Stadyo-ze Futrahornniuslec Rogonlor Celark-blueo Rensyllbigue Adsaynie Kordpasterrald Da-si
+		}
+		female_names = {
+Kota Ryrald Ofur Shaflash Kerthon Lysten Balti Ziussah Diyi Kofall Monro Gencossri Zerion Five Thancry Ze Phanus Thunril Jaeau Tien Marem Entral Parre Flaso Reusme Reusdros Rike Stormthus Dabi Ayde Kon'lin Lesi Keter Lys-ven Zzritic Bakcle Cirme Fa Moth'ka Ry Melingon Cyantia Maris Hablood Rera Drade Rathker Baho Rakel Tilta Bolta Blayta Zzrimy Kery Dass Burnbloodsma Riumo Lecbron Fridia Roti Sirytiannius Diaedonfy Jhadlexblairia Smocapozlyn Fi-lysten Takillatubrass Kir-fidia Baltrem-ar Nuswhissenax Po-sylgil Duriacre Ma-tressno Afuvete Grefurburnmi Jenraduger Napulnyriss Starrshaache Thrackfeuenar Calanterdenoc Bla'note Gerroc'tryfffeu Rionricaro Smaltfrostxusren Alrhaeriver Meadiaribel Miak'blaime Du'lysfi Athusbloodze Calri-nax Ridroskema Kerryensa Droro'kaen Konfurziusver Dekingrisswind Ca-fyrem Dyo'anze Resezeshasoul Langgyes'riss Ko-derze Maratryx Starrnahohox Lan'hogon Sootblaiperdro Ma-turqe Tianma-squall Nianril-ryl Hissstynburnnslean Berbuscydag So-fy Rumrilin Fy'trakder Secyanstomy Stadyo-ze Futrahornniuslec Rogonlor Celark-blueo Rensyllbigue Adsaynie Kordpasterrald Da-si
+		}
+		
+		prefix = no # The patronym is added as a suffix
+		
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+		pat_grf_name_chance = 50
+		mat_grf_name_chance = 20
+		father_name_chance = 30
+		
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+		pat_grm_name_chance = 20
+		mat_grm_name_chance = 50
+		mother_name_chance = 30
+
+		used_for_random = no
+		allow_in_ruler_designer = no
+
+		modifier = default_culture_modifier
+	}
+	
+	dwse_dawn = {
+		graphical_cultures = { chinesegfx westerngfx }
+		color = { 0.85 1 0.82 }
+		male_names = {
+			Yutsuna Gakao Kosamu Jukuchu
+			Maroji Buchi Jurata Kakao
+			Naotoki Daichemon Isu Chitora
+			Risuki Karoji Wahide Shurei
+			Junori Kyukusai Busuke 
+			Kumitsu Bomori Wachiro Mujiro
+			Tetsu Yoshushu Sumatsu Chiseki
+			Ahari Ryuwane Ikushi Ryunjiro
+			Dasada Keikuchu Yuchi Shokazu
+			Eigobei Baishashi Ishi Hashiro
+			Oshi Kyusu Shuchemon Semon
+			Yataka Chirata Kanoye Busu
+			Sofumi Kujio Rimoto Eikuzo
+			Shoyoshi Taharu Jusashi Naonabu
+			Mozo Rizuma Gosami Homane
+		}
+		female_names = {
+			Yaesuka Torime Tsuroe Beyu
+			Reiromi Ideko Maekio Kumaki
+			Hairimi Shimina Hayeko Senae
+			Haimiya Koruko Marime Jozuru
+			Tesano Achi Mukane Moto
+			Betsuko Naonatsu Terika Metomo
+			Eriko Suki Nazu Chisuki
+			Saitsumi Hoshiko Memiya Yaeromi
+			Yuhiro Shimeka Nogusa Yarino
+			Emeko Kocho Akage Josuka
+			Area Shigusa Sumaya Nichi
+			Hiroshi Risuka Nikako Saitsuyo
+			Reiyuko Raitsune Fusae Miko
+			Kuyano Honoue Etsuka Kineko
+			Hozu Yusato Sahori Akagi
+		}
+		horde = no
+		used_for_random = no
+		allow_in_ruler_designer = yes
+		dynasty_name_first = yes
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+		pat_grf_name_chance = 10
+		mat_grf_name_chance = 10
+		father_name_chance = 0
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+		pat_grm_name_chance = 10
+		mat_grm_name_chance = 40
+		mother_name_chance = 0
+		modifier = default_culture_modifier
+		allow_looting = no
+		seafarer = yes
+	}
+
+	dwse_dusk = {
+		graphical_cultures = { chinesegfx westerngfx }
+		color = { 0.25 0.25 0.25 }
+		male_names = {
+			Abaka Achujim Adarkidai Adkiragh Agasiletai Agsaldai Agujam Alchigh Alghu Amasandji Amasar Ambaghai Anarba Arabuccha Aragibal Argasar Arik Arslang Aruktai Baatu Baavgai Bagaridai Baidar Baidur Bardam Batacaciqan Batachikhan Bayan Bayar Begugtei Bucharan Budjek Bugunutei Bujeg Bujir Bukidai Bulqadar Bultechu Bultger Bulugan Buqatai Buyantu Caragai Chaghadai Chaghagan Chanar Charakha Chidukhul Chigu Chilagun Chiledu Chilger Chiluku Chormagan Chuacenur Chulgetei Daidukul Delbeg Dorbei Emlig Esugen Guyug Hooshal Ilugei Iturgen Jagadai Jamugha Jebei Jebke Jelme Jenkshi Kaishan Khaidai Khal Khalja Khuchar Kishiligh Kuyuk Kuzhuk Ligdan Luvsan Maqali Masgud Mauci Munglig Ogodei Ozbeg Qoribucha Shilugei Shiramun Sidurgu Sukegei Tamachag Teleboge Tordung Tsagaday Uchikin Udutai Yabuqa Yerentai
+		}
+		female_names = {
+			Alagh Alan Alt Altani Altun Alun Anggir Bagurchi Barghujin Baugurchi Beki Berude Bodo Boljigchi Boragchin Borogchin Boroqcin Borte Botokhui Caalun Caur Ceceyigen Chabi Chagur Chakha Chambui Checheyigen Cherbin Chotan Cirina Cota Cotan Cotota Dagasi Doquz Dorgene Dorgono Doyi Ebegei Eji Eke Emegen Gergei Ghoa Gorbeljin Gurbesu Guua Hoelun Hogelun Holuikhan Hujaghur Hujaur Ibakha Jaliqai Khadagan Khatun Khogaghchin Khojin Khorchi Khorijin Khugurchin Khulan Koko Maral Mergen Mide Narengawa Nigen Nomolun Ogelen Oghul Ogul Oki Orbei Orghana Qatun Qoyar Samga Sechen Shar Sokhatai Sorkhaghtani Sorocan Surkukteni Suvd Tacchotan Tarqun Tegusken Temulun Togene Toragana Toregene Tsenxer Turakina Ucugen Ujin Ulan Yesuntei
+		}
+		horde = yes
+		used_for_random = no
+		allow_in_ruler_designer = yes
+		dynasty_name_first = no
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+		pat_grf_name_chance = 10
+		mat_grf_name_chance = 10
+		father_name_chance = 0
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+		pat_grm_name_chance = 10
+		mat_grm_name_chance = 40
+		mother_name_chance = 0
+		modifier = default_culture_modifier
+		allow_looting = yes
+		seafarer = no
+	}
+}

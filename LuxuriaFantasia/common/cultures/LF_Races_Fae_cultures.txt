@@ -1,0 +1,503 @@
+lf_fae_group = {
+	graphical_cultures = { westerngfx }
+	alternate_start = {
+		always = no
+	}
+
+	fae = {
+		graphical_cultures = { celticgfx westerngfx }
+		color = { 1 0.75 0.80 }
+		founder_named_dynasties = no
+# Elven names from Alaundo's Library, candlekeep.com
+		male_names = {
+			Abadda Abarat Adamar Adorellan Adresin Aduce Aelrindel Aerendyl
+			Aermhar Aesar Aeson Afamrail Agis Aglanthol Ainésilver Aithlin
+			Ajaar Akhelbhen Akkar Alabyran Albondiel Alinar Allain Alok
+			Alosrin Althidon Amrynn Anarallath Andaerean Andrathath Anfalen Anlyth
+			Aolis Aquilan Araevin Arandron Aravilar Arbane Ardreth Ardryll
+			Argus Arkhun Arkiem Arl Arlen Arun Ascal Athtar
+			Aubric Aubron Aulathar Aulauthar Aumanas Aumrauth Avourel Baerdelcoam
+			Baerithryn Belanor Beldroth Bellas Belstram Beluar Bhyrindaar Biafyndar
+			Bialaer Braern Brindarry Buttorwyr Cameron Chaalmyth Chathanglas Cheyrth Chozzaster
+			Chylnoth Cluhurach Cluym Cohnal Conall Connak Cornaith Corym Cymbiir
+			Cystenn Dalyor Dakath Dannyd Daratrine Darcassan Darfin Darthoridan Deldrach
+			Delmuth Delsaran Dhoelath Divisav Drannor Droth Druindar Durlan Durothil
+			Dyffros Earynspieir Edansyr Edicûve Edwyrd Edyrm Ehlark Ehrendil Eilauver
+			Elaethan Elaith Elandorr Elanjar Elashor Elbauthin Elbereth Eldaernth Eldar
+			Eldrin Elénaril Elenshaer Elephon Elhieardacil Elidyr Elion Elkhazel Ellisar
+			Elorfindar Elorshin Elpaerae Eltaor Eltargrim Emmyth Entrydal Erendriel Erglareo
+			Eriladar Erlan Erlathan Eroan Erolith Eschallus Estelar Ethlando Ettrian
+			Euchoé Evindal Eyrynnhv Faahresc Faelar Faelyn Faeranduil Falael Faoraar
+			Felaern Fenian Fflar Fhaornik Fhociin Filarion Filvendor Filverel Finufaranell
+			Flardryn Flinar Foxfire Fylson Gaeleath Gaelin Galaeron Galan Galather Ganamede Gantar
+			Garrik Garynnon Giilvas Giullio Glarald Glorandal Goronyyv Grathgor Haalaari Hachaam Haemir
+			Haladavar Halafarin Halamar Haldreithen Halflar Halgondas Halpaeril Halueth Halueve Haryk Hastos
+			Hatharal Hiflanyl Hoccar Horith Hubyr Iefyr Ievos Ihimbraskar Ilbryn Illianaro Ilimitar
+			Iliphar Ilitharath Illithor Illitran Ilphas Ilrune Ilthuryn Ilyndrathyl Inchel Inialos Injros
+			Intevar Iolas Iolrath Itham Ithraides Ivlisar Ivósaar Ivran Iymbryl Iyrandrar Iyriklaunavan
+			Jandar Jannalor Jaonos Jassin Jhaan Jhaartael Jhaeros Jharak Jharym Jhuvik Jonas
+			Jonik Jorildyn Josidiah Juppar Kahvoerm Kalaerede Katar Katyr Keletheryl Kelvhan Kendel
+			Kerym Keryth Kesefehon  Khaalindaan Kharis Khatar Khidell Khiiral Khilseith Khuumal Khyrmn
+			Khyssoun  Kindroth Kivessin Kiyuigh Klaern Kolvar Korrigash Kroloth Kuornos Kuskyn Kymil Kyrtaar
+			Laeroth Lafarallin Lamruil Laosx  Larongar Larrel Lashul Lathai Lathlaeril Leayonadas Leojym
+			Lhombaerth  Lhoris Lianthorn Llarm Llewellenar Llombaerth Lorsan Luirlan Luthais Luvon
+			Lyari  Lyklor Lysanthir Maasli Maendellyn Maeraddyth Maeral Maiele Malgath Mardeiym Marikoth
+			Marlevaur  Melandrach Melisander Merellien Merith Methild Mhaenal Mi’tilarro Mihangyl Miilaethorn
+			Miirphys  Mirthal Mlartlar Mlossae Molonym Molostroi Montagor Morgan Morthil Mothrys Mourn
+			Myrddin Myriil Myrin Myronthilar Mythanthar Naertho Naeryndam Napraeleon Narbeth Nardual
+			Nelaeryn Neldor Nesterin Nevarth Nhamashal Nieven Nindrol Ninthalor Nlossae Nopos
+			Norlorn Nremyn Nuvian Nyaalsir Nylian Nym Nyvorlas Oacenth Oenel Ohmbryn Olaurae
+			Olinsivver Olithir Onas Oncith Ondabrar Ondroth Onvyr Orist Orlpar Orndacil Ornthalas
+			Ortauré Orym Oslarelar Otaehryn Otaerhyn Othorion Paeral Paeris Passilorris Paulorin
+			Phaendar Pharom Phraan Pirphal Pleufan Purtham Pyrder Pyrravym Pywaln Pyxaanthal
+			Qildor Quastarte Quynn Raeranthur Raibyr Ralikanthae Ralnor Rathal Raunaeril Rauthomyr
+			Rauvelore Reluraun Reluvethel Rennyn Reptar Respen Rhaac'var Rhalyf Rhangyl Rhenalyrr 
+			Rhespen Rhistel Rhothomir Rhys Rilitar Riluaneth Rolim Rotheloe Rothilion Ruardh Ruehar
+			Ruith Rumathil Ruvaen Ruven Ruvyn Rychell Ryfon Ryul Ryvvik Sadalymn Saevel Sakrattars 
+			Samblar Sandevv Seanchai Seith Selanlar Selgauth Shael Shammath Sharian Sharlario Shaundyl
+			Shevarash Shonassir Shyrrik Siirist Silvyr Simimar Sinaht Skalanis Sontar Srindin Strohm
+			Sudryl Sundamar Sylvar Symkalr Sythaeryn Taanyth Taegen Taeglyn Taeral Taerntym Taleisin
+			Tammson Tamnaeuth Tamsin Tanithil Tannivh Tannyll Tanseril Tanyl Taranath Tarathiel Taredd
+			Tarosspur Tarron Tasar Tassarion Tathaln Tehlmar Teirist Tenyajn Tethir Thalanil Thallan Thatoryl
+			Thiilthan Thurdan Thurruvyn Tiarshus Tlannatar Tordynnar Toross Traeliorn Travaran Triandal
+			Triktappic Tsaer Tsiilmas Tyvollus Saelethil Seiveril Taenaran T’karon Tolthe Ualair Uevareth
+			Uldreiyn Urddusk Usunaar Uthorim Vaalyun Vaeril Valmaxian Vander Vartan Velethuil Venali Vesperr
+			Vesryn Vesstan Vhoadan Vhoori Vhoorhin Volodar Voron Waernas Wistari Wylchyr Wylym Wyn Wyndelleu
+			Wyqhael Wyrran Xalph Xanotter Xhalh Xhalth Xharlion Yalathanil Yeschant Yhendorn Ylyndar Ynloeth
+			Zabbas Zaltarish Zandro Zaor Zaos Zelphar Zhoron Zulae
+		}
+		female_names = {
+			Aelieyeeva Aelrue Aelynthi Aerilaya Ahrendaaria Ahrendue Ahskahala Ajhalanda Alaglossa
+			Alais Alauthshaee Alavara Alea Alerathla Allannia Allisa Alloralla Allynna Almithara
+			Aloevan Alvaerele Aluendalee Alyndra Amara Amaranthae Amkissra Amlaruil Amnestria Amra
+			Anaharae Anarzee Aneirin Anhaern Anyllan Ara Araushnee Aravae Arcaena Arielimnda Arlayna
+			Arnarra Artin Ashemmi Aubaudameira Auluua Aurae Ava Axilya Ayaeqlarune Azariah Bhuraelea
+			Blythswana Bonnalurie Braerindra Caerthynna Calarel Cauladra Chaenath Chalsarda Chandrelle
+			Chasianna Chichlandra "Chin’nesstre" Chomylla Cilivren Ciyradyl Claire Csharynn Daenalaia
+			Daratrine Darshee Dasyra Dathlue Delimbiyra Delshandra Deularla Duilya Eallyrl Ecaeris Edraele
+			Elanalue Elanil Elasha Eldratha Elénaril Eletha Ellarian Ellifain Eloen Elora Elvandaruil Embrae
+			Emvorele Enajharas Eshenesra Essaerae Esta Ester Esyae Faranni Faunalyn Fhaertala Fieryat Filaurel
+			Filauria Fildaerae Francessca Gaelira Gaerradh Gaylia Gemstarzah Ghilanna Glynnii Gweyr
+			Gwynnestri Gylledha Haalija Hacathra Halaema Halama Halanaestra Hamalitia Haramara Helartha
+			Hhora Holone Huquethae Hycis Iahalae Ialantha Ikeshia Ildilyntra Ilmadia Ilythyrra Imdalace
+			Imizael Imra Imramarthree Imryll Innovindil Ioelena Irhaal Isciira Ithrythra Itiireae Itylra
+			Jastra Jeardra Jhaer Jhalass Jhanandra Jhaumrithe Jhiilsraa Ilsevel Ilyrana Immianthe Isilfarrel
+			Kavrala Kaylessa Keerla Keishara Kethryllia Keya Khiipaera Kileontheal Kythaela Laamtora Laerdya
+			Laerune Laurlaethee Lazziar Leilatha Liluth Llamryl Lorelei "Lydi’aleera" Lyraesel Maaleshiira Maelyrra
+			Maeralya Maith Makaela Malruthiia Mariona Marissa Martainn Meira Melarue Merethyl Merialeth Meriel
+			Merlara Mistale Mladris Mnuvae Morgwais Moryggan Muerlara Mylaela Mylaerla Myriani Naevys Nakiasha
+			Nambra Namyriitha Nanalethalee Nanthee Nanthleene Naumys Nlaea Nuala Nueleth Nuovis Nushala Nylaathria
+			Ochyllyss Oluevaera Phaerl Phantyni Phelorna Phuingara Phyrra Pollae Puorlaas Qemba Quamara Raejiisa
+			Raerauntha Rathiain Renestrae Roanmara Ruavia Rubrae Ryllae Saelihn Saélihn Saida Sakaala Sariandi
+			Sarya Schimae Seirye Seldanna Selussa Séonais Shael Shadowmoon Shalana Shalantha Shalendra Shalheira
+			Shandalar Shanyrria Sharaera Sheedra Sheera Shialaevar "Shi’larra" Shoulree Shyael Shyllisyrr Sinnafain 
+			Soliania Soora Sorsasta Susklahava Sylmae Symrustar Syndra Synnorha Syrune Syviis Taenya Takari
+			Talaedra Talanashta Talila Talindra Tamara Tarasynora Teharissa Teryani Thalaera Thalanil Thaola
+			Thasitalia Throleatha Tiatha "Tira’allara" Tiriara Tisharu Tsarra Tyllaetha Ulelesse Unae Urmicca Uschymna
+			Vaervenshalice Valindra Vashti Velaethaunyl Velatha Veluthil Verrona Vestele Viansola Winterflower Xiiltharra
+			Yaereene Yalanilue Yathlanae Yeshelné Yghiilra Ygrainne Ynshael Yrlissa Yrneha Yrthraethra Ysmyrlda Ytharra
+			Yulmanda Z’Beryl Zhuirentel Zoastria
+		}
+		prefix = no
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+		pat_grf_name_chance = 50
+		mat_grf_name_chance = 20
+		father_name_chance = 30
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+		pat_grm_name_chance = 20
+		mat_grm_name_chance = 50
+		mother_name_chance = 30
+		used_for_random = no
+		allow_in_ruler_designer = yes
+		modifier = default_culture_modifier
+	}
+	
+#
+# Elven culture by Aliris (Dark World Beyond Heresy, Dark World Extras)
+#	
+
+	elven = {
+		graphical_cultures = { celticgfx westerngfx }
+		color = { 0.5 0.14 0.3 }
+		# Þ 212 þ 251 Ð 238 ð 220 æ
+		male_names = {
+			Aego Aelrindel Aerendyl Aeson Afamrail Agis Ailmar Aithlin Akkar Alabyran
+			Aranel Arazorwyn Beleg Beluar Biafyndar Bialaer Braern Briareth Cameran 
+			Celeborn Celebrimbor Chathanglas Cheyrth Círdan Cluhurach Cluym Cohnal
+			Conall Connak Cornaith Corym Curunir Cymbiir Cystenn Daeharice Daemeon
+			Dakath Dalyor Darcassan Dior Earendil Edrahil Eladithas Elanjar Elaran
+			Elashor Elbauthin Elbereth Eldaernth Eldar Eldrin Elénaril Elenshaer 
+			Elrond Eluchil Elwin Erlan Erlathan Eroan Erolith Eschallus Estelar Etchelion
+			Ethlando Ettrian Evindal Eyrynnhv Faelar Faelyn Faeranduil Falael Fëanor
+			Fenris Filvendor Fingolfin Finrod Folduin Gael Gaemon Gil-galad Glynkas
+			Haemir Hagduin Haladavar Halafarin Haryk Hastos Hatharal Herbalar Horith
+			Hubyr Iarmenor Iefyr Ievos Ilbryn Iliven Ilthuryn Inarie Inchel Inialos 
+			Injros Intevar Iolas Jassin Jhaan Jhaartael Jhaeros Kelkalyn Kevan Klaern
+			Kolvar Kuornos Kuskyn Kymil Kyrenic Kyrtaar Legolas lrune Maiele Mithrandir
+			Molonym Molostroi Montagor Morgan Morthil Myrddin Myriil Myrin Mythanthar Naertho
+			Naeryndam Napraeleon Narbeth Nardual Nelaeryn Neldor Nerilamin Nesterin
+			Nevarth Nhamashal Nieven Nindr Nym Onas Oribel Oritris Orndacil Ornthalas
+			Orris Orym Oslarelar Otaehryn Othorion Paeral Paeris Phaendar Pharom Phraan
+			Pirphal Pleufan Purtham Pyrder Quaeth Raegel Raunaeril Ravaphine Reysalor 
+			Rhistel Saelethil Saevel Seiveril Sharian Siirist Silvyr Sudryl Taenaran
+			Taerntym Tamnaeuth Tannivh Tassarion Tehlmar Therona Thingol Thranduil 
+			Toross Travaran Triandal Turgon Usunaar Uthorim Vaalyun Vaegon Vaeril
+			Venrie Virjeon Yhendorn Ylyndar Zabbas Zaltarish 		
+		} 
+		female_names = {
+			Aelene Aelinor Aemma Akash Alaesa Alaglossa Alais Alauthshae Alavara Alea
+			Alerathla Allannia Allerya Allisera Alloralla Alys Amaryll Aquilaen Aredhel 
+			Arwen Axilia Ayaeqlarune Azariah Baelen Beala Bhuraelea Blythswana Bonnalurie
+			Braerindra Caerthynna Calarel Cauladra Celebrían Chandrelle Chasianna Chichlandra
+			"Chin’nesstre" Chomylla Ciyradyl Daealla Daena Daenestra Daenys Daeondra Doreah 
+			Elaria Elenwe Ellania Elora Elwing Elyssa Fhaertala Filaurel Filauria Fildaerae
+			Finduilas Fraeya Gaelira Gaerradh Galadriel Gaylia Ghilanna Gilgalad Glorfindel
+			Glynnii Gweyr Gwynnestri Gylledha Haalija Hacathra Haela Halaema Halaena Halama
+			Halanaestra Hameada Holcene Holone Hycis Iahalae Ialantha Idril Ikeshia Ilmadia
+			Ilyrana Ilythyrra Imdalace Imizael Irithiel Ithirae Iziuel Jahandra Kaeda Kaylessa
+			Keara Keerla Keishara Kethryllia Keya Kyrrha Kythaela Laamtora Laeanna Laena
+			Laerdya Lazziar Leandra Leilatha Liluth Llamryl Lorelei Lúthien Lyraesel Maaleshiira
+			Maegelle Maelyrra Maeralya Mariah Meara Mereena Merlara Miriel Morwen Mylaela 
+			Myrynda Nuovis Nushala Nylaathria Ochyllyss Oluevaera Phaerl Phantyni Phelorna
+			Phuingara Phyrra Quaela Quamara Raejiisa Raerauntha Rathiain Reinys Renestrae
+			Rubrae Ryllae Saelihn Saélihn Saeya Sasha Shalana Shalantha Shalheira Shandalar
+			Shanyrria Sharaera Sheedra Shiera Shyael Shyllisyrr Sinnafain Soliania Soora Sorsasta
+			Susklahava Sylmae Symrustar Syndra Synnorha Syrenese Syrune Syviis Taena Taenya
+			Taeriel Takari Talaedra Talanashta Talila Talilia Talindra Tamara Tarasynora
+			Teharissa Tiatha Tsarra Tyria Urmicca Vaella Valarya Valindra Veara Vestele Viansola
+			Violen Viserra Yaereene Yalanilue Yathlanae Ynshael Yrlissa Yrneha Yrniela Zeale
+			Zhuirentel 
+		}
+		horde = no
+		used_for_random = no
+		from_dynasty_prefix = "of "
+		allow_in_ruler_designer = yes
+		character_modifier = {
+			learning = 1
+		}
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+		pat_grf_name_chance = 30
+		mat_grf_name_chance = 10
+		father_name_chance = 0
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+		pat_grm_name_chance = 10
+		mat_grm_name_chance = 40
+		mother_name_chance = 0
+		modifier = default_culture_modifier
+		allow_looting = no
+		seafarer = no
+	}
+
+#
+# Orcish culture by Aliris (Dark World Beyond Heresy, Dark World Extras)
+#
+
+	orcish = {
+		graphical_cultures = { norsegfx westerngfx }
+		color = { 0.4 0.54 0.7 }
+		# Þ 222 þ 254 Ð 208 ð 240 æ
+		male_names = {
+			Gludbog	Ulgha	Kubguk	Duugh	Tobdakh
+			Zugrak	Drutrug	Thokgor	Zikgor	Bugrog
+			Brughnab	Mashnakh	Sugugh	Bludmuk	Sagdakh
+			Skagblug	Thughnab	Odbog	Ruglut	Garzug
+			Drurk	Hubbag	Brubbag	Glagha	Sulgob
+			Mubmak	Igugh	Trobmag	Oznag	Durgash
+			Kukpug	Blokpug	Snuzdush	Nugrog	Nozdakh
+			Ubgorg	Kratruk	Krorgash	Guzgub	Blulbug
+			Muzrub	Trogburz	Skurduk	Sobkog	Bakduh
+			Tromburz	Ghudhagh	Smimbub	Ubmak	Ogdush
+			Kulbulg	Thorg	Ubgug	Grurk	Hulbog
+			Umdush	Murghud	Thugdugh	Bulgug	Smibzagh
+			Idkush	Kuzdush	Marthug	Nabzagh	Nuzhug
+			Bugbu	Bligmub	Brulbag	Goshog	Mulurg
+			Smudbagh	Gradgig	Thrazgash	Zuzg	Rulgha
+			Kuggug	Muzg	Ghukpug	Kubgu	Ubgu
+			Ugzag	Ulurg	Dobdug	Thulbag	Skubdakh
+			Rugrurg	Ughbub	Marg	Zamburz	Moghnab
+			Thushzog	Sogrunk	Blazrub	Ogug	Blodak
+			Smuzhug	Glurdag	Thorbosh	Noknug	Throlbulg
+			Sugburz	Agugh	Rukduh	Glodkuh	Sorlug
+			Ghungash	Ishnok	Gribug	Skugdakh	Dunak
+			Trodzug	Skagdug	Gugguh	Thruzdub	Arguh
+			Rubdig	Mubgagh	Drarguh	Throdzog	Nubdakh
+			Surgab	Udmuk	Buznag	Trablag	Ruglug
+			Obpug	Kumhosh	Tugzag	Grogblug	Thorbok
+			Sablag	Kubzurg	Snudbog	Zabgub	Brublug
+			Brashog	Ukduh	 	Gurgug	Hagdugh
+			Gradak	Kubgug	Ibub	Rughug	Sudzush
+			Tubdakh	Zuzgub	Hagluk	Zorpug	Grormug
+			Skutruk	Rurduk	Mutsnak	Zurduk	Zagh
+			Zark	Sabmuk	Aznag	Sudush	Agguh
+			Hagugh	Zugzub	Glagdug	Urthag	Throrboz
+			Tholbug	Gubzurg	Hubulg	Hombub	Gagzakh
+			Ulug	Huzguh	Glozkub	Ulrarz	Moghig
+			Guzgash	Gloghug	Gludgub	Burbok	Ghuzbag
+			Muknug	Sobhush	Trigkug	Urgash	Ubnarg
+			Bradash	Nakpug	Thrugzug	Arpug	Dodmuk
+			Ghulgob	Razpog	Smugha	Bragrub	Thugh
+			Nudkush	Tabgunk	Glorgab	Glodzush	Rubzurg
+			Gudguk	Mubzugh	Trugdush	Kulg	 
+			Trogdakh	Gozbag	Kublog	Hubgug	Brork
+			Ilgug	Ogblug	Gishlak	Gumdush	Gabgunk
+			Ghuk	Rozbub	Ozgash	Globdub	Thakgag
+			Ugbug	Smaruk	Igmog	Ghoknuk	Ugrunk
+			Dradguk	Zugdug	Smokhdag	Durbok	Markub
+			Krugzug	Krundu	Kubmuk	Thragdug	Kugulg
+			Habkub	Snugug	Rudgug	Uzdakh	Glurkub
+			Trugdug	Grurboz	Thugburz	Tablog	Thogthak
+			Grobhush	Igbub	Bruzguh	Doblag	Skugrub
+			Glugluk	Hudbug	Ubkrut	Odzog	Albug
+			Zabgu	Glugzug	Bazgah	Soglug	Skashnakh
+			Thukhdub	Ghalug	Snagmog	Snulbug	Mugdug
+			Rushlak	Thrark	Dragdug	Snubdub	Dazpug
+			Baggug	Uldush	Thrugmag	Borgak	Drabug
+			Draghig	Kadhagh	Brungub	Sabdug	Glamburz
+			Blulghu	Skurkub	Gubmuk	Huknogh	Nignath
+			Mushzog	Gludkuh	Ulghu	Smagrurg	Skundagh
+			Glotrush	Kubruh	Gakthak	Ghogbub	Suglut
+			Krughnab	Sazpug	Smagmuh	Thurthag	Kadash
+			Obzug	Tuugh	Glalrarz	Duzdush	Grabdak
+			Urbog	Rogbug	Orboz	Thugbuh	Skang
+			Ugburz	Nagnub	Kakgakh	Throg	Krabdakh
+			Thubzugh	Mong	Drobrag	Thrargab	Itruk
+			Surkub	Drograk	Blugbuh	Ubgugh	Abgug
+			Ghugrak	Drurzog	Gubzugh	Azhug	Smuzburz
+			Blublug	Blutsnuk	Ogrub	Krarzog	Moglum
+			Smozrub	Nuugh	Aghug	Ghudzog	Trubhosh
+			Tubug	Snung	Blodkub	Karduk	Zodguk
+			Trudbagh	Throghrag	Rurdak	Kobug	Drugh
+			Ghadbug	Throzg	Odzud	Abguk	Thrabgub
+			Huglug	Hurmug	Bagugh	Rolghu	Hubmak
+			Rulbulg	Gaghbub	Blazdush	Hulgug	Rubbuh
+			Nushnok	Smukduh	Globkog	Glidzog	Ugdash
+			Nubnag	Krudgig	Nugduk	Throgdush	Smishnok
+			Zubgorg	Kagguh	Odush	Ugzub	Tabnag
+			Drough	Ugrog	Krugkugh	Sobzugh	Abrag
+			Blabdub	Ghagdash	Kugzakh	Bruggu	Okgor
+			Sozpog	Zushnok	Ibgagh	Zundu	Skagzug
+			Obug	Ughrag	Bukdub	Smugmug	Skadzud
+			Smadkub	Grubbuh	Zakag	Grabguk	Skizg
+		}
+		female_names = {
+			Dugulg	Snargash	Briblag	Toktug	Thubug
+			Tugh	Sabgub	Glugrog	Kudzug	Thabzub
+			Hudgug	Nanak	Dragdush	Drutsnuk	Grogzub
+			Thadash	Thobzug	Thruzburz	Ignub	Boshog
+			Odkuh	Huggug	Dragulg	Ghuzgub	Smugzurg
+			Mokpug	Dabnarg	Hukduh	Rarthug	Thrubzagh
+			Kroga	Smozguul	Groshzog	Ghushnakh	Ogzag
+			Matruk	Thang	Dugha	Hagnath	Smidkush
+			Glugzag	Hublog	Snubzugh	Gugak	Sugthak
+			Oknuk	Snazdrog	Snugmug	Ogkug	Thrublag
+			Blurdag	Trushnak	Dagbuh	Talg	Argok
+			Grubguh	Horbug	Anak	Burzug	Smozdub
+			Thadkub	Nugmuh	Thrargok	Mulug	Thrubgunk
+			Trobhosh	Grurluk	Obzugh	Zadbog	Smurag
+			Turbog	Borpug	Snurzug	Ghugnum	Kogulg
+			Gugbuh	Noglut	Duzpog	Azpug	Ragrub
+			Snidzog	Krimbub	Abkrut	Ogzakh	Zurluk
+			Grizdub	Oghnab	Nughbub	Abhush	Abdub
+			Thrudgub	Tudgub	Kugduk	Thungub	Boghbub
+			Zitruk	Skagh	Brughug	Hozkub	Skadmuk
+				Smigbub	Krorzog	Snulbag	Roknuk
+			Brolg	Adzud	Ughug	Obnarg	Grurghud
+			Zaugh	Brugbuh	Subgorg	Trogbug	Ghubzub
+			Huzgash	Blaknogh	Hukguh	Brughrag	Drudhagh
+			Gruglum	Mublug	Tobdush	Ghidzud	Drulbag
+			Hubnag	Zugrunk	Zutruk	Tugkugh	Brurgak
+			Snazguul	Duzdub	Bruggug	Zubkrut	Thargok
+			Skubdug	Turbash	Horbash	Kroshnug	Brugh
+			Skugha	Skidhagh	Trodash	Zubzug	Gromkush
+			Orgok	Humkush	Ubug	Krorlug	Nukgakh
+			Rutruk	Kudhagh	Krobkrut	Bragzag	Rugduh
+			Sagnub	Brugzakh	Trargak	Skugdugh	Ghazgug
+			Tubzurg	Snaghig	Barguk	Smoshnok	Olug
+			Dugdug	Thragbuh	Gurdak	Tugbu	Orguh
+			Thablakh	Azdakh	Zuzhkrut	Aglug	Gugdush
+			Bugrak	Krong	Nabbag	Skobnarg	Trigthak
+			Surdag	Tukag	Dagug	Glukpug	Arlag
+			Sokgag	Bugh	Gruga	Trublug	Suzkub
+			Thrubdub	Thabbuh	Blodrub	Nurk	Branuk
+			Hozgug	Smirg	Krigulg	Tharg	Hubgu
+			Ibpug	Rubug	Zulug	Tragbu	Rubmag
+			Blarthag	Kushnug	Tizguul	Norluk	Zubdakh
+			Mabdakh	Rudguk	Skogmog	Nogug	Dozgurg
+			Snogzub	Odkub	Snokpug	Ghunak	Ghak
+			Throghbub	Ruugh	Snaggu	Brolghu	Trogdug
+			Grubgush	Ashnok	Ghuzbuzg	Tugdakh	Tudguk
+			Kudzog	Murdak	Blurthug	Udgulg	Gukgag
+			Thulgag	Nubgu	Druzgash	Glushnug	Uzgurg
+			Troknug	Madgug	Ruzdakh	Uzgah	Skigha
+			Kamhosh	Blushnak	Blatrub	Ubpug	Zughrag
+			Tudbagh	Krudbug	Odash	Sodgulg	Braknug
+			Thubkog	Gokgor	Babguh	Hargab	Kumkush
+				Hatruk	Abdig	Thutsnug	Grogzug
+			Nubzug	Guzhkrut	Krulbulg	Karlug	Drudak
+			Budrub	Durdag	Burgulg	Drurghud	Sudgulg
+			Krakhdub	Brudkub	Blogrog	Krabpug	Nurthug
+			Smazpog	Dralg	Zurghud	Grograk	Hugkugh
+			Agnum	Grubdakh	Ghumburz	Digbub	Abmak
+			Dorzug	Trorbag	Thogha	Smogburz	Druglum
+			Brubmuk	Ogak	Nogdush	Ublakh	Rablog
+			Gugrub	Brugha	Ublag	Blozgah	Thrarg
+			Glarbok	Kugblug	Drubdig	Ruldush	Krulghu
+			Narg	Mogzakh	Throrthug	Gabub	Surk
+			Grubrog	Kuzguul	Tagdugh	Snuruk	Grugmuh
+			Trigdakh	Agrub	Brogbuh	Zuugh	Trughru
+			Mughig	Trabmak	Glarbog	Snagthak	Thudgulg
+			Thusnug	Gagmub	Ghudmuk	Zugzurg	Tubrag
+			Tundagh	Hubdig	Thudgig	Glugbu	Snalurg
+			Thrarboz	Trokhdub	Ulgag	Nabdub	 
+			Aknogh	Grudak	Ghubmuk	Hughug	Rughru
+			Thruzdrog	Obkub	Blubgu	Kubguh	Gagduk
+			Gorgok	Ugluk	Drubguh	Blugzog	Zugulg
+			Zurlag	Tolg	Garg	Babdug	Kobkub
+			Zuglug	Guzgurg	Uzbub	Mubgorg	Ablakh
+			Ghorpug	Ghagmub	Blunk	Gruggu	Ghargash
+			Snugzurg	Grurbok	Kradrub	Hobnarg	Zardag
+			Hushzog	Ozbuzg	Drogrunk	Glugkugh	Oshdrog
+			Muggug	Smurgab	Ghulg	Brurbash	Kogbu
+			Kromhosh	Bagburz	Muzdakh	Marlag	Nozbag
+			Snakgag	Throlurg	Bubmag	Thughig	Bruzgash
+			Skurluk	Thrurgab	Broshnak	Subgagh	Tugdugh
+			Thrugmub	Smudhagh	Skozguul	Snabzug	Thrugrunk
+			Skigrunk	Zargok	Sazhkrut	Tadkuh	Kurgash
+			Thogmag	Gagzug	Dubkrut	Gagzurg	Thubdub
+			Smubmak	Rubulg	Ushzog	Drolgha	Kadbug
+			Agnath	Thulgob	Trograk	Ghubbag	Nugbub
+			Tadbagh	Grugrub	Nugrak	Ghusnug	Kozgah
+			Snurbok	Gogdug	Kribruh	Ghalgha	Mubdakh
+			Skarg	Snudgig	Togmub	Skolg	Skugrunk
+			Korlag	Gugduk	Uglut	Kadush	Gandu
+			Grolg	Thrag	Smorthag	Brukthak	Skondug
+			Thordak	Murbosh	Agbu	Zokdub	Oghru
+			Soknug	Smuknug	Smabnag	Robmuk	Bozpog
+			Braknuk	Abgunk	Sugmag	Adzug	Kridbog
+			Mudkub	Nogrunk	Skozhkrut	Skabdug	Nugh
+			Molg	Brubgugh	Gurzog	Dubgush	Hundagh
+			Kogkug	Bubmak	Drukduh	Kodash	Brorboz
+			Ogbug	Trosnug	Dukpug	Utsnug	Brarbug
+			Sugdush	Drigzush	Krubbuh	Sulbag	Nagzurg
+			Mozg	Zutsnak	Rurgab	Zadzud	Gardag
+			Duga	Gubgush	Zobzurg	Huzpug	Brubdub
+			Smigkug	Gruzgash	Gurdag	Kugzush	Ugmag
+			Darthag	Gagrug	Ugulg	Bligguh	Obdub
+			Grulbag	Ubgush	Krozpog	Drigzub	Blablakh
+			Drukhdag	Druruk	Ugnub	Thogblug	Zugug
+			Thrugluk	Kagguk	Aggug	Gadzush	Turguk
+			Smozdakh	Ozburz	Sagduk	Thadgug	Abzagh
+			Snuktug	Urduk	Hobnag	Mudzud	Aknuk
+			Drurbug	Grulbug	Gobmag	Glubzub	Brumhosh
+			Brurbog	Blurgok	Ghubgu	Glinuk	Krogzug
+			Harg	Zubgu	Murthag	Snutruk	Thudrub
+			Ghurgok	Subbuh	Skulug	Glarpug	Uzbag
+			Blabkub	Grork	Thrushzog	Hublag	Grark
+			Snadgulg	Brubug	Bruugh	Bludzud	Blurg
+			Tugrurg	Uzpug	Blakhdub	Skobdub	Grobdub
+			Grarguh	Bushlak	Zabzug	Brog	Thrugzurg
+			Tukthak	Skalug	Braghnab	Mugzush	Idzud
+			Smurbok	Snubub	Gludhagh	Grarbag	Glokguh
+			Grung	Nukhdub	Brombub	Tabkrut	Smazgub
+			Gluzgub	Sotrush	Urug	Togluk	Thuzdub
+			Globgagh	Udhagh	Gorghud	Irgag	Smolgha
+			Soruk	Blogor	Bazbuzg	Snozpug	Argug
+			Skagrak	Drubkrut	Throblag	Grushzog	Bublag
+			Gugmag	Brigzag	Grorbug	Ukag	Skurthag
+			Rushnakh	Umkush	Brodgub	Mokgor	Throblakh
+			Braghru	Ghazbag	Grabdub	Bokgakh	Smubgub
+			Nugblug	Basnug	Snigrub	Krulgha	Brushdrog
+			Smoghig	Tulghu	Ghoghru	Snuzgash	Trukduh
+			Gholug	Zaglut	Krurguk	Nubdub	Skuglut
+				Agnub	Hukgor	Thurguh	Kruldush
+			Nudzud	Odgulg	Mugrurg	Kolgug	Solbog
+			Migbu	Orguk	Mudbagh	Suglum	Tragnath
+			Horboz	Ugzurg	Thruzbub	Duzbub	Ghorguh
+			Bukgakh	Drumhosh	Skungub	Rublag	Snalg
+			Narboz	Zubdub	Snozgash	Snubgush	Thogbub
+			Brodguk	Bluktug	Trudmuk	Snarkub	Gragh
+			Moshog	Nabgub	Bubguh	Kroghru	Korlug
+			Robdak	Brudrub	Thozg	Murg	Drumdush
+			Hughig	Brobhosh	Skobulg	Rugrog	Hulrarz
+			Ruktug	Mumbub	Tubguh	Migzub	Ighbub
+			Smugulg	Kronk	Nulbag	Rudmuk	Dolgug
+			Abpug	Snabmag	Urghud	Kirbog	Glodgug
+			Ubnag	Brubgush	Babhush	Duzg	Gluzpog
+			Thubbag	Gligmuh	Tubkub	Smukgakh	Brubkog
+			Zudash	Brobzugh	Ognub	Habdush	Kugmub
+			Hutrug	Thok	Toghig	Snubguk	Grubgub
+			Mabkub	Krutrug	Drushnok	Thagrub	Drumburz
+			Sulbug	Drugha	Dugbug	Urlag	Dradgig
+			Obub	Zubdig	Kagor	Otrug	Oblug
+			Uzgash	Tuzdush	Giktug	Dagluk	Arbug
+			Odzug	Mugrak	Dazrub	Zodmuk	Akpug
+			Ogugh	Gubug	Hurguk	Okgag	Murdag
+			Gloglug	Blagrog	Grukhdub	Rugzush	Bolbog
+			Mogzub	Bluggug	Odhagh	Smalg	Kuzdub
+			Ghabulg	Trubmuk	Glugak	Hukhdag	Zudzog
+			Skurguh	Krulg	Obdak	Ghukgor	Brubzugh
+			Brazg	Brorg	Snubmuk	Bundu	Truzgurg
+			Trurghud	Ogmug	Blaghru	Moknogh	Thrubbuh
+			Krubkrut	Bablakh	Grabdush	Skogha	Ghazpog
+			Glushdrog	Snamzug	Dubguh	Utruk	Tarbok
+			Smughbub	Skoknogh	Ghubrog	Drudkub	Nazhkrut
+			Hudmuk	Oshzog	Snundu	Trutsnak	Skudak
+			Hoggu	Duzdakh	Ruzdush	Mugzag	Blogzug
+			Huzkub	Nugrug	Ogmub	Ogor	Zundagh
+			Sugzag	Smobguk	Zurgulg	Rubgush	Smudzug
+			Gruzg	Uggu	Azdrog	Tratrug	Smudbog
+			Thrurgug	Bubgagh	Obzurg	Zorgag	Glagmog
+			Thruggug	Kraknuk	Smalug	Guzdrog	Gliktug
+			Zabgugh	Bablag	Omhosh	Zoghrag	Snogburz
+			Grugzurg	Smarzug	Hugzakh	Kashdrog	Ambub
+			Thugha	Mubkog	Thrushnok	Kubmak	Globnarg
+			Ghogrurg	Nargab	Snozg	Tablakh	Iggu
+			Dablag	Grikguh	Graugh	Bruzg	Budush
+			Blalg	Dribdug	Subgugh	Tholg	Smugguk
+			Thogmug	Dalghu	Turkub	Ghugduh	Dubpug
+			Ghundug	Trozrub	Karghud	Krogrunk	Brolurg
+			Amzug	Ghagulg	Krubgug	Blagmag	Gokthak
+			Olgha	Skugor	Murgok	Trobgub	Grugduh
+			Naglum	Zorbosh	Zoghug	Sugrak	Tharzog
+			Skudmuk	Ghugrub	Agrog	Hurk	Gubgub
+			Alrarz	Glashog	Thuglut	Kubgorg	Snugdakh
+			Zurg	Trutsnuk	Irkub	Krirlug	Krugzush
+			Usnug	Snorg	Nubbuh	Truugh	Agbuh
+			Brurguk	Grugmub	Hagulg	Kogdakh	Hobzugh
+			Drorduk	Ghubkog	Nigrog	Grobzagh	Smabdak
+			Drundug	Krushnug	Snubnarg	 	Troblakh
+			Mudmuk	Ghogh	Draugh	Zodrub	Ordak
+			Krag	Kragzub	Kragrub	Tugrunk	Blodbug
+			Smuugh	Mugugh	Gramdush	Dukguh	Drogdug
+			Sobub	Kodgulg	Mogdakh	Muzhug	Obdakh
+			Kruzhug	Smarluk	Zubguh	Krabnarg	Skigzug
+			Gubpug	Thrundagh	Blozdakh	Surbug	Mumhosh
+			Bubdub	Gashnok	Dirkub	Mubzurg	Odgug
+			Skabzug	Thubmuk	Brigmog	Brobruh	Brurgag
+			Krurpug	Snuzgug	Kaghrag	Glukag	Nashnak
+			Sokpug	Nodrub	Hudrub	Ulbag	Trushdrog
+			Ibdig	Rubgorg	Hubdug	Adkuh	Trumbub
+			Ubhush	Drobdub	Thrulurg	Smugzag	Tunak
+		}
+		horde = yes
+		used_for_random = no
+		from_dynasty_prefix = "gro"
+		allow_in_ruler_designer = yes
+		character_modifier = {
+			martial = 2
+			diplomacy = -1
+			learning = -1
+		}
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+		pat_grf_name_chance = 30
+		mat_grf_name_chance = 0
+		father_name_chance = 0
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+		pat_grm_name_chance = 10
+		mat_grm_name_chance = 40
+		mother_name_chance = 0
+		modifier = default_culture_modifier
+		allow_looting = yes
+		seafarer = no
+	}
+}

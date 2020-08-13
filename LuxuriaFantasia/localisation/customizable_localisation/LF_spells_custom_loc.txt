@@ -1,0 +1,196 @@
+defined_text = {
+	name = Spell1
+
+	text = {
+		localisation_key = lf_spell_fireball
+		trigger = { 
+			has_character_flag = lf_fireball_known
+		}
+	}
+	text = {
+		localisation_key = lf_blank_page
+		trigger = { 
+			NOT = { has_character_flag = lf_fireball_known }
+		}
+	}
+}
+defined_text = {
+	name = Spell2
+
+	text = {
+		localisation_key = lf_spell_flamestrike
+		trigger = { 
+			has_character_flag = lf_flamestrike_known
+		}
+	}
+	text = {
+		localisation_key = lf_blank_page
+		trigger = { 
+			NOT = { has_character_flag = lf_flamestrike_known }
+		}
+	}
+}
+defined_text = {
+	name = Spell3
+
+	text = {
+		localisation_key = lf_spell_familiar
+		trigger = { 
+			has_character_flag = lf_familiar_known
+		}
+	}
+	text = {
+		localisation_key = lf_blank_page
+		trigger = { 
+			NOT = { has_character_flag = lf_familiar_known }
+		}
+	}
+}
+defined_text = {
+	name = Spell4
+
+	text = {
+		localisation_key = lf_spell_womb
+		trigger = { 
+			has_character_flag = lf_womb_known
+		}
+	}
+	text = {
+		localisation_key = lf_blank_page
+		trigger = { 
+			NOT = { has_character_flag = lf_womb_known }
+		}
+	}
+}
+defined_text = {
+	name = Spell5
+
+	text = {
+		localisation_key = lf_spell_snail
+		trigger = { 
+			has_character_flag = lf_snail_known
+		}
+	}
+	text = {
+		localisation_key = lf_blank_page
+		trigger = { 
+			NOT = { has_character_flag = lf_snail_known }
+		}
+	}
+}
+defined_text = {
+	name = Spell6
+
+	text = {
+		localisation_key = lf_spell_cuckold
+		trigger = { 
+			has_character_flag = lf_cuckold_known
+			is_elf = yes
+		}
+	}
+	text = {
+		localisation_key = lf_blank_page
+		trigger = { 
+			NOT = { has_character_flag = lf_cuckold_known }
+			is_not_elf = yes
+		}
+	}
+}
+defined_text = {
+	name = Spell7
+
+	text = {
+		localisation_key = lf_spell_lust
+		trigger = { 
+			OR = {
+				has_character_flag = lf_lust_known
+				is_kitsune = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = lf_blank_page
+		trigger = { 
+			NOT = { has_character_flag = lf_lust_known }
+			is_not_kitsune = yes
+		}
+	}
+}
+defined_text = {
+	name = Spell8
+
+	text = {
+		localisation_key = lf_spell_fairy
+		trigger = { 
+			OR = {
+				has_character_flag = lf_fairy_known
+				is_fairy = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = lf_blank_page
+		trigger = { 
+			NOT = { has_character_flag = lf_fairy_known }
+			is_not_fairy = yes
+		}
+	}
+}
+defined_text = {
+	name = Spell9
+
+	text = {
+		localisation_key = lf_spell_enslave
+		trigger = { 
+			OR = {
+				has_character_flag = lf_enslave_known
+				trait = houseirae_drow
+			}
+		}
+	}
+	text = {
+		localisation_key = lf_blank_page
+		trigger = { 
+			NOR = { 
+				has_character_flag = lf_enslave_known 
+				trait = houseirae_drow
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = SillySpells
+
+	text = {
+		localisation_key = lf_spell_silly1
+		trigger = { 
+			has_global_flag = lf_silly_mode
+		}
+	}
+	text = {
+		localisation_key = lf_spell_silly2
+		trigger = { 
+			has_global_flag = lf_silly_mode
+		}
+	}
+	text = {
+		localisation_key = lf_spell_silly3
+		trigger = { 
+			has_global_flag = lf_silly_mode
+		}
+	}
+	text = {
+		localisation_key = lf_spell_silly4
+		trigger = { 
+			has_global_flag = lf_silly_mode
+		}
+	}
+	text = {
+		localisation_key = lf_spell_silly5
+		trigger = { 
+			has_global_flag = lf_silly_mode
+		}
+	}
+}
+	

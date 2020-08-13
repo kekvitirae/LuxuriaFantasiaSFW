@@ -1,0 +1,93 @@
+spriteTypes = {
+	spriteType = {
+		name = "visit_male_female_1"
+		texturefile = "gfx/event_pictures/visit_male_female_1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "visit_female_female_1"
+		texturefile = "gfx/event_pictures/visit_female_female_1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "visit_male_male_1"
+		texturefile = "gfx/event_pictures/visit_male_male_1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "visit_futa_futa_1"
+		texturefile = "gfx/event_pictures/visit_futa_futa_1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "visit_futa_futa_2"
+		texturefile = "gfx/event_pictures/visit_futa_futa_2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "visit_futa_female_1"
+		texturefile = "gfx/event_pictures/visit_futa_female_1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "visit_futa_male_1"
+		texturefile = "gfx/event_pictures/visit_futa_male_1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "visit_futa_female_2"
+		texturefile = "gfx/event_pictures/visit_futa_female_2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lf_a_placeholder"
+		texturefile = "gfx/event_pictures/lf_a_placeholder.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lf_secret_slut"
+		texturefile = "gfx/event_pictures/lf_secret_slut.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "slavery_female_sale1"
+		texturefile = "gfx/event_pictures/slavery_female_sale1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "slavery_female_cell1"
+		texturefile = "gfx/event_pictures/slavery_female_cell1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "slavery_male_cell1"
+		texturefile = "gfx/event_pictures/slavery_male_cell1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+}

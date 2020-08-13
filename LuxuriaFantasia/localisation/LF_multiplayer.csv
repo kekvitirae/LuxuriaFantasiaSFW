@@ -1,0 +1,46 @@
+lf_a_multiplayer_race_choice;§R(Setup)§! Racial Choice;;;;;;;;;;;;;x
+lf_a_multiplayer_race_choice_desc;You are in a multiplayer game. Use this decision to become the race of your choice.;;;;;;;;;;;;;x
+lf_a_multiplayer_host_lock;§R(Setup)§! Host Setup Complete;;;;;;;;;;;;;x
+lf_a_multiplayer_host_lock_desc;You are the host of a multiplayer game. Use this decision to lock in all players' choices.\n§ROnly use this option when all players have chosen their race and are ready to start playing.§!;;;;;;;;;;;;;x
+lf_a_singleplayer_race_choice;§R(Setup)§! Choose Your Race;;;;;;;;;;;;;x
+lf_a_singleplayer_race_choice_desc;Use this decision to become a Dark World Fantasy race of your choice.;;;;;;;;;;;;;x
+lf_a_singleplayer_remain_human;§R(Setup)§! Remain Human;;;;;;;;;;;;;x
+lf_a_singleplayer_remain_human_desc;Use this decision if you want to remain human.;;;;;;;;;;;;;x
+lf_a_multiplayer_remain_human;§R(Setup)§! Remain Human;;;;;;;;;;;;;x
+lf_a_multiplayer_remain_human_desc;You are in a multiplayer game. Use this decision if you want to remain human.;;;;;;;;;;;;;;x
+
+LFMultiplayerTitle;LF - Choose Your Race;;;;;;;;;;;;;;x
+LFMultiplayer1;Demons are the progeny of Lilith, the first woman created by God. Males are cambions and females are alu-fiends, the half-blooded grandchildren of Lilith. They have the ability later in life to become full-blooded demons through the Chosen of Lilith society.\nThe Divine are the mortal instruments of their deity. Be they peaceful messengers or wrathful weapons of war, that is up to the divine itself.\nKitsune are fox spirits (or demons) hailing from the Far East. They are notable having a human body with fox ears and tails, as well as their affinity for magic.\nNekos hail from either Ancient Egypt or the Far East. Similar to kitsune, they sport cat ears and a cat tail.\nElves are the long-lived, pointy-eared relatives of the fae. Though mostly sticking to forests, some elves have a wanderlust so strong that they have integrated into human society.\nOrcs are the distant cousins of elves. Notable for their green skin and tusks, orcs live for one thing... war. A weak orc is a dead orc.\nFairies are the closest relatives to the original fae. Growing, at most, a foot tall and sporting butterfly-like wings, some fairies use their magic to grow to human size and hide their wings to integrate into human society.\nHalf-dragons are born from a (often forced) union of a dragon and a human. They sport the body of their human parent with the scales and horns of their draconic parent.;;;;;;;;;;;;;;x
+LFMultiplayerNextPage;Next Page;;;;;;;;;;;;;;x
+LFMultiplayerGoBack;Go Back;;;;;;;;;;;;;;x
+LFRemainHuman;Remain Unchanged;;;;;;;;;;;;;;x
+LFMultiplayer1AMale;Cambion (Half Demon);;;;;;;;;;;;;;x
+LFMultiplayer1AFemale;Alu-fiend (Half Demon);;;;;;;;;;;;;;x
+LFMultiplayer1B;Divine;;;;;;;;;;;;;;x
+LFMultiplayer1C;Kitsune;;;;;;;;;;;;;;x
+LFMultiplayer2A;Neko;;;;;;;;;;;;;;x
+LFMultiplayer2B;Elf;;;;;;;;;;;;;;x
+LFMultiplayer2C;Orc;;;;;;;;;;;;;;x
+LFMultiplayer3A;Fairy;;;;;;;;;;;;;;x
+LFMultiplayer4BAura;Half-Dragon;;;;;;;;;;;;;;x
+LFMultiplayer4BDragon;Dragon;;;;;;;;;;;;;;x
+LFMultiplayerNevermind;Nevermind;;;;;;;;;;;;;;x
+LFHHChoice;Heaven & Hell;;;;;;;;;;;;;;x
+LFFaeChoice;Fae;;;;;;;;;;;;;;x
+LFFarEastChoice;Kemonomimi;;;;;;;;;;;;;;x
+LFDWSEChoice;Serpent Expansion;;;;;;;;;;;;;;x
+LFMultiplayer3;Heaven and Hell;;;;;;;;;;;;;;x
+LFMultiplayer4;Fae;;;;;;;;;;;;;;x
+LFMultiplayer6;Kemonomimi;;;;;;;;;;;;;;x
+LFMultiplayer7;Serpent Expansion;;;;;;;;;;;;;;x
+LFMultiplayerDemonTooltip;You will have the opportunity to become a §Gpureblood demon§! with the §YSociety of Seduction§!.;;;;;;;;;;;;;;x
+LFMultiplayerRaceLockOnTooltip;§RWARNING:§! Picking this will lock in your choice. Choose wisely.;;;;;;;;;;;;;;x
+LFMultiplayerLynnessWarningTooltip;§RBe aware that a certain demoness will transform you into a Fallen unless Demon Content is turned off in the Options Menu.§!;;;;;;;;;;;;;;x
+
+LF_Race_Convert_Culture;Do you want to convert to the racial culture?;;;;;;;;;;;;;;x
+LF_Race_Convert_Self;Self Only;;;;;;;;;;;;;;x
+LF_Race_Convert_Provinces;Partial;;;;;;;;;;;;;;x
+LFAllRealmProvincesCulture;You and all realm provinces that have your original culture will convert to the racial culture.;;;;;;;;;;;;;;x
+LF_Race_Convert_Everything;Full;;;;;;;;;;;;;;x
+LFAllCulture;You, all realm provinces, and all realm characters that have your original culture will convert to the racial culture.;;;;;;;;;;;;;;x
+LF_Race_Convert_Nothing;No Conversion;;;;;;;;;;;;;;x

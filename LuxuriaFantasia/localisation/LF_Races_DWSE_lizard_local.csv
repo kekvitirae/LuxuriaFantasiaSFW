@@ -1,0 +1,61 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+dwse_lizard;Half-dragon;;;;;;;;;;;;;;x
+dwse_lizard_desc;A race born of both dragons and humans. They carry the strength of their dragon ancestors in the form of a human.;;;;;;;;;;;;;;x
+dwse_dawn;Dawn Father;;;;;;;;;;;;;;x
+dwse_dusk;Dusk Mother;;;;;;;;;;;;;;x
+dwse_dawn_adj;Dawnite;;;;;;;;;;;;;;x
+dwse_dusk_adj;Duskite;;;;;;;;;;;;;;x
+dwse_dawn_merchant_tribal;LF - Merchant Dock;;;;;;;;;;;;;;x
+dwse_dawn_merchant_castle;LF - Merchant Dock;;;;;;;;;;;;;;x
+dwse_dawn_merchant_city;LF - Merchant Dock;;;;;;;;;;;;;;x
+dwse_dawn_merchant_city2;LF - Merchant Port;;;;;;;;;;;;;;x
+dwse_dawn_merchant_city3;LF - Merchant Hub;;;;;;;;;;;;;;x
+dwse_dawn_merchant;A small dock for followers of the Dawn Father to conduct trade and commerce with the outside world.;;;;;;;;;;;;;;x
+dwse_dawn_merchant2;An expanded port for followers of the Dawn Father to conduct trade and commerce with the outside world.;;;;;;;;;;;;;;x
+dwse_dawn_merchant3;A bustling merchant hub for followers of the Dawn Father to conduct trade and commerce with the outside world.;;;;;;;;;;;;;;x
+
+dwse_lizardm_comp;Goanna;;;;;;;;;;;;;;x
+dwse_lizardf_comp;Komodo;;;;;;;;;;;;;;x
+dwse_lizardc_comp;Hatchling;;;;;;;;;;;;;;x
+dwse_lizardm_insult;Halfbreed;;;;;;;;;;;;;;x
+dwse_lizardf_insult;Halfbreed;;;;;;;;;;;;;;x
+dwse_lizardc_insult;Abomination;;;;;;;;;;;;;;x
+dwse_lizard_race;Ralf-dragon Race;;;;;;;;;;;;;;x
+dwse_lizard_localisation_label;§RDWSE§! Half-dragon Race Rules;;;;;;;;;;;;;;x 
+dwse_lizard_race_on;half-dragon On;;;;;;;;;;;;;;x
+dwse_lizard_localisation_enabled_label;Half-dragon On;;;;;;;;;;;;;;x
+dwse_lizard_localisation_enabled_desc;Half-dragons are completely enabled.;;;;;;;;;;;;;;x
+dwse_lizard_race_off;Half-dragon Off;;;;;;;;;;;;;;x
+dwse_lizard_localisation_disabled_label;Half-dragons Off;;;;;;;;;;;;;;x
+dwse_lizard_localisation_disabled_desc;Half-dragons will not appear in the game unless you add the trait to someone via console or start as one in the DWR campaign.;;;;;;;;;;;;;;x
+RULE_GROUP_DWSE_EVENTS;DWSE Rules;;;;;;;;;;;;;;x 
+dwse_lizard_race_marrige;Half-dragon Marriage;;;;;;;;;;;;;;x
+dwse_lizard_localisation_marriage_label;Marriage;;;;;;;;;;;;;;x
+dwse_lizard_localisation_marriage_desc;The only way for half-dragons to exist is if you start as one or marry one from the Empire. They will NOT spawn from events.;;;;;;;;;;;;;;x
+dwse_dragon_marriage;Imperial Marriage;;;;;;;;;;;;;;x
+dwse_dragon_marriage_desc;Marry a half-dragon member of the Forest Emperor's family.;;;;;;;;;;;;;;x
+dwse_lizard_start_title;Scales of Balance;;;;;;;;;;;;;;x
+dwseliz1Choice;Choose Your Race;;;;;;;;;;;;;;x
+dwseliz1ChoiceTTA;Dragon;;;;;;;;;;;;;;x
+dwseliz1ChoiceTTB;Half-Dragon;;;;;;;;;;;;;;x
+dwseliz12T;With Fire And Fury;;;;;;;;;;;;;;x
+dwseliz12;For too long have our kind been regulated to myth and legend. Understandable, as the Elder Forest is seen and open to only those who we find worthy. However, due to our dwindling numbers, the Elder Emperor has decreed that the youngest of us must go out into the world and propogate. Perhaps even to conquer. Whatever the motivation, it is time for me to spread my wings and make a name upon the human world. Dragons are longer a myth and no longer a legend, for I am real. With fire and fury shall my rule be long!;;;;;;;;;;;;;;x
+dwseliz12C;A Legend No Longer;;;;;;;;;;;;;;x 
+dwseliz1m;Long have we been guarded by the might of the dragons. Hidden among the trees and glens of the mightly Forest. Hidden from the realm of men. \n The way has opened, men are flocking to Forest to claim their lost brethren. What will they say when they meet us? What will they do when the see us? Will they mark us a monster or friend, rival or lover? Only time will tell. \n I will make the path for my brethren to follow, it is time we join the rest of man in our ancestral home. I will do as we have always done... bridge the races of our ancestors and make us one.;;;;;;;;;;;;;;x 
+dwseliz1f;Long have we been guarded by the might of the dragons. Hidden among the trees and glens of the mightly Forest. Hidden from the realm of men. \n The way has opened, men are flocking to Forest to claim their lost brethren. What will they say when they meet us? What will they do when the see us? Will they mark us a monster or friend, rival or lover? Only time will tell. \n I will make the path for my brethren to follow, it is time we join the rest of man in our ancestral home. I will do as we have always done... bridge the races of our ancestors and make us one.;;;;;;;;;;;;;;x 
+dwseliz1A;May our worlds be one!;;;;;;;;;;;;;;x 
+dwseliz1B;I shall rule the waves!;;;;;;;;;;;;;;x
+dwseliz1C;I shall rule the steppes!;;;;;;;;;;;;;;x
+LFDWSEDawnStart;You have chosen to embrace the Dawn Father. Characters of this culture will be more suited on the waves than on land.;;;;;;;;;;;;;;x
+LFDWSEDuskStart;You have chosen to embrace the Dusk Mother. Characters of this culture will be masters of the horse.;;;;;;;;;;;;;;x
+dwse_coastal_tt;This option is available due to one (or more) of your demesne provinces resting on a coastal area.;;;;;;;;;;;;;;x
+dwse_flatland_tt;This option is available due to one (or more) of your demesne provinces resting on flat land.;;;;;;;;;;;;;;x
+dwseliz_add_portrait;Add half-dragon Portrait;;;;;;;;;;;;;;x 
+dwseliz_add_portrait_desc;Have the half-dragon trait and are an adult? Add a portrait! On Adulthood event fail? Add a Portrait!;;;;;;;;;;;;;;x 
+dwse_prince;Dragon Prince;;;;;;;;;;;;;;x 
+dwse_prince_desc;A child of the Dragon Emperor, that was raised in the Forest.;;;;;;;;;;;;;;x 
+dwse_princess;Dragon Princess;;;;;;;;;;;;;;x
+dwse_princess_desc;A child of the Dragon Emperor, that was raised in the Forest.;;;;;;;;;;;;;;x
+dwse_lizard_regen;Shedding of Scars;;;;;;;;;;;;;;x
+dwseliz5;The blood of dragons coarse through my veins. Mortal wounds mean nothing as I shed my scales with each molt. Bones grow and flesh mends, by the blessing of my ancestors I am made whole again!;;;;;;;;;;;;;;x
+dwseliz5a;I feel refreshed;;;;;;;;;;;;;;x

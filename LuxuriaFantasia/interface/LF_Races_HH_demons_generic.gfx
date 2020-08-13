@@ -1,0 +1,116 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_lf_demon_decisions"
+		texturefile = "gfx\\interface\\lf_demon_decisions.dds"
+	}
+	spriteType = {
+		name = "GFX_lf_a_claim_demonic_bloodline"
+		texturefile = "gfx\\interface\\lf_decisions.dds"
+	}
+	spriteType = {
+		name = "lilith_infuse_demon_blood_half"
+		texturefile = "gfx/event_pictures/lilith_infuse_demon_blood_half.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lilith_infuse_demon_blood_full_female"
+		texturefile = "gfx/event_pictures/lilith_infuse_demon_blood_full_female.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lilith_infuse_demon_blood_full_futa"
+		texturefile = "gfx/event_pictures/lilith_infuse_demon_blood_full_futa.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "lilith_infuse_demon_blood_full_male"
+		texturefile = "gfx/event_pictures/lilith_infuse_demon_blood_full_male.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "lilith_avatar1"
+		texturefile = "gfx/event_pictures/lilith_avatar1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "succubus_seduction_priest"
+		texturefile = "gfx/event_pictures/succubus_seduction_priest.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "succubus_seduction"
+		texturefile = "gfx/event_pictures/succubus_seduction.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "incubus_seduction"
+		texturefile = "gfx/event_pictures/incubus_seduction.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lilith_prison"
+		texturefile = "gfx/event_pictures/lilith_prison.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lilith_wedding"
+		texturefile = "gfx/event_pictures/lilith_wedding.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lilith_graveyard"
+		texturefile = "gfx/event_pictures/lilith_graveyard.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lilith_nope"
+		texturefile = "gfx/event_pictures/lilith_nope.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lilith_love_letter"
+		texturefile = "gfx/event_pictures/lilith_love_letter.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lilith_romance_generic"
+		texturefile = "gfx/event_pictures/lilith_romance_generic.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "lf_lilith_sfw"
+		texturefile = "gfx/event_pictures/lf_lilith_sfw.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+}

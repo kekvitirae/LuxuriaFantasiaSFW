@@ -1,0 +1,18 @@
+on_adulthood = {
+	events = {
+		LF_Divine.12 # Adds angelic portrait on adulthood
+		LFDemons.2 # Adds demonic portrait on adulthood
+	}
+}
+
+on_society_bi_yearly_pulse = {
+	events = {
+		LFLilithQuests.1 # Society of Seduction quest tombola
+	}
+}
+
+on_character_switch_society_interest = {
+	events = {
+		LFSocietySeduction.90 #Interest shown in Luxuria Societies
+	}
+}

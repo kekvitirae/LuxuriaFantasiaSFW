@@ -1,0 +1,159 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+
+CB_NAME_HOARD;Steal Hoard;;;;;;;;;;;;;;x
+dwse_hoard_cb_desc;§Y$TARGET$§! is storing plenty of wealth in their vaults. It's time to give it to someone more worthy.;;;;;;;;;;;;;;x
+WAR_NAME_HOARD;$ORDER$$FIRST_ADJ$-$SECOND_ADJ$ War for Gold;;;;;;;;;;;;;;x
+CB_NAME_MAIDEN;Kidnap Maidens;;;;;;;;;;;;;;x
+dwse_maiden_cb_desc;§Y$TARGET$§! has young maidens in their court. It's time to "persuade" them to join us, by force if need be.;;;;;;;;;;;;;;x
+WAR_NAME_MAIDEN;$ORDER$$FIRST_ADJ$-$SECOND_ADJ$ Maiden War;;;;;;;;;;;;;;x
+
+XAELA_RAIDERS;Duskite Raiders;;;;;;;;;;;;;;x
+XAELA_HORSE_ARCHERS;Duskite Horse Archers;;;;;;;;;;;;;;x
+
+
+slaveguild;Summon Guild Master;;;;;;;;;;;;;;x
+slaveguild_desc;Summons the guildmaster of a local slavers guild to your court.;;;;;;;;;;;;;;x
+dwse.1000.desc;You Summon the guild master of a nearby slaver's guild, with a polite bow he asks how he can be of assistance.;;;;;;;;;;;;;;x
+dwse.1000.a;Fund Slavers;;;;;;;;;;;;;;x
+dwse.1000.b;Purchase a Slave;;;;;;;;;;;;;;x
+dwse.1000.c;Leave;;;;;;;;;;;;;;x
+dwse.1001.desc;You have decieded to fund a group of slavers. In return for funding them you will get a portion of the slaves they capture.;;;;;;;;;;;;;;x
+dwse.1001.a;Have slavers capture slaves from your realm;;;;;;;;;;;;;;x
+dwse.1001.b;Have slavers capture slaves from foreign lands;;;;;;;;;;;;;;x
+dwse.1001.c;Don't hire slavers and leave.;;;;;;;;;;;;;;x
+dwse.1002.desc;You have decided to have the slavers capture slaves in your realm. You will get your share of slaves when they return. They will be gone for one month. In preperation for the haul the guildhall will be closed unitl they return.;;;;;;;;;;;;;;x
+dwse.1002.a;Excellent;;;;;;;;;;;;;;x
+dwse.1003.desc;You have decided to have the slavers capture slaves from foreign realms. You will get your share of slaves when they return. They will be gone for three months. In preperation for the haul the guildhall will be closed unitl they return.;;;;;;;;;;;;;;x
+dwse.1002;Excellent;;;;;;;;;;;;;;x
+dwse.2000.desc;The slavers have returned from hunting in your lands. Their leader asks you to collect your share;;;;;;;;;;;;;;x
+
+dwse.2000.a;Take a bulk of slaves;;;;;;;;;;;;;;x
+
+dwse.2000.b;Take a few slaves;;;;;;;;;;;;;;x
+
+dwse.2000.c;Take an exotic slave;;;;;;;;;;;;;;x
+
+dwse.2000.d;Sell share to guild;;;;;;;;;;;;;;x
+
+dwse.3000.desc;The slavers have returned from hunting foreign lands. Their leader asks you to collect your share;;;;;;;;;;;;;;x
+
+dwse.3000.a;Take a bulk of slaves;;;;;;;;;;;;;;x
+
+dwse.3000.b;Take a few slaves;;;;;;;;;;;;;;x
+
+dwse.3000.c;Take only an exotic slave;;;;;;;;;;;;;;x
+
+dwse.3000.d;Sell share to guild;;;;;;;;;;;;;;x
+dwse_slavehunt_cooldown;Funding Slavers;;;;;;;;;;;;;;x
+dwse_slavers;Slavers kidnapped citizens;;;;;;;;;;;;;;x
+dwse_slave_port_b;Slaver's Guild;;;;;;;;;;;;;;x
+dwse_slave_port_c;Slaver's Guild;;;;;;;;;;;;;;x
+dwse_slave_portdesc;A guildhall for Slavers. Has a dock and holding areas for slave trafficing.;;;;;;;;;;;;;;x
+dwse_sold_citizens;Enslaved Citizens;;;;;;;;;;;;;;x
+dwse_funded_raiding;Funded Slavers;;;;;;;;;;;;;;x
+
+dwse.4000.desc;The guildmaster asks what type of slave you are looking for: one from the local area, one from a foreign realm, or a truly exotic slave?;;;;;;;;;;;;;;x
+
+dwse.4000.a;Local Slave;;;;;;;;;;;;;;x
+
+dwse.4000.b;Foreign Slave;;;;;;;;;;;;;;x
+
+dwse.4000.c;Exotic Slave;;;;;;;;;;;;;;x
+
+dwse.4000.d;Leave without buying;;;;;;;;;;;;;;x
+
+dwse.4010.desc;You are led to the pens containing slaves from the local area. The guildmaster asks if you want a male or female slave?;;;;;;;;;;;;;;x
+
+dwse.4010.a;Female;;;;;;;;;;;;;;x
+
+dwse.4010.b;Male;;;;;;;;;;;;;;x
+dwse.4010.c;Leave without buying (Last Chance);;;;;;;;;;;;;;x
+
+dwse.4011.desc;Local Female Slaves;;;;;;;;;;;;;;x
+
+dwse.4011.a;Buy a cheap Slave;;;;;;;;;;;;;;x
+
+dwse.4011.b;Buy a normal Slave;;;;;;;;;;;;;;x
+
+dwse.4011.c;Buy a quality Slave;;;;;;;;;;;;;;x
+
+dwse.4012.desc;Local Male Slaves;;;;;;;;;;;;;;x
+
+dwse.4012.a;Buy a cheap Slave;;;;;;;;;;;;;;x
+
+dwse.4012.b;Buy a normal Slave;;;;;;;;;;;;;;x
+
+dwse.4012.c;Buy a quality Slave;;;;;;;;;;;;;;x
+dwse.4020.desc;You are led to the pens containing slaves from foreign lands. The guildmaster asks if you want a male or female slave?;;;;;;;;;;;;;;x
+
+dwse.4020.a;Female;;;;;;;;;;;;;;x
+
+dwse.4020.b;Male;;;;;;;;;;;;;;x
+dwse.4020.c;Leave without buying (Last Chance);;;;;;;;;;;;;;x
+
+dwse.4021.desc;Foreign Female Slaves;;;;;;;;;;;;;;x
+
+dwse.4021.a;Buy a Cheap Slave;;;;;;;;;;;;;;x
+
+dwse.4021.b;Buy a normal Slave;;;;;;;;;;;;;;x
+
+dwse.4021.c;Buy a Quality Slave;;;;;;;;;;;;;;x
+
+dwse.4022.desc;Foreign Male Slaves;;;;;;;;;;;;;;x
+
+dwse.4022.a;Buy a Cheap Slave;;;;;;;;;;;;;;x
+
+dwse.4022.b;Buy a normal Slave;;;;;;;;;;;;;;x
+
+dwse.4022.c;Buy a Quality Slave;;;;;;;;;;;;;;x
+dwse.4030.desc;You are led to the pens containing slaves from foreign lands. The guildmaster asks if you want a male or female slave?;;;;;;;;;;;;;;x
+
+dwse.4030.a;Female;;;;;;;;;;;;;;x
+
+dwse.4030.b;Male;;;;;;;;;;;;;;x
+dwse.4030.c;Leave without buying (Last Chance);;;;;;;;;;;;;;x
+
+dwse.4031.desc;Exotic Female Slaves;;;;;;;;;;;;;;x
+dwse.4031.a;Buy a dwarf slave;;;;;;;;;;;;;;x
+dwse.4031.b;Buy a Futa slave;;;;;;;;;;;;;;x
+dwse.4031.c;Buy a vampire slave;;;;;;;;;;;;;;x
+dwse.4031.d;Buy a werewolf slave;;;;;;;;;;;;;;x
+dwse.4032.desc;Exotice Male Slaves;;;;;;;;;;;;;;x
+dwse.4032.a;Buy a dwarf slave;;;;;;;;;;;;;;x
+dwse.4032.b;Buy a Futa slave;;;;;;;;;;;;;;x
+dwse.4032.c;Buy a werewolf slave;;;;;;;;;;;;;;x
+dwse.4032.d;Buy a vampire slave;;;;;;;;;;;;;;x
+dwse_slavers_desc;A Guild dedicated to the capture, training and selling of slaves.;;;;;;;;;;;;;;x
+
+dwse_visit_slave; Visit Slave;;;;;;;;;;;;;;x
+dwse_visit_slave_desc;Visit one of your private pleasure slaves;;;;;;;;;;;;;;x
+dwse_favored_visit_m; Visit slave male AI;;;;;;;;;;;;;;x
+dwse_favored_visit_m_desc;ONLY THE AI SHOULD SEE THIS, PLEASE REPORT IF YOU ARE SEEING THIS!;;;;;;;;;;;;;;x 
+dwse_favored_visit_f; Visit Slave Female AI;;;;;;;;;;;;;;x
+dwse_favored_visit_f_desc;ONLY THE AI SHOULD SEE THIS, PLEASE REPORT IF YOU ARE SEEING THIS!;;;;;;;;;;;;;;x 
+dwse_make_favored;Show favor;;;;;;;;;;;;;;x
+dwse_make_favored_desc;Grant your vassal or coutier the privilege of using your private slaves.;;;;;;;;;;;;;;x  
+dwse_favored_op;Favored by Liege;;;;;;;;;;;;;;x
+dwse_favor_rev_op;Revoked privilege;;;;;;;;;;;;;;x
+dwse_slavery_cb;Slave Raid;;;;;;;;;;;;;;x
+dwse_slavery_cb_desc;Raid foregin lands for slaves;;;;;;;;;;;;;;x
+dwse_CB_NAME_SLAVERY;Slave raid;;;;;;;;;;;;;;x
+dwse_WAR_NAME_SLAVERY;Slave raid;;;;;;;;;;;;;;x
+dwse_title_favored; Favored By Liege;;;;;;;;;;;;;;x
+dwse_title_favored_desc;Allowed to use leige's Private slaves;;;;;;;;;;;;;;x
+
+dwse_dragon_roost_nomad;LF - Dragon Roost;;;;;;;;;;;;;;x
+dwse_dragon_roost_tribal;LF - Dragon Roost;;;;;;;;;;;;;;x
+dwse_dragon_roost_castle;LF - Dragon Roost;;;;;;;;;;;;;;x
+dwse_dragon_roost_palace;LF - Dragon Roost;;;;;;;;;;;;;;x
+dwse_dragon_roost_desc;A resting place for dragons. Allows for trade with the Elder Forest.;;;;;;;;;;;;;;x 
+dwse_dragon_weyr_nomad;LF - Dragon Weyr;;;;;;;;;;;;;;x
+dwse_dragon_weyr_tribal;LF - Dragon Weyr;;;;;;;;;;;;;;x
+dwse_dragon_weyr_castle;LF - Dragon Weyr;;;;;;;;;;;;;;x
+dwse_dragon_weyr_palace;LF - Dragon Weyr;;;;;;;;;;;;;;x
+dwse_dragon_weyr_desc;A home for the realm's dragons. Courtiers or vassals can be assigned as weyrleaders to tend to the dragons' everyday needs.;;;;;;;;;;;;;;x
+dwse_lizard_nest_nomad;LF - Half-dragon Nest;;;;;;;;;;;;;;x
+dwse_lizard_nest_tribal;LF - Half-dragon Nest;;;;;;;;;;;;;;x
+dwse_lizard_nest_castle;LF - Half-dragon Nest;;;;;;;;;;;;;;x
+dwse_lizard_nest_palace;LF - Half-dragon Nest;;;;;;;;;;;;;;x
+dwse_lizard_nest_desc;A large room that is well insulated and heated. Serves as a resting place for half-dragons who are looking to get out of the cold... and warm themselves up with others of their kind.;;;;;;;;;;;;;;x

@@ -1,0 +1,306 @@
+defined_text = {
+	name = GetReligiousSocietyDesc_lf_adamite
+	text = {
+		trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_desc
+	}
+	text = {
+		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_lf_adamite_desc_REAL
+	}
+}
+
+defined_text = {
+	name = GetReligiousCommunityName_lf_adamite
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_name_lf_adamite
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_REAL_lf_adamite
+	}
+}
+
+#
+# Custom Religion
+#
+
+defined_text = {
+	name = GetCustomReligionName
+	text = {
+		trigger = {
+			has_global_flag = lf_lilith_religion_name
+		}
+		localisation_key = lf_lilith_name
+	}
+	text = {
+		trigger = {
+			has_global_flag = lf_seldarine_religion_name
+		}
+		localisation_key = lf_seldarine_name
+	}
+	text = {
+		trigger = {
+			has_global_flag = lf_orcish_religion_name
+		}
+		localisation_key = lf_orcish_name
+	}
+	text = {
+		trigger = {
+			has_global_flag = lf_fae_religion_name
+		}
+		localisation_key = lf_fae_name
+	}
+	text = {
+		trigger = {
+			has_global_flag = lf_meow_religion_name
+		}
+		localisation_key = lf_meow_name
+	}
+	text = {
+		trigger = {
+			has_global_flag = lf_weeb_religion_name
+		}
+		localisation_key = lf_weeb_name
+	}
+	text = {
+		trigger = {
+			has_global_flag = lf_true_custom_religion_name
+		}
+		localisation_key = lf_custom_true_name
+	}
+	text = {
+		trigger = {
+			has_global_flag = lf_twelve_religion_name
+		}
+		localisation_key = lf_twelve_name
+	}
+	text = {
+		trigger = {
+			has_global_flag = lf_primal_religion_name
+		}
+		localisation_key = lf_primal_name
+	}
+	fallback_text = {
+		localisation_key = lf_custom_name
+	}
+}
+
+defined_text = {
+	name = GetCustomReligionDesc
+	text = {
+		trigger = {
+			has_global_flag = lf_lilith_religion_name
+		}
+		localisation_key = lf_lilith_desc
+	}
+	text = {
+		trigger = {
+			has_global_flag = lf_seldarine_religion_name
+		}
+		localisation_key = lf_seldarine_desc
+	}
+	text = {
+		trigger = {
+			has_global_flag = lf_orcish_religion_name
+		}
+		localisation_key = lf_orcish_desc
+	}
+	text = {
+		trigger = {
+			has_global_flag = lf_fae_religion_name
+		}
+		localisation_key = lf_fae_desc
+	}
+	text = {
+		trigger = {
+			has_global_flag = lf_meow_religion_name
+		}
+		localisation_key = lf_meow_desc
+	}
+	text = {
+		trigger = {
+			has_global_flag = lf_weeb_religion_name
+		}
+		localisation_key = lf_weeb_desc
+	}
+	text = {
+		trigger = {
+			has_global_flag = lf_true_custom_religion_name
+		}
+		localisation_key = lf_custom_true_desc
+	}
+	text = {
+		trigger = {
+			has_global_flag = lf_twelve_religion_name
+		}
+		localisation_key = lf_twelve_desc
+	}
+	text = {
+		trigger = {
+			has_global_flag = lf_primal_religion_name
+		}
+		localisation_key = lf_primal_desc
+	}
+	fallback_text = {
+		localisation_key = lf_custom_desc
+	}
+}
+
+defined_text = {
+	name = GetCustomNameMale
+	text = {
+		trigger = {
+			has_global_flag = lf_lilith_religion_name
+		}
+		localisation_key = LFCustomMaleLilith
+	}
+	text = {
+		trigger = {
+			has_global_flag = lf_seldarine_religion_name
+		}
+		localisation_key = LFCustomMaleSeldarine
+	}
+	text = {
+		trigger = {
+			has_global_flag = lf_orcish_religion_name
+		}
+		localisation_key = LFCustomMaleOrc
+	}
+	text = {
+		trigger = {
+			has_global_flag = lf_fae_religion_name
+		}
+		localisation_key = LFCustomMaleFairy
+	}
+	text = {
+		trigger = {
+			has_global_flag = lf_meow_religion_name
+		}
+		localisation_key = LFCustomMaleMeow
+	}
+	text = {
+		trigger = {
+			has_global_flag = lf_weeb_religion_name
+		}
+		localisation_key = LFCustomMaleWeeb
+	}
+	text = {
+		trigger = {
+			has_global_flag = lf_true_custom_religion_name
+		}
+		localisation_key = LFCustomMaleTrue
+	}
+	text = {
+		trigger = {
+			has_global_flag = lf_twelve_religion_name
+		}
+		localisation_key = LFCustomMaleFFXIV
+	}
+	text = {
+		trigger = {
+			has_global_flag = lf_primal_religion_name
+		}
+		localisation_key = LFCustomMalePrimal
+	}
+	fallback_text = {
+		localisation_key = LFCustomMaleLilith
+	}
+}
+defined_text = {
+	name = GetCustomNameFemale
+	text = {
+		trigger = {
+			has_global_flag = lf_lilith_religion_name
+		}
+		localisation_key = LFCustomFemaleLilith
+	}
+	text = {
+		trigger = {
+			has_global_flag = lf_seldarine_religion_name
+		}
+		localisation_key = LFCustomFemaleSeldarine
+	}
+	text = {
+		trigger = {
+			has_global_flag = lf_orcish_religion_name
+		}
+		localisation_key = LFCustomFemaleOrc
+	}
+	text = {
+		trigger = {
+			has_global_flag = lf_fae_religion_name
+		}
+		localisation_key = LFCustomFemaleFairy
+	}
+	text = {
+		trigger = {
+			has_global_flag = lf_meow_religion_name
+		}
+		localisation_key = LFCustomFemaleMeow
+	}
+	text = {
+		trigger = {
+			has_global_flag = lf_weeb_religion_name
+		}
+		localisation_key = LFCustomFemaleWeeb
+	}
+	text = {
+		trigger = {
+			has_global_flag = lf_true_custom_religion_name
+		}
+		localisation_key = LFCustomFemaleTrue
+	}
+	text = {
+		trigger = {
+			has_global_flag = lf_twelve_religion_name
+		}
+		localisation_key = LFCustomFemaleFFXIV
+	}
+	text = {
+		trigger = {
+			has_global_flag = lf_primal_religion_name
+		}
+		localisation_key = LFCustomFemalePrimal
+	}
+	fallback_text = {
+		localisation_key = LFCustomFemaleLilith
+	}
+}
+
+defined_text = {
+	name = GetLFMagician 
+
+	text = {
+		localisation_key = String_witch
+		trigger = {
+			is_female = yes
+			society_member_of = lf_custom_satan
+		}
+	}
+	text = {
+		localisation_key = String_warlock
+		trigger = {
+			is_female = no
+			society_member_of = lf_custom_satan
+		}
+	}
+}
+
+defined_text = {
+	name = GetLFMagicianPlural
+
+	text = {
+		localisation_key = String_witches
+		trigger = {
+			is_female = yes
+			society_member_of = lf_custom_satan
+		}
+	}
+	text = {
+		localisation_key = String_warlocks
+		trigger = {
+			is_female = no
+			society_member_of = lf_custom_satan
+		}
+	}
+}

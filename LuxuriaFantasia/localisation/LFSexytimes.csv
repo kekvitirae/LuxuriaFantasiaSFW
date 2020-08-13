@@ -1,0 +1,75 @@
+#
+# Sex traits
+#
+lf_submissive;[Submissive_N];;;;;;;;;;;;;x
+lf_submissive_desc;[Submissive_D]\n§GAllows submissive sex with a Dominant or Switch partner.§!\n§RCannot have submissive sex with another Submissive partner.§!;;;;;;;;;;;;;x
+lf_dominant;[Dominant_N];;;;;;;;;;;;;x
+lf_dominant_desc;[Dominant_D]\n§GAllows dominant sex with a Submissive or Switch partner.§!\n§RCannot have dominant sex with another Dominant partner.§!;;;;;;;;;;;;;x
+lf_switch;Switch;;;;;;;;;;;;;x
+lf_switch_desc;This character has no preference as to who takes control.\n§GUniversal Role§!;;;;;;;;;;;;;x
+lf_insatiable;[InsatiableLoc_N];;;;;;;;;;;;;x
+lf_insatiable_desc;[InsatiableLoc_D];;;;;;;;;;;;;x
+lf_breeder;[Breeder_N];;;;;;;;;;;;;x
+lf_breeder_desc;[Breeder_D];;;;;;;;;;;;;x
+#
+# Customizable localisation
+#
+lf_breeder_g_n;Breeder;;;;;;;;;;;;;x
+lf_breeder_fem_n;Broodmother;;;;;;;;;;;;;x
+lf_breeder_futa_n;Breed Hungry;;;;;;;;;;;;;x
+lf_breeder_m_n;Breed Hungry;;;;;;;;;;;;;x
+lf_breeder_g_d;You have a fetish for getting pregnant or having others get pregnant.\n§RCan never choose any option that allows you to avoid pregnancy or your partner's pregnancy.§!;;;;;;;;;;;;;x
+lf_breeder_fem_d;Those pregnancy hormones of yours are extremely addictive. You feel aroused at the mere thought of someone's seed filling your womb.\n§RCan never choose any option that allows you to avoid pregnancy.§!;;;;;;;;;;;;;x
+lf_breeder_futa_d;Be it filling up the wombs of others or getting your own filled to the brim with seed, you get aroused at the mere thought of having children.\n§RCan never choose any option that allows you to avoid pregnancy or your partner's pregnancy.§!;;;;;;;;;;;;;x
+lf_breeder_m_d;The mere thought of filling an innocent girl with your seed and leaving her pregnant drives you wild. Not even the heavens above can prevent you from pulling out.\n§RCan never choose any option that allows you to avoid your partner's pregnancy.§!;;;;;;;;;;;;;x
+lf_domsadist;Sadist;;;;;;;;;;;;;x
+lf_domsadist_d;This character is exceedingly cruel and enjoys inflicting pain on others in bed.;;;;;;;;;;;;;x
+lf_subshy;Shy Lily;;;;;;;;;;;;;x
+lf_subshy_d;This character is meek and shy, uncertain of what to do in bed.;;;;;;;;;;;;;x
+lf_genericdom;Dominant;;;;;;;;;;;;;x
+lf_genericsub;Submissive;;;;;;;;;;;;;x
+lf_brokenslave;Broken Slave;;;;;;;;;;;;;x
+lf_brokenslave_d;This character has had their will and mind broken. They are no more than just a mere toy to their master's desires.;;;;;;;;;;;;;x
+lf_genericsub_d;This character likes to be controlled in bed.;;;;;;;;;;;;;x
+lf_genericdom_d;This character likes to take control in bed.;;;;;;;;;;;;;x
+lf_sex_partner_master;Master;;;;;;;;;;;;;x
+lf_sex_partner_mistress;Mistress;;;;;;;;;;;;;x
+lf_insatiable_n;Insatiable;;;;;;;;;;;;;x
+lf_insatiable_d;This character loves sex, and can never get enough of it. They always want more and more.\n§GThis removes the cooldown period of the 'Spend Time With' decision.§!;;;;;;;;;;;;;x
+lf_insatiable_whore_n;Insatiable Whore;;;;;;;;;;;;;x
+lf_insatiable_whore_d;They always want more and more. They've taken to walking the streets at night and working in brothels to satisfy their needs.\n§GThis removes the cooldown period of the 'Spend Time With' decision.§!\n§GThis removes the cooldown period of working at a brothel.§!\n§RInsatiable Whores will never accept money for sex.§!;;;;;;;;;;;;;x
+#
+# Misc loc
+#
+lf_compatible_role;Doms must have a Sub and vice versa. Switches are the universal role.;;;;;;;;;;;;;x
+lf_unique_npc_visit;Partner is: Mey (All player genders), Belle (All player genders), Hermione (Player is futa), or Gaston (Player is male or female);;;;;;;;;;;;;x
+lf_sex_recovery;Visited Lover;;;;;;;;;;;;;x
+lf_sex_recovery_desc;This character visited a lover recently. They will not be able to have fun in bed again for a while. Insatiable characters bypass this requirement.;;;;;;;;;;;;;x
+lf_switch_partner;This option is available because you or your partner prefers §Ystandard sex§!.;;;;;;;;;;;;;x
+lf_dominant_partner;This option is available because you or your partner prefers §Ysubmissive sex§!.;;;;;;;;;;;;;x
+lf_submissive_partner;This option is available because you or your partner prefers §Ydominant sex§!.;;;;;;;;;;;;;x
+lf_always_switch;Prefers Standard Sex;;;;;;;;;;;;;x
+lf_always_dominant;Prefers Dominant Sex;;;;;;;;;;;;;x
+lf_always_submissive;Prefers Submissive Sex;;;;;;;;;;;;;x
+lf_always_switch_desc;This character prefers standard sex, and will not have anything else.;;;;;;;;;;;;;x
+lf_always_dominant_desc;This character prefers being dominant in sex, and will not be anything else.;;;;;;;;;;;;;x
+lf_always_submissive_desc;This character prefers being submissive in sex, and will not be anything else.;;;;;;;;;;;;;x
+lf_always_position_tt;Prefers a single role;;;;;;;;;;;;;x
+dwse_boink_dragon;Boink Dragon;;;;;;;;;;;;;x
+dwse_boink_dragon_desc;Boink a dragon. This is a placeholder decision, and will lead to the generic sexytimes events.;;;;;;;;;;;;;x
+dwse_boink_humanoid;Boink Humanoid;;;;;;;;;;;;;x
+dwse_boink_humanoid_desc;Boink a dragonslut or a weyrleader. This is a placeholder decision, and will lead to the generic sexytimes events.;;;;;;;;;;;;;x
+#
+# Routing events
+#
+LFSexytimesRouting3;What is your preferred sexual role?;;;;;;;;;;;;;x
+LFSexytimesRouting3TTA;Switch / No Preference;;;;;;;;;;;;;x
+LFSexytimesRouting3TTB;Dominant;;;;;;;;;;;;;x
+LFSexytimesRouting3TTC;Submissive;;;;;;;;;;;;;x
+LFSexytimesRouting3TTA2;You either don't care for the whole Master/Slave thing, or you enjoy playing both sides.;;;;;;;;;;;;;x
+LFSexytimesRouting3TTB2;You are a [Root.GetTitle] and deserve to be treated as such. You enjoy exerting your dominance over your partner in bed.;;;;;;;;;;;;;x
+LFSexytimesRouting3TTC2;While you are a [Root.GetTitle], you enjoy being dominated and/or treated like a mere slave in bed.;;;;;;;;;;;;;x
+LFSexytimesInsatiable;I can't contain my lust. I need more and more and MORE! I have gained the Insatiable trait.;;;;;;;;;;;;;x
+LFSexytimesInsatiableSilly;We all know why you play this mod, you sick fuck. You have gained the Insatiable trait.;;;;;;;;;;;;;x
+LFSexytimesBreeder;Just the thought of having unsafe sex drives me wild! I have gained the Breeder trait.;;;;;;;;;;;;;x
+LFSexytimesBreederSilly;Good luck managing all those children. You have gained the Breeder trait, you sick fuck.;;;;;;;;;;;;;x

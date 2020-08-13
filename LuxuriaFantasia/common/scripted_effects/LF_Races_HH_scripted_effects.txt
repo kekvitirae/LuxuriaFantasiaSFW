@@ -1,0 +1,1000 @@
+lf_fell_from_grace = {
+	lf_remove_angel = yes
+	add_trait = lf_fallen_angel
+	lf_remove_angel_portrait = yes
+	lf_add_random_demon_portrait = yes
+	clr_character_flag = portrait_is_fine
+	if = {
+		limit = {
+			trait = chaste
+		}
+		add_trait = lustful
+	}
+	if = {
+		limit = {
+			trait = temperate
+		}
+		add_trait = gluttonous
+	}
+	if = {
+		limit = {
+			trait = charitable
+		}
+		add_trait = greedy
+	}
+	if = {
+		limit = {
+			trait = diligent
+		}
+		add_trait = slothful
+	}
+	if = {
+		limit = {
+			trait = patient
+		}
+		add_trait = wroth
+	}
+	if = {
+		limit = {
+			trait = kind
+		}
+		add_trait = envious
+	}
+	if = {
+		limit = {
+			trait = humble
+		}
+		add_trait = proud
+	}
+	if = {
+		limit = {
+			any_artifact = {
+				has_artifact_flag = virtue
+			}
+		}
+		any_artifact = {
+			limit = {
+				has_artifact_flag = virtue
+			}
+			unsafe_destroy_artifact = yes
+		}
+	}
+}
+
+lf_rose_from_sin = {
+	remove_trait = lf_fallen_angel
+	lf_add_angel = yes
+	lf_remove_demon_portrait = yes
+	lf_add_random_angel_portrait = yes
+	clr_character_flag = portrait_is_fine
+	if = {
+		limit = {
+			trait = lustful
+		}
+		add_trait = chaste
+	}
+	if = {
+		limit = {
+			trait = gluttonous
+		}
+		add_trait = temperate
+	}
+	if = {
+		limit = {
+			trait = greedy
+		}
+		add_trait = charitable
+	}
+	if = {
+		limit = {
+			trait = slothful
+		}
+		add_trait = diligent
+	}
+	if = {
+		limit = {
+			trait = wroth
+		}
+		add_trait = patient
+	}
+	if = {
+		limit = {
+			trait = envious
+		}
+		add_trait = kind
+	}
+	if = {
+		limit = {
+			trait = proud
+		}
+		add_trait = humble
+	}
+}
+		
+	
+
+lf_heal_self_minor = {
+	trigger_switch = {
+		on_trigger = trait
+		wounded = { remove_trait = wounded }
+		ill = { remove_trait = ill }
+		flu = { remove_trait = flu }
+		dysentery = { remove_trait = dysentery }
+		gout = { remove_trait = gout }
+		cough = { remove_trait = cough }
+		fever = { remove_trait = fever }
+		diarrhea = { remove_trait = diarrhea }
+		vomiting = { remove_trait = vomiting }
+		chest_pain = { remove_trait = chest_pain }
+		cramps = { remove_trait = cramps }
+		rash = { remove_trait = rash }
+		headache = { remove_trait = headache }
+		abdominal_pain = { remove_trait = abdominal_pain }
+		fatigue = { remove_trait = fatigue }
+		malaise = { remove_trait = malaise }
+		infection = { remove_trait = infection }
+	}
+}
+
+lf_heal_self_moderate = {
+	trigger_switch = {
+		on_trigger = trait
+		maimed = { remove_trait = maimed }
+		pneumonic = { remove_trait = pneumonic }
+		syphilitic = { remove_trait = syphilitic }
+		has_tuberculosis = { remove_trait = has_tuberculosis }
+		has_typhoid_fever = { remove_trait = has_typhoid_fever }
+		has_typhus = { remove_trait = has_typhus }
+		has_measles = { remove_trait = has_measles }
+		food_poisoning = { remove_trait = food_poisoning }
+		scurvy = { remove_trait = scurvy }
+		mangled = { remove_trait = mangled }
+		severely_injured = { remove_trait = severely_injured }
+		lisp = { remove_trait = lisp }
+	}
+}
+
+lf_heal_self_major = {
+	trigger_switch = {
+		on_trigger = trait
+		leper = { remove_trait = leper }
+		has_bubonic_plague = { remove_trait = has_bubonic_plague }
+		has_small_pox = { remove_trait = has_small_pox }
+		has_aztec_disease = { remove_trait = has_aztec_disease }
+		rabies = { remove_trait = rabies }
+		cancer = { remove_trait = cancer }
+		dancing_plague = { remove_trait = dancing_plague }
+		infirm = { remove_trait = infirm }
+		incapable = { remove_trait = incapable }
+		one_eyed = { remove_trait = one_eyed }
+		one_handed = { remove_trait = one_handed }
+		one_legged = { remove_trait = one_legged }
+	}
+}
+
+lf_perfect_self_spell = {
+	if = {
+		limit = {
+			OR = {
+				trait = ugly
+				trait = hunchback
+				trait = harelip
+				trait = clubfooted
+				trait = disfigured
+				trait = mangled
+				trait = uncouth
+				trait = giant
+				trait = dwarf
+				trait = scarred
+				trait = scarred_mid
+				trait = scarred_high
+			}
+		}
+		trigger_switch = {
+			on_trigger = trait
+			ugly = { remove_trait = ugly }
+			hunchback = { remove_trait = hunchback }
+			harelip = { remove_trait = harelip }
+			clubfooted = { remove_trait = clubfooted }
+			disfigured = { remove_trait = disfigured }
+			mangled = { remove_trait = mangled }
+			uncouth = { remove_trait = uncouth }
+			giant = { remove_trait = giant }
+			dwarf = { remove_trait = dwarf }
+			scarred = { remove_trait = scarred }
+			scarred_mid = { remove_trait = scarred_mid }
+			scarred_high = { remove_trait = scarred_high }
+		}
+	}
+
+	else_if = {
+		limit = {
+			NOT = { trait = fair }
+		}
+		add_trait = fair
+	}
+}
+		
+	
+lf_add_random_demon_portrait = {
+	if = {
+		limit = {
+			OR = {
+				has_character_flag = special_npc
+				has_game_rule = { name = lf_custom_portraits value = lf_custom_off }
+			}
+		}
+		break = yes
+	}
+	random_list = {
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = demon_portrait1_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = demon_portrait2_cheri 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = demon_portrait3_cheri 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = demon_portrait4_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = demon_portrait5_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = demon_portrait6_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = demon_portrait7_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = demon_portrait8_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = demon_portrait9_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = demon_portrait10_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = demon_portrait11 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = demon_portrait12 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = demon_portrait13 
+		}
+
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = demon_portrait14
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = demon_portrait15 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = demon_portrait16 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = demon_portrait17 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = demon_portrait18 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = demon_portrait19 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = demon_portrait20 
+		}
+	}
+}
+
+lf_remove_demon_portrait = {
+	remove_trait = demon_portrait11
+	remove_trait = demon_portrait12
+	remove_trait = demon_portrait13
+	remove_trait = demon_portrait14
+	remove_trait = demon_portrait15
+	remove_trait = demon_portrait16
+	remove_trait = demon_portrait17
+	remove_trait = demon_portrait18
+	remove_trait = demon_portrait19
+	remove_trait = demon_portrait20
+	remove_trait = demon_portrait1_cheri
+	remove_trait = demon_portrait2_cheri
+	remove_trait = demon_portrait3_cheri
+	remove_trait = demon_portrait4_cheri
+	remove_trait = demon_portrait5_cheri
+	remove_trait = demon_portrait6_cheri
+	remove_trait = demon_portrait7_cheri
+	remove_trait = demon_portrait8_cheri
+	remove_trait = demon_portrait9_cheri
+	remove_trait = demon_portrait10_cheri
+}
+	
+lf_add_random_angel_portrait = {
+	if = {
+		limit = {
+			has_game_rule = { name = lf_custom_portraits value = lf_custom_off }
+		}
+		break = yes
+	}
+	random_list = {
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = angel_portrait1_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = angel_portrait2_cheri 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = angel_portrait3_cheri 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = angel_portrait4_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = angel_portrait5_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = angel_portrait6_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = angel_portrait7_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = angel_portrait8_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = angel_portrait9_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = angel_portrait10_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = angel_portrait11_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						trait = masculine
+					}
+					AND = {
+						is_female = no
+						NOT = { trait = feminine }
+					}
+				}
+			}
+			add_trait = angel_portrait12_cheri
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = angel_portrait13 
+		}
+
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = angel_portrait14
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = angel_portrait15 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = angel_portrait16 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = angel_portrait17 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = angel_portrait18 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = angel_portrait19 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = angel_portrait20 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = angel_portrait21 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = angel_portrait22 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = angel_portrait23 
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_female = yes
+						NOT = { trait = masculine }
+					}
+					AND = {
+						is_female = no
+						trait = feminine
+					}
+				}
+			}
+			add_trait = angel_portrait24 
+		}
+	}
+}
+
+lf_remove_angel_portrait = {
+	remove_trait = angel_portrait13
+	remove_trait = angel_portrait14
+	remove_trait = angel_portrait15
+	remove_trait = angel_portrait16
+	remove_trait = angel_portrait17
+	remove_trait = angel_portrait18
+	remove_trait = angel_portrait19
+	remove_trait = angel_portrait20
+	remove_trait = angel_portrait21
+	remove_trait = angel_portrait22
+	remove_trait = angel_portrait23
+	remove_trait = angel_portrait24
+	remove_trait = angel_portrait25
+	remove_trait = angel_portrait26
+	remove_trait = angel_portrait1_cheri
+	remove_trait = angel_portrait2_cheri
+	remove_trait = angel_portrait3_cheri
+	remove_trait = angel_portrait4_cheri
+	remove_trait = angel_portrait5_cheri
+	remove_trait = angel_portrait6_cheri
+	remove_trait = angel_portrait7_cheri
+	remove_trait = angel_portrait8_cheri
+	remove_trait = angel_portrait9_cheri
+	remove_trait = angel_portrait10_cheri
+	remove_trait = angel_portrait11_cheri
+	remove_trait = angel_portrait12_cheri
+}
