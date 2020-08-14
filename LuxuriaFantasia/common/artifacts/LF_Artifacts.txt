@@ -5,18 +5,6 @@ slots = {
 	lf_magic_item = 1
 }
 
-# Sex books
-lf_kama_sutra = {
-	quality = 1
-	flags = { luxuria book sexytimes }
-	stacking = no
-	picture = "GFX_book"
-	slot = lf_libram
-	active = { 
-		is_adult = yes
-	}
-}
-
 # Spellbooks
 lf_spellbook = {
 	quality = 1
@@ -182,22 +170,6 @@ lf_amulet_nondetection = {
 	slot = lf_magic_item
 	allowed_gift = {
 		always = no
-	}
-}
-
-lf_pirate_booty = {
-	quality = 3
-	diplomacy = 4
-	sex_appeal_opinion = 10
-	flags = { luxuria curse chinese irae }
-	stacking = no
-	picture = "GFX_lf_pirate_booty"
-	slot = lf_magic_item
-	allowed_gift = {
-		always = no
-	}
-	active = { 
-		is_female = yes
 	}
 }
 

@@ -35,17 +35,6 @@ lf_mage = {
 	learning = 1
 }
 
-lf_secret_slut = {
-	random = no
-	customizer = no
-	opposites = {
-		chaste
-		celibate
-		eunuch
-	}
-	hidden = yes
-}
-
 lf_former_slave = {
 	random = no
 	customizer = no

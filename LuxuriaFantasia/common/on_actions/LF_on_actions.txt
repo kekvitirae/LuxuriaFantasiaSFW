@@ -2,7 +2,6 @@
 # Fires when the game starts (not from saves)
 on_chronicle_start = {
 	events = {
-		LFSexytimesRouting.5 # Ruler Designed player Sub/Dom assignment
 		LFMultiplayer.101 # Racial Assignment
 		LFOptions.1001 # First time Options Menu popup
 	}
@@ -16,9 +15,6 @@ on_startup = {
 		LFCore.1 # Sets the global startup flag
 		LFOptions.1000 # Sets the appropriate Options Menu flags
 		# LFSeeding.1 # LF Seeding event - DISABLED
-		LFSexytimesRouting.5 # Sub/Dom assignment
-		LFSexytimesRouting.9 # Insatiable chance
-		LFSexytimesRouting.10 # Breeder chance
 		LFCore.2 # Alternate Start cleanup for Blood Feud
 		LFNPC.5000 # A Perfectly Normal Man
 		LFChallenge.303 # Lucy Challenge - Cannibal trait assignment
@@ -33,11 +29,6 @@ on_yearly_pulse = {
 	events = {
 		LFMagic.2 # Yearly mana increase
 		LFCoreGypsy.32 # Virtue artifact effects
-		LFSexytimesRouting.5 # Sub/Dom assignment
-		LFFuta.300 # Futa/Masculine/Feminine removal
-		LFSexytimesRouting.9 # Insatiable chance for those who missed it
-		LFSexytimesRouting.10 # Breeder chance for those who missed it
-		LFSexytimesRouting.13 # Insatiable counter decay
 	}
 }
 
@@ -49,20 +40,11 @@ on_decade_pulse = {
 	}
 }
 
-on_yearly_childhood_pulse = {
-	events = {
-		LFCoreChildren.7 # Masculine/Feminine routing event
-	}
-}
-
 # character
 on_birth = {
 	events = { 
 		LF_Core_Genetics.1 # Racial genetics
 		LFSpells.8 # Blessing of the Womb
-		LFFuta.400 # Take Wife dynasty set
-		LFFuta.500 # Futa Empire, futa parents
-		LFFuta.501 # Futa Empire, non-futa parents
 		LFNPC.1114 # Amora's child
 		LFChallenge.503 # Bad Genetics Challenge
 	}
@@ -71,30 +53,12 @@ on_birth = {
 on_adulthood = {
 	events = {
 		LFMagic.1 # Set maximum mana for magic races
-		LFSexytimesRouting.4 # Sub/Dom assignment
-		LFSexytimesRouting.9 # Insatiable chance
-		LFSexytimesRouting.10 # Breeder chance
 	}
-}
-
-on_divorce = {
-	events = {
-		LFFuta.401 # Removes futa wife flag
-	}
-}
-
-#character (at 2 months)
-on_pregnancy = {
-	events = {
-		LFSexytimesRouting.6 # Add to the breeder counter
- 	}
 }
 
 on_host_change = {
 	events = {
 		LFHostChange.1 # Racial assignment of new characters
-		LFHostChange.2 # Secret Slut assignment
-		LFHostChange.3 # Assignment of sexual roles
 		LFHostChange.4 # Bad Genetics fix for create_character births
 	}
 }

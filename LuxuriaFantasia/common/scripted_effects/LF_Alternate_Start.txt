@@ -132,14 +132,6 @@ lf_alternate_seed_races = {
 							}
 						}
 						50 = {
-							random_list = {
-								50 = { # Raen
-									lf_alternate_seed_raen = yes
-								}
-								50 = { # Xaela
-									lf_alternate_seed_xaela = yes
-								}
-							}
 							lf_alternate_seed_aura = yes
 							any_realm_character = {
 								lf_alternate_seed_aura = yes
@@ -518,50 +510,8 @@ lf_alternate_seed_aura = {
 			is_adult = no
 		}
 		add_trait = dwse_lizard
-		if = {
-			limit = {
-				culture = dwse_dawn
-			}
-			add_trait = dwse_raen_child
-		}
 	}
 	set_character_flag = lf_seeded
 }
 
-lf_alternate_seed_raen = {
-	if = {
-		limit = {
-			has_alternate_start_parameter = {
-				key = culture_names
-				value = historical
-			}
-		}
-		culture = dwse_dawn
-		any_realm_province = {
-			culture = dwse_dawn
-		}
-		any_realm_character = {
-			culture = dwse_dawn
-		}
-	}
-}
-
-
-lf_alternate_seed_xaela = {
-	if = {
-		limit = {
-			has_alternate_start_parameter = {
-				key = culture_names
-				value = historical
-			}
-		}
-		culture = dwse_dusk
-		any_realm_province = {
-			culture = dwse_dusk
-		}
-		any_realm_character = {
-			culture = dwse_dusk
-		}
-	}
-}
 

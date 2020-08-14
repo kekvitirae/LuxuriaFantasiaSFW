@@ -5,7 +5,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_dwse_lizard_child_female"
-		texturefile = "gfx/static_portraits/aura_child_female.dds"
+		texturefile = "gfx/static_portraits/raen_child_female.dds"
 		noOfFrames = 1
 		norefcount = yes
 		can_be_lowres = yes
@@ -21,7 +21,6 @@ spriteTypes = {
 				portrait_has_trait = dwse_lizard
 				portrait_age <= child
 				portrait_is_female = yes
-				NOT = { portrait_culture = dwse_dawn }
 			}
 		}
 		
@@ -37,7 +36,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_dwse_lizard_child_male"
-		texturefile = "gfx/static_portraits/aura_child_male.dds"
+		texturefile = "gfx/static_portraits/raen_child_male.dds"
 		noOfFrames = 1
 		norefcount = yes
 		can_be_lowres = yes
@@ -53,7 +52,6 @@ spriteTypes = {
 				portrait_has_trait = dwse_lizard
 				portrait_age <= child
 				portrait_is_female = no
-				NOT = { portrait_culture = dwse_dawn }
 			}
 		}
 		
@@ -62,69 +60,4 @@ spriteTypes = {
 			"GFX_player_overlay:p11"
 		}
 	}
-
-#
-# DWSE Raen male child
-#
-
-	spriteType = {
-		name = "GFX_dwse_raen_child_male"
-		texturefile = "gfx/static_portraits/raen_child_male.dds"
-		noOfFrames = 1
-		norefcount = yes
-		can_be_lowres = yes
-	}
-
-	portraitType = {
-		name = "PORTRAIT_dwse_raen_child_male"
-		effectFile = "gfx/FX/portrait.lua"
-		
-		weight = {
-			additive_modifier = {
-				value = 100000
-				portrait_has_trait = dwse_lizard
-				portrait_age <= child
-				portrait_is_female = no
-				portrait_has_trait = dwse_raen_child
-			}
-		}
-		
-		layer = { 
-			"GFX_dwse_raen_child_male:p0"
-			"GFX_player_overlay:p11"
-		}
-	}
-	
-#
-# DWSE Raen female child
-#
-	
-	spriteType = {
-		name = "GFX_dwse_raen_child_female"
-		texturefile = "gfx/static_portraits/raen_child_female.dds"
-		noOfFrames = 1
-		norefcount = yes
-		can_be_lowres = yes
-	}
-
-	portraitType = {
-		name = "PORTRAIT_dwse_raen_child_female"
-		effectFile = "gfx/FX/portrait.lua"
-		
-		weight = {
-			additive_modifier = {
-				value = 100000
-				portrait_has_trait = dwse_lizard
-				portrait_age <= child
-				portrait_is_female = yes
-				portrait_has_trait = dwse_raen_child
-			}
-		}
-		
-		layer = { 
-			"GFX_dwse_raen_child_female:p0"
-			"GFX_player_overlay:p11"
-		}
-	}
-
 }

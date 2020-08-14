@@ -146,38 +146,6 @@ lf_blood_feud_cd = {
 }
 
 #
-#Sex Related
-#
-
-lf_good_sex = {
-	icon = 39
-	health = 0.1 # You feel revitalized after some good sex.
-	general_opinion = 5 # You've the after good sex glow, and you generally get along better with others since you're satisfied.
-}
-lf_great_sex = {
-	icon = 39
-	health = 1
-	sex_appeal_opinion = 5
-	general_opinion = 5
-}
-
-lf_sex_recovery = {
-	icon = 39
-	health = 0.5
-}
-
-lf_always_switch = {
-	icon = 39
-}
-
-lf_always_submissive = {
-	icon = 39
-}
-
-lf_always_dominant = {
-	icon = 39
-}
-#
 # Immortal related
 #
 
@@ -239,12 +207,6 @@ lf_sparkling_vampire = {
 	icon = 79
 	general_opinion = 10
 	female_opinion = 10
-}
-
-# Secret Slut related
-
-lf_secret_slut_visit = {
-	icon = 40
 }
 
 #

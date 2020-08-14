@@ -1,18 +1,3 @@
-lf_secret_sluts = {
-	name = "lf_secret_sluts_rule"
-	group = "RULE_GROUP_LF"
-	option = {
-		name = lf_secret_sluts_on
-		text = "lf_secret_sluts_on"
-		desc = "lf_secret_sluts_on_desc"
-	}
-	option = {
-		name = lf_secret_sluts_off
-		text = "lf_secret_sluts_off"
-		desc = "lf_secret_sluts_off_desc"
-	}
-}
-
 lf_custom_portraits = {
 	name = "lf_custom_portraits" 
 	group = "RULE_GROUP_LF"
@@ -55,16 +40,6 @@ lf_blood_feud = {
 		name = lf_bf_off
 		text = "lf_bf_off"
 		desc = "lf_bf_off_desc"
-	}
-}
-
-lf_racial_seeding_lol_no = {
-	name = "lf_racial_seeding_go_fuck_yourself"
-	group = "RULE_GROUP_LF"
-	option = {
-		name = lf_racial_seeding_off
-		text = "lf_there_was_never_any_choice"
-		desc = "lf_there_was_never_any_choice_desc"
 	}
 }
 
