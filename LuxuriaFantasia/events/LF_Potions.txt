@@ -76,7 +76,7 @@ narrative_event = {
 		wealth = -50
 		if = {
 			limit = {
-				lf_is_silly = yes
+				has_global_flag = lf_silly_mode
 			}
 			custom_tooltip = {
 				text = lf_resist_disease_tooltip_silly
@@ -158,7 +158,7 @@ narrative_event = {
 			}
 			if = {
 				limit = {
-					lf_is_silly = yes
+					has_global_flag = lf_silly_mode
 				}
 				character_event = { id = LFPotions.6 }
 			}
@@ -203,20 +203,6 @@ narrative_event = {
 				years = 2
 			}
 			set_gender = opposite
-			if = {
-				limit = {
-					trait = lf_futa
-				}
-				remove_trait = lf_futa
-				set_character_flag = lf_former_futa
-			}
-			if = {
-				limit = {
-					has_character_flag = lf_former_futa
-				}
-				clr_character_flag = lf_former_futa
-				add_trait = lf_futa
-			}
 			trigger_switch = {
 				on_trigger = trait
 				lf_elf = {
@@ -291,54 +277,10 @@ narrative_event = {
 			}
 		}
 		hidden_tooltip = {
-			if = {
-				limit = {
-					NOT = { has_character_modifier = lf_potion_youth }
-				}
-				add_age = -5
-				add_character_modifier = {
-					modifier = lf_potion_cd
-					years = 2
-				}
-				remove_character_modifier = lf_potion_temp
-				add_character_modifier = {
-					modifier = lf_potion_youth
-					years = 10
-				}
-			}
-			else = {
-				add_character_modifier = {
-					modifier = lf_potion_cd
-					years = 2
-				}
-			}
-			
-		}
-	}
-	option = { # Midas Touch
-		name = LFPotions4TTC
-		wealth = -50
-		if = {
-			limit = {
-				is_mage = yes
-			}
-			custom_tooltip = {
-				text = lf_midas_potion_mage_tooltip
-			}
-		}
-		else = {
-			custom_tooltip = {
-				text = lf_midas_potion_tooltip
-			}
-		}
-		hidden_tooltip = {
+			add_age = -5
 			remove_character_modifier = lf_potion_temp
 			add_character_modifier = {
 				modifier = lf_potion_cd
-				years = 2
-			}
-			add_character_modifier = {
-				modifier = lf_potion_midas
 				years = 2
 			}
 		}
@@ -373,20 +315,5 @@ character_event = {
 	is_triggered_only = yes
 	option = {
 		name = LFPotions6TTA
-	}
-}
-
-character_event = {
-	id = LFPotions.7
-	desc = LFPotions7
-	picture = GFX_evt_death
-	is_triggered_only = yes
-	option = {
-		name = LFPotions7TTA
-		event_target:lf_sex_partner = {
-			set_character_flag = lf_never_turn_spoopy
-			death = { death_reason = death_midas_touched killer = ROOT }
-		}
-		wealth = 25
 	}
 }

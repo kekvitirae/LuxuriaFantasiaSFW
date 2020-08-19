@@ -42,22 +42,16 @@ lf_change_potion_mage_tooltip;Your arcane senses tell you that this potion will 
 LFPotions4TTB;Grey Potion;;;;;;;;;;;;;x
 lf_age_potion_tooltip;The alchemist will not say what this potion does. She only replies with a deep grin when asked. The potion itself is a dull grey color, but simply looking at it gives me youthful vigor.;;;;;;;;;;;;;x
 lf_age_potion_mage_tooltip;Your arcane senses tell you that this potion will reduce your age by half a decade.;;;;;;;;;;;;;x
-LFPotions4TTC;Gold-Bottled Potion;;;;;;;;;;;;;x
-lf_midas_potion_tooltip;The alchemist will not say what this potion does. She only replies with a deep grin when asked. Looking at the bottle, made entirely from gold, I get the feeling that this has something to do with wealth.;;;;;;;;;;;;;x
-lf_midas_potion_mage_tooltip;Your arcane senses tell you that this potion will turn any object the imbiber touches for more than an hour (clothing and mundane objects excluded) into solid gold.;;;;;;;;;;;;;x
 LFPotions6a;The Potion of Wisdom grants you great insight.\nUnfortunately, the insight is telling you that you should have drunk a Potion of Intelligence instead, you idiot.;;;;;;;;;;;;;x
-LFPotions6b;Your new-found wisdom grants you great insight.\nInsight says... man who not shit for many days must deal with backlog.;;;;;;;;;;;;;x
-LFPotions6c;Your new-found wisdom grants you great insight.\nInsight says... man who cut self while shaving lose face.;;;;;;;;;;;;;x
-LFPotions6d;Your new-found wisdom grants you great insight.\nInsight says... virginity like bubble, one prick - all gone.;;;;;;;;;;;;;x
+LFPotions6b;Your new-found wisdom grants you great insight.\nInsight says... man who fail to learn history doomed to repeat it. Man who fail to clear history doomed to explain it.;;;;;;;;;;;;;x
+LFPotions6c;Your new-found wisdom grants you great insight.\nInsight says... man truly never know non-violent solutions until mosquito land on balls.;;;;;;;;;;;;;x
+LFPotions6d;Your new-found wisdom grants you great insight.\nInsight says... 953,257,668,541 people too lazy to read number.;;;;;;;;;;;;;x
 LFPotions6e;Your new-found wisdom grants you great insight.\nInsight says... woman laid in tomb may become mummy.;;;;;;;;;;;;;x
-LFPotions6f;Your new-found wisdom grants you great insight.\nInsight says... whore who like bondage, strapped for cash.;;;;;;;;;;;;;x
-LFPotions6g;Your new-found wisdom grants you great insight.\nInsight says... bird in hand not better than two in bush.;;;;;;;;;;;;;x
-LFPotions6h;Your new-found wisdom grants you great insight.\nInsight says... man who do business in brothel get jerked around.;;;;;;;;;;;;;x
-LFPotions6i;Your new-found wisdom grants you great insight.\nInsight says... man who stick penis in squirrel nest, fucking nuts.;;;;;;;;;;;;;x
+LFPotions6f;Your new-found wisdom grants you great insight.\nInsight says... man who want pretty nurse must be patient.;;;;;;;;;;;;;x
+LFPotions6g;Your new-found wisdom grants you great insight.\nInsight says... teacher with crossed eyes cannot control pupils.;;;;;;;;;;;;;x
+LFPotions6h;Your new-found wisdom grants you great insight.\nInsight says... man who farts in church sits in own pew.;;;;;;;;;;;;;x
+LFPotions6i;Your new-found wisdom grants you great insight.\nInsight says... house without latrine is uncanny.;;;;;;;;;;;;;x
 LFPotions6TTA;Huh. My insight is right.;;;;;;;;;;;;;x
-
-LFPotions7;After making love, my partner screams in agony, and I can only watch helplessly as their entire body is slowly (and quite possibly painfully) turning into solid gold!;;;;;;;;;;;;;x
-LFPotions7TTA;Whoops.;;;;;;;;;;;;;x
 
 lf_potion_strength;Potion of Strength;;;;;;;;;;;;;x
 lf_potion_strength_desc;This character is infused with great strength.;;;;;;;;;;;;;x
@@ -67,9 +61,3 @@ lf_potion_wisdom;Potion of Wisdom;;;;;;;;;;;;;x
 lf_potion_wisdom_desc;This character is infused with great insight.;;;;;;;;;;;;;x
 lf_potion_resist_disease;Potion of Resist Disease;;;;;;;;;;;;;x
 lf_potion_resist_disease_desc;This character is infused with great resistance to disease.;;;;;;;;;;;;;x
-lf_potion_midas;Potion of Midas Touch;;;;;;;;;;;;;x
-lf_potion_midas_desc;The alchemist warns you against prolonged exposure to objects you care about.;;;;;;;;;;;;;x
-LF_DEATH_MIDAS;was turned to gold by $KILLER$;;;;;;;;;;;;;x
-
-lf_potion_youth;Youthful;;;;;;;;;;;;;x
-lf_potion_youth_desc;This character is feeling the warm effects of drinking a youth-restoring potion. Drinking a second one before this effect wears off will do nothing.;;;;;;;;;;;;;x

@@ -16,10 +16,6 @@ narrative_event = { # Hub
 		name = LFOptionsCoreOptions
 		narrative_event = { id = LFOptions.5 }
 	}
-	option = { # LF dependencies (other mods) rules
-		name = LFOptionsSubModOptions
-		narrative_event = { id = LFOptions.6 }
-	}
 	option = { # Exit
 		name = LFOptionsExit
 	}
@@ -86,69 +82,10 @@ narrative_event = { # LF extra options hub 1
 	sound = "generic_click_03"
 	title = lf_a_luxuria_fantasia_options
 	desc = LFOptions1
-	option = { # Set 1, Gender Bend, Silly Mode
-		name = LFOptionsSet1
-		narrative_event = { id = LFOptions.51 }
-	}
-	option = { # Set 2, NPC, NSFW
-		name = LFOptionsSet2
-		narrative_event = { id = LFOptions.52 }
-	}
-	option = { # Go back
-		name = LFOptionsGoBack
-		narrative_event = { id = LFOptions.1 }
-	}	
-}
-		
-
-narrative_event = { # LF extra options hub 1
-	id = LFOptions.51
-	is_triggered_only = yes
-	picture = lf_gypsy
-	sound = "generic_click_03"
-	title = lf_a_luxuria_fantasia_options
-	desc = LFOptions1
-	option = { # Turn off Gender Bend content
-		name = LFOptions4C
-		trigger = {
-			has_global_flag = LFGenderBendOn
-		}
-		clr_global_flag = LFGenderBendOn
-		clr_global_flag = LFFutaEmpireOn
-		set_global_flag = LFGenderBendOff
-		narrative_event = { id = LFOptions.51 }
-	}
-	option = { # Turn on Gender Bend content
-		name = LFOptions4D
-		trigger = {
-			NOT = { has_global_flag = LFGenderBendOn }
-		}
-		clr_global_flag = LFGenderBendOff
-		set_global_flag = LFGenderBendOn
-		narrative_event = { id = LFOptions.51 }
-	}
-	option = { # Turn on Futa Empire
-		name = LFOptions4E
-		trigger = {
-			has_global_flag = LFGenderBendOn
-			NOT = { has_global_flag = LFFutaEmpireOn }
-		}
-		set_global_flag = LFFutaEmpireOn
-		narrative_event = { id = LFOptions.51 }
-	}
-	option = { # Turn off Futa Empire
-		name = LFOptions4F
-		trigger = {
-			has_global_flag = LFGenderBendOn
-			has_global_flag = LFFutaEmpireOn
-		}
-		clr_global_flag = LFFutaEmpireOn
-		narrative_event = { id = LFOptions.51 }
-	}
 	option = { # Turn off silly mode
 		name = LFOptions7G
 		trigger = {	
-			lf_is_silly = yes
+			has_global_flag = lf_silly_mode
 		}
 		clr_global_flag = lf_silly_mode
 		narrative_event = { id = LFOptions.51 }
@@ -156,25 +93,11 @@ narrative_event = { # LF extra options hub 1
 	option = { # Turn on silly mode
 		name = LFOptions7H
 		trigger = {
-			NOT = { lf_is_silly = yes }
+			NOT = { has_global_flag = lf_silly_mode }
 		}
 		set_global_flag = lf_silly_mode
 		narrative_event = { id = LFOptions.51 }
 	}
-	option = { # Go back
-		name = LFOptionsGoBack
-		narrative_event = { id = LFOptions.5 }
-	}	
-}
-
-narrative_event = { # LF extra options hub 1
-	id = LFOptions.52
-	is_triggered_only = yes
-	picture = lf_gypsy
-	sound = "generic_click_03"
-	title = lf_a_luxuria_fantasia_options
-	desc = LFOptions1
-
 	option = { # Turn off special NPC spawning
 		name = LFOptions7I
 		trigger = {	
@@ -191,120 +114,12 @@ narrative_event = { # LF extra options hub 1
 		set_global_flag = LFSpecialNPCOn
 		narrative_event = { id = LFOptions.52 }
 	}
-	option = { # Turn off NSFW mode
-		name = LFOptions7K
-		trigger = {	
-			has_global_flag = LFNSFWOn
-		}
-		clr_global_flag = LFNSFWOn
-		set_global_flag = LFNSFWOff
-		narrative_event = { id = LFOptions.52 }
-	}
-	option = { # Turn on NSFW mode 
-		name = LFOptions7L
-		trigger = {
-			has_global_flag = LFNSFWOff
-		}
-		clr_global_flag = LFNSFWOff
-		set_global_flag = LFNSFWOn
-		narrative_event = { id = LFOptions.52 }
-	}
-
-	option = { # Go back
-		name = LFOptionsGoBack
-		narrative_event = { id = LFOptions.5 }
-	}	
-}
-
-narrative_event = { # DWE Content
-	id = LFOptions.6
-	is_triggered_only = yes
-	picture = lf_gypsy
-	sound = "generic_click_03"
-	title = lf_a_luxuria_fantasia_options
-	desc = LFOptions1
-
-	#option = { # DWE not installed
-	#	trigger = {
-	#		NOT = { has_global_flag = dark_world_extras_started }
-	#	}
-	#	name = LFDWENotInstalled
-	#	narrative_event = { id = LFOptions.6 }
-	#}
-    #
-	#option = { # DWE Rape Off
-	#	name = LFOptions11A
-	#	trigger = {
-	#		has_global_flag = dark_world_extras_started
-	#		has_global_flag = rape_content_yes
-	#	}
-	#	clr_global_flag = rape_content_yes
-	#	set_global_flag = rape_content_no
-	#	narrative_event = { id = LFOptions.6 }
-	#}
-	#option = { # DWE Rape On
-	#	name = LFOptions11B
-	#	trigger = {
-	#		has_global_flag = dark_world_extras_started
-	#		has_global_flag = rape_content_no
-	#	}
-	#	clr_global_flag = rape_content_no
-	#	set_global_flag = rape_content_yes
-	#	narrative_event = { id = LFOptions.6 }
-	#}
-	#option = { # DWE Bestiality Off
-	#	name = LFOptions13A
-	#	trigger = {
-	#		has_global_flag = dark_world_extras_started
-	#		has_global_flag = LFBestialityOff
-	#	}
-	#	clr_global_flag = LFBestialityOn
-	#	set_global_flag = LFBestialityOff
-	#	narrative_event = { id = LFOptions.6 }
-	#}
-	#option = { # DWE Bestiality On
-	#	name = LFOptions13B
-	#	trigger = {
-	#		 has_global_flag = dark_world_extras_started
-	#		 has_global_flag = LFBestialityOff
-	#	}
-	#	clr_global_flag = LFBestialityOff
-	#	set_global_flag = LFBestialityOn
-	#	narrative_event = { id = LFOptions.6 }
-	#}	
-	option = { # Turn off DWR Replacer
-		name = LFOptions13C
-		trigger = {
-			lf_has_dwr = yes
-			has_global_flag = LFDWRReplaceOn
-		}
-		clr_global_flag = LFDWRReplaceOn
-		set_global_flag = LFDWRReplaceOff
-		narrative_event = { id = LFOptions.6 }
-	}
-	option = { # Turn on DWR Replacer
-		name = LFOptions13D
-		trigger = {
-			lf_has_dwr = yes
-			has_global_flag = LFDWRReplaceOff
-		}
-		clr_global_flag = LFDWRReplaceOff
-		set_global_flag = LFDWRReplaceOn
-		narrative_event = { id = LFOptions.6 }
-	}
-	option = { # DWR not installed
-		trigger = {
-			NOT = { lf_has_dwr = yes }
-		}
-		name = LFOptions13E
-		narrative_event = { id = LFOptions.6 }
-	}
 	option = { # Go back
 		name = LFOptionsGoBack
 		narrative_event = { id = LFOptions.1 }
 	}	
 }
-
+		
 narrative_event = { # Classic Monsters content
 	id = LFOptions.101
 	is_triggered_only = yes
@@ -606,12 +421,9 @@ character_event = { # on_startup flag setting
 		set_global_flag = LFNekoOn
 		
 		set_global_flag = LFClassicOn
-		set_global_flag = LFGenderBendOn
 		set_global_flag = LFDWSEDragonOn
 		set_global_flag = LFGhostOn
 		set_global_flag = LFSpecialNPCOn
-		set_global_flag = LFNSFWOn
-		set_global_flag = LFDWRReplaceOn # DWR flag
 		set_global_flag = LFBFAttacksOn
 	}
 }

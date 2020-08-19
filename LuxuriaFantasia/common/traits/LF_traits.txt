@@ -34,12 +34,3 @@ lf_mage = {
 	intrigue = 1
 	learning = 1
 }
-
-lf_former_slave = {
-	random = no
-	customizer = no
-	opposites = {
-		lf_enslaved
-	}
-	general_opinion = -5
-}

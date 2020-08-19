@@ -143,69 +143,6 @@ character_event = {
 	}
 }
 
-# Secret Slut assignment
-
-character_event = {
-	id = LFHostChange.2
-	hide_window = yes
-	is_triggered_only = yes # on_host_change
-	trigger = {
-		lf_has_nsfw = yes
-		practical_age = 16
-		NOT = { practical_age = 45 }
-		is_female = yes
-		FROM = { # Ensures this is just for newly spawned characters
-			character = no
-		}
-		has_game_rule = { name = lf_secret_sluts value = lf_secret_sluts_on }
-	}
-	immediate = {
-		random_list = {
-			10 = {
-				modifier = {
-					factor = 0
-					OR = {
-						AND = {
-							is_not_any_demon = yes
-							NOR = {
-								trait = lustful
-								trait = hedonist
-							}
-						}
-						is_angel = yes
-					}
-				}
-				add_trait = lf_secret_slut
-				add_trait = deceitful
-			}
-			90 = {
-			}
-		}
-	}
-}
-
-# Sexual role assignment
-
-character_event = {
-	id = LFHostChange.3
-	hide_window = yes
-	is_triggered_only = yes # on_host_change
-	trigger = {
-		practical_age = 16
-		FROM = { # Ensures this is just for newly spawned characters
-			character = no
-		}
-		NOR = {
-			trait = lf_switch
-			trait = lf_dominant
-			trait = lf_submissive
-		}
-	}
-	immediate = {
-		character_event = { id = LFSexytimesRouting.2 }
-	}
-}
-
 # Bad Genetics fix for create_character births
 
 character_event = {

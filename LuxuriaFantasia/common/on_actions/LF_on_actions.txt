@@ -14,7 +14,6 @@ on_startup = {
 	events = {
 		LFCore.1 # Sets the global startup flag
 		LFOptions.1000 # Sets the appropriate Options Menu flags
-		# LFSeeding.1 # LF Seeding event - DISABLED
 		LFCore.2 # Alternate Start cleanup for Blood Feud
 		LFNPC.5000 # A Perfectly Normal Man
 		LFChallenge.303 # Lucy Challenge - Cannibal trait assignment

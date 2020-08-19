@@ -1,16 +1,3 @@
-death_enslaved = {
-	violent = no
-	sound = no
-	icon = 3
-	can_nokiller = yes
-	long_desc = LF_DEATH_ENSLAVED
-	death_date_desc = LF_DEATH_DATE_ENSLAVED
-}
-
-death_midas_touched = {
-	long_desc = LF_DEATH_MIDAS
-}
-
 death_lf_lucy = {
 	can_nokiller = yes
 	long_desc = LF_DEATH_LUCY

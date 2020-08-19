@@ -1,12 +1,11 @@
 namespace = LFNPC
+namespace = LFNPC
 
 # Chance for a random NPC
 character_event = {
 	id = LFNPC.1
 	hide_window = yes
 	ai = no
-	capable_only = yes
-	prisoner = no
 	trigger = {
 		is_adult = yes
 		has_global_flag = LFSpecialNPCOn
@@ -29,9 +28,6 @@ character_event = {
 				has_global_flag = lf_created_brielle
 				has_global_flag = lf_created_joseph
 				has_global_flag = lf_created_kalyian
-				has_global_flag = lf_created_valri
-				has_global_flag = lf_created_amora
-				has_global_flag = lf_created_meeshka
 			}
 		}
 	}
@@ -144,47 +140,6 @@ character_event = {
 				}
 				narrative_event = { id = LFNPC.109 }
 			}
-			50 = { # SubscribeStar Valri
-				trigger = {
-					NOR = { 
-						has_global_flag = lf_created_valri
-						has_global_flag = lf_banished_valri
-					}
-				}
-				narrative_event = { id = LFNPC.110 }
-			}
-			50 = { # SubscribeStar Amora
-				trigger = {
-					is_female = no
-					OR = {
-						trait = lf_switch
-						trait = lf_submissive
-					}
-					any_courtier_or_vassal = {
-						has_job_title = job_marshal
-					}
-					NOR = { 
-						has_global_flag = lf_created_amora
-						has_global_flag = lf_banished_amora
-					}
-				}
-				narrative_event = { id = LFNPC.111 }
-			}
-			50 = { # Meeshka
-				trigger = {
-					NOR = { 
-						has_global_flag = lf_created_meeshka
-						has_global_flag = lf_banished_meeshka
-					}
-					has_global_flag = lf_silly_mode
-					has_artifact = irae_loincloth
-				}
-				modifier = {
-					factor = 5
-					has_artifact = irae_loincloth
-				}
-				narrative_event = { id = LFNPC.112 }
-			}
 		}
 	}
 }
@@ -202,20 +157,9 @@ narrative_event = {
 		trigger = {
 			lf_has_nsfw = no
 		}
-		picture = lf_npc_asha_sfw
+		picture = a_silly_placeholder
 	}
-	desc = {
-		trigger = {
-			lf_has_nsfw = yes
-		}
-		text = LFNPCAsha
-	}
-	desc = {
-		trigger = {
-			lf_has_nsfw = no
-		}
-		text = LFNPCAshaSFW
-	}
+	desc = LFNPCAsha
 	title = LFNPCAshaTitle
 	is_triggered_only = yes
 	option = { # Invite Asha
@@ -911,7 +855,6 @@ narrative_event = {
 			trait = duelist
 			trait = lf_switch
 			trait = lf_npc_brielle
-			flag = special_npc
 			flag = lf_never_change_race
 		}
 		new_character = {
@@ -1016,6 +959,7 @@ narrative_event = {
 		custom_tooltip = {
 			text = LFNPCBrielleRemove
 			event_target:lf_temporary_brielle = {
+				dynasty = none
 				set_character_flag = lf_never_turn_spoopy
 				death = { death_reason = death_missing }
 			}
@@ -1027,30 +971,11 @@ narrative_event = {
 			text = LFNPCBrielleBanish
 			set_global_flag = lf_banished_brielle
 			event_target:lf_temporary_brielle = {
+				dynasty = none
 				set_character_flag = lf_never_turn_spoopy
 				death = { death_reason = death_missing }
 			}
 		}
-	}
-}
-
-character_event = {
-	id = LFNPC.10701
-	picture = lf_npc_ss_brielle2
-	desc = LFNPCBrielle2
-	is_triggered_only = yes
-	option = { # Female Brielle
-		name = LFNPCBrielle2TTA
-		custom_tooltip = {
-			text = LFNPCBrielle2TTAFemale
-		}
-	}
-	option = { # Futa Brielle
-		name = LFNPCBrielle2TTB
-		custom_tooltip = {
-			text = LFNPCBrielle2TTBFuta
-		}
-		event_target:lf_real_brielle = { add_trait = lf_futa }
 	}
 }
 
@@ -1098,7 +1023,6 @@ narrative_event = {
 			trait = drunkard
 			trait = lf_switch
 			trait = lf_npc_joseph
-			flag = special_npc
 			flag = lf_never_change_race
 		}
 		new_character = {
@@ -1131,6 +1055,7 @@ narrative_event = {
 		custom_tooltip = {
 			text = LFNPCJosephRemove
 			event_target:lf_temporary_joseph = {
+				dynasty = none
 				set_character_flag = lf_never_turn_spoopy
 				death = { death_reason = death_missing }
 			}
@@ -1142,6 +1067,7 @@ narrative_event = {
 			text = LFNPCJosephBanish
 			set_global_flag = lf_banished_joseph
 			event_target:lf_temporary_joseph = {
+				dynasty = none
 				set_character_flag = lf_never_turn_spoopy
 				death = { death_reason = death_missing }
 			}
@@ -1152,42 +1078,19 @@ narrative_event = {
 # Subscriber-made character Kalyian
 narrative_event = {
 	id = LFNPC.109
-	picture = {
-		trigger = {
-			lf_has_nsfw = yes
-		}
-		picture = lf_npc_ss_kalyian
-	}
-	picture = {
-		trigger = {
-			lf_has_nsfw = yes
-		}
-		picture = lf_npc_ss_kalyian2
-	}
-	picture = {
-		trigger = {
-			lf_has_nsfw = no
-		}
-		picture = lf_npc_ss_kalyian_sfw
-	}
+	picture = lf_npc_ss_kalyian
+	picture = lf_npc_ss_kalyian2
 	desc = LFNPCKalyian
 	title = LFNPCKalyianTitle
 	is_triggered_only = yes
 
 	immediate = {
-		create_character = {
+		create_character = { # Temporary character for option portrait
 			name = "Kalyian"
 			random_traits = no
 			religion = ROOT
-			culture = dwse_dusk
+			culture = ROOT
 			dynasty = 9100010
-			attributes = {
-				diplomacy = 8
-				martial = 5
-				learning = 5
-				stewardship = 8
-				intrigue = 5
-			}
 			female = yes
 			age = 16
 			trait = grey_eminence
@@ -1197,8 +1100,6 @@ narrative_event = {
 			trait = homosexual
 			trait = ambitious
 			trait = lustful
-			trait = dwse_dragonslut
-			trait = lf_submissive
 			trait = lf_npc_kalyian
 			trait = lf_immortal_npc
 			flag = lf_never_change_race
@@ -1207,77 +1108,20 @@ narrative_event = {
 		}
 		new_character = {
 			save_event_target_as = lf_temporary_kalyian
-			if = {
-				limit = {
-					lf_has_nsfw = no
-				}
-				remove_trait = dwse_dragonslut
-				remove_trait = lf_submissive
-			}
 		}
 	}
 
 	option = { # Invite Kalyian
 		name = LFNPCKalyianTTA
-		trigger = {
-			OR = {
-				lf_has_nsfw = no
-				NAND = {
-					trait = dwse_dragon_adult
-					OR = {
-						is_female = no
-						is_futa = yes
-					}
-				}
-			}
-		}
-		set_global_flag = lf_created_kalyian
-		if = {
-			limit = {
-				has_global_flag = tentacled_dreams_active
-			}
-			custom_tooltip = {
-				text = LFNPCKalyianTD
-				event_target:lf_temporary_kalyian = { 
-					remove_trait = ambitious
-					add_trait = content
-				}
-			}
+		event_target:lf_temporary_kalyian = { 
+			add_friend = ROOT
 		}
 	}
 	option = { # Invite Kalyian, sexytimes version
 		name = LFNPCKalyianTTD
 		tooltip_info_custom = LFNPCKalyianDragon
-		trigger = {
-			lf_has_nsfw = yes
-			trait = dwse_dragon_adult
-			OR = {
-				is_female = no
-				is_futa = yes
-			}
-		}
-		set_global_flag = lf_created_kalyian
-		if = {
-			limit = {
-				has_global_flag = tentacled_dreams_active
-			}
-			custom_tooltip = {
-				text = LFNPCKalyianTD
-				event_target:lf_temporary_kalyian = { 
-					remove_trait = ambitious
-					add_trait = content
-				}
-			}
-		}
 		event_target:lf_temporary_kalyian = { 
 			add_lover = ROOT
-			add_trait = dragon_pregnancy
-			hidden_tooltip = {
-				ROOT = {
-					save_event_target_as = dwse_new_dad
-				}
-				narrative_event = { id = LFNPC.1091 months = 3 }
-			}
 		}
 	}
 	option = { # Remove Kalyian, but allow her to visit later
@@ -1304,510 +1148,6 @@ narrative_event = {
 		}
 	}
 }
-
-narrative_event = {
-	id = LFNPC.1091
-	desc = dwseom501
-	picture = egg_laying
-	is_triggered_only = yes 
-	trigger = { # Will not occur if something removes the trait.
-		trait = dragon_pregnancy
-	}
-	option = { # 
-		name = dwseom501A
-		remove_trait = dragon_pregnancy
-		ROOT = {
-			add_artifact = dwse_dragon_egg
-			narrative_event = { id = LFNPC.1092 days = 3 }
-		}
-	}
-}
-
-narrative_event = {
-	id = LFNPC.1092
-	desc = dwseom800
-	picture = dwse_dragon_egg_hatch
-	is_triggered_only = yes 
-	option = {  
-		name = dwseom800A
-		ai_chance = {
-			factor = 100
-		}
-		ROOT = {
-			destroy_artifact = dwse_dragon_egg
-		}
-		narrative_event = { id = LFNPC.1093 months = 12 }
-	}
-	option = { 
-		name = dwseom800B
-		ai_chance = {
-			factor = 0
-		}
-	}
-}
-
-narrative_event = {
-	id = LFNPC.1093
-	desc = dwseom801
-	picture = dragon_hatching
-	is_triggered_only = yes 
-	option = {  
-		name = dwseom801A
-		random_list = {
-			50 = {
-				create_character = {
-					random_traits = yes 
-					culture = dwse_dragon
-					dynasty = event_target:dwse_new_dad
-					female = no
-					age = 0
-					trait = dwse_dragon_child
-					health = 20
-				}
-			}
-			50 = {
-				create_character = {
-					random_traits = yes 
-					culture = dwse_dragon
-					dynasty = event_target:dwse_new_dad
-					female = yes
-					age = 0
-					trait = dwse_dragon_child
-					health = 20
-				}				
-			}
-		}
-		new_character = {
-			set_character_flag = no_court_invites
-			set_mother = ROOT
-			set_father = event_target:dwse_new_dad
-			prompt_name = {
-				player = FROMFROMFROM
-				type = RENAME_CHARACTER_MESSAGE
-				name_list = culture
-			}			
-		}
-	}
-}
-
-# Subscriber-made character Valri
-narrative_event = {
-	id = LFNPC.110
-	picture = lf_npc_ss_valri
-	desc = LFNPCValri
-	title = LFNPCValriTitle
-	is_triggered_only = yes
-
-	immediate = {
-		create_character = {
-			name = "Valri"
-			random_traits = no
-			religion = hellenic
-			culture = neko_culture
-			dynasty = 9100011
-			attributes = {
-				diplomacy = 5
-				martial = 5
-				learning = 5
-				stewardship = 5
-				intrigue = 8
-			}
-			female = yes
-			age = 16
-			trait = elusive_shadow
-			trait = lustful
-			trait = fair
-			trait = quick
-			trait = stubborn
-			trait = lf_breeder
-			trait = hunter
-			trait = zealous
-			trait = lf_neko
-			trait = lf_submissive
-			trait = lf_npc_valri
-			trait = lf_immortal_npc
-			flag = lf_never_change_race
-			flag = special_npc
-			flag = society_join_block
-		}
-		new_character = {
-			save_event_target_as = lf_temporary_valri
-		}
-	}
-
-	option = { # Invite Valri
-		name = LFNPCValriTTA
-		trigger = {
-			NOT = {
-				trait = hunter
-			}
-		}
-		add_trait = hunter
-		set_global_flag = lf_created_valri
-		if = {
-			limit = {
-				has_global_flag = tentacled_dreams_active
-			}
-			custom_tooltip = {
-				text = LFNPCValriTD
-				event_target:lf_temporary_valri = {
-					remove_trait = zealous
-					add_trait = tentacle_slave
-				}
-			}
-		}
-	}
-	option = { # Invite Valri, already a hunter
-		name = LFNPCValriTTD
-		trigger = {
-			trait = hunter
-		}
-		change_martial = 2
-		change_intrigue = 2
-		set_global_flag = lf_created_valri
-		if = {
-			limit = {
-				has_global_flag = tentacled_dreams_active
-			}
-			custom_tooltip = {
-				text = LFNPCValriTD
-				event_target:lf_temporary_valri = {
-					remove_trait = zealous
-					add_trait = tentacle_slave
-				}
-			}
-		}
-	}
-	option = { # Remove Valri, but allow her to visit later
-		name = LFNPCValriTTB
-		custom_tooltip = {
-			text = LFNPCValriRemove
-			event_target:lf_temporary_valri = {
-				dynasty = none
-				set_character_flag = lf_never_turn_spoopy
-				death = { death_reason = death_missing }
-			}
-		}
-	}
-	option = { # Permanently banish Valri
-		name = LFNPCValriTTC
-		custom_tooltip = {
-			text = LFNPCValriBanish
-			set_global_flag = lf_banished_valri
-			event_target:lf_temporary_valri = {
-				dynasty = none
-				set_character_flag = lf_never_turn_spoopy
-				death = { death_reason = death_missing }
-			}
-		}
-	}
-}
-
-# Subscriber-made character Amora
-narrative_event = {
-	id = LFNPC.111
-	picture = lf_npc_ss_amora
-	desc = LFNPCAmora
-	title = LFNPCAmoraTitle
-	is_triggered_only = yes
-
-	immediate = {
-		any_courtier_or_vassal = {
-			limit = {
-				liege = { character = ROOT }
-				has_job_title = job_marshal
-			}
-			save_event_target_as = temp_marshal
-		}
-		
-		create_character = {
-			name = "Amora"
-			random_traits = no
-			religion = ROOT
-			culture = ROOT
-			dynasty = 9100012
-			female = yes
-			age = 37
-			attributes = {
-				diplomacy = 5
-				martial = 10
-				stewardship = 5
-				intrigue = 5
-				learning = 7
-			}
-			trait = brilliant_strategist
-			trait = inspiring_leader
-			trait = strong
-			trait = quick
-			trait = adventurer
-			trait = duelist
-			trait = diligent
-			trait = brave
-			trait = scarred_mid
-			trait = one_eyed
-			trait = lf_elf
-			trait = lf_dominant
-			trait = lf_npc_amora
-			trait = lf_immortal_npc
-			flag = lf_never_change_race
-			flag = special_npc
-			flag = society_join_block
-			flag = special_marshal
-		}
-		new_character = {
-			save_event_target_as = lf_temporary_amora
-			if = {
-				limit = {
-					has_house_irae_yes = yes
-				}
-				hidden_effect = {
-					remove_trait = lf_elf
-					add_trait = houseirae_drow
-				}
-			}
-		}
-	}
-
-	option = { # Invite Amora
-		name = LFNPCAmoraTTA
-		set_global_flag = lf_created_amora
-		custom_tooltip = {
-			text = LFNPCAmoraDuel
-			event_target:temp_marshal = {
-				set_character_flag = lf_never_turn_spoopy
-				death = { 
-					death_reason = death_duel 
-					killer = event_target:lf_temporary_amora 
-				}
-				event_target:lf_temporary_amora = {
-					give_job_title = job_marshal
-					save_global_event_target_as = lf_amora
-				}
-			}
-		}
-		
-	}
-	option = { # Remove Amora, but allow her to visit later
-		name = LFNPCAmoraTTB
-		custom_tooltip = {
-			text = LFNPCAmoraRemove
-			event_target:lf_temporary_amora = {
-				dynasty = none
-				set_character_flag = lf_never_turn_spoopy
-				death = { death_reason = death_missing }
-			}
-		}
-	}
-	option = { # Permanently banish Amora
-		name = LFNPCAmoraTTC
-		custom_tooltip = {
-			text = LFNPCAmoraBanish
-			set_global_flag = lf_banished_amora
-			event_target:lf_temporary_amora = {
-				dynasty = none
-				set_character_flag = lf_never_turn_spoopy
-				death = { death_reason = death_missing }
-			}
-		}
-	}
-}
-
-character_event = {
-	id = LFNPC.1111
-	picture = lf_npc_ss_amora
-	desc = LFNPCAmora1111
-	title = LFNPCAmoraTitle
-	trigger = {
-		lf_has_nsfw = yes
-		any_courtier_or_vassal = {
-			trait = lf_npc_amora
-		}
-		NOT = { has_global_flag = lf_amora_visited }
-	}
-	mean_time_to_happen = {
-		months = 3
-	}
-	immediate = {
-		set_global_flag = lf_amora_visited
-	}
-	option = {
-		name = LFNPCAmora1111A
-		narrative_event = { id = LFNPC.1112 }
-	}
-	option = {
-		name = LFNPCAmora1111B
-	}
-}
-
-narrative_event = {
-	id = LFNPC.1112
-	picture = lf_npc_ss_amora
-	desc = LFNPCAmora1112
-	title = LFNPCAmoraTitle
-	is_triggered_only = yes
-	option = {
-		name = LFNPCAmora1112A
-		narrative_event = { id = LFNPC.1113 }
-	}
-	option = {
-		name = LFNPCAmora1112B
-	}
-}
-	
-narrative_event = {
-	id = LFNPC.1113
-	picture = lf_npc_ss_amora
-	desc = LFNPCAmora1113
-	title = LFNPCAmoraTitle
-	is_triggered_only = yes
-	option = {
-		name = LFNPCAmora1113A
-		hidden_tooltip = {
-			ROOT = {
-				set_character_flag = lf_amora_father
-			}
-			event_target:lf_amora = {
-				impregnate_cuckoo = ROOT
-			}
-		}
-	}
-	option = {
-		name = LFNPCAmora1113B
-		hidden_tooltip = {
-			ROOT = {
-				set_character_flag = lf_amora_father
-			}
-			event_target:lf_amora = {
-				impregnate_cuckoo = ROOT
-			}
-		}
-		event_target:lf_amora = {
-			add_lover = ROOT
-		}
-	}
-}
-
-narrative_event = {
-	id = LFNPC.1114
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {
-		mother = {
-			character = event_target:lf_amora
-		}
-		true_father_even_if_dead = {
-			has_character_flag = lf_amora_father
-		}
-	}
-	immediate = {
-		true_father_even_if_dead = {
-			clr_character_flag = lf_amora_father
-			ROOT = {
-				dynasty = PREV
-			}
-		}
-		if = {
-			limit = {
-				event_target:lf_amora = {
-					trait = lf_elf
-				}
-			}
-			add_trait = lf_elf
-		}
-		else = {
-			add_trait = houseirae_drow
-			remove_trait = inbred
-		}
-		add_trait = strong
-		add_trait = fair
-		add_trait = genius
-	}
-}
-
-# CatDrow arrives!
-narrative_event = {
-	id = LFNPC.112
-	picture = a_silly_placeholder
-	desc = LFNPCMeeshka
-	title = LFNPCMeeshkaTitle
-	is_triggered_only = yes
-
-	immediate = {
-		create_character = {
-			name = "Meeshka"
-			random_traits = no
-			religion = ROOT
-			culture = ROOT
-			dynasty = 9051300
-			female = yes
-			age = 16
-			attributes = {
-				diplomacy = 5
-				learning = 0 # She's dumb as bricks
-				martial = 2
-				intrigue = 5
-				stewardship = 2
-			}
-			trait = charismatic_negotiator
-			trait = lunatic
-			trait = bastard
-			trait = fair
-			trait = slow
-			trait = socializer
-			trait = kind
-			trait = trusting
-			trait = lf_submissive
-			trait = meeshka_trait
-			trait = houseirae_halfelf
-			flag = lf_never_change_race
-			flag = special_npc
-			flag = society_join_block
-		}
-		new_character = {
-			save_event_target_as = lf_temporary_meeshka
-			if = { # House Irae
-				limit = {
-					has_global_flag = houseirae_started
-				}
-				religion = eilistraee_religion
-				culture = drow
-				add_trait = houseirae_curse_generic
-				set_mother = event_target:houseirae_kekvit_irae
-			}
-			if = {
-				limit = {
-					lf_has_nsfw = no
-				}
-				remove_trait = lf_submissive
-			}
-		}
-	}
-
-	option = { # Invite Meeshka
-		name = LFNPCMeeshkaTTA
-		set_global_flag = lf_created_meeshka
-		event_target:lf_temporary_meeshka = {
-			set_father = ROOT
-			set_friend = ROOT
-		}
-	}
-	option = { # Permanently banish Meeshka
-		name = LFNPCMeeshkaTTC
-		custom_tooltip = {
-			text = LFNPCMeeshkaBanish
-			set_global_flag = lf_banished_meeshka
-			event_target:lf_temporary_meeshka = {
-				dynasty = none
-				set_mother = 0
-				set_character_flag = lf_never_turn_spoopy
-				death = { death_reason = death_missing }
-			}
-			set_character_flag = banished_meeshka
-		}
-	}
-}
-
-
 
 # .1000 Asha Created
 character_event = {
@@ -1841,8 +1181,6 @@ character_event = {
 			trait = gregarious # Known to be a bit chatty
 			trait = lf_npc_asha # Custom portrait for Asha
 			trait = lf_immortal_npc
-			trait = lf_insatiable
-			trait = lf_switch
 			flag = special_npc
 			flag = special_chancellor
 			flag = special_spymaster
@@ -1906,7 +1244,6 @@ character_event = {
 			trait = charismatic_negotiator
 			trait = lf_npc_charlotte #Charlotte's image
 			trait = lf_immortal_npc
-			trait = lf_switch
 			flag = special_npc		
 			flag = special_chancellor
 			flag = special_spiritual
@@ -1970,7 +1307,6 @@ character_event = {
 			trait = lf_mage
 			trait = lf_npc_lenora
 			trait = lf_immortal_npc
-			trait = lf_switch
 			flag = special_npc		
 			flag = special_treasurer
 			flag = special_spiritual
@@ -2035,7 +1371,6 @@ character_event = {
 			trait = lf_npc_lynness # Custom portrait for Lynness
 			trait = lf_demon # She's a succubus
 			trait = lf_immortal_npc
-			trait = lf_dominant
 			flag = special_npc		
 			flag = special_spymaster
 			flag = special_marshal
@@ -2097,7 +1432,6 @@ character_event = {
 		  trait = cynical
 		  trait = lf_npc_ying_li # Custom portrait for Li
 		  trait = lf_immortal_npc
-		  trait = lf_submissive
 			flag = special_npc		
 			flag = special_treasurer
 			flag = special_spiritual
@@ -2165,7 +1499,6 @@ character_event = {
 			trait = west_african_leader
 			trait = lf_npc_mwamba # Custom portrait for Mwamba
 			trait = lf_immortal_npc
-			trait = lf_dominant
 			flag = special_npc		
 			flag = society_join_block
 			flag = special_marshal
@@ -2294,7 +1627,6 @@ character_event = {
 			trait = kind
 			trait = proud
 			trait = duelist
-			trait = lf_switch
 			trait = lf_npc_brielle
 			trait = lf_immortal_npc
 			flag = special_npc
@@ -2327,16 +1659,9 @@ character_event = {
 			save_event_target_as = lf_real_brielle
 		}
 		event_target:lf_temporary_brielle = {
-			set_character_flag = lf_never_turn_spoopy
 			death = { death_reason = death_missing }
 		}
 		set_global_flag = lf_created_brielle
-		if = {
-			limit = {
-				lf_has_nsfw = yes
-			}
-			character_event = { id = LFNPC.10701 }
-		}
 	}
 }
 		
@@ -2379,7 +1704,6 @@ character_event = {
 			trait = trickster
 			trait = organizer
 			trait = drunkard
-			trait = lf_switch
 			trait = lf_npc_joseph
 			trait = lf_immortal_npc
 			flag = special_npc
@@ -2401,123 +1725,9 @@ character_event = {
 			add_friend = ROOT
 		}
 		event_target:lf_temporary_joseph = {
-			set_character_flag = lf_never_turn_spoopy
 			death = { death_reason = death_missing }
 		}
 		set_global_flag = lf_created_joseph
 	}
 }
 
-#
-# A Perfectly Normal Man (Roll1d2Games Easter Egg)
-#
-
-character_event = {
-	id = LFNPC.5000
-	hide_window = yes
-	ai = no
-	is_triggered_only = yes # on_startup
-	trigger = {
-		is_save_game = no
-	}
-	immediate = {
-		character_event = { id = LFNPC.5001 days = 10 } # Enough time for the player to turn on Silly Mode
-	}
-}
-
-character_event = {
-	id = LFNPC.5001
-	hide_window = yes
-	ai = no # Kept to ensure that this only happens once with Ruler Designer characters
-	is_triggered_only = yes
-	trigger = {
-		lf_is_silly = yes
-	}
-	immediate = {
-		if = {
-			limit = {
-				c_paro = {
-					owner = {
-						NOT = { character = ROOT }
-					}
-				}
-			}
-			c_paro = {
-				culture = bodpa
-				religion = buddhist
-				owner = {
-					create_character = {
-						name = "Jorris"
-						dynasty = 9100013
-						attributes = {
-							martial = 5
-							intrigue = 5
-							learning = 5
-							stewardship = 5
-							diplomacy = 5
-						}
-						age = 31
-						female = no
-						random_traits = no
-						health = 5
-						fertility = 0.5
-						religion = buddhist
-						culture = bodpa
-						race = bear
-						trait = midas_touched
-						trait = kshatriya
-						trait = strong
-						trait = genius
-						trait = vajrayana_buddhist
-						trait = lustful
-						trait = greedy
-						trait = deceitful
-						trait = cynical
-						trait = stubborn
-						trait = craven
-						flag = special_npc
-						flag = lf_never_change_race
-					}
-					new_character = {
-						save_event_target_as = perfectly_normal
-						grant_title = PREVPREV
-						set_defacto_liege = THIS
-						create_character = {
-							name = "Jorris"
-							dynasty = 9100013
-							age = 0
-							female = no
-							culture = event_target:perfectly_normal
-							religion = event_target:perfectly_normal
-							race = bear
-							trait = kshatriya
-							trait = vajrayana_buddhist
-						}
-						new_character = {
-							set_father = event_target:perfectly_normal
-						}
-						create_character = {
-							name = "Bearly"
-							dynasty = 9100013
-							age = 0
-							female = yes
-							culture = event_target:perfectly_normal
-							religion = event_target:perfectly_normal
-							race = bear
-							trait = kshatriya
-							trait = strong
-							trait = child_of_consort
-						}
-						new_character = {
-							set_father = event_target:perfectly_normal
-						}
-						recalc_succession = yes
-					}
-				}
-			}
-		}
-	}
-}
-						
-						
-						
