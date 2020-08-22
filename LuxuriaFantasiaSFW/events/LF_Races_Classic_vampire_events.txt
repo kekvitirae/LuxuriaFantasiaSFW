@@ -385,20 +385,6 @@ character_event = {
 	is_triggered_only = yes
 	desc = {
 		trigger = {
-			lf_has_nsfw = yes
-			has_character_flag = lf_vampire_femraped
-		}
-		text = LFVampire4008FemRaped
-	}
-	desc = {
-		trigger = {
-			lf_has_nsfw = yes
-			has_character_flag = lf_vampire_maleraped
-		}
-		text = LFVampire4008MaleRaped
-	}
-	desc = {
-		trigger = {
 			has_character_flag = lf_vampire_nommed
 		}
 		text = LFVampire4008Nommed
@@ -411,28 +397,6 @@ character_event = {
 	}
 	immediate = {
 		if = {
-			limit = {
-				is_female = yes
-				is_adult = yes
-				event_target:lf_vampire_attacker = {
-					has_character_flag = normal_vampire
-					NOT = { trait = homosexual }
-				}			
-			}
-			set_character_flag = lf_vampire_femraped
-		}
-		else_if = {
-			limit = {
-				is_female = no
-				is_adult = no
-				event_target:lf_vampire_attacker = {
-					has_character_flag = normal_vampire
-					trait = homosexual
-				}			
-			}
-			set_character_flag = lf_vampire_maleraped
-		}
-		else_if = {
 			limit = {
 				OR = {
 					event_target:lf_vampire_attacker = {
@@ -470,47 +434,6 @@ character_event = {
 				}
 			}
 		}
-		else_if = {
-			limit = {
-				lf_has_nsfw = yes
-				has_character_flag = lf_vampire_femraped
-			}
-			clr_character_flag = lf_vampire_femraped
-			add_character_modifier = {
-				name = lf_vampire_drained_small
-				months = 60
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						fertility = 0.01
-						is_pregnant = no
-					}
-					impregnate = event_target:lf_vampire_attacker
-				}
-				event_target:lf_vampire_attacker = {
-					set_character_flag = lf_never_turn_spoopy
-					death = { death_reason = death_missing }
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				lf_has_nsfw = yes
-				has_character_flag = lf_vampire_maleraped
-			}
-			clr_character_flag = lf_vampire_maleraped
-			add_character_modifier = {
-				name = lf_vampire_drained_small
-				months = 60
-			}
-			hidden_effect = {
-				event_target:lf_vampire_attacker = {
-					set_character_flag = lf_never_turn_spoopy
-					death = { death_reason = death_missing }
-				}
-			}
-		}
 		else = {
 			clr_character_flag = lf_vampire_nommed
 			add_character_modifier = {
@@ -519,7 +442,6 @@ character_event = {
 			}
 			hidden_effect = {
 				event_target:lf_vampire_attacker = {
-					set_character_flag = lf_never_turn_spoopy
 					death = { death_reason = death_missing }
 				}
 			}
