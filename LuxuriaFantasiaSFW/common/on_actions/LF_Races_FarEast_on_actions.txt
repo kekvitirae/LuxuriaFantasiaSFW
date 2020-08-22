@@ -1,0 +1,6 @@
+on_adulthood = {
+	events = {
+		LF_FarEast_Children.2 # Assigns kitsune adult portrait
+		LF_FarEast_Children.4 # Assigns neko adult portrait
+	}
+}

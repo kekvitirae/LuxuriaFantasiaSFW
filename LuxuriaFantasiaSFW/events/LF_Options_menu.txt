@@ -1,0 +1,434 @@
+namespace = LFOptions
+
+narrative_event = { # Hub
+	id = LFOptions.1
+	is_triggered_only = yes
+	picture = lf_gypsy
+	title = lf_a_luxuria_fantasia_options
+	sound = "generic_click_03"
+	desc = LFOptions1
+	
+	option = { # LF racial options
+		name = LFOptionsRacialOptions
+		narrative_event = { id = LFOptions.2 }
+	}
+	option = { # LF extra options
+		name = LFOptionsCoreOptions
+		narrative_event = { id = LFOptions.5 }
+	}
+	option = { # Exit
+		name = LFOptionsExit
+	}
+}
+
+narrative_event = { # Content Hub 1
+	id = LFOptions.2
+	is_triggered_only = yes
+	picture = lf_gypsy
+	sound = "generic_click_03"
+	title = lf_a_luxuria_fantasia_options
+	desc = LFOptions1
+	option = { # H&H content options
+		name = LFOptions2A
+		narrative_event = { id = LFOptions.400 }
+	}	
+	option = { # Fae content options
+		name = LFOptions2B
+		narrative_event = { id = LFOptions.401 }
+	}	
+	option = { # Classic Monsters content
+		name = LFOptionsClassicContent
+		narrative_event = { id = LFOptions.101 }
+	}
+	option = { # Next page
+		name = LFOptionsNextPage
+		narrative_event = { id = LFOptions.4 }
+	}
+	option = { # Go back
+		name = LFOptionsGoBack
+		narrative_event = { id = LFOptions.1 }
+	}	
+}
+
+narrative_event = { # Content Hub 3
+	id = LFOptions.4
+	is_triggered_only = yes
+	picture = lf_gypsy
+	sound = "generic_click_03"
+	title = lf_a_luxuria_fantasia_options
+	desc = LFOptions1
+	option = { # Far East content options
+		name = LFOptions4A
+		narrative_event = { id = LFOptions.402 }
+	}	
+	option = { # First page
+		name = LFOptionsFirstPage
+		narrative_event = { id = LFOptions.2 }
+	}
+	option = { # Go back
+		name = LFOptionsGoBack
+		narrative_event = { id = LFOptions.1 }
+	}	
+}
+
+narrative_event = { # LF extra options hub 1
+	id = LFOptions.5
+	is_triggered_only = yes
+	picture = lf_gypsy
+	sound = "generic_click_03"
+	title = lf_a_luxuria_fantasia_options
+	desc = LFOptions1
+	option = { # Turn off silly mode
+		name = LFOptions7G
+		trigger = {	
+			has_global_flag = lf_silly_mode
+		}
+		clr_global_flag = lf_silly_mode
+		narrative_event = { id = LFOptions.5 }
+	}
+	option = { # Turn on silly mode
+		name = LFOptions7H
+		trigger = {
+			NOT = { has_global_flag = lf_silly_mode }
+		}
+		set_global_flag = lf_silly_mode
+		narrative_event = { id = LFOptions.5 }
+	}
+	option = { # Turn off special NPC spawning
+		name = LFOptions7I
+		trigger = {	
+			has_global_flag = LFSpecialNPCOn
+		}
+		clr_global_flag = LFSpecialNPCOn
+		narrative_event = { id = LFOptions.5 }
+	}
+	option = { # Turn on special NPC spawning
+		name = LFOptions7J
+		trigger = {
+			NOT = { has_global_flag = LFSpecialNPCOn }
+		}
+		set_global_flag = LFSpecialNPCOn
+		narrative_event = { id = LFOptions.5 }
+	}
+	option = { # Go back
+		name = LFOptionsGoBack
+		narrative_event = { id = LFOptions.1 }
+	}	
+}
+		
+narrative_event = { # Classic Monsters content
+	id = LFOptions.101
+	is_triggered_only = yes
+	picture = lf_gypsy
+	sound = "generic_click_03"
+	title = lf_a_luxuria_fantasia_options
+	desc = LFOptions1
+	option = { # Turn off random NPC attacks
+		name = LFOptions3C
+		trigger = {
+			has_global_flag = LFClassicOn
+		}
+		clr_global_flag = LFClassicOn
+		clr_global_flag = LFBFAttacksOn
+		clr_global_flag = LFBFAttacksNoFatal
+		set_global_flag = LFClassicOff
+		set_global_flag = LFBFAttacksOff
+		narrative_event = { id = LFOptions.101 }
+	}
+	option = { # Turn on random NPC attacks
+		name = LFOptions3D
+		trigger = {
+			has_global_flag = LFClassicOff
+		}
+		clr_global_flag = LFClassicOff
+		set_global_flag = LFClassicOn
+		set_global_flag = LFBFAttacksOn
+		narrative_event = { id = LFOptions.101 }
+	}
+	option = { # Turn on BF attacks
+		name = LFOptions3E
+		trigger = {
+			has_global_flag = LFClassicOn
+			has_global_flag = LFBFAttacksOff
+		}
+		clr_global_flag = LFBFAttacksOff
+		set_global_flag = LFBFAttacksOn
+		narrative_event = { id = LFOptions.101 }
+	}
+	option = { # Turn off BF fatalities
+		name = LFOptions3F
+		trigger = {
+			has_global_flag = LFClassicOn
+			has_global_flag = LFBFAttacksOn
+		}
+		clr_global_flag = LFBFAttacksOn
+		set_global_flag = LFBFAttacksNoFatal
+		narrative_event = { id = LFOptions.101 }
+	}
+	option = { # Turn off BF attacks
+		name = LFOptions3G
+		trigger = {
+			has_global_flag = LFClassicOn
+			has_global_flag = LFBFAttacksNoFatal
+		}
+		clr_global_flag = LFBFAttacksNoFatal
+		set_global_flag = LFBFAttacksOff
+		narrative_event = { id = LFOptions.101 }
+	}
+	option = { # Go back
+		name = LFOptionsGoBack
+		narrative_event = { id = LFOptions.2 }
+	}	
+}
+
+#narrative_event = { # DWSE Content
+#	id = LFOptions.301
+#	is_triggered_only = yes
+#	picture = lf_gypsy
+#	sound = "generic_click_03"
+#	title = lf_a_luxuria_fantasia_options
+#	desc = LFOptions1
+#	option = { # DWSE Dragon Off
+#		name = LFOptions10B
+#		trigger = {
+#			has_global_flag = LFDWSEDragonOn
+#		}
+#		clr_global_flag = LFDWSEDragonOn
+#		set_global_flag = LFDWSEDragonOff
+#		narrative_event = { id = LFOptions.301 }
+#	}
+#	option = { # DWSE Dragon On
+#		name = LFOptions10C
+#		trigger = {
+#			has_global_flag = LFDWSEDragonOff
+#		}
+#		clr_global_flag = LFDWSEDragonOff
+#		set_global_flag = LFDWSEDragonOn
+#		narrative_event = { id = LFOptions.301 }
+#	}	
+#	option = { # Go back
+#		name = LFOptionsGoBack
+#		narrative_event = { id = LFOptions.4 }
+#	}	
+#}
+
+narrative_event = { # H&H Content
+	id = LFOptions.400
+	is_triggered_only = yes
+	picture = lf_gypsy
+	sound = "generic_click_03"
+	title = lf_a_luxuria_fantasia_options
+	desc = LFOptions1
+	option = { # Turn off Divines
+		name = LFOptions400A
+		trigger = {
+			has_global_flag = LFDivineOn
+		}
+		clr_global_flag = LFDivineOn
+		set_global_flag = LFDivineOff
+		narrative_event = { id = LFOptions.400 }
+	}
+	option = { # Turn on Divines
+		name = LFOptions400B
+		trigger = {
+			has_global_flag = LFDivineOff
+		}
+		clr_global_flag = LFDivineOff
+		set_global_flag = LFDivineOn
+		narrative_event = { id = LFOptions.400 }
+	}
+	option = { # Turn off Demons
+		name = LFOptions400C
+		trigger = {
+			has_global_flag = LFDemonOn
+		}
+		clr_global_flag = LFDemonOn
+		set_global_flag = LFDemonOff
+		narrative_event = { id = LFOptions.400 }
+	}
+	option = { # Turn on Demons
+		name = LFOptions400D
+		trigger = {
+			has_global_flag = LFDemonOff
+		}
+		clr_global_flag = LFDemonOff
+		set_global_flag = LFDemonOn
+		narrative_event = { id = LFOptions.400 }
+	}	
+	option = { # Go back
+		name = LFOptionsGoBack
+		narrative_event = { id = LFOptions.2 }
+	}	
+}
+
+narrative_event = { # Fae Content
+	id = LFOptions.401
+	is_triggered_only = yes
+	picture = lf_gypsy
+	sound = "generic_click_03"
+	title = lf_a_luxuria_fantasia_options
+	desc = LFOptions1
+	option = { # Turn off Elves
+		name = LFOptions401A
+		trigger = {
+			has_global_flag = LFElfOn
+		}
+		clr_global_flag = LFElfOn
+		set_global_flag = LFElfOff
+		narrative_event = { id = LFOptions.401 }
+	}
+	option = { # Turn on Elves
+		name = LFOptions401B
+		trigger = {
+			has_global_flag = LFElfOff
+		}
+		clr_global_flag = LFElfOff
+		set_global_flag = LFElfOn
+		narrative_event = { id = LFOptions.401 }
+	}
+	option = { # Turn off Orcs
+		name = LFOptions401C
+		trigger = {
+			has_global_flag = LFOrcOn
+		}
+		clr_global_flag = LFOrcOn
+		set_global_flag = LFOrcOff
+		narrative_event = { id = LFOptions.401 }
+	}
+	option = { # Turn on Orcs
+		name = LFOptions401D
+		trigger = {
+			has_global_flag = LFOrcOff
+		}
+		clr_global_flag = LFOrcOff
+		set_global_flag = LFOrcOn
+		narrative_event = { id = LFOptions.401 }
+	}	
+	option = { # Turn off Fairies
+		name = LFOptions401E
+		trigger = {
+			has_global_flag = LFFairyOn
+		}
+		clr_global_flag = LFFairyOn
+		set_global_flag = LFFairyOff
+		narrative_event = { id = LFOptions.401 }
+	}
+	option = { # Turn on Fairies
+		name = LFOptions401F
+		trigger = {
+			has_global_flag = LFFairyOff
+		}
+		clr_global_flag = LFFairyOff
+		set_global_flag = LFFairyOn
+		narrative_event = { id = LFOptions.401 }
+	}	
+	option = { # Go back
+		name = LFOptionsGoBack
+		narrative_event = { id = LFOptions.2 }
+	}	
+}
+
+narrative_event = { # Far East Content
+	id = LFOptions.402
+	is_triggered_only = yes
+	picture = lf_gypsy
+	sound = "generic_click_03"
+	title = lf_a_luxuria_fantasia_options
+	desc = LFOptions1
+	option = { # Turn off Kitsune
+		name = LFOptions402A
+		trigger = {
+			has_global_flag = LFKitsuneOn
+		}
+		clr_global_flag = LFKitsuneOn
+		set_global_flag = LFKitsuneOff
+		narrative_event = { id = LFOptions.402 }
+	}
+	option = { # Turn on Kitsune
+		name = LFOptions402B
+		trigger = {
+			has_global_flag = LFKitsuneOff
+		}
+		clr_global_flag = LFKitsuneOff
+		set_global_flag = LFKitsuneOn
+		narrative_event = { id = LFOptions.402 }
+	}
+	option = { # Turn off Nekos
+		name = LFOptions402C
+		trigger = {
+			has_global_flag = LFNekoOn
+		}
+		clr_global_flag = LFNekoOn
+		set_global_flag = LFNekoOff
+		narrative_event = { id = LFOptions.402 }
+	}
+	option = { # Turn on Nekos
+		name = LFOptions402D
+		trigger = {
+			has_global_flag = LFNekoOff
+		}
+		clr_global_flag = LFNekoOff
+		set_global_flag = LFNekoOn
+		narrative_event = { id = LFOptions.402 }
+	}	
+	option = { # Go back
+		name = LFOptionsGoBack
+		narrative_event = { id = LFOptions.4 }
+	}	
+}
+
+
+character_event = { # on_startup flag setting
+	id = LFOptions.1000
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		is_save_game = no
+	}
+	immediate = {
+		set_global_flag = LFHHOn
+		set_global_flag = LFFaeOn
+		set_global_flag = LFFarEastOn
+		set_global_flag = LFDivineOn
+		set_global_flag = LFDemonOn
+		set_global_flag = LFElfOn
+		set_global_flag = LFOrcOn
+		set_global_flag = LFFairyOn
+		set_global_flag = LFKitsuneOn
+		set_global_flag = LFNekoOn
+		
+		set_global_flag = LFClassicOn
+		set_global_flag = LFDWSEDragonOn
+		set_global_flag = LFSpecialNPCOn
+		set_global_flag = LFBFAttacksOn
+	}
+}
+
+character_event = {
+	id = LFOptions.1001
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+	}
+	after = {
+		character_event = { id = LFOptions.1002 }
+	}
+}
+character_event = {
+	id = LFOptions.1002
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		ai = no
+		OR = {
+			AND = {
+				multiplayer = yes
+				is_multiplayer_host_character = yes
+			}
+			multiplayer = no
+		}
+	}
+	after = {
+		narrative_event = { id = LFOptions.1 }
+	}
+}

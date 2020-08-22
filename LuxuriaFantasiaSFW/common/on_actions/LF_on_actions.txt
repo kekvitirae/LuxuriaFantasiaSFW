@@ -1,0 +1,99 @@
+#character
+# Fires when the game starts (not from saves)
+on_chronicle_start = {
+	events = {
+		LFMultiplayer.101 # Racial Assignment
+		LFOptions.1000 # Sets the appropriate Options Menu flags
+		LFOptions.1001 # First time Options Menu popup
+	}
+}
+
+on_startup = {
+	effect = {
+		lf_fix_dumb_vanilla_name_bug = yes
+	}
+	events = {
+		LFCore.1 # Sets the global startup flag
+		LFCore.2 # Alternate Start cleanup for Blood Feud
+		LFNPC.5000 # A Perfectly Normal Man
+		LFChallenge.303 # Lucy Challenge - Cannibal trait assignment
+		LFChallenge.5 # Bad Genetics Challenge
+		LFChallenge.101 # Random Ruler - Removal of elven immortality
+	}
+}
+
+
+#character
+on_yearly_pulse = {
+	events = {
+		LFMagic.2 # Yearly mana increase
+		LFCoreGypsy.32 # Virtue artifact effects
+	}
+}
+
+on_decade_pulse = {
+	events = {
+		LF_Races_Buildings.1 # Courtiers arrive
+		LFChallenge.2 # Gender Bender Challenge
+		LFChallenge.4 # Opposite Day Challenge
+	}
+}
+
+# character
+on_birth = {
+	events = { 
+		LF_Core_Genetics.1 # Racial genetics
+		LFSpells.8 # Blessing of the Womb
+		LFNPC.1114 # Amora's child
+		LFChallenge.503 # Bad Genetics Challenge
+	}
+}
+
+on_adulthood = {
+	events = {
+		LFMagic.1 # Set maximum mana for magic races
+	}
+}
+
+on_host_change = {
+	events = {
+		LFHostChange.1 # Racial assignment of new characters
+		LFHostChange.4 # Bad Genetics fix for create_character births
+	}
+}
+
+on_reform_religion = {
+	events = {
+		# LFCustomReligion.203 # Rename Head of Religion
+		LFCustomReligion.205 # Grants Temporal artifact
+	}
+	effect = {
+		lf_fix_dumb_vanilla_name_bug = yes
+	}
+}
+
+on_loot_settlement = {
+	random_events = {
+		5 = LFArtifacts.1
+	}
+}
+
+on_death = {
+	events = {
+		LFChallenge.1 # Random Ruler Challenge
+		LFChallenge.3 # Lucy Challenge
+		LFChallenge.305 # Lucy Challenge passes on to heir
+	}
+}
+
+on_major_battle_won = {
+	events = {
+		LFMisc.2 # Commander gains exp
+	}
+}
+
+on_major_battle_won_leader = {
+	events = {
+		LFMisc.2 # Commander gains exp
+	}
+}

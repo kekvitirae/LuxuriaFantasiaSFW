@@ -1,0 +1,83 @@
+namespace = LFCourt
+
+# .500 EU4 Dickery
+character_event = {
+	id = LFCourt.500
+	desc = LFCourt500
+	title = LFCourt500T
+	picture = GFX_evt_died_funeral
+	ai = no
+	trigger = {
+        NOT = { has_global_flag = dungeon_master_lives } # Identical event in that mod
+		current_heir = {
+			age = 15
+			dynasty = ROOT
+			is_child_of = ROOT
+			OR = {
+				trait = genius # WELCOME TO DARK SOULS
+				trait = quick
+				trait = strong
+				trait = fair
+			}
+			NOR = {
+				trait = inbred # HARDMODE ACTIVATED
+				trait = slow
+				trait = imbecile
+				trait = ugly
+				trait = weak
+				religion = jain # Jains don't hunt
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 2700
+	}
+	option = { # Sorrow Overtakes You
+		name = LFCourt500TTA
+		current_heir = {
+			set_character_flag = lf_never_turn_spoopy
+			death = { death_reason = death_accident }
+		}
+		custom_tooltip = {
+			text = LFCourt500TTASorrow
+		}
+	}
+	option = { # Oh well.
+		name = LFCourt500TTB
+		current_heir = {
+			set_character_flag = lf_never_turn_spoopy
+			death = { death_reason = death_accident }
+		}
+		custom_tooltip = {
+			text = LFCourt500TTAOhWell
+			prestige = -10
+		}
+	}
+}
+
+## .600 Some Idiot
+
+narrative_event = {
+	id = LFCourt.600
+	desc = LFCourt600
+	title = LFCourt600T
+	picture = a_silly_placeholder
+	ai = no
+	trigger = {
+		has_global_flag = lf_silly_mode
+		primary_title = {
+			title = k_sweden
+		}
+		NOT = { has_global_flag = lf_some_idiot }
+	}
+	mean_time_to_happen = {
+		years = 100
+	}
+	option = {
+		name = LFCourt600TTA
+		custom_tooltip = {
+			text = LFCourt500TTASorrow
+			set_global_flag = lf_some_idiot 
+		}
+	}
+}

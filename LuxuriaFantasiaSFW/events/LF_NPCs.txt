@@ -1,0 +1,2215 @@
+namespace = LFNPC
+
+# Chance for a random NPC
+character_event = {
+	id = LFNPC.1
+	hide_window = yes
+	ai = no
+	capable_only = yes
+	prisoner = no
+	trigger = {
+		is_adult = yes
+		has_global_flag = LFSpecialNPCOn
+		NOT = {
+			rtp_is_lower_baron = yes # Rise To Power compatibility
+		}
+	}
+	mean_time_to_happen = {
+		years = 50
+		modifier = {
+			factor = 0.2
+			NOR = {
+				has_global_flag = lf_created_asha
+				has_global_flag = lf_created_charlotte
+				has_global_flag = lf_created_lenora
+				has_global_flag = lf_created_lynness
+				has_global_flag = lf_created_li
+				has_global_flag = lf_created_mwamba
+				has_global_flag = lf_created_desmona
+				has_global_flag = lf_created_brielle
+				has_global_flag = lf_created_joseph
+				has_global_flag = lf_created_kalyian
+				has_global_flag = lf_created_valri
+				has_global_flag = lf_created_amora
+				has_global_flag = lf_created_meeshka
+			}
+		}
+	}
+	immediate = {
+		random_list = {
+			50 = { # You get nothing
+			}
+			50 = { # Asha
+				trigger = {
+					NOR = { 
+						has_global_flag = lf_created_asha
+						has_global_flag = lf_banished_asha
+					}
+				}
+				narrative_event = { id = LFNPC.100 }
+			}
+			50 = { # Charlotte
+				trigger = {
+					NOR = { 
+						has_global_flag = lf_created_charlotte
+						has_global_flag = lf_banished_charlotte
+					}
+				}
+				narrative_event = { id = LFNPC.101 }
+			}
+			50 = { # Lenora
+				trigger = {
+					NOR = { 
+						has_global_flag = lf_created_lenora
+						has_global_flag = lf_banished_lenora
+					}
+					capital_holding = {
+						has_building = lf_gypsy_wagon
+					}
+				}
+				narrative_event = { id = LFNPC.102 }
+			}
+			50 = { # Lynness
+				trigger = {
+					lf_has_demons = yes
+					NOR = { 
+						has_global_flag = lf_created_lynness
+						has_global_flag = lf_banished_lynness
+					}
+					OR = {
+						is_any_demon = yes
+						is_angel = yes
+						any_courtier_or_vassal = {
+							OR = {
+								is_any_demon = yes
+								is_angel = yes
+							}
+						}
+					}
+				}
+				narrative_event = { id = LFNPC.103 }
+			}
+			50 = { # Ying Li
+				trigger = {
+					NOR = { 
+						has_global_flag = lf_created_li
+						has_global_flag = lf_banished_ying_li
+					}
+				}
+				narrative_event = { id = LFNPC.104 }
+			}
+			50 = { # Mwamba
+				trigger = {
+					NOR = { 
+						has_global_flag = lf_created_mwamba
+						has_global_flag = lf_banished_mwamba
+					}
+				}
+				narrative_event = { id = LFNPC.105 }
+			}
+			50 = { # Desmona
+				trigger = {
+					has_character_flag = lf_vampire_attack_won
+					NOR = { 
+						has_global_flag = lf_created_desmona
+						has_global_flag = lf_banished_desmona
+					}
+				}
+				narrative_event = { id = LFNPC.106 }
+			}
+			50 = { # SubscribeStar Brielle
+				trigger = {
+					NOR = { 
+						has_global_flag = lf_created_brielle
+						has_global_flag = lf_banished_brielle
+					}
+				}
+				narrative_event = { id = LFNPC.107 }
+			}
+			50 = { # SubscribeStar Joseph
+				trigger = {
+					NOR = { 
+						has_global_flag = lf_created_joseph
+						has_global_flag = lf_banished_joseph
+					}
+				}
+				narrative_event = { id = LFNPC.108 }
+			}
+			50 = { # SubscribeStar Kalyian
+				trigger = {
+					NOR = { 
+						has_global_flag = lf_created_kalyian
+						has_global_flag = lf_banished_kalyian
+					}
+				}
+				narrative_event = { id = LFNPC.109 }
+			}
+			50 = { # SubscribeStar Valri
+				trigger = {
+					NOR = { 
+						has_global_flag = lf_created_valri
+						has_global_flag = lf_banished_valri
+					}
+				}
+				narrative_event = { id = LFNPC.110 }
+			}
+			50 = { # SubscribeStar Amora
+				trigger = {
+					is_female = no
+					OR = {
+						trait = lf_switch
+						trait = lf_submissive
+					}
+					any_courtier_or_vassal = {
+						has_job_title = job_marshal
+					}
+					NOR = { 
+						has_global_flag = lf_created_amora
+						has_global_flag = lf_banished_amora
+					}
+				}
+				narrative_event = { id = LFNPC.111 }
+			}
+			50 = { # Meeshka
+				trigger = {
+					NOR = { 
+						has_global_flag = lf_created_meeshka
+						has_global_flag = lf_banished_meeshka
+					}
+					has_global_flag = lf_silly_mode
+					has_artifact = irae_loincloth
+				}
+				modifier = {
+					factor = 5
+					has_artifact = irae_loincloth
+				}
+				narrative_event = { id = LFNPC.112 }
+			}
+		}
+	}
+}
+
+# Asha
+narrative_event = {
+	id = LFNPC.100
+	picture = {
+		trigger = {
+			lf_has_nsfw = yes
+		}
+		picture = lf_npc_asha
+	}
+	picture = {
+		trigger = {
+			lf_has_nsfw = no
+		}
+		picture = lf_npc_asha_sfw
+	}
+	desc = {
+		trigger = {
+			lf_has_nsfw = yes
+		}
+		text = LFNPCAsha
+	}
+	desc = {
+		trigger = {
+			lf_has_nsfw = no
+		}
+		text = LFNPCAshaSFW
+	}
+	title = LFNPCAshaTitle
+	is_triggered_only = yes
+	option = { # Invite Asha
+		name = LFNPCAshaTTA
+		wealth = -100
+		custom_tooltip = {
+			text = LFNPCAshaSkills
+		}
+		character_event = { id = LFNPC.1000 }
+	}
+	option = { # Invite Asha... to bed
+		name = LFNPCAshaTTB
+		wealth = -100
+		custom_tooltip = {
+			text = LFNPCAshaSkills
+		}
+		custom_tooltip = {
+			text = LFNPCAshaLover
+			set_character_flag = asha_lover
+			character_event = { id = LFNPC.1000 }
+		}
+	}
+	option = { # Remove Asha, but allow her to visit later
+		name = LFNPCAshaTTC
+		custom_tooltip = {
+			text = LFNPCAshaRemove
+		}
+	}
+	option = { # Permanently banish Asha
+		name = LFNPCAshaTTD
+		trigger = {
+			NOT = { trait = cannibal_trait }
+		}
+		custom_tooltip = {
+			text = LFNPCAshaBanish
+			set_global_flag = lf_banished_asha
+		}
+	}
+	option = { # So hungry...
+		name = LFNPCAshaTTE
+		tooltip_info = cannibal_trait
+		trigger = {
+			trait = cannibal_trait
+		}
+		wealth = -100
+		health = 2
+		custom_tooltip = {
+			text = LFNPCAshaOmnomnom
+			set_global_flag = lf_created_asha
+		}
+	}
+}
+		
+# Charlotte
+narrative_event = {
+	id = LFNPC.101
+	picture = lf_npc_charlotte
+	desc = LFNPCCharlotte
+	title = LFNPCCharlotteTitle
+	is_triggered_only = yes
+	option = { # Invite Charlotte
+		trigger = {
+			NOT = { trait = poet }
+		}
+		name = LFNPCCharlotteTTA
+		wealth = -100
+		custom_tooltip = {
+			text = LFNPCCharlotteSkills
+		}
+		character_event = { id = LFNPC.1001 }
+	}
+	option = { # Invite Charlotte - Poet version
+		trigger = {
+			trait = poet
+		}
+		tooltip_info = poet
+		name = LFNPCCharlotteTTE
+		custom_tooltip = {
+			text = LFNPCCharlotteSkills
+		}
+		custom_tooltip = {
+			text = LFNPCCharlottePoet
+		}
+		change_diplomacy = 4
+		character_event = { id = LFNPC.1001 }
+	}
+	option = { # Invite Charlotte... to bed
+		trigger = {
+			NOT = { trait = poet }
+		}
+		name = LFNPCCharlotteTTB
+		wealth = -100
+		custom_tooltip = {
+			text = LFNPCCharlotteSkills
+		}
+		custom_tooltip = {
+			text = LFNPCCharlotteLover
+			set_character_flag = charlotte_lover
+			character_event = { id = LFNPC.1001 }
+		}
+	}
+	option = { # Invite Charlotte... to bed - Poet version
+		trigger = {
+			trait = poet
+		}
+		tooltip_info = poet
+		name = LFNPCCharlotteTTF
+		custom_tooltip = {
+			text = LFNPCCharlotteSkills
+		}
+		custom_tooltip = {
+			text = LFNPCCharlottePoetLover
+			set_character_flag = charlotte_lover
+			character_event = { id = LFNPC.1001 }
+		}
+		change_diplomacy = 4
+	}
+	option = { # Remove Charlotte, but allow her to visit later
+		name = LFNPCCharlotteTTC
+		custom_tooltip = {
+			text = LFNPCCharlotteRemove
+		}
+	}
+	option = { # Permanently banish Charlotte
+		name = LFNPCCharlotteTTD
+		custom_tooltip = {
+			text = LFNPCCharlotteBanish
+			set_global_flag = lf_banished_charlotte
+		}
+	}
+}
+
+# Lenora
+narrative_event = {
+	id = LFNPC.102
+	picture = lf_npc_lenora
+	desc = LFNPCLenora
+	title = LFNPCLenoraTitle
+	is_triggered_only = yes
+	option = { # Invite Lenora
+		trigger = {
+			NOR = {
+				trait = lf_mage
+				trait = houseirae_drow
+				trait = lf_kitsune
+				trait = lf_elf
+				trait = lf_fairy
+				trait = houseirae_halfelf
+			}
+		}
+		name = LFNPCLenoraTTA
+		wealth = -100
+		custom_tooltip = {
+			text = LFNPCLenoraSkills
+		}
+		character_event = { id = LFNPC.1002 }
+	}
+	option = { # Invite Lenora - Magical version
+		trigger = {
+			OR = {
+				trait = lf_mage
+				trait = houseirae_drow
+				trait = lf_kitsune
+				trait = lf_elf
+				trait = lf_fairy
+				trait = houseirae_halfelf
+			}
+		}
+		tooltip_info_custom = lf_lenora_magical
+		name = LFNPCLenoraTTB
+		custom_tooltip = {
+			text = LFNPCLenoraSkills
+		}
+		custom_tooltip = {
+			text = LFNPCLenoraMagic
+			set_character_flag = lf_lenora_blessed
+			set_max_mana = yes
+		}
+		character_event = { id = LFNPC.1002 }
+	}
+	option = { # Invite Lenora... to bed
+		trigger = {
+			NOR = {
+				trait = lf_mage
+				trait = houseirae_drow
+				trait = lf_kitsune
+				trait = lf_elf
+				trait = lf_fairy
+				trait = houseirae_halfelf
+			}
+		}
+		name = LFNPCLenoraTTC
+		wealth = -100
+		custom_tooltip = {
+			text = LFNPCLenoraSkills
+		}
+		custom_tooltip = {
+			text = LFNPCLenoraLover
+			set_character_flag = lenora_lover
+			character_event = { id = LFNPC.1002 }
+		}
+	}
+	option = { # Invite Lenora... to bed - Magical version
+		trigger = {
+			OR = {
+				trait = lf_mage
+				trait = houseirae_drow
+				trait = lf_kitsune
+				trait = lf_elf
+				trait = lf_fairy
+				trait = houseirae_halfelf
+			}
+		}
+		tooltip_info_custom = lf_lenora_magical
+		name = LFNPCLenoraTTD
+		custom_tooltip = {
+			text = LFNPCLenoraSkills
+		}
+		custom_tooltip = {
+			text = LFNPCLenoraMagicLover
+			set_character_flag = lenora_lover
+			character_event = { id = LFNPC.1002 }
+		}
+	}
+	option = { # Remove Lenora, but allow her to visit later
+		name = LFNPCLenoraTTE
+		custom_tooltip = {
+			text = LFNPCLenoraRemove
+		}
+	}
+	option = { # Permanently banish Lenora
+		name = LFNPCLenoraTTF
+		custom_tooltip = {
+			text = LFNPCLenoraBanish
+			set_global_flag = lf_banished_lenora
+		}
+	}
+}
+
+# Lynness
+narrative_event = {
+	id = LFNPC.103
+	title = LFNPCLynnessTitle
+	picture = lf_npc_lynness
+	desc = {
+		text = LFNPCLynnessDemon
+		trigger = {
+			OR = {
+				trait = lf_demon
+				trait = lf_halfdemon
+			}
+		}
+	}
+	desc = {
+		text = LFNPCLynnessDivine
+		trigger = {
+			trait = lf_angel
+		}
+	}
+	desc = {
+		text = LFNPCLynness
+		trigger = {
+			NOR = {
+				trait = lf_demon
+				trait = lf_halfdemon
+				trait = lf_angel
+			}
+		}
+	}
+	is_triggered_only = yes
+
+	option = { # Lynness hypnotizes you
+		trigger = {
+			NOT = {
+				trait = lf_angel
+			}
+		}
+		name = LFNPCLynnessTTA
+		custom_tooltip = {
+			text = LFNPCLynnessSkills
+		}
+		custom_tooltip = {
+			text = LFNPCLynnessLover
+			set_character_flag = lynness_lover
+			character_event = { id = LFNPC.1003 }
+		}
+	}
+	option = { # Lynness hypnotizes you - Divine version
+		trigger = {
+			trait = lf_angel
+		}
+		tooltip_info = lf_angel
+		name = LFNPCLynnessTTB
+		custom_tooltip = {
+			text = LFNPCLynnessSkills
+		}
+		custom_tooltip = {
+			text = LFNPCLynnessDivineLover
+			lf_fell_from_grace = yes
+			set_character_flag = lynness_lover
+			character_event = { id = LFNPC.1003 }
+		}
+	}
+	option = { # Remove Lynness, but allow her to visit later
+		name = LFNPCLynnessTTC
+		trigger = {
+			OR = {
+				trait = lf_demon
+				trait = lf_halfdemon
+			}
+		}
+		tooltip_info_custom = lf_lynness_demon
+		custom_tooltip = {
+			text = LFNPCLynnessRemove
+		}
+	}
+	option = { # Permanently banish Lynness
+		name = LFNPCLynnessTTD
+		tooltip_info_custom = lf_lynness_demon
+		trigger = {
+			OR = {
+				trait = lf_demon
+				trait = lf_halfdemon
+			}
+		}
+		custom_tooltip = {
+			text = LFNPCLynnessBanish
+			set_global_flag = lf_banished_lynness
+		}
+	}
+}
+
+# Ying Li created
+narrative_event = {
+	id = LFNPC.104
+	picture = lf_npc_ying_li
+	desc = LFNPCYingLi
+	title = LFNPCYingLiTitle
+	is_triggered_only = yes
+	option = { # Invite Ying Li
+		trigger = {
+			NOR = { 
+				trait = naive_appeaser 
+				trait = misguided_warrior 
+				trait = indulgent_wastrel 
+				trait = amateurish_plotter 
+				trait = detached_priest
+				trait = slow
+				trait = imbecile
+				trait = dull
+			}
+		}
+		name = LFNPCYingLiTTA
+		wealth = -100
+		custom_tooltip = {
+			text = LFNPCYingLiSkills
+		}
+		character_event = { id = LFNPC.1004 }
+	}
+	option = { # Invite Ying Li - Education version
+		trigger = {
+			OR = { 
+				trait = naive_appeaser 
+				trait = misguided_warrior 
+				trait = indulgent_wastrel 
+				trait = amateurish_plotter 
+				trait = detached_priest 
+				trait = slow
+				trait = imbecile
+				trait = dull
+			}
+		}
+		tooltip_info_custom = lf_lack_of_education
+		name = LFNPCYingLiTTE
+		wealth = -100
+		custom_tooltip = {
+			text = LFNPCYingLiSkills
+		}
+		custom_tooltip = {
+			text = LFNPCYingLiBonus
+		}
+		trigger_switch = {
+			on_trigger = trait
+			naive_appeaser = {
+				remove_trait = naive_appeaser
+				add_trait = charismatic_negotiator
+			}
+			misguided_warrior = {
+				remove_trait = misguided_warrior
+				add_trait = skilled_tactician
+			}
+			indulgent_wastrel = {
+				remove_trait = indulgent_wastrel
+				add_trait = fortune_builder
+			}
+			amateurish_plotter = {
+				remove_trait = amateurish_plotter
+				add_trait = intricate_webweaver
+			}
+			detached_priest = {
+				remove_trait = detached_priest
+				add_trait = scholarly_theologian
+			}
+		}
+		if = {
+			limit = {
+				trait = imbecile
+			}
+			remove_trait = imbecile
+		}
+		if = {
+			limit = {
+				trait = slow
+			}
+			remove_trait = slow
+		}
+		if = {
+			limit = {
+				trait = dull
+			}
+			remove_trait = dull
+		}
+		
+		character_event = { id = LFNPC.1004 }
+	}
+	option = { # Invite Ying Li... to bed
+		trigger = {
+			NOR = { 
+				trait = naive_appeaser 
+				trait = misguided_warrior 
+				trait = indulgent_wastrel 
+				trait = amateurish_plotter 
+				trait = detached_priest 
+				trait = slow
+				trait = imbecile
+				trait = dull
+			}
+		}
+		name = LFNPCYingLiTTB
+		wealth = -100
+		custom_tooltip = {
+			text = LFNPCYingLiSkills
+		}
+		custom_tooltip = {
+			text = LFNPCYingLiLover
+			set_character_flag = ying_li_lover
+			character_event = { id = LFNPC.1004 }
+		}
+	}
+	option = { # Invite Ying Li... to bed - Education version
+		trigger = {
+			OR = { 
+				trait = naive_appeaser 
+				trait = misguided_warrior 
+				trait = indulgent_wastrel 
+				trait = amateurish_plotter 
+				trait = detached_priest 
+				trait = slow
+				trait = imbecile
+				trait = dull
+			}
+		}
+		tooltip_info_custom = lf_lack_of_education
+		name = LFNPCYingLiTTF
+		wealth = -100
+		custom_tooltip = {
+			text = LFNPCYingLiSkills
+		}
+		custom_tooltip = {
+			text = LFNPCYingLiBonusLover
+			set_character_flag = ying_li_lover
+			character_event = { id = LFNPC.1004 }
+		}
+		trigger_switch = {
+			on_trigger = trait
+			naive_appeaser = {
+				remove_trait = naive_appeaser
+				add_trait = charismatic_negotiator
+			}
+			misguided_warrior = {
+				remove_trait = misguided_warrior
+				add_trait = skilled_tactician
+			}
+			indulgent_wastrel = {
+				remove_trait = indulgent_wastrel
+				add_trait = fortune_builder
+			}
+			amateurish_plotter = {
+				remove_trait = amateurish_plotter
+				add_trait = intricate_webweaver
+			}
+			detached_priest = {
+				remove_trait = detached_priest
+				add_trait = scholarly_theologian
+			}
+		}
+		if = {
+			limit = {
+				trait = imbecile
+			}
+			remove_trait = imbecile
+		}
+		if = {
+			limit = {
+				trait = slow
+			}
+			remove_trait = slow
+		}
+		if = {
+			limit = {
+				trait = dull
+			}
+			remove_trait = dull
+		}
+	}
+	option = { # Remove Ying Li, but allow her to visit later
+		name = LFNPCYingLiTTC
+		custom_tooltip = {
+			text = LFNPCYingLiRemove
+		}
+	}
+	option = { # Permanently banish Ying Li
+		name = LFNPCYingLiTTD
+		custom_tooltip = {
+			text = LFNPCYingLiBanish
+			set_global_flag = lf_banished_ying_li
+		}
+	}
+}
+
+# Mwamba created
+narrative_event = {
+	id = LFNPC.105
+	picture = lf_npc_mwamba
+	desc = LFNPCMwamba
+	title = LFNPCMwambaTitle
+	is_triggered_only = yes
+	option = { # Invite Mwamba
+		name = LFNPCMwambaTTA
+		trigger = {
+			NOT = { trait = brave }
+		}
+		wealth = -100
+		custom_tooltip = {
+			text = LFNPCMwambaSkills
+		}
+		character_event = { id = LFNPC.1005 }
+	}
+	option = { # Invite Mwamba... to bed
+		name = LFNPCMwambaTTB
+		trigger = {
+			NOT = { trait = brave }
+		}
+		wealth = -100
+		custom_tooltip = {
+			text = LFNPCMwambaSkills
+		}
+		custom_tooltip = {
+			text = LFNPCMwambaLover
+			set_character_flag = mwamba_lover
+			character_event = { id = LFNPC.1005 }
+		}
+	}
+	option = { # Remove Mwamba, but allow him to visit later
+		name = LFNPCMwambaTTC
+		custom_tooltip = {
+			text = LFNPCMwambaRemove
+		}
+	}
+	option = { # Permanently banish Mwamba
+		name = LFNPCMwambaTTD
+		custom_tooltip = {
+			text = LFNPCMwambaBanish
+			set_global_flag = lf_banished_mwamba
+		}
+	}
+	option = { # Invite Mwamba - Brave version
+		name = LFNPCMwambaTTE
+		trigger = {
+			trait = brave
+		}
+		wealth = -100
+		custom_tooltip = {
+			text = LFNPCMwambaSkills
+		}
+		custom_tooltip = {
+			text = LFNPCMwambaBrave
+			character_event = { id = LFNPC.1005 }
+		}
+		random_list = {
+			25 = { add_trait = logistics_expert }
+			25 = { add_trait = master_of_flame }
+			25 = { add_trait = sapper }
+			25 = { add_trait = levy_coordinator }
+		}
+		set_character_flag = taught_chinese_strategy
+	}
+	option = { # Invite Mwamba... to bed - Brave version
+		name = LFNPCMwambaTTF
+		trigger = {
+			trait = brave
+		}
+		wealth = -100
+		custom_tooltip = {
+			text = LFNPCMwambaSkills
+		}
+		custom_tooltip = {
+			text = LFNPCMwambaBraveLover
+			set_character_flag = mwamba_lover
+			character_event = { id = LFNPC.1005 }
+		}
+		random_list = {
+			25 = { add_trait = logistics_expert }
+			25 = { add_trait = master_of_flame }
+			25 = { add_trait = sapper }
+			25 = { add_trait = levy_coordinator }
+		}
+		set_character_flag = taught_chinese_strategy
+	}
+}
+
+# Desmona
+narrative_event = {
+	id = LFNPC.106
+	picture = lf_npc_desmona
+	desc = LFNPCDesmona
+	title = LFNPCDesmonaTitle
+	is_triggered_only = yes
+	option = { # Invite Desmona
+		name = LFNPCDesmonaTTA
+		wealth = -100
+		custom_tooltip = {
+			text = LFNPCDesmonaSkills
+		}
+		character_event = { id = LFNPC.1006 }
+	}
+	option = { # Invite Desmona... to bed
+		name = LFNPCDesmonaTTB
+		wealth = -100
+		custom_tooltip = {
+			text = LFNPCDesmonaSkills
+		}
+		custom_tooltip = {
+			text = LFNPCDesmonaLover
+			set_character_flag = desmona_lover
+			character_event = { id = LFNPC.1006 }
+		}
+	}
+	option = { # Remove Desmona, but allow her to visit later
+		name = LFNPCDesmonaTTC
+		custom_tooltip = {
+			text = LFNPCDesmonaRemove
+		}
+	}
+	option = { # Permanently banish Desmona
+		name = LFNPCDesmonaTTD
+		custom_tooltip = {
+			text = LFNPCDesmonaBanish
+			set_global_flag = lf_banished_desmona
+		}
+	}
+}
+
+# Subscriber-made character Brielle
+narrative_event = {
+	id = LFNPC.107
+	picture = lf_npc_ss_brielle
+	desc = LFNPCBrielle
+	title = LFNPCBrielleTitle
+	is_triggered_only = yes
+
+	immediate = {
+		create_character = { # Temporary character for option portrait
+			name = "Brielle Dragon-Scale"
+			random_traits = no
+			religion = ROOT
+			culture = ROOT
+			dynasty = none
+			female = yes
+			age = 23
+			attributes = {
+				diplomacy = 3
+				martial = 8
+				learning = 3
+				stewardship = 5
+				intrigue = 5
+			}
+			trait = skilled_tactician
+			trait = fair
+			trait = sturdy
+			trait = kind
+			trait = proud
+			trait = duelist
+			trait = lf_npc_brielle
+			flag = special_npc
+			flag = lf_never_change_race
+		}
+		new_character = {
+			save_event_target_as = lf_temporary_brielle
+		}
+	}
+			
+
+	option = { # Invite Brielle
+		name = LFNPCBrielleTTA
+		trigger = {
+			NOT = {
+				event_target:lf_temporary_brielle = {
+					attribute_diff = {
+						character = ROOT
+						attribute = martial
+						value = 1
+					}
+				}
+			}
+		}
+		wealth = -100
+		character_event = { id = LFNPC.1007 }
+		event_target:lf_temporary_brielle = { }
+		custom_tooltip = {
+			text = LFNPCBrielleSkills
+		}
+	}
+	option = { # Invite Brielle... to bed
+		name = LFNPCBrielleTTB
+		trigger = {
+			NOT = {
+				event_target:lf_temporary_brielle = {
+					attribute_diff = {
+						character = ROOT
+						attribute = martial
+						value = 1
+					}
+				}
+			}
+		}
+		wealth = -100
+		event_target:lf_temporary_brielle = { }
+		custom_tooltip = {
+			text = LFNPCBrielleSkills
+		}
+		custom_tooltip = {
+			text = LFNPCBrielleLover
+			set_character_flag = brielle_lover
+			character_event = { id = LFNPC.1007 }
+		}
+	}
+	option = { # Invite Brielle - Martial version
+		name = LFNPCBrielleTTE
+		trigger = {
+			event_target:lf_temporary_brielle = {
+				attribute_diff = {
+					character = ROOT
+					attribute = martial
+					value = 1
+				}
+			}
+		}
+		tooltip_info_custom = lf_low_martial
+		wealth = -100
+		character_event = { id = LFNPC.1007 }
+		event_target:lf_temporary_brielle = { }
+		custom_tooltip = {
+			text = LFNPCBrielleSkills
+		}
+		custom_tooltip = {
+			text = LFNPCBrielleBonus
+		}
+		change_martial = 4
+	}
+	option = { # Invite Brielle... to bed - Martial version
+		name = LFNPCBrielleTTF
+		trigger = {
+			event_target:lf_temporary_brielle = {
+				attribute_diff = {
+					character = ROOT
+					attribute = martial
+					value = 1
+				}
+			}
+		}
+		tooltip_info_custom = lf_low_martial
+		wealth = -100
+		event_target:lf_temporary_brielle = { }
+		custom_tooltip = {
+			text = LFNPCBrielleSkills
+		}
+		custom_tooltip = {
+			text = LFNPCBrielleBonusLover
+			set_character_flag = brielle_lover
+			character_event = { id = LFNPC.1007 }
+		}
+		change_martial = 4
+	}
+	option = { # Remove Brielle, but allow her to visit later
+		name = LFNPCBrielleTTC
+		custom_tooltip = {
+			text = LFNPCBrielleRemove
+			event_target:lf_temporary_brielle = {
+				set_character_flag = lf_never_turn_spoopy
+				death = { death_reason = death_missing }
+			}
+		}
+	}
+	option = { # Permanently banish Brielle
+		name = LFNPCBrielleTTD
+		custom_tooltip = {
+			text = LFNPCBrielleBanish
+			set_global_flag = lf_banished_brielle
+			event_target:lf_temporary_brielle = {
+				set_character_flag = lf_never_turn_spoopy
+				death = { death_reason = death_missing }
+			}
+		}
+	}
+}
+
+# Subscriber-made character Joseph
+narrative_event = {
+	id = LFNPC.108
+	picture = lf_npc_ss_joseph
+	desc = LFNPCJoseph
+	title = LFNPCJosephTitle
+	is_triggered_only = yes
+
+	immediate = {
+		create_character = { # Temporary character for option portrait
+			name = "Joseph"
+			random_traits = no
+			religion = ROOT
+			culture = ROOT
+			dynasty = none
+			female = no
+			age = 32
+			attributes = {
+				diplomacy = 4
+				martial = 8
+				learning = 4
+				stewardship = 4
+				intrigue = 4
+			}
+			trait = skilled_tactician
+			trait = fair
+			trait = quick
+			trait = strong
+			trait = brave
+			trait = duelist
+			trait = content
+			trait = groomed
+			trait = stubborn
+			trait = robust
+			trait = strategist
+			trait = hedonist
+			trait = gamer
+			trait = lefthanded
+			trait = aggressive_leader
+			trait = trickster
+			trait = organizer
+			trait = drunkard
+			trait = lf_npc_joseph
+			flag = special_npc
+			flag = lf_never_change_race
+		}
+		new_character = {
+			save_event_target_as = lf_temporary_joseph
+			random_list = {
+				50 = {
+					trigger = {
+						lf_has_divines = yes
+					}
+					add_trait = lf_angel
+				}
+				50 = {
+					trigger = {
+						lf_has_demons = yes
+					}
+					add_trait = lf_demon
+				}
+			}
+		}
+	}
+			
+
+	option = { # Invite Joseph
+		name = LFNPCJosephTTA
+		event_target:lf_temporary_joseph = { }
+		character_event = { id = LFNPC.1008 }
+	}
+	option = { # Remove Joseph, but allow him to visit later
+		name = LFNPCJosephTTB
+		custom_tooltip = {
+			text = LFNPCJosephRemove
+			event_target:lf_temporary_joseph = {
+				set_character_flag = lf_never_turn_spoopy
+				death = { death_reason = death_missing }
+			}
+		}
+	}
+	option = { # Permanently banish Joseph
+		name = LFNPCJosephTTC
+		custom_tooltip = {
+			text = LFNPCJosephBanish
+			set_global_flag = lf_banished_joseph
+			event_target:lf_temporary_joseph = {
+				set_character_flag = lf_never_turn_spoopy
+				death = { death_reason = death_missing }
+			}
+		}
+	}
+}
+
+# Subscriber-made character Kalyian
+narrative_event = {
+	id = LFNPC.109
+	picture = lf_npc_ss_kalyian_sfw
+	desc = LFNPCKalyian
+	title = LFNPCKalyianTitle
+	is_triggered_only = yes
+
+	immediate = {
+		create_character = {
+			name = "Kalyian"
+			random_traits = no
+			religion = ROOT
+			culture = dwse_dusk
+			dynasty = 9100010
+			attributes = {
+				diplomacy = 8
+				martial = 5
+				learning = 5
+				stewardship = 8
+				intrigue = 5
+			}
+			female = yes
+			age = 16
+			trait = grey_eminence
+			trait = dwse_lizard
+			trait = fair
+			trait = quick
+			trait = homosexual
+			trait = ambitious
+			trait = lustful
+			trait = lf_npc_kalyian
+			trait = lf_immortal_npc
+			flag = lf_never_change_race
+			flag = special_npc
+			flag = society_join_block
+		}
+		new_character = {
+			save_event_target_as = lf_temporary_kalyian
+		}
+	}
+
+	option = { # Invite Kalyian
+		name = LFNPCKalyianTTA
+		set_global_flag = lf_created_kalyian
+	}
+	option = { # Invite Kalyian, sexytimes version
+		name = LFNPCKalyianTTD
+		set_global_flag = lf_created_kalyian
+		if = {
+			limit = {
+				has_global_flag = tentacled_dreams_active
+			}
+			custom_tooltip = {
+				text = LFNPCKalyianTD
+				event_target:lf_temporary_kalyian = { 
+					remove_trait = ambitious
+					add_trait = content
+				}
+			}
+		}
+		event_target:lf_temporary_kalyian = { 
+			add_lover = ROOT
+		}
+	}
+	option = { # Remove Kalyian, but allow her to visit later
+		name = LFNPCKalyianTTB
+		custom_tooltip = {
+			text = LFNPCKalyianRemove
+			event_target:lf_temporary_kalyian = {
+				dynasty = none
+				set_character_flag = lf_never_turn_spoopy
+				death = { death_reason = death_missing }
+			}
+		}
+	}
+	option = { # Permanently banish Kalyian
+		name = LFNPCKalyianTTC
+		custom_tooltip = {
+			text = LFNPCKalyianBanish
+			set_global_flag = lf_banished_kalyian
+			event_target:lf_temporary_kalyian = {
+				dynasty = none
+				set_character_flag = lf_never_turn_spoopy
+				death = { death_reason = death_missing }
+			}
+		}
+	}
+}
+
+# Subscriber-made character Valri
+narrative_event = {
+	id = LFNPC.110
+	picture = lf_npc_ss_valri
+	desc = LFNPCValri
+	title = LFNPCValriTitle
+	is_triggered_only = yes
+
+	immediate = {
+		create_character = {
+			name = "Valri"
+			random_traits = no
+			religion = hellenic
+			culture = neko_culture
+			dynasty = 9100011
+			attributes = {
+				diplomacy = 5
+				martial = 5
+				learning = 5
+				stewardship = 5
+				intrigue = 8
+			}
+			female = yes
+			age = 16
+			trait = elusive_shadow
+			trait = lustful
+			trait = fair
+			trait = quick
+			trait = stubborn
+			trait = lf_breeder
+			trait = hunter
+			trait = zealous
+			trait = lf_neko
+			trait = lf_npc_valri
+			trait = lf_immortal_npc
+			flag = lf_never_change_race
+			flag = special_npc
+			flag = society_join_block
+		}
+		new_character = {
+			save_event_target_as = lf_temporary_valri
+		}
+	}
+
+	option = { # Invite Valri
+		name = LFNPCValriTTA
+		trigger = {
+			NOT = {
+				trait = hunter
+			}
+		}
+		add_trait = hunter
+		set_global_flag = lf_created_valri
+		if = {
+			limit = {
+				has_global_flag = tentacled_dreams_active
+			}
+			custom_tooltip = {
+				text = LFNPCValriTD
+				event_target:lf_temporary_valri = {
+					remove_trait = zealous
+					add_trait = tentacle_slave
+				}
+			}
+		}
+	}
+	option = { # Invite Valri, already a hunter
+		name = LFNPCValriTTD
+		trigger = {
+			trait = hunter
+		}
+		change_martial = 2
+		change_intrigue = 2
+		set_global_flag = lf_created_valri
+		if = {
+			limit = {
+				has_global_flag = tentacled_dreams_active
+			}
+			custom_tooltip = {
+				text = LFNPCValriTD
+				event_target:lf_temporary_valri = {
+					remove_trait = zealous
+					add_trait = tentacle_slave
+				}
+			}
+		}
+	}
+	option = { # Remove Valri, but allow her to visit later
+		name = LFNPCValriTTB
+		custom_tooltip = {
+			text = LFNPCValriRemove
+			event_target:lf_temporary_valri = {
+				dynasty = none
+				set_character_flag = lf_never_turn_spoopy
+				death = { death_reason = death_missing }
+			}
+		}
+	}
+	option = { # Permanently banish Valri
+		name = LFNPCValriTTC
+		custom_tooltip = {
+			text = LFNPCValriBanish
+			set_global_flag = lf_banished_valri
+			event_target:lf_temporary_valri = {
+				dynasty = none
+				set_character_flag = lf_never_turn_spoopy
+				death = { death_reason = death_missing }
+			}
+		}
+	}
+}
+
+# Subscriber-made character Amora
+narrative_event = {
+	id = LFNPC.111
+	picture = lf_npc_ss_amora
+	desc = LFNPCAmora
+	title = LFNPCAmoraTitle
+	is_triggered_only = yes
+
+	immediate = {
+		any_courtier_or_vassal = {
+			limit = {
+				liege = { character = ROOT }
+				has_job_title = job_marshal
+			}
+			save_event_target_as = temp_marshal
+		}
+		
+		create_character = {
+			name = "Amora"
+			random_traits = no
+			religion = ROOT
+			culture = ROOT
+			dynasty = 9100012
+			female = yes
+			age = 37
+			attributes = {
+				diplomacy = 5
+				martial = 10
+				stewardship = 5
+				intrigue = 5
+				learning = 7
+			}
+			trait = brilliant_strategist
+			trait = inspiring_leader
+			trait = strong
+			trait = quick
+			trait = adventurer
+			trait = duelist
+			trait = diligent
+			trait = brave
+			trait = scarred_mid
+			trait = one_eyed
+			trait = lf_elf
+			trait = lf_npc_amora
+			trait = lf_immortal_npc
+			flag = lf_never_change_race
+			flag = special_npc
+			flag = society_join_block
+			flag = special_marshal
+		}
+		new_character = {
+			save_event_target_as = lf_temporary_amora
+			if = {
+				limit = {
+					has_house_irae_yes = yes
+				}
+				hidden_effect = {
+					remove_trait = lf_elf
+					add_trait = houseirae_drow
+				}
+			}
+		}
+	}
+
+	option = { # Invite Amora
+		name = LFNPCAmoraTTA
+		set_global_flag = lf_created_amora
+		custom_tooltip = {
+			text = LFNPCAmoraDuel
+			event_target:temp_marshal = {
+				set_character_flag = lf_never_turn_spoopy
+				death = { 
+					death_reason = death_duel 
+					killer = event_target:lf_temporary_amora 
+				}
+				event_target:lf_temporary_amora = {
+					give_job_title = job_marshal
+					save_global_event_target_as = lf_amora
+				}
+			}
+		}
+		
+	}
+	option = { # Remove Amora, but allow her to visit later
+		name = LFNPCAmoraTTB
+		custom_tooltip = {
+			text = LFNPCAmoraRemove
+			event_target:lf_temporary_amora = {
+				dynasty = none
+				set_character_flag = lf_never_turn_spoopy
+				death = { death_reason = death_missing }
+			}
+		}
+	}
+	option = { # Permanently banish Amora
+		name = LFNPCAmoraTTC
+		custom_tooltip = {
+			text = LFNPCAmoraBanish
+			set_global_flag = lf_banished_amora
+			event_target:lf_temporary_amora = {
+				dynasty = none
+				set_character_flag = lf_never_turn_spoopy
+				death = { death_reason = death_missing }
+			}
+		}
+	}
+}
+
+# CatDrow arrives!
+narrative_event = {
+	id = LFNPC.112
+	picture = a_silly_placeholder
+	desc = LFNPCMeeshka
+	title = LFNPCMeeshkaTitle
+	is_triggered_only = yes
+
+	immediate = {
+		create_character = {
+			name = "Meeshka"
+			random_traits = no
+			religion = ROOT
+			culture = ROOT
+			dynasty = 9051300
+			female = yes
+			age = 16
+			attributes = {
+				diplomacy = 5
+				learning = 0 # She's dumb as bricks
+				martial = 2
+				intrigue = 5
+				stewardship = 2
+			}
+			trait = charismatic_negotiator
+			trait = lunatic
+			trait = bastard
+			trait = fair
+			trait = slow
+			trait = socializer
+			trait = kind
+			trait = trusting
+			trait = meeshka_trait
+			trait = houseirae_halfelf
+			flag = lf_never_change_race
+			flag = special_npc
+			flag = society_join_block
+		}
+		new_character = {
+			save_event_target_as = lf_temporary_meeshka
+			if = { # House Irae
+				limit = {
+					has_global_flag = houseirae_started
+				}
+				religion = eilistraee_religion
+				culture = drow
+				add_trait = houseirae_curse_generic
+				set_mother = event_target:houseirae_kekvit_irae
+			}
+		}
+	}
+
+	option = { # Invite Meeshka
+		name = LFNPCMeeshkaTTA
+		set_global_flag = lf_created_meeshka
+		event_target:lf_temporary_meeshka = {
+			set_father = ROOT
+			set_friend = ROOT
+		}
+	}
+	option = { # Permanently banish Meeshka
+		name = LFNPCMeeshkaTTC
+		custom_tooltip = {
+			text = LFNPCMeeshkaBanish
+			set_global_flag = lf_banished_meeshka
+			event_target:lf_temporary_meeshka = {
+				dynasty = none
+				set_mother = 0
+				set_character_flag = lf_never_turn_spoopy
+				death = { death_reason = death_missing }
+			}
+			set_character_flag = banished_meeshka
+		}
+	}
+}
+
+
+
+# .1000 Asha Created
+character_event = {
+	id = LFNPC.1000
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		create_character = {
+			random_traits = no
+			name = "Asha"
+			religion = ROOT
+			culture = egyptian_arabic
+			race = egyptian_arabic
+			dna = akhgbhfbaah
+			female = yes
+			age = 23
+			attributes = {
+				diplomacy = 12
+				martial = 3
+				learning = 5
+				stewardship = 5
+				intrigue = 12
+			}
+			health = 5
+			fertility = 0.50
+			trait = flamboyant_schemer # Likes to keep herself entertained with a little drama
+			trait = fair # She is easy on the eyes
+			trait = lustful # She oozes sex, both literally and figuratively
+			trait = greedy # She likes wealth
+			trait = diligent # She's worked hard to get where she's at in life
+			trait = gregarious # Known to be a bit chatty
+			trait = lf_npc_asha # Custom portrait for Asha
+			trait = lf_immortal_npc
+			trait = lf_insatiable
+			flag = special_npc
+			flag = special_chancellor
+			flag = special_spymaster
+			flag = society_join_block
+		}
+		new_character = {
+			set_character_flag = lf_npc_asha
+			set_global_flag = lf_created_asha
+			if = {
+				limit = {
+					ROOT = { has_character_flag = asha_lover }
+				}
+				add_lover = ROOT
+				ROOT = { clr_character_flag = asha_lover }
+				if = {
+					limit = {
+						ROOT = {
+							is_female = yes
+						}
+					}
+					add_trait = homosexual
+				}
+			}
+			else = {
+				add_friend = ROOT
+			}
+		}
+	}
+}
+
+# Charlotte created
+character_event = {
+	id = LFNPC.1001
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		create_character = {
+		  random_traits = no
+			name = Charlotte
+			age = 20
+			female = yes
+			health = 5
+			fertility = 0.50
+			attributes = {
+				diplomacy = 12
+				martial = 3
+				learning = 12
+				stewardship = 5
+				intrigue = 3
+			}
+			dna = ahfcgajdfea
+			culture = frankish
+			religion = ROOT
+			race = frankish
+			trait = fair
+			trait = temperate
+			trait = proud
+			trait = gregarious
+			trait = poet
+			trait = greedy
+			trait = charismatic_negotiator
+			trait = lf_npc_charlotte #Charlotte's image
+			trait = lf_immortal_npc
+			flag = special_npc		
+			flag = special_chancellor
+			flag = special_spiritual
+			flag = society_join_block
+		}
+		new_character = {
+			set_global_flag = lf_created_charlotte
+			set_character_flag = lf_npc_charlotte
+			if = {
+				limit = {
+					ROOT = { has_character_flag = charlotte_lover }
+				}
+				add_lover = ROOT
+				ROOT = { clr_character_flag = charlotte_lover }
+				if = {
+					limit = {
+						ROOT = {
+							is_female = yes
+						}
+					}
+					add_trait = homosexual
+				}
+			}
+			else = {
+				add_friend = ROOT
+			}
+		}
+	}
+}
+
+# Lenora created
+character_event = {
+	id = LFNPC.1002
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		create_character = {
+			random_traits = no
+			name = "Lenora"
+			religion = ROOT
+			culture = hungarian
+			race = hungarian
+			dna = bhcdcaidaab
+			female = yes
+			age = 26
+			attributes = {
+				martial = 3
+				diplomacy = 3
+				stewardship = 12
+				intrigue = 5
+				learning = 12
+			}
+			health = 5
+			fertility = 0.50
+			trait = scholarly_theologian
+			trait = fair
+			trait = diligent
+			trait = mystic
+			trait = gregarious
+			trait = cynical
+			trait = lf_mage
+			trait = lf_npc_lenora
+			trait = lf_immortal_npc
+			flag = special_npc		
+			flag = special_treasurer
+			flag = special_spiritual
+			flag = society_join_block
+		}
+		new_character = {
+			set_character_flag = lf_npc_lenora
+			set_global_flag = lf_created_lenora
+			if = {
+				limit = {
+					ROOT = { has_character_flag = lenora_lover }
+				}
+				add_lover = ROOT
+				ROOT = { clr_character_flag = lenora_lover }
+				if = {
+					limit = {
+						ROOT = {
+							is_female = yes
+						}
+					}
+					add_trait = homosexual
+				}
+			}
+			else = {
+				add_friend = ROOT
+			}
+		}
+	}
+}
+
+# Lynness created
+character_event = {
+	id = LFNPC.1003
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		create_character = {
+			random_traits = no
+			name = "Lynness"
+			religion = ROOT
+			culture = ROOT
+			race = scottish
+			dna = aeefihleaah
+			female = yes
+			age = 24
+			attributes = {
+				martial = 12
+				diplomacy = 5
+				stewardship = 3
+				intrigue = 12
+				learning = 3
+			}
+			health = 6
+			fertility = 0.50
+			trait = intricate_webweaver # Not afraid to fight, and good at it
+			trait = fair # She is easy on the eyes
+			trait = hedonist # Enjoys all that life offers
+			trait = lustful # She enjoys physical pleasure
+			trait = proud # She can be a bit conceited at times
+			trait = gregarious # Very approachable 
+			trait = cynical # Sceptical of most religions, as she believes that she is a descendant of gods herself
+			trait = lf_npc_lynness # Custom portrait for Lynness
+			trait = lf_demon # She's a succubus
+			trait = lf_immortal_npc
+			flag = special_npc		
+			flag = special_spymaster
+			flag = special_marshal
+			flag = society_join_block
+		}
+		new_character = {
+			set_character_flag = lf_npc_lynness
+			set_global_flag = lf_created_lynness
+			if = {
+				limit = {
+					ROOT = { has_character_flag = lynness_lover }
+				}
+				add_lover = ROOT
+				ROOT = { clr_character_flag = lynness_lover }
+				if = {
+					limit = {
+						ROOT = {
+							is_female = yes
+						}
+					}
+					add_trait = homosexual
+				}
+			}
+			else = {
+				add_friend = ROOT
+			}
+		}
+	}
+}
+
+# Ying Li created
+character_event = {
+	id = LFNPC.1004
+	hide_window = yes
+	is_triggered_only = yes # .320
+	immediate = {
+		create_character = {
+		  random_traits = no
+		  name = "Ying Li"
+		  religion = ROOT
+		  culture = han
+		  race = han
+		  female = yes
+		  age = 18
+		  attributes = {
+			martial = 8
+			diplomacy = 8
+			stewardship = 8
+			intrigue = 8
+			learning = 8
+		  }
+		  health = 5
+		  fertility = 0.50
+		  trait = charismatic_negotiator
+		  trait = fair
+		  trait = proud
+		  trait = kind
+		  trait = gregarious
+		  trait = cynical
+		  trait = lf_npc_ying_li # Custom portrait for Li
+		  trait = lf_immortal_npc
+			flag = special_npc		
+			flag = special_treasurer
+			flag = special_spiritual
+			flag = special_spymaster
+			flag = special_marshal
+			flag = special_chancellor
+			flag = society_join_block
+		}
+		new_character = {
+			set_character_flag = lf_npc_li
+			set_global_flag = lf_created_li
+			if = {
+				limit = {
+					ROOT = { has_character_flag = ying_li_lover }
+				}
+				add_lover = ROOT
+				ROOT = { clr_character_flag = ying_li_lover }
+				if = {
+					limit = {
+						ROOT = {
+							is_female = yes
+						}
+					}
+					add_trait = homosexual
+				}
+			}
+			else = {
+				add_friend = ROOT
+			}
+		}
+	}
+}
+
+# Mwamba created
+character_event = {
+	id = LFNPC.1005
+	hide_window = yes
+	is_triggered_only = yes # .330
+	immediate = {
+		create_character = {
+			random_traits = no
+			name = "Mwamba"
+			religion = ROOT
+			culture = ROOT
+			race = manden
+			dna = aeffhambabb
+			female = no
+			age = 18
+			attributes = {
+				martial = 12
+				diplomacy = 5
+				stewardship = 3
+				intrigue = 8
+				learning = 3
+			}
+			health = 6
+			fertility = 0.50
+			trait = skilled_tactician # He has shown remarkable training for leading troops and in personal combat
+			trait = fair # He is viewed favorably by many women, and even a few men.
+			trait = quick # Mwamba is very smart, quick to figure things out and come up with courses of action
+			trait = robust # Mwamba is strong and healthy, very fit from an active lifestyle
+			trait = just # Seeks the fair solution
+			trait = brave # Backs down from very little
+			trait = proud # Proud of who he is and of his heritage
+			trait = west_african_leader
+			trait = lf_npc_mwamba # Custom portrait for Mwamba
+			trait = lf_immortal_npc
+			flag = special_npc		
+			flag = society_join_block
+			flag = special_marshal
+		}
+		new_character = {
+			set_character_flag = lf_npc_mwamba
+			set_global_flag = lf_created_mwamba
+			if = {
+				limit = {
+					ROOT = { has_character_flag = mwamba_lover }
+				}
+				add_lover = ROOT
+				ROOT = { clr_character_flag = mwamba_lover }
+				if = {
+					limit = {
+						ROOT = {
+							is_female = no
+						}
+					}
+					add_trait = homosexual
+				}
+			}
+			else = {
+				add_friend = ROOT
+			}
+		}
+	}
+}
+
+# Desmona created
+character_event = {
+	id = LFNPC.1006
+	ai = no # We only want the player to spawn her
+	hide_window = yes # Nothing to see here
+	is_triggered_only = yes # 
+	trigger = {
+		NOT = { has_global_flag = lf_desmona_created } # We only create her once
+	}
+	immediate = {
+		create_character = {
+			random_traits = no
+			name = Desmona
+			female = yes
+			age = 28
+			religion = ROOT
+			culture = elven
+			health = 8.0
+			historical = yes
+			trait = skilled_tactician
+			trait = fair
+			trait = strong
+			trait = patient
+			trait = lustful
+			trait = lf_elf
+			trait = lf_vampire_desmona_portrait # custom Desmona portrait
+			trait = lf_immortal_npc
+			attributes = {
+				diplomacy = 10
+				intrigue = 10
+				martial = 10
+				stewardship = 10
+				learning = 10
+			}
+			flag = lf_npc_desmona
+			flag = guru
+			flag = special_npc
+			flag = society_join_block
+			
+		}
+		new_character = {
+			add_character_modifier = {
+				name = lf_elven_infertility4
+				duration = -1
+			}			
+			set_global_flag = lf_created_desmona
+			if = {
+				limit = {
+					ROOT = {
+						has_character_flag = desmona_lover
+					}
+				}
+				add_lover = ROOT
+				if = {
+					limit = {
+						ROOT = {
+							is_female = yes
+						}
+					}
+					add_trait = homosexual
+				}
+				ROOT = {
+					clr_character_flag = desmona_lover
+				}
+			}
+			else = {
+				add_friend = ROOT
+			}
+		}
+	}
+}
+
+# Brielle created
+character_event = {
+	id = LFNPC.1007
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		create_character = {
+			name = "Brielle"
+			random_traits = no
+			religion = ROOT
+			culture = ROOT
+			dynasty = 9100000
+			female = yes
+			age = 23
+			attributes = {
+				diplomacy = 3
+				martial = 12
+				learning = 3
+				stewardship = 5
+				intrigue = 5
+			}
+			trait = skilled_tactician
+			trait = fair
+			trait = sturdy
+			trait = kind
+			trait = proud
+			trait = duelist
+			trait = lf_npc_brielle
+			trait = lf_immortal_npc
+			flag = special_npc
+			flag = society_join_block
+			flag = special_marshal
+		}
+		new_character = {
+			if = {
+				limit = {
+					ROOT = {
+						has_character_flag = brielle_lover
+					}
+				}
+				add_lover = ROOT
+				if = {
+					limit = {
+						ROOT = {
+							is_female = yes
+						}
+					}
+					add_trait = homosexual
+				}
+				ROOT = {
+					clr_character_flag = brielle_lover
+				}
+			}
+			else = {
+				add_friend = ROOT
+			}
+			save_event_target_as = lf_real_brielle
+		}
+		event_target:lf_temporary_brielle = {
+			set_character_flag = lf_never_turn_spoopy
+			death = { death_reason = death_missing }
+		}
+		set_global_flag = lf_created_brielle
+	}
+}
+		
+# Joseph created
+character_event = {
+	id = LFNPC.1008
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		create_character = {
+			name = "Joseph"
+			random_traits = no
+			religion = ROOT
+			culture = ROOT
+			dynasty = 9100001
+			female = no
+			age = 32
+			attributes = {
+				diplomacy = 4
+				martial = 12
+				learning = 4
+				stewardship = 4
+				intrigue = 4
+			}
+			trait = skilled_tactician
+			trait = fair
+			trait = quick
+			trait = strong
+			trait = brave
+			trait = duelist
+			trait = content
+			trait = groomed
+			trait = stubborn
+			trait = robust
+			trait = strategist
+			trait = hedonist
+			trait = gamer
+			trait = lefthanded
+			trait = aggressive_leader
+			trait = trickster
+			trait = organizer
+			trait = drunkard
+			trait = lf_npc_joseph
+			trait = lf_immortal_npc
+			flag = special_npc
+			flag = society_join_block
+			flag = special_marshal
+		}
+		new_character = {
+			if = {
+				limit = {
+					event_target:lf_temporary_joseph = {
+						trait = lf_angel
+					}
+				}
+				add_trait = lf_angel
+			}
+			else = {
+				add_trait = lf_demon
+			}
+			add_friend = ROOT
+		}
+		event_target:lf_temporary_joseph = {
+			set_character_flag = lf_never_turn_spoopy
+			death = { death_reason = death_missing }
+		}
+		set_global_flag = lf_created_joseph
+	}
+}
+
+#
+# A Perfectly Normal Man (Roll1d2Games Easter Egg)
+#
+
+character_event = {
+	id = LFNPC.5000
+	hide_window = yes
+	ai = no
+	is_triggered_only = yes # on_startup
+	trigger = {
+		is_save_game = no
+	}
+	immediate = {
+		character_event = { id = LFNPC.5001 days = 10 } # Enough time for the player to turn on Silly Mode
+	}
+}
+
+character_event = {
+	id = LFNPC.5001
+	hide_window = yes
+	ai = no # Kept to ensure that this only happens once with Ruler Designer characters
+	is_triggered_only = yes
+	trigger = {
+		lf_is_silly = yes
+	}
+	immediate = {
+		if = {
+			limit = {
+				c_paro = {
+					owner = {
+						NOT = { character = ROOT }
+					}
+				}
+			}
+			c_paro = {
+				culture = bodpa
+				religion = buddhist
+				owner = {
+					create_character = {
+						name = "Joris"
+						dynasty = 9100013
+						attributes = {
+							martial = 5
+							intrigue = 5
+							learning = 5
+							stewardship = 5
+							diplomacy = 5
+						}
+						age = 31
+						female = no
+						random_traits = no
+						health = 5
+						fertility = 0.5
+						religion = buddhist
+						culture = bodpa
+						race = bear
+						trait = midas_touched
+						trait = kshatriya
+						trait = strong
+						trait = genius
+						trait = vajrayana_buddhist
+						trait = lustful
+						trait = greedy
+						trait = deceitful
+						trait = cynical
+						trait = stubborn
+						trait = craven
+						flag = special_npc
+						flag = lf_never_change_race
+					}
+					new_character = {
+						save_event_target_as = perfectly_normal
+						grant_title = PREVPREV
+						set_defacto_liege = THIS
+						create_character = {
+							name = "Jorris"
+							dynasty = 9100013
+							age = 0
+							female = no
+							culture = event_target:perfectly_normal
+							religion = event_target:perfectly_normal
+							race = bear
+							trait = kshatriya
+							trait = vajrayana_buddhist
+						}
+						new_character = {
+							set_father = event_target:perfectly_normal
+						}
+						create_character = {
+							name = "Bearly"
+							dynasty = 9100013
+							age = 0
+							female = yes
+							culture = event_target:perfectly_normal
+							religion = event_target:perfectly_normal
+							race = bear
+							trait = kshatriya
+							trait = strong
+							trait = child_of_consort
+						}
+						new_character = {
+							set_father = event_target:perfectly_normal
+						}
+						recalc_succession = yes
+					}
+				}
+			}
+		}
+	}
+}
+						
+						
+						

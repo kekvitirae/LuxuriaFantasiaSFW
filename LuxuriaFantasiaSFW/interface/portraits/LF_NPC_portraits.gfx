@@ -1,0 +1,243 @@
+spriteTypes = {
+
+# Misc characters
+	spriteType = {
+		name = "GFX_portrait_lf_core_npcs"
+		texturefile = "gfx/static_portraits/LF_NPCs.dds"
+		noOfFrames = 8
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+    portraitType = {
+        name = "PORTRAIT_lf_misc_npcs_static"
+		effectFile = "gfx/FX/portrait.lua"
+        weight = {
+            additive_modifier = {
+                value = 100000
+                portrait_clothing = yes
+				OR = {
+					portrait_has_trait = lf_npc_mey
+					portrait_has_trait = lf_npc_lynness
+					portrait_has_trait = lf_npc_lenora
+					portrait_has_trait = lf_npc_ying_li
+					portrait_has_trait = lf_npc_mwamba
+					portrait_has_trait = lf_npc_asha
+					portrait_has_trait = lf_npc_charlotte
+					portrait_has_trait = lf_vampire_desmona_portrait
+				}
+	 		}
+        }
+
+        layer = {
+			"GFX_empty:p0"
+			"GFX_empty:p2"
+			"GFX_empty:c0"
+            "GFX_empty:c2"
+            "GFX_empty:c3"
+            "GFX_empty:c1"
+            "GFX_empty:c4"
+            "GFX_empty:p1:h:y"
+			"GFX_empty:p6"
+			"GFX_empty:p17"
+            "GFX_portrait_lf_core_npcs:c5"
+			"GFX_lover_overlay:p37"
+			"GFX_player_overlay:p11"
+        }
+
+        allow_property_values = {
+			0 = {
+				21 = { always = no }
+			}
+            1 = {
+				0  = { always = yes }
+            }
+            19 = {
+				0  = { always = yes }
+            }
+			33 = {
+				0  = { always = yes }
+            }
+            34 = {
+				0  = { always = yes }
+            }
+            35 = {
+				0  = { always = yes }
+            }
+            36 = {
+				0  = { always = yes }
+            }
+            6 = {
+				0  = { always = yes }
+            }
+            5 = {
+				0 = { portrait_has_trait = lf_npc_mey }
+				1 = { portrait_has_trait = lf_npc_lynness }
+				2 = { portrait_has_trait = lf_npc_lenora }
+				3 = { portrait_has_trait = lf_npc_ying_li }
+				4 = { portrait_has_trait = lf_npc_mwamba }
+				5 = { portrait_has_trait = lf_vampire_desmona_portrait }
+				6 = { portrait_has_trait = lf_npc_asha }
+				7 = { portrait_has_trait = lf_npc_charlotte }
+			}
+		}
+	}
+
+
+# Follow your dreams, you can reach your goals, I'm living proof
+	spriteType = {
+		name = "GFX_portrait_lf_beefcake"
+		texturefile = "gfx/static_portraits/LF_Beefcake.dds"
+		noOfFrames = 7
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+    portraitType = {
+        name = "PORTRAIT_lf_beefcake_npcs_static"
+		effectFile = "gfx/FX/portrait.lua"
+        weight = {
+            additive_modifier = {
+                value = 100000
+                portrait_clothing = yes
+				OR = {
+					portrait_has_trait = lf_beefcake_angel_portrait
+					portrait_has_trait = lf_beefcake_demon_portrait
+					portrait_has_trait = lf_beefcake_kitsune_portrait
+					portrait_has_trait = lf_beefcake_neko_portrait
+					portrait_has_trait = lf_beefcake_elf_portrait
+					portrait_has_trait = lf_beefcake_orc_portrait
+					portrait_has_trait = lf_beefcake_fairy_portrait
+				}
+	 		}
+        }
+
+        layer = {
+			"GFX_empty:p0"
+			"GFX_empty:p2"
+			"GFX_empty:c0"
+            "GFX_empty:c2"
+            "GFX_empty:c3"
+            "GFX_empty:c1"
+            "GFX_empty:c4"
+            "GFX_empty:p1:h:y"
+			"GFX_empty:p6"
+			"GFX_empty:p17"
+            "GFX_portrait_lf_beefcake:c5"
+			"GFX_lover_overlay:p37"
+			"GFX_player_overlay:p11"
+        }
+
+        allow_property_values = {
+			0 = {
+				21 = { always = no }
+			}
+            1 = {
+				0  = { always = yes }
+            }
+            19 = {
+				0  = { always = yes }
+            }
+			33 = {
+				0  = { always = yes }
+            }
+            34 = {
+				0  = { always = yes }
+            }
+            35 = {
+				0  = { always = yes }
+            }
+            36 = {
+				0  = { always = yes }
+            }
+            6 = {
+				0  = { always = yes }
+            }
+            5 = {
+				0 = { portrait_has_trait = lf_beefcake_angel_portrait }
+				1 = { portrait_has_trait = lf_beefcake_demon_portrait }
+				2 = { portrait_has_trait = lf_beefcake_kitsune_portrait }
+				3 = { portrait_has_trait = lf_beefcake_neko_portrait }
+				4 = { portrait_has_trait = lf_beefcake_elf_portrait }
+				5 = { portrait_has_trait = lf_beefcake_orc_portrait }
+				6 = { portrait_has_trait = lf_beefcake_fairy_portrait }
+			}
+		}
+	}
+
+	spriteType = {
+		name = "GFX_meeshka"
+		texturefile = "gfx/static_portraits/meeshka.dds"
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+    portraitType = {
+        name = "PORTRAIT_meeshka_static"
+		effectFile = "gfx/FX/portrait.lua"
+        weight = {
+            additive_modifier = {
+                value = 100000
+                portrait_clothing = yes
+				OR = {
+					portrait_has_trait = meeshka_trait
+				}
+	 		}
+        }
+
+        layer = {
+			"GFX_empty:p0"
+			"GFX_empty:p2"
+			"GFX_empty:c0"
+            "GFX_empty:c2"
+            "GFX_empty:c3"
+            "GFX_empty:c1"
+            "GFX_empty:c4"
+            "GFX_empty:p1:h:y"
+			"GFX_empty:p6"
+			"GFX_empty:p17"
+            "GFX_meeshka:c5"
+			"GFX_lover_overlay:p37"
+			"GFX_player_overlay:p11"
+        }
+
+        allow_property_values = {
+ 			0 = {
+				21 = { always = no }
+			}
+           1 = {
+				0  = { always = yes }
+            }
+            19 = {
+				0  = { always = yes }
+            }
+			33 = {
+				0  = { always = yes }
+            }
+            34 = {
+				0  = { always = yes }
+            }
+            35 = {
+				0  = { always = yes }
+            }
+            36 = {
+				0  = { always = yes }
+            }
+            6 = {
+				0  = { always = yes }
+            }
+            5 = {
+				0 = { portrait_has_trait = meeshka_portrait_trait }
+			}
+		}
+	}
+
+	spriteType = {
+		name = "GFX_trait_meeshka_trait"
+		texturefile = "gfx/traits/meeshka_trait.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+}
