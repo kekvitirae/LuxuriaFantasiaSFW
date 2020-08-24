@@ -138,7 +138,6 @@ targetted_decisions = {
 				NOR = {
 					trait = lustful
 					trait = hedonist
-					trait = lf_secret_slut
 				}
 			}
 		}		
@@ -636,7 +635,6 @@ decisions = {
 			is_not_mage = yes
 			NOR = { 
 				trait = dwse_dragon_adult 
-				trait = lf_ghost
 				trait = dwse_shapeshifted
 			}
 			lf_has_wizards = yes
@@ -648,7 +646,6 @@ decisions = {
 			is_not_mage = yes
 			NOR = {
 				trait = dwse_dragon_adult 
-				trait = lf_ghost
 				trait = dwse_shapeshifted
 			}
 		}
@@ -671,6 +668,7 @@ decisions = {
 				has_character_flag = lf_familiar_known
 				has_character_flag = lf_womb_known
 				has_character_flag = lf_snail_known
+				has_character_flag = lf_boobytrap_known
 				OR = {
 					has_character_flag = lf_cuckold_known
 					is_elf = yes
@@ -698,4 +696,65 @@ decisions = {
 		}
 	}
 		
-}	
+}
+
+settlement_decisions = {
+
+	lf_boobytrap_holding = {
+		only_playable = yes
+		filter = owned
+		ai_target_filter = owned
+		ai_check_interval = 12
+		
+		from_potential = {
+			prisoner = no
+			NOT = { is_incapable = yes }
+			NAND = {
+				has_global_flag = tont_is_started
+				is_kitsune = yes
+			}
+			is_mage = yes
+			has_character_flag = lf_boobytrap_known
+			any_artifact = {
+				artifact_type = lf_spellbook
+				is_artifact_equipped = yes
+			}
+			war = yes
+			tier = DUKE
+		}
+		potential = {
+			holder_scope = {
+				character = FROM
+			}
+			has_siege = yes
+			NOT = { has_holding_modifier = lf_boobytrapped }
+		}
+		allow = {
+			OR = {
+				holding_type = castle
+				holding_type = city
+				holding_type = temple
+				holding_type = tribal
+			}
+			FROM = {
+				NOT = { is_inaccessible_trigger = yes }
+				prisoner = no
+				custom_tooltip = { 
+					text = tt_has_enough_mana_major
+					has_enough_mana_major = yes 
+				}
+			}
+		}
+		effect = {
+			add_holding_modifier = {
+				name = lf_boobytrapped
+				years = 1
+			}
+			FROM = {
+				lf_use_major_mana = yes
+			}
+		}
+	}
+}
+			
+			

@@ -386,7 +386,7 @@ character_event = {
 			name = Perganant
 			dynasty = none
 			religion = ROOT
-			culture = ROOT
+			culture = random
 			female = yes
 			trait = mystic
 			trait = cruel
@@ -611,7 +611,7 @@ character_event = {
 character_event = {
 	id = LFChallenge.503
 	hide_window = yes
-	is_triggered_only = yes # on_post_birth
+	is_triggered_only = yes # on_birth
 	trigger = {
 		has_game_rule = { name = lf_challenges value = lf_challenges_genes }
 		any_owned_bloodline = {

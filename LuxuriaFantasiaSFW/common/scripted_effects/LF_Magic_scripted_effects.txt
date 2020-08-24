@@ -417,6 +417,12 @@ lf_add_random_spell = {
 		}
 		5 = {
 			trigger = {
+				NOT = { has_character_flag = lf_boobytrap_known }
+			}
+			set_character_flag = lf_boobytrap_known
+		}
+		5 = {
+			trigger = {
 				NOT = { has_character_flag = lf_familiar_known }
 			}
 			set_character_flag = lf_familiar_known

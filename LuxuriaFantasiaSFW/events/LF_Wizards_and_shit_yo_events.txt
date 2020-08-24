@@ -136,48 +136,6 @@ character_event = {
 
 namespace = LFSpells
 
-character_event = { # Spell of Bodily Enslavement
-	id = LFSpells.2
-	title = LFSpells2T
-	picture = {
-		trigger = {
-			is_female = no
-		}
-		picture = lf_magic_user_male
-	}
-	picture = {
-		trigger = {
-			is_female = yes
-		}
-		picture = lf_magic_user_female
-	}
-	picture = lf_a_placeholder
-	desc = LFSpells2
-	border = GFX_event_normal_frame_religion
-	is_triggered_only = yes
-
-	option = {
-		name = LFSpells2TT
-		random_list = {
-			75 = {
-				custom_tooltip = {
-					text = LFSpells2TTSuccess
-					event_target:spell_target = {
-						lf_add_slave = yes
-					}
-					character_event = { id = LFSpells.9 }
-				}			
-			}
-			25 = {
-				custom_tooltip = {
-					text = LFSpells2TTFail
-					character_event = { id = LFSpells.10 }
-				}
-			}
-		}
-	}
-}
-
 character_event = { # Spell of Heart Enslavement
 	id = LFSpells.3
 	title = LFSpells3T
@@ -563,5 +521,67 @@ character_event = {
 	}
 	option = {
 		name = LFSpells13TTB
+	}
+}
+
+character_event = {
+	id = LFSpells.14
+	desc = LFSpells14
+	picture = {
+		trigger = {
+			FROM = {
+				holder_scope = {
+					is_female = no
+				}
+			}
+		}
+		picture = lf_magic_user_male
+	}
+	picture = {
+		trigger = {
+			FROM = {
+				holder_scope = {
+					is_female = yes
+				}
+			}
+		}
+		picture = lf_magic_user_female
+	}
+	is_triggered_only = yes
+	trigger = {
+		FROM = {
+			has_holding_modifier = lf_boobytrapped
+		}
+	}
+	immediate = {
+		FROM = {
+			remove_holding_modifier = lf_boobytrapped
+		}
+		any_army = {
+			limit = {
+				location = {
+					province = FROM
+				}
+			}
+			troops = -0.25
+			morale = -0.50
+		}
+	}
+	option = {
+		name = LFSpells14TTA
+		tooltip = {
+			FROM = {
+				remove_holding_modifier = lf_boobytrapped
+			}
+			any_army = {
+				limit = {
+					location = {
+						province = FROM
+					}
+				}
+				troops = -0.25
+				morale = -0.50
+			}
+		}
 	}
 }

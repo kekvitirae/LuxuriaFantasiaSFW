@@ -123,27 +123,39 @@ LFSpellsSuccessful;The spell was cast successfully!;;;;;;;;;;;;;x
 LFSpellsFailed;The spell failed!;;;;;;;;;;;;;x
 LFSpellsMissed;The spell was cast successfully, but there were... complications.;;;;;;;;;;;;;x
 
-LFSpells12;You open the spellbook and begin flipping through the pages. The spells are listed in the form of:\nSpell Name - Valid Targets - Mana Cost - Harmful or Harmless - Races who get this for free\n\n Your current known spells are:\n\n[Spell1]\n[Spell2]\n[Spell3]\n[Spell4]\n[Spell5]\n[Spell6]\n[Spell7]\n[Spell8]\n[SillySpells];;;;;;;;;;;;;x
+LFSpells12;You open the spellbook and begin flipping through the pages. The spells are listed in the form of:\nSpell Name - Valid Targets - Mana Cost - Harmful or Harmless - Races who get this for free\n\n Your current known spells are:\n\n[Spell1]\n[Spell2]\n[Spell3]\n[Spell4]\n[Spell5]\n[Spell6]\n[Spell7]\n[Spell8]\n[Spell9][SillySpells];;;;;;;;;;;;;x
 LFSpells12T;Spellbook;;;;;;;;;;;;;x
-lf_blank_page;A blank page;;;;;;;;;;;;;x
-lf_spell_fireball;Fireball - Target: Courtier - Mana Cost: 25 - Harmful;;;;;;;;;;;;;x
-lf_spell_flamestrike;Flamestrike - Target: Ruler - Mana Cost: 50 - Harmful;;;;;;;;;;;;;x
-lf_spell_womb;Blessing of the Womb - Target: Pregnant Courtier - Mana Cost: 50 - Harmless;;;;;;;;;;;;;x
-lf_spell_familiar;Summon Familiar - Target: Self - Mana Cost: 0 - Harmless;;;;;;;;;;;;;x
-lf_spell_snail;Curse of the Snail - Target: Courtier - Mana Cost: 50 - Harmful;;;;;;;;;;;;;x
-lf_spell_cuckold;Cuckolding - Target: Courtier - Mana Cost: 25 - Harmless - Elves;;;;;;;;;;;;;x
-lf_spell_lust;[GetLilithName]'s Lust - Target: Non-Lover Courtier - Mana Cost: 25 - Harmless - Kitsune;;;;;;;;;;;;;x
-lf_spell_fairy;Fairy Fire - Target: Courtier - Mana Cost: 10 - Harmless - Fairies;;;;;;;;;;;;;x
-lf_spell_silly1;Blessing of Pepe - Target: Virgin - Mana Cost: 69 - Harmless - Incels;;;;;;;;;;;;;x
-lf_spell_silly2;Murder - Target: Jeffrey Epstein - Mana Cost: 0 - Harmful;;;;;;;;;;;;;x
-lf_spell_silly3;Lost The Game - Target: You - Mana Cost: Your Sanity - Harmful;;;;;;;;;;;;;x
-lf_spell_silly4;Sexual Awakening - Target: Child - Mana Cost: 25 - Harmful - Catholics;;;;;;;;;;;;;x
-lf_spell_silly5;Refill Food Bowl - Target: Slave - Mana Cost: Meow - Harmless - Nekos;;;;;;;;;;;;;x
+lf_blank_page;------A blank page------;;;;;;;;;;;;;x
+lf_spell_fireball;Fireball - Mana Cost: 25\n   Cast this on any courtier in range to make them fry.;;;;;;;;;;;;;x
+lf_spell_flamestrike;Flamestrike - Mana Cost: 50\n   Cast this on any ruler in range to make one of their demesne holdings lose a building.;;;;;;;;;;;;;x
+lf_spell_womb;Blessing of the Womb - Mana Cost: 50\n   Cast this on any pregnant courtier in range to give the child a chance of being born with a good trait.;;;;;;;;;;;;;x
+lf_spell_familiar;Summon Familiar - Mana Cost: 0\n   As per vanilla Summon Familiar.;;;;;;;;;;;;;x
+lf_spell_snail;Curse of the Snail - Mana Cost: 50\n   Cast this on any courtier in range to make them like a snail.;;;;;;;;;;;;;x
+lf_spell_cuckold;Cuckolding - Mana Cost: 25 - Racial Spell: Elf\n   Cast this on any courtier within range (or even a spouse!) to make them more Trusting.;;;;;;;;;;;;;x
+lf_spell_lust;[GetLilithName]'s Lust - Mana Cost: 25 - Racial Spell: Kitsune\n   Cast this on any courtier in range to ensnare them in your bed and your heart.;;;;;;;;;;;;;x
+lf_spell_trap;Booby Trap Holding - Mana Cost: 50\n   Cast on a holding of yours that is under siege to give the enemy a nasty surprise if they break through within a year.;;;;;;;;;;;;;x
+lf_spell_fairy;Fairy Fire - Mana Cost: 10 - Racial Spell: Fairy\n   Cast this on any courtier in range to give them an opinion boost of you. May have side effects on vampires.;;;;;;;;;;;;;x
+lf_spell_silly1;Blessing of Pepe - Mana Cost: 69\n   Cast this to ensure the protection of your virginity by sharing some dank maymays and complaining about women.;;;;;;;;;;;;;x
+lf_spell_silly2;Murder - Mana Cost: 0 - Racial Spell: Jeffry Epstein\n   Cast this on any courtier to instantly murder them and make it look like a suicide.;;;;;;;;;;;;;x
+lf_spell_silly3;Lost The Game - Mana Cost: Your Sanity\n   Cast this on any courtier in range to make them think of The Game.;;;;;;;;;;;;;x
+lf_spell_silly4;Sexual Awakening - Mana Cost: 25\n   Cast this on any Catholic priest and they will go on a molesting spree. Don't worry, the Church will cover it up.;;;;;;;;;;;;;x
+lf_spell_silly5;Refill Food Bowl - Mana Cost: Meow - Racial Spell: Slave\n   Meow meow meow MEOW MEOW mew meow.;;;;;;;;;;;;;x
 
 LFSpells13;The clerk running the Hall of Wizardry magic shop greets you. "Looking to buy a magical scroll to fill up your spellbook?";;;;;;;;;;;;;x
 LFSpells13TTA;Let me have a scroll.;;;;;;;;;;;;;x
 LFSpells13Random;The scroll you receive is random.;;;;;;;;;;;;;x
 LFSpells13TTB;Just browsing today, thanks.;;;;;;;;;;;;;x
+
+LFSpells14;My lord, a magical trap has been triggered when our troops entered the holding! [LFGetTrapName] are killing our troops and demoralizing the survivors!;;;;;;;;;;;;;x
+LFSpells14TTA;Blast!;;;;;;;;;;;;;x
+LFTrapName1;Fireballs;;;;;;;;;;;;;x
+LFTrapName2;Explosions;;;;;;;;;;;;;x
+LFTrapName3;Poison gas clouds;;;;;;;;;;;;;x
+LFTrapName4;Poisoned darts;;;;;;;;;;;;;x
+LFTrapName5;Summoned monsters;;;;;;;;;;;;;x
+LFTrapName6;BEEEEEEEEEEEES;;;;;;;;;;;;;x
+lf_boobytrapped;Magically Trapped;;;;;;;;;;;;;x
+lf_boobytrapped_desc;This holding has been booby trapped using magic. Woe betide anyone who assaults it.;;;;;;;;;;;;;x
 
 lf_open_spellbook;§YLuxuria:§! Open Spellbook;;;;;;;;;;;;;x
 lf_open_spellbook_desc;Open up your spellbook to examine the spells you currently own.;;;;;;;;;;;;;x

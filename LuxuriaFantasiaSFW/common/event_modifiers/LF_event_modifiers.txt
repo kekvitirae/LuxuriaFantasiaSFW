@@ -209,6 +209,10 @@ lf_sparkling_vampire = {
 	female_opinion = 10
 }
 
+lf_boobytrapped = {
+	icon = 42
+}
+
 #
 # Vampire Attack
 #

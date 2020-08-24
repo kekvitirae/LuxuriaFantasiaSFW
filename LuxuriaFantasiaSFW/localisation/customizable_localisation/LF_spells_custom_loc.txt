@@ -136,6 +136,45 @@ defined_text = {
 		}
 	}
 }
+defined_text = {
+	name = Spell9
+
+	text = {
+		localisation_key = lf_spell_trap
+		trigger = { 
+			has_character_flag = lf_boobytrap_known
+		}
+	}
+	text = {
+		localisation_key = lf_blank_page
+		trigger = { 
+			NOT = { has_character_flag = lf_boobytrap_known }
+		}
+	}
+}
+
+defined_text = {
+	name = LFGetTrapName
+
+	text = {
+		localisation_key = LFTrapName1
+	}
+	text = {
+		localisation_key = LFTrapName2
+	}
+	text = {
+		localisation_key = LFTrapName3
+	}
+	text = {
+		localisation_key = LFTrapName4
+	}
+	text = {
+		localisation_key = LFTrapName5
+	}
+	text = {
+		localisation_key = LFTrapName6
+	}
+}
 
 defined_text = {
 	name = SillySpells

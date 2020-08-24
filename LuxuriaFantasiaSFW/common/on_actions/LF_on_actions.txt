@@ -5,6 +5,7 @@ on_chronicle_start = {
 		LFMultiplayer.101 # Racial Assignment
 		LFOptions.1000 # Sets the appropriate Options Menu flags
 		LFOptions.1001 # First time Options Menu popup
+		LFNPC.5000 # A Perfectly Normal Man
 	}
 }
 
@@ -15,7 +16,6 @@ on_startup = {
 	events = {
 		LFCore.1 # Sets the global startup flag
 		LFCore.2 # Alternate Start cleanup for Blood Feud
-		LFNPC.5000 # A Perfectly Normal Man
 		LFChallenge.303 # Lucy Challenge - Cannibal trait assignment
 		LFChallenge.5 # Bad Genetics Challenge
 		LFChallenge.101 # Random Ruler - Removal of elven immortality
@@ -95,5 +95,11 @@ on_major_battle_won = {
 on_major_battle_won_leader = {
 	events = {
 		LFMisc.2 # Commander gains exp
+	}
+}
+
+on_siege_won_leader = {
+	events = {
+		LFSpells.14 # Boobytrap goes off
 	}
 }

@@ -1059,17 +1059,11 @@ narrative_event = {
 			}
 			trait = skilled_tactician
 			trait = fair
-			trait = quick
 			trait = strong
 			trait = brave
-			trait = duelist
-			trait = content
-			trait = groomed
 			trait = stubborn
 			trait = robust
 			trait = strategist
-			trait = hedonist
-			trait = gamer
 			trait = lefthanded
 			trait = aggressive_leader
 			trait = trickster
@@ -1176,20 +1170,16 @@ narrative_event = {
 	option = { # Invite Kalyian, sexytimes version
 		name = LFNPCKalyianTTD
 		set_global_flag = lf_created_kalyian
-		if = {
-			limit = {
-				has_global_flag = tentacled_dreams_active
-			}
-			custom_tooltip = {
-				text = LFNPCKalyianTD
-				event_target:lf_temporary_kalyian = { 
-					remove_trait = ambitious
-					add_trait = content
-				}
-			}
-		}
 		event_target:lf_temporary_kalyian = { 
 			add_lover = ROOT
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			event_target:lf_temporary_kalyian = {
+				remove_trait = homosexual
+			}
 		}
 	}
 	option = { # Remove Kalyian, but allow her to visit later
@@ -1246,7 +1236,6 @@ narrative_event = {
 			trait = fair
 			trait = quick
 			trait = stubborn
-			trait = lf_breeder
 			trait = hunter
 			trait = zealous
 			trait = lf_neko
@@ -1270,18 +1259,6 @@ narrative_event = {
 		}
 		add_trait = hunter
 		set_global_flag = lf_created_valri
-		if = {
-			limit = {
-				has_global_flag = tentacled_dreams_active
-			}
-			custom_tooltip = {
-				text = LFNPCValriTD
-				event_target:lf_temporary_valri = {
-					remove_trait = zealous
-					add_trait = tentacle_slave
-				}
-			}
-		}
 	}
 	option = { # Invite Valri, already a hunter
 		name = LFNPCValriTTD
@@ -1291,18 +1268,6 @@ narrative_event = {
 		change_martial = 2
 		change_intrigue = 2
 		set_global_flag = lf_created_valri
-		if = {
-			limit = {
-				has_global_flag = tentacled_dreams_active
-			}
-			custom_tooltip = {
-				text = LFNPCValriTD
-				event_target:lf_temporary_valri = {
-					remove_trait = zealous
-					add_trait = tentacle_slave
-				}
-			}
-		}
 	}
 	option = { # Remove Valri, but allow her to visit later
 		name = LFNPCValriTTB
@@ -1539,12 +1504,12 @@ character_event = {
 			}
 			health = 5
 			fertility = 0.50
-			trait = flamboyant_schemer # Likes to keep herself entertained with a little drama
-			trait = fair # She is easy on the eyes
-			trait = lustful # She oozes sex, both literally and figuratively
-			trait = greedy # She likes wealth
-			trait = diligent # She's worked hard to get where she's at in life
-			trait = gregarious # Known to be a bit chatty
+			trait = flamboyant_schemer
+			trait = fair
+			trait = lustful
+			trait = greedy
+			trait = diligent
+			trait = gregarious
 			trait = lf_npc_asha # Custom portrait for Asha
 			trait = lf_immortal_npc
 			trait = lf_insatiable
@@ -1728,15 +1693,15 @@ character_event = {
 			}
 			health = 6
 			fertility = 0.50
-			trait = intricate_webweaver # Not afraid to fight, and good at it
-			trait = fair # She is easy on the eyes
-			trait = hedonist # Enjoys all that life offers
-			trait = lustful # She enjoys physical pleasure
-			trait = proud # She can be a bit conceited at times
-			trait = gregarious # Very approachable 
-			trait = cynical # Sceptical of most religions, as she believes that she is a descendant of gods herself
+			trait = intricate_webweaver
+			trait = fair
+			trait = hedonist
+			trait = lustful
+			trait = proud
+			trait = gregarious 
+			trait = cynical
 			trait = lf_npc_lynness # Custom portrait for Lynness
-			trait = lf_demon # She's a succubus
+			trait = lf_demon
 			trait = lf_immortal_npc
 			flag = special_npc		
 			flag = special_spymaster
@@ -1775,30 +1740,30 @@ character_event = {
 	is_triggered_only = yes # .320
 	immediate = {
 		create_character = {
-		  random_traits = no
-		  name = "Ying Li"
-		  religion = ROOT
-		  culture = han
-		  race = han
-		  female = yes
-		  age = 18
-		  attributes = {
-			martial = 8
-			diplomacy = 8
-			stewardship = 8
-			intrigue = 8
-			learning = 8
-		  }
-		  health = 5
-		  fertility = 0.50
-		  trait = charismatic_negotiator
-		  trait = fair
-		  trait = proud
-		  trait = kind
-		  trait = gregarious
-		  trait = cynical
-		  trait = lf_npc_ying_li # Custom portrait for Li
-		  trait = lf_immortal_npc
+			random_traits = no
+			name = "Ying Li"
+			religion = ROOT
+			culture = han
+			race = han
+			female = yes
+			age = 18
+			attributes = {
+				martial = 8
+				diplomacy = 8
+				stewardship = 8
+				intrigue = 8
+				learning = 8
+			}
+			health = 5
+			fertility = 0.50
+			trait = charismatic_negotiator
+			trait = fair
+			trait = proud
+			trait = kind
+			trait = gregarious
+			trait = cynical
+			trait = lf_npc_ying_li # Custom portrait for Li
+			trait = lf_immortal_npc
 			flag = special_npc		
 			flag = special_treasurer
 			flag = special_spiritual
@@ -1856,13 +1821,13 @@ character_event = {
 			}
 			health = 6
 			fertility = 0.50
-			trait = skilled_tactician # He has shown remarkable training for leading troops and in personal combat
-			trait = fair # He is viewed favorably by many women, and even a few men.
-			trait = quick # Mwamba is very smart, quick to figure things out and come up with courses of action
-			trait = robust # Mwamba is strong and healthy, very fit from an active lifestyle
-			trait = just # Seeks the fair solution
-			trait = brave # Backs down from very little
-			trait = proud # Proud of who he is and of his heritage
+			trait = skilled_tactician
+			trait = fair
+			trait = quick
+			trait = robust
+			trait = just
+			trait = brave
+			trait = proud 
 			trait = west_african_leader
 			trait = lf_npc_mwamba # Custom portrait for Mwamba
 			trait = lf_immortal_npc
@@ -2056,24 +2021,17 @@ character_event = {
 			}
 			trait = skilled_tactician
 			trait = fair
-			trait = quick
 			trait = strong
 			trait = brave
-			trait = duelist
-			trait = content
-			trait = groomed
 			trait = stubborn
 			trait = robust
 			trait = strategist
-			trait = hedonist
-			trait = gamer
 			trait = lefthanded
 			trait = aggressive_leader
 			trait = trickster
 			trait = organizer
 			trait = drunkard
 			trait = lf_npc_joseph
-			trait = lf_immortal_npc
 			flag = special_npc
 			flag = society_join_block
 			flag = special_marshal

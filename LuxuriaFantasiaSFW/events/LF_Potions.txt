@@ -281,7 +281,7 @@ narrative_event = {
 			remove_character_modifier = lf_potion_temp
 			add_character_modifier = {
 				modifier = lf_potion_cd
-				years = 2
+				years = 10
 			}
 		}
 	}
