@@ -217,7 +217,6 @@ decisions = {
 			NOR = { 
 				is_incapable = yes
 				has_character_flag = lf_unimportant_shit_hidden
-				rtp_is_lower_baron = yes # Rise To Power compatibility
 			}
 			OR = {
 				lf_has_elves = yes
@@ -231,6 +230,15 @@ decisions = {
 		}
 		allow = {
 			is_ruler = yes
+			custom_tooltip = {
+				text = LFAdoptExoticTooltip
+				NOT = {
+					any_child = {
+						count = 2
+						is_alive = yes
+					}
+				}
+			}
 			scaled_wealth = { value = 1.0 min = 75 max = 250 }
 			prisoner = no
 			NOT = {

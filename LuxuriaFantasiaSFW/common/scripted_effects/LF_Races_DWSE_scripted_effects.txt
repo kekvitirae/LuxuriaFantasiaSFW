@@ -14,18 +14,6 @@ add_random_dwse_lizard_portrait = {
 		}
 		break = yes
 	}
-	if = {
-		limit = {
-			culture = dwse_dawn
-		}
-		add_random_dwse_raen_portrait = yes
-	}
-	else_if = {
-		limit = {
-			culture = dwse_dusk
-		}
-		add_random_dwse_xaela_portrait = yes
-	}
 	else = {
 		random_list = {
 			5 = {

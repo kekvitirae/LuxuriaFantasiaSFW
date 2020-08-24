@@ -148,3 +148,22 @@ character_event = {
 		}
 	}
 }
+
+#
+# Popup Greeting
+#
+
+narrative_event = {
+	id = LFMisc.3
+	picture = lf_lilith_sfw
+	desc = LFMisc3
+	title = LFMisc3T
+	is_triggered_only = yes
+	trigger = {
+		ai = no
+		NOT = { is_save_game = yes }
+	}
+	option = {
+		name = LFMisc3TTA
+	}
+}

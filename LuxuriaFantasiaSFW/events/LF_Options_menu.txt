@@ -411,15 +411,17 @@ character_event = {
 	immediate = {
 	}
 	after = {
-		character_event = { id = LFOptions.1002 }
+		any_player = {
+			character_event = { id = LFOptions.1002 days = 1 }
+		}
 	}
 }
 character_event = {
 	id = LFOptions.1002
 	is_triggered_only = yes
 	hide_window = yes
+	ai = no
 	trigger = {
-		ai = no
 		OR = {
 			AND = {
 				multiplayer = yes

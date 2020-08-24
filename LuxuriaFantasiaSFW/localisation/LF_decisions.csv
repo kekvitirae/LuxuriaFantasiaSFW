@@ -8,8 +8,9 @@ lf_change_custom_portrait_desc;Use this decision to remove a racial portrait and
 lf_portrait_is_fine;§YLuxuria§!: Portrait Is Fine;;;;;;;;;;;;;;x
 lf_portrait_is_fine_desc;Use this decision to lock in a custom portrait and remove both this and the Change Portrait decisions from the decision list.\n§RThis decision is permanent to this character.§!\nIf you accidentally choose this decision, or are not happy with your portrait later on, open up the console (tilde key) and type:\n§Yclr_char_flag portrait_is_fine§! (self)\nor:\n§Yclr_char_flag portrait_is_fine <char id>§! (other)\nTo find out someone's char id, open up the console and type §Ycharinfo§! and hover over their portrait.;;;;;;;;;;;;;;x
 #
-lf_b_recruit_exotic;Recruit an Exotic Race;;;;;;;;;;;;;x
-lf_b_recruit_exotic_desc;Though their time has long since passed, there are a few mythical races left in the world. Send an emissary to try and recruit one to your court.;;;;;;;;;;;;;x
+lf_b_recruit_exotic;Adopt an Exotic Race;;;;;;;;;;;;;x
+lf_b_recruit_exotic_desc;Through war or through other means, some mythical children have ended up in orphanages around the world. Send an emissary to try and adopt one to your family.;;;;;;;;;;;;;x
+LFAdoptExoticTooltip;Cannot have two or more living children.;;;;;;;;;;;;;x
 #
 lf_a_hide_unimportant_shit;Hide Minor LF Decisions;;;;;;;;;;;;;x
 lf_a_hide_unimportant_shit_desc;Intrigue menu getting too cluttered? Use this to temporarily hide all minor Luxuria Fantasia decisions for this character.;;;;;;;;;;;;;x

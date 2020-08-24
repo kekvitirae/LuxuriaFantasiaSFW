@@ -113,11 +113,11 @@ narrative_event = {
 				50 = {
 					create_character = {
 						random_traits = yes
-						dynasty = random
+						dynasty = ROOT
 						culture = ROOT
 						religion = ROOT
 						female = yes
-						age = 16
+						age = 0
 						trait = just
 						flag = lf_never_change_race
 					}
@@ -125,17 +125,28 @@ narrative_event = {
 				50 = {
 					create_character = {
 						random_traits = yes
-						dynasty = random
+						dynasty = ROOT
 						culture = ROOT
 						religion = ROOT
 						female = no
-						age = 16
+						age = 0
 						trait = just
 						flag = lf_never_change_race
 					}
 				}
 			}
 			new_character = {
+				if = {
+					limit = {
+						ROOT = {
+							is_female = yes
+						}
+					}
+					set_mother = ROOT
+				}
+				else = {
+					set_father = ROOT
+				}
 				lf_add_angel = yes
 				lf_add_random_angel_portrait = yes
 				save_event_target_as = invited_character
@@ -163,11 +174,11 @@ narrative_event = {
 				50 = {
 					create_character = {
 						random_traits = yes
-						dynasty = random
+						dynasty = ROOT
 						culture = ROOT
 						religion = ROOT
 						female = yes
-						age = 16
+						age = 0
 						trait = lustful
 						flag = lf_never_change_race
 					}
@@ -175,17 +186,28 @@ narrative_event = {
 				50 = {
 					create_character = {
 						random_traits = yes
-						dynasty = random
+						dynasty = ROOT
 						culture = ROOT
 						religion = ROOT
 						female = no
-						age = 16
+						age = 0
 						trait = lustful
 						flag = lf_never_change_race
 					}
 				}
 			}
 			new_character = {
+				if = {
+					limit = {
+						ROOT = {
+							is_female = yes
+						}
+					}
+					set_mother = ROOT
+				}
+				else = {
+					set_father = ROOT
+				}
 				lf_add_demon = yes
 				lf_add_random_demon_portrait = yes
 				save_event_target_as = invited_character
@@ -280,11 +302,11 @@ narrative_event = {
 				50 = {
 					create_character = {
 						random_traits = yes
-						dynasty = random
+						dynasty = ROOT
 						culture = kitsune_culture
 						religion = ROOT
 						female = yes
-						age = 16
+						age = 0
 						trait = erudite
 						flag = lf_never_change_race
 					}
@@ -292,22 +314,33 @@ narrative_event = {
 				50 = {
 					create_character = {
 						random_traits = yes
-						dynasty = random
+						dynasty = ROOT
 						culture = kitsune_culture
 						religion = ROOT
 						female = no
-						age = 16
+						age = 0
 						trait = erudite
 						flag = lf_never_change_race
 					}
 				}
 			}
 			new_character = {
+				if = {
+					limit = {
+						ROOT = {
+							is_female = yes
+						}
+					}
+					set_mother = ROOT
+				}
+				else = {
+					set_father = ROOT
+				}
 				lf_add_kitsune = yes
 				save_event_target_as = invited_character
 				lf_add_random_kitsune_portrait = yes
 			}
-		character_event = { id = NE.1 }
+			character_event = { id = NE.1 }
 		}
 		ai_chance = {
 			factor = 1
@@ -330,11 +363,11 @@ narrative_event = {
 					50 = {
 						create_character = {
 							random_traits = yes
-							dynasty = random
+							dynasty = ROOT
 							culture = neko_culture
 							religion = ROOT
 							female = yes
-							age = 16
+							age = 0
 							trait = slothful # Because cats
 							flag = lf_never_change_race
 						}
@@ -342,17 +375,28 @@ narrative_event = {
 					50 = {
 						create_character = {
 							random_traits = yes
-							dynasty = random
+							dynasty = ROOT
 							culture = neko_culture
 							religion = ROOT
 							female = no
-							age = 16
+							age = 0
 							trait = slothful
 							flag = lf_never_change_race
 						}
 					}
 				}
 				new_character = {
+					if = {
+						limit = {
+							ROOT = {
+								is_female = yes
+							}
+						}
+						set_mother = ROOT
+					}
+					else = {
+						set_father = ROOT
+					}
 					lf_add_neko = yes
 					save_event_target_as = invited_character
 					lf_add_random_neko_portrait = yes
@@ -439,11 +483,11 @@ narrative_event = {
 				50 = {
 					create_character = {
 						random_traits = yes
-						dynasty = random
+						dynasty = ROOT
 						culture = elven
 						religion = ROOT
 						female = yes
-						age = 16
+						age = 0
 						trait = proud
 						flag = lf_never_change_race
 					}
@@ -451,17 +495,28 @@ narrative_event = {
 				50 = {
 					create_character = {
 						random_traits = yes
-						dynasty = random
+						dynasty = ROOT
 						culture = elven
 						religion = ROOT
 						female = no
-						age = 16
+						age = 0
 						trait = proud
 						flag = lf_never_change_race
 					}
 				}
 			}
 			new_character = {
+				if = {
+					limit = {
+						ROOT = {
+							is_female = yes
+						}
+					}
+					set_mother = ROOT
+				}
+				else = {
+					set_father = ROOT
+				}
 				lf_add_elf = yes
 				save_event_target_as = invited_character
 				lf_add_random_elf_portrait = yes
@@ -486,11 +541,11 @@ narrative_event = {
 				50 = {
 					create_character = {
 						random_traits = yes
-						dynasty = random
+						dynasty = ROOT
 						culture = orcish
 						religion = ROOT
 						female = yes
-						age = 16
+						age = 0
 						trait = wroth
 						flag = lf_never_change_race
 					}
@@ -498,23 +553,34 @@ narrative_event = {
 				50 = {
 					create_character = {
 						random_traits = yes
-						dynasty = random
+						dynasty = ROOT
 						culture = orcish
 						religion = ROOT
 						female = no
-						age = 16
+						age = 0
 						trait = wroth
 						flag = lf_never_change_race
 					}
 				}
 			}
 			new_character = {
+				if = {
+					limit = {
+						ROOT = {
+							is_female = yes
+						}
+					}
+					set_mother = ROOT
+				}
+				else = {
+					set_father = ROOT
+				}
 				lf_add_orc = yes
 				save_event_target_as = invited_character
 				lf_add_random_orc_portrait = yes
 			}
 			character_event = { id = NE.1 }
-			}
+		}
 		ai_chance = {
 			factor = 1
 		}
@@ -525,16 +591,16 @@ narrative_event = {
 			lf_has_fairies = yes
 			ai = yes
 		}
-			hidden_tooltip = {
+		hidden_tooltip = {
 			random_list = {
 				50 = {
 					create_character = {
 						random_traits = yes
-						dynasty = random
+						dynasty = ROOT
 						culture = fae
 						religion = ROOT
 						female = yes
-						age = 16
+						age = 0
 						trait = lf_fairy
 						trait = shy
 						flag = lf_never_change_race
@@ -543,11 +609,11 @@ narrative_event = {
 				50 = {
 					create_character = {
 						random_traits = yes
-						dynasty = random
+						dynasty = ROOT
 						culture = fae
 						religion = ROOT
 						female = no
-						age = 16
+						age = 0
 						trait = lf_fairy
 						trait = shy
 						flag = lf_never_change_race
@@ -555,11 +621,22 @@ narrative_event = {
 				}
 			}
 			new_character = {
+				if = {
+					limit = {
+						ROOT = {
+							is_female = yes
+						}
+					}
+					set_mother = ROOT
+				}
+				else = {
+					set_father = ROOT
+				}
 				save_event_target_as = invited_character
 				lf_add_random_fairy_portrait = yes
 			}
 			character_event = { id = NE.1 }
-			}
+		}
 		ai_chance = {
 			factor = 1
 		}			
@@ -582,38 +659,34 @@ narrative_event = { # Male or female
 	option = { # Male angel
 		name = LFRecruitMale
 		hidden_tooltip = {
-			random_list = {
-				90 = {
-					create_character = {
-						random_traits = yes
-						dynasty = random
-						culture = ROOT
-						religion = ROOT
-						female = no
-						age = 16
-						trait = just
-						flag = lf_never_change_race
-					}
-					new_character = {
-						lf_add_angel = yes
-						lf_add_random_angel_portrait = yes
-						set_immune_to_pruning = yes
-						save_event_target_as = invited_character
-					}
-					character_event = { id = NE.1 }
-				}
-				10 = {
-					modifier = {
-						factor = 0
-						OR = {
-							has_global_flag = beefcake_angel_found
-							practical_age < 16
-							NOT = { has_global_flag = LFSpecialNPCOn }
+			create_character = {
+				random_traits = no
+				dynasty = ROOT
+				culture = ROOT
+				religion = ROOT
+				female = no
+				age = 0
+				trait = just
+				flag = lf_never_change_race
+			}
+			new_character = {
+				if = {
+					limit = {
+						ROOT = {
+							is_female = yes
 						}
 					}
-					narrative_event = { id = LFRecruit.12 }
+					set_mother = ROOT
 				}
+				else = {
+					set_father = ROOT
+				}
+				lf_add_angel = yes
+				lf_add_random_angel_portrait = yes
+				set_immune_to_pruning = yes
+				save_event_target_as = invited_character
 			}
+			character_event = { id = NE.1 }
 		}
 		ai_chance = {
 			factor = 1
@@ -623,16 +696,27 @@ narrative_event = { # Male or female
 		name = LFRecruitFemale
 		hidden_tooltip = {
 			create_character = {
-				random_traits = yes
-				dynasty = random
+				random_traits = no
+				dynasty = ROOT
 				culture = ROOT
 				religion = ROOT
 				female = yes
-				age = 16
+				age = 0
 				trait = just
 				flag = lf_never_change_race
 			}
 			new_character = {
+				if = {
+					limit = {
+						ROOT = {
+							is_female = yes
+						}
+					}
+					set_mother = ROOT
+				}
+				else = {
+					set_father = ROOT
+				}
 				lf_add_angel = yes
 				lf_add_random_angel_portrait = yes
 				set_immune_to_pruning = yes
@@ -655,38 +739,34 @@ narrative_event = { # Male or female
 	option = { # Male incubus
 		name = LFRecruitMale
 		hidden_tooltip = {
-			random_list = {
-				90 = {
-					create_character = {
-						random_traits = yes
-						dynasty = random
-						culture = ROOT
-						religion = ROOT
-						female = no
-						age = 16
-						trait = lustful
-					flag = lf_never_change_race
-					}
-					new_character = {
-						lf_add_demon = yes
-						lf_add_random_demon_portrait = yes
-						set_immune_to_pruning = yes
-						save_event_target_as = invited_character
-					}
-					character_event = { id = NE.1 }
-				}
-				10 = {
-					modifier = {
-						factor = 0
-						OR = {
-							has_global_flag = beefcake_devil_found
-							practical_age < 16
-							NOT = { has_global_flag = LFSpecialNPCOn }
+			create_character = {
+				random_traits = no
+				dynasty = ROOT
+				culture = ROOT
+				religion = ROOT
+				female = no
+				age = 0
+				trait = lustful
+				flag = lf_never_change_race
+			}
+			new_character = {
+				if = {
+					limit = {
+						ROOT = {
+							is_female = yes
 						}
 					}
-					narrative_event = { id = LFRecruit.13 }
+					set_mother = ROOT
 				}
+				else = {
+					set_father = ROOT
+				}
+				lf_add_demon = yes
+				lf_add_random_demon_portrait = yes
+				set_immune_to_pruning = yes
+				save_event_target_as = invited_character
 			}
+			character_event = { id = NE.1 }
 		}
 		ai_chance = {
 			factor = 1
@@ -696,16 +776,27 @@ narrative_event = { # Male or female
 		name = LFRecruitFemale
 		hidden_tooltip = {
 			create_character = {
-				random_traits = yes
-				dynasty = random
+				random_traits = no
+				dynasty = ROOT
 				culture = ROOT
 				religion = ROOT
 				female = yes
-				age = 16
+				age = 0
 				trait = lustful
 				flag = lf_never_change_race
 			}
 			new_character = {
+				if = {
+					limit = {
+						ROOT = {
+							is_female = yes
+						}
+					}
+					set_mother = ROOT
+				}
+				else = {
+					set_father = ROOT
+				}
 				lf_add_demon = yes
 				lf_add_random_demon_portrait = yes
 				set_immune_to_pruning = yes
@@ -728,38 +819,34 @@ narrative_event = { # Male or female
 	option = { # Male kitsune
 		name = LFRecruitMale
 		hidden_tooltip = {
-			random_list = {
-				90 = {
-					create_character = {
-						random_traits = yes
-						dynasty = random
-						culture = kitsune_culture
-						religion = ROOT
-						female = no
-						age = 16
-						trait = erudite
-						flag = lf_never_change_race
-					}
-					new_character = {
-						lf_add_kitsune = yes
-						lf_add_random_kitsune_portrait = yes
-						set_immune_to_pruning = yes
-						save_event_target_as = invited_character
-					}
-					character_event = { id = NE.1 }
-				}
-				10 = {
-					modifier = {
-						factor = 0
-						OR = {
-							has_global_flag = beefcake_kitsune_found
-							practical_age < 16
-							NOT = { has_global_flag = LFSpecialNPCOn }
+			create_character = {
+				random_traits = no
+				dynasty = ROOT
+				culture = kitsune_culture
+				religion = ROOT
+				female = no
+				age = 0
+				trait = erudite
+				flag = lf_never_change_race
+			}
+			new_character = {
+				if = {
+					limit = {
+						ROOT = {
+							is_female = yes
 						}
 					}
-					narrative_event = { id = LFRecruit.14 }
+					set_mother = ROOT
 				}
+				else = {
+					set_father = ROOT
+				}
+				lf_add_kitsune = yes
+				lf_add_random_kitsune_portrait = yes
+				set_immune_to_pruning = yes
+				save_event_target_as = invited_character
 			}
+			character_event = { id = NE.1 }
 		}
 		ai_chance = {
 			factor = 1
@@ -769,16 +856,27 @@ narrative_event = { # Male or female
 		name = LFRecruitFemale
 		hidden_tooltip = {
 			create_character = {
-				random_traits = yes
-				dynasty = random
+				random_traits = no
+				dynasty = ROOT
 				culture = kitsune_culture
 				religion = ROOT
 				female = yes
-				age = 16
+				age = 0
 				trait = erudite
 				flag = lf_never_change_race
 			}
 			new_character = {
+				if = {
+					limit = {
+						ROOT = {
+							is_female = yes
+						}
+					}
+					set_mother = ROOT
+				}
+				else = {
+					set_father = ROOT
+				}
 				lf_add_kitsune = yes
 				lf_add_random_kitsune_portrait = yes
 				set_immune_to_pruning = yes
@@ -801,38 +899,34 @@ narrative_event = { # Male or female
 	option = { # Male neko
 		name = LFRecruitMale
 		hidden_tooltip = {
-			random_list = {
-				90 = {
-					create_character = {
-						random_traits = yes
-						dynasty = random
-						culture = neko_culture
-						religion = ROOT
-						female = no
-						age = 16
-						trait = slothful
-						flag = lf_never_change_race
-					}
-					new_character = {
-						lf_add_neko = yes
-						lf_add_random_neko_portrait = yes
-						set_immune_to_pruning = yes
-						save_event_target_as = invited_character
-					}
-					character_event = { id = NE.1 }
-				}
-				10 = {
-					modifier = {
-						factor = 0
-						OR = {
-							has_global_flag = beefcake_neko_found
-							practical_age < 16
-							NOT = { has_global_flag = LFSpecialNPCOn }
+			create_character = {
+				random_traits = no
+				dynasty = ROOT
+				culture = neko_culture
+				religion = ROOT
+				female = no
+				age = 0
+				trait = slothful
+				flag = lf_never_change_race
+			}
+			new_character = {
+				if = {
+					limit = {
+						ROOT = {
+							is_female = yes
 						}
 					}
-					narrative_event = { id = LFRecruit.15 }
+					set_mother = ROOT
 				}
+				else = {
+					set_father = ROOT
+				}
+				lf_add_neko = yes
+				lf_add_random_neko_portrait = yes
+				set_immune_to_pruning = yes
+				save_event_target_as = invited_character
 			}
+			character_event = { id = NE.1 }
 		}
 		ai_chance = {
 			factor = 1
@@ -842,16 +936,27 @@ narrative_event = { # Male or female
 		name = LFRecruitFemale
 		hidden_tooltip = {
 			create_character = {
-				random_traits = yes
-				dynasty = random
+				random_traits = no
+				dynasty = ROOT
 				culture = neko_culture
 				religion = ROOT
 				female = yes
-				age = 16
+				age = 0
 				trait = slothful # Because cats
 				flag = lf_never_change_race
 			}
 			new_character = {
+				if = {
+					limit = {
+						ROOT = {
+							is_female = yes
+						}
+					}
+					set_mother = ROOT
+				}
+				else = {
+					set_father = ROOT
+				}
 				lf_add_neko = yes
 				lf_add_random_neko_portrait = yes
 				set_immune_to_pruning = yes
@@ -873,38 +978,34 @@ narrative_event = { # Male or female
 	option = { # Male elf
 		name = LFRecruitMale
 		hidden_tooltip = {
-			random_list = {
-				90 = {
-					create_character = {
-						random_traits = yes
-						dynasty = random
-						culture = elven
-						religion = ROOT
-						female = no
-						age = 16
-						trait = proud
-						flag = lf_never_change_race
-					}
-					new_character = {
-						lf_add_elf = yes
-						lf_add_random_elf_portrait = yes
-						set_immune_to_pruning = yes
-						save_event_target_as = invited_character
-					}
-					character_event = { id = NE.1 }
-				}
-				10 = {
-					modifier = {
-						factor = 0
-						OR = {
-							has_global_flag = beefcake_elf_found
-							practical_age < 16
-							NOT = { has_global_flag = LFSpecialNPCOn }
+			create_character = {
+				random_traits = no
+				dynasty = ROOT
+				culture = elven
+				religion = ROOT
+				female = no
+				age = 0
+				trait = proud
+				flag = lf_never_change_race
+			}
+			new_character = {
+				if = {
+					limit = {
+						ROOT = {
+							is_female = yes
 						}
 					}
-					narrative_event = { id = LFRecruit.16 }
+					set_mother = ROOT
 				}
+				else = {
+					set_father = ROOT
+				}
+				lf_add_elf = yes
+				lf_add_random_elf_portrait = yes
+				set_immune_to_pruning = yes
+				save_event_target_as = invited_character
 			}
+			character_event = { id = NE.1 }
 		}
 		ai_chance = {
 			factor = 1
@@ -914,17 +1015,28 @@ narrative_event = { # Male or female
 		name = LFRecruitFemale
 		hidden_tooltip = {
 			create_character = {
-				random_traits = yes
-				dynasty = random
+				random_traits = no
+				dynasty = ROOT
 				culture = elven
 				religion = ROOT
 				female = yes
-				age = 16
+				age = 0
 				trait = proud
 				flag = lf_never_change_race
 			}
 
 			new_character = {
+				if = {
+					limit = {
+						ROOT = {
+							is_female = yes
+						}
+					}
+					set_mother = ROOT
+				}
+				else = {
+					set_father = ROOT
+				}
 				lf_add_elf = yes
 				lf_add_random_elf_portrait = yes
 				set_immune_to_pruning = yes
@@ -946,38 +1058,34 @@ narrative_event = { # Male or female
 	option = { # Male orc
 		name = LFRecruitMale
 		hidden_tooltip = {
-			random_list = {
-				90 = {
-					create_character = {
-						random_traits = yes
-						dynasty = random
-						culture = orcish
-						religion = ROOT
-						female = no
-						age = 16
-						trait = wroth
-						flag = lf_never_change_race
-					}
-					new_character = {
-						lf_add_orc = yes
-						lf_add_random_orc_portrait = yes
-						set_immune_to_pruning = yes
-						save_event_target_as = invited_character
-					}
-					character_event = { id = NE.1 }
-				}
-				10 = {
-					modifier = {
-						factor = 0
-						OR = {
-							has_global_flag = beefcake_orc_found
-							practical_age < 16
-							NOT = { has_global_flag = LFSpecialNPCOn }
+			create_character = {
+				random_traits = no
+				dynasty = ROOT
+				culture = orcish
+				religion = ROOT
+				female = no
+				age = 0
+				trait = wroth
+				flag = lf_never_change_race
+			}
+			new_character = {
+				if = {
+					limit = {
+						ROOT = {
+							is_female = yes
 						}
 					}
-					narrative_event = { id = LFRecruit.17 }
+					set_mother = ROOT
 				}
+				else = {
+					set_father = ROOT
+				}
+				lf_add_orc = yes
+				lf_add_random_orc_portrait = yes
+				set_immune_to_pruning = yes
+				save_event_target_as = invited_character
 			}
+			character_event = { id = NE.1 }
 		}
 		ai_chance = {
 			factor = 1
@@ -987,17 +1095,28 @@ narrative_event = { # Male or female
 		name = LFRecruitFemale
 		hidden_tooltip = {
 			create_character = {
-				random_traits = yes
-				dynasty = random
+				random_traits = no
+				dynasty = ROOT
 				culture = orcish
 				religion = ROOT
 				female = yes
-				age = 16
+				age = 0
 				trait = wroth
 				flag = lf_never_change_race
 			}
 
 			new_character = {
+				if = {
+					limit = {
+						ROOT = {
+							is_female = yes
+						}
+					}
+					set_mother = ROOT
+				}
+				else = {
+					set_father = ROOT
+				}
 				lf_add_orc = yes
 				lf_add_random_orc_portrait = yes
 				set_immune_to_pruning = yes
@@ -1019,59 +1138,29 @@ narrative_event = { # Male or female
 	option = { # Male fairy
 		name = LFRecruitMale
 		hidden_tooltip = {
-			random_list = {
-				90 = {
-					create_character = {
-						random_traits = yes
-						dynasty = random
-						culture = fae
-						religion = ROOT
-						female = no
-						age = 16
-						trait = lf_fairy
-						trait = shy
-						flag = lf_never_change_race
-					}
-					new_character = {
-						lf_add_random_fairy_portrait = yes
-						set_immune_to_pruning = yes
-						save_event_target_as = invited_character
-					}
-					character_event = { id = NE.1 }
-				}
-				10 = {
-					modifier = {
-						factor = 0
-						OR = {
-							has_global_flag = beefcake_fairy_found
-							practical_age < 16
-							NOT = { has_global_flag = LFSpecialNPCOn }
-						}
-					}
-					narrative_event = { id = LFRecruit.18 }
-				}
-			}
-		}
-		ai_chance = {
-			factor = 1
-		}		
-	}	
-	option = { # Female fairy
-		name = LFRecruitFemale
-		hidden_tooltip = {
 			create_character = {
-				random_traits = yes
-				dynasty = random
+				random_traits = no
+				dynasty = ROOT
 				culture = fae
 				religion = ROOT
-				female = yes
-				age = 16
+				female = no
+				age = 0
 				trait = lf_fairy
 				trait = shy
 				flag = lf_never_change_race
 			}
-
 			new_character = {
+				if = {
+					limit = {
+						ROOT = {
+							is_female = yes
+						}
+					}
+					set_mother = ROOT
+				}
+				else = {
+					set_father = ROOT
+				}
 				lf_add_random_fairy_portrait = yes
 				set_immune_to_pruning = yes
 				save_event_target_as = invited_character
@@ -1081,509 +1170,42 @@ narrative_event = { # Male or female
 		ai_chance = {
 			factor = 1
 		}		
-	}
-}
-
-narrative_event = {
-	id = LFRecruit.12
-	desc = LFBeefcake12
-	picture = beefcake_angel
-	title = LFBeefcake12T
-	is_triggered_only = yes
-	
-	immediate = {
-		create_character = {
-			random_traits = no
-			name = "Kasbiel"
-			dynasty = 9100009
-			culture = ROOT
-			religion = ROOT
-			female = no
-			age = 16
-			trait = grey_eminence
-			trait = just
-			trait = fair
-			trait = strong
-			trait = robust
-			trait = groomed
-			trait = socializer
-			trait = lf_immortal_npc
-			trait = lf_beefcake_angel_portrait
-			flag = special_npc		
-		}
-		new_character = {
-			lf_add_angel = yes
-			set_immune_to_pruning = yes
-			if = {
-				limit = {
-					ROOT = {
-						is_female = no
-						trait = homosexual
-					}
-				}
-				add_trait = homosexual
-			}
-			save_event_target_as = invited_character
-
-		}
-	}
-	
-	option = {
-		name = LFOhmai
-		set_global_flag = beefcake_angel_found
-	}
-	option = {
-		name = LFOhmaigawd
-		set_global_flag = beefcake_angel_found
-		add_lover = event_target:invited_character
+	}	
+	option = { # Female fairy
+		name = LFRecruitFemale
 		hidden_tooltip = {
-			if = {
-				limit = {
-					is_female = yes
-					is_pregnant = no
-					is_married = no
-				}
-				impregnate = event_target:invited_character
+			create_character = {
+				random_traits = no
+				dynasty = ROOT
+				culture = fae
+				religion = ROOT
+				female = yes
+				age = 0
+				trait = lf_fairy
+				trait = shy
+				flag = lf_never_change_race
 			}
-			else_if = {
-				limit = {
-					is_female = yes
-					is_pregnant = no
-					is_married = yes
-				}
-				impregnate_cuckoo = event_target:invited_character
-			}
-		}
-	}
-}
 
-narrative_event = {
-	id = LFRecruit.13
-	desc = LFBeefcake13
-	picture = beefcake_devil
-	title = LFBeefcake13T
-	is_triggered_only = yes
-	
-	immediate = {
-		create_character = {
-			random_traits = no
-			name = "Therzon"
-			dynasty = 9100008
-			culture = ROOT
-			religion = ROOT
-			female = no
-			age = 16
-			trait = elusive_shadow
-			trait = lustful
-			trait = fair
-			trait = strong
-			trait = robust
-			trait = groomed
-			trait = hedonist
-			trait = lf_immortal_npc
-			trait = lf_beefcake_demon_portrait
-			flag = special_npc		
-		}
-		new_character = {
-			lf_add_demon = yes
-			set_immune_to_pruning = yes
-			if = {
-				limit = {
-					ROOT = {
-						is_female = no
-						trait = homosexual
+			new_character = {
+				if = {
+					limit = {
+						ROOT = {
+							is_female = yes
+						}
 					}
+					set_mother = ROOT
 				}
-				add_trait = homosexual
+				else = {
+					set_father = ROOT
+				}
+				lf_add_random_fairy_portrait = yes
+				set_immune_to_pruning = yes
+				save_event_target_as = invited_character
 			}
-			save_event_target_as = invited_character
+			character_event = { id = NE.1 }
 		}
-	}
-	
-	option = {
-		name = LFOhmai
-		set_global_flag = beefcake_devil_found
-	}
-	option = {
-		name = LFOhmaigawd
-		set_global_flag = beefcake_devil_found
-		add_lover = event_target:invited_character
-		hidden_tooltip = {
-			if = {
-				limit = {
-					is_female = yes
-					is_pregnant = no
-					is_married = no
-				}
-				impregnate = event_target:invited_character
-			}
-			else_if = {
-				limit = {
-					is_female = yes
-					is_pregnant = no
-					is_married = yes
-				}
-				impregnate_cuckoo = event_target:invited_character
-			}
-		}
-	}
-}
-
-narrative_event = {
-	id = LFRecruit.14
-	desc = LFBeefcake14
-	picture = beefcake_kitsune
-	title = LFBeefcake14T
-	is_triggered_only = yes
-	
-	immediate = {
-		create_character = {
-			random_traits = no
-			name = "Noriharu"
-			dynasty = 9100004
-			culture = kitsune_culture
-			religion = buddhist
-			female = no
-			age = 16
-			trait = mastermind_theologian
-			trait = erudite
-			trait = fair
-			trait = strong
-			trait = robust
-			trait = groomed
-			trait = mystic
-			trait = lf_immortal_npc
-			trait = lf_beefcake_kitsune_portrait
-			flag = special_npc		
-		}
-		new_character = {
-			lf_add_kitsune = yes
-			set_immune_to_pruning = yes
-			if = {
-				limit = {
-					ROOT = {
-						is_female = no
-						trait = homosexual
-					}
-				}
-				add_trait = homosexual
-			}
-			save_event_target_as = invited_character
-		}
-	}
-	
-	option = {
-		name = LFOhmai
-		set_global_flag = beefcake_kitsune_found
-	}
-	option = {
-		name = LFOhmaigawd
-		set_global_flag = beefcake_kitsune_found
-		add_lover = event_target:invited_character
-		hidden_tooltip = {
-			if = {
-				limit = {
-					is_female = yes
-					is_pregnant = no
-					is_married = no
-				}
-				impregnate = event_target:invited_character
-			}
-			else_if = {
-				limit = {
-					is_female = yes
-					is_pregnant = no
-					is_married = yes
-				}
-				impregnate_cuckoo = event_target:invited_character
-			}
-		}
-	}
-}
-
-narrative_event = {
-	id = LFRecruit.15
-	desc = LFBeefcake15
-	picture = beefcake_neko
-	title = LFBeefcake15T
-	is_triggered_only = yes
-	
-	immediate = {
-		create_character = {
-			random_traits = no
-			name = "Chao"
-			dynasty = 9100003
-			culture = han
-			religion = ROOT
-			female = no
-			age = 16
-			trait = midas_touched
-			trait = content
-			trait = fair
-			trait = strong
-			trait = robust
-			trait = groomed
-			trait = hunter
-			trait = lf_immortal_npc
-			trait = lf_beefcake_neko_portrait
-			flag = special_npc		
-		}
-		new_character = {
-			lf_add_neko = yes
-			set_immune_to_pruning = yes
-			if = {
-				limit = {
-					ROOT = {
-						is_female = no
-						trait = homosexual
-					}
-				}
-				add_trait = homosexual
-			}
-			save_event_target_as = invited_character
-		}
-	}
-	
-	option = {
-		name = LFOhmai
-		set_global_flag = beefcake_neko_found
-	}
-	option = {
-		name = LFOhmaigawd
-		set_global_flag = beefcake_neko_found
-		add_lover = event_target:invited_character
-		hidden_tooltip = {
-			if = {
-				limit = {
-					is_female = yes
-					is_pregnant = no
-					is_married = no
-				}
-				impregnate = event_target:invited_character
-			}
-			else_if = {
-				limit = {
-					is_female = yes
-					is_pregnant = no
-					is_married = yes
-				}
-				impregnate_cuckoo = event_target:invited_character
-			}
-		}
-	}
-}
-
-narrative_event = {
-	id = LFRecruit.16
-	desc = LFBeefcake16
-	picture = beefcake_elf
-	title = LFBeefcake16T
-	is_triggered_only = yes
-	
-	immediate = {
-		create_character = {
-			random_traits = no
-			name = "Lockesly"
-			dynasty = 9100005
-			culture = elven
-			religion = ROOT
-			female = no
-			age = 16
-			trait = grey_eminence
-			trait = proud
-			trait = fair
-			trait = strong
-			trait = robust
-			trait = groomed
-			trait = poet
-			trait = baltic_leader
-			trait = lf_immortal_npc
-			trait = lf_beefcake_elf_portrait
-			flag = special_npc		
-		}
-		new_character = {
-			lf_add_elf = yes
-			set_immune_to_pruning = yes
-			if = {
-				limit = {
-					ROOT = {
-						is_female = no
-						trait = homosexual
-					}
-				}
-				add_trait = homosexual
-			}
-			save_event_target_as = invited_character
-		}
-	}
-	
-	option = {
-		name = LFOhmai
-		set_global_flag = beefcake_elf_found
-	}
-	option = {
-		name = LFOhmaigawd
-		set_global_flag = beefcake_elf_found
-		add_lover = event_target:invited_character
-		hidden_tooltip = {
-			if = {
-				limit = {
-					is_female = yes
-					is_pregnant = no
-					is_married = no
-				}
-				impregnate = event_target:invited_character
-			}
-			else_if = {
-				limit = {
-					is_female = yes
-					is_pregnant = no
-					is_married = yes
-				}
-				impregnate_cuckoo = event_target:invited_character
-			}
-		}
-	}
-}
-
-narrative_event = {
-	id = LFRecruit.17
-	desc = LFBeefcake17
-	picture = beefcake_orc
-	title = LFBeefcake17T
-	is_triggered_only = yes
-	
-	immediate = {
-		create_character = {
-			random_traits = no
-			name = "Varguk"
-			dynasty = 9100006
-			culture = orcish
-			religion = ROOT
-			female = no
-			age = 16
-			trait = brilliant_strategist
-			trait = fair
-			trait = strong
-			trait = robust
-			trait = groomed
-			trait = unyielding_leader
-			trait = lf_immortal_npc
-			trait = lf_beefcake_orc_portrait
-			flag = special_npc		
-		}
-		new_character = {
-			lf_add_orc = yes
-			set_immune_to_pruning = yes
-			if = {
-				limit = {
-					ROOT = {
-						is_female = no
-						trait = homosexual
-					}
-				}
-				add_trait = homosexual
-			}
-			save_event_target_as = invited_character
-		}
-	}
-	
-	option = {
-		name = LFOhmai
-		set_global_flag = beefcake_orc_found
-	}
-	option = {
-		name = LFOhmaigawd
-		set_global_flag = beefcake_orc_found
-		add_lover = event_target:invited_character
-		hidden_tooltip = {
-			if = {
-				limit = {
-					is_female = yes
-					is_pregnant = no
-					is_married = no
-				}
-				impregnate = event_target:invited_character
-			}
-			else_if = {
-				limit = {
-					is_female = yes
-					is_pregnant = no
-					is_married = yes
-				}
-				impregnate_cuckoo = event_target:invited_character
-			}
-		}
-	}
-}
-
-narrative_event = {
-	id = LFRecruit.18
-	desc = LFBeefcake18
-	picture = beefcake_fairy
-	title = LFBeefcake18T
-	is_triggered_only = yes
-	
-	immediate = {
-		create_character = {
-			random_traits = no
-			name = "Silverleaf"
-			dynasty = 9100007
-			culture = fae
-			religion = ROOT
-			female = no
-			age = 16
-			trait = elusive_shadow
-			trait = lf_fairy
-			trait = fair
-			trait = strong
-			trait = robust
-			trait = groomed
-			trait = trickster
-			trait = lf_immortal_npc
-			trait = lf_beefcake_fairy_portrait
-			flag = special_npc		
-		}
-		new_character = {
-			set_immune_to_pruning = yes
-			if = {
-				limit = {
-					ROOT = {
-						is_female = no
-						trait = homosexual
-					}
-				}
-				add_trait = homosexual
-			}
-			save_event_target_as = invited_character
-		}
-	}
-	
-	option = {
-		name = LFOhmai
-		set_global_flag = beefcake_fairy_found
-	}
-	option = {
-		name = LFOhmaigawd
-		set_global_flag = beefcake_fairy_found
-		add_lover = event_target:invited_character
-		hidden_tooltip = {
-			if = {
-				limit = {
-					is_female = yes
-					is_pregnant = no
-					is_married = no
-				}
-				impregnate = event_target:invited_character
-			}
-			else_if = {
-				limit = {
-					is_female = yes
-					is_pregnant = no
-					is_married = yes
-				}
-				impregnate_cuckoo = event_target:invited_character
-			}
-		}
+		ai_chance = {
+			factor = 1
+		}		
 	}
 }
