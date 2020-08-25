@@ -2,7 +2,7 @@
 
 Differences:
 
-Initiate Sex decision is gone.
+Initiate Sex decision is gone. It is now replaced with Invite To Bed.
 Breeder, Insatiable, Futa, Masculine, and Feminine traits are gone.
 Elder Forest offmap empire is gone.
 Localisation changed to be more Safe For Work.
