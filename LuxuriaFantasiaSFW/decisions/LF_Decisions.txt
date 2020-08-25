@@ -321,6 +321,86 @@ decisions = {
 targetted_decisions = {
 
 #
+# SFW Sexytimes
+#
+
+	lf_ask_for_sexytimes = {
+		filter = all
+		ai_target_filter = none
+		ai = no
+		from_potential = {
+			NOR = {
+				trait = asexual
+				trait = celibate
+				trait = eunuch
+				is_inaccessible_trigger = yes
+				is_incapable = yes
+				has_character_flag = lf_sexytimes_temp
+			}
+			is_adult = yes
+		}
+		potential = {
+			NOT = { character = FROM }
+			is_within_diplo_range = FROM			
+			OR = {
+				is_lover = FROM
+				is_married = FROM
+				ai = no
+			}
+			NOR = {
+				trait = asexual
+				trait = celibate
+				trait = eunuch
+				is_inaccessible_trigger = yes
+				is_incapable = yes
+			}
+			is_adult = yes
+		}
+		allow = {
+			OR = {
+				AND = {
+					same_sex = FROM
+					trait = homosexual
+				}
+				AND = {
+					NOT = { same_sex = FROM }
+					NOT = { trait = homosexual }
+				}
+			}
+			NOR = {
+				trait = asexual
+				FROM = {
+					trait = asexual
+				}
+				custom_tooltip = {
+					text = LFSexytimesNoRebuke
+					has_character_modifier = lf_recently_bedded
+					has_character_modifier = lf_recently_rebuked
+				}
+				FROM = {
+					custom_tooltip = {
+						text = LFSexytimesNoRebuke
+						has_character_modifier = lf_recently_bedded
+						has_character_modifier = lf_recently_rebuked
+					}
+				}
+			}
+		}
+		effect = {
+			hidden_tooltip = {
+				save_event_target_as = lf_sexytimes_partner
+				save_event_target_as = lf_sexytimes_player
+				event_target:lf_sexytimes_player = {
+					set_character_flag = lf_sexytimes_temp
+				}
+				character_event = { id = LFSexytimes.1 }
+			}
+		}
+	}
+}
+
+
+#
 # Fix for vanilla CK2's MR republic marriage mechanics for women
 #
 

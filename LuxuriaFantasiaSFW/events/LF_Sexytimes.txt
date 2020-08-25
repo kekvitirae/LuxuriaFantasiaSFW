@@ -1,0 +1,198 @@
+namespace = LFSexytimes
+
+character_event = {
+	id = LFSexytimes.1
+	desc = {
+		trigger = {
+			event_target:lf_sexytimes_player = {
+				is_married = ROOT
+			}
+			text = LFSexytimes1Married
+		}
+	}
+	desc = {
+		trigger = {
+			event_target:lf_sexytimes_player = {
+				NOT = { is_married = ROOT }
+				is_lover = ROOT
+			}
+			text = LFSexytimes1Lover
+		}
+	}
+	desc = {
+		trigger = {
+			event_target:lf_sexytimes_player = {
+				NOT = { is_married = ROOT }
+				NOT = { is_lover = ROOT }
+			}
+			text = LFSexytimes1Player
+		}
+	}
+	picture = GFX_evt_gift
+	is_triggered_only = yes
+	option = { # Yes!
+		name = LFSexytimes1TTA
+		event_target:lf_sexytimes_player = {
+			character_event = { id = LFSexytimes.2 }
+		}
+		character_event = { id = LFSexytimes.3 }
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.2
+				OR = {
+					AND = {
+						is_lover = FROMFROM
+						NOT = { is_married = FROMFROM }
+						trait = chaste
+					}
+					trait = shy
+					trait = slow
+					trait = imbecile
+					FROM = {
+						trait = ugly
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				is_rival = FROMFROM
+			}
+		}
+	}
+	option = { # Ugh, no.
+		name = LFSexytimes1TTB
+		event_target:lf_sexytimes_player = {
+			tooltip = {
+				add_character_modifier = {
+					name = lf_sexytimes_rebuked
+					years = 1
+				}
+			}
+			character_event = { id = LFSexytimes.4 }
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.2
+				FROM = {
+					OR = {
+						trait = quick
+						trait = gregarious
+						trait = lustful
+						trait = attractive
+						trait = hedonist
+						trait = seducer
+						trait = seductress
+					}
+				}
+			}
+		}
+	}
+}
+		
+character_event = {
+	id = LFSexytimes.2
+	desc = LFSexytimes2
+	picture = GFX_evt_lovers
+	is_triggered_only = yes
+	immediate = {
+		event_target:lf_sexytimes_player = {
+			add_character_modifier = {
+				name = lf_recently_bedded
+				years = 1
+			}
+		}
+		event_target:lf_sexytimes_partner = {
+			add_character_modifier = {
+				name = lf_recently_bedded
+				years = 1
+			}
+		}
+	option = { # That was fun
+		name = LFSexytimes2TTA
+		clr_character_flag = lf_sexytimes_temp
+		tooltip = {
+			event_target:lf_sexytimes_player = {
+				add_character_modifier = {
+					name = lf_recently_bedded
+					years = 1
+				}
+			}
+			event_target:lf_sexytimes_partner = {
+				add_character_modifier = {
+					name = lf_recently_bedded
+					years = 1
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = LFSexytimes.3
+	desc = LFSexytimes3
+	picture = GFX_evt_lovers
+	is_triggered_only = yes
+	immediate = {
+		event_target:lf_sexytimes_player = {
+			add_character_modifier = {
+				name = lf_recently_bedded
+				years = 1
+			}
+		}
+		event_target:lf_sexytimes_partner = {
+			add_character_modifier = {
+				name = lf_recently_bedded
+				years = 1
+			}
+		}
+		lf_impregnate_check = yes
+	}
+	option = { # That was fun
+		name = LFSexytimes3TTA
+		clr_character_flag = lf_sexytimes_temp
+		tooltip = {
+			event_target:lf_sexytimes_player = {
+				add_character_modifier = {
+					name = lf_recently_bedded
+					years = 1
+				}
+			}
+			event_target:lf_sexytimes_partner = {
+				add_character_modifier = {
+					name = lf_recently_bedded
+					years = 1
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = LFSexytimes.4
+	desc = LFSexytimes4
+	picture = GFX_evt_quarrel
+	is_triggered_only = yes
+	immediate = {
+		event_target:lf_sexytimes_player = {
+			add_character_modifier = {
+				name = lf_recently_rebuked
+				years = 1
+			}
+			clr_character_flag = lf_sexytimes_temp
+		}
+	}
+	option = { # Oof
+		name = LFSexytimes4TTA
+		clr_character_flag = lf_sexytimes_temp
+		tooltip = {
+			event_target:lf_sexytimes_player = {
+				add_character_modifier = {
+					name = lf_recently_rebuked
+					years = 1
+				}
+			}
+		}
+	}
+}

@@ -1,3 +1,257 @@
+lf_impregnate_check = {
+	#
+	# Checking if either lovers are sterile
+	#
+
+	if = {
+		limit = {
+			OR = {
+				event_target:lf_sex_partner = { fertility <= 0 }
+				event_target:lf_sex_player = { fertility <= 0 }
+				event_target:lf_sex_player = { same_sex = event_target:lf_sex_partner }
+			}
+		}
+		break = yes
+	}
+	
+	else_if = {
+		event_target:lf_sex_player = {
+			set_variable = { 
+				which = lf_fertility 
+				value = 0 
+			}
+			export_to_variable = { 
+				which = lf_fertility 
+				value = fertility 
+			}
+			export_to_variable = { 
+				which = lf_fertility_from 
+				value = fertility 
+				who = event_target:lf_sex_partner 
+			}
+			multiply_variable = {
+				which = lf_fertility
+				value = 100
+			}
+			multiply_variable = {
+				which = lf_fertility_from
+				value = 100
+			}
+			change_variable = { 
+				which = lf_fertility
+				which = lf_fertility_from
+			}
+			divide_variable = { 
+				which = lf_fertility 
+				value = 2 
+			}
+		}
+	
+		if = {
+			limit = {
+				event_target:lf_sex_player = {
+					OR = {
+						AND = {
+							is_married = no
+							is_consort = no
+						}
+						is_consort = event_target:lf_sex_partner
+						is_married = event_target:lf_sex_partner
+					}
+				}
+			}
+			
+			# Checking fertility for randomness
+			event_target:lf_sex_player = {
+				if = {
+					limit = {
+						check_variable = { which = lf_fertility value >= 0 }
+						NOT = { check_variable = { which = lf_fertility value = 25 } }
+					}
+					event_target:lf_sex_player = {
+						random = {
+							chance = 25
+							if = {
+								limit = {
+									is_female = yes
+								}
+								impregnate_cuckoo = event_target:lf_sex_partner
+							}
+							else = {
+								event_target:lf_sex_partner = {
+									impregnate_cuckoo = event_target:lf_sex_player
+								}
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = { which = lf_fertility value >= 25 }
+						NOT = { check_variable = { which = lf_fertility value = 50 } }
+					}
+					event_target:lf_sex_player = {
+						random = {
+							chance = 50
+							if = {
+								limit = {
+									is_female = yes
+								}
+								impregnate_cuckoo = event_target:lf_sex_partner
+							}
+							else = {
+								event_target:lf_sex_partner = {
+									impregnate_cuckoo = event_target:lf_sex_player
+								}
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = { which = lf_fertility value >= 50 }
+						NOT = { check_variable = { which = lf_fertility value = 75 } }
+					}
+					event_target:lf_sex_player = {
+						random = {
+							chance = 75
+							if = {
+								limit = {
+									is_female = yes
+								}
+								impregnate_cuckoo = event_target:lf_sex_partner
+							}
+							else = {
+								event_target:lf_sex_partner = {
+									impregnate_cuckoo = event_target:lf_sex_player
+								}
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = { which = lf_fertility value >= 75 }
+					}
+					event_target:lf_sex_player = {
+						if = {
+							limit = {
+								is_female = yes
+							}
+							impregnate_cuckoo = event_target:lf_sex_partner
+						}
+						else = {
+							event_target:lf_sex_partner = {
+								impregnate_cuckoo = event_target:lf_sex_player
+							}
+						}
+					}
+				}
+			}
+		}
+
+		else_if = {
+			limit = { 
+				event_target:lf_sex_player = {
+					OR = {
+						AND = {
+							is_married = yes
+							NOT = { is_married = event_target:lf_sex_partner }
+						}
+						AND = {
+							is_consort = yes
+							NOT = { is_consort = event_target:lf_sex_partner }
+						}
+					}
+				}
+			}
+			# Checking fertility for randomness
+			event_target:lf_sex_player = {
+				if = {
+					limit = {
+						check_variable = { which = lf_fertility value >= 0 }
+						NOT = { check_variable = { which = lf_fertility value = 25 } }
+					}
+					random = {
+						chance = 25
+						if = {
+							limit = {
+								is_female = yes
+							}
+							impregnate_cuckoo = event_target:lf_sex_partner
+						}
+						else = {
+							event_target:lf_sex_partner = {
+								impregnate_cuckoo = event_target:lf_sex_player
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = { which = lf_fertility value >= 25 }
+						NOT = { check_variable = { which = lf_fertility value = 50 } }
+					}
+					random = {
+						chance = 50
+						if = {
+							limit = {
+								is_female = yes
+							}
+							impregnate_cuckoo = event_target:lf_sex_partner
+						}
+						else = {
+							event_target:lf_sex_partner = {
+								impregnate_cuckoo = event_target:lf_sex_player
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = { which = lf_fertility value >= 50 }
+						NOT = { check_variable = { which = lf_fertility value = 75 } }
+					}
+					random = {
+						chance = 75
+						if = {
+							limit = {
+								is_female = yes
+							}
+							impregnate_cuckoo = event_target:lf_sex_partner
+						}
+						else = {
+							event_target:lf_sex_partner = {
+								impregnate_cuckoo = event_target:lf_sex_player
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = { which = lf_fertility value >= 75 }
+					}
+					if = {
+						limit = {
+							is_female = yes
+						}
+						impregnate_cuckoo = event_target:lf_sex_partner
+					}
+					else = {
+						event_target:lf_sex_partner = {
+							impregnate_cuckoo = event_target:lf_sex_player
+						}
+					}
+				}
+			}
+		}
+		event_target:lf_sex_player = {
+			set_variable = { which = lf_fertility value = 0 }
+			set_variable = { which = lf_fertility_from value = 0 }
+		}
+	}
+}
+
 lf_masculine_feminine_portrait_change = {
 	hidden_tooltip = {
 		lf_remove_all_portraits = yes

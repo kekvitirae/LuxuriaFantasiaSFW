@@ -73,3 +73,24 @@ lf_battle_exp_mod_orc_desc;This character has participated in [lf_battle_exp.Get
 LFMisc3T;Luxuria Fantasia;;;;;;;;;;;;;x
 LFMisc3;Welcome to Luxuria Fantasia!\n\n  If you are seeing this message, everything has been installed correctly.\n  If you are seeing this message twice, it's because you are a Ruler Designer character and Paradox hasn't gotten off their butts and fixed the problem where your ruler and the ruler that you replaced are considered the player on the first day.\n\n  Luxuria Fantasia was not specifically made for multiplayer. It can certainly work in multiplayer games, but there may be oddities. Your mileage may vary. Please report all problems in the LL forum thread or the House Irae discord server.\n\n  The Options Menu wlll pop up in one day, and the Racial Choice events will pop up a day later. You will be able to choose to customize the Custom Religion from the intrigue menu after you choose a race (or remain human).\n\n  There are no racial seeding options outside of Random/Shattered Worlds, but AI rulers will occasionally adopt exotic races from time to time.\n\n  Thank you for playing, and have fun <3\n-Kekvit Irae;;;;;;;;;;;;;x
 LFMisc3TTA;Onward!;;;;;;;;;;;;;x
+#
+# SFW Sexytimes
+#
+lf_ask_for_sexytimes;§YLuxuria§!: Ask To Bed;;;;;;;;;;;;;x
+lf_ask_for_sexytimes_desc;Invite [From.GetFirstName] to your bed and have a little nocturnal fun.;;;;;;;;;;;;;x
+LFSexytimesNoRebuke;Has not recently rebuked, been rebuked, or was successful at asking for fun.;;;;;;;;;;;;;x
+LFSexytimes1Married;Your [lf_sexytimes_player.GetHusbandWife], [lf_sexytimes_player.GetFirstName], has invited you into [lf_sexytimes_player.GetHerHis] bed for a night of passionate lovemaking. How shall you respond?;;;;;;;;;;;;;x
+LFSexytimes1Lover;Your lover, [lf_sexytimes_player.GetFirstName], has invited you into [lf_sexytimes_player.GetHerHis] bed for a night of passionate lovemaking. How shall you respond?;;;;;;;;;;;;;x
+LFSexytimes1Player;Your otherworldly acquaintance, [lf_sexytimes_player.GetFirstName], has invited you into [lf_sexytimes_player.GetHerHis] bed for a night of passionate lovemaking. How shall you respond?;;;;;;;;;;;;;x
+LFSexytimes1TTA;Oh my, yes!;;;;;;;;;;;;;x
+LFSexytimes1TTB;Ugh, no.;;;;;;;;;;;;;x
+LFSexytimes2;[lf_sexytimes_partner.GetFirstName] accepts the invitation with a smirk on [lf_sexytimes_partner.GetHerHis] lips. Leading [lf_sexytimes_partner.GetHerHim] to the bedroom, you two only emerge several hours later soaked in sweat.;;;;;;;;;;;;;x
+LFSexytimes2TTA;That was fun!;;;;;;;;;;;;;x
+LFSexytimes3;[lf_sexytimes_player.GetFirstName] gets a grin on [lf_sexytimes_player.GetHerHis] face as [lf_sexytimes_player.GetSheHe] leads you to [lf_sexytimes_player.GetHerHis] bedroom. You both emerge several hours later soaked in sweat.;;;;;;;;;;;;;x
+LFSexytimes3TTA;That was fun!;;;;;;;;;;;;;x
+LFSexytimes4;[lf_sexytimes_partner.GetFirstName] has told you, in no uncertain terms, that [lf_sexytimes_partner.GetSheHe] does not want to spend the night with you.;;;;;;;;;;;;;x
+LFSexytimes4TTA;Oof.;;;;;;;;;;;;;x
+lf_sexytimes_bedded;Recently Had Fun;;;;;;;;;;;;;x
+lf_sexytimes_bedded_desc;This character recently had a bit of nocturnal fun and is still recovering.;;;;;;;;;;;;;x
+lf_sexytimes_rebuked;Recently Rebuked;;;;;;;;;;;;;x
+lf_sexytimes_rebuked_desc;This character was recently turned down for some fun, and will require some time before their pride heals.;;;;;;;;;;;;;x
