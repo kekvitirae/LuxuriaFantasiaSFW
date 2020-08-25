@@ -1,9 +1,3 @@
-lf_ghost = {
-	random = no
-	customizer = no
-	immortal = yes
-	fertility = -1000
-}
 lf_vampire_holyshit = {
 	random = no
 	customizer = no

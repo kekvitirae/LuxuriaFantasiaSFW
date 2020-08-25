@@ -393,6 +393,7 @@ character_event = {
 			trait = lf_npc_lynness
 		}
 		new_character = {
+			give_nickname = nick_the_witch
 			save_event_target_as = lf_witch
 		}
 	}
@@ -530,6 +531,7 @@ character_event = {
 			trait = lf_npc_lynness
 		}
 		new_character = {
+			give_nickname = nick_the_witch
 			save_event_target_as = lf_witch
 		}
 	}

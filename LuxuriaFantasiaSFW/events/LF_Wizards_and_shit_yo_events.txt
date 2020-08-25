@@ -202,7 +202,10 @@ character_event = { # Spell of Heart Enslavement
 					character_event = { id = LFSpells.9 }
 				}
 			}
-			25 = { 
+			25 = {
+				trigger = {
+					NOT = { trait = lf_kitsune }
+				}
 				custom_tooltip = { # Spell succeeds but doesn't last past the night
 					text = LFSpells3TTFail
 					if = {
@@ -363,6 +366,9 @@ character_event = { # Spell of Trusting
 		name = LFSpells7TT
 		random_list = {
 			25 = { # Spell Failed
+				trigger = {
+					NOT = { trait = lf_elf }
+				}
 				custom_tooltip = {
 					text = 	LFSpells7TTFail
 					character_event = { id = LFSpells.10 }

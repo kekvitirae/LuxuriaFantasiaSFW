@@ -1,11 +1,5 @@
-lf_wizards_summon_familiar;§YSpell:§! Summon Familiar;;;;;;;;;;;;;x
-lf_wizards_summon_familiar_desc;As a practitioner of magic, §Y[From.GetTitledFirstName]§! can summon a familiar of [From.GetHerHis] choice. This supernatural guardian will grant §Y[From.GetTitledFirstName]§! its powers by increasing [From.GetHerHis] attributes.;;;;;;;;;;;;;x
-
 lf_spell_of_fairy_fire;§YSpell:§! Fairy Fire;;;;;;;;;;;;;x
 lf_spell_of_fairy_fire_desc;As a practitioner of magic, §Y[From.GetTitledFirstName]§! can cast a spell on any courtier in [From.GetHerHis] own realm. This will make them sparkle with an unnatural- yet warm- glow. Its effects are enhanced on vampires for some reason.\nMana required to cast this spell: 10\nCurrent Mana: [From.current_mana.GetValue]/[From.max_mana.GetValue];;;;;;;;;;;;;x
-
-lf_wizards_spell_of_body_enslavement;§YSpell:§! Enslavement;;;;;;;;;;;;;x
-lf_wizards_spell_of_body_enslavement_desc;As a practitioner of magic, §Y[From.GetTitledFirstName]§! can cast a spell to enslave any courtier in [From.GetHerHis] own realm who has negative opinion of [From.GetHerHim]. This will make them a branded slave.\nMana required to cast this spell: 10\nCurrent Mana: [From.current_mana.GetValue]/[From.max_mana.GetValue];;;;;;;;;;;;;x
 
 lf_wizards_spell_of_heart_enslavement;§YSpell:§! [From.GetLilithName]'s Lust;;;;;;;;;;;;;x
 lf_wizards_spell_of_heart_enslavement_desc;As a practitioner of magic, §Y[From.GetTitledFirstName]§! can cast a spell to enslave the mind of any courtier or vassal in [From.GetHerHis] own realm who has positive opinion of [From.GetHerHim]. This will make them a lover... and potentially a parent.\nMana required to cast this spell: 10\nCurrent Mana: [From.current_mana.GetValue]/[From.max_mana.GetValue];;;;;;;;;;;;;x
@@ -18,12 +12,6 @@ lf_wizards_spell_of_flamestrike_desc;As a practitioner of magic, §Y[From.GetTitl
 
 lf_a_wizards_buy_spellbook;Buy a Spellbook;;;;;;;;;;;;;x
 lf_a_wizards_buy_spellbook_desc;Every good magic user needs a book of spells. Without a spellbook, you will be unable to cast any spells. Thankfully, your court has a wide variety of them to sell. The fancier the book, the better spells it can hold.;;;;;;;;;;;;;x
-
-LFSpells2T;LF - Spell of Enslavement;;;;;;;;;;;;;x
-LFSpells2;You add the ingredients to the cauldron and focus on your target while chanting the magic words...;;;;;;;;;;;;;x
-LFSpells2TT;Let the chains bind!;;;;;;;;;;;;;x
-LFSpells2TTSuccess;The spell succeeds!;;;;;;;;;;;;;x
-LFSpells2TTFail;The spell backfires!;;;;;;;;;;;;;x
 
 LFSpells3T;LF - Spell of [GetLilithName]'s Lust;;;;;;;;;;;;;x
 LFSpells3;You add the ingredients to the cauldron and focus on your target while chanting the magic words...;;;;;;;;;;;;;x
@@ -57,13 +45,13 @@ lf_good_spellbook_desc;Owner of a large book of spells.;;;;;;;;;;;;;x
 lf_best_spellbook;Opulent Spellbook;;;;;;;;;;;;;x
 lf_best_spellbook_desc;Owner of an enchanted book of spells.;;;;;;;;;;;;;x
 
-LFSpells7T;LF - Spell of Cuckolding;;;;;;;;;;;;;x
+LFSpells7T;LF - Spell of Trusting;;;;;;;;;;;;;x
 LFSpells7;You add the ingredients to the cauldron and focus on your target while chanting the magic words...;;;;;;;;;;;;;x
 LFSpells7TT;Let [spell_target.GetHerHim] falsely trust me!;;;;;;;;;;;;;x
 LFSpells7TTFail;The spell fails.;;;;;;;;;;;;;x
 LFSpells7TTSuccess;The spell succeeds!;;;;;;;;;;;;;x
 
-lf_wizards_spell_of_trusting;§YSpell:§! Cuckolding;;;;;;;;;;;;;x
+lf_wizards_spell_of_trusting;§YSpell:§! Trusting;;;;;;;;;;;;;x
 lf_wizards_spell_of_trusting_desc;As a practitioner of magic, §Y[From.GetTitledFirstName]§! can cast a spell to make a spouse falsely trust them.;;;;;;;;;;;;;x
 
 lf_curse_of_the_snail;§YSpell:§! Curse of the Snail;;;;;;;;;;;;;x
@@ -83,13 +71,11 @@ lf_a_yer_a_wizard_harry_desc;It is said there is a woman living inside your Wiza
 
 LFMagic3T;LF - Yer A Wizard, [Root.GetFirstName];;;;;;;;;;;;;x
 LFMagic3;The tower houses a few practitioners of the arcane arts, as well as their apprentices. The first and second floors are home to studies and libraries, and the top of the tower is home to a local astrologian. However, you are a little shocked when you are escorted by an apprentice to a previously-unknown basement level. Don't these mages live above ground?\n  You arrive at what looks to be a small cavern, lit only by floating fairy fire and fungi. The apprentice soon departs, leaving you alone with a stunningly-beautiful woman, dressed in all black with a cleavage to rival the gods. Magically-enhanced, no doubt. "Welcome to my domain, my [Root.GetLordLady]," she speaks, looking up from a book. "Word has reached me that you would like a greater understanding of the arcane arts. I do so enjoy it when someone takes an interest."\n  She gets up from where she was sitting and moves toward you. "All I ask is a little bit of your lifeforce," the woman speaks with a sinister grin on her face. Her free hand opens and a ball of blue flame appears from the palm, though it exerts no heat. "A small pittance for the power I can provide...";;;;;;;;;;;;;x
-LFMagic3Elf;The tower houses a few practitioners of the arcane arts, as well as their apprentices. The first and second floors are home to studies and libraries, and the top of the tower is home to a local astrologian. However, you are a little shocked when you are escorted by an apprentice to a previously-unknown basement level. Don't these mages live above ground?\n  You arrive at what looks to be a small cavern, lit only by floating fairy fire and fungi. The apprentice soon departs, leaving you alone with a stunningly-beautiful woman, dressed in all black with a cleavage to rival the gods. Magically enhanced, no doubt. "Welcome to my domain, my [Root.GetLordLady]," she speaks, looking up from a book. "Word has reached me that you would like a greater understanding of the arcane arts. I do so enjoy it when someone takes an interest."\n  She gets up from where she was sitting and moves toward you. "Oh, but it seems that you already have a little understanding yourself..." she quips, gently stroking your long elven ears. "I would normally ask a little of your lifeforce as payment, but I will make an exception.";;;;;;;;;;;;;x
-LFMagic3Kitsune;The tower houses a few practitioners of the arcane arts, as well as their apprentices. The first and second floors are home to studies and libraries, and the top of the tower is home to a local astrologian. However, you are a little shocked when you are escorted by an apprentice to a previously-unknown basement level. Don't these mages live above ground?\n  You arrive at what looks to be a small cavern, lit only by floating fairy fire and fungi. The apprentice soon departs, leaving you alone with a stunningly-beautiful woman, dressed in all black with a cleavage to rival the gods. Magically enhanced, no doubt. "Welcome to my domain, my [Root.GetLordLady]," she speaks, looking up from a book. "Word has reached me that you would like a greater understanding of the arcane arts. I do so enjoy it when someone takes an interest."\n  She gets up from where she was sitting and moves toward you. "Oh, but it seems that you already have a little understanding yourself..." she quips, gently stroking your fluffy fox tail. "I would normally ask a little of your lifeforce as payment, but I will make an exception.";;;;;;;;;;;;;x
-LFMagic3Fairy;The tower houses a few practitioners of the arcane arts, as well as their apprentices. The first and second floors are home to studies and libraries, and the top of the tower is home to a local astrologian. However, you are a little shocked when you are escorted by an apprentice to a previously-unknown basement level. Don't these mages live above ground?\n  You arrive at what looks to be a small cavern, lit only by floating fairy fire and fungi. The apprentice soon departs, leaving you alone with a stunningly-beautiful woman, dressed in all black with a cleavage to rival the gods. Magically enhanced, no doubt. "Welcome to my domain, my [Root.GetLordLady]," she speaks, looking up from a book. "Word has reached me that you would like a greater understanding of the arcane arts. I do so enjoy it when someone takes an interest."\n  She gets up from where she was sitting and moves toward you. "Oh, but it seems that you already have a little understanding yourself..." she quips, gently stroking your delicate fae wings. "I would normally ask a little of your lifeforce as payment, but I will make an exception.";;;;;;;;;;;;;x
+LFMagic3Elf;The tower houses a few practitioners of the arcane arts, as well as their apprentices. The first and second floors are home to studies and libraries, and the top of the tower is home to a local astrologian. However, you are a little shocked when you are escorted by an apprentice to a previously-unknown basement level. Don't these mages live above ground?\n  You arrive at what looks to be a small cavern, lit only by floating fairy fire and fungi. The apprentice soon departs, leaving you alone with a stunningly-beautiful woman, dressed in all black with a cleavage to rival the gods. Magically enhanced, no doubt. "Welcome to my domain, my [Root.GetLordLady]," she speaks, looking up from a book. "Word has reached me that you would like a greater understanding of the arcane arts. I do so enjoy it when someone takes an interest."\n  She gets up from where she was sitting and moves toward you. "Oh, but it seems that you already have a little understanding yourself..." she quips, gently stroking your long elven ears. "I would normally ask a little of your lifeforce as payment, but I will make an exception."\n\nAs an elf, you will be able to cast the Trusting spell without needing to buy it, and removing the failure chance of said spell.;;;;;;;;;;;;;x
+LFMagic3Kitsune;The tower houses a few practitioners of the arcane arts, as well as their apprentices. The first and second floors are home to studies and libraries, and the top of the tower is home to a local astrologian. However, you are a little shocked when you are escorted by an apprentice to a previously-unknown basement level. Don't these mages live above ground?\n  You arrive at what looks to be a small cavern, lit only by floating fairy fire and fungi. The apprentice soon departs, leaving you alone with a stunningly-beautiful woman, dressed in all black with a cleavage to rival the gods. Magically enhanced, no doubt. "Welcome to my domain, my [Root.GetLordLady]," she speaks, looking up from a book. "Word has reached me that you would like a greater understanding of the arcane arts. I do so enjoy it when someone takes an interest."\n  She gets up from where she was sitting and moves toward you. "Oh, but it seems that you already have a little understanding yourself..." she quips, gently stroking your fluffy fox tail. "I would normally ask a little of your lifeforce as payment, but I will make an exception."\n\nAs a kitsune, you will be able to cast the [GetLilithName]'s Lust spell without needing to buy it, and removing the failure chance of said spell.;;;;;;;;;;;;;x
+LFMagic3Fairy;The tower houses a few practitioners of the arcane arts, as well as their apprentices. The first and second floors are home to studies and libraries, and the top of the tower is home to a local astrologian. However, you are a little shocked when you are escorted by an apprentice to a previously-unknown basement level. Don't these mages live above ground?\n  You arrive at what looks to be a small cavern, lit only by floating fairy fire and fungi. The apprentice soon departs, leaving you alone with a stunningly-beautiful woman, dressed in all black with a cleavage to rival the gods. Magically enhanced, no doubt. "Welcome to my domain, my [Root.GetLordLady]," she speaks, looking up from a book. "Word has reached me that you would like a greater understanding of the arcane arts. I do so enjoy it when someone takes an interest."\n  She gets up from where she was sitting and moves toward you. "Oh, but it seems that you already have a little understanding yourself..." she quips, gently stroking your delicate fae wings. "I would normally ask a little of your lifeforce as payment, but I will make an exception."\n\nAs a fairy, you will be able to cast the Fairy Fire spell without needing to buy it.;;;;;;;;;;;;;x
 LFMagic3TTA;I accept and join the ranks of the mages.;;;;;;;;;;;;;x
 LFMagic3TTB;Erm... can I think about this a little longer?;;;;;;;;;;;;;x
-
-
 
 current_mana;current mana;;;;;;;;;;;;;x
 max_mana;maximum mana;;;;;;;;;;;;;x
@@ -103,7 +89,7 @@ tt_has_enough_mana_minor_neko;Has 8 mana if neko, 12 if not.;;;;;;;;;;;;;x
 tt_has_enough_mana_moderate_neko;Has 20 mana if neko, 30 if not.;;;;;;;;;;;;;x
 tt_has_enough_mana_major_neko;Has 40 mana if neko, 60 if not.;;;;;;;;;;;;;x
 tt_has_enough_mana_minor_elf;Has 8 mana if elf or half-elf, 12 if not.;;;;;;;;;;;;;x
-tt_has_enough_mana_moderate_elf;HHas 20 mana if elf or half-elf, 30 if not.;;;;;;;;;;;;;x
+tt_has_enough_mana_moderate_elf;Has 20 mana if elf or half-elf, 30 if not.;;;;;;;;;;;;;x
 tt_has_enough_mana_major_elf;Has 40 mana if elf or half-elf, 60 if not.;;;;;;;;;;;;;x
 tt_has_enough_mana_minor_drow;Has 8 mana if drow, 12 if not.;;;;;;;;;;;;;x
 tt_has_enough_mana_moderate_drow;Has 20 mana if drow, 30 if not.;;;;;;;;;;;;;x
@@ -117,7 +103,7 @@ lf_sparkling_vampire;This character sparkles in the sunlight. They would do well
 lf_sparkling_tt;Is not currently sparkling;;;;;;;;;;;;;x
 increased_mana_tt;Your maximum mana stores will be increased by 50. Don't forget to buy a spellbook.;;;;;;;;;;;;;x
 lf_mana_stores;LF Mana Stores;;;;;;;;;;;;;x
-lf_mana_stores_desc;Current mana: [current_mana.GetValue]/[max_mana.GetValue];;;;;;;;;;;;;x
+lf_mana_stores_desc;Current mana: [current_mana.GetValue]/[max_mana.GetValue]\nMana is regained little by little each year.;;;;;;;;;;;;;x
 
 LFSpellsSuccessful;The spell was cast successfully!;;;;;;;;;;;;;x
 LFSpellsFailed;The spell failed!;;;;;;;;;;;;;x
@@ -129,9 +115,8 @@ lf_blank_page;------A blank page------;;;;;;;;;;;;;x
 lf_spell_fireball;Fireball - Mana Cost: 25 - Cast this on any courtier in range to make them fry.;;;;;;;;;;;;;x
 lf_spell_flamestrike;Flamestrike - Mana Cost: 50 - Cast this on any ruler in range to make one of their demesne holdings lose a building.;;;;;;;;;;;;;x
 lf_spell_womb;Blessing of the Womb - Mana Cost: 50 - Cast this on any pregnant courtier in range to give the child a chance of being born with a good trait.;;;;;;;;;;;;;x
-lf_spell_familiar;Summon Familiar - Mana Cost: 0 - As per vanilla Summon Familiar.;;;;;;;;;;;;;x
 lf_spell_snail;Curse of the Snail - Mana Cost: 50 - Cast this on any courtier in range to make them like a snail.;;;;;;;;;;;;;x
-lf_spell_cuckold;Cuckolding - Mana Cost: 25 - Racial Spell: Elf - Cast this on any courtier within range (or even a spouse!) to make them more Trusting.;;;;;;;;;;;;;x
+lf_spell_cuckold;Trusting - Mana Cost: 25 - Racial Spell: Elf - Cast this on any spouse to make them trust you more, regardless of if you deserve it.;;;;;;;;;;;;;x
 lf_spell_lust;[GetLilithName]'s Lust - Mana Cost: 25 - Racial Spell: Kitsune - Cast this on any courtier in range to ensnare them in your bed and your heart.;;;;;;;;;;;;;x
 lf_spell_trap;Booby Trap Holding - Mana Cost: 50 - Cast on a holding of yours that is under siege to give the enemy a nasty surprise if they break through within a year.;;;;;;;;;;;;;x
 lf_spell_fairy;Fairy Fire - Mana Cost: 10 - Racial Spell: Fairy - Cast this on any courtier in range to give them an opinion boost of you. May have side effects on vampires.;;;;;;;;;;;;;x

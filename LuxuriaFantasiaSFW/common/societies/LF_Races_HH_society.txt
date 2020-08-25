@@ -15,9 +15,8 @@ lf_society_seduction = {
 	
 	can_join_society = {
 		hidden_trigger = {
-			NOR = {
+			NOT = {
 				trait = houseirae_matron_mother
-				trait = lf_ghost
 			}
 			NAND = {
 				ai = yes
