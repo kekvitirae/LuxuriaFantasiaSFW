@@ -84,8 +84,10 @@ defined_text = {
 	text = {
 		localisation_key = lf_spell_cuckold
 		trigger = { 
-			has_character_flag = lf_cuckold_known
-			is_elf = yes
+			OR = {
+				has_character_flag = lf_cuckold_known
+				is_elf = yes
+			}
 		}
 	}
 	text = {

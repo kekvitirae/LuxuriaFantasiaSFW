@@ -484,7 +484,7 @@ character_event = {
 narrative_event = {
 	id = LFSpells.12
 	desc = LFSpells12
-	picture = lf_mage_trait
+	picture = lf_potion_seller
 	title = LFSpells12T
 	
 	is_triggered_only = yes

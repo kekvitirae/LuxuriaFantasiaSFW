@@ -19,53 +19,6 @@ targetted_decisions = {
 		}
 	}
 
-	lf_wizards_summon_familiar = {
-		filter = self
-		ai_target_filter = self
-		ai_check_interval = 240
-		potential = {
-			prisoner = no
-			NOT = { is_incapable = yes }
-			character = FROM
-			is_mage = yes
-			has_character_flag = lf_familiar_known
-			NOR = {
-				has_character_modifier = wolf_familiar
-				has_character_modifier = cat_familiar
-				has_character_modifier = owl_familiar
-				has_character_modifier = raven_familiar			
-			}
-		}
-
-		allow = {
-			is_mage = yes
-		}
-
-		effect = {
-			hidden_effect = {
-				add_character_modifier = {
-					name = summon_familiar_cooldown
-					years = 5
-					hidden = yes
-				}
-				character_event = { id = MNM.7815 }
-			}
-		}
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				OR = {
-					has_character_modifier = wolf_familiar
-					has_character_modifier = cat_familiar
-					has_character_modifier = owl_familiar
-					has_character_modifier = raven_familiar
-				}
-			}
-		}
-	}
-	
 	lf_wizards_spell_of_trusting = {
 		filter = spouse
 		ai_target_filter = spouse
@@ -665,7 +618,6 @@ decisions = {
 			NAND = {
 				has_character_flag = lf_fireball_known
 				has_character_flag = lf_flamestrike_known
-				has_character_flag = lf_familiar_known
 				has_character_flag = lf_womb_known
 				has_character_flag = lf_snail_known
 				has_character_flag = lf_boobytrap_known
