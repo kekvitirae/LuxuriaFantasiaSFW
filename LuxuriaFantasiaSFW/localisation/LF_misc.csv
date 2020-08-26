@@ -78,7 +78,7 @@ LFMisc3TTA;Onward!;;;;;;;;;;;;;x
 #
 lf_ask_for_sexytimes;§YLuxuria§!: Ask To Bed;;;;;;;;;;;;;x
 lf_ask_for_sexytimes_desc;Invite [From.GetFirstName] to your bed and have a little nocturnal fun.;;;;;;;;;;;;;x
-LFSexytimesNoRebuke;Has not recently rebuked, been rebuked, or was successful at asking for fun.;;;;;;;;;;;;;x
+LFSexytimesNoRebuke;Has not recently been rebuked or was successful at asking for fun.;;;;;;;;;;;;;x
 LFSexytimes1Married;Your [lf_sexytimes_player.GetHusbandWife], [lf_sexytimes_player.GetFirstName], has invited you into [lf_sexytimes_player.GetHerHis] bed for a night of passionate lovemaking. How shall you respond?;;;;;;;;;;;;;x
 LFSexytimes1Lover;Your lover, [lf_sexytimes_player.GetFirstName], has invited you into [lf_sexytimes_player.GetHerHis] bed for a night of passionate lovemaking. How shall you respond?;;;;;;;;;;;;;x
 LFSexytimes1Player;Your otherworldly acquaintance, [lf_sexytimes_player.GetFirstName], has invited you into [lf_sexytimes_player.GetHerHis] bed for a night of passionate lovemaking. How shall you respond?;;;;;;;;;;;;;x

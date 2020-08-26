@@ -345,6 +345,7 @@ targetted_decisions = {
 			OR = {
 				is_lover = FROM
 				is_married = FROM
+				is_consort = FROM
 				ai = no
 			}
 			NOR = {
