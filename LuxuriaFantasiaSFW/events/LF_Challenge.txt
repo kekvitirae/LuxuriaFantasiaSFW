@@ -7,111 +7,23 @@ namespace = LFChallenge
 
 character_event = {
 	id = LFChallenge.1
-	desc = {
-		trigger = {
-			has_character_flag = lf_randomize
-		}
-		text = LFChallenge1Random
-	}
-	desc = {
-		trigger = {
-			has_character_flag = lf_stay
-		}
-		text = LFChallenge1Stay
-	}
-	picture = lf_magic_user_female
+	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
 		has_game_rule = { name = lf_challenges value = lf_challenges_random }
 		ai = no
 	}
 	immediate = {
-		random_list = {
-			50 = {
-				set_character_flag = lf_randomize
+		save_event_target_as = lf_previous_ruler
+		random_playable_ruler = {
+			limit = {
+				ai = yes
+				is_adult = yes
 			}
-			50 = {
-				set_character_flag = lf_stay
+			ROOT = {
+				set_player_character = PREV
 			}
-		}
-	}
-	option = {
-		name = {
-			trigger = {
-				has_character_flag = lf_stay
-			}
-			text = LFChallenge1TTA
-		}
-		name = {
-			trigger = {
-				has_character_flag = lf_random
-			}
-			text = LFChallenge1TTB
-		}
-		
-		hidden_tooltip = {
-			if = {
-				limit = {
-					has_character_flag = lf_randomize
-				}
-				random_playable_ruler = {
-					limit = {
-						ai = no
-						is_adult = yes
-					}
-					save_event_target_as = random_ruler
-					if = {
-						limit = {
-							is_married = yes
-						}
-						spouse = {
-							save_event_target_as = random_spouse
-						}
-					}
-					create_character = {
-						dynasty = THIS
-						religion = THIS
-						culture = THIS
-						race = THIS
-						age = 0
-					}
-					new_character = {
-						if = {
-							limit = {
-								event_target:random_ruler = {
-									is_female = yes
-								}
-							}
-							set_mother = event_target:random_ruler
-						}
-						else = {
-							set_father = event_target:random_ruler
-						}
-						if = {
-							limit = {
-								event_target:random_ruler = {
-									is_female = yes
-									is_married = yes
-								}
-							}
-							set_father = event_target:random_spouse
-						}
-						else_if = {
-							limit = {
-								event_target:random_ruler = {
-									is_female = no
-									is_married = yes
-								}
-							}
-							set_mother = event_target:random_spouse
-						}
-						ROOT = {
-							set_player_character = PREV
-						}
-					}
-				}
-			}
-			sound_effect = child_born
+			character_event = { id = LFChallenge.103 }
 		}
 	}
 }
@@ -124,7 +36,6 @@ character_event = {
 	trigger = {
 		NOT = { has_global_flag = lf_random_started }
 		has_game_rule = { name = lf_challenges value = lf_challenges_random } 
-		is_save_game = no
 	}
 	immediate = {
 		set_global_flag = lf_random_started
@@ -152,7 +63,28 @@ character_event = {
 		}
 	}
 }
-			
+
+character_event = {
+	id = LFChallenge.103
+	desc = LFChallenge1Random
+	portrait = event_target:lf_previous_ruler
+	is_triggered_only = yes
+	picture = lf_magic_user_female
+	trigger = {
+		has_game_rule = { name = lf_challenges value = lf_challenges_random }
+		ai = no
+	}
+	option = {
+		name = {
+			trigger = {
+				event_target:lf_previous_ruler = {
+					has_character_flag = lf_random
+				}
+			}
+			text = LFChallenge1TTB
+		}
+	}
+}			
 
 #
 # Gender Bender Challenge
@@ -377,7 +309,6 @@ character_event = {
 	trigger = {
 		has_game_rule = { name = lf_challenges value = lf_challenges_lucy }
 		NOT = { has_global_flag = lf_lucy_started }
-		is_save_game = no
 	}
 	immediate = {
 		set_global_flag = lf_lucy_started
@@ -515,7 +446,6 @@ character_event = {
 	trigger = {
 		has_game_rule = { name = lf_challenges value = lf_challenges_genes }
 		NOT = { has_global_flag = lf_genes_started }
-		is_save_game = no
 	}
 	immediate = {
 		set_global_flag = lf_genes_started

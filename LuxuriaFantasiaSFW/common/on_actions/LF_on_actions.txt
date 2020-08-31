@@ -7,6 +7,9 @@ on_chronicle_start = {
 		LFOptions.1001 # First time Options Menu popup
 		LFNPC.5000 # A Perfectly Normal Man
 		LFMisc.3 # Popup greetings
+		LFChallenge.303 # Lucy Challenge - Cannibal trait assignment
+		LFChallenge.5 # Bad Genetics Challenge
+		LFChallenge.101 # Random Ruler - Removal of elven immortality
 	}
 }
 
@@ -17,9 +20,6 @@ on_startup = {
 	events = {
 		LFCore.1 # Sets the global startup flag
 		LFCore.2 # Alternate Start cleanup for Blood Feud
-		LFChallenge.303 # Lucy Challenge - Cannibal trait assignment
-		LFChallenge.5 # Bad Genetics Challenge
-		LFChallenge.101 # Random Ruler - Removal of elven immortality
 	}
 }
 

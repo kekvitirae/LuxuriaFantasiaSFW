@@ -382,9 +382,6 @@ character_event = { # on_startup flag setting
 	id = LFOptions.1000
 	is_triggered_only = yes
 	hide_window = yes
-	trigger = {
-		is_save_game = no
-	}
 	immediate = {
 		set_global_flag = LFHHOn
 		set_global_flag = LFFaeOn

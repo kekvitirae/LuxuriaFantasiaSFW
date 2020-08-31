@@ -6,7 +6,6 @@ character_event = {
 	is_triggered_only = yes # on_chronicle_start
 	trigger = {
 		NOR = {
-			is_save_game = yes
 			has_global_flag = lf_multiplayer_race_chosen
 			has_global_flag = lf_singleplayer_setup_done
 		}
