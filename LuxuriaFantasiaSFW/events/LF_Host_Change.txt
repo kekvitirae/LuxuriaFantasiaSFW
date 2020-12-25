@@ -85,7 +85,7 @@ character_event = {
 				}
 				dwse_lizard = {
 					ROOT = {
-						character_event = { id = LFSeeding.11 }
+						character_event = { id = LFSeeding.15 }
 					}
 				}
 				dwse_dragon_adult = {
