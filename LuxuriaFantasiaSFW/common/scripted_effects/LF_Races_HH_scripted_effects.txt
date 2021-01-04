@@ -227,211 +227,104 @@ lf_add_random_demon_portrait = {
 		break = yes
 	}
 	random_list = {
+	
+		#
+		# Females
+		#
+		
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						trait = masculine
-					}
-					AND = {
-						is_female = no
-						NOT = { trait = feminine }
-					}
-				}
+				is_female = no
 			}
 			add_trait = demon_portrait1_cheri
 		}
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						trait = masculine
-					}
-					AND = {
-						is_female = no
-						NOT = { trait = feminine }
-					}
-				}
+				is_female = no
 			}
 			add_trait = demon_portrait2_cheri 
 		}
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						trait = masculine
-					}
-					AND = {
-						is_female = no
-						NOT = { trait = feminine }
-					}
-				}
+				is_female = no
 			}
 			add_trait = demon_portrait3_cheri 
 		}
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						trait = masculine
-					}
-					AND = {
-						is_female = no
-						NOT = { trait = feminine }
-					}
-				}
+				is_female = no
 			}
 			add_trait = demon_portrait4_cheri
 		}
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						trait = masculine
-					}
-					AND = {
-						is_female = no
-						NOT = { trait = feminine }
-					}
-				}
+				is_female = no
 			}
 			add_trait = demon_portrait5_cheri
 		}
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						trait = masculine
-					}
-					AND = {
-						is_female = no
-						NOT = { trait = feminine }
-					}
-				}
+				is_female = no
 			}
 			add_trait = demon_portrait6_cheri
 		}
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						trait = masculine
-					}
-					AND = {
-						is_female = no
-						NOT = { trait = feminine }
-					}
-				}
+				is_female = no
 			}
 			add_trait = demon_portrait7_cheri
 		}
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						trait = masculine
-					}
-					AND = {
-						is_female = no
-						NOT = { trait = feminine }
-					}
-				}
+				is_female = no
 			}
 			add_trait = demon_portrait8_cheri
 		}
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						trait = masculine
-					}
-					AND = {
-						is_female = no
-						NOT = { trait = feminine }
-					}
-				}
+				is_female = no
 			}
 			add_trait = demon_portrait9_cheri
 		}
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						trait = masculine
-					}
-					AND = {
-						is_female = no
-						NOT = { trait = feminine }
-					}
-				}
+				is_female = no
 			}
 			add_trait = demon_portrait10_cheri
 		}
+		
+		#
+		# Males
+		#
+		
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						NOT = { trait = masculine }
-					}
-					AND = {
-						is_female = no
-						trait = feminine
-					}
-				}
+				is_female = yes
 			}
 			add_trait = demon_portrait11 
 		}
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						NOT = { trait = masculine }
-					}
-					AND = {
-						is_female = no
-						trait = feminine
-					}
-				}
+				is_female = yes
 			}
 			add_trait = demon_portrait12 
 		}
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						NOT = { trait = masculine }
-					}
-					AND = {
-						is_female = no
-						trait = feminine
-					}
-				}
+				is_female = yes
 			}
 			add_trait = demon_portrait13 
 		}
@@ -439,112 +332,49 @@ lf_add_random_demon_portrait = {
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						NOT = { trait = masculine }
-					}
-					AND = {
-						is_female = no
-						trait = feminine
-					}
-				}
+				is_female = yes
 			}
 			add_trait = demon_portrait14
 		}
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						NOT = { trait = masculine }
-					}
-					AND = {
-						is_female = no
-						trait = feminine
-					}
-				}
+				is_female = yes
 			}
 			add_trait = demon_portrait15 
 		}
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						NOT = { trait = masculine }
-					}
-					AND = {
-						is_female = no
-						trait = feminine
-					}
-				}
+				is_female = yes
 			}
 			add_trait = demon_portrait16 
 		}
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						NOT = { trait = masculine }
-					}
-					AND = {
-						is_female = no
-						trait = feminine
-					}
-				}
+				is_female = yes
 			}
 			add_trait = demon_portrait17 
 		}
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						NOT = { trait = masculine }
-					}
-					AND = {
-						is_female = no
-						trait = feminine
-					}
-				}
+				is_female = yes
 			}
 			add_trait = demon_portrait18 
 		}
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						NOT = { trait = masculine }
-					}
-					AND = {
-						is_female = no
-						trait = feminine
-					}
-				}
+				is_female = yes
 			}
 			add_trait = demon_portrait19 
 		}
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						NOT = { trait = masculine }
-					}
-					AND = {
-						is_female = no
-						trait = feminine
-					}
-				}
+				is_female = yes
 			}
 			add_trait = demon_portrait20 
 		}
@@ -582,211 +412,104 @@ lf_add_random_angel_portrait = {
 		break = yes
 	}
 	random_list = {
+		
+		#
+		# Females
+		#
+		
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						trait = masculine
-					}
-					AND = {
-						is_female = no
-						NOT = { trait = feminine }
-					}
-				}
+				is_female = no
 			}
 			add_trait = angel_portrait1_cheri
 		}
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						trait = masculine
-					}
-					AND = {
-						is_female = no
-						NOT = { trait = feminine }
-					}
-				}
+				is_female = no
 			}
 			add_trait = angel_portrait2_cheri 
 		}
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						trait = masculine
-					}
-					AND = {
-						is_female = no
-						NOT = { trait = feminine }
-					}
-				}
+				is_female = no
 			}
 			add_trait = angel_portrait3_cheri 
 		}
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						trait = masculine
-					}
-					AND = {
-						is_female = no
-						NOT = { trait = feminine }
-					}
-				}
+				is_female = no
 			}
 			add_trait = angel_portrait4_cheri
 		}
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						trait = masculine
-					}
-					AND = {
-						is_female = no
-						NOT = { trait = feminine }
-					}
-				}
+				is_female = no
 			}
 			add_trait = angel_portrait5_cheri
 		}
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						trait = masculine
-					}
-					AND = {
-						is_female = no
-						NOT = { trait = feminine }
-					}
-				}
+				is_female = no
 			}
 			add_trait = angel_portrait6_cheri
 		}
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						trait = masculine
-					}
-					AND = {
-						is_female = no
-						NOT = { trait = feminine }
-					}
-				}
+				is_female = no
 			}
 			add_trait = angel_portrait7_cheri
 		}
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						trait = masculine
-					}
-					AND = {
-						is_female = no
-						NOT = { trait = feminine }
-					}
-				}
+				is_female = no
 			}
 			add_trait = angel_portrait8_cheri
 		}
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						trait = masculine
-					}
-					AND = {
-						is_female = no
-						NOT = { trait = feminine }
-					}
-				}
+				is_female = no
 			}
 			add_trait = angel_portrait9_cheri
 		}
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						trait = masculine
-					}
-					AND = {
-						is_female = no
-						NOT = { trait = feminine }
-					}
-				}
+				is_female = no
 			}
 			add_trait = angel_portrait10_cheri
 		}
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						trait = masculine
-					}
-					AND = {
-						is_female = no
-						NOT = { trait = feminine }
-					}
-				}
+				is_female = no
 			}
 			add_trait = angel_portrait11_cheri
 		}
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						trait = masculine
-					}
-					AND = {
-						is_female = no
-						NOT = { trait = feminine }
-					}
-				}
+				is_female = no
 			}
 			add_trait = angel_portrait12_cheri
 		}
+		
+		#
+		# Males
+		#
+		
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						NOT = { trait = masculine }
-					}
-					AND = {
-						is_female = no
-						trait = feminine
-					}
-				}
+				is_female = yes
 			}
 			add_trait = angel_portrait13 
 		}
@@ -794,176 +517,77 @@ lf_add_random_angel_portrait = {
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						NOT = { trait = masculine }
-					}
-					AND = {
-						is_female = no
-						trait = feminine
-					}
-				}
+				is_female = yes
 			}
 			add_trait = angel_portrait14
 		}
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						NOT = { trait = masculine }
-					}
-					AND = {
-						is_female = no
-						trait = feminine
-					}
-				}
+				is_female = yes
 			}
 			add_trait = angel_portrait15 
 		}
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						NOT = { trait = masculine }
-					}
-					AND = {
-						is_female = no
-						trait = feminine
-					}
-				}
+				is_female = yes
 			}
 			add_trait = angel_portrait16 
 		}
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						NOT = { trait = masculine }
-					}
-					AND = {
-						is_female = no
-						trait = feminine
-					}
-				}
+				is_female = yes
 			}
 			add_trait = angel_portrait17 
 		}
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						NOT = { trait = masculine }
-					}
-					AND = {
-						is_female = no
-						trait = feminine
-					}
-				}
+				is_female = yes
 			}
 			add_trait = angel_portrait18 
 		}
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						NOT = { trait = masculine }
-					}
-					AND = {
-						is_female = no
-						trait = feminine
-					}
-				}
+				is_female = yes
 			}
 			add_trait = angel_portrait19 
 		}
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						NOT = { trait = masculine }
-					}
-					AND = {
-						is_female = no
-						trait = feminine
-					}
-				}
+				is_female = yes
 			}
 			add_trait = angel_portrait20 
 		}
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						NOT = { trait = masculine }
-					}
-					AND = {
-						is_female = no
-						trait = feminine
-					}
-				}
+				is_female = yes
 			}
 			add_trait = angel_portrait21 
 		}
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						NOT = { trait = masculine }
-					}
-					AND = {
-						is_female = no
-						trait = feminine
-					}
-				}
+				is_female = yes
 			}
 			add_trait = angel_portrait22 
 		}
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						NOT = { trait = masculine }
-					}
-					AND = {
-						is_female = no
-						trait = feminine
-					}
-				}
+				is_female = yes
 			}
 			add_trait = angel_portrait23 
 		}
 		5 = {
 			modifier = {
 				factor = 0
-				OR = {
-					AND = {
-						is_female = yes
-						NOT = { trait = masculine }
-					}
-					AND = {
-						is_female = no
-						trait = feminine
-					}
-				}
+				is_female = yes
 			}
 			add_trait = angel_portrait24 
 		}

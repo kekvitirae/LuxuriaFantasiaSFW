@@ -16,419 +16,195 @@ add_random_dwse_lizard_portrait = {
 	}
 	else = {
 		random_list = {
+		
+			#
+			# Female
+			#
+			
 			5 = {
 				modifier = {
 					factor = 0
-					OR = {
-						AND = {
-							is_female = yes
-							trait = masculine
-						}
-						AND = {
-							is_female = no
-							NOT = { trait = feminine }
-						}
-					}
+					is_female = no
 				}
 				add_trait = dwse_portrait1_cheri
 			}
 			5 = {
 				modifier = {
 					factor = 0
-					OR = {
-						AND = {
-							is_female = yes
-							trait = masculine
-						}
-						AND = {
-							is_female = no
-							NOT = { trait = feminine }
-						}
-					}
+					is_female = no
 				}
 				add_trait = dwse_portrait2_cheri 
 			}
 			5 = {
 				modifier = {
 					factor = 0
-					OR = {
-						AND = {
-							is_female = yes
-							trait = masculine
-						}
-						AND = {
-							is_female = no
-							NOT = { trait = feminine }
-						}
-					}
+					is_female = no
 				}
 				add_trait = dwse_portrait3_cheri 
 			}
 			5 = {
 				modifier = {
 					factor = 0
-					OR = {
-						AND = {
-							is_female = yes
-							trait = masculine
-						}
-						AND = {
-							is_female = no
-							NOT = { trait = feminine }
-						}
-					}
+					is_female = no
 				}
 				add_trait = dwse_portrait4_cheri
 			}
 			5 = {
 				modifier = {
 					factor = 0
-					OR = {
-						AND = {
-							is_female = yes
-							trait = masculine
-						}
-						AND = {
-							is_female = no
-							NOT = { trait = feminine }
-						}
-					}
+					is_female = no
 				}
 				add_trait = dwse_portrait5_cheri
 			}
 			5 = {
 				modifier = {
 					factor = 0
-					OR = {
-						AND = {
-							is_female = yes
-							trait = masculine
-						}
-						AND = {
-							is_female = no
-							NOT = { trait = feminine }
-						}
-					}
+					is_female = no
 				}
 				add_trait = dwse_portrait6_cheri
 			}
 			5 = {
 				modifier = {
 					factor = 0
-					OR = {
-						AND = {
-							is_female = yes
-							trait = masculine
-						}
-						AND = {
-							is_female = no
-							NOT = { trait = feminine }
-						}
-					}
+					is_female = no
 				}
 				add_trait = dwse_portrait7_cheri
 			}
 			5 = {
 				modifier = {
 					factor = 0
-					OR = {
-						AND = {
-							is_female = yes
-							trait = masculine
-						}
-						AND = {
-							is_female = no
-							NOT = { trait = feminine }
-						}
-					}
+					is_female = no
 				}
 				add_trait = dwse_portrait8_cheri
 			}
 			5 = {
 				modifier = {
 					factor = 0
-					OR = {
-						AND = {
-							is_female = yes
-							trait = masculine
-						}
-						AND = {
-							is_female = no
-							NOT = { trait = feminine }
-						}
-					}
+					is_female = no
 				}
 				add_trait = dwse_portrait9_cheri
 			}
 			5 = {
 				modifier = {
 					factor = 0
-					OR = {
-						AND = {
-							is_female = yes
-							trait = masculine
-						}
-						AND = {
-							is_female = no
-							NOT = { trait = feminine }
-						}
-					}
+					is_female = no
 				}
 				add_trait = dwse_portrait10_cheri
 			}
 			5 = {
 				modifier = {
 					factor = 0
-					OR = {
-						AND = {
-							is_female = yes
-							trait = masculine
-						}
-						AND = {
-							is_female = no
-							NOT = { trait = feminine }
-						}
-					}
+					is_female = no
 				}
 				add_trait = dwse_portrait11_cheri
 			}
 			5 = {
 				modifier = {
 					factor = 0
-					OR = {
-						AND = {
-							is_female = yes
-							trait = masculine
-						}
-						AND = {
-							is_female = no
-							NOT = { trait = feminine }
-						}
-					}
+					is_female = no
 				}
 				add_trait = dwse_portrait12_cheri
 			}
 			5 = {
 				modifier = {
 					factor = 0
-					OR = {
-						AND = {
-							is_female = yes
-							trait = masculine
-						}
-						AND = {
-							is_female = no
-							NOT = { trait = feminine }
-						}
-					}
+					is_female = no
 				}
 				add_trait = dwse_portrait13_cheri
 			}
 			5 = {
 				modifier = {
 					factor = 0
-					OR = {
-						AND = {
-							is_female = yes
-							trait = masculine
-						}
-						AND = {
-							is_female = no
-							NOT = { trait = feminine }
-						}
-					}
+					is_female = no
 				}
 				add_trait = dwse_portrait14_cheri
 			}
 			5 = {
 				modifier = {
 					factor = 0
-					OR = {
-						AND = {
-							is_female = yes
-							trait = masculine
-						}
-						AND = {
-							is_female = no
-							NOT = { trait = feminine }
-						}
-					}
+					is_female = no
 				}
 				add_trait = dwse_portrait15_cheri
 			}
 			5 = {
 				modifier = {
 					factor = 0
-					OR = {
-						AND = {
-							is_female = yes
-							trait = masculine
-						}
-						AND = {
-							is_female = no
-							NOT = { trait = feminine }
-						}
-					}
+					is_female = no
 				}
 				add_trait = dwse_portrait16_cheri
 			}
 			5 = {
 				modifier = {
 					factor = 0
-					OR = {
-						AND = {
-							is_female = yes
-							trait = masculine
-						}
-						AND = {
-							is_female = no
-							NOT = { trait = feminine }
-						}
-					}
+					is_female = no
 				}
 				add_trait = dwse_portrait17_cheri
 			}
 			5 = {
 				modifier = {
 					factor = 0
-					OR = {
-						AND = {
-							is_female = yes
-							trait = masculine
-						}
-						AND = {
-							is_female = no
-							NOT = { trait = feminine }
-						}
-					}
+					is_female = no
 				}
 				add_trait = dwse_portrait18_cheri
 			}
 			5 = {
 				modifier = {
 					factor = 0
-					OR = {
-						AND = {
-							is_female = yes
-							trait = masculine
-						}
-						AND = {
-							is_female = no
-							NOT = { trait = feminine }
-						}
-					}
+					is_female = no
 				}
 				add_trait = dwse_portrait19_cheri
 			}
 			5 = {
 				modifier = {
 					factor = 0
-					OR = {
-						AND = {
-							is_female = yes
-							trait = masculine
-						}
-						AND = {
-							is_female = no
-							NOT = { trait = feminine }
-						}
-					}
+					is_female = no
 				}
 				add_trait = dwse_portrait20_cheri
 			}
 			5 = {
 				modifier = {
 					factor = 0
-					OR = {
-						AND = {
-							is_female = yes
-							trait = masculine
-						}
-						AND = {
-							is_female = no
-							NOT = { trait = feminine }
-						}
-					}
+					is_female = no
 				}
 				add_trait = dwse_portrait21_cheri
 			}
+			
+			#
+			# Males
+			#
+			
 			5 = {
 				modifier = {
 					factor = 0
-					OR = {
-						AND = {
-							is_female = yes
-							NOT = { trait = masculine }
-						}
-						AND = {
-							is_female = no
-							trait = feminine
-						}
-					}
+					is_female = yes
 				}
 				add_trait = dwse_portrait22 
 			}
 			5 = {
 				modifier = {
 					factor = 0
-					OR = {
-						AND = {
-							is_female = yes
-							NOT = { trait = masculine }
-						}
-						AND = {
-							is_female = no
-							trait = feminine
-						}
-					}
+					is_female = yes
 				}
 				add_trait = dwse_portrait23 
 			}
 			5 = {
 				modifier = {
 					factor = 0
-					OR = {
-						AND = {
-							is_female = yes
-							NOT = { trait = masculine }
-						}
-						AND = {
-							is_female = no
-							trait = feminine
-						}
-					}
+					is_female = yes
 				}
 				add_trait = dwse_portrait24 
 			}
 			5 = {
 				modifier = {
 					factor = 0
-					OR = {
-						AND = {
-							is_female = yes
-							NOT = { trait = masculine }
-						}
-						AND = {
-							is_female = no
-							trait = feminine
-						}
-					}
+					is_female = yes
 				}
 				add_trait = dwse_portrait25 
 			}
 			5 = {
 				modifier = {
 					factor = 0
-					OR = {
-						AND = {
-							is_female = yes
-							NOT = { trait = masculine }
-						}
-						AND = {
-							is_female = no
-							trait = feminine
-						}
-					}
+					is_female = yes
 				}
 				add_trait = dwse_portrait26 
 			}

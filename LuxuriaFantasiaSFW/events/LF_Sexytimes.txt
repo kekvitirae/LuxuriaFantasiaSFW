@@ -109,6 +109,7 @@ character_event = {
 				years = 1
 			}
 		}
+	}
 	option = { # That was fun
 		name = LFSexytimes2TTA
 		clr_character_flag = lf_sexytimes_temp

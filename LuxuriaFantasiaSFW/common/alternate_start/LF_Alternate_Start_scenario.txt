@@ -156,7 +156,7 @@ lf_seed_dragon = {
 
 lf_seed_houseirae = {
 	type = checkbox
-	random_default = checked
+	random_default = unchecked
 	apply_before_generation = yes
 	sort_priority = 0
 	separator = yes

@@ -1426,37 +1426,10 @@ lf_change_culture_province = {
 #
 
 lf_add_mage = {
-	if = {
-		limit = {
-			lf_has_dwr_no_replacer = yes
-		}
-		add_trait = mage
-	}
-	else = {
-		add_trait = lf_mage
-	}
-}
-
-lf_add_slave = {
-	if = {
-		limit = {
-			lf_has_dwr_no_replacer = yes
-		}
-		add_trait = branded_slave
-	}
-	else = {
-		add_trait = lf_enslaved
-	}
+	add_trait = lf_mage
 }
 
 lf_add_elf = {
-	if = {
-		limit = {
-			lf_has_dwr_no_replacer = yes
-		}
-		add_trait = elf
-	}
-	else = {
 		if = {
 			limit = {
 				has_game_rule = { name = lf_blood_feud value = lf_bf_on }
@@ -1467,16 +1440,9 @@ lf_add_elf = {
 			}
 		}
 		add_trait = lf_elf
-	}
 }
 
 lf_add_orc = {
-	if = {
-		limit = {
-			lf_has_dwr_no_replacer = yes
-		}
-		add_trait = orc
-	}
 	else = {
 		if = {
 			limit = {
@@ -1488,30 +1454,13 @@ lf_add_orc = {
 			}
 		}
 		add_trait = lf_orc
-	}
 }
 
 lf_add_fairy = {
-	if = {
-		limit = {
-			lf_has_dwr_no_replacer = yes
-		}
-		add_trait = fae_kin
-	}
-	else = {
 		add_trait = lf_fairy
-	}
 }
 
 lf_add_kitsune = {
-	if = {
-		limit = {
-			lf_has_dwr_no_replacer = yes
-			NOT = { has_global_flag = tont_is_started }
-		}
-		add_trait = fox_kin
-	}
-	else = {
 		if = {
 			limit = {
 				has_game_rule = { name = lf_blood_feud value = lf_bf_on }
@@ -1522,17 +1471,9 @@ lf_add_kitsune = {
 			}
 		}
 		add_trait = lf_kitsune
-	}
 }
 
 lf_add_neko = {
-	if = {
-		limit = {
-			lf_has_dwr_no_replacer = yes
-		}
-		add_trait = cat_kin
-	}
-	else = {
 		if = {
 			limit = {
 				has_game_rule = { name = lf_blood_feud value = lf_bf_on }
@@ -1543,17 +1484,9 @@ lf_add_neko = {
 			}
 		}
 		add_trait = lf_neko
-	}
 }
 
 lf_add_demon = {
-	if = {
-		limit = {
-			lf_has_dwr_no_replacer = yes
-		}
-		add_trait = demon_kin
-	}
-	else = {
 		if = {
 			limit = {
 				has_game_rule = { name = lf_blood_feud value = lf_bf_on }
@@ -1564,17 +1497,9 @@ lf_add_demon = {
 			}
 		}
 		add_trait = lf_demon
-	}
 }
 
 lf_add_angel = {
-	if = {
-		limit = {
-			lf_has_dwr_no_replacer = yes
-		}
-		add_trait = angel_kin
-	}
-	else = {
 		if = {
 			limit = {
 				has_game_rule = { name = lf_blood_feud value = lf_bf_on }
@@ -1585,62 +1510,43 @@ lf_add_angel = {
 			}
 		}
 		add_trait = lf_angel
-	}
-}
-
-lf_remove_futa = {
-	remove_trait = lf_futa
-	remove_trait = futa
 }
 
 lf_remove_mage = {
 	remove_trait = lf_mage
-	remove_trait = mage
-}
-
-lf_remove_slave = {
-	remove_trait = lf_enslaved
-	remove_trait = branded_slave
 }
 
 lf_remove_elf = {
 	remove_trait = lf_elf
-	remove_trait = elf
 	remove_character_modifier = lf_elf_bf
 }
 
 lf_remove_orc = {
 	remove_trait = lf_orc
-	remove_trait = orc
 	remove_character_modifier = lf_orc_bf
 }
 
 lf_remove_fairy = {
 	remove_trait = lf_fairy
-	remove_trait = fae_kin
 }
 
 lf_remove_kitsune = {
 	remove_trait = lf_kitsune
-	remove_trait = fox_kin
 	remove_character_modifier = lf_kitsune_bf
 }
 
 lf_remove_neko = {
 	remove_trait = lf_neko
-	remove_trait = cat_kin
 	remove_character_modifier = lf_neko_bf
 }
 
 lf_remove_demon = {
 	remove_trait = lf_demon
-	remove_trait = demon_kin
 	remove_character_modifier = lf_demon_bf
 }
 
 lf_remove_angel = {
 	remove_trait = lf_angel
-	remove_trait = angel_kin
 	remove_character_modifier = lf_angel_bf
 }
 

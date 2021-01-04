@@ -26,7 +26,6 @@ lf_can_have_sex = {
 	prisoner = no
 	is_adult = yes
 	NOR = { 
-		trait = lf_ghost
 		trait = dwse_dragon_adult
 		trait = celibate
 		trait = eunuch

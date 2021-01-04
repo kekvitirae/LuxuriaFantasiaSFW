@@ -1,6 +1,6 @@
 spriteTypes = {
 #
-# DWSE Xaela female child
+# DWSE female child
 #
 
 	spriteType = {
@@ -31,7 +31,7 @@ spriteTypes = {
 	}
 
 #
-# DWSE Xaela male child
+# DWSE male child
 #
 
 	spriteType = {

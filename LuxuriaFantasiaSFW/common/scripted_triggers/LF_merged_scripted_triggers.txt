@@ -16,42 +16,36 @@ not_valid_targets = {
 is_elf = {
 	OR = {
 		trait = lf_elf
-		trait = elf
 	}
 }
 
 is_not_elf = {
 	NOR = { 
 		trait = lf_elf 
-		trait = elf
 	}
 }
 
 is_orc = {
 	OR = {
 		trait = lf_orc
-		trait = orc
 	}
 }
 
 is_not_orc = {
 	NOR = { 
 		trait = lf_orc 
-		trait = orc
 	}
 }
 
 is_fairy = {
 	OR = {
 		trait = lf_fairy
-		trait = fae_kin
 	}
 }
 
 is_not_fairy = {
 	NOR = { 
 		trait = lf_fairy 
-		trait = fae_kin
 	}
 }
 
@@ -59,7 +53,6 @@ is_demon = {
 	OR = {
 		trait = lf_demon
 		trait = lf_fallen_angel
-		trait = demon_kin
 	}
 }
 
@@ -67,7 +60,6 @@ is_not_demon = {
 	NOR = {
 		trait = lf_demon
 		trait = lf_fallen_angel
-		trait = demon_kin
 	}
 }
 
@@ -76,7 +68,6 @@ is_any_demon = {
 		trait = lf_demon
 		trait = lf_fallen_angel
 		trait = lf_halfdemon
-		trait = demon_kin
 	}
 }
 
@@ -85,7 +76,6 @@ is_not_any_demon = {
 		trait = lf_demon
 		trait = lf_fallen_angel
 		trait = lf_halfdemon
-		trait = demon_kin
 	}
 }
 
@@ -93,14 +83,12 @@ is_not_any_demon = {
 is_angel = {
 	OR = {
 		trait = lf_angel
-		trait = angel_kin
 	}
 }
 
 is_not_angel = {
 	NOR = {
 		trait = lf_angel
-		trait = angel_kin
 	}
 }
 
@@ -108,7 +96,6 @@ is_succubus = {
 	OR = {
 		trait = lf_demon
 		trait = lf_fallen_angel
-		trait = demon_kin
 	}
 	is_female = yes
 }
@@ -117,7 +104,6 @@ is_not_succubus = {
 	OR = {
 		trait = lf_demon
 		trait = lf_fallen_angel
-		trait = demon_kin
 	}
 	is_female = no
 }
@@ -126,7 +112,6 @@ is_incubus = {
 	OR = {
 		trait = lf_demon
 		trait = lf_fallen_angel
-		trait = demon_kin
 	}
 	is_female = no
 }
@@ -135,7 +120,6 @@ is_not_incubus = {
 	OR = {
 		trait = lf_demon
 		trait = lf_fallen_angel
-		trait = demon_kin
 	}
 	is_female = yes
 }
@@ -143,28 +127,24 @@ is_not_incubus = {
 is_neko = {
 	OR = {
 		trait = lf_neko
-		trait = cat_kin
 	}
 }
 
 is_not_neko = {
 	NOR = {
 		trait = lf_neko
-		trait = cat_kin
 	}
 }
 
 is_kitsune = {
 	OR = {
 		trait = lf_kitsune
-		trait = fox_kin
 	}
 }
 
 is_not_kitsune = {
 	NOR = {
 		trait = lf_kitsune
-		trait = fox_kin
 	}
 }
 
@@ -183,14 +163,6 @@ is_fantasy_race = {
 		trait = dwse_dragon_child
 		trait = dwse_dragon_adult
 		trait = dwse_shapeshifted
-		trait = lf_ghost
-		trait = cat_kin
-		trait = fox_kin
-		trait = demon_kin
-		trait = angel_kin
-		trait = elf
-		trait = orc
-		trait = fae_kin
 	}
 }
 
@@ -209,14 +181,6 @@ is_not_fantasy_race = {
 		trait = dwse_dragon_child
 		trait = dwse_dragon_adult
 		trait = dwse_shapeshifted
-		trait = lf_ghost
-		trait = cat_kin
-		trait = fox_kin
-		trait = demon_kin
-		trait = angel_kin
-		trait = elf
-		trait = orc
-		trait = fae_kin
 	}
 }
 
@@ -290,14 +254,12 @@ is_not_kitsune_bf = {
 is_mage = {
 	OR = {
 		trait = lf_mage
-		trait = mage
 	}
 }
 
 is_not_mage = {
 	NOR = { 
 		trait = lf_mage
-		trait = mage
 	}
 }
 
@@ -309,10 +271,6 @@ is_magical = {
 		trait = houseirae_drow
 		trait = lf_mage
 		trait = lf_fairy
-		trait = fox_kin
-		trait = elf
-		trait = fae_kin
-		trait = mage
 	}
 }
 
@@ -324,29 +282,6 @@ is_not_magical = {
 		trait = houseirae_drow
 		trait = lf_mage
 		trait = lf_fairy
-		trait = fox_kin
-		trait = elf
-		trait = fae_kin
-		trait = mage
-	}
-}
-
-
-
-# Slavery related
-
-is_enslaved = {
-	OR = {
-		trait = lf_enslaved
-		trait = branded_slave
-	}
-}
-
-is_not_enslaved = {
-	NOR = {
-		trait = lf_enslaved
-		trait = branded_slave
-	}
 }
 
 
@@ -388,22 +323,6 @@ lf_has_potions = {
 					has_building = lf_potion_seller_tribal # Tribal
 					has_building = lf_potion_seller_nomad # Nomad
 				}
-			}
-		}
-	}
-}
-
-lf_has_slaves = {
-	OR = {
-		family_palace = {
-			has_building = lf_slave_market_fp
-		}
-		capital_holding = {
-			OR = {
-				has_building = lf_slave_market_castle # Castle
-				has_building = lf_slave_market_city # City
-				has_building = lf_slave_market_tribal # Tribal
-				has_building = lf_slave_market_nomad # Nomad
 			}
 		}
 	}

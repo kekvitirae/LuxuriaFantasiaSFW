@@ -398,8 +398,6 @@ targetted_decisions = {
 			}
 		}
 	}
-}
-
 
 #
 # Fix for vanilla CK2's MR republic marriage mechanics for women

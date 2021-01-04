@@ -1,3 +1,15 @@
+1.1.1
+04JAN21
+
+Bug Fixes:
+
+Restored the Au Ra children portraits.
+Fixed missing braces in the decisions and sexytimes file.
+
+Enhancements:
+
+More DWR/NSFW scrubbing.
+
 1.1
 02JAN21
 
