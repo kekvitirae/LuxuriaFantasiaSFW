@@ -282,6 +282,7 @@ is_not_magical = {
 		trait = houseirae_drow
 		trait = lf_mage
 		trait = lf_fairy
+	}
 }
 
 

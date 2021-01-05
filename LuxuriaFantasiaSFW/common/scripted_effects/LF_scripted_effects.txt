@@ -1430,86 +1430,85 @@ lf_add_mage = {
 }
 
 lf_add_elf = {
-		if = {
-			limit = {
-				has_game_rule = { name = lf_blood_feud value = lf_bf_on }
-			}
-			add_character_modifier = {
-				name = lf_elf_bf
-				duration = -1
-			}
+	if = {
+		limit = {
+			has_game_rule = { name = lf_blood_feud value = lf_bf_on }
 		}
-		add_trait = lf_elf
+		add_character_modifier = {
+			name = lf_elf_bf
+			duration = -1
+		}
+	}
+	add_trait = lf_elf
 }
 
 lf_add_orc = {
-	else = {
-		if = {
-			limit = {
-				has_game_rule = { name = lf_blood_feud value = lf_bf_on }
-			}
-			add_character_modifier = {
-				name = lf_orc_bf
-				duration = -1
-			}
+	if = {
+		limit = {
+			has_game_rule = { name = lf_blood_feud value = lf_bf_on }
 		}
-		add_trait = lf_orc
+		add_character_modifier = {
+			name = lf_orc_bf
+			duration = -1
+		}
+	}
+	add_trait = lf_orc
 }
 
 lf_add_fairy = {
-		add_trait = lf_fairy
+	add_trait = lf_fairy
 }
 
 lf_add_kitsune = {
-		if = {
-			limit = {
-				has_game_rule = { name = lf_blood_feud value = lf_bf_on }
-			}
-			add_character_modifier = {
-				name = lf_kitsune_bf
-				duration = -1
-			}
+	if = {
+		limit = {
+			has_game_rule = { name = lf_blood_feud value = lf_bf_on }
 		}
-		add_trait = lf_kitsune
+		add_character_modifier = {
+			name = lf_kitsune_bf
+			duration = -1
+		}
+	}
+	add_trait = lf_kitsune
 }
 
 lf_add_neko = {
-		if = {
-			limit = {
-				has_game_rule = { name = lf_blood_feud value = lf_bf_on }
-			}
-			add_character_modifier = {
-				name = lf_neko_bf
-				duration = -1
-			}
+	if = {
+		limit = {
+			has_game_rule = { name = lf_blood_feud value = lf_bf_on }
 		}
-		add_trait = lf_neko
+		add_character_modifier = {
+			name = lf_neko_bf
+			duration = -1
+		}
+	}
+	add_trait = lf_neko
 }
 
 lf_add_demon = {
-		if = {
-			limit = {
-				has_game_rule = { name = lf_blood_feud value = lf_bf_on }
-			}
-			add_character_modifier = {
-				name = lf_demon_bf
-				duration = -1
-			}
+	if = {
+		limit = {
+			has_game_rule = { name = lf_blood_feud value = lf_bf_on }
 		}
-		add_trait = lf_demon
+		add_character_modifier = {
+			name = lf_demon_bf
+			duration = -1
+		}
+	}
+	add_trait = lf_demon
 }
 
 lf_add_angel = {
-		if = {
-			limit = {
-				has_game_rule = { name = lf_blood_feud value = lf_bf_on }
-			}
-			add_character_modifier = {
-				name = lf_angel_bf
-				duration = -1
-			}
+	if = {
+		limit = {
+			has_game_rule = { name = lf_blood_feud value = lf_bf_on }
 		}
-		add_trait = lf_angel
+		add_character_modifier = {
+			name = lf_angel_bf
+			duration = -1
+		}
+	}
+	add_trait = lf_angel
 }
 
 lf_remove_mage = {

@@ -410,7 +410,6 @@ lf_add_random_elf_portrait = {
 				factor = 0
 				is_female = no
 			}
-			}
 			add_trait = lf_elf_portrait12_cheri
 		}
 		5 = {
