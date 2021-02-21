@@ -11,7 +11,6 @@ modifier_lf_hiss = {
 modifier_lf_neko_maid = {
 	icon = 46
 	sex_appeal_opinion = 5
-	liege_prestige = 0.1
 	liege_opinion = 5
 	female_opinion = -5
 }

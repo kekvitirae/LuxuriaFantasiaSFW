@@ -28,3 +28,9 @@ lf_bf_off_desc;Everyone lives in peace and harmony. Negative opinion modifiers w
 lf_bf_on;§KTHERE WILL BE BLOOD§!;;;;;;;;;;;;;x
 lf_bf_on_desc;Demons, divines, nekos, kitsune, elves, and orcs will attempt to destroy any trace of their opposite race.;;;;;;;;;;;;;x
 
+lf_choose_race;§PLuxuria§! Racial Choice;;;;;;;;;;;;;x
+lf_choose_race_on;Yes;;;;;;;;;;;;;x
+lf_choose_race_on_desc;You will be given the racial choice menu a couple days after game start. This will likely override any choice you previously made.;;;;;;;;;;;;;x
+lf_choose_race_off;No;;;;;;;;;;;;;x
+lf_choose_race_off_desc;You will remain whatever race you started the game as.;;;;;;;;;;;;;x
+

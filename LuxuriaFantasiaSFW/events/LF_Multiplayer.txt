@@ -8,7 +8,9 @@ character_event = {
 		NOR = {
 			has_global_flag = lf_multiplayer_race_chosen
 			has_global_flag = lf_singleplayer_setup_done
+			has_game_rule = { name = lf_choose_race value = lf_choose_race_off }
 		}
+		has_game_rule = { name = lf_choose_race value = lf_choose_race_on }
 	}
 	immediate = {
 		narrative_event = { id = LFMultiplayer.1 days = 2 }
@@ -174,6 +176,9 @@ narrative_event = {
 			is_female = no
 		}
 		hidden_tooltip = {
+			lf_remove_race = yes
+			lf_remove_all_portraits = yes
+			lf_remove_blood_feud = yes
 			any_realm_character = {
 				lf_remove_race = yes
 				lf_remove_all_portraits = yes
@@ -204,6 +209,9 @@ narrative_event = {
 			is_female = yes
 		}
 		hidden_tooltip = {
+			lf_remove_race = yes
+			lf_remove_all_portraits = yes
+			lf_remove_blood_feud = yes
 			any_realm_character = {
 				lf_remove_race = yes
 				lf_remove_all_portraits = yes
@@ -233,6 +241,9 @@ narrative_event = {
 			lf_has_divines = yes
 		}
 		hidden_tooltip = {
+			lf_remove_race = yes
+			lf_remove_all_portraits = yes
+			lf_remove_blood_feud = yes
 			any_realm_character = {
 				lf_remove_race = yes
 				lf_remove_all_portraits = yes
@@ -279,6 +290,9 @@ narrative_event = {
 			lf_has_elves = yes
 		}
 		hidden_tooltip = {
+			lf_remove_race = yes
+			lf_remove_all_portraits = yes
+			lf_remove_blood_feud = yes
 			any_realm_character = {
 				lf_remove_race = yes
 				lf_remove_all_portraits = yes
@@ -305,6 +319,9 @@ narrative_event = {
 			lf_has_orcs = yes
 		}
 		hidden_tooltip = {
+			lf_remove_race = yes
+			lf_remove_all_portraits = yes
+			lf_remove_blood_feud = yes
 			any_realm_character = {
 				lf_remove_race = yes
 				lf_remove_all_portraits = yes
@@ -331,6 +348,9 @@ narrative_event = {
 			lf_has_fairies = yes
 		}
 		hidden_tooltip = {
+			lf_remove_race = yes
+			lf_remove_all_portraits = yes
+			lf_remove_blood_feud = yes
 			any_realm_character = {
 				lf_remove_race = yes
 				lf_remove_all_portraits = yes
@@ -374,6 +394,9 @@ narrative_event = {
 			lf_has_kitsune = yes
 		}
 		hidden_tooltip = {
+			lf_remove_race = yes
+			lf_remove_all_portraits = yes
+			lf_remove_blood_feud = yes
 			any_realm_character = {
 				lf_remove_race = yes
 				lf_remove_all_portraits = yes
@@ -397,6 +420,9 @@ narrative_event = {
 			lf_has_nekos = yes
 		}
 		hidden_tooltip = {
+			lf_remove_race = yes
+			lf_remove_all_portraits = yes
+			lf_remove_blood_feud = yes
 			any_realm_character = {
 				lf_remove_race = yes
 				lf_remove_all_portraits = yes
@@ -436,6 +462,9 @@ narrative_event = {
 			lf_races_dwse_active = yes
 		}
 		hidden_tooltip = {
+			lf_remove_race = yes
+			lf_remove_all_portraits = yes
+			lf_remove_blood_feud = yes
 			any_realm_character = {
 				lf_remove_race = yes
 				lf_remove_all_portraits = yes
@@ -462,6 +491,9 @@ narrative_event = {
 			lf_races_dwse_active = yes
 		}
 		hidden_tooltip = {
+			lf_remove_race = yes
+			lf_remove_all_portraits = yes
+			lf_remove_blood_feud = yes
 			any_realm_character = {
 				lf_remove_race = yes
 				lf_remove_all_portraits = yes

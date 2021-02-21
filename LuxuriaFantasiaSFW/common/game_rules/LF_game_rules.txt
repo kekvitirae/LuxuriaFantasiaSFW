@@ -77,3 +77,18 @@ lf_challenges = {
 		desc = "lf_challenges_genes_desc"
 	}
 }
+
+lf_choose_race = {
+	name = "lf_choose_race"
+	group = "RULE_GROUP_LF"
+	option = {
+		name = lf_choose_race_on
+		text = "lf_choose_race_on"
+		desc = "lf_choose_race_on_desc"
+	}
+	option = {
+		name = lf_choose_race_off
+		text = "lf_choose_race_off"
+		desc = "lf_choose_race_off_desc"
+	}
+}
