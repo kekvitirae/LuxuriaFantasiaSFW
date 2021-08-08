@@ -156,10 +156,6 @@ character_event = {
 			50 = { # SubscribeStar Amora
 				trigger = {
 					is_female = no
-					OR = {
-						trait = lf_switch
-						trait = lf_submissive
-					}
 					any_courtier_or_vassal = {
 						has_job_title = job_marshal
 					}
