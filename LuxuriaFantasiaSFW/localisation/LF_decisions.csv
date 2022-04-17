@@ -67,7 +67,7 @@ lf_spend_time_with;§YLuxuria§!: Initiate Sex;;;;;;;;;;;;;x
 lf_spend_time_with_desc;Spend time with your lover, spouse, or concubine. Why wait for the vanilla game to decide when you'll be getting together? Seize your love life today!;;;;;;;;;;;;;x
 #
 lf_forgive_dishonorable;§YLuxuria§!: Forgive [Root.GetFirstName];;;;;;;;;;;;;x
-lf_forgive_dishonorable_desc;[Root.GetFirstName] has acted dishonorably toward you. You can them, removing the imprisonment justification.;;;;;;;;;;;;;x
+lf_forgive_dishonorable_desc;[Root.GetFirstName] has acted dishonorably toward you. You can forgive them, removing the imprisonment justification.;;;;;;;;;;;;;x
 lf_forgive_dishonorable_bloodfeud;Must not be a part of a §RBlood Feud§!. §YKind§! targets ignore this restriction.;;;;;;;;;;;;;x
 #
 lf_banish_blood_feud;§YLuxuria§!: Blood Feud Banishment;;;;;;;;;;;;;x

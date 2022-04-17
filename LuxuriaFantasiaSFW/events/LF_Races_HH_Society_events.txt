@@ -160,17 +160,7 @@ narrative_event = {
 			interested_in_society = lf_society_seduction
 		}
         name = LFSocietySeduction102A
-		if = {
-			limit = {
-				lf_has_nsfw = no
-			}
-			join_society = lf_society_seduction
-		}
-		else = {
-			hidden_effect = {
-				character_event = { id = LFSocietySeduction.103 }
-			}
-		}
+		join_society = lf_society_seduction
 		ai_chance = {
 			factor = 80
 			modifier = {
@@ -198,17 +188,6 @@ narrative_event = {
 		}
 	}
 }
-
-## Chosen of Lilith routing
-character_event = {
-	id = LFSocietySeduction.103
-	hide_window = yes
-	is_triggered_only = yes # from 102
-	immediate = {
-		narrative_event = { id = LFSocietySeduction.104 days = 1 }
-	}
-}
-
 
 ### Recruitment ###
 

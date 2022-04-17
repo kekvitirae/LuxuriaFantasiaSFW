@@ -168,41 +168,15 @@ narrative_event = {
 			trait = dwse_lizard
 		}
 		OR = {
-			trait = inbred
-			trait = incapable
-			trait = infirm
-			trait = maimed
+			trait = infection
 			trait = wounded
-			trait = leper
-			trait = disfigured
-			trait = mangled
-			trait = one_eyed
-			trait = one_handed
-			trait = one_legged
-			trait = blinded
-			trait = eunuch
-			has_character_modifier = mild_illness
-			has_character_modifier = severe_illness
-			has_character_modifier = bedridden_illness
 		}
 	}
 	option = { 
 		name = dwseliz5a
-		hidden_tooltip = { 
-			remove_trait = inbred
-			remove_trait = incapable
-			remove_trait = infirm
-			remove_trait = maimed
+		hidden_tooltip = {
+			remove_trait = infection
 			remove_trait = wounded
-			remove_trait = leper
-			remove_trait = disfigured
-			remove_trait = mangled
-			remove_trait = one_eyed
-			remove_trait = one_handed
-			remove_trait = one_legged
-			remove_trait = blinded
-			remove_trait = eunuch
-			clear_disease_level_effect = yes
 		}
 	}
 }
