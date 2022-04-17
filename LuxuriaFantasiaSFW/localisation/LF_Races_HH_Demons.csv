@@ -6,7 +6,7 @@ demonic_bloodline;Bloodline of the Seducer;;;;;;;;;;;;;x
 demonic_bloodline_desc;[This.Founder.GetBestName] seduced enough pawns into their bed to earn the attention and favor of powerful sex-crazed demons.;;;;;;;;;;;;;x
 lf_a_claim_demonic_bloodline;Claim your Demonic Birthright;;;;;;;;;;;;;x
 lf_a_claim_demonic_bloodline_desc;[GetLilithName] is pleased that her faithful child is so seductive. She is willing to enhance your lineage. It would not be a wise idea to turn her offer down.;;;;;;;;;;;;;x
-LFDemonsSeductionSuccesses;The current number of people you have bedded with Demonnic Seduction before bedding [From.GetFirstName] is §Y[Root.lilith_seduction.GetValue]§!.;;;;;;;;;;;;;x
+LFDemonsSeductionSuccesses;The current number of people you have bedded with Demonic Seduction before bedding [From.GetFirstName] is §Y[Root.lilith_seduction.GetValue]§!.;;;;;;;;;;;;;x
 
 #
 # CBs

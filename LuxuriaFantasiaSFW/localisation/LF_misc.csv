@@ -3,12 +3,12 @@ lf_libram;Libram Bookshelf;;;;;;;;;;;;;x
 lf_magic;Magical Item;;;;;;;;;;;;;x
 has_valid_slavery_location;Has a slavery building in their capital holding or family palace;;;;;;;;;;;;;x
 lf_disease_trigger;Has no major diseases (Ill and Lover's Pox excluded);;;;;;;;;;;;;x
-lf_can_have_sex;§YMust be:§! an adult. §YMust not be:§! a prisoner, a ghost, a non-shapeshifted dragon, a monk or nun, depressed (unless a branded slave), a eunuch, celibate, incapable, inaccessable, inflicted with a major disease (excluding Lover's Pox and Ill), or a special character designed to not have sex.;;;;;;;;;;;;;x
+lf_can_have_sex;§YMust be:§! an adult. §YMust not be:§! a prisoner, a ghost, a non-shapeshifted dragon, a monk or nun, depressed (unless a branded slave), a eunuch, celibate, incapable, inaccessible, inflicted with a major disease (excluding Lover's Pox and Ill), or a special character designed to not have sex.;;;;;;;;;;;;;x
 #
 # Elven Expansion fix
 #
 dwd_maid;(Elven Expansion) Maid;;;;;;;;;;;;;x
-dwd_maid_desc;Not a prestigious job, requiring the servent to cook, clean, or do whatever it is the master desires, but it does pay well.;;;;;;;;;;;;;x
+dwd_maid_desc;Not a prestigious job, requiring the servant to cook, clean, or do whatever it is the master desires, but it does pay well.;;;;;;;;;;;;;x
 #
 # EU4
 #
@@ -46,7 +46,7 @@ LFOmNomNomTyrant;All realm characters, except those with evil or hedonistic trai
 #
 lf_claim_lootbox;Buy Lootbox;;;;;;;;;;;;;x
 lf_claim_lootbox_desc;Once per character, you can buy yourself a lootbox that has a chance of containing a random artifact, gold, a special NPC, or something legendary!;;;;;;;;;;;;;x
-LFMisc1;The box of loot has been delivered to your feet, and your mouth salvates at the thought of what could be inside...;;;;;;;;;;;;;x
+LFMisc1;The box of loot has been delivered to your feet, and your mouth salivates at the thought of what could be inside...;;;;;;;;;;;;;x
 LFMisc1TTA;Open it!;;;;;;;;;;;;;x
 LFMisc2A;It contains...\n\nNothing! Sorry, better luck next character!;;;;;;;;;;;;;x
 LFMisc2B;It contains...\n\nLEGENDARY: Bloodline Obtained!;;;;;;;;;;;;;x

@@ -35,7 +35,7 @@ LFPotions3TTC;Potion of Wisdom;;;;;;;;;;;;;x
 lf_wisdom_potion_tooltip;This potion creates a temporary surge in the brain, allowing for greater learning and diplomacy.;;;;;;;;;;;;;x
 
 LFPotions4T;LF - Exotic Potions;;;;;;;;;;;;;x
-LFPotions4;The back shelf has three potions for sale:\n\nA potion with swirling ranbow colors.\n\nA dull grey potion.\n\nA potion bottled in gold rather than glass.\n\nThe alchemist did not label these potions, and makes no move to explain their contents.;;;;;;;;;;;;;x
+LFPotions4;The back shelf has three potions for sale:\n\nA potion with swirling rainbow colors.\n\nA dull grey potion.\n\nA potion bottled in gold rather than glass.\n\nThe alchemist did not label these potions, and makes no move to explain their contents.;;;;;;;;;;;;;x
 LFPotions4TTA;Swirling Potion;;;;;;;;;;;;;x
 lf_change_potion_tooltip;The alchemist will not say what this potion does. She only replies with a deep grin when asked. The potion itself seems to change its swirling colors from blue to pink and then back to blue, in a repeating pattern.;;;;;;;;;;;;;x
 lf_change_potion_mage_tooltip;Your arcane senses tell you that this potion will change one's sex.;;;;;;;;;;;;;x

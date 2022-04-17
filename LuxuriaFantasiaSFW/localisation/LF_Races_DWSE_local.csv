@@ -17,13 +17,13 @@ dwse.1000.desc;You Summon the guild master of a nearby slaver's guild, with a po
 dwse.1000.a;Fund Slavers;;;;;;;;;;;;;;x
 dwse.1000.b;Purchase a Slave;;;;;;;;;;;;;;x
 dwse.1000.c;Leave;;;;;;;;;;;;;;x
-dwse.1001.desc;You have decieded to fund a group of slavers. In return for funding them you will get a portion of the slaves they capture.;;;;;;;;;;;;;;x
+dwse.1001.desc;You have decided to fund a group of slavers. In return for funding them you will get a portion of the slaves they capture.;;;;;;;;;;;;;;x
 dwse.1001.a;Have slavers capture slaves from your realm;;;;;;;;;;;;;;x
 dwse.1001.b;Have slavers capture slaves from foreign lands;;;;;;;;;;;;;;x
 dwse.1001.c;Don't hire slavers and leave.;;;;;;;;;;;;;;x
-dwse.1002.desc;You have decided to have the slavers capture slaves in your realm. You will get your share of slaves when they return. They will be gone for one month. In preperation for the haul the guildhall will be closed unitl they return.;;;;;;;;;;;;;;x
+dwse.1002.desc;You have decided to have the slavers capture slaves in your realm. You will get your share of slaves when they return. They will be gone for one month. In preparation for the haul the guildhall will be closed until they return.;;;;;;;;;;;;;;x
 dwse.1002.a;Excellent;;;;;;;;;;;;;;x
-dwse.1003.desc;You have decided to have the slavers capture slaves from foreign realms. You will get your share of slaves when they return. They will be gone for three months. In preperation for the haul the guildhall will be closed unitl they return.;;;;;;;;;;;;;;x
+dwse.1003.desc;You have decided to have the slavers capture slaves from foreign realms. You will get your share of slaves when they return. They will be gone for three months. In preparation for the haul the guildhall will be closed until they return.;;;;;;;;;;;;;;x
 dwse.1002;Excellent;;;;;;;;;;;;;;x
 dwse.2000.desc;The slavers have returned from hunting in your lands. Their leader asks you to collect your share;;;;;;;;;;;;;;x
 
@@ -48,7 +48,7 @@ dwse_slavehunt_cooldown;Funding Slavers;;;;;;;;;;;;;;x
 dwse_slavers;Slavers kidnapped citizens;;;;;;;;;;;;;;x
 dwse_slave_port_b;Slaver's Guild;;;;;;;;;;;;;;x
 dwse_slave_port_c;Slaver's Guild;;;;;;;;;;;;;;x
-dwse_slave_portdesc;A guildhall for Slavers. Has a dock and holding areas for slave trafficing.;;;;;;;;;;;;;;x
+dwse_slave_portdesc;A guildhall for Slavers. Has a dock and holding areas for slave trafficking.;;;;;;;;;;;;;;x
 dwse_sold_citizens;Enslaved Citizens;;;;;;;;;;;;;;x
 dwse_funded_raiding;Funded Slavers;;;;;;;;;;;;;;x
 
@@ -118,7 +118,7 @@ dwse.4031.a;Buy a dwarf slave;;;;;;;;;;;;;;x
 dwse.4031.b;Buy a Futa slave;;;;;;;;;;;;;;x
 dwse.4031.c;Buy a vampire slave;;;;;;;;;;;;;;x
 dwse.4031.d;Buy a werewolf slave;;;;;;;;;;;;;;x
-dwse.4032.desc;Exotice Male Slaves;;;;;;;;;;;;;;x
+dwse.4032.desc;Exotic Male Slaves;;;;;;;;;;;;;;x
 dwse.4032.a;Buy a dwarf slave;;;;;;;;;;;;;;x
 dwse.4032.b;Buy a Futa slave;;;;;;;;;;;;;;x
 dwse.4032.c;Buy a werewolf slave;;;;;;;;;;;;;;x
@@ -132,15 +132,15 @@ dwse_favored_visit_m_desc;ONLY THE AI SHOULD SEE THIS, PLEASE REPORT IF YOU ARE 
 dwse_favored_visit_f; Visit Slave Female AI;;;;;;;;;;;;;;x
 dwse_favored_visit_f_desc;ONLY THE AI SHOULD SEE THIS, PLEASE REPORT IF YOU ARE SEEING THIS!;;;;;;;;;;;;;;x 
 dwse_make_favored;Show favor;;;;;;;;;;;;;;x
-dwse_make_favored_desc;Grant your vassal or coutier the privilege of using your private slaves.;;;;;;;;;;;;;;x  
+dwse_make_favored_desc;Grant your vassal or courtier the privilege of using your private slaves.;;;;;;;;;;;;;;x  
 dwse_favored_op;Favored by Liege;;;;;;;;;;;;;;x
 dwse_favor_rev_op;Revoked privilege;;;;;;;;;;;;;;x
 dwse_slavery_cb;Slave Raid;;;;;;;;;;;;;;x
-dwse_slavery_cb_desc;Raid foregin lands for slaves;;;;;;;;;;;;;;x
+dwse_slavery_cb_desc;Raid foreign lands for slaves;;;;;;;;;;;;;;x
 dwse_CB_NAME_SLAVERY;Slave raid;;;;;;;;;;;;;;x
 dwse_WAR_NAME_SLAVERY;Slave raid;;;;;;;;;;;;;;x
 dwse_title_favored; Favored By Liege;;;;;;;;;;;;;;x
-dwse_title_favored_desc;Allowed to use leige's Private slaves;;;;;;;;;;;;;;x
+dwse_title_favored_desc;Allowed to use liege's Private slaves;;;;;;;;;;;;;;x
 
 dwse_dragon_roost_nomad;LF - Dragon Roost;;;;;;;;;;;;;;x
 dwse_dragon_roost_tribal;LF - Dragon Roost;;;;;;;;;;;;;;x

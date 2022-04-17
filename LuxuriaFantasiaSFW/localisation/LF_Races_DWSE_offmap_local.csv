@@ -51,7 +51,7 @@ dwseom700B;Keep the egg, you are its mother. Your child will grow up here with y
 dwseom800;As you hold your egg in your arms you begin to wonder what kind of creature will you be? Will you be kind? Will you be cruel? Will you be strong or will you be smart? Will you be both?\n Is the world ready for you? Are you ready for the world? Questions upon questions pass through your mind. As the questions pile up in your mind a single through stands at the forefront of your mind: Is it time?\n Time to let your little one open their eyes? Time to let them take to the skies?;;;;;;;;;;;;;;x
 dwseom800A;It is time.;;;;;;;;;;;;;;x
 dwseom800B;The world is not ready.;;;;;;;;;;;;;;x
-dwseom801;Seasons have passed since you decided to bring your little one into the world. You placed your egg carefully in the fireplace months ago and the maids have tended it around the clock. Not once have the flames gone out. But still the egg has not moved. You wish to see your child's shining eyes but know you must wait.\n A shout Echos the hall, a maid rushes up to you. She tells you how the egg has begun to rock and crack.\n A moment is all it takes for the words to register in your mind, before you rush off to your bedroom and look into the fireplace. Indeed the egg is rocking and shows a few cracks.\n A moment passes before a scaley head pokes out of the shell and looks at you in wonder.\n You pick up the young drake as you climb from the fireplace.;;;;;;;;;;;;;;x
+dwseom801;Seasons have passed since you decided to bring your little one into the world. You placed your egg carefully in the fireplace months ago and the maids have tended it around the clock. Not once have the flames gone out. But still the egg has not moved. You wish to see your child's shining eyes but know you must wait.\n A shout echoes the hall, a maid rushes up to you. She tells you how the egg has begun to rock and crack.\n A moment is all it takes for the words to register in your mind, before you rush off to your bedroom and look into the fireplace. Indeed the egg is rocking and shows a few cracks.\n A moment passes before a scaley head pokes out of the shell and looks at you in wonder.\n You pick up the young drake as you climb from the fireplace.;;;;;;;;;;;;;;x
 dwseom801A;"It has been so long, you were well worth the wait little one.";;;;;;;;;;;;;;x
 dwse_dragons_on;Dragons On;;;;;;;;;;;;;;x
 dwse_dragons_off;Dragons Off;;;;;;;;;;;;;;x
@@ -75,13 +75,13 @@ dwse_sell_prisoner_desc;Sell a prisoner. Due to their unwillingness to go, priso
 dragon_ambassador;Dragon Ambassador;;;;;;;;;;;;;;x
 dragon_ambassador_desc;This diplomat has been sent to the Elder Forest to try and gain favor for you.;;;;;;;;;;;;;;x
 dwseom_dragon_ambassador;The Ambassador;;;;;;;;;;;;;;x
-dwseom3000;You have choosen one of your daughters to act in your stead. They will travel to the Elder Forest to gain Favor with the Emporer. \n\nThis is a dangerous task that you have sent them on. Many who venture to the Elder Forest do not return.;;;;;;;;;;;;;;x
+dwseom3000;You have chosen one of your daughters to act in your stead. They will travel to the Elder Forest to gain Favor with the Emperor. \n\nThis is a dangerous task that you have sent them on. Many who venture to the Elder Forest do not return.;;;;;;;;;;;;;;x
 dwseom3000A;I pray for their safe return.;;;;;;;;;;;;;;x
-dwseom_dragon_ambassador_return; The Amabassador Returns;;;;;;;;;;;;;;x
+dwseom_dragon_ambassador_return; The Ambassador Returns;;;;;;;;;;;;;;x
 dwseom3001;Your ambassador [dragon_ambassador.GetFirstName], has returned from the Forest Empire.\n\n She greets you with a smile, claiming her trip to The Forest has gone well.;;;;;;;;;;;;;;x
 dwseom3001A; Welcome home [dragon_ambassador.GetFirstName].;;;;;;;;;;;;;;x
 dwseom_dragon_ambassador_egg;The gift of Family;;;;;;;;;;;;;;x
-dwseom3002; Your daughter, [dragon_ambassador.GetFirstName], leads you to her room. In the center of her bed, wrapped amoung the blankets, is a rather large egg.\n\n"This is my child." She claims as she rubs the egg. The emperor would only allow me to bring one of them home.\n\n She frowns, "Would like you to raise him?" she asks, looking at you with pleading eyes, "Would you raise my child?";;;;;;;;;;;;;;x
+dwseom3002; Your daughter, [dragon_ambassador.GetFirstName], leads you to her room. In the center of her bed, wrapped among the blankets, is a rather large egg.\n\n"This is my child." She claims as she rubs the egg. The emperor would only allow me to bring one of them home.\n\n She frowns, "Would like you to raise him?" she asks, looking at you with pleading eyes, "Would you raise my child?";;;;;;;;;;;;;;x
 dwseom3002A;It would be an Honor.;;;;;;;;;;;;;;x 
 dwseom_dragon_ambassador_stay;Broodmother;;;;;;;;;;;;;;x
 dwseom3003;Your daughter [dragon_ambassador.GetFirstName] has decided to stay in the Elder Forestand become a broodmother for the next generation of dragons.\n\nShe has forgotten her home and now only thirst for the company of dragons and pleasure of laying their eggs.;;;;;;;;;;;;;;x
@@ -90,7 +90,7 @@ dwseom3801TTA;Welcome to my dungeon.;;;;;;;;;;;;;;x
 dwse_send_ambassador;Send Ambassador;;;;;;;;;;;;;;x
 dwse_send_ambassador_desc; Send one of your daughters to act as an ambassador to the Forest Empire. \n§YIt is very likely the ambassador will want to stay.§!;;;;;;;;;;;;;;x
 dwseom4002T;Dragon Egg Dies;;;;;;;;;;;;;;x
-dwseom4002;Without proper incubation, the empryo within the dragon egg you were carrying has died. The Elder Forest will not take too kindly to this.;;;;;;;;;;;;;;x
+dwseom4002;Without proper incubation, the embryo within the dragon egg you were carrying has died. The Elder Forest will not take too kindly to this.;;;;;;;;;;;;;;x
 dwseom4002TT;Oh well. Omelettes, anyone?;;;;;;;;;;;;;;x
 
 lf_too_important_for_dragons_tt;§RIs too important to toss away to the dragons forever.§!;;;;;;;;;;;;;;x

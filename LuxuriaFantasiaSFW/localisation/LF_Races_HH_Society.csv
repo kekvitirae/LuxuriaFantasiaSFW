@@ -142,7 +142,7 @@ lf_add_pious_tt;All sinful traits and lifestyles will be removed and replaced wi
 
 lf_command_mind_slave_sinful;§YMind Control§!: Sinful;;;;;;;;;;;;;x
 lf_command_mind_slave_sinful_desc;Whispers words of corruption into the back of [Root.GetFirstName]'s mind, causing [Root.GetHerHim] to drop all virtuous traits and take up a more sinful life.\n§YThis will remove the mind control effect.§!;;;;;;;;;;;;;x
-lf_add_sinful_tt;All virtuous traits and lifestyles wlll be removed and replaced with the seven deadly sins.;;;;;;;;;;;;;x
+lf_add_sinful_tt;All virtuous traits and lifestyles will be removed and replaced with the seven deadly sins.;;;;;;;;;;;;;x
 
 lf_infuse_with_demon_blood_half;Infuse with Demonic Blood;;;;;;;;;;;;;x
 lf_infuse_with_demon_blood_half_desc;Speak a prayer before bed and [GetLilithName] may grant you the blood of demons to flow through your veins.;;;;;;;;;;;;;x
